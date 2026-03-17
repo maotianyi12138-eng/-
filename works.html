@@ -14,70 +14,112 @@
         }
         .serif-title { font-family: 'Noto Serif SC', serif; }
         
-        /* 图片悬停放大效果 */
-        .work-item img { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
-        .work-item:hover img { transform: scale(1.05); }
-        
-        /* 这里的背景色可以根据你的 horse.jpg 风格微调 */
+        /* 页面背景遮罩 */
         .page-bg {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to bottom, rgba(5,5,5,0.9), #050505);
+            background: radial-gradient(circle at top right, #111, #050505);
             z-index: -1;
+        }
+
+        /* 分类按钮样式 */
+        .filter-btn {
+            position: relative;
+            transition: all 0.3s ease;
+            opacity: 0.4;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            opacity: 1;
+        }
+        .filter-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #3b82f6; /* 蓝色装饰线 */
         }
     </style>
 </head>
 <body class="p-6 md:p-12">
     <div class="page-bg"></div>
 
-    <nav class="max-w-7xl mx-auto mb-20 flex justify-between items-center">
+    <nav class="max-w-7xl mx-auto mb-16 flex justify-between items-center">
         <a href="index.html" class="text-xs tracking-widest opacity-50 hover:opacity-100 transition uppercase">
             ← Back / 返回首页
         </a>
-        <div class="text-xs tracking-[0.3em] opacity-30 uppercase font-bold">Selected Works 2024-2026</div>
+        <div class="text-[10px] tracking-[0.3em] opacity-30 uppercase font-bold">Portfolio / 2024-2026</div>
     </nav>
 
-    <header class="max-w-7xl mx-auto mb-24">
-        <h1 class="serif-title text-5xl md:text-7xl mb-4 text-white">视觉作品集</h1>
-        <p class="text-gray-500 tracking-widest uppercase text-xs font-bold mb-8">Visual Portfolio / Graphic & Photography</p>
-        <div class="h-[1px] w-20 bg-blue-500"></div>
+    <header class="max-w-7xl mx-auto mb-20">
+        <h1 class="serif-title text-5xl md:text-6xl mb-12 text-white">视觉作品集</h1>
+        
+        <div class="flex flex-wrap gap-x-10 gap-y-6 text-sm font-medium tracking-widest uppercase border-b border-white/5 pb-6">
+            <button class="filter-btn active">
+                Critical Design<br>
+                <span class="text-[10px] serif-cn opacity-60 italic">批判性平面设计</span>
+            </button>
+            <button class="filter-btn">
+                Stylized Photo<br>
+                <span class="text-[10px] serif-cn opacity-60 italic">风格化摄影</span>
+            </button>
+            <button class="filter-btn">
+                Graphic Practice<br>
+                <span class="text-[10px] serif-cn opacity-60 italic">平面美工实践</span>
+            </button>
+            <button class="filter-btn">
+                Engineering Case<br>
+                <span class="text-[10px] serif-cn opacity-60 italic">工程案例</span>
+            </button>
+        </div>
     </header>
 
-    <main class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-        
-        <div class="work-item group cursor-pointer">
-            <div class="overflow-hidden rounded-lg bg-gray-900 aspect-[4/5] mb-6 shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=800&q=80" 
-                     alt="Project 01" class="w-full h-full object-cover opacity-80 group-hover:opacity-100">
+    <main class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden rounded-sm bg-gray-900 aspect-[3/4] mb-6 relative">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                    <div class="absolute top-4 left-4 text-[9px] bg-blue-600 px-2 py-1 tracking-tighter">NEW</div>
+                </div>
+                <h3 class="text-lg font-bold mb-1">设计叙事：边界</h3>
+                <p class="text-[10px] text-blue-400 font-mono tracking-widest uppercase mb-3">Critical Design / 2026</p>
+                <p class="text-gray-500 text-xs leading-relaxed italic">
+                    通过平面语言探讨城市边界的消亡。<br>Exploring urban boundaries through graphic language.
+                </p>
             </div>
-            <h3 class="text-xl font-bold mb-1">视觉实验项目 01</h3>
-            <p class="text-xs text-blue-400 font-mono tracking-tighter mb-3 uppercase">Visual Experiment / 2026</p>
-            <p class="text-gray-500 text-xs leading-relaxed italic">
-                关于光影与构图的数字探索。 / Digital exploration of light and composition.
-            </p>
-        </div>
 
-        <div class="work-item group cursor-pointer">
-            <div class="overflow-hidden rounded-lg bg-gray-900 aspect-[4/5] mb-6 shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" 
-                     alt="Project 02" class="w-full h-full object-cover opacity-80 group-hover:opacity-100">
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden rounded-sm bg-gray-900 aspect-[3/4] mb-6">
+                    <img src="https://images.unsplash.com/photo-1531315630201-bb15b9a56312?auto=format&fit=crop&w=800" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                </div>
+                <h3 class="text-lg font-bold mb-1">光影重构</h3>
+                <p class="text-[10px] text-red-400 font-mono tracking-widest uppercase mb-3">Stylized Photography / 2025</p>
+                <p class="text-gray-500 text-xs leading-relaxed italic">
+                    极简主义视角下的建筑光影。 / Architectural shadows from a minimalist perspective.
+                </p>
             </div>
-            <h3 class="text-xl font-bold mb-1">自然叙事</h3>
-            <p class="text-xs text-blue-400 font-mono tracking-tighter mb-3 uppercase">Photography / 2025</p>
-            <p class="text-gray-500 text-xs leading-relaxed italic">
-                纪实摄影：荒野的静谧。 / Documentary photography: The silence of wilderness.
-            </p>
-        </div>
 
-        <div class="work-item group cursor-pointer border border-white/5 rounded-lg p-8 flex flex-col justify-center items-center text-center aspect-[4/5]">
-            <p class="text-gray-600 text-xs uppercase tracking-widest italic mb-2">More Coming Soon</p>
-            <p class="text-gray-800 text-[10px]">更多作品正在整理中...</p>
-        </div>
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden rounded-sm bg-gray-900 aspect-[3/4] mb-6">
+                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                </div>
+                <h3 class="text-lg font-bold mb-1">商业视觉系统</h3>
+                <p class="text-[10px] text-green-400 font-mono tracking-widest uppercase mb-3">Graphic Practice / 2025</p>
+                <p class="text-gray-500 text-xs leading-relaxed italic">
+                    某品牌年度视觉识别系统设计。 / Visual Identity System for an annual brand project.
+                </p>
+            </div>
 
+        </div>
     </main>
 
-    <footer class="max-w-7xl mx-auto mt-40 pb-12 text-center text-[10px] tracking-[0.4em] text-gray-700 border-t border-white/5 pt-12">
-        © MAO TIANYI. ALL IMAGES ARE PROTECTED.
+    <footer class="max-w-7xl mx-auto mt-40 pb-12 text-[9px] tracking-[0.5em] text-gray-700 border-t border-white/5 pt-12 text-center uppercase">
+        © MAO TIANYI / VISUAL ARCHIVE
     </footer>
 </body>
 </html>
