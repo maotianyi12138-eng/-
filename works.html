@@ -3,12 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>视觉作品集 - 毛天一</title>
+    <title>作品集 | PORTFOLIO - 毛天艺</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&display=swap');
+        body { 
+            background-color: #050505; 
+            color: #e5e5e5; 
+            font-family: -apple-system, sans-serif; 
+        }
+        .serif-title { font-family: 'Noto Serif SC', serif; }
+        
+        /* 图片悬停放大效果 */
+        .work-item img { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .work-item:hover img { transform: scale(1.05); }
+        
+        /* 这里的背景色可以根据你的 horse.jpg 风格微调 */
+        .page-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(5,5,5,0.9), #050505);
+            z-index: -1;
+        }
+    </style>
 </head>
-<body class="bg-black text-white p-10">
-    <a href="index.html" class="text-gray-400 hover:text-white">← 返回首页</a>
-    <h1 class="text-4xl font-bold mt-10 mb-6">视觉作品集</h1>
-    <p class="text-gray-400">这里正在整理我的视觉设计、摄影和创意作品...</p>
-    </body>
+<body class="p-6 md:p-12">
+    <div class="page-bg"></div>
+
+    <nav class="max-w-7xl mx-auto mb-20 flex justify-between items-center">
+        <a href="index.html" class="text-xs tracking-widest opacity-50 hover:opacity-100 transition uppercase">
+            ← Back / 返回首页
+        </a>
+        <div class="text-xs tracking-[0.3em] opacity-30 uppercase font-bold">Selected Works 2024-2026</div>
+    </nav>
+
+    <header class="max-w-7xl mx-auto mb-24">
+        <h1 class="serif-title text-5xl md:text-7xl mb-4 text-white">视觉作品集</h1>
+        <p class="text-gray-500 tracking-widest uppercase text-xs font-bold mb-8">Visual Portfolio / Graphic & Photography</p>
+        <div class="h-[1px] w-20 bg-blue-500"></div>
+    </header>
+
+    <main class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        
+        <div class="work-item group cursor-pointer">
+            <div class="overflow-hidden rounded-lg bg-gray-900 aspect-[4/5] mb-6 shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=800&q=80" 
+                     alt="Project 01" class="w-full h-full object-cover opacity-80 group-hover:opacity-100">
+            </div>
+            <h3 class="text-xl font-bold mb-1">视觉实验项目 01</h3>
+            <p class="text-xs text-blue-400 font-mono tracking-tighter mb-3 uppercase">Visual Experiment / 2026</p>
+            <p class="text-gray-500 text-xs leading-relaxed italic">
+                关于光影与构图的数字探索。 / Digital exploration of light and composition.
+            </p>
+        </div>
+
+        <div class="work-item group cursor-pointer">
+            <div class="overflow-hidden rounded-lg bg-gray-900 aspect-[4/5] mb-6 shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" 
+                     alt="Project 02" class="w-full h-full object-cover opacity-80 group-hover:opacity-100">
+            </div>
+            <h3 class="text-xl font-bold mb-1">自然叙事</h3>
+            <p class="text-xs text-blue-400 font-mono tracking-tighter mb-3 uppercase">Photography / 2025</p>
+            <p class="text-gray-500 text-xs leading-relaxed italic">
+                纪实摄影：荒野的静谧。 / Documentary photography: The silence of wilderness.
+            </p>
+        </div>
+
+        <div class="work-item group cursor-pointer border border-white/5 rounded-lg p-8 flex flex-col justify-center items-center text-center aspect-[4/5]">
+            <p class="text-gray-600 text-xs uppercase tracking-widest italic mb-2">More Coming Soon</p>
+            <p class="text-gray-800 text-[10px]">更多作品正在整理中...</p>
+        </div>
+
+    </main>
+
+    <footer class="max-w-7xl mx-auto mt-40 pb-12 text-center text-[10px] tracking-[0.4em] text-gray-700 border-t border-white/5 pt-12">
+        © MAO TIANYI. ALL IMAGES ARE PROTECTED.
+    </footer>
+</body>
 </html>
