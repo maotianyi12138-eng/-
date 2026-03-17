@@ -6,75 +6,49 @@
     <title>PORTFOLIO - 毛天艺</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Libre+Baskerville:italic@400&display=swap');
         body { background-color: #050505; color: #e5e5e5; font-family: sans-serif; }
-        .serif-title { font-family: 'Noto Serif SC', serif; }
-        
-        /* 分类按钮 */
-        .filter-btn { transition: 0.3s; opacity: 0.3; text-align: left; cursor: pointer; border-bottom: 2px solid transparent; }
+        .vogue-title { font-family: 'Noto Serif SC', serif; }
+        .vogue-sub { font-family: 'Libre Baskerville', serif; }
+        .filter-btn { transition: 0.3s; opacity: 0.3; cursor: pointer; border-bottom: 2px solid transparent; }
         .filter-btn.active { opacity: 1; border-bottom: 2px solid #3b82f6; }
-        
-        /* 隐藏逻辑 */
         .project-group { transition: 0.5s; }
         .project-group.hidden { display: none; }
-
-        /* 图片堆叠：让一组图片之间有小间距 */
-        .stack-images img { margin-bottom: 1rem; width: 100%; border-radius: 4px; }
+        /* 强制图片 16:9 且美观 */
+        .aspect-16-9 { aspect-ratio: 16 / 9; object-fit: cover; }
     </style>
 </head>
 <body class="p-8 md:p-16">
-    <nav class="mb-12"><a href="index.html" class="opacity-50 hover:opacity-100 transition">← 返回首页 / BACK</a></nav>
+    <nav class="mb-12"><a href="index.html" class="opacity-50 hover:opacity-100 transition">← BACK</a></nav>
 
     <div class="flex flex-wrap gap-8 border-b border-white/10 pb-6 mb-16">
-        <div onclick="filterWorks('all')" class="filter-btn active" id="btn-all">ALL<br><small>全部</small></div>
-        <div onclick="filterWorks('critical')" class="filter-btn" id="btn-critical">CRITICAL<br><small>批判设计</small></div>
-        <div onclick="filterWorks('photo')" class="filter-btn" id="btn-photo">PHOTO<br><small>风格摄影</small></div>
-        <div onclick="filterWorks('practice')" class="filter-btn" id="btn-practice">PRACTICE<br><small>美工实践</small></div>
-        <div onclick="filterWorks('engineering')" class="filter-btn" id="btn-engineering">ENGINEERING<br><small>工程案例</small></div>
+        <div onclick="filterWorks('all')" class="filter-btn active" id="btn-all">ALL</div>
+        <div onclick="filterWorks('critical')" class="filter-btn" id="btn-critical">CRITICAL / 批判设计</div>
+        <div onclick="filterWorks('photo')" class="filter-btn" id="btn-photo">PHOTO / 风格摄影</div>
+        <div onclick="filterWorks('practice')" class="filter-btn" id="btn-practice">PRACTICE / 美工实践</div>
+        <div onclick="filterWorks('engineering')" class="filter-btn" id="btn-engineering">ENGINEERING / 工程案例</div>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16" id="grid">
         
         <div class="project-group" data-category="critical">
-            <div class="stack-images">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800">
-                <img src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=800">
-                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800">
-                <img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=800">
-            </div>
-            <div class="mt-6 border-l-2 border-blue-500 pl-4">
-                <h3 class="text-xl font-bold">批判性设计：某项目名称</h3>
-                <p class="text-xs text-blue-400 mt-1 uppercase tracking-widest">4 Images Series / 2026</p>
-                <p class="text-gray-500 text-sm mt-3 italic">这里是关于这四张图的统一描述。 / Project description here.</p>
-            </div>
+            <div class="space-y-4">
+                <img src="批判1" class="w-full aspect-16-9 rounded"> <img src="批判2" class="w-full aspect-16-9 rounded"> <img src="批判3" class="w-full aspect-16-9 rounded"> <img src="批判4" class="w-full aspect-16-9 rounded"> </div>
+            
+            <div class="mt-8 border-l-2 border-blue-500 pl-4">
+                <h3 class="vogue-title text-2xl font-black">PROLONGED DIFFICULT PROGRESS OF DIVORCE IN CHINA</h3> <p class="vogue-sub text-xs opacity-40 italic uppercase mt-1">4 Images / 16:9 Series</p>
+                <p class="text-gray-500 text-sm mt-4 leading-relaxed">描述了中国社会结婚容易离婚难已经女性在过程中的不平等地位。</p> </div>
         </div>
-
-        <div class="project-group" data-category="photo">
-            <div class="stack-images">
-                <img src="https://images.unsplash.com/photo-1531315630201-bb15b9a56312?w=800">
-                <img src="https://images.unsplash.com/photo-1518005020251-582c788447d9?w=800">
-            </div>
-            <div class="mt-6 border-l-2 border-red-500 pl-4">
-                <h3 class="text-xl font-bold">风格化摄影：光影二重奏</h3>
-                <p class="text-xs text-red-400 mt-1 uppercase tracking-widest">2 Images Series</p>
-            </div>
         </div>
-
-    </div>
 
     <script>
         function filterWorks(cat) {
-            // 切换按钮高亮
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             document.getElementById('btn-' + cat).classList.add('active');
-            
-            // 切换项目显示/隐藏
             document.querySelectorAll('.project-group').forEach(item => {
                 if (cat === 'all' || item.getAttribute('data-category') === cat) {
                     item.classList.remove('hidden');
-                } else {
-                    item.classList.add('hidden');
-                }
+                } else { item.classList.add('hidden'); }
             });
         }
     </script>
