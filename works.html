@@ -7,15 +7,62 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Libre+Baskerville:italic@400&display=swap');
-        body { background-color: #050505; color: #e5e5e5; font-family: sans-serif; }
+        body { background-color: #050505; color: #e5e5e5; font-family: sans-serif; overflow-x: hidden; }
         .vogue-title { font-family: 'Noto Serif SC', serif; }
         .vogue-sub { font-family: 'Libre Baskerville', serif; }
+        
         .filter-btn { transition: 0.3s; opacity: 0.3; cursor: pointer; border-bottom: 2px solid transparent; }
         .filter-btn.active { opacity: 1; border-bottom: 2px solid #3b82f6; }
+
+        /* --- 核心动画样式 --- */
         .project-group { transition: 0.5s; }
         .project-group.hidden { display: none; }
-        /* 强制图片 16:9 且美观 */
-        .aspect-16-9 { aspect-ratio: 16 / 9; object-fit: cover; }
+
+        /* 图片堆叠效果 */
+        .stack-container { 
+            position: relative; 
+            height: 300px; /* 缩起时的高度 */
+            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+            cursor: s-resize;
+        }
+        .stack-container.expanded { height: auto; cursor: default; }
+
+        .stack-img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 -20px 30px rgba(0,0,0,0.5);
+        }
+
+        /* 堆叠时的偏移位置 */
+        .stack-img:nth-child(1) { transform: translateY(0px) scale(1); z-index: 4; }
+        .stack-img:nth-child(2) { transform: translateY(40px) scale(0.98); z-index: 3; }
+        .stack-img:nth-child(3) { transform: translateY(80px) scale(0.96); z-index: 2; }
+        .stack-img:nth-child(4) { transform: translateY(120px) scale(0.94); z-index: 1; }
+
+        /* 展开后的状态 */
+        .expanded .stack-img {
+            position: relative;
+            transform: translateY(0) scale(1) !important;
+            margin-bottom: 1.5rem;
+            z-index: 10 !important;
+            cursor: zoom-in;
+        }
+
+        /* 全屏放大遮罩 */
+        #lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 100;
+            justify-content: center; align-items: center;
+            cursor: zoom-out;
+        }
     </style>
 </head>
 <body class="p-8 md:p-16">
@@ -29,19 +76,47 @@
         <div onclick="filterWorks('engineering')" class="filter-btn" id="btn-engineering">ENGINEERING / 工程案例</div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16" id="grid">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-24" id="grid">
         
         <div class="project-group" data-category="critical">
-            <div class="space-y-4">
-                <img src="批判1" class="w-full aspect-16-9 rounded"> <img src="批判2" class="w-full aspect-16-9 rounded"> <img src="批判3" class="w-full aspect-16-9 rounded"> <img src="批判4" class="w-full aspect-16-9 rounded"> </div>
+            <div class="stack-container" onclick="toggleExpand(this)">
+                <img src="pic1.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="pic2.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="pic3.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="pic4.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+            </div>
             
             <div class="mt-8 border-l-2 border-blue-500 pl-4">
-                <h3 class="vogue-title text-2xl font-black">PROLONGED DIFFICULT PROGRESS OF DIVORCE IN CHINA</h3> <p class="vogue-sub text-xs opacity-40 italic uppercase mt-1">4 Images / 16:9 Series</p>
-                <p class="text-gray-500 text-sm mt-4 leading-relaxed">描述了中国社会结婚容易离婚难已经女性在过程中的不平等地位。</p> </div>
+                <h3 class="vogue-title text-2xl font-black">PROLONGED DIFFICULT PROGRESS OF DIVORCE IN CHINA</h3>
+                <p class="vogue-sub text-xs opacity-40 italic mt-1 uppercase">4 Images / 16:9 Series</p>
+                <p class="text-gray-500 text-sm mt-4 leading-relaxed">描述了中国社会结婚容易离婚难，女性在过程中的不平等地位。</p>
+            </div>
         </div>
         </div>
 
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" class="max-w-[90%] max-height-[90%] shadow-2xl">
+    </div>
+
     <script>
+        // 展开/收起逻辑
+        function toggleExpand(container) {
+            container.classList.toggle('expanded');
+        }
+
+        // 放大图片逻辑
+        function zoomImage(event, img) {
+            const container = img.parentElement;
+            if (container.classList.contains('expanded')) {
+                event.stopPropagation(); // 防止触发收起逻辑
+                const lightbox = document.getElementById('lightbox');
+                const lightboxImg = document.getElementById('lightbox-img');
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex';
+            }
+        }
+
+        // 原始筛选逻辑
         function filterWorks(cat) {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             document.getElementById('btn-' + cat).classList.add('active');
