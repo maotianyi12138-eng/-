@@ -14,14 +14,12 @@
         .filter-btn { transition: 0.3s; opacity: 0.3; cursor: pointer; border-bottom: 2px solid transparent; }
         .filter-btn.active { opacity: 1; border-bottom: 2px solid #3b82f6; }
 
-        /* --- 核心动画样式 --- */
         .project-group { transition: 0.5s; }
         .project-group.hidden { display: none; }
 
-        /* 图片堆叠效果 */
         .stack-container { 
             position: relative; 
-            height: 300px; /* 缩起时的高度 */
+            height: 300px; 
             transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
             cursor: s-resize;
         }
@@ -36,15 +34,17 @@
             transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
             border: 1px solid rgba(255,255,255,0.1);
             box-shadow: 0 -20px 30px rgba(0,0,0,0.5);
+            background-color: #111;
         }
 
-        /* 堆叠时的偏移位置 */
-        .stack-img:nth-child(1) { transform: translateY(0px) scale(1); z-index: 4; }
-        .stack-img:nth-child(2) { transform: translateY(40px) scale(0.98); z-index: 3; }
-        .stack-img:nth-child(3) { transform: translateY(80px) scale(0.96); z-index: 2; }
-        .stack-img:nth-child(4) { transform: translateY(120px) scale(0.94); z-index: 1; }
+        /* 堆叠偏移逻辑 - 适配多张图 */
+        .stack-img:nth-child(1) { transform: translateY(0px) scale(1); z-index: 6; }
+        .stack-img:nth-child(2) { transform: translateY(30px) scale(0.98); z-index: 5; }
+        .stack-img:nth-child(3) { transform: translateY(60px) scale(0.96); z-index: 4; }
+        .stack-img:nth-child(4) { transform: translateY(90px) scale(0.94); z-index: 3; }
+        .stack-img:nth-child(5) { transform: translateY(120px) scale(0.92); z-index: 2; }
+        .stack-img:nth-child(6) { transform: translateY(150px) scale(0.90); z-index: 1; }
 
-        /* 展开后的状态 */
         .expanded .stack-img {
             position: relative;
             transform: translateY(0) scale(1) !important;
@@ -53,7 +53,6 @@
             cursor: zoom-in;
         }
 
-        /* 全屏放大遮罩 */
         #lightbox {
             display: none;
             position: fixed;
@@ -85,32 +84,35 @@
                 <img src="批判3" class="stack-img rounded" onclick="zoomImage(event, this)">
                 <img src="批判4" class="stack-img rounded" onclick="zoomImage(event, this)">
             </div>
-            
             <div class="mt-8 border-l-2 border-blue-500 pl-4">
-                <h3 class="vogue-title text-2xl font-black">PROLONGED DIFFICULT PROGRESS OF DIVORCE IN CHINA</h3>
+                <h3 class="vogue-title text-2xl font-black uppercase">Divorce in China</h3>
                 <p class="vogue-sub text-xs opacity-40 italic mt-1 uppercase">4 Images / 16:9 Series</p>
-                <p class="text-gray-500 text-sm mt-4 leading-relaxed">描述了中国社会结婚容易离婚难，女性在过程中的不平等地位。</p>
-            </div>
-        </div><div class="project-group" data-category="critical">
-            <div class="stack-container" onclick="toggleExpand(this)">
-                <img src="图1.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="图2.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="图3.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="图4.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
-            </div>
-            <div class="mt-8 border-l-2 border-blue-500 pl-4">
-                <h3 class="vogue-title text-2xl font-black">项目标题 2</h3>
-                <p class="vogue-sub text-xs opacity-40 italic mt-1 uppercase">4 Images / Series</p>
-                <p class="text-gray-500 text-sm mt-4 leading-relaxed">描述内容 2。</p>
+                <p class="text-gray-500 text-sm mt-4 leading-relaxed">描述了中国社会结婚容易离婚难。</p>
             </div>
         </div>
 
         <div class="project-group" data-category="critical">
             <div class="stack-container" onclick="toggleExpand(this)">
-                <img src="图1.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="图2.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="图3.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="图4.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="图2_1.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="图2_2.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="图2_3.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="图2_4.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="图2_5.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="图2_6.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+            </div>
+            <div class="mt-8 border-l-2 border-blue-500 pl-4">
+                <h3 class="vogue-title text-2xl font-black">项目标题 2</h3>
+                <p class="vogue-sub text-xs opacity-40 italic mt-1 uppercase">6 Images / Series</p>
+                <p class="text-gray-500 text-sm mt-4 leading-relaxed">描述内容 2 (包含 6 张作品)。</p>
+            </div>
+        </div>
+
+        <div class="project-group" data-category="critical">
+            <div class="stack-container" onclick="toggleExpand(this)">
+                <img src="图3_1.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="图3_2.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="图3_3.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="图3_4.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
             </div>
             <div class="mt-8 border-l-2 border-blue-500 pl-4">
                 <h3 class="vogue-title text-2xl font-black">项目标题 3</h3>
@@ -121,34 +123,34 @@
 
         <div class="project-group" data-category="critical">
             <div class="stack-container" onclick="toggleExpand(this)">
-                <img src="图1.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="图2.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="图3.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="图4.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="图4_1.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="图4_2.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="图4_3.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="图4_4.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="图4_5.jpg" class="stack-img rounded" onclick="zoomImage(event, this)">
             </div>
             <div class="mt-8 border-l-2 border-blue-500 pl-4">
                 <h3 class="vogue-title text-2xl font-black">项目标题 4</h3>
-                <p class="vogue-sub text-xs opacity-40 italic mt-1 uppercase">4 Images / Series</p>
-                <p class="text-gray-500 text-sm mt-4 leading-relaxed">描述内容 4。</p>
+                <p class="vogue-sub text-xs opacity-40 italic mt-1 uppercase">5 Images / Series</p>
+                <p class="text-gray-500 text-sm mt-4 leading-relaxed">描述内容 4 (包含 5 张作品)。</p>
             </div>
         </div>
-        </div>
+
+    </div>
 
     <div id="lightbox" onclick="this.style.display='none'">
-        <img id="lightbox-img" class="max-w-[90%] max-height-[90%] shadow-2xl">
+        <img id="lightbox-img" class="max-w-[90%] max-h-[90vh] object-contain shadow-2xl">
     </div>
 
     <script>
-        // 展开/收起逻辑
         function toggleExpand(container) {
             container.classList.toggle('expanded');
         }
 
-        // 放大图片逻辑
         function zoomImage(event, img) {
             const container = img.parentElement;
             if (container.classList.contains('expanded')) {
-                event.stopPropagation(); // 防止触发收起逻辑
+                event.stopPropagation();
                 const lightbox = document.getElementById('lightbox');
                 const lightboxImg = document.getElementById('lightbox-img');
                 lightboxImg.src = img.src;
@@ -156,7 +158,6 @@
             }
         }
 
-        // 原始筛选逻辑
         function filterWorks(cat) {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             document.getElementById('btn-' + cat).classList.add('active');
