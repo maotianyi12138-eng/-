@@ -7,14 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&display=swap');
-        body { 
-            background-color: #050505; 
-            color: #e5e5e5; 
-            font-family: -apple-system, sans-serif; 
-        }
+        body { background-color: #050505; color: #e5e5e5; font-family: -apple-system, sans-serif; }
         .serif-title { font-family: 'Noto Serif SC', serif; }
         
-        /* 页面背景遮罩 */
         .page-bg {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -22,30 +17,24 @@
             z-index: -1;
         }
 
-        /* 分类按钮样式 */
+        /* 筛选按钮样式 */
         .filter-btn {
-            position: relative;
-            transition: all 0.3s ease;
-            opacity: 0.4;
+            transition: all 0.4s ease;
+            opacity: 0.3;
+            text-align: left;
         }
-        .filter-btn:hover, .filter-btn.active {
-            opacity: 1;
-        }
-        .filter-btn.active::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: #3b82f6; /* 蓝色装饰线 */
-        }
+        .filter-btn:hover { opacity: 0.7; }
+        .filter-btn.active { opacity: 1; border-bottom: 2px solid #3b82f6; }
+
+        /* 作品项显示/隐藏动画 */
+        .work-item { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .work-item.hidden { display: none; opacity: 0; transform: scale(0.9); }
     </style>
 </head>
 <body class="p-6 md:p-12">
     <div class="page-bg"></div>
 
-    <nav class="max-w-7xl mx-auto mb-16 flex justify-between items-center">
+    <nav class="max-w-7xl mx-auto mb-16 flex justify-between items-center relative z-20">
         <a href="index.html" class="text-xs tracking-widest opacity-50 hover:opacity-100 transition uppercase">
             ← Back / 返回首页
         </a>
@@ -53,66 +42,64 @@
     </nav>
 
     <header class="max-w-7xl mx-auto mb-20">
-        <h1 class="serif-title text-5xl md:text-6xl mb-12 text-white">视觉作品集</h1>
+        <h1 class="serif-title text-5xl md:text-6xl mb-12">视觉作品集</h1>
         
-        <div class="flex flex-wrap gap-x-10 gap-y-6 text-sm font-medium tracking-widest uppercase border-b border-white/5 pb-6">
-            <button class="filter-btn active">
-                Critical Design<br>
-                <span class="text-[10px] serif-cn opacity-60 italic">批判性平面设计</span>
+        <div class="flex flex-wrap gap-x-12 gap-y-8 border-b border-white/5 pb-8">
+            <button onclick="filterWorks('all')" class="filter-btn active" id="btn-all">
+                All<br><span class="text-[10px] opacity-60 italic">全部作品</span>
             </button>
-            <button class="filter-btn">
-                Stylized Photo<br>
-                <span class="text-[10px] serif-cn opacity-60 italic">风格化摄影</span>
+            <button onclick="filterWorks('critical')" class="filter-btn" id="btn-critical">
+                Critical Design<br><span class="text-[10px] opacity-60 italic">批判性平面设计</span>
             </button>
-            <button class="filter-btn">
-                Graphic Practice<br>
-                <span class="text-[10px] serif-cn opacity-60 italic">平面美工实践</span>
+            <button onclick="filterWorks('photo')" class="filter-btn" id="btn-photo">
+                Stylized Photo<br><span class="text-[10px] opacity-60 italic">风格化摄影</span>
             </button>
-            <button class="filter-btn">
-                Engineering Case<br>
-                <span class="text-[10px] serif-cn opacity-60 italic">工程案例</span>
+            <button onclick="filterWorks('practice')" class="filter-btn" id="btn-practice">
+                Graphic Practice<br><span class="text-[10px] opacity-60 italic">平面美工实践</span>
+            </button>
+            <button onclick="filterWorks('engineering')" class="filter-btn" id="btn-engineering">
+                Engineering Case<br><span class="text-[10px] opacity-60 italic">工程案例</span>
             </button>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12" id="works-grid">
             
-            <div class="group cursor-pointer">
-                <div class="overflow-hidden rounded-sm bg-gray-900 aspect-[3/4] mb-6 relative">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800" 
-                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
-                    <div class="absolute top-4 left-4 text-[9px] bg-blue-600 px-2 py-1 tracking-tighter">NEW</div>
+            <div class="work-item group" data-category="critical">
+                <div class="overflow-hidden rounded-sm bg-gray-900 aspect-[3/4] mb-6">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
                 </div>
-                <h3 class="text-lg font-bold mb-1">设计叙事：边界</h3>
-                <p class="text-[10px] text-blue-400 font-mono tracking-widest uppercase mb-3">Critical Design / 2026</p>
-                <p class="text-gray-500 text-xs leading-relaxed italic">
-                    通过平面语言探讨城市边界的消亡。<br>Exploring urban boundaries through graphic language.
-                </p>
+                <h3 class="text-lg font-bold">设计叙事：边界</h3>
+                <p class="text-[10px] text-blue-400 font-mono tracking-widest uppercase mb-2">Critical Design</p>
+                <p class="text-gray-500 text-xs italic">探讨城市边界的消亡。 / Exploring urban boundaries.</p>
             </div>
 
-            <div class="group cursor-pointer">
+            <div class="work-item group" data-category="photo">
                 <div class="overflow-hidden rounded-sm bg-gray-900 aspect-[3/4] mb-6">
-                    <img src="https://images.unsplash.com/photo-1531315630201-bb15b9a56312?auto=format&fit=crop&w=800" 
-                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                    <img src="https://images.unsplash.com/photo-1531315630201-bb15b9a56312?auto=format&fit=crop&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
                 </div>
-                <h3 class="text-lg font-bold mb-1">光影重构</h3>
-                <p class="text-[10px] text-red-400 font-mono tracking-widest uppercase mb-3">Stylized Photography / 2025</p>
-                <p class="text-gray-500 text-xs leading-relaxed italic">
-                    极简主义视角下的建筑光影。 / Architectural shadows from a minimalist perspective.
-                </p>
+                <h3 class="text-lg font-bold">光影重构</h3>
+                <p class="text-[10px] text-red-400 font-mono tracking-widest uppercase mb-2">Stylized Photo</p>
+                <p class="text-gray-500 text-xs italic">极简建筑光影。 / Minimalist shadows.</p>
             </div>
 
-            <div class="group cursor-pointer">
+            <div class="work-item group" data-category="practice">
                 <div class="overflow-hidden rounded-sm bg-gray-900 aspect-[3/4] mb-6">
-                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800" 
-                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
                 </div>
-                <h3 class="text-lg font-bold mb-1">商业视觉系统</h3>
-                <p class="text-[10px] text-green-400 font-mono tracking-widest uppercase mb-3">Graphic Practice / 2025</p>
-                <p class="text-gray-500 text-xs leading-relaxed italic">
-                    某品牌年度视觉识别系统设计。 / Visual Identity System for an annual brand project.
-                </p>
+                <h3 class="text-lg font-bold">视觉识别系统</h3>
+                <p class="text-[10px] text-green-400 font-mono tracking-widest uppercase mb-2">Graphic Practice</p>
+                <p class="text-gray-500 text-xs italic">品牌视觉实践。 / Visual identity system.</p>
+            </div>
+
+            <div class="work-item group" data-category="engineering">
+                <div class="overflow-hidden rounded-sm bg-gray-900 aspect-[3/4] mb-6">
+                    <img src="https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                </div>
+                <h3 class="text-lg font-bold">结构之美</h3>
+                <p class="text-[10px] text-yellow-600 font-mono tracking-widest uppercase mb-2">Engineering Case</p>
+                <p class="text-gray-500 text-xs italic">工程逻辑与美学的结合。 / Engineering logic.</p>
             </div>
 
         </div>
@@ -121,5 +108,29 @@
     <footer class="max-w-7xl mx-auto mt-40 pb-12 text-[9px] tracking-[0.5em] text-gray-700 border-t border-white/5 pt-12 text-center uppercase">
         © MAO TIANYI / VISUAL ARCHIVE
     </footer>
+
+    <script>
+        function filterWorks(category) {
+            const items = document.querySelectorAll('.work-item');
+            const btns = document.querySelectorAll('.filter-btn');
+            
+            // 更新按钮状态
+            btns.forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + category).classList.add('active');
+
+            // 执行过滤动画
+            items.forEach(item => {
+                item.style.opacity = '0';
+                setTimeout(() => {
+                    if (category === 'all' || item.getAttribute('data-category') === category) {
+                        item.classList.remove('hidden');
+                        setTimeout(() => item.style.opacity = '1', 50);
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                }, 300);
+            });
+        }
+    </script>
 </body>
 </html>
