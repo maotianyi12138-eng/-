@@ -3,64 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>毛天艺 | MAO TIANYI</title>
+    <title>阅读札记 | READING NOTES - 毛天艺</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&display=swap');
-        
         body { 
-            /* 背景图设置 */
-            background-image: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.8)), url('horse.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
             background-color: #050505; 
             color: #e5e5e5; 
             font-family: sans-serif; 
-            margin: 0;
+            line-height: 1.6;
         }
-
         .serif-title { font-family: 'Noto Serif SC', serif; }
-        
-        .section-card { 
-            transition: all 0.4s ease; 
-            background: rgba(255,255,255,0.03); 
-            backdrop-filter: blur(10px); /* 增加磨砂玻璃效果 */
+        .book-card { 
+            border-bottom: 1px solid rgba(255,255,255,0.05); 
+            transition: all 0.3s ease;
         }
-        
-        .section-card:hover { 
-            transform: translateY(-8px); 
-            background: rgba(255,255,255,0.08); 
-            border-color: rgba(255,255,255,0.3); 
-        }
+        .book-card:hover { background: rgba(255,255,255,0.02); }
     </style>
 </head>
-<body>
-    <nav class="p-6 max-w-6xl mx-auto flex justify-between items-center border-b border-white/10">
-        <div class="text-xl font-bold tracking-tighter">STUDIO.</div>
-        <div class="space-x-6 text-xs font-medium tracking-widest uppercase">
-            <a href="works.html" class="opacity-50 hover:opacity-100 transition">Works / 作品</a>
-            <a href="movies.html" class="opacity-50 hover:opacity-100 transition">Cinema / 电影</a>
-            <a href="music.html" class="opacity-50 hover:opacity-100 transition">Music / 音乐</a>
-            <a href="read.html" class="opacity-50 hover:opacity-100 transition">Read / 阅读</a>
-        </div>
+<body class="p-6 md:p-16 max-w-5xl mx-auto">
+    <nav class="mb-20">
+        <a href="index.html" class="group text-gray-500 hover:text-white transition flex items-center gap-2">
+            <span class="group-hover:-translate-x-1 transition-transform">←</span> 
+            <span>返回首页 / BACK TO HOME</span>
+        </a>
     </nav>
 
-    <section class="py-32 px-6 max-w-6xl mx-auto">
-        <div class="mb-4 text-blue-400 font-mono text-sm tracking-[0.3em] uppercase">Visual Artist</div>
-        <h1 class="serif-title text-8xl md:text-[10rem] mb-6 tracking-tighter leading-none">
-            毛天艺<br>
-            <span class="text-3xl md:text-5xl opacity-20 font-sans italic tracking-normal">MAO TIANYI</span>
-        </h1>
-        <p class="text-lg text-gray-400 max-w-2xl leading-relaxed font-light border-l border-white/20 pl-6 mt-8">
-            欢迎来到我的个人网站。这里记录了关于视觉、影像与声音的思考。<br>
-            <span class="text-sm opacity-40 italic">Welcome to my personal space. A collection of thoughts on vision, image, and sound.</span>
+    <header class="mb-24">
+        <h1 class="serif-title text-6xl mb-4">阅读札记</h1>
+        <div class="text-xl opacity-20 italic font-light tracking-widest uppercase mb-8">Reading Notes & Book Reviews</div>
+        <p class="text-gray-500 max-w-xl border-l-2 border-yellow-600/50 pl-6">
+            书是随身携带的花园。在这里记录我读过的文字与思考。<br>
+            <span class="text-sm opacity-50 italic">"A book is like a garden carried in the pocket." My collection of thoughts and readings.</span>
         </p>
-    </section>
+    </header>
 
-    <section class="px-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-        <a href="works.html" class="section-card p-10 rounded-2xl border border-white/10 block group">
-            <h2 class="text-3xl font-bold mb-1">视觉作品集</h2>
-            <div class="text-sm uppercase tracking-widest text-blue-400 mb-4 opacity-70">Visual Portfolio</div>
-            <p class="text-gray-500 text-sm italic leading-relaxed">平面设计与摄影作品。 / Graphic design and photography.</p>
-        </a>
+    <div class="space-y-20">
+        
+        <div class="book-card pb-16 flex flex-col md:flex-row gap-10">
+            <div class="w-40 flex-shrink-0 shadow-2xl shadow-white/5">
+                <img src="https://img9.doubanio.com/view/subject/s/public/s24514332.jpg" class="w-full rounded-sm" alt="置身内外部">
+            </div>
+            <div class="flex-1">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">《置身内外部》</h3>
+                        <p class="text-gray-500 text-sm font-mono mt-1">Interiors and Exteriors</p>
+                    </div>
+                    <span class="text-yellow-600 font-mono tracking-tighter">★★★★★</span>
+                </div>
+                <div class="space-y-4">
+                    <p class="text-gray-300">
+                        这本书不仅仅是在讨论设计，它更像是在拆解我们观察世界的方式。作者通过极其理性的逻辑，揭示了创意背后的秩序感。
+                    </p>
+                    <p class="text-sm text-gray-500 italic leading-relaxed border-t border-white/5 pt-4">
+                        This book is more than just a discussion on design; it’s an exploration of how we perceive the world. The author reveals the sense of order behind creativity through impeccable logic.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card pb-16 flex flex-col md:flex-row gap-10">
+            <div class="w-40 flex-shrink-0 shadow-2xl shadow-white/5">
+                <img src="https://img9.doubanio.com/view/subject/s/public/s1070959.jpg" class="w-full rounded-sm" alt="艺术的故事">
+            </div>
+            <div class="flex-1">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">《艺术的故事》</h3>
+                        <p class="text-gray-500 text-sm font-mono mt-1">The Story of Art</p>
+                    </div>
+                    <span class="text-yellow-600 font-mono tracking-tighter">★★★★★</span>
+                </div>
+                <div class="space-y-4">
+                    <p class="text-gray-300">
+                        作为艺术史的入门经典，贡布里希将宏大的历史理得极为顺滑。它教会我，艺术不是孤立的产物，而是时代灵魂的写照。
+                    </p>
+                    <p class="text-sm text-gray-500 italic leading-relaxed border-t border-white/5 pt-4">
+                        As a classic introduction to art history, Gombrich weaves a grand narrative with incredible smoothness. It taught me that art is not an isolated product, but a reflection of the era's soul.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="mt-32 pb-12 text-center text-gray-700 text-[10px] tracking-[0.3em] uppercase">
+        THE READING LIST OF MAO TIANYI / ARCHIVE 2026
+    </footer>
+</body>
+</html>
