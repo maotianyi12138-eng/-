@@ -3,132 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作品集 | PORTFOLIO - 毛天艺</title>
+    <title>PORTFOLIO - 毛天艺</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&display=swap');
-        body { background-color: #050505; color: #e5e5e5; font-family: -apple-system, sans-serif; }
+        body { background-color: #050505; color: #e5e5e5; font-family: sans-serif; }
         .serif-title { font-family: 'Noto Serif SC', serif; }
         
-        .page-bg {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at top right, #111, #050505);
-            z-index: -1;
-        }
-
-        /* 筛选按钮样式 */
-        .filter-btn {
-            transition: all 0.4s ease;
-            opacity: 0.3;
-            text-align: left;
-        }
-        .filter-btn:hover { opacity: 0.7; }
+        /* 分类按钮 */
+        .filter-btn { transition: 0.3s; opacity: 0.3; text-align: left; cursor: pointer; border-bottom: 2px solid transparent; }
         .filter-btn.active { opacity: 1; border-bottom: 2px solid #3b82f6; }
+        
+        /* 隐藏逻辑 */
+        .project-group { transition: 0.5s; }
+        .project-group.hidden { display: none; }
 
-        /* 作品项显示/隐藏动画 */
-        .work-item { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-        .work-item.hidden { display: none; opacity: 0; transform: scale(0.9); }
+        /* 图片堆叠：让一组图片之间有小间距 */
+        .stack-images img { margin-bottom: 1rem; width: 100%; border-radius: 4px; }
     </style>
 </head>
-<body class="p-6 md:p-12">
-    <div class="page-bg"></div>
+<body class="p-8 md:p-16">
+    <nav class="mb-12"><a href="index.html" class="opacity-50 hover:opacity-100 transition">← 返回首页 / BACK</a></nav>
 
-    <nav class="max-w-7xl mx-auto mb-16 flex justify-between items-center relative z-20">
-        <a href="index.html" class="text-xs tracking-widest opacity-50 hover:opacity-100 transition uppercase">
-            ← Back / 返回首页
-        </a>
-        <div class="text-[10px] tracking-[0.3em] opacity-30 uppercase font-bold">Portfolio / 2024-2026</div>
-    </nav>
+    <div class="flex flex-wrap gap-8 border-b border-white/10 pb-6 mb-16">
+        <div onclick="filterWorks('all')" class="filter-btn active" id="btn-all">ALL<br><small>全部</small></div>
+        <div onclick="filterWorks('critical')" class="filter-btn" id="btn-critical">CRITICAL<br><small>批判设计</small></div>
+        <div onclick="filterWorks('photo')" class="filter-btn" id="btn-photo">PHOTO<br><small>风格摄影</small></div>
+        <div onclick="filterWorks('practice')" class="filter-btn" id="btn-practice">PRACTICE<br><small>美工实践</small></div>
+        <div onclick="filterWorks('engineering')" class="filter-btn" id="btn-engineering">ENGINEERING<br><small>工程案例</small></div>
+    </div>
 
-    <header class="max-w-7xl mx-auto mb-20">
-        <h1 class="serif-title text-5xl md:text-6xl mb-12">视觉作品集</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16" id="grid">
         
-        <div class="flex flex-wrap gap-x-12 gap-y-8 border-b border-white/5 pb-8">
-            <button onclick="filterWorks('all')" class="filter-btn active" id="btn-all">
-                All<br><span class="text-[10px] opacity-60 italic">全部作品</span>
-            </button>
-            <button onclick="filterWorks('critical')" class="filter-btn" id="btn-critical">
-                Critical Design<br><span class="text-[10px] opacity-60 italic">批判性平面设计</span>
-            </button>
-            <button onclick="filterWorks('photo')" class="filter-btn" id="btn-photo">
-                Stylized Photo<br><span class="text-[10px] opacity-60 italic">风格化摄影</span>
-            </button>
-            <button onclick="filterWorks('practice')" class="filter-btn" id="btn-practice">
-                Graphic Practice<br><span class="text-[10px] opacity-60 italic">平面美工实践</span>
-            </button>
-            <button onclick="filterWorks('engineering')" class="filter-btn" id="btn-engineering">
-                Engineering Case<br><span class="text-[10px] opacity-60 italic">工程案例</span>
-            </button>
+        <div class="project-group" data-category="critical">
+            <div class="stack-images">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800">
+                <img src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=800">
+                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800">
+                <img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=800">
+            </div>
+            <div class="mt-6 border-l-2 border-blue-500 pl-4">
+                <h3 class="text-xl font-bold">批判性设计：某项目名称</h3>
+                <p class="text-xs text-blue-400 mt-1 uppercase tracking-widest">4 Images Series / 2026</p>
+                <p class="text-gray-500 text-sm mt-3 italic">这里是关于这四张图的统一描述。 / Project description here.</p>
+            </div>
         </div>
-    </header>
 
-    <main class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12" id="works-grid">
-            
-            <div class="work-item group" data-category="critical">
-                <div class="overflow-hidden rounded-sm bg-gray-900 aspect-[3/4] mb-6">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
-                </div>
-                <h3 class="text-lg font-bold">设计叙事：边界</h3>
-                <p class="text-[10px] text-blue-400 font-mono tracking-widest uppercase mb-2">Critical Design</p>
-                <p class="text-gray-500 text-xs italic">探讨城市边界的消亡。 / Exploring urban boundaries.</p>
+        <div class="project-group" data-category="photo">
+            <div class="stack-images">
+                <img src="https://images.unsplash.com/photo-1531315630201-bb15b9a56312?w=800">
+                <img src="https://images.unsplash.com/photo-1518005020251-582c788447d9?w=800">
             </div>
-
-            <div class="work-item group" data-category="photo">
-                <div class="overflow-hidden rounded-sm bg-gray-900 aspect-[3/4] mb-6">
-                    <img src="https://images.unsplash.com/photo-1531315630201-bb15b9a56312?auto=format&fit=crop&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
-                </div>
-                <h3 class="text-lg font-bold">光影重构</h3>
-                <p class="text-[10px] text-red-400 font-mono tracking-widest uppercase mb-2">Stylized Photo</p>
-                <p class="text-gray-500 text-xs italic">极简建筑光影。 / Minimalist shadows.</p>
+            <div class="mt-6 border-l-2 border-red-500 pl-4">
+                <h3 class="text-xl font-bold">风格化摄影：光影二重奏</h3>
+                <p class="text-xs text-red-400 mt-1 uppercase tracking-widest">2 Images Series</p>
             </div>
-
-            <div class="work-item group" data-category="practice">
-                <div class="overflow-hidden rounded-sm bg-gray-900 aspect-[3/4] mb-6">
-                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
-                </div>
-                <h3 class="text-lg font-bold">视觉识别系统</h3>
-                <p class="text-[10px] text-green-400 font-mono tracking-widest uppercase mb-2">Graphic Practice</p>
-                <p class="text-gray-500 text-xs italic">品牌视觉实践。 / Visual identity system.</p>
-            </div>
-
-            <div class="work-item group" data-category="engineering">
-                <div class="overflow-hidden rounded-sm bg-gray-900 aspect-[3/4] mb-6">
-                    <img src="https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
-                </div>
-                <h3 class="text-lg font-bold">结构之美</h3>
-                <p class="text-[10px] text-yellow-600 font-mono tracking-widest uppercase mb-2">Engineering Case</p>
-                <p class="text-gray-500 text-xs italic">工程逻辑与美学的结合。 / Engineering logic.</p>
-            </div>
-
         </div>
-    </main>
 
-    <footer class="max-w-7xl mx-auto mt-40 pb-12 text-[9px] tracking-[0.5em] text-gray-700 border-t border-white/5 pt-12 text-center uppercase">
-        © MAO TIANYI / VISUAL ARCHIVE
-    </footer>
+    </div>
 
     <script>
-        function filterWorks(category) {
-            const items = document.querySelectorAll('.work-item');
-            const btns = document.querySelectorAll('.filter-btn');
+        function filterWorks(cat) {
+            // 切换按钮高亮
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('btn-' + cat).classList.add('active');
             
-            // 更新按钮状态
-            btns.forEach(btn => btn.classList.remove('active'));
-            document.getElementById('btn-' + category).classList.add('active');
-
-            // 执行过滤动画
-            items.forEach(item => {
-                item.style.opacity = '0';
-                setTimeout(() => {
-                    if (category === 'all' || item.getAttribute('data-category') === category) {
-                        item.classList.remove('hidden');
-                        setTimeout(() => item.style.opacity = '1', 50);
-                    } else {
-                        item.classList.add('hidden');
-                    }
-                }, 300);
+            // 切换项目显示/隐藏
+            document.querySelectorAll('.project-group').forEach(item => {
+                if (cat === 'all' || item.getAttribute('data-category') === cat) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
             });
         }
     </script>
