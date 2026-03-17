@@ -3,12 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>视觉作品集 - 毛天一</title>
+    <title>电影收藏 - 毛天一</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0a0a0a; color: #fff; }
+        .movie-card:hover img { transform: scale(1.05); }
+    </style>
 </head>
-<body class="bg-black text-white p-10">
-    <a href="index.html" class="text-gray-400 hover:text-white">← 返回首页</a>
-    <h1 class="text-4xl font-bold mt-10 mb-6">视觉作品集</h1>
-    <p class="text-gray-400">这里正在整理我的视觉设计、摄影和创意作品...</p>
-    </body>
+<body class="p-8 max-w-6xl mx-auto">
+    <nav class="mb-12"><a href="index.html" class="text-gray-500 hover:text-white">← 返回首页</a></nav>
+    
+    <h1 class="text-4xl font-bold mb-2">电影收藏</h1>
+    <p class="text-gray-400 mb-10">那些触动过我的瞬间。</p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="movie-card transition-all duration-300">
+            <div class="overflow-hidden rounded-lg mb-3">
+                <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p511118051.jpg" class="w-full transition-transform duration-500">
+            </div>
+            <h3 class="font-medium text-sm">星际穿越</h3>
+            <p class="text-xs text-gray-500">Interstellar (2014)</p>
+        </div>
+        <div class="movie-card transition-all duration-300">
+            <div class="overflow-hidden rounded-lg mb-3">
+                <img src="https://img2.doubanio.com/view/photo/s_ratio_poster/public/p457760035.jpg" class="w-full transition-transform duration-500">
+            </div>
+            <h3 class="font-medium text-sm">泰坦尼克号</h3>
+            <p class="text-xs text-gray-400">Titanic (1997)</p>
+        </div>
+    </div>
+</body>
 </html>
