@@ -7,21 +7,35 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&display=swap');
-        body { background-color: #050505; color: #e5e5e5; font-family: sans-serif; }
-        .serif-title { font-family: 'Noto Serif SC', serif; }
-        .section-card { transition: all 0.4s ease; background: rgba(255,255,255,0.02); }
-        .section-card:hover { transform: translateY(-8px); background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.2); }
-    </style>
-</head>
-<body>{ 
-            background-image: linear-gradient(rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.8)), url('horse.jpg');
+        
+        body { 
+            /* 背景图设置 */
+            background-image: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.8)), url('horse.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             background-color: #050505; 
             color: #e5e5e5; 
             font-family: sans-serif; 
+            margin: 0;
         }
+
+        .serif-title { font-family: 'Noto Serif SC', serif; }
+        
+        .section-card { 
+            transition: all 0.4s ease; 
+            background: rgba(255,255,255,0.03); 
+            backdrop-filter: blur(10px); /* 增加磨砂玻璃效果 */
+        }
+        
+        .section-card:hover { 
+            transform: translateY(-8px); 
+            background: rgba(255,255,255,0.08); 
+            border-color: rgba(255,255,255,0.3); 
+        }
+    </style>
+</head>
+<body>
     <nav class="p-6 max-w-6xl mx-auto flex justify-between items-center border-b border-white/10">
         <div class="text-xl font-bold tracking-tighter">STUDIO.</div>
         <div class="space-x-6 text-xs font-medium tracking-widest uppercase">
@@ -32,48 +46,21 @@
         </div>
     </nav>
 
-    <section class="py-24 px-6 max-w-6xl mx-auto">
-        <div class="mb-4 text-blue-500 font-mono text-sm tracking-widest uppercase">Available for Projects</div>
-        <h1 class="serif-title text-6xl md:text-8xl mb-6 tracking-tight">
+    <section class="py-32 px-6 max-w-6xl mx-auto">
+        <div class="mb-4 text-blue-400 font-mono text-sm tracking-[0.3em] uppercase">Visual Artist</div>
+        <h1 class="serif-title text-8xl md:text-[10rem] mb-6 tracking-tighter leading-none">
             毛天艺<br>
-            <span class="text-3xl md:text-5xl opacity-30 font-sans italic">Hello, I'm Mao Tianyi.</span>
+            <span class="text-3xl md:text-5xl opacity-20 font-sans italic tracking-normal">MAO TIANYI</span>
         </h1>
-        <p class="text-lg text-gray-500 max-w-2xl leading-relaxed">
+        <p class="text-lg text-gray-400 max-w-2xl leading-relaxed font-light border-l border-white/20 pl-6 mt-8">
             欢迎来到我的个人网站。这里记录了关于视觉、影像与声音的思考。<br>
-            <span class="text-sm opacity-50 italic">Welcome to my personal space. A collection of thoughts on vision, image, and sound.</span>
+            <span class="text-sm opacity-40 italic">Welcome to my personal space. A collection of thoughts on vision, image, and sound.</span>
         </p>
     </section>
 
     <section class="px-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-        
         <a href="works.html" class="section-card p-10 rounded-2xl border border-white/10 block group">
             <h2 class="text-3xl font-bold mb-1">视觉作品集</h2>
             <div class="text-sm uppercase tracking-widest text-blue-400 mb-4 opacity-70">Visual Portfolio</div>
-            <p class="text-gray-500 text-sm italic">平面设计与摄影作品。 / Graphic design and photography.</p>
+            <p class="text-gray-500 text-sm italic leading-relaxed">平面设计与摄影作品。 / Graphic design and photography.</p>
         </a>
-
-        <a href="movies.html" class="section-card p-10 rounded-2xl border border-white/10 block group">
-            <h2 class="text-3xl font-bold mb-1">电影板块</h2>
-            <div class="text-sm uppercase tracking-widest text-red-400 mb-4 opacity-70">Cinema Archive</div>
-            <p class="text-gray-500 text-sm italic">私藏影单与瞬间。 / Private film list and moments.</p>
-        </a>
-
-        <a href="music.html" class="section-card p-10 rounded-2xl border border-white/10 block group">
-            <h2 class="text-3xl font-bold mb-1">音乐板块</h2>
-            <div class="text-sm uppercase tracking-widest text-green-400 mb-4 opacity-70">Music Corner</div>
-            <p class="text-gray-500 text-sm italic">精神避难所。 / My mental sanctuary.</p>
-        </a>
-
-        <a href="read.html" class="section-card p-10 rounded-2xl border border-white/10 block group">
-            <h2 class="text-3xl font-bold mb-1">阅读板块</h2>
-            <div class="text-sm uppercase tracking-widest text-yellow-500 mb-4 opacity-70">Reading Notes</div>
-            <p class="text-gray-500 text-sm italic">书单与简短书评。 / Book list and brief reviews.</p>
-        </a>
-
-    </section>
-
-    <footer class="p-12 text-center text-gray-600 text-[10px] tracking-[0.2em] border-t border-white/5 uppercase">
-        © 2026 MAO TIANYI. Crafted with soul.
-    </footer>
-</body>
-</html>
