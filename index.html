@@ -41,8 +41,8 @@
 
     <nav class="p-6 md:p-10 max-w-7xl mx-auto flex justify-between items-center relative z-20">
         <div class="flex items-center gap-3 cursor-pointer group" onclick="toggleMusic(event)">
-            <div class="music-bars" id="music-icon">
-                <div class="bar bar-paused" style="animation-delay: 0.0s"></div>
+            <div class="music-bars">
+                <div class="bar bar-paused"></div>
                 <div class="bar bar-paused" style="animation-delay: 0.2s"></div>
                 <div class="bar bar-paused" style="animation-delay: 0.4s"></div>
             </div>
@@ -50,15 +50,15 @@
         </div>
         <div class="hidden md:flex space-x-10 text-[10px] tracking-[0.3em] uppercase font-light opacity-60">
             <a href="works.html" onclick="saveAndGo(event, 'works.html')" class="hover:opacity-100 transition">Works</a>
-            <span class="opacity-20">Cinema</span>
-            <span class="opacity-20">Music</span>
-            <span class="opacity-20">Reading</span>
+            <span class="opacity-20 cursor-not-allowed">Cinema</span>
+            <span class="opacity-20 cursor-not-allowed">Music</span>
+            <span class="opacity-20 cursor-not-allowed">Reading</span>
         </div>
     </nav>
 
     <section class="pt-20 pb-16 px-6 md:px-10 max-w-7xl mx-auto relative z-10">
         <div class="mb-6 md:mb-10 h-[1px] w-12 bg-white"></div>
-        <h1 class="vogue-title text-5xl md:text-[8rem] lg:text-[10rem] font-black leading-[0.9] mb-6">
+        <h1 class="vogue-title text-4xl md:text-[6rem] lg:text-[7rem] font-black leading-[0.9] mb-6">
             毛天艺
             <span class="vogue-sub block text-lg md:text-3xl lg:text-4xl opacity-30 font-light italic tracking-normal mt-4">The Visual Archive</span>
         </h1>
@@ -71,34 +71,34 @@
     <section class="px-6 md:px-10 max-w-7xl mx-auto pb-24 relative z-10">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-0">
             
-            <a href="works.html" onclick="saveAndGo(event, 'works.html')" class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between group">
+            <a href="works.html" onclick="saveAndGo(event, 'works.html')" class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between group border-l lg:border-l-0 border-white/10">
                 <div>
-                    <h2 class="vogue-title text-xl md:text-3xl font-bold group-hover:text-blue-500 transition">Works</h2>
-                    <p class="vogue-sub text-[9px] md:text-xs opacity-30 italic mt-2">Visual Portfolio</p>
+                    <h2 class="vogue-title text-xl md:text-3xl font-bold group-hover:text-blue-500 transition">视觉作品集</h2>
+                    <p class="vogue-sub text-[9px] md:text-xs opacity-30 italic mt-2">Works / Visual Portfolio</p>
                 </div>
                 <div class="text-[9px] tracking-[0.2em] opacity-20 group-hover:opacity-100 transition mt-10">EXPLORE →</div>
             </a>
 
-            <div class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between opacity-50 cursor-not-allowed">
+            <div class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between opacity-50 cursor-not-allowed border-r lg:border-r-0 border-white/10">
                 <div>
-                    <h2 class="vogue-title text-xl md:text-3xl font-bold">Cinema</h2>
-                    <p class="vogue-sub text-[9px] md:text-xs opacity-30 italic mt-2">Private Curation</p>
+                    <h2 class="vogue-title text-xl md:text-3xl font-bold">电影板块</h2>
+                    <p class="vogue-sub text-[9px] md:text-xs opacity-30 italic mt-2">Cinema / Private Curation</p>
                 </div>
                 <div class="text-[9px] tracking-[0.2em] opacity-10 mt-10">COMING SOON</div>
             </div>
 
-            <div class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between opacity-50 cursor-not-allowed">
+            <div class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between opacity-50 cursor-not-allowed border-l lg:border-l-0 border-white/10">
                 <div>
-                    <h2 class="vogue-title text-xl md:text-3xl font-bold">Music</h2>
-                    <p class="vogue-sub text-[9px] md:text-xs opacity-30 italic mt-2">Mental Shelter</p>
+                    <h2 class="vogue-title text-xl md:text-3xl font-bold">音乐板块</h2>
+                    <p class="vogue-sub text-[9px] md:text-xs opacity-30 italic mt-2">Music / Mental Shelter</p>
                 </div>
                 <div class="text-[9px] tracking-[0.2em] opacity-10 mt-10">COMING SOON</div>
             </div>
 
-            <div class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between opacity-50 cursor-not-allowed border-r-0 lg:border-b-0 border-b lg:border-r border-white/10">
+            <div class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between opacity-50 cursor-not-allowed border-r lg:border-b-0 border-b lg:border-r border-white/10 border-white/10">
                 <div>
-                    <h2 class="vogue-title text-xl md:text-3xl font-bold">Read</h2>
-                    <p class="vogue-sub text-[9px] md:text-xs opacity-30 italic mt-2">Book & Notes</p>
+                    <h2 class="vogue-title text-xl md:text-3xl font-bold">阅读板块</h2>
+                    <p class="vogue-sub text-[9px] md:text-xs opacity-30 italic mt-2">Read / Book & Notes</p>
                 </div>
                 <div class="text-[9px] tracking-[0.2em] opacity-10 mt-10">COMING SOON</div>
             </div>
@@ -113,17 +113,18 @@
 
         // 音频播放逻辑：刷新重置
         window.addEventListener('load', () => {
-            audio.currentTime = 0; 
-            const isPlaying = localStorage.getItem('musicPlaying') === 'true';
-            if (isPlaying) { 
-                audio.play().then(() => updateUI(true)).catch(() => {}); 
+            if (audio) {
+                audio.currentTime = 0; 
+                if (localStorage.getItem('musicPlaying') === 'true') {
+                    audio.play().then(() => updateUI(true)).catch(() => {});
+                }
             }
         });
 
         // 交互触发：滑动或点击
         const startMusic = () => {
-            if (localStorage.getItem('musicPlaying') === 'true' && audio.paused) {
-                audio.play().then(() => updateUI(true));
+            if (audio && localStorage.getItem('musicPlaying') === 'true' && audio.paused) {
+                audio.play().then(() => updateUI(true)).catch(() => {});
             }
         };
         document.addEventListener('click', startMusic);
@@ -131,14 +132,18 @@
 
         function saveAndGo(event, url) {
             event.preventDefault();
-            localStorage.setItem('musicPlaying', audio.paused ? 'false' : 'true');
-            if (url !== 'index.html') localStorage.setItem('musicPlaying', 'true');
+            if (audio) {
+                localStorage.setItem('musicPlaying', audio.paused ? 'false' : 'true');
+                // 如果是跳转到 Works 且当前是 Off，点击后应视为 On
+                if (url === 'works.html') localStorage.setItem('musicPlaying', 'true');
+            }
             setTimeout(() => { window.location.href = url; }, 150);
         }
 
         function toggleMusic(event) {
             event.stopPropagation();
-            if (audio.paused) { audio.play(); updateUI(true); localStorage.setItem('musicPlaying', 'true'); }
+            if (!audio) return;
+            if (audio.paused) { audio.play().then(() => { updateUI(true); localStorage.setItem('musicPlaying', 'true'); }); }
             else { audio.pause(); updateUI(false); localStorage.setItem('musicPlaying', 'false'); }
         }
 
