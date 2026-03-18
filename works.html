@@ -12,17 +12,14 @@
         .vogue-title { font-family: 'Noto Serif SC', serif; letter-spacing: -0.02em; }
         .vogue-sub { font-family: 'Libre Baskerville', serif; }
         
-        /* 导航与滤镜微调 */
         .filter-btn { transition: 0.3s; opacity: 0.3; cursor: pointer; border-bottom: 2px solid transparent; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; }
         .filter-btn.active { opacity: 1; border-bottom: 2px solid #3b82f6; }
 
-        /* 音乐动效 */
         .music-bars { display: flex; gap: 3px; align-items: flex-end; height: 13px; width: 20px; }
         .bar { width: 2px; background: white; animation: play 0.8s infinite alternate; height: 3px; }
         .bar-paused { animation-play-state: paused !important; height: 2px !important; opacity: 0.3; }
         @keyframes play { 0% { height: 4px; } 100% { height: 13px; } }
 
-        /* 核心堆叠逻辑 - 响应式高度 */
         .stack-container { position: relative; height: 180px; transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1); cursor: s-resize; width: 100%; }
         @media (min-width: 768px) { .stack-container { height: 260px; } }
         
@@ -35,13 +32,10 @@
             background-color: #111;
         }
 
-        /* 堆叠层级感 */
         .stack-img:nth-child(1) { transform: translateY(0px) scale(1); z-index: 4; }
         .stack-img:nth-child(2) { transform: translateY(15px) scale(0.96); z-index: 3; opacity: 0.7; }
         .stack-img:nth-child(3) { transform: translateY(30px) scale(0.92); z-index: 2; opacity: 0.4; }
-        .stack-img:nth-child(4) { transform: translateY(45px) scale(0.88); z-index: 1; opacity: 0.2; }
 
-        /* 展开后的样式 */
         .expanded .stack-img { position: relative; transform: translateY(0) scale(1) !important; margin-bottom: 1rem; z-index: 10 !important; opacity: 1 !important; cursor: zoom-in; aspect-ratio: auto; }
 
         #lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 100; justify-content: center; align-items: center; cursor: zoom-out; padding: 20px; }
@@ -54,7 +48,7 @@
         <a href="index.html" onclick="saveAndGo(event, 'index.html')" class="opacity-40 hover:opacity-100 transition tracking-[0.2em] text-[9px]">← ARCHIVE</a>
         <div class="flex items-center gap-3 cursor-pointer" onclick="toggleMusic(event)">
             <div class="music-bars" id="music-icon">
-                <div class="bar bar-paused" style="animation-delay: 0.0s"></div>
+                <div class="bar bar-paused"></div>
                 <div class="bar bar-paused" style="animation-delay: 0.2s"></div>
                 <div class="bar bar-paused" style="animation-delay: 0.4s"></div>
             </div>
@@ -72,9 +66,9 @@
         
         <div class="project-group" data-category="critical">
             <div class="stack-container" onclick="toggleExpand(this)">
-                <img src="批判1" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
-                <img src="批判2" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
-                <img src="批判3" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=1" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=2" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=3" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
             </div>
             <div class="mt-6 border-l-2 border-blue-500 pl-3">
                 <h3 class="vogue-title text-sm md:text-xl font-bold uppercase leading-tight">Divorce in China</h3>
@@ -84,9 +78,9 @@
 
         <div class="project-group" data-category="critical">
             <div class="stack-container" onclick="toggleExpand(this)">
-                <img src="保龄1" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
-                <img src="保龄2" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
-                <img src="保龄3" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=4" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=5" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=6" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
             </div>
             <div class="mt-6 border-l-2 border-red-500 pl-3">
                 <h3 class="vogue-title text-sm md:text-xl font-bold uppercase leading-tight">Bowling Campaign</h3>
@@ -96,8 +90,8 @@
 
         <div class="project-group" data-category="critical">
             <div class="stack-container" onclick="toggleExpand(this)">
-                <img src="血液1.png" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
-                <img src="血液2.png" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=7" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=8" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
             </div>
             <div class="mt-6 border-l-2 border-red-900 pl-3">
                 <h3 class="vogue-title text-sm md:text-xl font-bold uppercase leading-tight">Blood Nirvana</h3>
@@ -107,36 +101,41 @@
 
         <div class="project-group" data-category="critical">
             <div class="stack-container" onclick="toggleExpand(this)">
-                <img src="健身1.png" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
-                <img src="健身2.png" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
-                <img src="健身3.png" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=9" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=10" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=11" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
             </div>
             <div class="mt-6 border-l-2 border-green-800 pl-3">
                 <h3 class="vogue-title text-sm md:text-xl font-bold uppercase leading-tight">Muscle Factory</h3>
                 <p class="text-gray-500 text-[10px] mt-1 italic">Biological Industry</p>
             </div>
         </div>
-
     </div>
 
-    <div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img" class="max-w-full max-h-full object-contain shadow-2xl"></div>
+    <div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img" class="max-w-full max-h-full object-contain"></div>
 
     <script>
         const audio = document.getElementById('bgm');
         const iconBars = document.querySelectorAll('.bar');
         const statusText = document.getElementById('music-status');
 
-        // 音频逻辑：刷新重置 + 滑动/点击触发
+        function updateUI(isPlaying) {
+            statusText.innerText = isPlaying ? "On" : "Off";
+            iconBars.forEach(bar => isPlaying ? bar.classList.remove('bar-paused') : bar.classList.add('bar-paused'));
+        }
+
         window.addEventListener('load', () => {
-            audio.currentTime = 0; 
-            if (localStorage.getItem('musicPlaying') === 'true') {
-                audio.play().then(() => updateUI(true)).catch(() => {});
+            if (audio) {
+                audio.currentTime = 0; 
+                if (localStorage.getItem('musicPlaying') === 'true') {
+                    audio.play().then(() => updateUI(true)).catch(e => console.log("Audio play blocked by browser"));
+                }
             }
         });
 
         const startMusic = () => {
-            if (localStorage.getItem('musicPlaying') === 'true' && audio.paused) {
-                audio.play().then(() => updateUI(true));
+            if (audio && localStorage.getItem('musicPlaying') === 'true' && audio.paused) {
+                audio.play().then(() => updateUI(true)).catch(e => {});
             }
         };
         document.addEventListener('click', startMusic);
@@ -144,23 +143,31 @@
 
         function saveAndGo(event, url) {
             event.preventDefault();
-            localStorage.setItem('musicPlaying', audio.paused ? 'false' : 'true');
+            if (audio) {
+                localStorage.setItem('musicPlaying', audio.paused ? 'false' : 'true');
+            }
             setTimeout(() => { window.location.href = url; }, 150);
         }
 
         function toggleMusic(event) {
             event.stopPropagation();
-            if (audio.paused) { audio.play(); updateUI(true); localStorage.setItem('musicPlaying', 'true'); }
-            else { audio.pause(); updateUI(false); localStorage.setItem('musicPlaying', 'false'); }
+            if (!audio) return;
+            if (audio.paused) {
+                audio.play().then(() => {
+                    updateUI(true);
+                    localStorage.setItem('musicPlaying', 'true');
+                });
+            } else {
+                audio.pause();
+                updateUI(false);
+                localStorage.setItem('musicPlaying', 'false');
+            }
         }
 
-        function updateUI(isPlaying) {
-            statusText.innerText = isPlaying ? "On" : "Off";
-            iconBars.forEach(bar => isPlaying ? bar.classList.remove('bar-paused') : bar.classList.add('bar-paused'));
+        function toggleExpand(container) {
+            container.classList.toggle('expanded');
         }
 
-        // 交互功能
-        function toggleExpand(container) { container.classList.toggle('expanded'); }
         function zoomImage(event, img) {
             if (img.parentElement.classList.contains('expanded')) {
                 event.stopPropagation();
@@ -171,9 +178,15 @@
 
         function filterWorks(cat) {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById('btn-' + cat).classList.add('active');
+            const activeBtn = document.getElementById('btn-' + cat);
+            if(activeBtn) activeBtn.classList.add('active');
+            
             document.querySelectorAll('.project-group').forEach(g => {
-                g.classList.toggle('hidden', cat !== 'all' && g.dataset.category !== cat);
+                if (cat === 'all') {
+                    g.style.display = 'block';
+                } else {
+                    g.style.display = (g.getAttribute('data-category') === cat) ? 'block' : 'none';
+                }
             });
         }
     </script>
