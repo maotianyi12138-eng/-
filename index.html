@@ -38,10 +38,31 @@
 
         /* 字母间距微调 */
         .tracking-vogue { letter-spacing: 0.5em; }
+
+        /* --- 音乐动效图标 (新模块) --- */
+        .music-bars { display: flex; gap: 3px; align-items: flex-end; height: 13px; width: 20px; }
+        .bar { width: 2px; background: white; animation: play 0.8s infinite alternate; height: 3px; }
+        .bar-paused { animation-play-state: paused !important; height: 2px !important; opacity: 0.3; }
+        @keyframes play {
+            0% { height: 4px; }
+            100% { height: 13px; }
+        }
     </style>
 </head>
-<body>
-    <nav class="p-10 max-w-7xl mx-auto flex justify-end items-center relative z-20">
+<body onclick="startMusic()"> <audio id="bgm" loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <nav class="p-10 max-w-7xl mx-auto flex justify-between items-center relative z-20">
+        <div class="flex items-center gap-3 cursor-pointer group" onclick="toggleMusic(event)">
+            <div class="music-bars" id="music-icon">
+                <div class="bar bar-paused" style="animation-delay: 0.0s"></div>
+                <div class="bar bar-paused" style="animation-delay: 0.2s"></div>
+                <div class="bar bar-paused" style="animation-delay: 0.4s"></div>
+            </div>
+            <span class="text-[9px] tracking-[0.3em] uppercase opacity-40 group-hover:opacity-100 transition" id="music-status">Sound Off</span>
+        </div>
+
         <div class="space-x-10 text-[10px] tracking-vogue uppercase font-light opacity-60">
             <a href="works.html" class="hover:opacity-100 transition">Works</a>
             <a href="movies.html" class="hover:opacity-100 transition">Cinema</a>
@@ -103,5 +124,43 @@
     <footer class="p-20 text-center text-[9px] tracking-[0.6em] text-gray-600 uppercase relative z-10">
         Mao Tianyi © 2026. Defining the new aesthetic.
     </footer>
+
+    <script>
+        const audio = document.getElementById('bgm');
+        const iconBars = document.querySelectorAll('.bar');
+        const statusText = document.getElementById('music-status');
+        let hasStarted = false;
+
+        // 首次交互开始播放
+        function startMusic() {
+            if (!hasStarted) {
+                audio.play().then(() => {
+                    updateUI(true);
+                    hasStarted = true;
+                }).catch(e => console.log("等待用户交互后播放"));
+            }
+        }
+
+        // 手动开关逻辑
+        function toggleMusic(event) {
+            event.stopPropagation(); // 防止触发 body 的 startMusic 造成重复逻辑
+            if (audio.paused) {
+                audio.play();
+                updateUI(true);
+                hasStarted = true;
+            } else {
+                audio.pause();
+                updateUI(false);
+            }
+        }
+
+        function updateUI(isPlaying) {
+            statusText.innerText = isPlaying ? "Sound On" : "Sound Off";
+            iconBars.forEach(bar => {
+                if (isPlaying) bar.classList.remove('bar-paused');
+                else bar.classList.add('bar-paused');
+            });
+        }
+    </script>
 </body>
 </html>
