@@ -2,7 +2,6 @@
     const audio = document.getElementById('global-bgm');
     const app = document.getElementById('app-content');
 
-    // 统一 UI 更新函数（兼容页面切换后的元素查找）
     function upUI(p) {
         const statusText = document.getElementById('m-status');
         const bars = document.querySelectorAll('.bar');
@@ -10,7 +9,6 @@
         bars.forEach(b => p ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
     }
 
-    // 激活音频监听
     document.addEventListener('click', function initAudio() {
         if (audio.paused && localStorage.getItem('mPlay') !== 'false') {
             audio.play().then(() => {
@@ -31,19 +29,25 @@
     }
 
     async function router(url) {
+        // 【关键纠错】如果你写错了文件名，这里帮你自动修正为仓库里的 movies.html
+        let targetUrl = url === 'movie.html' ? 'movies.html' : url;
+        
         app.classList.add('page-fade');
         
         try {
-            const res = await fetch(url);
+            const res = await fetch(targetUrl);
+            if (!res.ok) throw new Error('Redirecting...');
+            
             const text = await res.text();
             const dom = new DOMParser().parseFromString(text, 'text/html');
             const newContent = dom.getElementById('app-content');
             
+            if (!newContent) throw new Error('No Container');
+
             setTimeout(() => {
-                // 1. 替换 HTML 内容
                 app.innerHTML = newContent.innerHTML;
                 
-                // 2. 【关键修复】手动执行新页面中的脚本
+                // 执行新页面脚本 (加载 movies.js)
                 const scripts = newContent.querySelectorAll('script');
                 scripts.forEach(oldScript => {
                     const newScript = document.createElement('script');
@@ -55,17 +59,14 @@
                     document.head.appendChild(newScript).parentNode.removeChild(newScript);
                 });
 
-                // 3. 更新状态
-                history.pushState({url}, '', url);
+                history.pushState({url: targetUrl}, '', targetUrl);
                 window.scrollTo(0, 0);
                 app.classList.remove('page-fade');
-                
-                // 4. 确保切换后 UI 状态正确
                 setTimeout(() => upUI(!audio.paused), 50);
             }, 400);
         } catch (err) {
-            console.error("Navigation failed:", err);
-            window.location.href = url; // 失败则普通跳转备份
+            // 【保底方案】如果 fetch 报错，直接全页跳转，牺牲音乐连贯性换取页面可用
+            window.location.href = targetUrl;
         }
     }
 
