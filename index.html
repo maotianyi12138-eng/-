@@ -27,6 +27,7 @@
             transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1); 
             border-top: 1px solid rgba(255,255,255,0.1);
             background: transparent;
+            cursor: pointer;
         }
         
         .vogue-card:hover { 
@@ -82,28 +83,31 @@
     </section>
 
     <section class="px-10 max-w-7xl mx-auto pb-32 relative z-10">
-        <a href="works.html" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group">
+        <a href="works.html" onclick="playThenGo(event, 'works.html')" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group">
             <div>
                 <h2 class="vogue-title text-4xl font-bold group-hover:text-blue-500 transition">视觉作品集</h2>
                 <p class="vogue-sub text-xs opacity-30 italic mt-2">Visual Portfolio — Graphic & Photography</p>
             </div>
             <div class="text-[10px] tracking-vogue opacity-20 group-hover:opacity-100 transition mt-4 md:mt-0">EXPLORE →</div>
         </a>
-        <a href="movies.html" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group">
+
+        <a href="movies.html" onclick="playThenGo(event, 'movies.html')" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group">
             <div>
                 <h2 class="vogue-title text-4xl font-bold group-hover:text-red-500 transition">电影板块</h2>
                 <p class="vogue-sub text-xs opacity-30 italic mt-2">Cinema Archive — Private Curation</p>
             </div>
             <div class="text-[10px] tracking-vogue opacity-20 group-hover:opacity-100 transition mt-4 md:mt-0">VIEW ALL →</div>
         </a>
-        <a href="music.html" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group">
+
+        <a href="music.html" onclick="playThenGo(event, 'music.html')" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group">
             <div>
                 <h2 class="vogue-title text-4xl font-bold group-hover:text-green-400 transition">音乐板块</h2>
                 <p class="vogue-sub text-xs opacity-30 italic mt-2">Music Sanctuary — Mental Shelter</p>
             </div>
             <div class="text-[10px] tracking-vogue opacity-20 group-hover:opacity-100 transition mt-4 md:mt-0">LISTEN →</div>
         </a>
-        <a href="read.html" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group border-b border-white/10">
+
+        <a href="read.html" onclick="playThenGo(event, 'read.html')" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group border-b border-white/10">
             <div>
                 <h2 class="vogue-title text-4xl font-bold group-hover:text-yellow-600 transition">阅读板块</h2>
                 <p class="vogue-sub text-xs opacity-30 italic mt-2">Reading Notes — Book & Reviews</p>
@@ -122,18 +126,28 @@
         const statusText = document.getElementById('music-status');
         let hasStarted = false;
 
-        // 只要用户点击页面任何地方，尝试开始播放
-        document.addEventListener('click', function() {
-            if (!hasStarted) {
-                audio.play().then(() => {
-                    updateUI(true);
-                    hasStarted = true;
-                }).catch(e => console.log("等待更明确的用户交互"));
-            }
-        }, { once: false }); 
+        // 【核心函数】点击板块时播放并跳转
+        function playThenGo(event, url) {
+            // 阻止默认跳转，由 JS 控制节奏
+            event.preventDefault();
+            
+            // 尝试播放音乐
+            audio.play().then(() => {
+                updateUI(true);
+                hasStarted = true;
+                // 音乐启动后延迟 150ms 跳转，确保视觉反馈同步
+                setTimeout(() => {
+                    window.location.href = url;
+                }, 150);
+            }).catch(e => {
+                // 如果播放失败（极少情况），也直接跳转
+                window.location.href = url;
+            });
+        }
 
+        // 左上角开关：保留独立操作权限
         function toggleMusic(event) {
-            event.stopPropagation(); // 阻止冒泡
+            event.stopPropagation(); 
             if (audio.paused) {
                 audio.play();
                 updateUI(true);
@@ -151,6 +165,16 @@
                 else bar.classList.add('bar-paused');
             });
         }
+
+        // 全局点击监听：保留作为备份，点击页面任意空白处也可开启
+        document.addEventListener('click', function() {
+            if (!hasStarted) {
+                audio.play().then(() => {
+                    updateUI(true);
+                    hasStarted = true;
+                }).catch(e => {});
+            }
+        }, { once: false });
     </script>
 </body>
 </html>
