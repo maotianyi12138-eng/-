@@ -3,83 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO - 毛天艺</title>
+    <title>PORTFOLIO - MAO TIANYI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Libre+Baskerville:italic@400&display=swap');
-        body { background-color: #050505; color: #e5e5e5; font-family: sans-serif; overflow-x: hidden; }
+        
+        body { background-color: #050505; color: #e5e5e5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; overflow-x: hidden; }
         .vogue-title { font-family: 'Noto Serif SC', serif; letter-spacing: -0.02em; }
         .vogue-sub { font-family: 'Libre Baskerville', serif; }
-        .filter-btn { transition: 0.3s; opacity: 0.3; cursor: pointer; border-bottom: 2px solid transparent; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; }
+        
+        /* 导航与滤镜微调 */
+        .filter-btn { transition: 0.3s; opacity: 0.3; cursor: pointer; border-bottom: 2px solid transparent; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; }
         .filter-btn.active { opacity: 1; border-bottom: 2px solid #3b82f6; }
-        .project-group { transition: 0.5s; }
-        .project-group.hidden { display: none; }
+
+        /* 音乐动效 */
         .music-bars { display: flex; gap: 3px; align-items: flex-end; height: 13px; width: 20px; }
         .bar { width: 2px; background: white; animation: play 0.8s infinite alternate; height: 3px; }
         .bar-paused { animation-play-state: paused !important; height: 2px !important; opacity: 0.3; }
         @keyframes play { 0% { height: 4px; } 100% { height: 13px; } }
-        .stack-container { position: relative; height: 280px; transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1); cursor: s-resize; width: 100%; }
+
+        /* 核心堆叠逻辑 - 响应式高度 */
+        .stack-container { position: relative; height: 180px; transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1); cursor: s-resize; width: 100%; }
+        @media (min-width: 768px) { .stack-container { height: 260px; } }
+        
         .stack-container.expanded { height: auto; cursor: default; }
-        .stack-img { position: absolute; top: 0; left: 0; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 15px 35px rgba(0,0,0,0.6); background-color: #111; }
-        .stack-img:nth-child(1) { transform: translateY(0px) scale(1); z-index: 6; }
-        .stack-img:nth-child(2) { transform: translateY(25px) scale(0.97) rotate(-0.3deg); z-index: 5; opacity: 0.8; }
-        .stack-img:nth-child(3) { transform: translateY(50px) scale(0.94) rotate(0.3deg); z-index: 4; opacity: 0.6; }
-        .stack-img:nth-child(4) { transform: translateY(75px) scale(0.91); z-index: 3; opacity: 0.4; }
-        .expanded .stack-img { position: relative; transform: translateY(0) scale(1) rotate(0deg) !important; margin-bottom: 1.5rem; z-index: 10 !important; opacity: 1 !important; cursor: zoom-in; }
-        #lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); z-index: 100; justify-content: center; align-items: center; cursor: zoom-out; }
+        
+        .stack-img { 
+            position: absolute; top: 0; left: 0; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; 
+            transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1); 
+            border: 1px solid rgba(255,255,255,0.05);
+            background-color: #111;
+        }
+
+        /* 堆叠层级感 */
+        .stack-img:nth-child(1) { transform: translateY(0px) scale(1); z-index: 4; }
+        .stack-img:nth-child(2) { transform: translateY(15px) scale(0.96); z-index: 3; opacity: 0.7; }
+        .stack-img:nth-child(3) { transform: translateY(30px) scale(0.92); z-index: 2; opacity: 0.4; }
+        .stack-img:nth-child(4) { transform: translateY(45px) scale(0.88); z-index: 1; opacity: 0.2; }
+
+        /* 展开后的样式 */
+        .expanded .stack-img { position: relative; transform: translateY(0) scale(1) !important; margin-bottom: 1rem; z-index: 10 !important; opacity: 1 !important; cursor: zoom-in; aspect-ratio: auto; }
+
+        #lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 100; justify-content: center; align-items: center; cursor: zoom-out; padding: 20px; }
     </style>
 </head>
-<body class="p-8 md:p-20">
+<body class="p-6 md:p-16">
     <audio id="bgm" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
 
-    <nav class="mb-16 flex justify-between items-center max-w-6xl mx-auto">
-        <a href="index.html" onclick="saveAndGo(event, 'index.html')" class="opacity-40 hover:opacity-100 transition tracking-widest text-[10px]">← RETURN TO ARCHIVE</a>
-        <div class="flex items-center gap-3 cursor-pointer group" onclick="toggleMusic(event)">
+    <nav class="mb-12 flex justify-between items-center max-w-7xl mx-auto">
+        <a href="index.html" onclick="saveAndGo(event, 'index.html')" class="opacity-40 hover:opacity-100 transition tracking-[0.2em] text-[9px]">← ARCHIVE</a>
+        <div class="flex items-center gap-3 cursor-pointer" onclick="toggleMusic(event)">
             <div class="music-bars" id="music-icon">
                 <div class="bar bar-paused" style="animation-delay: 0.0s"></div>
                 <div class="bar bar-paused" style="animation-delay: 0.2s"></div>
                 <div class="bar bar-paused" style="animation-delay: 0.4s"></div>
             </div>
-            <span class="text-[9px] tracking-[0.3em] uppercase opacity-40 group-hover:opacity-100 transition" id="music-status">Sound Off</span>
+            <span class="text-[9px] tracking-[0.2em] uppercase opacity-40" id="music-status">Off</span>
         </div>
     </nav>
 
-    <div class="flex flex-wrap gap-8 border-b border-white/5 pb-6 mb-24 max-w-6xl mx-auto">
-        <div onclick="filterWorks('all')" class="filter-btn active" id="btn-all">ALL</div>
-        <div onclick="filterWorks('critical')" class="filter-btn" id="btn-critical">CRITICAL / 批判设计</div>
+    <div class="flex gap-6 border-b border-white/5 pb-4 mb-16 max-w-7xl mx-auto overflow-x-auto whitespace-nowrap">
+        <div onclick="filterWorks('all')" class="filter-btn active" id="btn-all">All Projects</div>
+        <div onclick="filterWorks('critical')" class="filter-btn" id="btn-critical">Critical Design</div>
+        <div onclick="filterWorks('photo')" class="filter-btn" id="btn-photo">Photography</div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-32 max-w-6xl mx-auto" id="grid">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-4 md:gap-x-10 gap-y-20 max-w-7xl mx-auto" id="grid">
+        
         <div class="project-group" data-category="critical">
             <div class="stack-container" onclick="toggleExpand(this)">
-                <img src="批判1" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="批判2" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="批判3" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="批判4" class="stack-img rounded" onclick="zoomImage(event, this)">
+                <img src="批判1" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="批判2" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="批判3" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
             </div>
-            <div class="mt-8 border-l border-blue-500 pl-4">
-                <h3 class="vogue-title text-2xl font-black uppercase">Divorce in China</h3>
-                <p class="text-gray-500 text-xs mt-2">关于社会婚姻结构与个体困境的视觉探讨。</p>
+            <div class="mt-6 border-l-2 border-blue-500 pl-3">
+                <h3 class="vogue-title text-sm md:text-xl font-bold uppercase leading-tight">Divorce in China</h3>
+                <p class="text-gray-500 text-[10px] mt-1 italic">Social Structure Study</p>
             </div>
-        </div>
         </div>
 
-    <div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img" class="max-w-[95%] max-h-[95vh] object-contain"></div>
+        <div class="project-group" data-category="critical">
+            <div class="stack-container" onclick="toggleExpand(this)">
+                <img src="保龄1" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="保龄2" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="保龄3" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+            </div>
+            <div class="mt-6 border-l-2 border-red-500 pl-3">
+                <h3 class="vogue-title text-sm md:text-xl font-bold uppercase leading-tight">Bowling Campaign</h3>
+                <p class="text-gray-500 text-[10px] mt-1 italic">Consumerism Research</p>
+            </div>
+        </div>
+
+        <div class="project-group" data-category="critical">
+            <div class="stack-container" onclick="toggleExpand(this)">
+                <img src="血液1.png" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="血液2.png" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+            </div>
+            <div class="mt-6 border-l-2 border-red-900 pl-3">
+                <h3 class="vogue-title text-sm md:text-xl font-bold uppercase leading-tight">Blood Nirvana</h3>
+                <p class="text-gray-500 text-[10px] mt-1 italic">Digital Vitality</p>
+            </div>
+        </div>
+
+        <div class="project-group" data-category="critical">
+            <div class="stack-container" onclick="toggleExpand(this)">
+                <img src="健身1.png" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="健身2.png" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="健身3.png" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+            </div>
+            <div class="mt-6 border-l-2 border-green-800 pl-3">
+                <h3 class="vogue-title text-sm md:text-xl font-bold uppercase leading-tight">Muscle Factory</h3>
+                <p class="text-gray-500 text-[10px] mt-1 italic">Biological Industry</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img" class="max-w-full max-h-full object-contain shadow-2xl"></div>
 
     <script>
         const audio = document.getElementById('bgm');
         const iconBars = document.querySelectorAll('.bar');
         const statusText = document.getElementById('music-status');
 
+        // 音频逻辑：刷新重置 + 滑动/点击触发
         window.addEventListener('load', () => {
-            audio.currentTime = 0; // 刷新页面始终重置
-            const isPlaying = localStorage.getItem('musicPlaying') === 'true';
-            if (isPlaying) { 
-                audio.play().then(() => updateUI(true)).catch(() => {}); 
+            audio.currentTime = 0; 
+            if (localStorage.getItem('musicPlaying') === 'true') {
+                audio.play().then(() => updateUI(true)).catch(() => {});
             }
         });
 
-        // 滑动或点击触发
         const startMusic = () => {
             if (localStorage.getItem('musicPlaying') === 'true' && audio.paused) {
                 audio.play().then(() => updateUI(true));
@@ -95,15 +149,17 @@
         }
 
         function toggleMusic(event) {
+            event.stopPropagation();
             if (audio.paused) { audio.play(); updateUI(true); localStorage.setItem('musicPlaying', 'true'); }
             else { audio.pause(); updateUI(false); localStorage.setItem('musicPlaying', 'false'); }
         }
 
         function updateUI(isPlaying) {
-            statusText.innerText = isPlaying ? "Sound On" : "Sound Off";
+            statusText.innerText = isPlaying ? "On" : "Off";
             iconBars.forEach(bar => isPlaying ? bar.classList.remove('bar-paused') : bar.classList.add('bar-paused'));
         }
 
+        // 交互功能
         function toggleExpand(container) { container.classList.toggle('expanded'); }
         function zoomImage(event, img) {
             if (img.parentElement.classList.contains('expanded')) {
@@ -111,6 +167,14 @@
                 document.getElementById('lightbox-img').src = img.src;
                 document.getElementById('lightbox').style.display = 'flex';
             }
+        }
+
+        function filterWorks(cat) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('btn-' + cat).classList.add('active');
+            document.querySelectorAll('.project-group').forEach(g => {
+                g.classList.toggle('hidden', cat !== 'all' && g.dataset.category !== cat);
+            });
         }
     </script>
 </body>
