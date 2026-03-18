@@ -2,61 +2,163 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>MOVIE - MAO TIANYI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE ARCHIVE | 毛天艺</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-[#050505] text-white overflow-x-hidden">
-    <div id="app-content">
-        <style>
-            .vogue-t { font-family: 'Noto Serif SC', serif; }
-            .m-card { position: relative; aspect-ratio: 16/9; overflow: hidden; background: #0a0a0a; border: 1px solid rgba(255,255,255,0.03); }
-            .m-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
-            .fade-up { animation: fUp 0.8s ease forwards; opacity: 0; }
-            @keyframes fUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        </style>
+    <script src="movies.js"></script>
 
-        <nav class="p-6 md:p-16 flex justify-between items-center max-w-[1400px] mx-auto">
-            <div onclick="router('index.html')" class="opacity-40 hover:opacity-100 text-[9px] tracking-[0.4em] cursor-pointer uppercase transition-all">← INDEX</div>
-            <div class="text-[9px] opacity-40 uppercase tracking-widest" id="m-status">BGM: On</div>
+    <style>
+        body { background: #000; color: white; margin: 0; overflow-x: hidden; font-family: 'Inter', sans-serif; }
+        .vogue-t { font-family: 'Noto Serif SC', serif; }
+        .bg-overlay { position: fixed; inset: 0; background: url('horse.jpg') center/cover no-repeat; opacity: 0.15; filter: grayscale(100%) brightness(0.3); z-index: -2; }
+        .vignette { position: fixed; inset: 0; background: radial-gradient(circle, transparent 30%, rgba(0,0,0,0.8) 100%); z-index: -1; }
+
+        /* 分类栏样式 */
+        .filter-item { 
+            font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; 
+            padding: 8px 20px; border-radius: 20px; cursor: pointer;
+            transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+            border: 1px solid rgba(255,255,255,0.05);
+            white-space: nowrap;
+        }
+        .filter-item:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.2); }
+        .filter-active { background: #fff !important; color: #000 !important; border-color: #fff !important; }
+
+        /* 电影卡片样式 */
+        .m-card { position: relative; aspect-ratio: 16/10; overflow: hidden; background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.04); transition: 0.6s; }
+        .m-card:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-8px); }
+        .m-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; transition: 0.8s; }
+        .m-card:hover .m-img { opacity: 0.15; filter: blur(8px); }
+        .m-info { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 1.5rem; opacity: 0; transition: 0.4s; }
+        .m-card:hover .m-info { opacity: 1; }
+
+        /* 线条 */
+        .accent-line { border-left: 1px solid rgba(255,255,255,0.15); padding-left: 1rem; margin-top: 1rem; }
+        .group:hover .accent-line { border-color: #ff3c3c; border-left-width: 3px; }
+
+        /* 动画 */
+        .fade-up { animation: fUp 0.8s ease forwards; opacity: 0; }
+        @keyframes fUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* 隐藏滚动条但保留滑动功能 */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="bg-overlay"></div>
+    <div class="vignette"></div>
+
+    <div id="app-content" class="min-h-screen pt-40 pb-40">
+        <nav class="fixed top-0 left-0 right-0 p-8 md:p-12 z-[100] flex justify-between items-center pointer-events-none">
+            <div onclick="router('index.html')" class="opacity-40 hover:opacity-100 text-[9px] tracking-[0.4em] cursor-pointer uppercase transition-all pointer-events-auto">← INDEX</div>
+            <div id="movie-count" class="text-[9px] opacity-20 tracking-widest uppercase italic">Loading...</div>
         </nav>
 
-        <header class="px-6 md:px-16 max-w-[1400px] mx-auto mb-20 fade-up">
-            <h1 class="vogue-t text-4xl md:text-6xl font-black tracking-[0.3em]">电影选辑</h1>
-            <p class="text-[10px] opacity-30 mt-6 uppercase tracking-[0.3em] italic">Selected Cinema Fragments</p>
+        <header class="px-8 md:px-12 max-w-[1500px] mx-auto mb-12 fade-up">
+            <h1 class="vogue-t text-4xl md:text-6xl font-black tracking-tight italic">电影档案馆</h1>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1400px] mx-auto px-6 pb-40">
-            
-            <div class="fade-up" style="animation-delay: 0.1s">
-                <div class="m-card">
-                    <img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p480747492.jpg" class="m-img">
+        <div class="px-8 md:px-12 max-w-[1500px] mx-auto mb-16 fade-up" style="animation-delay: 0.1s">
+            <div id="filter-bar" class="flex gap-4 overflow-x-auto no-scrollbar pb-4">
+                <div class="filter-item filter-active" data-genre="All">All Fragments</div>
                 </div>
-                <div class="mt-4 border-l border-white/10 pl-4">
-                    <h4 class="text-[10px] font-bold tracking-widest uppercase">The Shawshank Redemption</h4>
-                    <p class="text-[8px] opacity-20 mt-1 uppercase">肖申克的救赎</p>
-                </div>
-            </div>
-
-            <div class="fade-up" style="animation-delay: 0.2s">
-                <div class="m-card">
-                    <img src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2911205318.jpg" class="m-img">
-                </div>
-                <div class="mt-4 border-l border-white/10 pl-4">
-                    <h4 class="text-[10px] font-bold tracking-widest uppercase">Farewell My Concubine</h4>
-                    <p class="text-[8px] opacity-20 mt-1 uppercase">霸王别姬</p>
-                </div>
-            </div>
-
         </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-16 max-w-[1500px] mx-auto px-8" id="movie-grid"></div>
 
         <script>
             (function() {
-                // 仅同步 BGM 状态
-                const statusIndicator = document.getElementById('m-status');
-                const audio = document.getElementById('global-bgm');
-                if(statusIndicator && audio) {
-                    statusIndicator.innerText = audio.paused ? "BGM: Off" : "BGM: On";
+                if (typeof movieData === 'undefined') return;
+
+                const grid = document.getElementById('movie-grid');
+                const countDisplay = document.getElementById('movie-count');
+                const filterBar = document.getElementById('filter-bar');
+
+                // 1. 提取所有不重复的类型 (假设你的数据里有 genre 字段)
+                // 如果数据里是 "剧情 / 动作"，会自动拆分
+                const allGenres = new Set();
+                movieData.forEach(m => {
+                    if (m.genre) {
+                        m.genre.split(' / ').forEach(g => allGenres.add(g.trim()));
+                    }
+                });
+
+                // 2. 生成分类按钮
+                allGenres.forEach(genre => {
+                    const btn = document.createElement('div');
+                    btn.className = 'filter-item';
+                    btn.innerText = genre;
+                    btn.dataset.genre = genre;
+                    filterBar.appendChild(btn);
+                });
+
+                // 3. 渲染函数
+                function renderMovies(filterGenre = "All") {
+                    // 先清空
+                    grid.innerHTML = '';
+                    const filtered = filterGenre === "All" 
+                        ? movieData 
+                        : movieData.filter(m => m.genre && m.genre.includes(filterGenre));
+
+                    countDisplay.innerText = `DATABASE: ${filtered.length} FILMS`;
+
+                    grid.innerHTML = filtered.map((movie, index) => {
+                        const parts = movie.title.split(' / ');
+                        return `
+                            <div class="group fade-up" style="animation-delay: ${Math.min(index * 0.02, 0.5)}s">
+                                <div class="m-card">
+                                    <img data-src="${movie.poster}" class="m-img lazy" alt="${parts[0]}">
+                                    <div class="m-info">
+                                        <div class="text-[#ffb400] text-[7px] tracking-widest mb-3">${movie.rating}</div>
+                                        <h3 class="vogue-t text-lg italic tracking-tight mb-2">${parts[0]}</h3>
+                                        <p class="text-[9px] opacity-60 leading-relaxed line-clamp-4 font-light">${movie.comment || ""}</p>
+                                    </div>
+                                </div>
+                                <div class="accent-line">
+                                    <h4 class="text-[10px] font-bold tracking-widest uppercase truncate">${parts[parts.length-1]}</h4>
+                                    <p class="text-[8px] opacity-20 mt-1 uppercase tracking-tighter">ID-${String(movieData.length - index).padStart(4, '0')}</p>
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+
+                    // 重启懒加载
+                    initLazyLoad();
                 }
+
+                // 4. 分类点击事件
+                filterBar.addEventListener('click', (e) => {
+                    const target = e.target.closest('.filter-item');
+                    if (!target) return;
+
+                    document.querySelectorAll('.filter-item').forEach(btn => btn.classList.remove('filter-active'));
+                    target.classList.add('filter-active');
+                    
+                    // 伴随淡出动画切换内容
+                    grid.style.opacity = '0';
+                    setTimeout(() => {
+                        renderMovies(target.dataset.genre);
+                        grid.style.opacity = '1';
+                    }, 300);
+                });
+
+                function initLazyLoad() {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const img = entry.target;
+                                img.src = img.dataset.src;
+                                observer.unobserve(img);
+                            }
+                        });
+                    }, { rootMargin: '400px' });
+                    document.querySelectorAll('.lazy').forEach(img => observer.observe(img));
+                }
+
+                // 首次加载
+                renderMovies();
             })();
         </script>
     </div>
