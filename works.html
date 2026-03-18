@@ -19,10 +19,19 @@
         .project-group { transition: 0.5s; }
         .project-group.hidden { display: none; }
 
-        /* --- 核心堆叠逻辑：精致小尺寸版 --- */
+        /* --- 音乐动效 UI --- */
+        .music-bars { display: flex; gap: 3px; align-items: flex-end; height: 13px; width: 20px; }
+        .bar { width: 2px; background: white; animation: play 0.8s infinite alternate; height: 3px; }
+        .bar-paused { animation-play-state: paused !important; height: 2px !important; opacity: 0.3; }
+        @keyframes play {
+            0% { height: 4px; }
+            100% { height: 13px; }
+        }
+
+        /* --- 堆叠逻辑 --- */
         .stack-container { 
             position: relative; 
-            height: 280px; /* 降低高度，显得更精致 */
+            height: 280px; 
             transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
             cursor: s-resize;
             width: 100%;
@@ -41,15 +50,11 @@
             background-color: #111;
         }
 
-        /* 未展开时的精致堆叠：减小偏移量以适配双列 */
         .stack-img:nth-child(1) { transform: translateY(0px) scale(1); z-index: 6; }
         .stack-img:nth-child(2) { transform: translateY(25px) scale(0.97) rotate(-0.3deg); z-index: 5; opacity: 0.8; }
         .stack-img:nth-child(3) { transform: translateY(50px) scale(0.94) rotate(0.3deg); z-index: 4; opacity: 0.6; }
         .stack-img:nth-child(4) { transform: translateY(75px) scale(0.91); z-index: 3; opacity: 0.4; }
-        .stack-img:nth-child(5) { transform: translateY(100px) scale(0.88); z-index: 2; opacity: 0.2; }
-        .stack-img:nth-child(6) { transform: translateY(125px) scale(0.85); z-index: 1; opacity: 0.1; }
 
-        /* 展开后状态 */
         .expanded .stack-img {
             position: relative;
             transform: translateY(0) scale(1) rotate(0deg) !important;
@@ -59,7 +64,6 @@
             cursor: zoom-in;
         }
 
-        /* 文字排版：缩小字号，增强精致感 */
         .meta-content { 
             margin-top: 2rem; 
             padding-left: 1rem; 
@@ -78,7 +82,22 @@
     </style>
 </head>
 <body class="p-8 md:p-20">
-    <nav class="mb-16"><a href="index.html" class="opacity-40 hover:opacity-100 transition tracking-widest text-[10px]">← RETURN TO ARCHIVE</a></nav>
+    <audio id="bgm" loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <nav class="mb-16 flex justify-between items-center max-w-6xl mx-auto">
+        <a href="index.html" class="opacity-40 hover:opacity-100 transition tracking-widest text-[10px]">← RETURN TO ARCHIVE</a>
+        
+        <div class="flex items-center gap-3 cursor-pointer group" onclick="toggleMusic(event)">
+            <div class="music-bars" id="music-icon">
+                <div class="bar bar-paused" style="animation-delay: 0.0s"></div>
+                <div class="bar bar-paused" style="animation-delay: 0.2s"></div>
+                <div class="bar bar-paused" style="animation-delay: 0.4s"></div>
+            </div>
+            <span class="text-[9px] tracking-[0.3em] uppercase opacity-40 group-hover:opacity-100 transition" id="music-status">Sound Off</span>
+        </div>
+    </nav>
 
     <div class="flex flex-wrap gap-8 border-b border-white/5 pb-6 mb-24 max-w-6xl mx-auto">
         <div onclick="filterWorks('all')" class="filter-btn active" id="btn-all">ALL</div>
@@ -89,7 +108,6 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-32 max-w-6xl mx-auto" id="grid">
-        
         <div class="project-group" data-category="critical">
             <div class="stack-container" onclick="toggleExpand(this)">
                 <img src="批判1" class="stack-img rounded" onclick="zoomImage(event, this)">
@@ -110,8 +128,6 @@
                 <img src="保龄2" class="stack-img rounded" onclick="zoomImage(event, this)">
                 <img src="保龄3" class="stack-img rounded" onclick="zoomImage(event, this)">
                 <img src="保龄4" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="保龄5" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="保龄6" class="stack-img rounded" onclick="zoomImage(event, this)">
             </div>
             <div class="meta-content">
                 <h3 class="vogue-title text-2xl font-black uppercase">New Bowling Campaign</h3>
@@ -119,36 +135,6 @@
                 <p class="text-gray-500 text-xs mt-4 leading-relaxed">娱乐至死时代下，消费主义对儿童精神世界的重塑。</p>
             </div>
         </div>
-
-        <div class="project-group" data-category="critical">
-            <div class="stack-container" onclick="toggleExpand(this)">
-                <img src="血液1.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="血液2.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="血液3.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="血液4.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-            </div>
-            <div class="meta-content">
-                <h3 class="vogue-title text-2xl font-black uppercase">Blood Nirvana</h3>
-                <p class="vogue-sub text-[10px] opacity-40 italic uppercase tracking-widest">4 Images / Series</p>
-                <p class="text-gray-500 text-xs mt-4 leading-relaxed">探讨数字背后的生命张力与社会治理逻辑。</p>
-            </div>
-        </div>
-
-        <div class="project-group md:mt-24" data-category="critical">
-            <div class="stack-container" onclick="toggleExpand(this)">
-                <img src="健身1.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="健身2.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="健身3.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="健身4.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="健身5.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-            </div>
-            <div class="meta-content">
-                <h3 class="vogue-title text-2xl font-black uppercase">Muscle Factory</h3>
-                <p class="vogue-sub text-[10px] opacity-40 italic uppercase tracking-widest">5 Images / Series</p>
-                <p class="text-gray-500 text-xs mt-4 leading-relaxed">滥用药物获得的肉体，与健康的本质背道而驰。</p>
-            </div>
-        </div>
-
     </div>
 
     <div id="lightbox" onclick="this.style.display='none'">
@@ -156,6 +142,55 @@
     </div>
 
     <script>
+        const audio = document.getElementById('bgm');
+        const iconBars = document.querySelectorAll('.bar');
+        const statusText = document.getElementById('music-status');
+
+        // --- 核心连贯播放逻辑 ---
+
+        // 1. 尝试从本地存储恢复播放状态
+        window.addEventListener('load', () => {
+            const savedTime = localStorage.getItem('musicTime');
+            const isPlaying = localStorage.getItem('musicPlaying') === 'true';
+
+            if (savedTime) audio.currentTime = parseFloat(savedTime);
+            
+            if (isPlaying) {
+                audio.play().then(() => updateUI(true)).catch(e => {
+                    console.log("需要用户点击页面以继续播放音乐");
+                });
+            }
+        });
+
+        // 2. 实时保存播放进度 (每秒保存一次)
+        setInterval(() => {
+            if (!audio.paused) {
+                localStorage.setItem('musicTime', audio.currentTime);
+            }
+        }, 1000);
+
+        function toggleMusic(event) {
+            if (event) event.stopPropagation();
+            if (audio.paused) {
+                audio.play();
+                updateUI(true);
+                localStorage.setItem('musicPlaying', 'true');
+            } else {
+                audio.pause();
+                updateUI(false);
+                localStorage.setItem('musicPlaying', 'false');
+            }
+        }
+
+        function updateUI(isPlaying) {
+            statusText.innerText = isPlaying ? "Sound On" : "Sound Off";
+            iconBars.forEach(bar => {
+                if (isPlaying) bar.classList.remove('bar-paused');
+                else bar.classList.add('bar-paused');
+            });
+        }
+
+        // --- 原有项目逻辑 ---
         function toggleExpand(container) {
             container.classList.toggle('expanded');
         }
