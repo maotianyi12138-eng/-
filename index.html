@@ -124,37 +124,56 @@
         const audio = document.getElementById('bgm');
         const iconBars = document.querySelectorAll('.bar');
         const statusText = document.getElementById('music-status');
-        let hasStarted = false;
 
-        // 【核心函数】点击板块时播放并跳转
+        // --- 核心同步逻辑 ---
+
+        // 加载页面时：恢复进度和状态
+        window.addEventListener('load', () => {
+            const savedTime = localStorage.getItem('musicTime');
+            const isPlaying = localStorage.getItem('musicPlaying') === 'true';
+
+            if (savedTime) audio.currentTime = parseFloat(savedTime);
+            
+            if (isPlaying) {
+                audio.play().then(() => updateUI(true)).catch(e => {
+                    console.log("等待用户交互以恢复播放");
+                });
+            }
+        });
+
+        // 持续保存进度
+        setInterval(() => {
+            if (!audio.paused) {
+                localStorage.setItem('musicTime', audio.currentTime);
+            }
+        }, 1000);
+
+        // 点击板块跳转
         function playThenGo(event, url) {
-            // 阻止默认跳转，由 JS 控制节奏
             event.preventDefault();
             
-            // 尝试播放音乐
+            // 无论当前是否在放，都确保状态设为 'true'
+            localStorage.setItem('musicPlaying', 'true');
+            
             audio.play().then(() => {
                 updateUI(true);
-                hasStarted = true;
-                // 音乐启动后延迟 150ms 跳转，确保视觉反馈同步
-                setTimeout(() => {
-                    window.location.href = url;
-                }, 150);
+                setTimeout(() => { window.location.href = url; }, 150);
             }).catch(e => {
-                // 如果播放失败（极少情况），也直接跳转
                 window.location.href = url;
             });
         }
 
-        // 左上角开关：保留独立操作权限
+        // 手动开关
         function toggleMusic(event) {
             event.stopPropagation(); 
             if (audio.paused) {
                 audio.play();
                 updateUI(true);
-                hasStarted = true;
+                localStorage.setItem('musicPlaying', 'true');
             } else {
                 audio.pause();
                 updateUI(false);
+                localStorage.setItem('musicPlaying', 'false');
             }
         }
 
@@ -166,13 +185,10 @@
             });
         }
 
-        // 全局点击监听：保留作为备份，点击页面任意空白处也可开启
+        // 兜底点击激活
         document.addEventListener('click', function() {
-            if (!hasStarted) {
-                audio.play().then(() => {
-                    updateUI(true);
-                    hasStarted = true;
-                }).catch(e => {});
+            if (localStorage.getItem('musicPlaying') === 'true' && audio.paused) {
+                audio.play().then(() => updateUI(true));
             }
         }, { once: false });
     </script>
