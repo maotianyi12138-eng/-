@@ -10,30 +10,24 @@
         body { 
             background: #000 no-repeat center/cover fixed; color: #fff; font-family: sans-serif; -webkit-font-smoothing: antialiased;
             background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('mobile_bg.jpg');
-            transition: opacity 0.5s ease;
         }
         @media (min-width: 1024px) { body { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('horse.jpg'); } }
-        
         .vogue-t { font-family: 'Noto Serif SC', serif; }
         .vogue-s { font-family: 'Libre Baskerville', serif; }
         .vogue-card { transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); border-top: 1px solid rgba(255,255,255,0.1); cursor: pointer; }
         @media (min-width: 1024px) { .vogue-card:hover { background: rgba(255,255,255,0.05); padding-top: 2rem; } }
-        
-        /* 音乐动效 */
         .bar { width: 2px; background: #fff; animation: play 0.8s infinite alternate; height: 3px; }
         .bar-p { animation-play-state: paused !important; height: 2px !important; opacity: 0.3; }
         @keyframes play { 0% { height: 4px; } 100% { height: 13px; } }
-
-        /* 内容切换动画 */
-        #content-wrapper { transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s; }
-        .page-exit { transform: translateY(-20px); opacity: 0; }
-        .page-enter { transform: translateY(20px); opacity: 0; }
+        /* 切换动画 */
+        #app-content { transition: opacity 0.4s ease, transform 0.4s ease; }
+        .page-fade { opacity: 0; transform: translateY(10px); }
     </style>
 </head>
-<body onclick="tryAutoPlay()" onscroll="tryAutoPlay()">
-    <audio id="bgm" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
+<body onclick="tryPlay()" onscroll="tryPlay()" class="overflow-x-hidden">
+    <audio id="global-bgm" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
 
-    <div id="content-wrapper">
+    <div id="app-content">
         <nav class="p-6 md:p-10 max-w-7xl mx-auto flex justify-between items-center relative z-20">
             <div class="flex items-center gap-3 cursor-pointer group" onclick="toggleMusic(event)">
                 <div class="flex gap-[3px] items-end h-[13px] w-[20px]">
@@ -43,46 +37,44 @@
             </div>
         </nav>
 
-        <section class="pt-20 pb-16 px-6 md:px-10 max-w-7xl mx-auto z-10 relative">
-            <div class="mb-10 h-[1px] w-12 bg-white"></div>
-            <h1 class="vogue-t text-3xl md:text-5xl font-black leading-[0.9] mb-10 tracking-[0.35em]">
-                毛天艺
-            </h1>
+        <section class="pt-24 pb-16 px-6 md:px-10 max-w-7xl mx-auto z-10 relative">
+            <div class="mb-10 h-[1px] w-12 bg-white opacity-50"></div>
+            <h1 class="vogue-t text-4xl md:text-6xl font-black mb-12 tracking-[0.4em]">毛天艺</h1>
             <p class="text-[10px] md:text-sm text-gray-400 max-w-md leading-loose font-light">
                 记录关于视觉、影像与声音的思考。探索数字时代下的审美边界。<br>
-                <span class="vogue-s text-[9px] opacity-40 italic mt-2 block tracking-[0.2em]">Curated by Mao Tianyi / 2026</span>
+                <span class="vogue-s text-[9px] opacity-40 italic mt-4 block tracking-[0.2em]">Curated by Mao Tianyi / 2026</span>
             </p>
         </section>
 
         <section class="px-6 md:px-10 max-w-7xl mx-auto pb-24 z-10 relative">
             <div class="grid grid-cols-2 lg:grid-cols-4">
-                <div onclick="loadPage('works.html')" class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between group">
-                    <div><h2 class="vogue-t text-xl md:text-3xl font-bold group-hover:text-blue-500 transition">视觉作品集</h2><p class="vogue-s text-xs md:text-sm opacity-40 italic mt-4">Works / Visual Portfolio</p></div>
-                    <div class="text-[9px] opacity-20 group-hover:opacity-100 transition mt-10 tracking-[0.2em]">EXPLORE →</div>
+                <div onclick="router('works.html')" class="vogue-card p-6 md:py-20 md:px-8 flex flex-col justify-between group">
+                    <div><h2 class="vogue-t text-xl md:text-3xl font-bold group-hover:text-blue-500 transition">视觉作品集</h2><p class="vogue-s text-xs md:text-base opacity-40 italic mt-4 uppercase tracking-wider">Works / Visual Portfolio</p></div>
+                    <div class="text-[9px] opacity-20 group-hover:opacity-100 transition mt-10 tracking-[0.3em]">EXPLORE →</div>
                 </div>
-                <div onclick="loadPage('cinema.html')" class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between group">
-                    <div><h2 class="vogue-t text-xl md:text-3xl font-bold group-hover:text-red-500 transition">电影板块</h2><p class="vogue-s text-xs md:text-sm opacity-40 italic mt-4">Cinema / Film Archive</p></div>
-                    <div class="text-[9px] opacity-20 group-hover:opacity-100 transition mt-10 tracking-[0.2em]">VIEW ALL →</div>
+                <div onclick="router('cinema.html')" class="vogue-card p-6 md:py-20 md:px-8 flex flex-col justify-between group">
+                    <div><h2 class="vogue-t text-xl md:text-3xl font-bold group-hover:text-red-600 transition">电影板块</h2><p class="vogue-s text-xs md:text-base opacity-40 italic mt-4 uppercase tracking-wider">Cinema / Archive</p></div>
+                    <div class="text-[9px] opacity-20 group-hover:opacity-100 transition mt-10 tracking-[0.3em]">VIEW →</div>
                 </div>
-                <div class="vogue-card p-6 md:py-16 md:px-8 opacity-40 cursor-not-allowed">
-                    <h2 class="vogue-t text-xl md:text-3xl font-bold">音乐板块</h2><p class="vogue-s text-xs md:text-sm opacity-40 mt-4">Music / Soundscape</p>
+                <div class="vogue-card p-6 md:py-20 md:px-8 opacity-30 cursor-not-allowed">
+                    <h2 class="vogue-t text-xl md:text-3xl font-bold">音乐板块</h2><p class="vogue-s text-xs md:text-base opacity-40 mt-4 uppercase">Music</p>
                 </div>
-                <div class="vogue-card p-6 md:py-16 md:px-8 opacity-40 border-r lg:border-r-0 border-white/10 cursor-not-allowed">
-                    <h2 class="vogue-t text-xl md:text-3xl font-bold">阅读板块</h2><p class="vogue-s text-xs md:text-sm opacity-40 mt-4">Read / Archive</p>
+                <div class="vogue-card p-6 md:py-20 md:px-8 opacity-30 border-r lg:border-r-0 border-white/10 cursor-not-allowed">
+                    <h2 class="vogue-t text-xl md:text-3xl font-bold">阅读板块</h2><p class="vogue-s text-xs md:text-base opacity-40 mt-4 uppercase">Read</p>
                 </div>
             </div>
         </section>
     </div>
 
     <script>
-        const audio = document.getElementById('bgm');
+        const audio = document.getElementById('global-bgm');
         const statusText = document.getElementById('m-status');
         const bars = document.querySelectorAll('.bar');
-        const wrapper = document.getElementById('content-wrapper');
+        const app = document.getElementById('app-content');
 
-        // [逻辑1]：检测真正的刷新
-        if (performance.navigation.type === 1) {
-            audio.currentTime = 0; // 物理刷新强制重置
+        // 刷新判定
+        if (performance.getEntriesByType("navigation")[0].type === 'reload') {
+            audio.currentTime = 0;
             localStorage.setItem('mPlay', 'false');
         }
 
@@ -91,8 +83,7 @@
             bars.forEach(b => p ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
         }
 
-        // [逻辑2]：只要有任何交互就尝试启动音乐
-        function tryAutoPlay() {
+        function tryPlay() {
             if (audio.paused && localStorage.getItem('mPlay') !== 'false') {
                 audio.play().then(() => upUI(true)).catch(() => {});
             }
@@ -100,40 +91,26 @@
 
         function toggleMusic(e) {
             e.stopPropagation();
-            if (audio.paused) { 
-                audio.play(); upUI(true); localStorage.setItem('mPlay', 'true'); 
-            } else { 
-                audio.pause(); upUI(false); localStorage.setItem('mPlay', 'false'); 
-            }
+            if (audio.paused) { audio.play(); upUI(true); localStorage.setItem('mPlay', 'true'); }
+            else { audio.pause(); upUI(false); localStorage.setItem('mPlay', 'false'); }
         }
 
-        // [核心逻辑3]：无感模拟页面跳转
-        async function loadPage(url) {
-            wrapper.classList.add('page-exit'); // 离场动画
-            
+        // SPA 路由核心：拦截跳转，注入内容
+        async function router(url) {
+            app.classList.add('page-fade');
             setTimeout(async () => {
-                try {
-                    const response = await fetch(url);
-                    const html = await response.text();
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, 'text/html');
-                    const newContent = doc.querySelector('#content-wrapper').innerHTML;
-                    
-                    wrapper.innerHTML = newContent;
-                    wrapper.classList.remove('page-exit');
-                    wrapper.classList.add('page-enter');
-                    
-                    // 动态更新地址栏
-                    history.pushState({page: url}, '', url);
-                    
-                    setTimeout(() => wrapper.classList.remove('page-enter'), 100);
-                } catch (err) {
-                    location.href = url; // 降级处理：出错则普通跳转
-                }
-            }, 500);
+                const res = await fetch(url);
+                const text = await res.text();
+                const partial = new DOMParser().parseFromString(text, 'text/html').getElementById('app-content').innerHTML;
+                app.innerHTML = partial;
+                history.pushState({url}, '', url);
+                window.scrollTo(0,0);
+                app.classList.remove('page-fade');
+                // 重新绑定子页面的 UI 状态
+                upUI(!audio.paused);
+            }, 400);
         }
 
-        // 处理浏览器后退按钮
         window.onpopstate = () => location.reload();
     </script>
 </body>
