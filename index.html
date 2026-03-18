@@ -1,124 +1,73 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAO TIANYI | 毛天艺</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Libre+Baskerville:italic@400&display=swap');
-        body { 
-            background: #000 no-repeat center/cover fixed; color: #fff; font-family: sans-serif; -webkit-font-smoothing: antialiased;
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('mobile_bg.jpg');
-        }
-        @media (min-width: 1024px) { body { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('horse.jpg'); } }
-        .vogue-t { font-family: 'Noto Serif SC', serif; }
-        .vogue-s { font-family: 'Libre Baskerville', serif; }
-        .vogue-card { transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); border-top: 1px solid rgba(255,255,255,0.1); cursor: pointer; }
-        @media (min-width: 1024px) { .vogue-card:hover { background: rgba(255,255,255,0.05); padding-top: 2rem; } }
-        .bar { width: 2px; background: #fff; animation: play 0.8s infinite alternate; height: 3px; }
-        .bar-p { animation-play-state: paused !important; height: 2px !important; opacity: 0.3; }
-        @keyframes play { 0% { height: 4px; } 100% { height: 13px; } }
-        #app-content { transition: opacity 0.4s ease, transform 0.4s ease; }
-        .page-fade { opacity: 0; transform: translateY(10px); }
-    </style>
-</head>
-<body class="overflow-x-hidden">
-    <audio id="global-bgm" loop preload="auto">
-        <source src="bgm.mp3" type="audio/mpeg">
-    </audio>
+<script>
+    const audio = document.getElementById('global-bgm');
+    const app = document.getElementById('app-content');
 
-    <div id="app-content">
-        <nav class="p-6 md:p-10 max-w-7xl mx-auto flex justify-between items-center relative z-20">
-            <div class="flex items-center gap-3 cursor-pointer group" onclick="toggleMusic(event)">
-                <div class="flex gap-[3px] items-end h-[13px] w-[20px]">
-                    <div class="bar bar-p"></div><div class="bar bar-p" style="animation-delay: 0.2s"></div><div class="bar bar-p" style="animation-delay: 0.4s"></div>
-                </div>
-                <span class="text-[9px] tracking-[0.2em] opacity-40 group-hover:opacity-100 uppercase" id="m-status">Off</span>
-            </div>
-        </nav>
-
-        <section class="pt-24 pb-16 px-6 md:px-10 max-w-7xl mx-auto z-10 relative">
-            <div class="mb-10 h-[1px] w-12 bg-white opacity-50"></div>
-            <h1 class="vogue-t text-4xl md:text-6xl font-black mb-12 tracking-[0.4em]">毛天艺</h1>
-            <p class="text-[10px] md:text-sm text-gray-400 max-w-md leading-loose font-light">
-                记录关于视觉、影像与声音的思考。探索数字时代下的审美边界。<br>
-                <span class="vogue-s text-[9px] opacity-40 italic mt-4 block tracking-[0.2em]">Curated by Mao Tianyi / 2026</span>
-            </p>
-        </section>
-
-        <section class="px-6 md:px-10 max-w-7xl mx-auto pb-24 z-10 relative">
-            <div class="grid grid-cols-2 lg:grid-cols-4">
-                <div onclick="router('works.html')" class="vogue-card p-6 md:py-20 md:px-8 flex flex-col justify-between group">
-                    <div><h2 class="vogue-t text-xl md:text-3xl font-bold group-hover:text-blue-500 transition">视觉作品集</h2><p class="vogue-s text-xs md:text-base opacity-40 italic mt-4 uppercase tracking-wider">Works / Visual Portfolio</p></div>
-                    <div class="text-[9px] opacity-20 group-hover:opacity-100 transition mt-10 tracking-[0.3em]">EXPLORE →</div>
-                </div>
-                <div onclick="router('cinema.html')" class="vogue-card p-6 md:py-20 md:px-8 flex flex-col justify-between group">
-                    <div><h2 class="vogue-t text-xl md:text-3xl font-bold group-hover:text-red-600 transition">电影板块</h2><p class="vogue-s text-xs md:text-base opacity-40 italic mt-4 uppercase tracking-wider">Cinema / Archive</p></div>
-                    <div class="text-[9px] opacity-20 group-hover:opacity-100 transition mt-10 tracking-[0.3em]">VIEW →</div>
-                </div>
-                <div class="vogue-card p-6 md:py-20 md:px-8 opacity-30 cursor-not-allowed">
-                    <h2 class="vogue-t text-xl md:text-3xl font-bold">音乐板块</h2><p class="vogue-s text-xs md:text-base opacity-40 mt-4 uppercase">Music</p>
-                </div>
-                <div class="vogue-card p-6 md:py-20 md:px-8 opacity-30 border-r lg:border-r-0 border-white/10 cursor-not-allowed">
-                    <h2 class="vogue-t text-xl md:text-3xl font-bold">阅读板块</h2><p class="vogue-s text-xs md:text-base opacity-40 mt-4 uppercase">Read</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <script>
-        const audio = document.getElementById('global-bgm');
+    // 统一 UI 更新函数（兼容页面切换后的元素查找）
+    function upUI(p) {
         const statusText = document.getElementById('m-status');
         const bars = document.querySelectorAll('.bar');
-        const app = document.getElementById('app-content');
+        if (statusText) statusText.innerText = p ? "On" : "Off";
+        bars.forEach(b => p ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
+    }
 
-        // 核心修复：监听全局任何点击，一旦触发就尝试播放
-        document.addEventListener('click', function initAudio() {
-            if (audio.paused && localStorage.getItem('mPlay') !== 'false') {
-                audio.play().then(() => {
-                    upUI(true);
-                    localStorage.setItem('mPlay', 'true');
-                    // 播放成功后移除监听，避免重复触发
-                    document.removeEventListener('click', initAudio);
-                }).catch(e => console.log("Autoplay blocked"));
-            }
-        }, { once: false }); // 设置为 false 直到成功播放为止
-
-        function upUI(p) {
-            if(!statusText) return;
-            statusText.innerText = p ? "On" : "Off";
-            bars.forEach(b => p ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
+    // 激活音频监听
+    document.addEventListener('click', function initAudio() {
+        if (audio.paused && localStorage.getItem('mPlay') !== 'false') {
+            audio.play().then(() => {
+                upUI(true);
+                localStorage.setItem('mPlay', 'true');
+                document.removeEventListener('click', initAudio);
+            }).catch(() => {});
         }
+    });
 
-        function toggleMusic(e) {
-            e.stopPropagation();
-            if (audio.paused) { 
-                audio.play(); upUI(true); localStorage.setItem('mPlay', 'true'); 
-            } else { 
-                audio.pause(); upUI(false); localStorage.setItem('mPlay', 'false'); 
-            }
+    function toggleMusic(e) {
+        if(e) e.stopPropagation();
+        if (audio.paused) { 
+            audio.play(); upUI(true); localStorage.setItem('mPlay', 'true'); 
+        } else { 
+            audio.pause(); upUI(false); localStorage.setItem('mPlay', 'false'); 
         }
+    }
 
-        async function router(url) {
-            // 在跳转瞬间再次确认音频播放（防止SPA切换丢失上下文）
-            if (audio.paused && localStorage.getItem('mPlay') === 'true') audio.play();
+    async function router(url) {
+        app.classList.add('page-fade');
+        
+        try {
+            const res = await fetch(url);
+            const text = await res.text();
+            const dom = new DOMParser().parseFromString(text, 'text/html');
+            const newContent = dom.getElementById('app-content');
+            
+            setTimeout(() => {
+                // 1. 替换 HTML 内容
+                app.innerHTML = newContent.innerHTML;
+                
+                // 2. 【关键修复】手动执行新页面中的脚本
+                const scripts = newContent.querySelectorAll('script');
+                scripts.forEach(oldScript => {
+                    const newScript = document.createElement('script');
+                    if (oldScript.src) {
+                        newScript.src = oldScript.src;
+                    } else {
+                        newScript.textContent = oldScript.textContent;
+                    }
+                    document.head.appendChild(newScript).parentNode.removeChild(newScript);
+                });
 
-            app.classList.add('page-fade');
-            setTimeout(async () => {
-                const res = await fetch(url);
-                const text = await res.text();
-                const dom = new DOMParser().parseFromString(text, 'text/html');
-                const partial = dom.getElementById('app-content').innerHTML;
-                app.innerHTML = partial;
+                // 3. 更新状态
                 history.pushState({url}, '', url);
-                window.scrollTo(0,0);
+                window.scrollTo(0, 0);
                 app.classList.remove('page-fade');
-                upUI(!audio.paused);
+                
+                // 4. 确保切换后 UI 状态正确
+                setTimeout(() => upUI(!audio.paused), 50);
             }, 400);
+        } catch (err) {
+            console.error("Navigation failed:", err);
+            window.location.href = url; // 失败则普通跳转备份
         }
+    }
 
-        window.onpopstate = () => location.reload();
-    </script>
-</body>
-</html>
+    window.onpopstate = () => location.reload();
+</script>
