@@ -161,6 +161,43 @@
                 else bar.classList.add('bar-paused');
             });
         }
+    <script>
+        const audio = document.getElementById('bgm');
+        const iconBars = document.querySelectorAll('.bar');
+        const statusText = document.getElementById('music-status');
+        let hasStarted = false;
+
+        // 核心修正：增加一个全局监听，确保任何点击都能激活音频上下文
+        document.addEventListener('click', function() {
+            if (!hasStarted) {
+                audio.play().then(() => {
+                    updateUI(true);
+                    hasStarted = true;
+                    console.log("Music started successfully");
+                }).catch(e => {
+                    console.error("Playback failed:", e);
+                });
+            }
+        }, { once: true }); // 只触发一次
+
+        function toggleMusic(event) {
+            event.stopPropagation(); 
+            if (audio.paused) {
+                audio.play();
+                updateUI(true);
+            } else {
+                audio.pause();
+                updateUI(false);
+            }
+        }
+
+        function updateUI(isPlaying) {
+            statusText.innerText = isPlaying ? "Sound On" : "Sound Off";
+            iconBars.forEach(bar => {
+                if (isPlaying) bar.classList.remove('bar-paused');
+                else bar.classList.add('bar-paused');
+            });
+        }
     </script>
 </body>
 </html>
