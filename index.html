@@ -9,15 +9,22 @@
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Libre+Baskerville:italic@400&family=Inter:wght@300;400&display=swap');
         
         body { 
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('horse.jpg');
-            background-size: cover; background-position: center; background-attachment: fixed;
             background-color: #000; color: #fff; font-family: 'Inter', sans-serif; margin: 0; -webkit-font-smoothing: antialiased;
+            background-size: cover; background-position: center; background-attachment: fixed;
+            /* 手机端壁纸 - 请确保文件名准确 */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('mobile_bg.jpg');
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                /* 电脑端壁纸 */
+                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('horse.jpg');
+            }
         }
 
         .vogue-title { font-family: 'Noto Serif SC', serif; letter-spacing: -0.02em; }
         .vogue-sub { font-family: 'Libre Baskerville', serif; }
         
-        /* 板块卡片样式微调 */
         .vogue-card { 
             transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1); 
             border-top: 1px solid rgba(255,255,255,0.1);
@@ -70,7 +77,6 @@
 
     <section class="px-6 md:px-10 max-w-7xl mx-auto pb-24 relative z-10">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-0">
-            
             <a href="works.html" onclick="saveAndGo(event, 'works.html')" class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between group border-l lg:border-l-0 border-white/10">
                 <div>
                     <h2 class="vogue-title text-xl md:text-3xl font-bold group-hover:text-blue-500 transition">视觉作品集</h2>
@@ -78,7 +84,6 @@
                 </div>
                 <div class="text-[9px] tracking-[0.2em] opacity-20 group-hover:opacity-100 transition mt-10">EXPLORE →</div>
             </a>
-
             <div class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between opacity-50 cursor-not-allowed border-r lg:border-r-0 border-white/10">
                 <div>
                     <h2 class="vogue-title text-xl md:text-3xl font-bold">电影板块</h2>
@@ -86,7 +91,6 @@
                 </div>
                 <div class="text-[9px] tracking-[0.2em] opacity-10 mt-10">COMING SOON</div>
             </div>
-
             <div class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between opacity-50 cursor-not-allowed border-l lg:border-l-0 border-white/10">
                 <div>
                     <h2 class="vogue-title text-xl md:text-3xl font-bold">音乐板块</h2>
@@ -94,15 +98,13 @@
                 </div>
                 <div class="text-[9px] tracking-[0.2em] opacity-10 mt-10">COMING SOON</div>
             </div>
-
-            <div class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between opacity-50 cursor-not-allowed border-r lg:border-b-0 border-b lg:border-r border-white/10 border-white/10">
+            <div class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between opacity-50 cursor-not-allowed border-r lg:border-b-0 border-b lg:border-r border-white/10">
                 <div>
                     <h2 class="vogue-title text-xl md:text-3xl font-bold">阅读板块</h2>
                     <p class="vogue-sub text-[9px] md:text-xs opacity-30 italic mt-2">Read / Book & Notes</p>
                 </div>
                 <div class="text-[9px] tracking-[0.2em] opacity-10 mt-10">COMING SOON</div>
             </div>
-
         </div>
     </section>
 
@@ -111,7 +113,6 @@
         const iconBars = document.querySelectorAll('.bar');
         const statusText = document.getElementById('music-status');
 
-        // 音频播放逻辑：刷新重置
         window.addEventListener('load', () => {
             if (audio) {
                 audio.currentTime = 0; 
@@ -121,7 +122,6 @@
             }
         });
 
-        // 交互触发：滑动或点击
         const startMusic = () => {
             if (audio && localStorage.getItem('musicPlaying') === 'true' && audio.paused) {
                 audio.play().then(() => updateUI(true)).catch(() => {});
@@ -134,7 +134,6 @@
             event.preventDefault();
             if (audio) {
                 localStorage.setItem('musicPlaying', audio.paused ? 'false' : 'true');
-                // 如果是跳转到 Works 且当前是 Off，点击后应视为 On
                 if (url === 'works.html') localStorage.setItem('musicPlaying', 'true');
             }
             setTimeout(() => { window.location.href = url; }, 150);
