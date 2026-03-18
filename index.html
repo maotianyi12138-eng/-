@@ -1,7 +1,9 @@
 <script>
+    // 初始化全局变量
     const audio = document.getElementById('global-bgm');
     const app = document.getElementById('app-content');
 
+    // 统一 UI 更新函数：确保切换页面后控制台状态（On/Off）和动画柱同步
     function upUI(p) {
         const statusText = document.getElementById('m-status');
         const bars = document.querySelectorAll('.bar');
@@ -9,6 +11,7 @@
         bars.forEach(b => p ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
     }
 
+    // 音频自动播放激活监听（针对浏览器安全限制）
     document.addEventListener('click', function initAudio() {
         if (audio.paused && localStorage.getItem('mPlay') !== 'false') {
             audio.play().then(() => {
@@ -19,6 +22,7 @@
         }
     });
 
+    // 音乐开关切换
     function toggleMusic(e) {
         if(e) e.stopPropagation();
         if (audio.paused) { 
@@ -28,26 +32,31 @@
         }
     }
 
+    // 无缝路由跳转函数
     async function router(url) {
-        // 【关键纠错】如果你写错了文件名，这里帮你自动修正为仓库里的 movies.html
-        let targetUrl = url === 'movie.html' ? 'movies.html' : url;
+        // 【关键纠错】自动补全文件名，防止因少写 's' 导致的 404 白屏
+        let targetUrl = (url === 'movie.html') ? 'movies.html' : url;
         
+        // 开始转场动画
         app.classList.add('page-fade');
         
         try {
+            // 获取新页面内容
             const res = await fetch(targetUrl);
-            if (!res.ok) throw new Error('Redirecting...');
+            if (!res.ok) throw new Error('Network response was not ok');
             
             const text = await res.text();
             const dom = new DOMParser().parseFromString(text, 'text/html');
             const newContent = dom.getElementById('app-content');
             
-            if (!newContent) throw new Error('No Container');
+            if (!newContent) throw new Error('ID app-content not found in target');
 
+            // 延迟执行内容替换，等待淡出动画完成
             setTimeout(() => {
+                // 1. 替换 HTML
                 app.innerHTML = newContent.innerHTML;
                 
-                // 执行新页面脚本 (加载 movies.js)
+                // 2. 核心：手动提取并重新执行新页面中的脚本（例如加载 movies.js）
                 const scripts = newContent.querySelectorAll('script');
                 scripts.forEach(oldScript => {
                     const newScript = document.createElement('script');
@@ -59,16 +68,24 @@
                     document.head.appendChild(newScript).parentNode.removeChild(newScript);
                 });
 
+                // 3. 更新浏览器地址栏
                 history.pushState({url: targetUrl}, '', targetUrl);
+                
+                // 4. 重置滚动条并恢复显示
                 window.scrollTo(0, 0);
                 app.classList.remove('page-fade');
+                
+                // 5. 确保 UI 状态与当前音频播放情况一致
                 setTimeout(() => upUI(!audio.paused), 50);
             }, 400);
+
         } catch (err) {
-            // 【保底方案】如果 fetch 报错，直接全页跳转，牺牲音乐连贯性换取页面可用
+            console.error("SPA路由失败，切换至普通跳转模式:", err);
+            // 【最终保底】如果 Fetch 失败，直接强制跳转，防止用户卡在白屏
             window.location.href = targetUrl;
         }
     }
 
+    // 处理浏览器后退键
     window.onpopstate = () => location.reload();
 </script>
