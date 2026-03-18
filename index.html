@@ -3,210 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAO TIANYI | 毛天艺 - Visual Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+    <title>MAO TIANYI | 毛天艺</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Inter:wght@200;400&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* 1. 恢复全屏背景与视觉样式 */
-        body { 
-            background: #000; color: white; margin: 0; overflow-x: hidden; 
-            font-family: 'Inter', -apple-system, sans-serif; 
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* 恢复磨砂卡片布局必备 CSS */
+        body { background: #000; color: white; margin: 0; overflow-x: hidden; font-family: 'Inter', sans-serif; }
         .vogue-t { font-family: 'Noto Serif SC', serif; }
-        .vogue-s { font-family: 'Georgia', serif; font-style: italic; }
-
-        /* 全屏背景图层（带黑色蒙层防止干扰） */
+        
+        /* 背景图还原 */
         .bg-overlay {
             position: fixed; inset: 0;
-            background: url('horse.jpg') center/cover no-repeat; /* 核心图片 */
-            opacity: 0.25; filter: grayscale(100%) brightness(0.4);
+            background: url('horse.jpg') center/cover no-repeat;
+            opacity: 0.2; filter: grayscale(100%) brightness(0.4);
             z-index: -2;
         }
-        .vignette {
-            position: fixed; inset: 0;
-            background: radial-gradient(circle, rgba(0,0,0,0) 30%, rgba(0,0,0,0.8) 100%);
-            z-index: -1;
-        }
+        .vignette { position: fixed; inset: 0; background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.8) 100%); z-index: -1; }
 
-        /* 恢复磨砂卡片与特定悬停效果 */
+        /* 卡片样式 */
         .vogue-card {
             background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-            overflow: hidden;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            position: relative; overflow: hidden;
         }
-        .vogue-card:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-8px);
-        }
+        .vogue-card:hover { background: rgba(255, 255, 255, 0.07); transform: translateY(-5px); border-color: rgba(255,255,255,0.1); }
+        
+        /* 底部彩色线条 */
+        .line { position: absolute; bottom: 0; left: 0; width: 0; height: 3px; transition: 0.5s; }
+        .c-cinema:hover .line { width: 100%; background: #ff3c3c; }
+        .c-works:hover .line { width: 100%; background: #007bff; }
+        .c-read:hover .line { width: 100%; background: #00ff88; }
+        .c-music:hover .line { width: 100%; background: #ffb400; }
 
-        /* 恢复彩色线条悬停动画 */
-        .accent-line {
-            position: absolute; bottom: 0; left: 0; width: 0; height: 3px;
-            transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-        }
-        /* 电影板块悬停变红 */
-        .vogue-card:hover.cinema-hover .accent-line { width: 100%; background: #ff3c3c; }
-        /* 作品集悬停变蓝 */
-        .vogue-card:hover.works-hover .accent-line { width: 100%; background: #007bff; }
-
-        /* 2. 恢复路由淡入淡出转场 */
-        #app-content { transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.19, 1, 0.22, 1); opacity: 1; transform: translateY(0); }
-        .page-fade { opacity: 0 !important; transform: translateY(15px) !important; }
-
-        /* 3. 恢复音乐频谱动画 */
-        .bar { width: 2px; height: 12px; background: white; transition: 0.3s; animation: play 0.8s infinite alternate; }
-        .bar-p { animation-play-state: paused !important; height: 2px !important; opacity: 0.3; }
-        @keyframes play { from { height: 4px; } to { height: 13px; } }
+        #app-content { transition: opacity 0.5s ease; opacity: 1; }
+        .page-fade { opacity: 0 !important; }
+        
+        /* 频谱 */
+        .bar { width: 2px; height: 12px; background: white; transition: 0.3s; }
+        .bar-p { height: 2px !important; opacity: 0.3; }
     </style>
 </head>
 <body>
 
     <div class="bg-overlay"></div>
     <div class="vignette"></div>
+    <audio id="global-bgm" loop src="bgm.mp3"></audio>
 
-    <audio id="global-bgm" loop preload="auto" src="bgm.mp3"></audio>
-
-    <nav class="fixed top-0 left-0 right-0 p-8 md:p-12 z-[100] flex justify-between items-center pointer-events-none">
-        <p onclick="router('index.html')" class="text-[9px] tracking-[0.4em] opacity-30 uppercase pointer-events-auto cursor-pointer hover:opacity-100 transition">MAO TIANYI</p>
-        
-        <div onclick="toggleMusic(event)" class="flex items-center gap-3 cursor-pointer group pointer-events-auto p-2">
-            <div class="flex items-end gap-[3px]">
-                <div class="bar bar-p"></div><div class="bar bar-p" style="animation-delay: 0.2s"></div><div class="bar bar-p" style="animation-delay: 0.4s"></div>
+    <nav class="fixed top-0 w-full p-8 md:p-12 z-[100] flex justify-between items-center pointer-events-none">
+        <p class="text-[9px] tracking-[0.4em] opacity-30 uppercase pointer-events-auto cursor-pointer" onclick="router('index.html')">MAO TIANYI</p>
+        <div onclick="toggleMusic(event)" class="flex items-center gap-3 cursor-pointer pointer-events-auto">
+            <div class="flex items-end gap-1">
+                <div class="bar bar-p"></div><div class="bar bar-p"></div><div class="bar bar-p"></div>
             </div>
-            <span id="m-status" class="text-[9px] tracking-[0.2em] opacity-40 group-hover:opacity-100 uppercase">Off</span>
+            <span id="m-status" class="text-[9px] opacity-40 uppercase">Off</span>
         </div>
     </nav>
 
     <div id="app-content" class="min-h-screen pt-40 pb-20">
-        <main class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 md:px-12 max-w-[1500px] mx-auto w-full items-center">
-            
-            <div class="md:sticky md:top-40 md:mb-40">
-                <p class="text-[10px] vogue-s opacity-30 mb-6 tracking-[0.3em] uppercase">Visual Archive / 2026</p>
-                <h1 class="vogue-t text-6xl md:text-8xl font-black tracking-tight leading-none mb-10 italic">毛天艺</h1>
-                <div class="h-[1px] w-20 bg-white opacity-20 mb-10"></div>
-                <p class="text-sm opacity-40 max-w-sm leading-relaxed font-light tracking-wide">
-                    探索数字时代下的审美边界。探索数字时代下的审美边界。<br>Selected fragments of cinema and visuals.
-                </p>
-            </div>
+        <main class="max-w-[1400px] mx-auto px-8">
+            <header class="mb-20">
+                <p class="text-[10px] opacity-20 tracking-[0.5em] uppercase mb-4">Visual Archive / 2026</p>
+                <h1 class="vogue-t text-6xl md:text-8xl italic font-black">毛天艺</h1>
+            </header>
 
-            <div class="grid grid-cols-1 gap-6">
-                <div onclick="router('movies.html')" class="vogue-card cinema-hover p-12 flex flex-col justify-between aspect-[16/10] cursor-pointer group relative">
-                    <div class="text-[9px] vogue-s opacity-30 uppercase group-hover:tracking-[0.2em] transition-all">Ref. ID-689</div>
-                    <div>
-                        <h2 class="vogue-t text-3xl font-bold tracking-widest uppercase mb-4 italic group-hover:translate-x-3 transition-transform">Cinema</h2>
-                        <p class="text-[10px] opacity-20 tracking-widest uppercase font-light">689 Recorded Fragments / Selected Film Archive</p>
-                    </div>
-                    <div class="accent-line"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div onclick="router('movies.html')" class="vogue-card c-cinema p-10 aspect-[4/5] flex flex-col justify-between cursor-pointer group">
+                    <div class="text-[9px] opacity-30 uppercase">01 / Archive</div>
+                    <h2 class="vogue-t text-3xl italic">Cinema</h2>
+                    <div class="line"></div>
                 </div>
 
-                <div onclick="router('works.html')" class="vogue-card works-hover p-12 flex flex-col justify-between aspect-[16/10] cursor-pointer group relative">
-                    <div class="text-[9px] vogue-s opacity-30 uppercase group-hover:tracking-[0.2em] transition-all">Visuals / Projects</div>
-                    <div>
-                        <h2 class="vogue-t text-3xl font-bold tracking-widest uppercase mb-4 italic group-hover:translate-x-3 transition-transform">Works</h2>
-                        <p class="text-[10px] opacity-20 tracking-widest uppercase font-light">Visual Portfolio / Design & Audio Research</p>
-                    </div>
-                    <div class="accent-line"></div>
+                <div onclick="router('works.html')" class="vogue-card c-works p-10 aspect-[4/5] flex flex-col justify-between cursor-pointer group">
+                    <div class="text-[9px] opacity-30 uppercase">02 / Project</div>
+                    <h2 class="vogue-t text-3xl italic">Works</h2>
+                    <div class="line"></div>
                 </div>
+
+                <div onclick="router('read.html')" class="vogue-card c-read p-10 aspect-[4/5] flex flex-col justify-between cursor-pointer group">
+                    <div class="text-[9px] opacity-30 uppercase">03 / Notes</div>
+                    <h2 class="vogue-t text-3xl italic">Read</h2>
+                    <div class="line"></div>
+                </div>
+
+                <div onclick="router('music.html')" class="vogue-card c-music p-10 aspect-[4/5] flex flex-col justify-between cursor-pointer group">
+                    <div class="text-[9px] opacity-30 uppercase">04 / Audio</div>
+                    <h2 class="vogue-t text-3xl italic">Music</h2>
+                    <div class="line"></div>
+                </div>
+
             </div>
         </main>
     </div>
 
     <script>
-        // 1. 获取全局母体元素
         const audio = document.getElementById('global-bgm');
         const app = document.getElementById('app-content');
 
-        // 统一 UI 更新函数（ On/Off 与 闪烁柱）
-        function upUI(isPlaying) {
+        function upUI(p) {
             const statusText = document.getElementById('m-status');
             const bars = document.querySelectorAll('.bar');
-            if (statusText) statusText.innerText = isPlaying ? "On" : "Off";
-            bars.forEach(b => isPlaying ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
+            if (statusText) statusText.innerText = p ? "On" : "Off";
+            bars.forEach(b => p ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
         }
 
-        // 音乐激活（首次点击）
         document.addEventListener('click', function init() {
-            if (audio && audio.paused && localStorage.getItem('mPlay') !== 'false') {
-                audio.play().then(() => { upUI(true); });
+            if (audio.paused && localStorage.getItem('mPlay') !== 'false') {
+                audio.play().then(() => upUI(true));
             }
-            document.removeEventListener('click', init); // 激活后移除
+            document.removeEventListener('click', init);
         });
 
-        // 音乐开关
         function toggleMusic(e) {
-            if(e) e.stopPropagation(); // 防止触发 init
-            if (!audio) return;
-            if (audio.paused) { 
-                audio.play(); upUI(true); localStorage.setItem('mPlay', 'true'); 
-            } else { 
-                audio.pause(); upUI(false); localStorage.setItem('mPlay', 'false'); 
-            }
+            if(e) e.stopPropagation();
+            if (audio.paused) { audio.play(); upUI(true); localStorage.setItem('mPlay', 'true'); }
+            else { audio.pause(); upUI(false); localStorage.setItem('mPlay', 'false'); }
         }
 
-        // 2. 无缝路由跳转函数（最核心部分）
         async function router(url) {
-            if (!app) { window.location.href = url; return; }
-            
-            // 【纠错点】自动将 movie.html 纠正为 movies.html
             let targetUrl = (url === 'movie.html') ? 'movies.html' : url;
-            
-            // 转场动画
             app.classList.add('page-fade');
-            
             try {
-                // Fetch 获取新页面 HTML
                 const res = await fetch(targetUrl);
-                if (!res.ok) throw new Error('404'); // 找不到文件抛出错误
-                
                 const text = await res.text();
-                // 抠出新内容
                 const dom = new DOMParser().parseFromString(text, 'text/html');
                 const newContent = dom.getElementById('app-content');
-                
-                if (!newContent) throw new Error('NoContainer');
-
-                // 延迟执行内容替换
                 setTimeout(() => {
-                    // 1. 替换 HTML
                     app.innerHTML = newContent.innerHTML;
-                    
-                    // 2. 【核心修复】重新提取并激活新页面里的脚本 (加载 movies.js 数据)
                     const scripts = newContent.querySelectorAll('script');
                     scripts.forEach(oldScript => {
                         const newScript = document.createElement('script');
-                        if (oldScript.src) {
-                            newScript.src = oldScript.src;
-                        } else {
-                            newScript.textContent = oldScript.textContent;
-                        }
+                        if (oldScript.src) newScript.src = oldScript.src;
+                        else newScript.textContent = oldScript.textContent;
                         document.head.appendChild(newScript).parentNode.removeChild(newScript);
                     });
-
-                    // 3. 更新浏览器地址栏
                     history.pushState({url: targetUrl}, '', targetUrl);
-                    
-                    // 4. 重置滚动条并恢复显示
                     window.scrollTo(0, 0);
-                    app.classList.remove('page-fade'); // 核心：移除透明，防止白屏
-                    
-                    // 5. 确保切换后 On/Off 状态正确
+                    app.classList.remove('page-fade');
                     setTimeout(() => upUI(!audio.paused), 50);
                 }, 400);
-
-            } catch (err) {
-                console.warn("SPA路由失败，进行普通跳转保底:", err);
-                // 【最终保底】如果 Fetch 报错，强行跳转页面，绝对不让用户看到白屏
-                window.location.href = targetUrl;
-            }
+            } catch (err) { window.location.href = targetUrl; }
         }
-
-        // 处理浏览器后退
         window.onpopstate = () => location.reload();
     </script>
 </body>
