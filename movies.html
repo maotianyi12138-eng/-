@@ -4,122 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CINEMA ARCHIVE | MAO TIANYI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="movies.js"></script>
     <style>
-        body { background: #000; color: white; margin: 0; overflow: hidden; font-family: 'Inter', sans-serif; }
+        body { background: #050505; color: white; margin: 0; overflow: hidden; font-family: 'Inter', sans-serif; }
         .vogue-t { font-family: 'Noto Serif SC', serif; }
         
-        /* 隐藏滚动条 */
+        /* 1. 左侧：极高密度列表 */
         .no-scrollbar::-webkit-scrollbar { display: none; }
-        
-        /* 左侧列表样式 */
         .movie-line { 
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            transition: 0.3s; cursor: crosshair;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            transition: 0.2s; cursor: crosshair;
+            display: flex; align-items: baseline; padding: 2px 0; /* 压缩行高 */
         }
-        .movie-line:hover { background: rgba(255,255,255,0.05); padding-left: 10px; border-color: #ff3c3c; }
+        .movie-line:hover { background: rgba(255,255,255,0.1); border-color: #ff3c3c; color: #ff3c3c; } /* 悬停变红 */
         
-        /* 右侧海报墙样式 */
-        .poster-wall {
-            perspective: 1000px;
+        /* 2. 右侧：亲吻墙矩阵 (Mosaic Wall) */
+        .mosaic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(45px, 1fr)); /* 极小单元格 */
+            grid-auto-rows: 65px;
+            gap: 2px; /* 紧密缝隙 */
+            padding: 2px;
+            height: 100%;
+            overflow-y: auto;
         }
-        .mini-poster {
-            width: 80px; height: 110px; object-fit: cover;
-            position: absolute; border-radius: 2px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-            filter: grayscale(100%) brightness(0.7);
-            opacity: 0.8;
+        .mosaic-item {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: 0.3s;
+            /* 移除黑白滤镜，保留彩色 */
+            opacity: 0.9;
         }
-        .mini-poster:hover { 
-            filter: grayscale(0%) brightness(1); 
-            z-index: 100 !important; 
-            transform: scale(2) rotate(0deg) !important;
-            opacity: 1;
+        .mosaic-item:hover { 
+            opacity: 1; 
+            transform: scale(1.5); 
+            z-index: 50; 
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
         }
 
         #app-content { transition: opacity 0.5s; opacity: 1; }
         .page-fade { opacity: 0 !important; }
-        .fade-in { animation: fIn 1s ease forwards; opacity: 0; }
-        @keyframes fIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body>
 
     <div id="app-content" class="h-screen w-screen flex overflow-hidden">
         
-        <nav class="fixed top-0 w-full p-8 z-[100] flex justify-between items-end pointer-events-none">
-            <div onclick="router('index.html')" class="pointer-events-auto cursor-pointer opacity-30 hover:opacity-100 text-[9px] tracking-[0.4em] uppercase transition-all">← INDEX</div>
-            <div id="m-count" class="text-[9px] opacity-20 tracking-widest italic uppercase">Archiving...</div>
+        <nav class="fixed top-0 w-full p-6 z-[100] flex justify-between items-center pointer-events-none">
+            <div onclick="router('index.html')" class="pointer-events-auto cursor-pointer opacity-50 hover:opacity-100 text-[9px] tracking-[0.4em] uppercase transition-all bg-black/50 px-2 py-1">← BACK</div>
+            <div id="m-count" class="text-[9px] text-[#ffb400] font-bold tracking-widest uppercase">Syncing...</div>
         </nav>
 
-        <div class="w-full md:w-1/2 h-full overflow-y-auto no-scrollbar pt-32 px-8 md:px-16 border-r border-white/5 bg-[#050505] relative z-10">
-            <header class="mb-12">
-                <h1 class="vogue-t text-5xl italic font-black mb-4">电影档案馆</h1>
-                <p class="text-[9px] opacity-30 tracking-[0.3em] uppercase leading-loose">Visual fragments / 689 Recorded</p>
+        <div class="w-full md:w-5/12 h-full overflow-y-auto no-scrollbar pt-24 px-6 md:px-12 border-r border-white/5 bg-[#050505] relative z-10">
+            <header class="mb-8">
+                <h1 class="vogue-t text-4xl italic font-black text-white">电影档案馆</h1>
+                <p class="text-[8px] opacity-40 tracking-[0.4em] uppercase mt-2">High-Density Text Archive</p>
             </header>
             
-            <div id="movie-list" class="space-y-0">
+            <div id="movie-list" class="pb-20">
                 </div>
         </div>
 
-        <div class="hidden md:block w-1/2 h-full relative overflow-hidden bg-[#000] poster-wall" id="poster-wall">
-            </div>
+        <div class="hidden md:block w-7/12 h-full bg-black no-scrollbar overflow-y-auto" id="mosaic-wall">
+            <div class="mosaic-grid" id="mosaic-container">
+                </div>
+        </div>
 
         <script>
             (function() {
                 if (typeof movieData === 'undefined') return;
 
                 const listContainer = document.getElementById('movie-list');
-                const wallContainer = document.getElementById('poster-wall');
+                const mosaicContainer = document.getElementById('mosaic-container');
                 const countDisplay = document.getElementById('m-count');
 
-                countDisplay.innerText = `DATABASE: ${movieData.length} FILMS`;
+                countDisplay.innerText = `${movieData.length} FRAGMENTS`;
 
-                // 1. 生成左侧列表
+                // 1. 生成高密度列表
                 listContainer.innerHTML = movieData.map((movie, index) => {
                     const parts = movie.title.split(' / ');
                     const zh = parts[0];
                     const en = parts[parts.length - 1] || "";
                     return `
-                        <div class="movie-line py-4 flex items-baseline justify-between gap-4 fade-in" style="animation-delay: ${index * 0.01}s">
-                            <span class="vogue-t text-sm tracking-widest opacity-80">${zh}</span>
-                            <span class="flex-1 border-b border-dotted border-white/10 mx-2 mb-1"></span>
-                            <span class="text-[10px] uppercase font-bold tracking-tighter opacity-30 truncate text-right max-w-[200px]">${en}</span>
+                        <div class="movie-line">
+                            <span class="text-[11px] font-bold tracking-tighter opacity-80 whitespace-nowrap">${zh}</span>
+                            <span class="flex-1 mx-2 border-b border-white/5 opacity-20"></span>
+                            <span class="text-[9px] uppercase font-medium opacity-20 truncate italic">${en}</span>
                         </div>
                     `;
                 }).join('');
 
-                // 2. 生成右侧随机海报墙
-                // 仅抽取前 50 张（或随机抽取）防止性能爆炸
-                const sampleMovies = [...movieData].sort(() => 0.5 - Math.random()).slice(0, 60);
-                
-                sampleMovies.forEach((movie, i) => {
-                    const img = document.createElement('img');
+                // 2. 生成彩色矩阵并处理死链
+                movieData.forEach((movie) => {
+                    if (!movie.poster) return;
+                    
+                    const img = new Image();
                     img.src = movie.poster;
-                    img.className = 'mini-poster fade-in';
+                    img.className = 'mosaic-item';
                     
-                    // 随机位置逻辑
-                    const x = Math.random() * 80 + 5; // 5% - 85%
-                    const y = Math.random() * 80 + 5; // 5% - 85%
-                    const rot = (Math.random() - 0.5) * 45; // -22.5 to 22.5 deg
+                    // 核心：只有图片加载成功才放入墙中
+                    img.onload = () => {
+                        mosaicContainer.appendChild(img);
+                    };
                     
-                    img.style.left = `${x}%`;
-                    img.style.top = `${y}%`;
-                    img.style.transform = `rotate(${rot}deg)`;
-                    img.style.zIndex = i;
-                    img.style.animationDelay = `${Math.random() * 2}s`;
-                    
-                    wallContainer.appendChild(img);
+                    // 如果图片报错，直接遗弃，不占位
+                    img.onerror = () => {
+                        img.remove();
+                    };
                 });
 
-                // 同步主页音乐 UI (简易逻辑)
+                // 同步背景音乐 UI (简易)
                 const audio = document.getElementById('global-bgm');
-                if(audio) {
-                    console.log("Audio detected, status sync active.");
-                }
+                if(audio) { console.log("BGM Synced"); }
             })();
         </script>
     </div>
