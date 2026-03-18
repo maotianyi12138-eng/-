@@ -19,13 +19,14 @@
         .bar { width: 2px; background: #fff; animation: play 0.8s infinite alternate; height: 3px; }
         .bar-p { animation-play-state: paused !important; height: 2px !important; opacity: 0.3; }
         @keyframes play { 0% { height: 4px; } 100% { height: 13px; } }
-        /* 切换动画 */
         #app-content { transition: opacity 0.4s ease, transform 0.4s ease; }
         .page-fade { opacity: 0; transform: translateY(10px); }
     </style>
 </head>
-<body onclick="tryPlay()" onscroll="tryPlay()" class="overflow-x-hidden">
-    <audio id="global-bgm" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
+<body class="overflow-x-hidden">
+    <audio id="global-bgm" loop preload="auto">
+        <source src="bgm.mp3" type="audio/mpeg">
+    </audio>
 
     <div id="app-content">
         <nav class="p-6 md:p-10 max-w-7xl mx-auto flex justify-between items-center relative z-20">
@@ -72,41 +73,47 @@
         const bars = document.querySelectorAll('.bar');
         const app = document.getElementById('app-content');
 
-        // 刷新判定
-        if (performance.getEntriesByType("navigation")[0].type === 'reload') {
-            audio.currentTime = 0;
-            localStorage.setItem('mPlay', 'false');
-        }
+        // 核心修复：监听全局任何点击，一旦触发就尝试播放
+        document.addEventListener('click', function initAudio() {
+            if (audio.paused && localStorage.getItem('mPlay') !== 'false') {
+                audio.play().then(() => {
+                    upUI(true);
+                    localStorage.setItem('mPlay', 'true');
+                    // 播放成功后移除监听，避免重复触发
+                    document.removeEventListener('click', initAudio);
+                }).catch(e => console.log("Autoplay blocked"));
+            }
+        }, { once: false }); // 设置为 false 直到成功播放为止
 
         function upUI(p) {
+            if(!statusText) return;
             statusText.innerText = p ? "On" : "Off";
             bars.forEach(b => p ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
         }
 
-        function tryPlay() {
-            if (audio.paused && localStorage.getItem('mPlay') !== 'false') {
-                audio.play().then(() => upUI(true)).catch(() => {});
+        function toggleMusic(e) {
+            e.stopPropagation();
+            if (audio.paused) { 
+                audio.play(); upUI(true); localStorage.setItem('mPlay', 'true'); 
+            } else { 
+                audio.pause(); upUI(false); localStorage.setItem('mPlay', 'false'); 
             }
         }
 
-        function toggleMusic(e) {
-            e.stopPropagation();
-            if (audio.paused) { audio.play(); upUI(true); localStorage.setItem('mPlay', 'true'); }
-            else { audio.pause(); upUI(false); localStorage.setItem('mPlay', 'false'); }
-        }
-
-        // SPA 路由核心：拦截跳转，注入内容
         async function router(url) {
+            // 在跳转瞬间再次确认音频播放（防止SPA切换丢失上下文）
+            if (audio.paused && localStorage.getItem('mPlay') === 'true') audio.play();
+
             app.classList.add('page-fade');
             setTimeout(async () => {
                 const res = await fetch(url);
                 const text = await res.text();
-                const partial = new DOMParser().parseFromString(text, 'text/html').getElementById('app-content').innerHTML;
+                const dom = new DOMParser().parseFromString(text, 'text/html');
+                const partial = dom.getElementById('app-content').innerHTML;
                 app.innerHTML = partial;
                 history.pushState({url}, '', url);
                 window.scrollTo(0,0);
                 app.classList.remove('page-fade');
-                // 重新绑定子页面的 UI 状态
                 upUI(!audio.paused);
             }, 400);
         }
