@@ -7,16 +7,29 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Libre+Baskerville:italic@400&family=Inter:wght@300;400&display=swap');
+        
         body { 
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('horse.jpg');
             background-size: cover; background-position: center; background-attachment: fixed;
             background-color: #000; color: #fff; font-family: 'Inter', sans-serif; margin: 0; -webkit-font-smoothing: antialiased;
         }
+
         .vogue-title { font-family: 'Noto Serif SC', serif; letter-spacing: -0.02em; }
         .vogue-sub { font-family: 'Libre Baskerville', serif; }
-        .vogue-card { transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1); border-top: 1px solid rgba(255,255,255,0.1); background: transparent; cursor: pointer; }
-        .vogue-card:hover { background: rgba(255,255,255,0.03); padding-left: 20px; }
-        .tracking-vogue { letter-spacing: 0.5em; }
+        
+        /* 板块卡片样式微调 */
+        .vogue-card { 
+            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1); 
+            border-top: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.02);
+            cursor: pointer;
+        }
+        
+        @media (min-width: 1024px) {
+            .vogue-card { background: transparent; }
+            .vogue-card:hover { background: rgba(255,255,255,0.05); padding-top: 2rem; }
+        }
+
         .music-bars { display: flex; gap: 3px; align-items: flex-end; height: 13px; width: 20px; }
         .bar { width: 2px; background: white; animation: play 0.8s infinite alternate; height: 3px; }
         .bar-paused { animation-play-state: paused !important; height: 2px !important; opacity: 0.3; }
@@ -26,47 +39,71 @@
 <body>
     <audio id="bgm" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
 
-    <nav class="p-10 max-w-7xl mx-auto flex justify-between items-center relative z-20">
+    <nav class="p-6 md:p-10 max-w-7xl mx-auto flex justify-between items-center relative z-20">
         <div class="flex items-center gap-3 cursor-pointer group" onclick="toggleMusic(event)">
             <div class="music-bars" id="music-icon">
                 <div class="bar bar-paused" style="animation-delay: 0.0s"></div>
                 <div class="bar bar-paused" style="animation-delay: 0.2s"></div>
                 <div class="bar bar-paused" style="animation-delay: 0.4s"></div>
             </div>
-            <span class="text-[9px] tracking-[0.3em] uppercase opacity-40 group-hover:opacity-100 transition" id="music-status">Sound Off</span>
+            <span class="text-[9px] tracking-[0.2em] uppercase opacity-40 group-hover:opacity-100 transition" id="music-status">Off</span>
         </div>
-        <div class="space-x-10 text-[10px] tracking-vogue uppercase font-light opacity-60">
+        <div class="hidden md:flex space-x-10 text-[10px] tracking-[0.3em] uppercase font-light opacity-60">
             <a href="works.html" onclick="saveAndGo(event, 'works.html')" class="hover:opacity-100 transition">Works</a>
-            <a href="movies.html" onclick="saveAndGo(event, 'movies.html')" class="hover:opacity-100 transition">Cinema</a>
-            <a href="music.html" onclick="saveAndGo(event, 'music.html')" class="hover:opacity-100 transition">Music</a>
-            <a href="read.html" onclick="saveAndGo(event, 'read.html')" class="hover:opacity-100 transition">Reading</a>
+            <span class="opacity-20">Cinema</span>
+            <span class="opacity-20">Music</span>
+            <span class="opacity-20">Reading</span>
         </div>
     </nav>
 
-    <section class="py-32 px-10 max-w-7xl mx-auto relative z-10">
-        <div class="mb-10 h-[1px] w-12 bg-white"></div>
-        <h1 class="vogue-title text-7xl md:text-[9rem] font-black leading-[0.9] mb-8">毛天艺
-            <span class="vogue-sub block text-2xl md:text-4xl opacity-30 font-light italic tracking-normal mt-4">The Visual Archive</span>
+    <section class="pt-20 pb-16 px-6 md:px-10 max-w-7xl mx-auto relative z-10">
+        <div class="mb-6 md:mb-10 h-[1px] w-12 bg-white"></div>
+        <h1 class="vogue-title text-5xl md:text-[8rem] lg:text-[10rem] font-black leading-[0.9] mb-6">
+            毛天艺
+            <span class="vogue-sub block text-lg md:text-3xl lg:text-4xl opacity-30 font-light italic tracking-normal mt-4">The Visual Archive</span>
         </h1>
-        <p class="text-sm md:text-base text-gray-300 max-w-xl leading-loose font-light tracking-wide">
-            记录关于视觉、影像与声音的思考。探索数字时代下的审美边界。<br>
-            <span class="vogue-sub text-xs opacity-40 italic mt-2 block uppercase tracking-[0.2em]">Curated by Mao Tianyi / Edition 2026</span>
+        <p class="text-xs md:text-base text-gray-400 max-w-xl leading-loose font-light tracking-wide">
+            记录关于视觉、影像与声音的思考。探索数字时代下的审美边界。<br class="hidden md:block">
+            <span class="vogue-sub text-[10px] opacity-40 italic mt-2 block uppercase tracking-[0.2em]">Curated by Mao Tianyi / Edition 2026</span>
         </p>
     </section>
 
-    <section class="px-10 max-w-7xl mx-auto pb-32 relative z-10">
-        <a href="works.html" onclick="saveAndGo(event, 'works.html')" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group">
-            <div><h2 class="vogue-title text-4xl font-bold group-hover:text-blue-500 transition">视觉作品集</h2><p class="vogue-sub text-xs opacity-30 italic mt-2">Visual Portfolio — Graphic & Photography</p></div>
-            <div class="text-[10px] tracking-vogue opacity-20 group-hover:opacity-100 transition mt-4 md:mt-0">EXPLORE →</div>
-        </a>
-        <a href="movies.html" onclick="saveAndGo(event, 'movies.html')" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group">
-            <div><h2 class="vogue-title text-4xl font-bold group-hover:text-red-500 transition">电影板块</h2><p class="vogue-sub text-xs opacity-30 italic mt-2">Cinema Archive — Private Curation</p></div>
-            <div class="text-[10px] tracking-vogue opacity-20 group-hover:opacity-100 transition mt-4 md:mt-0">VIEW ALL →</div>
-        </a>
-        <a href="music.html" onclick="saveAndGo(event, 'music.html')" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group">
-            <div><h2 class="vogue-title text-4xl font-bold group-hover:text-green-400 transition">音乐板块</h2><p class="vogue-sub text-xs opacity-30 italic mt-2">Music Sanctuary — Mental Shelter</p></div>
-            <div class="text-[10px] tracking-vogue opacity-20 group-hover:opacity-100 transition mt-4 md:mt-0">LISTEN →</div>
-        </a>
+    <section class="px-6 md:px-10 max-w-7xl mx-auto pb-24 relative z-10">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-0">
+            
+            <a href="works.html" onclick="saveAndGo(event, 'works.html')" class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between group">
+                <div>
+                    <h2 class="vogue-title text-xl md:text-3xl font-bold group-hover:text-blue-500 transition">Works</h2>
+                    <p class="vogue-sub text-[9px] md:text-xs opacity-30 italic mt-2">Visual Portfolio</p>
+                </div>
+                <div class="text-[9px] tracking-[0.2em] opacity-20 group-hover:opacity-100 transition mt-10">EXPLORE →</div>
+            </a>
+
+            <div class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between opacity-50 cursor-not-allowed">
+                <div>
+                    <h2 class="vogue-title text-xl md:text-3xl font-bold">Cinema</h2>
+                    <p class="vogue-sub text-[9px] md:text-xs opacity-30 italic mt-2">Private Curation</p>
+                </div>
+                <div class="text-[9px] tracking-[0.2em] opacity-10 mt-10">COMING SOON</div>
+            </div>
+
+            <div class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between opacity-50 cursor-not-allowed">
+                <div>
+                    <h2 class="vogue-title text-xl md:text-3xl font-bold">Music</h2>
+                    <p class="vogue-sub text-[9px] md:text-xs opacity-30 italic mt-2">Mental Shelter</p>
+                </div>
+                <div class="text-[9px] tracking-[0.2em] opacity-10 mt-10">COMING SOON</div>
+            </div>
+
+            <div class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between opacity-50 cursor-not-allowed border-r-0 lg:border-b-0 border-b lg:border-r border-white/10">
+                <div>
+                    <h2 class="vogue-title text-xl md:text-3xl font-bold">Read</h2>
+                    <p class="vogue-sub text-[9px] md:text-xs opacity-30 italic mt-2">Book & Notes</p>
+                </div>
+                <div class="text-[9px] tracking-[0.2em] opacity-10 mt-10">COMING SOON</div>
+            </div>
+
+        </div>
     </section>
 
     <script>
@@ -74,29 +111,26 @@
         const iconBars = document.querySelectorAll('.bar');
         const statusText = document.getElementById('music-status');
 
-        // 页面加载逻辑
+        // 音频播放逻辑：刷新重置
         window.addEventListener('load', () => {
-            // 刷新页面，进度始终重置为 0
-            audio.currentTime = 0;
+            audio.currentTime = 0; 
             const isPlaying = localStorage.getItem('musicPlaying') === 'true';
             if (isPlaying) { 
-                // 尝试自动播放（可能被浏览器拦截）
-                audio.play().then(() => updateUI(true)).catch(() => console.log("等待用户交互后播放")); 
+                audio.play().then(() => updateUI(true)).catch(() => {}); 
             }
         });
 
-        // 核心：点击或滑动触发播放
+        // 交互触发：滑动或点击
         const startMusic = () => {
             if (localStorage.getItem('musicPlaying') === 'true' && audio.paused) {
                 audio.play().then(() => updateUI(true));
             }
         };
         document.addEventListener('click', startMusic);
-        window.addEventListener('scroll', startMusic, { once: true }); // 滑动仅触发一次
+        window.addEventListener('scroll', startMusic, { once: true });
 
         function saveAndGo(event, url) {
             event.preventDefault();
-            // 只要点击进入新页面，就默认保持“开启状态”同步
             localStorage.setItem('musicPlaying', audio.paused ? 'false' : 'true');
             if (url !== 'index.html') localStorage.setItem('musicPlaying', 'true');
             setTimeout(() => { window.location.href = url; }, 150);
@@ -109,7 +143,7 @@
         }
 
         function updateUI(isPlaying) {
-            statusText.innerText = isPlaying ? "Sound On" : "Sound Off";
+            statusText.innerText = isPlaying ? "On" : "Off";
             iconBars.forEach(bar => isPlaying ? bar.classList.remove('bar-paused') : bar.classList.add('bar-paused'));
         }
     </script>
