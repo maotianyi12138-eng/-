@@ -47,7 +47,6 @@
     <div class="flex flex-wrap gap-8 border-b border-white/5 pb-6 mb-24 max-w-6xl mx-auto">
         <div onclick="filterWorks('all')" class="filter-btn active" id="btn-all">ALL</div>
         <div onclick="filterWorks('critical')" class="filter-btn" id="btn-critical">CRITICAL / 批判设计</div>
-        <div onclick="filterWorks('photo')" class="filter-btn" id="btn-photo">PHOTO / 风格摄影</div>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-32 max-w-6xl mx-auto" id="grid">
@@ -63,49 +62,7 @@
                 <p class="text-gray-500 text-xs mt-2">关于社会婚姻结构与个体困境的视觉探讨。</p>
             </div>
         </div>
-
-        <div class="project-group md:mt-24" data-category="critical">
-            <div class="stack-container" onclick="toggleExpand(this)">
-                <img src="保龄1" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="保龄2" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="保龄3" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="保龄4" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="保龄5" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="保龄6" class="stack-img rounded" onclick="zoomImage(event, this)">
-            </div>
-            <div class="mt-8 border-l border-red-500 pl-4">
-                <h3 class="vogue-title text-2xl font-black uppercase">New Bowling Campaign</h3>
-                <p class="text-gray-500 text-xs mt-2">娱乐至死时代下，消费主义对儿童精神世界的重塑。</p>
-            </div>
         </div>
-
-        <div class="project-group" data-category="critical">
-            <div class="stack-container" onclick="toggleExpand(this)">
-                <img src="血液1.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="血液2.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="血液3.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="血液4.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-            </div>
-            <div class="mt-8 border-l border-red-800 pl-4">
-                <h3 class="vogue-title text-2xl font-black uppercase">Blood Nirvana</h3>
-                <p class="text-gray-500 text-xs mt-2">探讨数字背后的生命张力与社会治理逻辑。</p>
-            </div>
-        </div>
-
-        <div class="project-group md:mt-24" data-category="critical">
-            <div class="stack-container" onclick="toggleExpand(this)">
-                <img src="健身1.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="健身2.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="健身3.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="健身4.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="健身5.png" class="stack-img rounded" onclick="zoomImage(event, this)">
-            </div>
-            <div class="mt-8 border-l border-green-800 pl-4">
-                <h3 class="vogue-title text-2xl font-black uppercase">Muscle Factory</h3>
-                <p class="text-gray-500 text-xs mt-2">滥用药物获得的肉体，与健康的本质背道而驰。</p>
-            </div>
-        </div>
-    </div>
 
     <div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img" class="max-w-[95%] max-h-[95vh] object-contain"></div>
 
@@ -115,15 +72,24 @@
         const statusText = document.getElementById('music-status');
 
         window.addEventListener('load', () => {
-            const savedTime = localStorage.getItem('musicTime');
+            audio.currentTime = 0; // 刷新页面始终重置
             const isPlaying = localStorage.getItem('musicPlaying') === 'true';
-            if (savedTime) audio.currentTime = parseFloat(savedTime);
-            if (isPlaying) { audio.play().then(() => updateUI(true)).catch(() => {}); }
+            if (isPlaying) { 
+                audio.play().then(() => updateUI(true)).catch(() => {}); 
+            }
         });
+
+        // 滑动或点击触发
+        const startMusic = () => {
+            if (localStorage.getItem('musicPlaying') === 'true' && audio.paused) {
+                audio.play().then(() => updateUI(true));
+            }
+        };
+        document.addEventListener('click', startMusic);
+        window.addEventListener('scroll', startMusic, { once: true });
 
         function saveAndGo(event, url) {
             event.preventDefault();
-            localStorage.setItem('musicTime', audio.currentTime);
             localStorage.setItem('musicPlaying', audio.paused ? 'false' : 'true');
             setTimeout(() => { window.location.href = url; }, 150);
         }
@@ -146,7 +112,6 @@
                 document.getElementById('lightbox').style.display = 'flex';
             }
         }
-        setInterval(() => { if(!audio.paused) localStorage.setItem('musicTime', audio.currentTime); }, 500);
     </script>
 </body>
 </html>
