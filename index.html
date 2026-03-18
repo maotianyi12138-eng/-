@@ -1,86 +1,105 @@
-<script>
-    // 1. 获取全局元素（加上防御逻辑，防止报错）
-    const audio = document.getElementById('global-bgm');
-    const app = document.getElementById('app-content');
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAO TIANYI - Visual Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: #050505; color: white; margin: 0; overflow-x: hidden; }
+        /* 核心动画状态 */
+        #app-content { transition: opacity 0.4s ease; opacity: 1; }
+        .page-fade { opacity: 0 !important; }
+        
+        /* 音乐频谱动画 */
+        .bar { width: 2px; height: 12px; background: white; transition: 0.3s; }
+        .bar-p { height: 2px !important; opacity: 0.3; }
+    </style>
+</head>
+<body>
 
-    // 2. 初始状态检查：强制确保主页显示
-    window.onload = () => {
-        if (app) app.classList.remove('page-fade');
-    };
+    <audio id="global-bgm" loop src="bgm.mp3"></audio>
 
-    function upUI(p) {
-        const statusText = document.getElementById('m-status');
-        const bars = document.querySelectorAll('.bar');
-        if (statusText) statusText.innerText = p ? "On" : "Off";
-        bars.forEach(b => p ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
-    }
+    <div onclick="toggleMusic(event)" class="fixed top-10 right-10 z-[100] cursor-pointer flex items-end gap-1 p-2">
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        <span id="m-status" class="text-[9px] uppercase tracking-widest ml-2">Off</span>
+    </div>
 
-    // 激活音频
-    document.addEventListener('click', function initAudio() {
-        if (audio && audio.paused && localStorage.getItem('mPlay') !== 'false') {
-            audio.play().then(() => {
-                upUI(true);
-                localStorage.setItem('mPlay', 'true');
-                document.removeEventListener('click', initAudio);
-            }).catch(() => {});
+    <div id="app-content">
+        <main class="min-h-screen flex flex-col justify-center items-center">
+            <h1 class="text-6xl font-bold tracking-[0.2em] mb-10">MAO TIANYI</h1>
+            <nav class="flex gap-10">
+                <div onclick="router('movies.html')" class="cursor-pointer opacity-50 hover:opacity-100 transition-all uppercase text-xs tracking-widest">Cinema</div>
+                <div onclick="router('works.html')" class="cursor-pointer opacity-50 hover:opacity-100 transition-all uppercase text-xs tracking-widest">Works</div>
+            </nav>
+        </main>
+    </div>
+
+    <script>
+        const audio = document.getElementById('global-bgm');
+        const app = document.getElementById('app-content');
+
+        // 更新音乐 UI
+        function upUI(isPlaying) {
+            const statusText = document.getElementById('m-status');
+            const bars = document.querySelectorAll('.bar');
+            if (statusText) statusText.innerText = isPlaying ? "On" : "Off";
+            bars.forEach(b => isPlaying ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
         }
-    });
 
-    function toggleMusic(e) {
-        if(e) e.stopPropagation();
-        if (!audio) return;
-        if (audio.paused) { 
-            audio.play(); upUI(true); localStorage.setItem('mPlay', 'true'); 
-        } else { 
-            audio.pause(); upUI(false); localStorage.setItem('mPlay', 'false'); 
+        // 首次点击激活音乐
+        document.addEventListener('click', function init() {
+            if (audio.paused && localStorage.getItem('mPlay') !== 'false') {
+                audio.play().then(() => { upUI(true); });
+            }
+            document.removeEventListener('click', init);
+        });
+
+        function toggleMusic(e) {
+            if(e) e.stopPropagation();
+            if (audio.paused) { audio.play(); upUI(true); localStorage.setItem('mPlay', 'true'); }
+            else { audio.pause(); upUI(false); localStorage.setItem('mPlay', 'false'); }
         }
-    }
 
-    // 3. 增强版路由：即使失败也不会白屏
-    async function router(url) {
-        if (!app) { window.location.href = url; return; }
-        
-        // 自动纠正文件名
-        let targetUrl = (url === 'movie.html') ? 'movies.html' : url;
-        
-        app.classList.add('page-fade');
-        
-        try {
-            const res = await fetch(targetUrl);
-            if (!res.ok) throw new Error('Fetch failed');
+        // 无缝路由函数
+        async function router(url) {
+            // 自动纠错
+            let targetUrl = (url === 'movie.html') ? 'movies.html' : url;
             
-            const text = await res.text();
-            const dom = new DOMParser().parseFromString(text, 'text/html');
-            const newContent = dom.getElementById('app-content');
+            app.classList.add('page-fade');
             
-            if (!newContent) throw new Error('No Container');
-
-            setTimeout(() => {
-                app.innerHTML = newContent.innerHTML;
+            try {
+                const res = await fetch(targetUrl);
+                if (!res.ok) throw new Error();
+                const text = await res.text();
+                const dom = new DOMParser().parseFromString(text, 'text/html');
+                const newContent = dom.getElementById('app-content');
                 
-                // 执行新页面脚本
-                const scripts = newContent.querySelectorAll('script');
-                scripts.forEach(oldScript => {
-                    const newScript = document.createElement('script');
-                    if (oldScript.src) {
-                        newScript.src = oldScript.src;
-                    } else {
-                        newScript.textContent = oldScript.textContent;
-                    }
-                    document.head.appendChild(newScript).parentNode.removeChild(newScript);
-                });
+                if (!newContent) { window.location.href = targetUrl; return; }
 
-                history.pushState({url: targetUrl}, '', targetUrl);
-                window.scrollTo(0, 0);
-                app.classList.remove('page-fade'); // 核心：确保移除透明层
-                setTimeout(() => upUI(!audio.paused), 50);
-            }, 400);
+                setTimeout(() => {
+                    app.innerHTML = newContent.innerHTML;
+                    
+                    // 执行新页面的脚本（用于加载电影数据）
+                    const scripts = newContent.querySelectorAll('script');
+                    scripts.forEach(oldScript => {
+                        const newScript = document.createElement('script');
+                        if (oldScript.src) newScript.src = oldScript.src;
+                        else newScript.textContent = oldScript.textContent;
+                        document.head.appendChild(newScript).parentNode.removeChild(newScript);
+                    });
 
-        } catch (err) {
-            console.error("Routing error, falling back:", err);
-            window.location.href = targetUrl; // 报错直接跳转，拒绝白屏
+                    history.pushState({url: targetUrl}, '', targetUrl);
+                    window.scrollTo(0, 0);
+                    app.classList.remove('page-fade');
+                    setTimeout(() => upUI(!audio.paused), 50);
+                }, 400);
+            } catch (err) {
+                window.location.href = targetUrl;
+            }
         }
-    }
 
-    window.onpopstate = () => location.reload();
-</script>
+        window.onpopstate = () => location.reload();
+    </script>
+</body>
+</html>
