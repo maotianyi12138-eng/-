@@ -6,7 +6,6 @@
     <title>MAO TIANYI | 毛天艺</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* 引入高定感字体：宋体用于中文，经典衬线用于英文 */
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Libre+Baskerville:italic@400&display=swap');
         
         body { 
@@ -24,7 +23,6 @@
         .vogue-title { font-family: 'Noto Serif SC', serif; letter-spacing: -0.02em; }
         .vogue-sub { font-family: 'Libre Baskerville', serif; }
         
-        /* 极致的留白与卡片感 */
         .vogue-card { 
             transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1); 
             border-top: 1px solid rgba(255,255,255,0.1);
@@ -33,13 +31,12 @@
         
         .vogue-card:hover { 
             background: rgba(255,255,255,0.03);
-            padding-left: 20px; /* 侧滑交互 */
+            padding-left: 20px;
         }
 
-        /* 字母间距微调 */
         .tracking-vogue { letter-spacing: 0.5em; }
 
-        /* --- 音乐动效图标 (新模块) --- */
+        /* 音乐动效 */
         .music-bars { display: flex; gap: 3px; align-items: flex-end; height: 13px; width: 20px; }
         .bar { width: 2px; background: white; animation: play 0.8s infinite alternate; height: 3px; }
         .bar-paused { animation-play-state: paused !important; height: 2px !important; opacity: 0.3; }
@@ -49,7 +46,8 @@
         }
     </style>
 </head>
-<body onclick="startMusic()"> <audio id="bgm" loop>
+<body>
+    <audio id="bgm" loop>
         <source src="bgm.mp3" type="audio/mpeg">
     </audio>
 
@@ -73,12 +71,10 @@
 
     <section class="py-32 px-10 max-w-7xl mx-auto relative z-10">
         <div class="mb-10 h-[1px] w-12 bg-white"></div>
-        
         <h1 class="vogue-title text-7xl md:text-[9rem] font-black leading-[0.9] mb-8">
             毛天艺
             <span class="vogue-sub block text-2xl md:text-4xl opacity-30 font-light italic tracking-normal mt-4">The Visual Archive</span>
         </h1>
-        
         <p class="text-sm md:text-base text-gray-300 max-w-xl leading-loose font-light tracking-wide">
             记录关于视觉、影像与声音的思考。探索数字时代下的审美边界。<br>
             <span class="vogue-sub text-xs opacity-40 italic mt-2 block uppercase tracking-[0.2em]">Curated by Mao Tianyi / Edition 2026</span>
@@ -86,7 +82,6 @@
     </section>
 
     <section class="px-10 max-w-7xl mx-auto pb-32 relative z-10">
-        
         <a href="works.html" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group">
             <div>
                 <h2 class="vogue-title text-4xl font-bold group-hover:text-blue-500 transition">视觉作品集</h2>
@@ -94,7 +89,6 @@
             </div>
             <div class="text-[10px] tracking-vogue opacity-20 group-hover:opacity-100 transition mt-4 md:mt-0">EXPLORE →</div>
         </a>
-
         <a href="movies.html" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group">
             <div>
                 <h2 class="vogue-title text-4xl font-bold group-hover:text-red-500 transition">电影板块</h2>
@@ -102,7 +96,6 @@
             </div>
             <div class="text-[10px] tracking-vogue opacity-20 group-hover:opacity-100 transition mt-4 md:mt-0">VIEW ALL →</div>
         </a>
-
         <a href="music.html" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group">
             <div>
                 <h2 class="vogue-title text-4xl font-bold group-hover:text-green-400 transition">音乐板块</h2>
@@ -110,7 +103,6 @@
             </div>
             <div class="text-[10px] tracking-vogue opacity-20 group-hover:opacity-100 transition mt-4 md:mt-0">LISTEN →</div>
         </a>
-
         <a href="read.html" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group border-b border-white/10">
             <div>
                 <h2 class="vogue-title text-4xl font-bold group-hover:text-yellow-600 transition">阅读板块</h2>
@@ -118,7 +110,6 @@
             </div>
             <div class="text-[10px] tracking-vogue opacity-20 group-hover:opacity-100 transition mt-4 md:mt-0">READ →</div>
         </a>
-
     </section>
 
     <footer class="p-20 text-center text-[9px] tracking-[0.6em] text-gray-600 uppercase relative z-10">
@@ -131,60 +122,22 @@
         const statusText = document.getElementById('music-status');
         let hasStarted = false;
 
-        // 首次交互开始播放
-        function startMusic() {
-            if (!hasStarted) {
-                audio.play().then(() => {
-                    updateUI(true);
-                    hasStarted = true;
-                }).catch(e => console.log("等待用户交互后播放"));
-            }
-        }
-
-        // 手动开关逻辑
-        function toggleMusic(event) {
-            event.stopPropagation(); // 防止触发 body 的 startMusic 造成重复逻辑
-            if (audio.paused) {
-                audio.play();
-                updateUI(true);
-                hasStarted = true;
-            } else {
-                audio.pause();
-                updateUI(false);
-            }
-        }
-
-        function updateUI(isPlaying) {
-            statusText.innerText = isPlaying ? "Sound On" : "Sound Off";
-            iconBars.forEach(bar => {
-                if (isPlaying) bar.classList.remove('bar-paused');
-                else bar.classList.add('bar-paused');
-            });
-        }
-    <script>
-        const audio = document.getElementById('bgm');
-        const iconBars = document.querySelectorAll('.bar');
-        const statusText = document.getElementById('music-status');
-        let hasStarted = false;
-
-        // 核心修正：增加一个全局监听，确保任何点击都能激活音频上下文
+        // 只要用户点击页面任何地方，尝试开始播放
         document.addEventListener('click', function() {
             if (!hasStarted) {
                 audio.play().then(() => {
                     updateUI(true);
                     hasStarted = true;
-                    console.log("Music started successfully");
-                }).catch(e => {
-                    console.error("Playback failed:", e);
-                });
+                }).catch(e => console.log("等待更明确的用户交互"));
             }
-        }, { once: true }); // 只触发一次
+        }, { once: false }); 
 
         function toggleMusic(event) {
-            event.stopPropagation(); 
+            event.stopPropagation(); // 阻止冒泡
             if (audio.paused) {
                 audio.play();
                 updateUI(true);
+                hasStarted = true;
             } else {
                 audio.pause();
                 updateUI(false);
