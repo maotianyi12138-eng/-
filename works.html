@@ -25,38 +25,38 @@
         #lb { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.98); z-index: 100; justify-content: center; align-items: center; cursor: zoom-out; }
     </style>
 </head>
-<body onclick="handleFirstClick()">
+<body onclick="forcePlay()">
     <audio id="bgm" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
 
     <nav class="p-6 md:p-16 flex justify-between items-center max-w-7xl mx-auto">
-        <a href="index.html" onclick="saveAndGo(event, 'index.html')" class="opacity-40 hover:opacity-100 text-[9px] tracking-widest">← ARCHIVE</a>
+        <a href="index.html" onclick="navTo(event, 'index.html')" class="opacity-40 hover:opacity-100 text-[9px] tracking-[0.2em]">← ARCHIVE / 返回首页</a>
         <div onclick="toggleMusic(event)" class="cursor-pointer text-[9px] opacity-40 uppercase tracking-widest" id="m-status">Off</div>
     </nav>
 
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-5 md:gap-x-10 gap-y-20 max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-5 md:gap-x-10 gap-y-20 max-w-7xl mx-auto px-6 pb-20">
         <div class="group">
             <div class="stack-container" onclick="this.classList.toggle('expanded')">
                 <img src="批判1" class="stack-img" onclick="zoom(event,this)"><img src="批判2" class="stack-img" onclick="zoom(event,this)"><img src="批判3" class="stack-img" onclick="zoom(event,this)"><img src="批判4" class="stack-img" onclick="zoom(event,this)">
             </div>
-            <div class="mt-4 border-l-2 border-blue-500 pl-3"><h3 class="vogue-t text-lg">DIVORCE IN CHINA</h3></div>
+            <div class="mt-4 border-l-2 border-blue-500 pl-3"><h3 class="vogue-t text-lg">DIVORCE IN CHINA</h3><p class="text-[9px] opacity-40">批判设计 / Social Study</p></div>
         </div>
         <div class="group">
             <div class="stack-container" onclick="this.classList.toggle('expanded')">
                 <img src="保龄1" class="stack-img" onclick="zoom(event,this)"><img src="保龄2" class="stack-img" onclick="zoom(event,this)"><img src="保龄3" class="stack-img" onclick="zoom(event,this)"><img src="保龄4" class="stack-img" onclick="zoom(event,this)"><img src="保龄5" class="stack-img" onclick="zoom(event,this)"><img src="保龄6" class="stack-img" onclick="zoom(event,this)">
             </div>
-            <div class="mt-4 border-l-2 border-red-500 pl-3"><h3 class="vogue-t text-lg">BOLLING CAMPAIGN</h3></div>
+            <div class="mt-4 border-l-2 border-red-500 pl-3"><h3 class="vogue-t text-lg">BOWLING CAMPAIGN</h3><p class="text-[9px] opacity-40">影像项目 / Commercial</p></div>
         </div>
         <div class="group">
             <div class="stack-container" onclick="this.classList.toggle('expanded')">
                 <img src="血液1.png" class="stack-img" onclick="zoom(event,this)"><img src="血液2.png" class="stack-img" onclick="zoom(event,this)"><img src="血液3.png" class="stack-img" onclick="zoom(event,this)"><img src="血液4.png" class="stack-img" onclick="zoom(event,this)">
             </div>
-            <div class="mt-4 border-l-2 border-red-900 pl-3"><h3 class="vogue-t text-lg">BLOOD NIRVANA</h3></div>
+            <div class="mt-4 border-l-2 border-red-900 pl-3"><h3 class="vogue-t text-lg">BLOOD NIRVANA</h3><p class="text-[9px] opacity-40">视觉实验 / Visual Lab</p></div>
         </div>
         <div class="group">
             <div class="stack-container" onclick="this.classList.toggle('expanded')">
                 <img src="健身1.png" class="stack-img" onclick="zoom(event,this)"><img src="健身2.png" class="stack-img" onclick="zoom(event,this)"><img src="健身3.png" class="stack-img" onclick="zoom(event,this)"><img src="健身4.png" class="stack-img" onclick="zoom(event,this)"><img src="健身5.png" class="stack-img" onclick="zoom(event,this)">
             </div>
-            <div class="mt-4 border-l-2 border-green-800 pl-3"><h3 class="vogue-t text-lg">MUSCLE FACTORY</h3></div>
+            <div class="mt-4 border-l-2 border-green-800 pl-3"><h3 class="vogue-t text-lg">MUSCLE FACTORY</h3><p class="text-[9px] opacity-40">运动影像 / Movement</p></div>
         </div>
     </div>
 
@@ -64,16 +64,40 @@
 
     <script>
         const audio = document.getElementById('bgm');
-        // 逻辑保持与首页绝对一致
+        const statusText = document.getElementById('m-status');
+
+        function upUI(p) { statusText.innerText = p ? "On" : "Off"; }
+
+        // 逻辑与首页完全一致
         window.onload = () => {
-            if (sessionStorage.getItem('nav')) {
-                audio.currentTime = parseFloat(localStorage.getItem('mTime') || 0);
-                if (localStorage.getItem('mPlay') === 'true') { audio.play(); }
-            } else { audio.currentTime = 0; }
-            sessionStorage.removeItem('nav');
+            const savedTime = localStorage.getItem('mTime') || 0;
+            const shouldPlay = localStorage.getItem('mPlay') === 'true';
+            audio.currentTime = parseFloat(savedTime);
+            if (shouldPlay) { audio.play().then(() => upUI(true)).catch(() => upUI(false)); }
+            sessionStorage.removeItem('is_nav');
         };
-        function handleFirstClick() { if (audio.paused && localStorage.getItem('mPlay') !== 'false') audio.play(); }
-        function saveAndGo(e, url) { e.preventDefault(); sessionStorage.setItem('nav', '1'); localStorage.setItem('mTime', audio.currentTime); location.href = url; }
+
+        audio.ontimeupdate = () => localStorage.setItem('mTime', audio.currentTime);
+
+        function forcePlay() {
+            if (audio.paused && localStorage.getItem('mPlay') !== 'false') {
+                audio.play().then(() => { upUI(true); localStorage.setItem('mPlay', 'true'); });
+            }
+        }
+
+        function navTo(e, url) {
+            e.preventDefault();
+            sessionStorage.setItem('is_nav', 'true');
+            localStorage.setItem('mPlay', !audio.paused);
+            location.href = url;
+        }
+
+        function toggleMusic(e) {
+            e.stopPropagation();
+            if (audio.paused) { audio.play(); upUI(true); localStorage.setItem('mPlay', 'true'); }
+            else { audio.pause(); upUI(false); localStorage.setItem('mPlay', 'false'); }
+        }
+
         function zoom(e, img) { if (img.parentElement.classList.contains('expanded')) { e.stopPropagation(); document.getElementById('lb-img').src = img.src; document.getElementById('lb').style.display='flex'; } }
     </script>
 </body>
