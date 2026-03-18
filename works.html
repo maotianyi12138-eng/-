@@ -7,88 +7,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Libre+Baskerville:italic@400&display=swap');
-        
         body { background-color: #050505; color: #e5e5e5; font-family: sans-serif; overflow-x: hidden; }
         .vogue-title { font-family: 'Noto Serif SC', serif; letter-spacing: -0.02em; }
         .vogue-sub { font-family: 'Libre Baskerville', serif; }
-        
-        /* 导航微调 */
         .filter-btn { transition: 0.3s; opacity: 0.3; cursor: pointer; border-bottom: 2px solid transparent; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; }
         .filter-btn.active { opacity: 1; border-bottom: 2px solid #3b82f6; }
-
         .project-group { transition: 0.5s; }
         .project-group.hidden { display: none; }
-
-        /* --- 音乐动效 UI --- */
         .music-bars { display: flex; gap: 3px; align-items: flex-end; height: 13px; width: 20px; }
         .bar { width: 2px; background: white; animation: play 0.8s infinite alternate; height: 3px; }
         .bar-paused { animation-play-state: paused !important; height: 2px !important; opacity: 0.3; }
-        @keyframes play {
-            0% { height: 4px; }
-            100% { height: 13px; }
-        }
-
-        /* --- 堆叠逻辑 --- */
-        .stack-container { 
-            position: relative; 
-            height: 280px; 
-            transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-            cursor: s-resize;
-            width: 100%;
-        }
+        @keyframes play { 0% { height: 4px; } 100% { height: 13px; } }
+        .stack-container { position: relative; height: 280px; transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1); cursor: s-resize; width: 100%; }
         .stack-container.expanded { height: auto; cursor: default; }
-
-        .stack-img {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
-            transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-            border: 1px solid rgba(255,255,255,0.08);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
-            background-color: #111;
-        }
-
+        .stack-img { position: absolute; top: 0; left: 0; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 15px 35px rgba(0,0,0,0.6); background-color: #111; }
         .stack-img:nth-child(1) { transform: translateY(0px) scale(1); z-index: 6; }
         .stack-img:nth-child(2) { transform: translateY(25px) scale(0.97) rotate(-0.3deg); z-index: 5; opacity: 0.8; }
         .stack-img:nth-child(3) { transform: translateY(50px) scale(0.94) rotate(0.3deg); z-index: 4; opacity: 0.6; }
-        .stack-img:nth-child(4) { transform: translateY(75px) scale(0.91); z-index: 3; opacity: 0.4; }
-
-        .expanded .stack-img {
-            position: relative;
-            transform: translateY(0) scale(1) rotate(0deg) !important;
-            margin-bottom: 1.5rem;
-            z-index: 10 !important;
-            opacity: 1 !important;
-            cursor: zoom-in;
-        }
-
-        .meta-content { 
-            margin-top: 2rem; 
-            padding-left: 1rem; 
-            border-left: 1px solid #3b82f6; 
-        }
-
-        #lightbox {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.98);
-            z-index: 100;
-            justify-content: center; align-items: center;
-            cursor: zoom-out;
-        }
+        .expanded .stack-img { position: relative; transform: translateY(0) scale(1) rotate(0deg) !important; margin-bottom: 1.5rem; z-index: 10 !important; opacity: 1 !important; cursor: zoom-in; }
+        #lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); z-index: 100; justify-content: center; align-items: center; cursor: zoom-out; }
     </style>
 </head>
 <body class="p-8 md:p-20">
-    <audio id="bgm" loop>
-        <source src="bgm.mp3" type="audio/mpeg">
-    </audio>
+    <audio id="bgm" loop><source src="bgm.mp3" type="audio/mpeg"></audio>
 
     <nav class="mb-16 flex justify-between items-center max-w-6xl mx-auto">
-        <a href="index.html" class="opacity-40 hover:opacity-100 transition tracking-widest text-[10px]">← RETURN TO ARCHIVE</a>
-        
+        <a href="index.html" onclick="saveAndGo(event, 'index.html')" class="opacity-40 hover:opacity-100 transition tracking-widest text-[10px]">← RETURN TO ARCHIVE</a>
         <div class="flex items-center gap-3 cursor-pointer group" onclick="toggleMusic(event)">
             <div class="music-bars" id="music-icon">
                 <div class="bar bar-paused" style="animation-delay: 0.0s"></div>
@@ -99,122 +43,59 @@
         </div>
     </nav>
 
-    <div class="flex flex-wrap gap-8 border-b border-white/5 pb-6 mb-24 max-w-6xl mx-auto">
-        <div onclick="filterWorks('all')" class="filter-btn active" id="btn-all">ALL</div>
-        <div onclick="filterWorks('critical')" class="filter-btn" id="btn-critical">CRITICAL / 批判设计</div>
-        <div onclick="filterWorks('photo')" class="filter-btn" id="btn-photo">PHOTO / 风格摄影</div>
-        <div onclick="filterWorks('practice')" class="filter-btn" id="btn-practice">PRACTICE / 美工实践</div>
-        <div onclick="filterWorks('engineering')" class="filter-btn" id="btn-engineering">ENGINEERING / 工程案例</div>
-    </div>
-
     <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-32 max-w-6xl mx-auto" id="grid">
         <div class="project-group" data-category="critical">
             <div class="stack-container" onclick="toggleExpand(this)">
                 <img src="批判1" class="stack-img rounded" onclick="zoomImage(event, this)">
                 <img src="批判2" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="批判3" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="批判4" class="stack-img rounded" onclick="zoomImage(event, this)">
             </div>
-            <div class="meta-content">
+            <div class="mt-8 border-l border-blue-500 pl-4">
                 <h3 class="vogue-title text-2xl font-black uppercase">Divorce in China</h3>
-                <p class="vogue-sub text-[10px] opacity-40 italic uppercase tracking-widest">4 Images / 16:9 Series</p>
-                <p class="text-gray-500 text-xs mt-4 leading-relaxed">关于社会婚姻结构与个体困境的视觉探讨。</p>
-            </div>
-        </div>
-
-        <div class="project-group md:mt-24" data-category="critical">
-            <div class="stack-container" onclick="toggleExpand(this)">
-                <img src="保龄1" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="保龄2" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="保龄3" class="stack-img rounded" onclick="zoomImage(event, this)">
-                <img src="保龄4" class="stack-img rounded" onclick="zoomImage(event, this)">
-            </div>
-            <div class="meta-content">
-                <h3 class="vogue-title text-2xl font-black uppercase">New Bowling Campaign</h3>
-                <p class="vogue-sub text-[10px] opacity-40 italic uppercase tracking-widest">6 Images / Campaign</p>
-                <p class="text-gray-500 text-xs mt-4 leading-relaxed">娱乐至死时代下，消费主义对儿童精神世界的重塑。</p>
+                <p class="text-gray-500 text-xs mt-2">关于社会婚姻结构与个体困境的视觉探讨。</p>
             </div>
         </div>
     </div>
 
-    <div id="lightbox" onclick="this.style.display='none'">
-        <img id="lightbox-img" class="max-w-[95%] max-h-[95vh] object-contain shadow-2xl">
-    </div>
+    <div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img" class="max-w-[95%] max-h-[95vh] object-contain"></div>
 
     <script>
         const audio = document.getElementById('bgm');
         const iconBars = document.querySelectorAll('.bar');
         const statusText = document.getElementById('music-status');
 
-        // --- 核心连贯播放逻辑 ---
-
-        // 1. 尝试从本地存储恢复播放状态
         window.addEventListener('load', () => {
             const savedTime = localStorage.getItem('musicTime');
             const isPlaying = localStorage.getItem('musicPlaying') === 'true';
-
             if (savedTime) audio.currentTime = parseFloat(savedTime);
-            
-            if (isPlaying) {
-                audio.play().then(() => updateUI(true)).catch(e => {
-                    console.log("需要用户点击页面以继续播放音乐");
-                });
-            }
+            if (isPlaying) { audio.play().then(() => updateUI(true)).catch(() => {}); }
         });
 
-        // 2. 实时保存播放进度 (每秒保存一次)
-        setInterval(() => {
-            if (!audio.paused) {
-                localStorage.setItem('musicTime', audio.currentTime);
-            }
-        }, 1000);
+        function saveAndGo(event, url) {
+            event.preventDefault();
+            localStorage.setItem('musicTime', audio.currentTime);
+            localStorage.setItem('musicPlaying', audio.paused ? 'false' : 'true');
+            setTimeout(() => { window.location.href = url; }, 100);
+        }
 
         function toggleMusic(event) {
-            if (event) event.stopPropagation();
-            if (audio.paused) {
-                audio.play();
-                updateUI(true);
-                localStorage.setItem('musicPlaying', 'true');
-            } else {
-                audio.pause();
-                updateUI(false);
-                localStorage.setItem('musicPlaying', 'false');
-            }
+            if (audio.paused) { audio.play(); updateUI(true); localStorage.setItem('musicPlaying', 'true'); }
+            else { audio.pause(); updateUI(false); localStorage.setItem('musicPlaying', 'false'); }
         }
 
         function updateUI(isPlaying) {
             statusText.innerText = isPlaying ? "Sound On" : "Sound Off";
-            iconBars.forEach(bar => {
-                if (isPlaying) bar.classList.remove('bar-paused');
-                else bar.classList.add('bar-paused');
-            });
+            iconBars.forEach(bar => isPlaying ? bar.classList.remove('bar-paused') : bar.classList.add('bar-paused'));
         }
 
-        // --- 原有项目逻辑 ---
-        function toggleExpand(container) {
-            container.classList.toggle('expanded');
-        }
-
+        function toggleExpand(container) { container.classList.toggle('expanded'); }
         function zoomImage(event, img) {
-            const container = img.parentElement;
-            if (container.classList.contains('expanded')) {
+            if (img.parentElement.classList.contains('expanded')) {
                 event.stopPropagation();
-                const lightbox = document.getElementById('lightbox');
-                const lightboxImg = document.getElementById('lightbox-img');
-                lightboxImg.src = img.src;
-                lightbox.style.display = 'flex';
+                document.getElementById('lightbox-img').src = img.src;
+                document.getElementById('lightbox').style.display = 'flex';
             }
         }
-
-        function filterWorks(cat) {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById('btn-' + cat).classList.add('active');
-            document.querySelectorAll('.project-group').forEach(item => {
-                if (cat === 'all' || item.getAttribute('data-category') === cat) {
-                    item.classList.remove('hidden');
-                } else { item.classList.add('hidden'); }
-            });
-        }
+        setInterval(() => { if(!audio.paused) localStorage.setItem('musicTime', audio.currentTime); }, 1000);
     </script>
 </body>
 </html>
