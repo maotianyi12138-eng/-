@@ -3,72 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CINEMA ARCHIVE | MAO TIANYI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>MOVIE ARCHIVE | MAO TIANYI - Visual Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <script src="movies.js"></script>
+
     <style>
-        body { background: #050505; color: white; margin: 0; overflow: hidden; font-family: 'Inter', sans-serif; }
-        .vogue-t { font-family: 'Noto Serif SC', serif; }
-        
-        /* 1. 左侧：极高密度列表 */
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .movie-line { 
-            border-bottom: 1px solid rgba(255,255,255,0.03);
-            transition: 0.2s; cursor: crosshair;
-            display: flex; align-items: baseline; padding: 2px 0; /* 压缩行高 */
+        /* B. 【致命】视觉样式还原 */
+        body { 
+            background: #000; color: white; margin: 0; overflow: hidden; /* 核心：禁止 Body 滚动，使用内部容器 */
+            font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased;
         }
-        .movie-line:hover { background: rgba(255,255,255,0.1); border-color: #ff3c3c; color: #ff3c3c; } /* 悬停变红 */
+
+        .vogue-t { font-family: 'Noto Serif SC', serif; }
+
+        /* 全屏背景图与暗角 (同主页审美) */
+        .bg-overlay {
+            position: fixed; inset: 0;
+            background: url('horse.jpg') center/cover no-repeat;
+            opacity: 0.15; filter: grayscale(100%) brightness(0.3);
+            z-index: -2;
+        }
+        .vignette {
+            position: fixed; inset: 0;
+            background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.8) 100%);
+            z-index: -1;
+        }
+
+        /* 隐藏滚动条 */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+
+        /* C. 【核心】左侧高密度列表样式 */
+        .movie-item { 
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            transition: 0.3s; cursor: crosshair;
+        }
+        .movie-item:hover { background: rgba(255,255,255,0.03); transform: translateX(5px); }
         
-        /* 2. 右侧：亲吻墙矩阵 (Mosaic Wall) */
+        /* 延续彩色线条审美：悬停时边框/文字变色 */
+        .movie-item:hover .zh-t { color: #ff3c3c !important; }
+        .movie-item:hover .movie-rating { color: white !important; }
+
+        /* D. 【核心修复】右侧彩色矩阵 (Mosaic Wall) 样式 */
+        .poster-wall-layout {
+            height: 100vh; /* 铺满屏幕高度 */
+        }
         .mosaic-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(45px, 1fr)); /* 极小单元格 */
-            grid-auto-rows: 65px;
-            gap: 2px; /* 紧密缝隙 */
+            grid-template-columns: repeat(auto-fill, minmax(65px, 1fr)); /* 小方格 */
+            grid-auto-rows: 95px; /* 紧密行高 */
+            gap: 2px; /* 极细缝隙 */
             padding: 2px;
             height: 100%;
-            overflow-y: auto;
+            overflow-y: auto; /* 网格自身滚动 */
         }
         .mosaic-item {
             width: 100%; height: 100%;
             object-fit: cover;
-            transition: 0.3s;
-            /* 移除黑白滤镜，保留彩色 */
-            opacity: 0.9;
+            transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+            /* 移除黑白滤镜，释放彩色，并提高初始透明度 */
+            opacity: 0.95;
+            z-index: 1;
         }
         .mosaic-item:hover { 
             opacity: 1; 
-            transform: scale(1.5); 
-            z-index: 50; 
-            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+            transform: scale(2.2); 
+            z-index: 100 !important; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            border: 2px solid white;
         }
 
+        /* 延续路由转场动画 */
         #app-content { transition: opacity 0.5s; opacity: 1; }
         .page-fade { opacity: 0 !important; }
+        .fade-in { animation: fIn 1s cubic-bezier(0.19, 1, 0.22, 1) forwards; opacity: 0; }
+        @keyframes fIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* 频谱 (同主页样式) */
+        .bar { width: 2px; height: 12px; background: white; transition: 0.3s; animation: play 0.8s infinite alternate; }
+        .bar-p { animation-play-state: paused !important; height: 2px !important; opacity: 0.3; }
+        @keyframes play { from { height: 4px; } to { height: 13px; } }
     </style>
 </head>
 <body>
 
+    <div class="bg-overlay"></div>
+    <div class="vignette"></div>
+
     <div id="app-content" class="h-screen w-screen flex overflow-hidden">
         
-        <nav class="fixed top-0 w-full p-6 z-[100] flex justify-between items-center pointer-events-none">
-            <div onclick="router('index.html')" class="pointer-events-auto cursor-pointer opacity-50 hover:opacity-100 text-[9px] tracking-[0.4em] uppercase transition-all bg-black/50 px-2 py-1">← BACK</div>
-            <div id="m-count" class="text-[9px] text-[#ffb400] font-bold tracking-widest uppercase">Syncing...</div>
+        <nav class="fixed top-0 left-0 right-0 p-8 md:p-12 z-[100] flex justify-between items-center pointer-events-none">
+            <div onclick="router('index.html')" class="opacity-40 hover:opacity-100 text-[9px] tracking-[0.4em] cursor-pointer uppercase transition-all pointer-events-auto">← INDEX</div>
+            
+            <div class="flex items-center gap-4 pointer-events-auto">
+                <div id="movie-count" class="text-[9px] text-[#ffb400] tracking-widest uppercase italic font-bold">Syncing...</div>
+                <div onclick="toggleMusic(event)" class="flex items-center gap-3 cursor-pointer group p-2">
+                    <div class="flex items-end gap-[3px]">
+                        <div class="bar bar-p"></div><div class="bar bar-p" style="animation-delay: 0.2s"></div><div class="bar bar-p" style="animation-delay: 0.4s"></div>
+                    </div>
+                    <span id="m-status" class="text-[9px] tracking-[0.2em] opacity-40 group-hover:opacity-100 uppercase">On</span>
+                </div>
+            </div>
         </nav>
 
-        <div class="w-full md:w-5/12 h-full overflow-y-auto no-scrollbar pt-24 px-6 md:px-12 border-r border-white/5 bg-[#050505] relative z-10">
-            <header class="mb-8">
-                <h1 class="vogue-t text-4xl italic font-black text-white">电影档案馆</h1>
-                <p class="text-[8px] opacity-40 tracking-[0.4em] uppercase mt-2">High-Density Text Archive</p>
+        <div class="w-1/2 h-full overflow-y-auto no-scrollbar pt-40 px-8 md:px-16 border-r border-white/5 bg-[#050505] relative z-10">
+            <header class="mb-12 fade-in">
+                <h1 class="vogue-t text-4xl md:text-5xl font-black tracking-tight leading-none italic">电影档案馆</h1>
+                <div class="h-[1px] w-20 bg-white opacity-20 my-10"></div>
+                <p class="text-[9px] opacity-30 mt-6 uppercase tracking-[0.3em] italic leading-loose font-light">
+                    Visual fragments / Personal Notes preserved<br>
+                    Visual Collection by Mao Tianyi
+                </p>
             </header>
             
-            <div id="movie-list" class="pb-20">
-                </div>
+            <div id="movie-list" class="space-y-0 pb-40"></div>
         </div>
 
-        <div class="hidden md:block w-7/12 h-full bg-black no-scrollbar overflow-y-auto" id="mosaic-wall">
-            <div class="mosaic-grid" id="mosaic-container">
+        <div class="hidden md:block w-1/2 poster-wall-layout bg-black no-scrollbar overflow-y-auto" id="mosaic-wall">
+            <div class="mosaic-grid fade-in" id="mosaic-container" style="animation-delay: 0.3s">
                 </div>
         </div>
 
@@ -78,46 +131,81 @@
 
                 const listContainer = document.getElementById('movie-list');
                 const mosaicContainer = document.getElementById('mosaic-container');
-                const countDisplay = document.getElementById('m-count');
+                const countDisplay = document.getElementById('movie-count');
 
+                // 计数同步
                 countDisplay.innerText = `${movieData.length} FRAGMENTS`;
 
-                // 1. 生成高密度列表
+                // 1. 【核心】高密度评分染色列表生成
                 listContainer.innerHTML = movieData.map((movie, index) => {
                     const parts = movie.title.split(' / ');
                     const zh = parts[0];
-                    const en = parts[parts.length - 1] || "";
+                    const en = parts[parts.length - 1] || ""; // 提取原版翻译
+                    
+                    // 评分转颜色系统：让列表拥有呼吸感
+                    let rColor = "#ffffff";
+                    let rOpacity = 0.2;
+                    if (movie.rating >= 9.0) { rColor = "#ffb400"; rOpacity = 0.9; } // 金色
+                    else if (movie.rating >= 8.0) { rColor = "#ffffff"; rOpacity = 0.8; } // 白色
+                    else if (movie.rating >= 7.0) { rColor = "#ffffff"; rOpacity = 0.6; } 
+                    else if (movie.rating > 0) { rColor = "#ffffff"; rOpacity = 0.4; } // 亮灰
+
                     return `
-                        <div class="movie-line">
-                            <span class="text-[11px] font-bold tracking-tighter opacity-80 whitespace-nowrap">${zh}</span>
-                            <span class="flex-1 mx-2 border-b border-white/5 opacity-20"></span>
-                            <span class="text-[9px] uppercase font-medium opacity-20 truncate italic">${en}</span>
+                        <div class="movie-item py-2 px-3 flex items-baseline justify-between gap-6 fade-in" style="animation-delay: ${index * 0.01}s">
+                            <div class="flex-1 truncate">
+                                <span class="vogue-t text-[11px] zh-t font-black tracking-widest text-white opacity-90 whitespace-nowrap">${zh}</span>
+                            </div>
+                            
+                            <div class="w-[180px] text-right truncate">
+                                <span class="text-[9px] uppercase font-bold tracking-tighter opacity-20 truncate italic group-hover:opacity-100">${en}</span>
+                            </div>
+                            
+                            <div class="movie-rating w-[40px] text-right font-black text-[12px] group-hover:text-white" style="color: ${rColor}; opacity: ${rOpacity}">
+                                ${movie.rating}
+                            </div>
                         </div>
                     `;
                 }).join('');
 
-                // 2. 生成彩色矩阵并处理死链
-                movieData.forEach((movie) => {
+                // 2. 【核心修复】容错剔除、秩序矩阵、彩色矩阵生成
+                // 仅随机挑选 500 张以防数据量过大导致崩溃
+                const sampleMovies = [...movieData].sort(() => 0.5 - Math.random()).slice(0, 500);
+
+                sampleMovies.forEach((movie, i) => {
                     if (!movie.poster) return;
                     
-                    const img = new Image();
-                    img.src = movie.poster;
-                    img.className = 'mosaic-item';
+                    // A. 【容错】创建 Image 对象进行测试性加载
+                    const imgTest = new Image();
+                    imgTest.src = movie.poster;
                     
-                    // 核心：只有图片加载成功才放入墙中
-                    img.onload = () => {
+                    // B. 【核心逻辑】只有图片加载成功才放入矩阵
+                    imgTest.onload = () => {
+                        const img = document.createElement('img');
+                        img.src = movie.poster;
+                        img.className = 'mosaic-item';
                         mosaicContainer.appendChild(img);
                     };
                     
-                    // 如果图片报错，直接遗弃，不占位
-                    img.onerror = () => {
-                        img.remove();
+                    // C. 【核心逻辑】如果图片加载失败（死链），直接遗弃，不占位
+                    imgTest.onerror = () => {
+                        imgTest.remove();
                     };
                 });
 
-                // 同步背景音乐 UI (简易)
+                // 3. 【致命修复】SPA 路由 BGM 连贯同步逻辑 (同 index.html)
                 const audio = document.getElementById('global-bgm');
-                if(audio) { console.log("BGM Synced"); }
+                if(audio) {
+                    const statusText = document.getElementById('m-status');
+                    const bars = document.querySelectorAll('.bar');
+                    
+                    const updateMovieUI = (isPlaying) => {
+                        if (statusText) statusText.innerText = isPlaying ? "Music On" : "Music Off";
+                        bars.forEach(b => isPlaying ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
+                    };
+                    
+                    // 页面加载瞬间自动核对 On/Off 状态与闪烁柱
+                    updateMovieUI(!audio.paused);
+                }
             })();
         </script>
     </div>
