@@ -12,7 +12,7 @@
             background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('mobile_bg.jpg');
         }
         @media (min-width: 1024px) { body { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('horse.jpg'); } }
-        .vogue-t { font-family: 'Noto Serif SC', serif; letter-spacing: -0.02em; }
+        .vogue-t { font-family: 'Noto Serif SC', serif; }
         .vogue-s { font-family: 'Libre Baskerville', serif; }
         .vogue-card { transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); border-top: 1px solid rgba(255,255,255,0.1); cursor: pointer; }
         @media (min-width: 1024px) { .vogue-card:hover { background: rgba(255,255,255,0.05); padding-top: 2rem; } }
@@ -21,7 +21,7 @@
         @keyframes play { 0% { height: 4px; } 100% { height: 13px; } }
     </style>
 </head>
-<body onclick="handleFirstClick()">
+<body onclick="forcePlay()">
     <audio id="bgm" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
 
     <nav class="p-6 md:p-10 max-w-7xl mx-auto flex justify-between items-center relative z-20">
@@ -35,8 +35,8 @@
 
     <section class="pt-20 pb-16 px-6 md:px-10 max-w-7xl mx-auto z-10 relative">
         <div class="mb-8 h-[1px] w-12 bg-white"></div>
-        <h1 class="vogue-t text-3xl md:text-5xl font-black leading-[0.9] mb-6 tracking-tighter">
-            毛天艺 <span class="vogue-s block text-base md:text-xl opacity-30 mt-4">The Visual Archive</span>
+        <h1 class="vogue-t text-3xl md:text-5xl font-black leading-[0.9] mb-6 tracking-[0.3em]">
+            毛天艺 <span class="vogue-s block text-base md:text-xl opacity-30 mt-6 tracking-normal">The Visual Archive</span>
         </h1>
         <p class="text-[10px] md:text-sm text-gray-400 max-w-md leading-loose font-light">
             记录关于视觉、影像与声音的思考。探索数字时代下的审美边界。<br>
@@ -46,13 +46,13 @@
 
     <section class="px-6 md:px-10 max-w-7xl mx-auto pb-24 z-10 relative">
         <div class="grid grid-cols-2 lg:grid-cols-4">
-            <a href="works.html" onclick="saveAndGo(event, 'works.html')" class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between group">
-                <div><h2 class="vogue-t text-xl md:text-3xl font-bold group-hover:text-blue-500 transition">视觉作品集</h2><p class="vogue-s text-[9px] opacity-30 italic mt-2">Works</p></div>
-                <div class="text-[9px] opacity-20 group-hover:opacity-100 transition mt-10">EXPLORE →</div>
+            <a href="works.html" onclick="navTo(event, 'works.html')" class="vogue-card p-6 md:py-16 md:px-8 flex flex-col justify-between group">
+                <div><h2 class="vogue-t text-xl md:text-3xl font-bold group-hover:text-blue-500 transition">视觉作品集</h2><p class="vogue-s text-xs md:text-sm opacity-40 italic mt-3">Works / Visual Portfolio</p></div>
+                <div class="text-[9px] opacity-20 group-hover:opacity-100 transition mt-10 tracking-[0.2em]">EXPLORE →</div>
             </a>
-            <div class="vogue-card p-6 md:py-16 md:px-8 opacity-50"><h2 class="vogue-t text-xl md:text-3xl font-bold">电影板块</h2><p class="vogue-s text-[9px] opacity-30 mt-2">Cinema</p></div>
-            <div class="vogue-card p-6 md:py-16 md:px-8 opacity-50"><h2 class="vogue-t text-xl md:text-3xl font-bold">音乐板块</h2><p class="vogue-s text-[9px] opacity-30 mt-2">Music</p></div>
-            <div class="vogue-card p-6 md:py-16 md:px-8 opacity-50 border-r lg:border-r-0 border-white/10"><h2 class="vogue-t text-xl md:text-3xl font-bold">阅读板块</h2><p class="vogue-s text-[9px] opacity-30 mt-2">Read</p></div>
+            <div class="vogue-card p-6 md:py-16 md:px-8 opacity-50"><div><h2 class="vogue-t text-xl md:text-3xl font-bold">电影板块</h2><p class="vogue-s text-xs md:text-sm opacity-40 mt-3">Cinema / Filmography</p></div></div>
+            <div class="vogue-card p-6 md:py-16 md:px-8 opacity-50"><div><h2 class="vogue-t text-xl md:text-3xl font-bold">音乐板块</h2><p class="vogue-s text-xs md:text-sm opacity-40 mt-3">Music / Sound Scape</p></div></div>
+            <div class="vogue-card p-6 md:py-16 md:px-8 opacity-50 border-r lg:border-r-0 border-white/10"><div><h2 class="vogue-t text-xl md:text-3xl font-bold">阅读板块</h2><p class="vogue-s text-xs md:text-sm opacity-40 mt-3">Read / Archive</p></div></div>
         </div>
     </section>
 
@@ -61,39 +61,52 @@
         const statusText = document.getElementById('m-status');
         const bars = document.querySelectorAll('.bar');
 
+        function upUI(p) {
+            statusText.innerText = p ? "On" : "Off";
+            bars.forEach(b => p ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
+        }
+
+        // 核心：刷新判断
+        if (!performance.navigation.type === 1 && !sessionStorage.getItem('is_nav')) {
+            localStorage.setItem('mTime', 0);
+        }
+
         window.onload = () => {
-            if (sessionStorage.getItem('nav')) {
-                audio.currentTime = parseFloat(localStorage.getItem('mTime') || 0);
-                if (localStorage.getItem('mPlay') === 'true') { audio.play().then(() => upUI(true)); }
-            } else { audio.currentTime = 0; localStorage.setItem('mTime', 0); }
-            sessionStorage.removeItem('nav');
+            const savedTime = localStorage.getItem('mTime') || 0;
+            const shouldPlay = localStorage.getItem('mPlay') === 'true';
+            audio.currentTime = parseFloat(savedTime);
+            if (shouldPlay) {
+                audio.play().then(() => upUI(true)).catch(() => {
+                    console.log("Waiting for user interaction...");
+                    upUI(false);
+                });
+            }
+            sessionStorage.removeItem('is_nav');
         };
 
-        setInterval(() => { if (!audio.paused) localStorage.setItem('mTime', audio.currentTime); }, 1000);
+        // 高频同步进度，防止由于跳转瞬间写入失败导致的断流
+        audio.ontimeupdate = () => localStorage.setItem('mTime', audio.currentTime);
 
-        function handleFirstClick() {
+        function forcePlay() {
             if (audio.paused && localStorage.getItem('mPlay') !== 'false') {
                 audio.play().then(() => { upUI(true); localStorage.setItem('mPlay', 'true'); });
             }
         }
 
-        function saveAndGo(e, url) {
+        function navTo(e, url) {
             e.preventDefault();
-            sessionStorage.setItem('nav', '1');
-            localStorage.setItem('mTime', audio.currentTime);
-            localStorage.setItem('mPlay', audio.paused ? 'false' : 'true');
+            sessionStorage.setItem('is_nav', 'true');
+            localStorage.setItem('mPlay', !audio.paused);
             location.href = url;
         }
 
         function toggleMusic(e) {
             e.stopPropagation();
-            if (audio.paused) { audio.play(); upUI(true); localStorage.setItem('mPlay', 'true'); }
-            else { audio.pause(); upUI(false); localStorage.setItem('mPlay', 'false'); }
-        }
-
-        function upUI(p) {
-            statusText.innerText = p ? "On" : "Off";
-            bars.forEach(b => p ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
+            if (audio.paused) { 
+                audio.play(); upUI(true); localStorage.setItem('mPlay', 'true'); 
+            } else { 
+                audio.pause(); upUI(false); localStorage.setItem('mPlay', 'false'); 
+            }
         }
     </script>
 </body>
