@@ -67,10 +67,6 @@
             <div><h2 class="vogue-title text-4xl font-bold group-hover:text-green-400 transition">音乐板块</h2><p class="vogue-sub text-xs opacity-30 italic mt-2">Music Sanctuary — Mental Shelter</p></div>
             <div class="text-[10px] tracking-vogue opacity-20 group-hover:opacity-100 transition mt-4 md:mt-0">LISTEN →</div>
         </a>
-        <a href="read.html" onclick="saveAndGo(event, 'read.html')" class="vogue-card py-12 flex flex-col md:flex-row md:items-end justify-between group border-b border-white/10">
-            <div><h2 class="vogue-title text-4xl font-bold group-hover:text-yellow-600 transition">阅读板块</h2><p class="vogue-sub text-xs opacity-30 italic mt-2">Reading Notes — Book & Reviews</p></div>
-            <div class="text-[10px] tracking-vogue opacity-20 group-hover:opacity-100 transition mt-4 md:mt-0">READ →</div>
-        </a>
     </section>
 
     <script>
@@ -78,19 +74,31 @@
         const iconBars = document.querySelectorAll('.bar');
         const statusText = document.getElementById('music-status');
 
+        // 页面加载逻辑
         window.addEventListener('load', () => {
-            const savedTime = localStorage.getItem('musicTime');
+            // 刷新页面，进度始终重置为 0
+            audio.currentTime = 0;
             const isPlaying = localStorage.getItem('musicPlaying') === 'true';
-            if (savedTime) audio.currentTime = parseFloat(savedTime);
-            if (isPlaying) { audio.play().then(() => updateUI(true)).catch(() => {}); }
+            if (isPlaying) { 
+                // 尝试自动播放（可能被浏览器拦截）
+                audio.play().then(() => updateUI(true)).catch(() => console.log("等待用户交互后播放")); 
+            }
         });
+
+        // 核心：点击或滑动触发播放
+        const startMusic = () => {
+            if (localStorage.getItem('musicPlaying') === 'true' && audio.paused) {
+                audio.play().then(() => updateUI(true));
+            }
+        };
+        document.addEventListener('click', startMusic);
+        window.addEventListener('scroll', startMusic, { once: true }); // 滑动仅触发一次
 
         function saveAndGo(event, url) {
             event.preventDefault();
-            localStorage.setItem('musicTime', audio.currentTime);
+            // 只要点击进入新页面，就默认保持“开启状态”同步
             localStorage.setItem('musicPlaying', audio.paused ? 'false' : 'true');
-            // 如果点击板块，默认开启沉浸音乐
-            if (url !== 'index.html') { localStorage.setItem('musicPlaying', 'true'); }
+            if (url !== 'index.html') localStorage.setItem('musicPlaying', 'true');
             setTimeout(() => { window.location.href = url; }, 150);
         }
 
@@ -104,8 +112,6 @@
             statusText.innerText = isPlaying ? "Sound On" : "Sound Off";
             iconBars.forEach(bar => isPlaying ? bar.classList.remove('bar-paused') : bar.classList.add('bar-paused'));
         }
-
-        setInterval(() => { if(!audio.paused) localStorage.setItem('musicTime', audio.currentTime); }, 500);
     </script>
 </body>
 </html>
