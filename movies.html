@@ -2,84 +2,99 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>CINEMA - MAO TIANYI</title>
+    <title>MOVIE - MAO TIANYI</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#050505] text-white">
+<body class="bg-[#050505] text-white overflow-x-hidden">
     <div id="app-content">
+        <script src="movies.js"></script>
+
         <style>
             .vogue-t { font-family: 'Noto Serif SC', serif; }
-            /* 16:9 电影容器 */
-            .m-card { position: relative; aspect-ratio: 16/9; overflow: hidden; background: #111; border: 1px solid rgba(255,255,255,0.05); transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
-            .m-card:hover { border-color: rgba(255,255,255,0.2); transform: translateY(-8px); }
-            /* 海报处理 */
-            .m-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: 0.8s; }
-            .m-card:hover .m-img { opacity: 0.3; transform: scale(1.1); filter: blur(8px); }
-            /* 悬停详情层 */
-            .m-info { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 2rem; opacity: 0; transition: 0.5s; z-index: 20; }
+            .m-card { position: relative; aspect-ratio: 16/9; overflow: hidden; background: #0a0a0a; border: 1px solid rgba(255,255,255,0.03); transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
+            .m-card:hover { border-color: rgba(255,255,255,0.2); transform: translateY(-5px); }
+            .m-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; transition: 0.8s; }
+            .m-card:hover .m-img { opacity: 0.2; transform: scale(1.05); filter: blur(10px); }
+            .m-info { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 1.5rem; opacity: 0; transition: 0.4s; z-index: 20; }
             .m-card:hover .m-info { opacity: 1; }
-            /* 沿用作品集的彩色竖线装饰 */
-            .accent-line { border-left: 2px solid; padding-left: 1rem; margin-top: 1rem; }
-            .color-0 { border-color: #3b82f6; } /* 蓝色 */
-            .color-1 { border-color: #ef4444; } /* 红色 */
-            .color-2 { border-color: #10b981; } /* 绿色 */
-            .color-3 { border-color: #f59e0b; } /* 橙色 */
+            /* 延续作品集的线段审美 */
+            .accent-line { border-left: 1px solid rgba(255,255,255,0.15); padding-left: 1rem; margin-top: 1rem; transition: 0.3s; }
+            .group:hover .accent-line { border-left-width: 3px; border-color: #fff; }
+            .fade-up { animation: fUp 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards; opacity: 0; }
+            @keyframes fUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         </style>
 
-        <nav class="p-6 md:p-16 flex justify-between items-center max-w-7xl mx-auto">
-            <div onclick="router('index.html')" class="opacity-40 hover:opacity-100 text-[9px] tracking-[0.4em] cursor-pointer uppercase">← ARCHIVE / 返回首页</div>
-            <div class="text-[9px] opacity-40 uppercase tracking-widest" id="m-status">ON</div>
+        <nav class="p-6 md:p-16 flex justify-between items-center max-w-[1400px] mx-auto">
+            <div onclick="router('index.html')" class="opacity-40 hover:opacity-100 text-[9px] tracking-[0.4em] cursor-pointer uppercase transition-all">← ARCHIVE / INDEX</div>
+            <div class="flex items-center gap-4">
+                <div id="movie-count" class="text-[9px] opacity-20 tracking-widest uppercase italic">Loading Library...</div>
+                <div class="text-[9px] opacity-40 uppercase tracking-widest" id="m-status">On</div>
+            </div>
         </nav>
 
-        <header class="px-6 md:px-16 max-w-7xl mx-auto mb-20">
-            <h1 class="vogue-t text-4xl md:text-5xl font-black tracking-[0.4em]">电影板块</h1>
-            <p class="text-[10px] opacity-30 mt-4 uppercase tracking-[0.2em] italic">Cinema / Personal Archive of Moving Images</p>
+        <header class="px-6 md:px-16 max-w-[1400px] mx-auto mb-20 fade-up">
+            <h1 class="vogue-t text-4xl md:text-6xl font-black tracking-[0.3em]">电影档案馆</h1>
+            <p class="text-[10px] opacity-30 mt-6 uppercase tracking-[0.3em] italic leading-loose">
+                Cinema Archive / 689 Recorded Fragments<br>
+                Visual Collection by Mao Tianyi
+            </p>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-24 max-w-7xl mx-auto px-6 pb-40" id="movie-grid">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-16 max-w-[1400px] mx-auto px-6 pb-40" id="movie-grid">
             </div>
 
         <script>
-            // 你的豆瓣数据注入
-            const movieData = [
-                { "title": "红胡子 / 赤ひげ", "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2215875666.webp", "comment": "未记录短评" },
-                { "title": "攻壳机动队 / 攻殻機動隊", "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2921045013.webp", "comment": "未记录短评" },
-                { "title": "萤火之森 / 蛍火の杜へ", "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1675053073.webp", "comment": "未记录短评" },
-                { "title": "奔腾年代 / Seabiscuit", "poster": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p845519371.webp", "comment": "未记录短评" },
-                { "title": "芝加哥 / Chicago", "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2454020352.webp", "comment": "未记录短评" },
-                { "title": "训练日 / Training Day", "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1350561397.webp", "comment": "未记录短评" },
-                { "title": "穆赫兰道 / Mulholland Dr.", "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p792248233.webp", "comment": "未记录短评" },
-                { "title": "弗里达 / Frida", "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p729625029.webp", "comment": "未记录短评" },
-                { "title": "永不妥协 / Erin Brockovich", "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1221456067.webp", "comment": "未记录短评" },
-                { "title": "告别有情天 / Remains of the Day", "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1056237302.webp", "comment": "未记录短评" },
-                { "title": "无言的山丘 / 無言的山丘", "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2522310203.webp", "comment": "未记录短评" },
-                { "title": "热带鱼 / 熱帶魚", "poster": "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1148607609.webp", "comment": "未记录短评" },
-                { "title": "走到尽头 / 끝까지 간다", "poster": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2183957412.webp", "comment": "未记录短评" },
-                { "title": "四个婚礼和一个葬礼", "poster": "https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2423672584.webp", "comment": "未记录短评" },
-                { "title": "理智与情感 / Sense and Sensibility", "poster": "https://img2.doubanio.com/view/photo/s_ratio_poster/public/p1107322461.webp", "comment": "未记录短评" }
-            ];
+            (function() {
+                const grid = document.getElementById('movie-grid');
+                const countDisplay = document.getElementById('movie-count');
 
-            const grid = document.getElementById('movie-grid');
-            movieData.forEach((movie, index) => {
-                const [zh, en] = movie.title.split(' / ');
-                const colorIdx = index % 4;
-                const html = `
-                    <div class="group">
-                        <div class="m-card">
-                            <img src="${movie.poster}" class="m-img" loading="lazy">
-                            <div class="m-info">
-                                <h3 class="vogue-t text-2xl italic">${zh}</h3>
-                                <p class="text-[10px] opacity-60 mt-4 leading-relaxed font-light">${movie.comment}</p>
+                if (typeof movieData !== 'undefined') {
+                    countDisplay.innerText = `DATABASE: ${movieData.length} FILMS`;
+                    
+                    grid.innerHTML = movieData.map((movie, index) => {
+                        const parts = movie.title.split(' / ');
+                        const zh = parts[0];
+                        const en = parts[1] || "";
+                        return `
+                            <div class="group fade-up" style="animation-delay: ${Math.min(index * 0.02, 1)}s">
+                                <div class="m-card">
+                                    <img data-src="${movie.poster}" class="m-img lazy" alt="${zh}">
+                                    <div class="m-info">
+                                        <div class="text-[#ffb400] text-[7px] tracking-widest mb-3">${movie.rating}</div>
+                                        <h3 class="vogue-t text-lg italic tracking-tight">${zh}</h3>
+                                        <p class="text-[9px] opacity-50 mt-4 leading-relaxed line-clamp-4 font-light">${movie.comment || "No personal notes preserved."}</p>
+                                    </div>
+                                </div>
+                                <div class="accent-line">
+                                    <h4 class="text-[10px] font-bold tracking-widest uppercase truncate">${en || zh}</h4>
+                                    <p class="text-[8px] opacity-20 mt-1 uppercase tracking-tighter">REF. ID-${String(movieData.length - index).padStart(4, '0')}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="accent-line color-${colorIdx}">
-                            <h4 class="text-xs font-bold tracking-[0.1em] uppercase">${en || zh}</h4>
-                            <p class="text-[8px] opacity-30 mt-1 uppercase tracking-widest">Selected Archive / No. ${100 + index}</p>
-                        </div>
-                    </div>
-                `;
-                grid.innerHTML += html;
-            });
+                        `;
+                    }).join('');
+
+                    // 懒加载逻辑
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                const img = entry.target;
+                                img.src = img.dataset.src;
+                                img.classList.remove('lazy');
+                                observer.unobserve(img);
+                            }
+                        });
+                    }, { rootMargin: '400px' });
+
+                    document.querySelectorAll('.lazy').forEach(img => observer.observe(img));
+                }
+
+                // 强制同步音乐状态显示
+                const statusIndicator = document.getElementById('m-status');
+                const audio = document.getElementById('global-bgm');
+                if(statusIndicator && audio) {
+                    statusIndicator.innerText = audio.paused ? "Off" : "On";
+                }
+            })();
         </script>
     </div>
 </body>
