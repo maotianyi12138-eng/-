@@ -3,107 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO - MAO TIANYI</title>
+    <title>WORKS - MAO TIANYI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Libre+Baskerville:italic@400&display=swap');
-        body { background-color: #050505; color: #e5e5e5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; overflow-x: hidden; }
-        .vogue-title { font-family: 'Noto Serif SC', serif; letter-spacing: -0.02em; }
-        .music-bars { display: flex; gap: 3px; align-items: flex-end; height: 13px; width: 20px; }
-        .bar { width: 2px; background: white; animation: play 0.8s infinite alternate; height: 3px; }
-        .bar-paused { animation-play-state: paused !important; height: 2px !important; opacity: 0.3; }
-        @keyframes play { 0% { height: 4px; } 100% { height: 13px; } }
-        .stack-container { position: relative; height: 220px; transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1); cursor: s-resize; width: 100%; margin-bottom: 1.5rem; }
-        @media (min-width: 768px) { .stack-container { height: 320px; } }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap');
+        body { background: #050505; color: #e5e5e5; font-family: sans-serif; overflow-x: hidden; }
+        .vogue-t { font-family: 'Noto Serif SC', serif; }
+        .stack-container { position: relative; height: 140px; transition: 0.8s; cursor: s-resize; margin-bottom: 1.5rem; }
+        @media (min-width: 768px) { .stack-container { height: 180px; } }
         .stack-container.expanded { height: auto; cursor: default; margin-bottom: 4rem; }
-        .stack-img { position: absolute; top: 0; left: 0; width: 100%; aspect-ratio: 4/5; object-fit: cover; transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1); border: 1px solid rgba(255,255,255,0.08); background-color: #111; }
-        .stack-img:nth-child(1) { transform: translateY(0px) scale(1); z-index: 10; }
-        .stack-img:nth-child(2) { transform: translateY(15px) scale(0.96); z-index: 9; opacity: 0.8; }
-        .stack-img:nth-child(3) { transform: translateY(30px) scale(0.92); z-index: 8; opacity: 0.6; }
-        .stack-img:nth-child(n+4) { transform: translateY(45px) scale(0.88); z-index: 1; opacity: 0; }
-        .expanded .stack-img { position: relative; transform: translateY(0) scale(1) !important; margin-bottom: 1rem; z-index: 20 !important; opacity: 1 !important; cursor: zoom-in; aspect-ratio: auto; }
-        #lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); z-index: 100; justify-content: center; align-items: center; cursor: zoom-out; padding: 20px; }
+        .stack-img { 
+            position: absolute; top: 0; left: 0; width: 100%; aspect-ratio: 16/10; object-fit: cover; 
+            transition: 0.8s cubic-bezier(0.19,1,0.22,1); border: 1px solid rgba(255,255,255,0.08); 
+            box-shadow: 0 10px 30px #000;
+        }
+        .stack-img:nth-child(1) { transform: translateY(0) scale(1); z-index: 10; }
+        .stack-img:nth-child(2) { transform: translateY(12px) scale(0.97); z-index: 9; opacity: 0.8; }
+        .stack-img:nth-child(3) { transform: translateY(24px) scale(0.94); z-index: 8; opacity: 0.6; }
+        .stack-img:nth-child(n+4) { transform: translateY(36px) scale(0.91); z-index: 1; opacity: 0; }
+        .expanded .stack-img { position: relative; transform: translateY(0) scale(1)!important; margin-bottom: 1rem; opacity: 1!important; cursor: zoom-in; aspect-ratio: auto; }
+        #lb { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.98); z-index: 100; justify-content: center; align-items: center; cursor: zoom-out; }
     </style>
 </head>
 <body onclick="handleFirstClick()">
     <audio id="bgm" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
 
     <nav class="p-6 md:p-16 flex justify-between items-center max-w-7xl mx-auto">
-        <a href="index.html" onclick="saveAndGo(event, 'index.html')" class="opacity-40 hover:opacity-100 transition tracking-[0.2em] text-[9px]">← ARCHIVE</a>
-        <div class="flex items-center gap-3 cursor-pointer" onclick="toggleMusic(event)">
-            <div class="music-bars"><div class="bar bar-paused"></div><div class="bar bar-paused" style="animation-delay: 0.2s"></div><div class="bar bar-paused" style="animation-delay: 0.4s"></div></div>
-            <span class="text-[9px] tracking-[0.2em] uppercase opacity-40" id="music-status">Off</span>
-        </div>
+        <a href="index.html" onclick="saveAndGo(event, 'index.html')" class="opacity-40 hover:opacity-100 text-[9px] tracking-widest">← ARCHIVE</a>
+        <div onclick="toggleMusic(event)" class="cursor-pointer text-[9px] opacity-40 uppercase tracking-widest" id="m-status">Off</div>
     </nav>
 
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-5 md:gap-x-10 gap-y-24 max-w-7xl mx-auto px-6">
-        <div class="project-group">
-            <div class="stack-container" onclick="toggleExpand(this)">
-                <img src="批判1" class="stack-img" onclick="zoomImage(event, this)">
-                <img src="批判2" class="stack-img" onclick="zoomImage(event, this)">
-                <img src="批判3" class="stack-img" onclick="zoomImage(event, this)">
-                <img src="批判4" class="stack-img" onclick="zoomImage(event, this)">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-5 md:gap-x-10 gap-y-20 max-w-7xl mx-auto px-6">
+        <div class="group">
+            <div class="stack-container" onclick="this.classList.toggle('expanded')">
+                <img src="批判1" class="stack-img" onclick="zoom(event,this)"><img src="批判2" class="stack-img" onclick="zoom(event,this)"><img src="批判3" class="stack-img" onclick="zoom(event,this)"><img src="批判4" class="stack-img" onclick="zoom(event,this)">
             </div>
-            <div class="mt-4 border-l-2 border-blue-500 pl-3">
-                <h3 class="vogue-title text-xl md:text-2xl font-black uppercase">DIVORCE IN CHINA</h3>
-                <p class="text-gray-500 text-[9px] italic">Social Structure Study</p>
+            <div class="mt-4 border-l-2 border-blue-500 pl-3"><h3 class="vogue-t text-lg">DIVORCE IN CHINA</h3></div>
+        </div>
+        <div class="group">
+            <div class="stack-container" onclick="this.classList.toggle('expanded')">
+                <img src="保龄1" class="stack-img" onclick="zoom(event,this)"><img src="保龄2" class="stack-img" onclick="zoom(event,this)"><img src="保龄3" class="stack-img" onclick="zoom(event,this)"><img src="保龄4" class="stack-img" onclick="zoom(event,this)"><img src="保龄5" class="stack-img" onclick="zoom(event,this)"><img src="保龄6" class="stack-img" onclick="zoom(event,this)">
             </div>
+            <div class="mt-4 border-l-2 border-red-500 pl-3"><h3 class="vogue-t text-lg">BOLLING CAMPAIGN</h3></div>
         </div>
+        <div class="group">
+            <div class="stack-container" onclick="this.classList.toggle('expanded')">
+                <img src="血液1.png" class="stack-img" onclick="zoom(event,this)"><img src="血液2.png" class="stack-img" onclick="zoom(event,this)"><img src="血液3.png" class="stack-img" onclick="zoom(event,this)"><img src="血液4.png" class="stack-img" onclick="zoom(event,this)">
+            </div>
+            <div class="mt-4 border-l-2 border-red-900 pl-3"><h3 class="vogue-t text-lg">BLOOD NIRVANA</h3></div>
         </div>
+        <div class="group">
+            <div class="stack-container" onclick="this.classList.toggle('expanded')">
+                <img src="健身1.png" class="stack-img" onclick="zoom(event,this)"><img src="健身2.png" class="stack-img" onclick="zoom(event,this)"><img src="健身3.png" class="stack-img" onclick="zoom(event,this)"><img src="健身4.png" class="stack-img" onclick="zoom(event,this)"><img src="健身5.png" class="stack-img" onclick="zoom(event,this)">
+            </div>
+            <div class="mt-4 border-l-2 border-green-800 pl-3"><h3 class="vogue-t text-lg">MUSCLE FACTORY</h3></div>
+        </div>
+    </div>
+
+    <div id="lb" onclick="this.style.display='none'"><img id="lb-img" class="max-w-full max-h-full"></div>
 
     <script>
         const audio = document.getElementById('bgm');
-        const statusText = document.getElementById('music-status');
-        const iconBars = document.querySelectorAll('.bar');
-
-        window.addEventListener('load', () => {
-            const isNavigating = sessionStorage.getItem('isNavigating');
-            const savedTime = localStorage.getItem('musicTime');
-            if (isNavigating && savedTime) {
-                audio.currentTime = parseFloat(savedTime);
-                if (localStorage.getItem('musicPlaying') === 'true') {
-                    audio.play().then(() => updateUI(true)).catch(() => {});
-                }
-            } else {
-                audio.currentTime = 0;
-            }
-            sessionStorage.removeItem('isNavigating');
-        });
-
-        setInterval(() => { if (!audio.paused) localStorage.setItem('musicTime', audio.currentTime); }, 1000);
-
-        function handleFirstClick() {
-            if (audio.paused && localStorage.getItem('musicPlaying') !== 'false') {
-                audio.play().then(() => { updateUI(true); localStorage.setItem('musicPlaying', 'true'); });
-            }
-        }
-
-        function saveAndGo(event, url) {
-            event.preventDefault();
-            sessionStorage.setItem('isNavigating', 'true');
-            localStorage.setItem('musicTime', audio.currentTime);
-            localStorage.setItem('musicPlaying', audio.paused ? 'false' : 'true');
-            window.location.href = url;
-        }
-
-        function toggleMusic(event) {
-            event.stopPropagation();
-            if (audio.paused) { audio.play().then(() => { updateUI(true); localStorage.setItem('musicPlaying', 'true'); }); }
-            else { audio.pause(); updateUI(false); localStorage.setItem('musicPlaying', 'false'); }
-        }
-
-        function updateUI(isPlaying) {
-            statusText.innerText = isPlaying ? "On" : "Off";
-            iconBars.forEach(bar => isPlaying ? bar.classList.remove('bar-paused') : bar.classList.add('bar-paused'));
-        }
-
-        function toggleExpand(container) { container.classList.toggle('expanded'); }
-        function zoomImage(event, img) {
-            if (img.parentElement.classList.contains('expanded')) {
-                event.stopPropagation();
-                // 这里的 lightbox 逻辑同前
-            }
-        }
+        // 逻辑保持与首页绝对一致
+        window.onload = () => {
+            if (sessionStorage.getItem('nav')) {
+                audio.currentTime = parseFloat(localStorage.getItem('mTime') || 0);
+                if (localStorage.getItem('mPlay') === 'true') { audio.play(); }
+            } else { audio.currentTime = 0; }
+            sessionStorage.removeItem('nav');
+        };
+        function handleFirstClick() { if (audio.paused && localStorage.getItem('mPlay') !== 'false') audio.play(); }
+        function saveAndGo(e, url) { e.preventDefault(); sessionStorage.setItem('nav', '1'); localStorage.setItem('mTime', audio.currentTime); location.href = url; }
+        function zoom(e, img) { if (img.parentElement.classList.contains('expanded')) { e.stopPropagation(); document.getElementById('lb-img').src = img.src; document.getElementById('lb').style.display='flex'; } }
     </script>
 </body>
 </html>
