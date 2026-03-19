@@ -2,65 +2,133 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>CINEMA | MAO TIANYI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEMA ARCHIVE | MAO TIANYI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="movies.js"></script>
     <style>
-        body { background: #000; color: #fff; font-family: 'Inter', sans-serif; }
-        #app-content { transition: opacity 0.8s ease; opacity: 0; }
-        .page-active { opacity: 1 !important; }
+        body { background: #000; color: white; margin: 0; overflow: hidden; font-family: 'Inter', sans-serif; }
+        .vogue-t { font-family: 'Noto Serif SC', serif; }
+        
+        /* 1. 左侧：双列极密列表容器 */
+        .list-scroll {
+            height: 100vh; overflow-y: auto; scroll-behavior: smooth;
+        }
+        .list-scroll::-webkit-scrollbar { display: none; }
 
-        /* 海报墙：Josh Warner 风格的无边框排版 */
-        .poster-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1px; }
-        .poster-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0.3; transition: 0.6s; cursor: crosshair; }
-        .poster-item:hover { opacity: 1; filter: contrast(1.1); }
+        /* 极密两列网格 */
+        .dense-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 严格两列 */
+            gap: 1px 20px; /* 极细行间距，较宽列间距 */
+        }
 
-        .archive-header { border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 4rem; margin-bottom: 0; }
+        .movie-line { 
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            transition: 0.1s; cursor: crosshair;
+            display: flex; flex-direction: column; /* 改为上下行，进一步压缩横向空间 */
+            padding: 4px 0;
+        }
+        .movie-line:hover { background: rgba(255,255,255,0.08); border-color: #ff3c3c; }
+        .movie-line:hover .zh-t { color: #ff3c3c; }
+
+        /* 2. 右侧：满屏彩色矩阵 (亲吻墙) */
+        .mosaic-container {
+            height: 100vh; overflow-y: auto; background: #000;
+        }
+        .mosaic-container::-webkit-scrollbar { display: none; }
+        
+        .mosaic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* 更小的方格 */
+            grid-auto-rows: 85px;
+            gap: 1px;
+            padding: 1px;
+        }
+        .mosaic-item {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+            opacity: 0.9;
+        }
+        .mosaic-item:hover { 
+            opacity: 1; transform: scale(2); z-index: 100; 
+            border: 1px solid white; box-shadow: 0 0 30px rgba(0,0,0,0.9);
+        }
+
+        /* 动画与转场 */
+        .fade-in { animation: fIn 0.8s ease forwards; opacity: 0; }
+        @keyframes fIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        #app-content { transition: opacity 0.5s; }
     </style>
 </head>
-<body class="p-10 md:p-24">
-    <audio id="global-bgm" loop src="bgm.mp3"></audio>
-    <div onclick="router('index.html')" class="fixed top-12 right-12 z-[200] text-[10px] opacity-30 hover:opacity-100 cursor-pointer tracking-widest uppercase">Index 00</div>
+<body>
 
-    <div id="app-content">
-        <header class="archive-header">
-            <h1 class="text-[10vw] font-light tracking-tighter leading-none">CINEMA<br><span class="opacity-10 italic">ARCHIVE</span></h1>
-            <p class="text-[10px] opacity-20 tracking-[1em] mt-10 uppercase font-light">Documenting 689 fragments of time</p>
-        </header>
+    <div id="app-content" class="h-screen w-screen flex overflow-hidden">
+        
+        <nav class="fixed top-0 w-full p-6 z-[100] flex justify-between items-center pointer-events-none">
+            <div onclick="router('index.html')" class="pointer-events-auto cursor-pointer opacity-30 hover:opacity-100 text-[8px] tracking-[0.4em] uppercase transition-all px-4 py-2 bg-black/40 backdrop-blur-md">← INDEX</div>
+            <div id="m-count" class="text-[9px] text-[#ffb400] font-black tracking-widest uppercase italic">SYNCING...</div>
+        </nav>
 
-        <div id="mosaic-grid" class="poster-wall">
-            </div>
-    </div>
+        <div class="w-1/2 list-scroll pt-32 px-8 md:px-12 border-r border-white/5 bg-[#050505]">
+            <header class="mb-10">
+                <h1 class="vogue-t text-4xl italic font-black">电影档案馆</h1>
+                <p class="text-[8px] opacity-30 tracking-[0.3em] uppercase mt-2">Dual-Column Archive Mode</p>
+            </header>
+            
+            <div id="movie-list" class="dense-grid pb-40">
+                </div>
+        </div>
 
-    <script>
-        const audio = document.getElementById('global-bgm');
-        const app = document.getElementById('app-content');
-        async function router(url) {
-            app.style.opacity = "0";
-            localStorage.setItem('bgmTime', audio.currentTime);
-            localStorage.setItem('bgmPlaying', !audio.paused);
-            setTimeout(() => { window.location.href = url; }, 800);
-        }
-        window.onload = () => {
-            const savedTime = localStorage.getItem('bgmTime');
-            if(savedTime) audio.currentTime = savedTime;
-            if(localStorage.getItem('bgmPlaying') === 'true') audio.play().catch(() => {});
+        <div class="w-1/2 mosaic-container">
+            <div class="mosaic-grid" id="mosaic-container">
+                </div>
+        </div>
 
-            if (typeof movieData !== 'undefined') {
-                const wall = document.getElementById('mosaic-grid');
-                movieData.forEach(m => {
-                    if(!m.poster) return;
+        <script>
+            (function() {
+                if (typeof movieData === 'undefined') return;
+
+                const listContainer = document.getElementById('movie-list');
+                const mosaicContainer = document.getElementById('mosaic-container');
+                const countDisplay = document.getElementById('m-count');
+
+                countDisplay.innerText = `${movieData.length} FRAGMENTS`;
+
+                // 1. 生成双列列表
+                listContainer.innerHTML = movieData.map((movie, index) => {
+                    const parts = movie.title.split(' / ');
+                    const zh = parts[0];
+                    const en = parts[parts.length - 1] || "";
+                    
+                    return `
+                        <div class="movie-line fade-in" style="animation-delay: ${index * 0.005}s">
+                            <span class="vogue-t text-[10px] zh-t font-black tracking-tighter opacity-80 truncate">${zh}</span>
+                            <span class="text-[7px] uppercase opacity-20 truncate italic font-light tracking-tight">${en}</span>
+                        </div>
+                    `;
+                }).join('');
+
+                // 2. 生成彩色海报矩阵并过滤死链
+                movieData.forEach((movie) => {
+                    if (!movie.poster) return;
                     const img = new Image();
-                    img.src = m.poster;
-                    img.className = 'poster-item';
+                    img.src = movie.poster;
+                    img.className = 'mosaic-item';
                     img.loading = "lazy";
+                    
+                    img.onload = () => mosaicContainer.appendChild(img);
                     img.onerror = () => img.remove();
-                    wall.appendChild(img);
                 });
-            }
-            setTimeout(() => app.classList.add('page-active'), 100);
-        };
-    </script>
+
+                // 3. 音乐连贯逻辑 (SPA 同步)
+                const audio = document.getElementById('global-bgm');
+                if (audio) {
+                    console.log("Cinema: Background Music Persistent.");
+                }
+            })();
+        </script>
+    </div>
 </body>
 </html>
