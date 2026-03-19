@@ -7,28 +7,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* 1. 环境色彩：深邃的渐变底色 */
         body { 
             background: radial-gradient(circle at 50% 50%, #0a0a15 0%, #050505 100%); 
             color: white; margin: 0; overflow-x: hidden; font-family: 'Inter', sans-serif; 
         }
         .vogue-t { font-family: 'Noto Serif SC', serif; }
 
-        /* 2. 背景图还原：彩色释放 */
+        /* 背景彩色释放 */
         .bg-overlay {
             position: fixed; inset: 0;
             background: url('horse.jpg') center/cover no-repeat;
-            opacity: 0.3; /* 提高透明度，让颜色透出来 */
-            filter: brightness(0.6) contrast(1.1); /* 增加对比度，拒绝死灰 */
+            opacity: 0.25; filter: brightness(0.5) contrast(1.2);
             z-index: -2;
         }
-        .vignette { 
-            position: fixed; inset: 0; 
-            background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.9) 100%); 
-            z-index: -1; 
-        }
+        .vignette { position: fixed; inset: 0; background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.9) 100%); z-index: -1; }
 
-        /* 3. 板块色彩：悬停时的光效 */
+        /* 板块悬停色彩逻辑 */
         .vogue-card {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(15px);
@@ -37,28 +31,22 @@
             position: relative; overflow: hidden;
         }
 
-        /* 各板块专属颜色定义 */
-        .c-cinema:hover { border-color: #ff3c3c; box-shadow: 0 0 40px rgba(255, 60, 60, 0.15); }
         .c-works:hover { border-color: #007bff; box-shadow: 0 0 40px rgba(0, 123, 255, 0.15); }
+        .c-cinema:hover { border-color: #ff3c3c; box-shadow: 0 0 40px rgba(255, 60, 60, 0.15); }
         .c-read:hover { border-color: #00ff88; box-shadow: 0 0 40px rgba(0, 255, 136, 0.15); }
         .c-music:hover { border-color: #ffb400; box-shadow: 0 0 40px rgba(255, 180, 0, 0.15); }
 
-        /* 彩色线条 */
         .line { position: absolute; bottom: 0; left: 0; width: 0; height: 4px; transition: 0.5s; }
-        .c-cinema:hover .line { width: 100%; background: #ff3c3c; }
         .c-works:hover .line { width: 100%; background: #007bff; }
+        .c-cinema:hover .line { width: 100%; background: #ff3c3c; }
         .c-read:hover .line { width: 100%; background: #00ff88; }
         .c-music:hover .line { width: 100%; background: #ffb400; }
 
-        /* 文本色彩 */
-        .accent-text { color: #ffb400; } /* 强调黄 */
-        
-        #app-content { transition: opacity 0.5s ease; opacity: 1; }
-        .page-fade { opacity: 0 !important; }
-        
-        /* 频谱色彩 */
         .bar { width: 2px; height: 12px; background: #ffb400; transition: 0.3s; }
         .bar-p { height: 2px !important; opacity: 0.3; background: white !important; }
+        
+        #app-content { transition: opacity 0.5s ease; }
+        .page-fade { opacity: 0 !important; }
     </style>
 </head>
 <body>
@@ -68,45 +56,57 @@
     <audio id="global-bgm" loop src="bgm.mp3"></audio>
 
     <nav class="fixed top-0 w-full p-8 md:p-12 z-[100] flex justify-between items-center pointer-events-none">
-        <p class="text-[9px] tracking-[0.4em] opacity-40 uppercase pointer-events-auto cursor-pointer hover:text-[#ffb400] hover:opacity-100 transition" onclick="router('index.html')">MAO TIANYI</p>
+        <p class="text-[9px] tracking-[0.4em] opacity-40 uppercase pointer-events-auto cursor-pointer hover:text-[#ffb400] transition" onclick="router('index.html')">MAO TIANYI</p>
         <div onclick="toggleMusic(event)" class="flex items-center gap-3 cursor-pointer pointer-events-auto group">
             <div class="flex items-end gap-1">
                 <div class="bar bar-p"></div><div class="bar bar-p"></div><div class="bar bar-p"></div>
             </div>
-            <span id="m-status" class="text-[9px] opacity-40 uppercase group-hover:text-[#ffb400]">Music Off</span>
+            <span id="m-status" class="text-[9px] opacity-40 uppercase">Music Off</span>
         </div>
     </nav>
 
     <div id="app-content" class="min-h-screen pt-40 pb-20">
         <main class="max-w-[1400px] mx-auto px-8">
-            <header class="mb-24">
-                <p class="text-[10px] accent-text tracking-[0.5em] uppercase mb-4 font-bold">Visual Archive / 2026</p>
-                <h1 class="vogue-t text-6xl md:text-9xl italic font-black text-white leading-tight">毛天艺</h1>
+            <header class="mb-20">
+                <p class="text-[10px] text-[#ffb400] tracking-[0.5em] uppercase mb-4 font-bold">Visual Archive / 2026</p>
+                <h1 class="vogue-t text-4xl md:text-5xl italic font-black text-white">毛天艺 <span class="text-2xl md:text-3xl ml-2 opacity-50 not-italic font-light">Tianyi Mao</span></h1>
             </header>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 
-                <div onclick="router('movies.html')" class="vogue-card c-cinema p-10 aspect-[4/5] flex flex-col justify-between cursor-pointer group">
-                    <div class="text-[9px] opacity-30 group-hover:text-[#ff3c3c] group-hover:opacity-100 uppercase transition">01 / Archive</div>
-                    <h2 class="vogue-t text-4xl italic group-hover:translate-x-2 transition-transform">Cinema</h2>
+                <div onclick="router('works.html')" class="vogue-card c-works p-10 aspect-[4/5] flex flex-col justify-between cursor-pointer group">
+                    <div class="text-[9px] opacity-30 group-hover:text-[#007bff] uppercase transition">01 / Project</div>
+                    <div>
+                        <h2 class="vogue-t text-3xl italic mb-1">视觉作品集</h2>
+                        <h3 class="text-2xl font-light opacity-60 group-hover:opacity-100 transition">Works</h3>
+                    </div>
                     <div class="line"></div>
                 </div>
 
-                <div onclick="router('works.html')" class="vogue-card c-works p-10 aspect-[4/5] flex flex-col justify-between cursor-pointer group">
-                    <div class="text-[9px] opacity-30 group-hover:text-[#007bff] group-hover:opacity-100 uppercase transition">02 / Project</div>
-                    <h2 class="vogue-t text-4xl italic group-hover:translate-x-2 transition-transform">Works</h2>
+                <div onclick="router('movies.html')" class="vogue-card c-cinema p-10 aspect-[4/5] flex flex-col justify-between cursor-pointer group">
+                    <div class="text-[9px] opacity-30 group-hover:text-[#ff3c3c] uppercase transition">02 / Archive</div>
+                    <div>
+                        <h2 class="vogue-t text-3xl italic mb-1">电影人生</h2>
+                        <h3 class="text-2xl font-light opacity-60 group-hover:opacity-100 transition">Cinema</h3>
+                    </div>
                     <div class="line"></div>
                 </div>
 
                 <div onclick="router('read.html')" class="vogue-card c-read p-10 aspect-[4/5] flex flex-col justify-between cursor-pointer group">
-                    <div class="text-[9px] opacity-30 group-hover:text-[#00ff88] group-hover:opacity-100 uppercase transition">03 / Notes</div>
-                    <h2 class="vogue-t text-4xl italic group-hover:translate-x-2 transition-transform">Read</h2>
+                    <div class="text-[9px] opacity-30 group-hover:text-[#00ff88] uppercase transition">03 / Notes</div>
+                    <div>
+                        <h2 class="vogue-t text-3xl italic mb-1">阅读人生</h2>
+                        <h3 class="text-2xl font-light opacity-60 group-hover:opacity-100 transition">Read</h3>
+                    </div>
                     <div class="line"></div>
                 </div>
 
                 <div onclick="router('music.html')" class="vogue-card c-music p-10 aspect-[4/5] flex flex-col justify-between cursor-pointer group">
-                    <div class="text-[9px] opacity-30 group-hover:text-[#ffb400] group-hover:opacity-100 uppercase transition">04 / Audio</div>
-                    <h2 class="vogue-t text-4xl italic group-hover:translate-x-2 transition-transform">Music</h2>
+                    <div class="text-[9px] opacity-30 group-hover:text-[#ffb400] uppercase transition">04 / Audio</div>
+                    <div>
+                        <h2 class="vogue-t text-3xl italic mb-1">音乐人生</h2>
+                        <h3 class="text-2xl font-light opacity-60 group-hover:opacity-100 transition">Music</h3>
+                    </div>
                     <div class="line"></div>
                 </div>
 
