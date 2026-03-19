@@ -3,132 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CINEMA ARCHIVE | MAO TIANYI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>CINEMA | MAO TIANYI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="movies.js"></script>
-    <style>
-        body { background: #000; color: white; margin: 0; overflow: hidden; font-family: 'Inter', sans-serif; }
-        .vogue-t { font-family: 'Noto Serif SC', serif; }
-        
-        /* 1. 左侧：双列极密列表容器 */
-        .list-scroll {
-            height: 100vh; overflow-y: auto; scroll-behavior: smooth;
-        }
-        .list-scroll::-webkit-scrollbar { display: none; }
+    <script src="movies.js"></script> <style>
+        body { background: #000; color: #fff; margin: 0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        #app-content { transition: opacity 0.8s ease, transform 0.8s ease; opacity: 0; transform: translateY(10px); }
+        .page-active { opacity: 1 !important; transform: translateY(0) !important; }
 
-        /* 极密两列网格 */
-        .dense-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* 严格两列 */
-            gap: 1px 20px; /* 极细行间距，较宽列间距 */
-        }
+        /* Josh Warner 风格：超大标题与极小标注 */
+        .vogue-title { font-size: 14vw; font-weight: 100; line-height: 0.8; letter-spacing: -0.04em; }
+        .sub-label { font-size: 10px; letter-spacing: 0.5em; opacity: 0.3; text-transform: uppercase; }
 
-        .movie-line { 
-            border-bottom: 1px solid rgba(255,255,255,0.03);
-            transition: 0.1s; cursor: crosshair;
-            display: flex; flex-direction: column; /* 改为上下行，进一步压缩横向空间 */
-            padding: 4px 0;
-        }
-        .movie-line:hover { background: rgba(255,255,255,0.08); border-color: #ff3c3c; }
-        .movie-line:hover .zh-t { color: #ff3c3c; }
+        /* 1. 个人十佳：错位视觉流 */
+        .top10-item { display: grid; grid-template-columns: repeat(12, 1fr); margin-bottom: 25vh; align-items: end; }
+        .top10-img-box { grid-column: span 8; position: relative; overflow: hidden; }
+        .top10-item:nth-child(even) .top10-img-box { grid-column: 5 / span 8; }
+        .top10-text { grid-column: span 4; z-index: 2; padding-bottom: 2rem; }
+        .top10-item:nth-child(even) .top10-text { grid-column: 1 / span 4; text-align: right; }
 
-        /* 2. 右侧：满屏彩色矩阵 (亲吻墙) */
-        .mosaic-container {
-            height: 100vh; overflow-y: auto; background: #000;
-        }
-        .mosaic-container::-webkit-scrollbar { display: none; }
-        
-        .mosaic-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* 更小的方格 */
-            grid-auto-rows: 85px;
-            gap: 1px;
-            padding: 1px;
-        }
-        .mosaic-item {
-            width: 100%; height: 100%; object-fit: cover;
-            transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-            opacity: 0.9;
-        }
-        .mosaic-item:hover { 
-            opacity: 1; transform: scale(2); z-index: 100; 
-            border: 1px solid white; box-shadow: 0 0 30px rgba(0,0,0,0.9);
-        }
+        .top10-img { width: 100%; filter: grayscale(1); transition: 1.2s cubic-bezier(0.23, 1, 0.32, 1); }
+        .top10-item:hover .top10-img { filter: grayscale(0); transform: scale(1.05); }
+        .big-num { font-size: 10vw; font-weight: 100; opacity: 0.1; margin-bottom: -1.5rem; }
 
-        /* 动画与转场 */
-        .fade-in { animation: fIn 0.8s ease forwards; opacity: 0; }
-        @keyframes fIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-        #app-content { transition: opacity 0.5s; }
+        /* 2. 电影名称列表：极细横排 */
+        .name-list { border-top: 1px solid rgba(255,255,255,0.1); padding: 10vh 0; }
+        .name-item { font-size: 1.5rem; font-weight: 200; border-bottom: 1px solid rgba(255,255,255,0.03); padding: 0.8rem 0; transition: 0.3s; display: flex; justify-content: space-between; }
+        .name-item:hover { color: #ff3c3c; border-bottom-color: rgba(255,255,255,0.2); padding-left: 1rem; }
+
+        /* 3. 海报墙：高密度矩阵 */
+        .poster-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 1px; background: rgba(255,255,255,0.05); }
+        .poster-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0.3; transition: 0.5s; cursor: crosshair; }
+        .poster-item:hover { opacity: 1; transform: scale(1.6); z-index: 100; box-shadow: 0 0 40px #000; outline: 1px solid #fff; }
+
+        /* 音乐动效 */
+        .bar { width: 1px; height: 12px; background: white; transition: 0.3s; }
+        .bar-p { height: 1px !important; opacity: 0.2; }
     </style>
 </head>
-<body>
+<body class="p-8 md:p-20">
+    <audio id="global-bgm" loop src="bgm.mp3"></audio>
 
-    <div id="app-content" class="h-screen w-screen flex overflow-hidden">
-        
-        <nav class="fixed top-0 w-full p-6 z-[100] flex justify-between items-center pointer-events-none">
-            <div onclick="router('index.html')" class="pointer-events-auto cursor-pointer opacity-30 hover:opacity-100 text-[8px] tracking-[0.4em] uppercase transition-all px-4 py-2 bg-black/40 backdrop-blur-md">← INDEX</div>
-            <div id="m-count" class="text-[9px] text-[#ffb400] font-black tracking-widest uppercase italic">SYNCING...</div>
-        </nav>
+    <nav class="fixed top-0 left-0 w-full p-10 md:p-16 z-[200] flex justify-between items-start pointer-events-none">
+        <div onclick="router('index.html')" class="sub-label pointer-events-auto cursor-pointer hover:opacity-100 transition-opacity">← Back to Index</div>
+        <div onclick="toggleMusic(event)" class="flex items-end gap-[2px] cursor-pointer pointer-events-auto p-4">
+            <div class="bar bar-p"></div><div class="bar bar-p"></div><div class="bar bar-p"></div>
+        </div>
+    </nav>
 
-        <div class="w-1/2 list-scroll pt-32 px-8 md:px-12 border-r border-white/5 bg-[#050505]">
-            <header class="mb-10">
-                <h1 class="vogue-t text-4xl italic font-black">电影档案馆</h1>
-                <p class="text-[8px] opacity-30 tracking-[0.3em] uppercase mt-2">Dual-Column Archive Mode</p>
-            </header>
-            
-            <div id="movie-list" class="dense-grid pb-40">
+    <div id="app-content">
+        <header class="h-[70vh] flex flex-col justify-end mb-32">
+            <h1 class="vogue-title">FILM<br><span class="opacity-10 italic">ARCHIVE</span></h1>
+            <p class="sub-label mt-12">Selected works & Chronological data</p>
+        </header>
+
+        <div id="top10-area" class="mb-64">
+            </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-20 items-start mb-64">
+            <div class="md:col-span-4 sticky top-40">
+                <h2 class="text-5xl font-light tracking-tighter">THE TITLES</h2>
+                <p class="sub-label mt-4">Full database of watched films</p>
+            </div>
+            <div class="md:col-span-8 name-list" id="movie-names">
                 </div>
         </div>
 
-        <div class="w-1/2 mosaic-container">
-            <div class="mosaic-grid" id="mosaic-container">
+        <section class="mb-40">
+            <div class="mb-12">
+                <h2 class="text-5xl font-light tracking-tighter uppercase">Visual Wall</h2>
+                <p class="sub-label mt-2">Mosaic of fragments</p>
+            </div>
+            <div id="poster-wall" class="poster-grid">
                 </div>
-        </div>
+        </section>
 
-        <script>
-            (function() {
-                if (typeof movieData === 'undefined') return;
-
-                const listContainer = document.getElementById('movie-list');
-                const mosaicContainer = document.getElementById('mosaic-container');
-                const countDisplay = document.getElementById('m-count');
-
-                countDisplay.innerText = `${movieData.length} FRAGMENTS`;
-
-                // 1. 生成双列列表
-                listContainer.innerHTML = movieData.map((movie, index) => {
-                    const parts = movie.title.split(' / ');
-                    const zh = parts[0];
-                    const en = parts[parts.length - 1] || "";
-                    
-                    return `
-                        <div class="movie-line fade-in" style="animation-delay: ${index * 0.005}s">
-                            <span class="vogue-t text-[10px] zh-t font-black tracking-tighter opacity-80 truncate">${zh}</span>
-                            <span class="text-[7px] uppercase opacity-20 truncate italic font-light tracking-tight">${en}</span>
-                        </div>
-                    `;
-                }).join('');
-
-                // 2. 生成彩色海报矩阵并过滤死链
-                movieData.forEach((movie) => {
-                    if (!movie.poster) return;
-                    const img = new Image();
-                    img.src = movie.poster;
-                    img.className = 'mosaic-item';
-                    img.loading = "lazy";
-                    
-                    img.onload = () => mosaicContainer.appendChild(img);
-                    img.onerror = () => img.remove();
-                });
-
-                // 3. 音乐连贯逻辑 (SPA 同步)
-                const audio = document.getElementById('global-bgm');
-                if (audio) {
-                    console.log("Cinema: Background Music Persistent.");
-                }
-            })();
-        </script>
+        <footer class="py-20 text-center opacity-10 sub-label">
+            End of Cinema Archive / 2026
+        </footer>
     </div>
+
+    <script>
+        const audio = document.getElementById('global-bgm');
+        const app = document.getElementById('app-content');
+
+        // 个人十佳
+        const top10 = [
+            { id: "01", title: "杀死比尔 2", en: "Kill Bill: Vol. 2", img: "https://image.tmdb.org/t/p/original/27TeSl3S8pZ1v7BNvL97m9v987E.jpg" },
+            { id: "02", title: "新世界", en: "New World", img: "https://image.tmdb.org/t/p/original/9vHofM6cZonF1Xb1Gcl5CjE3ZkI.jpg" },
+            { id: "03", title: "爱在黎明破晓前", en: "Before Sunrise", img: "https://image.tmdb.org/t/p/original/i9uQUv9EPia99SStpS68Z99986G.jpg" }
+        ];
+
+        function toggleMusic(e) {
+            if(e) e.stopPropagation();
+            const bars = document.querySelectorAll('.bar');
+            if (audio.paused) { 
+                audio.play(); bars.forEach(b => b.classList.remove('bar-p'));
+            } else { 
+                audio.pause(); bars.forEach(b => b.classList.add('bar-p'));
+            }
+        }
+
+        async function router(url) {
+            app.style.opacity = "0";
+            app.style.transform = "translateY(-10px)";
+            localStorage.setItem('bgmTime', audio.currentTime);
+            localStorage.setItem('bgmPlaying', !audio.paused);
+            setTimeout(() => { window.location.href = url; }, 800);
+        }
+
+        window.onload = () => {
+            const savedTime = localStorage.getItem('bgmTime');
+            if(savedTime) audio.currentTime = savedTime;
+            if(localStorage.getItem('bgmPlaying') === 'true') {
+                audio.play().catch(() => {});
+                document.querySelectorAll('.bar').forEach(b => b.classList.remove('bar-p'));
+            }
+
+            // 1. 渲染十佳
+            document.getElementById('top10-area').innerHTML = top10.map(m => `
+                <div class="top10-item group">
+                    <div class="top10-img-box">
+                        <img src="${m.img}" class="top10-img" onerror="this.src='https://via.placeholder.com/800x1200/000?text=Poster'">
+                    </div>
+                    <div class="top10-text">
+                        <div class="big-num">${m.id}</div>
+                        <h3 class="text-4xl font-light tracking-widest">${m.title}</h3>
+                        <p class="sub-label mt-2">${m.en}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            // 2. 渲染名称列表与海报墙 (依赖 movies.js 中的 movieData)
+            if (typeof movieData !== 'undefined') {
+                const nameList = document.getElementById('movie-names');
+                const wall = document.getElementById('poster-wall');
+
+                nameList.innerHTML = movieData.slice(0, 50).map(m => `
+                    <div class="name-item">
+                        <span class="font-light tracking-widest">${m.title.split(' / ')[0]}</span>
+                        <span class="text-[10px] opacity-20 uppercase font-thin italic">${m.title.split(' / ')[1] || ''}</span>
+                    </div>
+                `).join('');
+
+                movieData.forEach(m => {
+                    if(!m.poster) return;
+                    const img = new Image();
+                    img.src = m.poster;
+                    img.className = 'poster-item';
+                    img.loading = "lazy";
+                    img.onerror = () => img.remove();
+                    wall.appendChild(img);
+                });
+            }
+
+            setTimeout(() => app.classList.add('page-active'), 100);
+        };
+    </script>
 </body>
 </html>
