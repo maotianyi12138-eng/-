@@ -2,81 +2,48 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>WORKS - MAO TIANYI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKS | MAO TIANYI</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap" rel="stylesheet">
+    <style>
+        body { background: #000; color: #fff; margin: 0; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .sub-label { font-size: 10px; letter-spacing: 0.5em; opacity: 0.3; text-transform: uppercase; }
+        
+        /* 作品堆叠动效 */
+        .stack-c { position: relative; height: 180px; transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1); cursor: pointer; }
+        .s-img { position: absolute; top: 0; width: 100%; aspect-ratio: 16/10; object-fit: cover; transition: 0.6s; border: 1px solid rgba(255,255,255,0.1); }
+        .s-img:nth-child(2) { z-index: 2; transform: translateY(15px) scale(0.96); opacity: 0.7; }
+        .s-img:nth-child(3) { z-index: 1; transform: translateY(30px) scale(0.92); opacity: 0.4; }
+        
+        .expanded { height: auto !important; margin-bottom: 3rem; }
+        .expanded .s-img { position: relative; transform: none !important; opacity: 1 !important; margin-bottom: 10px; }
+    </style>
 </head>
-<body class="bg-[#050505] text-white">
-    <div id="app-content">
-        <style>
-            .vogue-t { font-family: 'Noto Serif SC', serif; }
-            .stack-c { position: relative; height: 140px; transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1); cursor: s-resize; margin-bottom: 1.5rem; }
-            @media (min-width: 768px) { .stack-c { height: 180px; } }
-            .stack-c.expanded { height: auto; cursor: default; margin-bottom: 4rem; }
-            .s-img { 
-                position: absolute; top: 0; left: 0; width: 100%; aspect-ratio: 16/10; object-fit: cover; 
-                transition: 0.8s cubic-bezier(0.19,1,0.22,1); border: 1px solid rgba(255,255,255,0.08); 
-                box-shadow: 0 10px 30px #000;
-            }
-            /* 堆叠层级逻辑 */
-            .s-img:nth-child(1) { transform: translateY(0) scale(1); z-index: 10; }
-            .s-img:nth-child(2) { transform: translateY(12px) scale(0.97); z-index: 9; opacity: 0.8; }
-            .s-img:nth-child(3) { transform: translateY(24px) scale(0.94); z-index: 8; opacity: 0.6; }
-            .s-img:nth-child(n+4) { transform: translateY(36px) scale(0.91); z-index: 1; opacity: 0; }
-            /* 展开状态 */
-            .expanded .s-img { position: relative; transform: none!important; margin-bottom: 1rem; opacity: 1!important; aspect-ratio: auto; cursor: zoom-in; }
-        </style>
+<body class="p-10 md:p-24 pt-48 overflow-x-hidden">
+    <nav class="fixed top-12 left-12 z-[200] pointer-events-auto">
+        <a href="index.html" class="sub-label opacity-40 hover:opacity-100 transition-opacity">← Back / Index</a>
+    </nav>
 
-        <nav class="p-6 md:p-16 flex justify-between items-center max-w-7xl mx-auto">
-            <div onclick="router('index.html')" class="opacity-40 hover:opacity-100 text-[9px] tracking-[0.3em] cursor-pointer uppercase">← Archive / 返回首页</div>
-            <div class="text-[9px] opacity-40 uppercase tracking-widest" id="m-status">On</div>
-        </nav>
+    <header class="mb-48 h-[60vh] flex flex-col justify-end">
+        <h1 class="text-[12vw] font-light tracking-tighter leading-[0.8]">VISUAL<br><span class="opacity-10 italic ml-[10%]">INDEX</span></h1>
+        <p class="sub-label mt-8">Selected works & Art Direction</p>
+    </header>
 
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-5 md:gap-x-10 gap-y-20 max-w-7xl mx-auto px-6 pb-32">
-            
-            <div class="group">
-                <div class="stack-c" onclick="this.classList.toggle('expanded')">
-                    <img src="批判1" class="s-img"><img src="批判2" class="s-img"><img src="批判3" class="s-img"><img src="批判4" class="s-img">
-                </div>
-                <div class="mt-4 border-l-2 border-blue-500 pl-3">
-                    <h3 class="vogue-t text-lg font-bold tracking-tighter">DIVORCE IN CHINA</h3>
-                    <p class="text-[9px] opacity-40 uppercase mt-1">Social Study / 批判设计</p>
-                </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-24 pb-48">
+        <div class="group">
+            <div class="stack-c" onclick="this.classList.toggle('expanded')">
+                <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=800" class="s-img">
+                <img src="https://images.unsplash.com/photo-1550684847-75bdda21cc95?auto=format&fit=crop&w=800" class="s-img">
+                <img src="https://images.unsplash.com/photo-1550684848-86a5d8727436?auto=format&fit=crop&w=800" class="s-img">
             </div>
-
-            <div class="group">
-                <div class="stack-c" onclick="this.classList.toggle('expanded')">
-                    <img src="保龄1" class="s-img"><img src="保龄2" class="s-img"><img src="保龄3" class="s-img">
-                    <img src="保龄4" class="s-img"><img src="保龄5" class="s-img"><img src="保龄6" class="s-img">
-                </div>
-                <div class="mt-4 border-l-2 border-red-500 pl-3">
-                    <h3 class="vogue-t text-lg font-bold tracking-tighter">BOWLING CAMPAIGN</h3>
-                    <p class="text-[9px] opacity-40 uppercase mt-1">Commercial / 影像项目</p>
-                </div>
+            <div class="mt-6 border-l border-white/20 pl-4">
+                <h3 class="text-xl font-light">DIGITAL ARTIFACTS</h3>
+                <p class="sub-label mt-1">2026 / 视觉实验</p>
             </div>
-
-            <div class="group">
-                <div class="stack-c" onclick="this.classList.toggle('expanded')">
-                    <img src="血液1.png" class="s-img"><img src="血液2.png" class="s-img">
-                    <img src="血液3.png" class="s-img"><img src="血液4.png" class="s-img">
-                </div>
-                <div class="mt-4 border-l-2 border-red-900 pl-3">
-                    <h3 class="vogue-t text-lg font-bold tracking-tighter">BLOOD NIRVANA</h3>
-                    <p class="text-[9px] opacity-40 uppercase mt-1">Visual Lab / 视觉实验</p>
-                </div>
-            </div>
-
-            <div class="group">
-                <div class="stack-c" onclick="this.classList.toggle('expanded')">
-                    <img src="健身1.png" class="s-img"><img src="健身2.png" class="s-img"><img src="健身3.png" class="s-img">
-                    <img src="健身4.png" class="s-img"><img src="健身5.png" class="s-img">
-                </div>
-                <div class="mt-4 border-l-2 border-green-800 pl-3">
-                    <h3 class="vogue-t text-lg font-bold tracking-tighter">MUSCLE FACTORY</h3>
-                    <p class="text-[9px] opacity-40 uppercase mt-1">Movement / 运动影像</p>
-                </div>
-            </div>
-
         </div>
-    </div>
+        </div>
+
+    <footer class="text-center py-20 opacity-10 sub-label tracking-[1em]">End of Index / Mao Tianyi © 2026</footer>
 </body>
 </html>
