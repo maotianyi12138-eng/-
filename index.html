@@ -3,100 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAO TIANYI | ARCHIVE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>我的个人作品集 | 灵感来自 Josh Warner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap" rel="stylesheet">
     <style>
-        body { background: #000; color: #fff; margin: 0; font-family: 'Inter', sans-serif; overflow: hidden; }
-        #app-content { transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.8s ease; opacity: 0; transform: translateY(20px); }
-        .page-active { opacity: 1 !important; transform: translateY(0) !important; }
-        
-        /* Josh Warner 特有的超大标题排版 */
-        .big-title { font-size: 14vw; font-weight: 100; line-height: 0.8; letter-spacing: -0.04em; }
-        .sub-label { font-size: 10px; letter-spacing: 0.5em; opacity: 0.3; text-transform: uppercase; }
-        
-        .nav-item { position: relative; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: 0.4s; }
-        .nav-item:hover { padding-left: 2rem; border-top-color: #fff; }
-        .nav-num { position: absolute; left: -4rem; top: 2.2rem; font-size: 10px; opacity: 0.2; }
+        /* 1. 全局样式变量 - 方便你自定义颜色 */
+        :root {
+            --bg-color: #f8f8f8;
+            --text-color: #1a1a1a;
+            --accent-color: #ff3e00; /* 强调色 */
+            --card-bg: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
 
-        /* 音乐控制条 */
-        .bar { width: 1px; height: 12px; background: white; transition: 0.3s; }
-        .bar-p { height: 1px !important; opacity: 0.2; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 4vw;
+        }
+
+        /* 2. 导航栏布局 */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10vh;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            opacity: 0.6;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+        }
+
+        /* 3. Hero 头部区域 */
+        header {
+            max-width: 800px;
+            margin-bottom: 15vh;
+        }
+
+        header h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem); /* 响应式字号 */
+            line-height: 1.1;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 2rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.7;
+            max-width: 500px;
+        }
+
+        /* 4. 作品集网格系统 - 模仿 Josh 的排列感 */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 4px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        /* 悬停时的位移与阴影效果 */
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        .image-container {
+            width: 100%;
+            aspect-ratio: 16 / 10; /* 保持统一比例 */
+            background: #eee;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%); /* 默认黑白 */
+            transition: var(--transition);
+        }
+
+        .project-card:hover img {
+            filter: grayscale(0%); /* 悬停恢复彩色 */
+            transform: scale(1.05);
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-info span {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.5;
+        }
+
+        /* 5. 页脚 */
+        footer {
+            margin-top: 20vh;
+            padding-bottom: 5vh;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+
+        /* 移动端微调 */
+        @media (max-width: 600px) {
+            body { padding: 6vw; }
+            .project-grid { grid-template-columns: 1fr; }
+            header { margin-bottom: 8vh; }
+        }
     </style>
 </head>
 <body>
-    <audio id="global-bgm" loop src="bgm.mp3"></audio>
 
-    <nav class="fixed top-0 w-full p-10 md:p-16 z-[100] flex justify-between items-start pointer-events-none">
-        <div class="sub-label pointer-events-auto">Portfolio / 2026</div>
-        <div onclick="toggleMusic(event)" class="flex items-end gap-[3px] cursor-pointer pointer-events-auto p-4">
-            <div class="bar bar-p"></div><div class="bar bar-p"></div><div class="bar bar-p"></div>
+    <nav>
+        <div class="logo">YOURNAME.</div>
+        <div class="nav-links">
+            <a href="#work">作品</a>
+            <a href="#about">关于</a>
+            <a href="mailto:hello@example.com">联系</a>
         </div>
     </nav>
 
-    <div id="app-content" class="min-h-screen flex flex-col justify-end p-10 md:p-24">
-        <div class="mb-32">
-            <h1 class="big-title">MAO<br>TIANYI</h1>
+    <header>
+        <h1>构建极简数字体验。</h1>
+        <p>我是一名设计师/开发者，专注于通过干净的代码和大胆的排版解决复杂问题。</p>
+    </header>
+
+    <main id="work">
+        <div class="project-grid">
+            <a href="#" class="project-card">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="项目预览">
+                </div>
+                <div class="project-info">
+                    <span>Web Design / 2026</span>
+                    <h3>数字图书馆界面设计</h3>
+                </div>
+            </a>
+
+            <a href="#" class="project-card">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="项目预览">
+                </div>
+                <div class="project-info">
+                    <span>Development / 2026</span>
+                    <h3>交互式电影海报系统</h3>
+                </div>
+            </a>
+
+            <a href="#" class="project-card">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80" alt="项目预览">
+                </div>
+                <div class="project-info">
+                    <span>Branding / 2025</span>
+                    <h3>极简视觉识别系统</h3>
+                </div>
+            </a>
         </div>
+    </main>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
-            <div class="flex flex-col">
-                <div onclick="router('works.html')" class="nav-item group">
-                    <span class="nav-num">01</span>
-                    <h2 class="text-4xl font-light tracking-tighter">视觉作品 / VISUAL</h2>
-                </div>
-                <div onclick="router('cinema.html')" class="nav-item group">
-                    <span class="nav-num">02</span>
-                    <h2 class="text-4xl font-light tracking-tighter">电影人生 / CINEMA</h2>
-                </div>
-                <div onclick="router('read.html')" class="nav-item group">
-                    <span class="nav-num">03</span>
-                    <h2 class="text-4xl font-light tracking-tighter">阅读人生 / READ</h2>
-                </div>
-                <div onclick="router('music.html')" class="nav-item group">
-                    <span class="nav-num">04</span>
-                    <h2 class="text-4xl font-light tracking-tighter">音乐人生 / AUDIO</h2>
-                </div>
-            </div>
-            <div class="hidden md:flex items-end justify-end">
-                <p class="sub-label leading-loose text-right">
-                    Focused on digital curation<br>and visual storytelling.<br>Based in China.
-                </p>
-            </div>
-        </div>
-    </div>
+    <footer>
+        <div>&copy; 2026 YOURNAME.</div>
+        <div>从 Melbourne 汲取的灵感</div>
+    </footer>
 
-    <script>
-        const audio = document.getElementById('global-bgm');
-        const app = document.getElementById('app-content');
-
-        function toggleMusic(e) {
-            if(e) e.stopPropagation();
-            const bars = document.querySelectorAll('.bar');
-            if (audio.paused) { 
-                audio.play(); bars.forEach(b => b.classList.remove('bar-p'));
-            } else { 
-                audio.pause(); bars.forEach(b => b.classList.add('bar-p'));
-            }
-        }
-
-        async function router(url) {
-            app.style.transform = "translateY(-20px)";
-            app.style.opacity = "0";
-            localStorage.setItem('bgmTime', audio.currentTime);
-            localStorage.setItem('bgmPlaying', !audio.paused);
-            setTimeout(() => { window.location.href = url; }, 800);
-        }
-
-        window.onload = () => {
-            const savedTime = localStorage.getItem('bgmTime');
-            if(savedTime) audio.currentTime = savedTime;
-            if(localStorage.getItem('bgmPlaying') === 'true') {
-                audio.play().catch(() => {});
-                document.querySelectorAll('.bar').forEach(b => b.classList.remove('bar-p'));
-            }
-            setTimeout(() => app.classList.add('page-active'), 100);
-        };
-    </script>
 </body>
 </html>
