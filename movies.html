@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CINEMA | MAO TIANYI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&family=Noto+Sans+SC:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="movies.js"></script>
     <style>
-        body { background: #000; color: white; margin: 0; font-family: 'Inter', 'Noto Sans SC', sans-serif; overflow-x: hidden; }
+        @font-face {
+            font-family: 'ShanghaiModeng';
+            src: url('ShanghaiModeng.otf') format('opentype');
+        }
+
+        body { background: #000; color: white; margin: 0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .sh-modern { font-family: 'ShanghaiModeng', serif; font-weight: normal; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
 
-        /* 统一标题样式：极细、间距大 */
-        .vogue-header { font-weight: 100; letter-spacing: 0.5em; }
+        .vogue-header { letter-spacing: 0.5em; font-weight: normal; }
         
-        /* 龙鳞装容器 */
         .dragon-scale-container {
             display: flex; padding-left: 8%; padding-right: 5%; align-items: center; height: 65vh;
             overflow-x: auto; overflow-y: hidden;
@@ -38,12 +42,11 @@
             color: rgba(255,255,255,0.05); pointer-events: none;
         }
 
-        /* 主布局 */
         .main-layout { display: flex; min-height: 100vh; border-top: 1px solid rgba(255,255,255,0.1); }
         .list-area { width: 42%; overflow-y: auto; background: #050505; border-right: 1px solid rgba(255,255,255,0.05); }
         .wall-area { width: 58%; overflow-y: auto; background: #000; }
 
-        .m-line { border-bottom: 1px solid rgba(255,255,255,0.02); padding: 6px 0; transition: 0.2s; }
+        .m-line { border-bottom: 1px solid rgba(255,255,255,0.02); padding: 8px 0; transition: 0.2s; }
         .m-line:hover { color: #ff3c3c; background: rgba(255,255,255,0.03); }
 
         .mosaic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(65px, 1fr)); gap: 1px; }
@@ -62,33 +65,26 @@
 
     <section class="min-h-screen flex flex-col justify-center bg-black">
         <header class="px-12 md:px-24 mb-16">
-            <h2 class="vogue-header text-4xl md:text-5xl">个人十佳</h2>
+            <h2 class="sh-modern vogue-header text-5xl md:text-6xl">个人十佳</h2>
             <p class="text-[9px] opacity-20 tracking-[0.8em] mt-6 uppercase font-light">The Definitive Top Ten</p>
         </header>
-
         <div class="dragon-scale-container no-scrollbar" id="dragon-content"></div>
-
-        <div class="mt-20 text-center opacity-10">
-            <p class="text-[8px] tracking-[1em] animate-pulse">DISCOVER ARCHIVE</p>
-        </div>
     </section>
 
     <div id="app-content" class="main-layout">
         <div class="list-area no-scrollbar">
             <header class="p-10 pt-20">
-                <h2 class="vogue-header text-3xl opacity-80">看过</h2>
+                <h2 class="sh-modern vogue-header text-4xl opacity-80">看过</h2>
                 <p class="text-[8px] opacity-20 tracking-[0.5em] mt-2 uppercase font-light">Full Archive / 689 Fragments</p>
             </header>
             <div id="movie-list" class="grid grid-cols-2 gap-x-8 gap-y-1 px-10 pb-32"></div>
         </div>
-
         <div class="wall-area no-scrollbar">
             <div id="mosaic-grid" class="mosaic-grid"></div>
         </div>
     </div>
 
     <script>
-        // 已经为你换好的 Top 10 海报链接
         const myTop10 = [
             { id: 1, title: "杀死比尔 2", en: "Kill Bill: Vol. 2", img: "https://img9.doubanio.com/view/photo/l/public/p641144061.jpg" },
             { id: 2, title: "新世界", en: "New World", img: "https://img1.doubanio.com/view/photo/l/public/p1903379979.jpg" },
@@ -109,7 +105,7 @@
                     <div class="top-tag">${m.id}</div>
                     <img src="${m.img}" class="w-full shadow-2xl border border-white/5 grayscale hover:grayscale-0 transition-all duration-1000">
                     <div class="mt-6 px-1 opacity-0 hover:opacity-100 transition-opacity">
-                        <div class="text-[10px] font-light tracking-widest">${m.title}</div>
+                        <div class="sh-modern text-lg tracking-widest">${m.title}</div>
                         <div class="text-[7px] opacity-30 uppercase mt-1 tracking-tighter">${m.en}</div>
                     </div>
                 </div>
@@ -119,20 +115,15 @@
                 const list = document.getElementById('movie-list');
                 list.innerHTML = movieData.map(m => `
                     <div class="m-line">
-                        <span class="text-[9px] font-light truncate tracking-wider">${m.title.split(' / ')[0]}</span>
+                        <span class="sh-modern text-base truncate tracking-wider">${m.title.split(' / ')[0]}</span>
                         <span class="text-[7px] opacity-20 truncate italic font-light">${m.title.split(' / ').pop()}</span>
                     </div>
                 `).join('');
-
                 const wall = document.getElementById('mosaic-grid');
                 movieData.forEach(m => {
                     if(!m.poster) return;
-                    const img = new Image();
-                    img.src = m.poster;
-                    img.className = 'mosaic-item';
-                    img.loading = "lazy";
-                    img.onload = () => wall.appendChild(img);
-                    img.onerror = () => img.remove();
+                    const img = new Image(); img.src = m.poster; img.className = 'mosaic-item';
+                    img.loading = "lazy"; img.onload = () => wall.appendChild(img); img.onerror = () => img.remove();
                 });
             }
         };
