@@ -3,83 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAO TIANYI | 毛天艺</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,900&family=Noto+Serif+SC:wght@200;900&family=Montserrat:wght@100;300;600&display=swap" rel="stylesheet">
+    <title>MAO TIANYI | VOGUE ARCHIVE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&family=Cinzel:wght@400;700&family=Noto+Serif+SC:wght@200;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { 
-            background: #050505; color: white; margin: 0; overflow-x: hidden; 
-            font-family: 'Montserrat', sans-serif; 
-        }
-        .vogue-zh { font-family: 'Noto Serif SC', serif; font-weight: 200; }
-        .vogue-en { font-family: 'Bodoni Moda', serif; font-style: italic; }
+        body { background: #000; color: white; margin: 0; overflow-x: hidden; }
+        
+        /* Vogue 标志性字体：大写衬线体 */
+        .vogue-title { font-family: 'Playfair Display', serif; font-style: italic; letter-spacing: -0.02em; }
+        .vogue-caps { font-family: 'Cinzel', serif; letter-spacing: 0.5em; text-transform: uppercase; }
+        .vogue-zh { font-family: 'Noto Serif SC', serif; font-weight: 200; letter-spacing: 0.1em; }
 
         .bg-overlay {
             position: fixed; inset: 0;
             background: url('horse.jpg') center/cover no-repeat;
-            opacity: 0.2; filter: brightness(0.6) contrast(1.2);
+            opacity: 0.3; filter: brightness(0.4) contrast(1.3);
             z-index: -2;
         }
 
-        /* 板块卡片设计 */
+        /* 极简卡片：去掉背景色，只留线条感 */
         .vogue-card {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: 0.7s cubic-bezier(0.15, 1, 0.3, 1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
         }
-        .vogue-card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.05); }
+        .vogue-card:hover { border-top-color: #fff; padding-top: 2rem; }
         
-        /* 颜色系统 */
-        .c-works:hover { border-color: #007bff; }
-        .c-cinema:hover { border-color: #ff3c3c; }
-        .c-read:hover { border-color: #00ff88; }
-        .c-music:hover { border-color: #ffb400; }
+        /* 悬停色彩溢出 */
+        .c-works:hover { color: #007bff; }
+        .c-cinema:hover { color: #ff3c3c; }
+        .c-read:hover { color: #00ff88; }
+        .c-music:hover { color: #ffb400; }
 
-        #app-content { transition: opacity 0.4s ease; opacity: 1; }
+        #app-content { transition: opacity 0.6s ease; }
         .page-fade { opacity: 0 !important; }
 
-        .bar { width: 2px; height: 12px; background: #ffb400; transition: 0.3s; }
-        .bar-p { height: 2px !important; opacity: 0.3; }
+        /* 音乐频谱 */
+        .bar { width: 1px; height: 15px; background: white; transition: 0.3s; }
+        .bar-p { height: 1px !important; opacity: 0.3; }
     </style>
 </head>
 <body>
     <div class="bg-overlay"></div>
     <audio id="global-bgm" loop src="bgm.mp3"></audio>
 
-    <nav class="fixed top-0 w-full p-10 z-[100] flex justify-between items-center pointer-events-none">
-        <p class="text-[10px] tracking-[0.6em] opacity-40 uppercase pointer-events-auto">Mao Tianyi</p>
-        <div onclick="toggleMusic(event)" class="flex items-center gap-3 cursor-pointer pointer-events-auto group">
-            <div class="flex items-end gap-1">
+    <nav class="fixed top-0 w-full p-12 z-[100] flex justify-between items-end pointer-events-none">
+        <div class="vogue-caps text-[10px] opacity-40 pointer-events-auto">Mao Tianyi</div>
+        <div onclick="toggleMusic(event)" class="flex items-center gap-4 cursor-pointer pointer-events-auto">
+            <div class="flex items-end gap-[2px]">
                 <div class="bar bar-p"></div><div class="bar bar-p"></div><div class="bar bar-p"></div>
             </div>
         </div>
     </nav>
 
-    <div id="app-content" class="min-h-screen flex items-center justify-center py-20">
-        <main class="w-full max-w-[1600px] px-12">
-            <header class="mb-24">
-                <h1 class="vogue-zh text-5xl md:text-6xl tracking-widest">
-                    毛天艺 <span class="vogue-en text-3xl md:text-4xl ml-4 opacity-40">Tianyi Mao</span>
-                </h1>
+    <div id="app-content" class="min-h-screen pt-48 pb-24">
+        <main class="max-w-[1600px] mx-auto px-12">
+            <header class="mb-32">
+                <h1 class="vogue-zh text-6xl md:text-7xl mb-4">毛天艺</h1>
+                <p class="vogue-title text-4xl md:text-5xl opacity-30">Tianyi Mao</p>
             </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div onclick="router('works.html')" class="vogue-card c-works p-12 aspect-[3/4] flex flex-col justify-end cursor-pointer group">
-                    <h2 class="vogue-zh text-3xl mb-2">视觉作品集</h2>
-                    <h3 class="vogue-en text-2xl opacity-40 group-hover:opacity-100 transition">Works</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div onclick="router('works.html')" class="vogue-card c-works pt-8 group">
+                    <span class="vogue-caps text-[9px] opacity-30">01 / Folio</span>
+                    <h2 class="vogue-zh text-3xl mt-6 mb-2">视觉作品集</h2>
+                    <h3 class="vogue-title text-2xl opacity-20 group-hover:opacity-100 transition">Works</h3>
                 </div>
-                <div onclick="router('movies.html')" class="vogue-card c-cinema p-12 aspect-[3/4] flex flex-col justify-end cursor-pointer group">
-                    <h2 class="vogue-zh text-3xl mb-2">电影人生</h2>
-                    <h3 class="vogue-en text-2xl opacity-40 group-hover:opacity-100 transition">Cinema</h3>
+                <div onclick="router('movies.html')" class="vogue-card c-cinema pt-8 group">
+                    <span class="vogue-caps text-[9px] opacity-30">02 / Archive</span>
+                    <h2 class="vogue-zh text-3xl mt-6 mb-2">电影人生</h2>
+                    <h3 class="vogue-title text-2xl opacity-20 group-hover:opacity-100 transition">Cinema</h3>
                 </div>
-                <div onclick="router('read.html')" class="vogue-card c-read p-12 aspect-[3/4] flex flex-col justify-end cursor-pointer group">
-                    <h2 class="vogue-zh text-3xl mb-2">阅读人生</h2>
-                    <h3 class="vogue-en text-2xl opacity-40 group-hover:opacity-100 transition">Read</h3>
+                <div onclick="router('read.html')" class="vogue-card c-read pt-8 group">
+                    <span class="vogue-caps text-[9px] opacity-30">03 / Notes</span>
+                    <h2 class="vogue-zh text-3xl mt-6 mb-2">阅读人生</h2>
+                    <h3 class="vogue-title text-2xl opacity-20 group-hover:opacity-100 transition">Read</h3>
                 </div>
-                <div onclick="router('music.html')" class="vogue-card c-music p-12 aspect-[3/4] flex flex-col justify-end cursor-pointer group">
-                    <h2 class="vogue-zh text-3xl mb-2">音乐人生</h2>
-                    <h3 class="vogue-en text-2xl opacity-40 group-hover:opacity-100 transition">Music</h3>
+                <div onclick="router('music.html')" class="vogue-card c-music pt-8 group">
+                    <span class="vogue-caps text-[9px] opacity-30">04 / Audio</span>
+                    <h2 class="vogue-zh text-3xl mt-6 mb-2">音乐人生</h2>
+                    <h3 class="vogue-title text-2xl opacity-20 group-hover:opacity-100 transition">Music</h3>
                 </div>
             </div>
         </main>
@@ -93,38 +96,18 @@
             if(e) e.stopPropagation();
             const bars = document.querySelectorAll('.bar');
             if (audio.paused) { 
-                audio.play(); 
-                bars.forEach(b => b.classList.remove('bar-p'));
-                localStorage.setItem('mPlay', 'true');
+                audio.play(); bars.forEach(b => b.classList.remove('bar-p'));
             } else { 
-                audio.pause(); 
-                bars.forEach(b => b.classList.add('bar-p'));
-                localStorage.setItem('mPlay', 'false');
+                audio.pause(); bars.forEach(b => b.classList.add('bar-p'));
             }
         }
 
+        // 核心：修复后的路由函数
         async function router(url) {
             app.classList.add('page-fade');
-            setTimeout(async () => {
-                try {
-                    const res = await fetch(url);
-                    const text = await res.text();
-                    const dom = new DOMParser().parseFromString(text, 'text/html');
-                    const newContent = dom.getElementById('app-content');
-                    app.innerHTML = newContent.innerHTML;
-                    
-                    const scripts = newContent.querySelectorAll('script');
-                    scripts.forEach(s => {
-                        const newS = document.createElement('script');
-                        if (s.src) newS.src = s.src; else newS.textContent = s.textContent;
-                        document.head.appendChild(newS).parentNode.removeChild(newS);
-                    });
-                    
-                    history.pushState({url}, '', url);
-                    app.classList.remove('page-fade');
-                    window.scrollTo(0, 0);
-                } catch (e) { window.location.href = url; }
-            }, 400);
+            setTimeout(() => {
+                window.location.href = url; // 强制跳转以确保 movies.js 彻底重新初始化，解决报错
+            }, 500);
         }
     </script>
 </body>
