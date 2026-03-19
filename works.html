@@ -6,59 +6,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background: #000; color: white; font-family: 'Inter', sans-serif; }
+        body { background: #000; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         #app-content { transition: opacity 0.8s ease; opacity: 0; }
         .page-active { opacity: 1 !important; }
         
-        .work-item { border-bottom: 1px solid rgba(255,255,255,0.05); transition: 0.5s; padding: 10vh 0; }
-        .work-item:hover { border-bottom-color: rgba(255,255,255,0.4); }
-        .work-img { width: 45%; aspect-ratio: 16/9; object-fit: cover; opacity: 0.3; transition: 0.8s; filter: grayscale(1); }
-        .work-item:hover .work-img { opacity: 1; transform: scale(1.02); filter: grayscale(0); }
+        .work-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
+        .work-item { grid-column: span 12; margin-bottom: 20vh; }
+        .work-item.odd { grid-column: 2 / span 10; }
+        .work-item.even { grid-column: 4 / span 8; }
         
-        .sh-modern { font-weight: 200; letter-spacing: 0.4em; }
+        .work-img { width: 100%; filter: grayscale(1); transition: 1s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; }
+        .work-item:hover .work-img { filter: grayscale(0); transform: scale(1.02); }
+        
+        .detail-label { font-size: 10px; opacity: 0.2; letter-spacing: 0.3em; text-transform: uppercase; margin-top: 2rem; }
     </style>
 </head>
-<body>
+<body class="p-10 md:p-24">
     <audio id="global-bgm" loop src="bgm.mp3"></audio>
-    <div onclick="router('index.html')" class="fixed top-12 left-12 z-[200] text-[9px] opacity-30 hover:opacity-100 cursor-pointer tracking-[0.5em] uppercase">← Back</div>
+    <div onclick="router('index.html')" class="fixed top-12 right-12 z-[200] text-[10px] opacity-30 hover:opacity-100 cursor-pointer tracking-widest uppercase">Index 00</div>
 
-    <div id="app-content" class="px-12 md:px-24 py-48">
-        <header class="mb-32">
-            <h2 class="text-[8vw] font-light leading-none">VISUAL<br><span class="opacity-20 italic">PORTFOLIO</span></h2>
+    <div id="app-content">
+        <header class="mb-64">
+            <h1 class="text-[12vw] font-light leading-none tracking-tighter">VISUAL<br><span class="opacity-10 italic ml-[10%]">INDEX</span></h1>
         </header>
 
-        <section class="flex flex-col">
-            <div class="work-item group flex justify-between items-center">
-                <div class="max-w-md">
-                    <span class="text-[10px] opacity-20 tracking-widest uppercase">01 / Digital Art</span>
-                    <h3 class="sh-modern text-3xl mt-4">星尘破碎</h3>
-                    <p class="text-[11px] opacity-30 mt-6 leading-relaxed tracking-wider">探索数字重构下的视觉边界，利用噪点与流体感塑造的空间叙事。</p>
+        <div class="work-grid">
+            <div class="work-item odd">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600" class="work-img">
+                <div class="flex justify-between items-start">
+                    <p class="detail-label">Project 01 / Digital Fragments</p>
+                    <h2 class="text-3xl font-light mt-6 tracking-widest">星尘重构</h2>
                 </div>
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200" class="work-img">
             </div>
 
-            <div class="work-item group flex flex-row-reverse justify-between items-center">
-                <div class="max-w-md">
-                    <span class="text-[10px] opacity-20 tracking-widest uppercase">02 / UI Design</span>
-                    <h3 class="sh-modern text-3xl mt-4">流动界面</h3>
-                    <p class="text-[11px] opacity-30 mt-6 leading-relaxed tracking-wider">基于单页应用逻辑的实验性 UI，强调页面间的非线性连贯。 </p>
+            <div class="work-item even">
+                <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=1600" class="work-img">
+                <div class="flex justify-between items-start">
+                    <p class="detail-label">Project 02 / Interface Lab</p>
+                    <h2 class="text-3xl font-light mt-6 tracking-widest">流动界面</h2>
                 </div>
-                <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&q=80&w=1200" class="work-img">
             </div>
-        </section>
+        </div>
     </div>
 
     <script>
         const audio = document.getElementById('global-bgm');
         const app = document.getElementById('app-content');
-
         async function router(url) {
-            app.classList.remove('page-active');
+            app.style.opacity = "0";
             localStorage.setItem('bgmTime', audio.currentTime);
             localStorage.setItem('bgmPlaying', !audio.paused);
             setTimeout(() => { window.location.href = url; }, 800);
         }
-
         window.onload = () => {
             const savedTime = localStorage.getItem('bgmTime');
             if(savedTime) audio.currentTime = savedTime;
