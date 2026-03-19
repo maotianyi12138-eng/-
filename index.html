@@ -7,60 +7,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background: #000; color: white; margin: 0; font-family: 'Inter', sans-serif; overflow: hidden; }
-        #app-content { transition: opacity 0.8s cubic-bezier(0.2, 0, 0.2, 1); opacity: 0; }
-        .page-active { opacity: 1 !important; }
+        body { background: #000; color: #fff; margin: 0; font-family: 'Inter', sans-serif; overflow: hidden; }
+        #app-content { transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.8s ease; opacity: 0; transform: translateY(20px); }
+        .page-active { opacity: 1 !important; transform: translateY(0) !important; }
         
-        /* 模仿 DrawHistory 的背景流动 */
-        .bg-img {
-            position: fixed; inset: -50px;
-            background: url('image_43641b.jpg') center/cover no-repeat;
-            opacity: 0.12; filter: grayscale(1); z-index: -1;
-            transition: transform 1.5s ease-out;
-        }
-        body:hover .bg-img { transform: scale(1.05) translate(10px, 10px); }
-
-        .nav-link { font-size: 10px; letter-spacing: 0.6em; opacity: 0.3; transition: 0.5s; cursor: pointer; }
-        .nav-link:hover { opacity: 1; transform: translateX(5px); }
+        /* Josh Warner 特有的超大标题排版 */
+        .big-title { font-size: 14vw; font-weight: 100; line-height: 0.8; letter-spacing: -0.04em; }
+        .sub-label { font-size: 10px; letter-spacing: 0.5em; opacity: 0.3; text-transform: uppercase; }
         
-        /* 非对称大标题 */
-        .hero-title { font-weight: 100; letter-spacing: -0.02em; line-height: 0.9; }
-        .hero-sub { writing-mode: vertical-lr; font-[10px] opacity: 0.2; letter-spacing: 0.8em; }
+        .nav-item { position: relative; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: 0.4s; }
+        .nav-item:hover { padding-left: 2rem; border-top-color: #fff; }
+        .nav-num { position: absolute; left: -4rem; top: 2.2rem; font-size: 10px; opacity: 0.2; }
 
+        /* 音乐控制条 */
         .bar { width: 1px; height: 12px; background: white; transition: 0.3s; }
         .bar-p { height: 1px !important; opacity: 0.2; }
     </style>
 </head>
-<body class="bg-black text-white">
-    <div class="bg-img"></div>
+<body>
     <audio id="global-bgm" loop src="bgm.mp3"></audio>
 
-    <nav class="fixed top-0 w-full p-12 z-[100] flex justify-between items-center">
-        <div class="hero-sub uppercase font-light">Archive Project 2026</div>
-        <div onclick="toggleMusic(event)" class="flex items-end gap-[3px] cursor-pointer group p-4">
+    <nav class="fixed top-0 w-full p-10 md:p-16 z-[100] flex justify-between items-start pointer-events-none">
+        <div class="sub-label pointer-events-auto">Portfolio / 2026</div>
+        <div onclick="toggleMusic(event)" class="flex items-end gap-[3px] cursor-pointer pointer-events-auto p-4">
             <div class="bar bar-p"></div><div class="bar bar-p"></div><div class="bar bar-p"></div>
         </div>
     </nav>
 
-    <div id="app-content" class="min-h-screen flex items-center justify-center">
-        <div class="w-full max-w-[1400px] px-10 grid grid-cols-12 gap-4">
-            <div class="col-span-12 md:col-span-8">
-                <h1 class="hero-title text-[12vw] md:text-[8vw] mb-20">MAO<br><span class="ml-[10%] opacity-50 italic">TIANYI</span></h1>
-                
-                <div class="flex flex-col gap-8 items-start">
-                    <div onclick="router('works.html')" class="nav-link group flex items-center">
-                        <span class="mr-4 opacity-50">01</span> 视觉作品 / VISUAL
-                    </div>
-                    <div onclick="router('movies.html')" class="nav-link group flex items-center">
-                        <span class="mr-4 opacity-50">02</span> 电影人生 / CINEMA
-                    </div>
-                    <div onclick="router('music.html')" class="nav-link group flex items-center">
-                        <span class="mr-4 opacity-50">03</span> 音乐人生 / AUDIO
-                    </div>
+    <div id="app-content" class="min-h-screen flex flex-col justify-end p-10 md:p-24">
+        <div class="mb-32">
+            <h1 class="big-title">MAO<br>TIANYI</h1>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+            <div class="flex flex-col">
+                <div onclick="router('works.html')" class="nav-item group">
+                    <span class="nav-num">01</span>
+                    <h2 class="text-4xl font-light tracking-tighter">视觉作品 / VISUAL</h2>
+                </div>
+                <div onclick="router('cinema.html')" class="nav-item group">
+                    <span class="nav-num">02</span>
+                    <h2 class="text-4xl font-light tracking-tighter">电影人生 / CINEMA</h2>
+                </div>
+                <div onclick="router('read.html')" class="nav-item group">
+                    <span class="nav-num">03</span>
+                    <h2 class="text-4xl font-light tracking-tighter">阅读人生 / READ</h2>
+                </div>
+                <div onclick="router('music.html')" class="nav-item group">
+                    <span class="nav-num">04</span>
+                    <h2 class="text-4xl font-light tracking-tighter">音乐人生 / AUDIO</h2>
                 </div>
             </div>
-            <div class="hidden md:block col-span-4 self-end pb-20 opacity-10 text-[9px] leading-loose tracking-[0.5em] uppercase">
-                Digital storytelling<br>curated by Mao Tianyi.<br>Beijing / 2026
+            <div class="hidden md:flex items-end justify-end">
+                <p class="sub-label leading-loose text-right">
+                    Focused on digital curation<br>and visual storytelling.<br>Based in China.
+                </p>
             </div>
         </div>
     </div>
@@ -80,7 +81,8 @@
         }
 
         async function router(url) {
-            app.classList.remove('page-active');
+            app.style.transform = "translateY(-20px)";
+            app.style.opacity = "0";
             localStorage.setItem('bgmTime', audio.currentTime);
             localStorage.setItem('bgmPlaying', !audio.paused);
             setTimeout(() => { window.location.href = url; }, 800);
@@ -88,9 +90,8 @@
 
         window.onload = () => {
             const savedTime = localStorage.getItem('bgmTime');
-            const isPlaying = localStorage.getItem('bgmPlaying') === 'true';
             if(savedTime) audio.currentTime = savedTime;
-            if(isPlaying) {
+            if(localStorage.getItem('bgmPlaying') === 'true') {
                 audio.play().catch(() => {});
                 document.querySelectorAll('.bar').forEach(b => b.classList.remove('bar-p'));
             }
