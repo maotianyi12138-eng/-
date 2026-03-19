@@ -3,70 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CINEMA ARCHIVE | MAO TIANYI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&family=Noto+Serif+SC:wght@200;900&display=swap" rel="stylesheet">
+    <title>CINEMA TOP 10 | MAO TIANYI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&family=Cinzel:wght@400;700&family=Noto+Serif+SC:wght@200;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="movies.js"></script> <style>
-        body { background: #000; color: white; margin: 0; overflow: hidden; }
+    <script src="movies.js"></script>
+    <style>
+        body { background: #000; color: white; margin: 0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .vogue-title { font-family: 'Playfair Display', serif; font-style: italic; }
+        .vogue-caps { font-family: 'Cinzel', serif; letter-spacing: 0.3em; }
         .vogue-zh { font-family: 'Noto Serif SC', serif; }
-        
-        .list-area { width: 45%; height: 100vh; overflow-y: auto; scroll-behavior: smooth; border-right: 1px solid rgba(255,255,255,0.05); }
-        .list-area::-webkit-scrollbar { display: none; }
-        .wall-area { width: 55%; height: 100vh; overflow-y: auto; background: #000; }
-        .wall-area::-webkit-scrollbar { display: none; }
+
+        /* 隐藏滚动条但保留功能 */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Top 10 横向滚动容器 */
+        .top-10-wrapper {
+            overflow-x: auto;
+            display: flex;
+            gap: 20px;
+            padding: 40px 0;
+            scroll-snap-type: x mandatory;
+        }
+        .top-item {
+            flex: 0 0 280px; /* 电脑端宽度 */
+            scroll-snap-align: start;
+            transition: 0.5s;
+        }
+        @media (max-width: 768px) {
+            .top-item { flex: 0 0 70%; } /* 手机端宽度，露出下一张边缘 */
+        }
+        .top-item:hover { transform: translateY(-10px); }
+        .top-num {
+            font-size: 80px;
+            line-height: 1;
+            margin-bottom: -20px;
+            position: relative;
+            z-index: 10;
+            -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+            color: transparent;
+        }
+
+        /* 下方主布局 */
+        .main-layout { display: flex; height: 100vh; }
+        .list-area { width: 40%; overflow-y: auto; background: #050505; border-right: 1px solid rgba(255,255,255,0.05); }
+        .wall-area { width: 60%; overflow-y: auto; background: #000; }
 
         .m-line { 
             border-bottom: 1px solid rgba(255,255,255,0.02); 
-            padding: 8px 0; transition: 0.2s; 
-            display: flex; flex-direction: column;
+            padding: 6px 0; transition: 0.2s; cursor: crosshair;
         }
-        .m-line:hover { color: #ff3c3c; transform: translateX(8px); }
+        .m-line:hover { color: #ff3c3c; background: rgba(255,60,60,0.05); }
 
         .mosaic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 1px; }
         .mosaic-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0.8; transition: 0.4s; }
-        .mosaic-item:hover { opacity: 1; transform: scale(1.6); z-index: 50; box-shadow: 0 0 40px #000; }
+        .mosaic-item:hover { opacity: 1; transform: scale(1.6); z-index: 50; outline: 1px solid white; }
     </style>
 </head>
 <body>
-    <div id="app-content" class="flex w-screen h-screen">
-        <div class="list-area bg-[#050505]">
-            <header class="p-12 sticky top-0 bg-[#050505] z-20">
-                <div onclick="location.href='index.html'" class="text-[9px] opacity-30 hover:opacity-100 cursor-pointer tracking-[0.5em] mb-12">← BACK</div>
-                <h1 class="vogue-zh text-5xl font-black italic">电影档案馆</h1>
-                <p class="vogue-title text-xl opacity-20 mt-4">Archive Mode / 02</p>
-            </header>
-            <div id="movie-list" class="grid grid-cols-2 gap-x-8 gap-y-1 px-12 pb-32">
-                </div>
+
+    <section class="min-h-screen flex flex-col justify-center px-8 md:px-20 border-b border-white/10 bg-black">
+        <header class="mb-12">
+            <span class="vogue-caps text-[10px] opacity-40">Mao's Choice</span>
+            <h2 class="vogue-zh text-5xl mt-2 italic">年度十佳 <span class="vogue-title text-3xl ml-4 opacity-30">Top 10 Selection</span></h2>
+        </header>
+
+        <div class="top-10-wrapper no-scrollbar" id="top-10-content">
+            </div>
+        
+        <div class="mt-20 text-center animate-bounce opacity-20">
+            <span class="vogue-caps text-[9px]">Scroll to Archive ↓</span>
+        </div>
+    </section>
+
+    <div id="app-content" class="main-layout flex-col md:flex-row">
+        <div class="list-area no-scrollbar">
+            <div id="movie-list" class="grid grid-cols-2 gap-x-10 gap-y-1 p-10 pt-20"></div>
         </div>
 
-        <div class="wall-area">
-            <div id="mosaic-grid" class="mosaic-grid">
-                </div>
+        <div class="wall-area no-scrollbar">
+            <div id="mosaic-grid" class="mosaic-grid"></div>
         </div>
     </div>
 
     <script>
         window.onload = () => {
-            if (typeof movieData === 'undefined') {
-                console.error("Data Missing");
-                return;
-            }
-            const list = document.getElementById('movie-list');
-            const wall = document.getElementById('mosaic-grid');
+            if (typeof movieData === 'undefined') return;
 
-            // 渲染左侧双列
-            list.innerHTML = movieData.map(m => {
-                const parts = m.title.split(' / ');
-                return `
-                    <div class="m-line">
-                        <span class="vogue-zh text-[11px] font-bold truncate">${parts[0]}</span>
-                        <span class="vogue-title text-[9px] opacity-20 truncate">${parts.pop()}</span>
+            // --- 渲染 Top 10 ---
+            const top10Container = document.getElementById('top-10-content');
+            const topMovies = [...movieData].sort((a, b) => b.rating - a.rating).slice(0, 10);
+            
+            top10Container.innerHTML = topMovies.map((m, i) => `
+                <div class="top-item">
+                    <div class="top-num vogue-title">${i + 1}</div>
+                    <img src="${m.poster}" class="w-full aspect-[2/3] object-cover border border-white/10 grayscale hover:grayscale-0 transition-all duration-700">
+                    <div class="mt-4">
+                        <div class="vogue-zh text-sm font-bold truncate">${m.title.split(' / ')[0]}</div>
+                        <div class="vogue-title text-[10px] opacity-30 truncate">${m.title.split(' / ').pop()}</div>
                     </div>
-                `;
-            }).join('');
+                </div>
+            `).join('');
 
-            // 渲染右侧墙 (彩色 + 容错)
+            // --- 渲染双列列表 ---
+            const list = document.getElementById('movie-list');
+            list.innerHTML = movieData.map(m => `
+                <div class="m-line">
+                    <span class="vogue-zh text-[11px] font-medium truncate">${m.title.split(' / ')[0]}</span>
+                    <span class="vogue-title text-[8px] opacity-20 truncate">${m.title.split(' / ').pop()}</span>
+                </div>
+            `).join('');
+
+            // --- 渲染彩色海报墙 ---
+            const wall = document.getElementById('mosaic-grid');
             movieData.forEach(m => {
                 if(!m.poster) return;
                 const img = new Image();
