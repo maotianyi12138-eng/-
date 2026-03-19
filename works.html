@@ -2,81 +2,69 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>WORKS - MAO TIANYI</title>
+    <title>WORKS | MAO TIANYI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: #000; color: white; font-family: 'Inter', sans-serif; }
+        #app-content { transition: opacity 0.8s ease; opacity: 0; }
+        .page-active { opacity: 1 !important; }
+        
+        .work-item { border-bottom: 1px solid rgba(255,255,255,0.05); transition: 0.5s; padding: 10vh 0; }
+        .work-item:hover { border-bottom-color: rgba(255,255,255,0.4); }
+        .work-img { width: 45%; aspect-ratio: 16/9; object-fit: cover; opacity: 0.3; transition: 0.8s; filter: grayscale(1); }
+        .work-item:hover .work-img { opacity: 1; transform: scale(1.02); filter: grayscale(0); }
+        
+        .sh-modern { font-weight: 200; letter-spacing: 0.4em; }
+    </style>
 </head>
-<body class="bg-[#050505] text-white">
-    <div id="app-content">
-        <style>
-            .vogue-t { font-family: 'Noto Serif SC', serif; }
-            .stack-c { position: relative; height: 140px; transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1); cursor: s-resize; margin-bottom: 1.5rem; }
-            @media (min-width: 768px) { .stack-c { height: 180px; } }
-            .stack-c.expanded { height: auto; cursor: default; margin-bottom: 4rem; }
-            .s-img { 
-                position: absolute; top: 0; left: 0; width: 100%; aspect-ratio: 16/10; object-fit: cover; 
-                transition: 0.8s cubic-bezier(0.19,1,0.22,1); border: 1px solid rgba(255,255,255,0.08); 
-                box-shadow: 0 10px 30px #000;
-            }
-            /* 堆叠层级逻辑 */
-            .s-img:nth-child(1) { transform: translateY(0) scale(1); z-index: 10; }
-            .s-img:nth-child(2) { transform: translateY(12px) scale(0.97); z-index: 9; opacity: 0.8; }
-            .s-img:nth-child(3) { transform: translateY(24px) scale(0.94); z-index: 8; opacity: 0.6; }
-            .s-img:nth-child(n+4) { transform: translateY(36px) scale(0.91); z-index: 1; opacity: 0; }
-            /* 展开状态 */
-            .expanded .s-img { position: relative; transform: none!important; margin-bottom: 1rem; opacity: 1!important; aspect-ratio: auto; cursor: zoom-in; }
-        </style>
+<body>
+    <audio id="global-bgm" loop src="bgm.mp3"></audio>
+    <div onclick="router('index.html')" class="fixed top-12 left-12 z-[200] text-[9px] opacity-30 hover:opacity-100 cursor-pointer tracking-[0.5em] uppercase">← Back</div>
 
-        <nav class="p-6 md:p-16 flex justify-between items-center max-w-7xl mx-auto">
-            <div onclick="router('index.html')" class="opacity-40 hover:opacity-100 text-[9px] tracking-[0.3em] cursor-pointer uppercase">← Archive / 返回首页</div>
-            <div class="text-[9px] opacity-40 uppercase tracking-widest" id="m-status">On</div>
-        </nav>
+    <div id="app-content" class="px-12 md:px-24 py-48">
+        <header class="mb-32">
+            <h2 class="text-[8vw] font-light leading-none">VISUAL<br><span class="opacity-20 italic">PORTFOLIO</span></h2>
+        </header>
 
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-5 md:gap-x-10 gap-y-20 max-w-7xl mx-auto px-6 pb-32">
-            
-            <div class="group">
-                <div class="stack-c" onclick="this.classList.toggle('expanded')">
-                    <img src="批判1" class="s-img"><img src="批判2" class="s-img"><img src="批判3" class="s-img"><img src="批判4" class="s-img">
+        <section class="flex flex-col">
+            <div class="work-item group flex justify-between items-center">
+                <div class="max-w-md">
+                    <span class="text-[10px] opacity-20 tracking-widest uppercase">01 / Digital Art</span>
+                    <h3 class="sh-modern text-3xl mt-4">星尘破碎</h3>
+                    <p class="text-[11px] opacity-30 mt-6 leading-relaxed tracking-wider">探索数字重构下的视觉边界，利用噪点与流体感塑造的空间叙事。</p>
                 </div>
-                <div class="mt-4 border-l-2 border-blue-500 pl-3">
-                    <h3 class="vogue-t text-lg font-bold tracking-tighter">DIVORCE IN CHINA</h3>
-                    <p class="text-[9px] opacity-40 uppercase mt-1">Social Study / 批判设计</p>
-                </div>
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200" class="work-img">
             </div>
 
-            <div class="group">
-                <div class="stack-c" onclick="this.classList.toggle('expanded')">
-                    <img src="保龄1" class="s-img"><img src="保龄2" class="s-img"><img src="保龄3" class="s-img">
-                    <img src="保龄4" class="s-img"><img src="保龄5" class="s-img"><img src="保龄6" class="s-img">
+            <div class="work-item group flex flex-row-reverse justify-between items-center">
+                <div class="max-w-md">
+                    <span class="text-[10px] opacity-20 tracking-widest uppercase">02 / UI Design</span>
+                    <h3 class="sh-modern text-3xl mt-4">流动界面</h3>
+                    <p class="text-[11px] opacity-30 mt-6 leading-relaxed tracking-wider">基于单页应用逻辑的实验性 UI，强调页面间的非线性连贯。 </p>
                 </div>
-                <div class="mt-4 border-l-2 border-red-500 pl-3">
-                    <h3 class="vogue-t text-lg font-bold tracking-tighter">BOWLING CAMPAIGN</h3>
-                    <p class="text-[9px] opacity-40 uppercase mt-1">Commercial / 影像项目</p>
-                </div>
+                <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&q=80&w=1200" class="work-img">
             </div>
-
-            <div class="group">
-                <div class="stack-c" onclick="this.classList.toggle('expanded')">
-                    <img src="血液1.png" class="s-img"><img src="血液2.png" class="s-img">
-                    <img src="血液3.png" class="s-img"><img src="血液4.png" class="s-img">
-                </div>
-                <div class="mt-4 border-l-2 border-red-900 pl-3">
-                    <h3 class="vogue-t text-lg font-bold tracking-tighter">BLOOD NIRVANA</h3>
-                    <p class="text-[9px] opacity-40 uppercase mt-1">Visual Lab / 视觉实验</p>
-                </div>
-            </div>
-
-            <div class="group">
-                <div class="stack-c" onclick="this.classList.toggle('expanded')">
-                    <img src="健身1.png" class="s-img"><img src="健身2.png" class="s-img"><img src="健身3.png" class="s-img">
-                    <img src="健身4.png" class="s-img"><img src="健身5.png" class="s-img">
-                </div>
-                <div class="mt-4 border-l-2 border-green-800 pl-3">
-                    <h3 class="vogue-t text-lg font-bold tracking-tighter">MUSCLE FACTORY</h3>
-                    <p class="text-[9px] opacity-40 uppercase mt-1">Movement / 运动影像</p>
-                </div>
-            </div>
-
-        </div>
+        </section>
     </div>
+
+    <script>
+        const audio = document.getElementById('global-bgm');
+        const app = document.getElementById('app-content');
+
+        async function router(url) {
+            app.classList.remove('page-active');
+            localStorage.setItem('bgmTime', audio.currentTime);
+            localStorage.setItem('bgmPlaying', !audio.paused);
+            setTimeout(() => { window.location.href = url; }, 800);
+        }
+
+        window.onload = () => {
+            const savedTime = localStorage.getItem('bgmTime');
+            if(savedTime) audio.currentTime = savedTime;
+            if(localStorage.getItem('bgmPlaying') === 'true') audio.play().catch(() => {});
+            setTimeout(() => app.classList.add('page-active'), 100);
+        };
+    </script>
 </body>
 </html>
