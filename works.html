@@ -2,68 +2,193 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>WORKS | MAO TIANYI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO - MAO TIANYI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background: #000; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        #app-content { transition: opacity 0.8s ease; opacity: 0; }
-        .page-active { opacity: 1 !important; }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Libre+Baskerville:italic@400&display=swap');
         
-        .work-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
-        .work-item { grid-column: span 12; margin-bottom: 20vh; }
-        .work-item.odd { grid-column: 2 / span 10; }
-        .work-item.even { grid-column: 4 / span 8; }
+        body { background-color: #050505; color: #e5e5e5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; overflow-x: hidden; }
+        .vogue-title { font-family: 'Noto Serif SC', serif; letter-spacing: -0.02em; }
+        .vogue-sub { font-family: 'Libre Baskerville', serif; }
         
-        .work-img { width: 100%; filter: grayscale(1); transition: 1s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; }
-        .work-item:hover .work-img { filter: grayscale(0); transform: scale(1.02); }
+        .filter-btn { transition: 0.3s; opacity: 0.3; cursor: pointer; border-bottom: 2px solid transparent; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; }
+        .filter-btn.active { opacity: 1; border-bottom: 2px solid #3b82f6; }
+
+        .music-bars { display: flex; gap: 3px; align-items: flex-end; height: 13px; width: 20px; }
+        .bar { width: 2px; background: white; animation: play 0.8s infinite alternate; height: 3px; }
+        .bar-paused { animation-play-state: paused !important; height: 2px !important; opacity: 0.3; }
+        @keyframes play { 0% { height: 4px; } 100% { height: 13px; } }
+
+        .stack-container { position: relative; height: 180px; transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1); cursor: s-resize; width: 100%; }
+        @media (min-width: 768px) { .stack-container { height: 260px; } }
         
-        .detail-label { font-size: 10px; opacity: 0.2; letter-spacing: 0.3em; text-transform: uppercase; margin-top: 2rem; }
+        .stack-container.expanded { height: auto; cursor: default; }
+        
+        .stack-img { 
+            position: absolute; top: 0; left: 0; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; 
+            transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1); 
+            border: 1px solid rgba(255,255,255,0.05);
+            background-color: #111;
+        }
+
+        .stack-img:nth-child(1) { transform: translateY(0px) scale(1); z-index: 4; }
+        .stack-img:nth-child(2) { transform: translateY(15px) scale(0.96); z-index: 3; opacity: 0.7; }
+        .stack-img:nth-child(3) { transform: translateY(30px) scale(0.92); z-index: 2; opacity: 0.4; }
+
+        .expanded .stack-img { position: relative; transform: translateY(0) scale(1) !important; margin-bottom: 1rem; z-index: 10 !important; opacity: 1 !important; cursor: zoom-in; aspect-ratio: auto; }
+
+        #lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 100; justify-content: center; align-items: center; cursor: zoom-out; padding: 20px; }
     </style>
 </head>
-<body class="p-10 md:p-24">
-    <audio id="global-bgm" loop src="bgm.mp3"></audio>
-    <div onclick="router('index.html')" class="fixed top-12 right-12 z-[200] text-[10px] opacity-30 hover:opacity-100 cursor-pointer tracking-widest uppercase">Index 00</div>
+<body class="p-6 md:p-16">
+    <audio id="bgm" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
 
-    <div id="app-content">
-        <header class="mb-64">
-            <h1 class="text-[12vw] font-light leading-none tracking-tighter">VISUAL<br><span class="opacity-10 italic ml-[10%]">INDEX</span></h1>
-        </header>
-
-        <div class="work-grid">
-            <div class="work-item odd">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600" class="work-img">
-                <div class="flex justify-between items-start">
-                    <p class="detail-label">Project 01 / Digital Fragments</p>
-                    <h2 class="text-3xl font-light mt-6 tracking-widest">星尘重构</h2>
-                </div>
+    <nav class="mb-12 flex justify-between items-center max-w-7xl mx-auto">
+        <a href="index.html" onclick="saveAndGo(event, 'index.html')" class="opacity-40 hover:opacity-100 transition tracking-[0.2em] text-[9px]">← ARCHIVE</a>
+        <div class="flex items-center gap-3 cursor-pointer" onclick="toggleMusic(event)">
+            <div class="music-bars" id="music-icon">
+                <div class="bar bar-paused"></div>
+                <div class="bar bar-paused" style="animation-delay: 0.2s"></div>
+                <div class="bar bar-paused" style="animation-delay: 0.4s"></div>
             </div>
+            <span class="text-[9px] tracking-[0.2em] uppercase opacity-40" id="music-status">Off</span>
+        </div>
+    </nav>
 
-            <div class="work-item even">
-                <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=1600" class="work-img">
-                <div class="flex justify-between items-start">
-                    <p class="detail-label">Project 02 / Interface Lab</p>
-                    <h2 class="text-3xl font-light mt-6 tracking-widest">流动界面</h2>
-                </div>
+    <div class="flex gap-6 border-b border-white/5 pb-4 mb-16 max-w-7xl mx-auto overflow-x-auto whitespace-nowrap">
+        <div onclick="filterWorks('all')" class="filter-btn active" id="btn-all">All Projects</div>
+        <div onclick="filterWorks('critical')" class="filter-btn" id="btn-critical">Critical Design</div>
+        <div onclick="filterWorks('photo')" class="filter-btn" id="btn-photo">Photography</div>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-4 md:gap-x-10 gap-y-20 max-w-7xl mx-auto" id="grid">
+        
+        <div class="project-group" data-category="critical">
+            <div class="stack-container" onclick="toggleExpand(this)">
+                <img src="https://picsum.photos/400/500?random=1" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=2" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=3" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+            </div>
+            <div class="mt-6 border-l-2 border-blue-500 pl-3">
+                <h3 class="vogue-title text-sm md:text-xl font-bold uppercase leading-tight">Divorce in China</h3>
+                <p class="text-gray-500 text-[10px] mt-1 italic">Social Structure Study</p>
+            </div>
+        </div>
+
+        <div class="project-group" data-category="critical">
+            <div class="stack-container" onclick="toggleExpand(this)">
+                <img src="https://picsum.photos/400/500?random=4" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=5" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=6" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+            </div>
+            <div class="mt-6 border-l-2 border-red-500 pl-3">
+                <h3 class="vogue-title text-sm md:text-xl font-bold uppercase leading-tight">Bowling Campaign</h3>
+                <p class="text-gray-500 text-[10px] mt-1 italic">Consumerism Research</p>
+            </div>
+        </div>
+
+        <div class="project-group" data-category="critical">
+            <div class="stack-container" onclick="toggleExpand(this)">
+                <img src="https://picsum.photos/400/500?random=7" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=8" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+            </div>
+            <div class="mt-6 border-l-2 border-red-900 pl-3">
+                <h3 class="vogue-title text-sm md:text-xl font-bold uppercase leading-tight">Blood Nirvana</h3>
+                <p class="text-gray-500 text-[10px] mt-1 italic">Digital Vitality</p>
+            </div>
+        </div>
+
+        <div class="project-group" data-category="critical">
+            <div class="stack-container" onclick="toggleExpand(this)">
+                <img src="https://picsum.photos/400/500?random=9" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=10" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+                <img src="https://picsum.photos/400/500?random=11" class="stack-img rounded-sm" onclick="zoomImage(event, this)">
+            </div>
+            <div class="mt-6 border-l-2 border-green-800 pl-3">
+                <h3 class="vogue-title text-sm md:text-xl font-bold uppercase leading-tight">Muscle Factory</h3>
+                <p class="text-gray-500 text-[10px] mt-1 italic">Biological Industry</p>
             </div>
         </div>
     </div>
 
+    <div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img" class="max-w-full max-h-full object-contain"></div>
+
     <script>
-        const audio = document.getElementById('global-bgm');
-        const app = document.getElementById('app-content');
-        async function router(url) {
-            app.style.opacity = "0";
-            localStorage.setItem('bgmTime', audio.currentTime);
-            localStorage.setItem('bgmPlaying', !audio.paused);
-            setTimeout(() => { window.location.href = url; }, 800);
+        const audio = document.getElementById('bgm');
+        const iconBars = document.querySelectorAll('.bar');
+        const statusText = document.getElementById('music-status');
+
+        function updateUI(isPlaying) {
+            statusText.innerText = isPlaying ? "On" : "Off";
+            iconBars.forEach(bar => isPlaying ? bar.classList.remove('bar-paused') : bar.classList.add('bar-paused'));
         }
-        window.onload = () => {
-            const savedTime = localStorage.getItem('bgmTime');
-            if(savedTime) audio.currentTime = savedTime;
-            if(localStorage.getItem('bgmPlaying') === 'true') audio.play().catch(() => {});
-            setTimeout(() => app.classList.add('page-active'), 100);
+
+        window.addEventListener('load', () => {
+            if (audio) {
+                audio.currentTime = 0; 
+                if (localStorage.getItem('musicPlaying') === 'true') {
+                    audio.play().then(() => updateUI(true)).catch(e => console.log("Audio play blocked by browser"));
+                }
+            }
+        });
+
+        const startMusic = () => {
+            if (audio && localStorage.getItem('musicPlaying') === 'true' && audio.paused) {
+                audio.play().then(() => updateUI(true)).catch(e => {});
+            }
         };
+        document.addEventListener('click', startMusic);
+        window.addEventListener('scroll', startMusic, { once: true });
+
+        function saveAndGo(event, url) {
+            event.preventDefault();
+            if (audio) {
+                localStorage.setItem('musicPlaying', audio.paused ? 'false' : 'true');
+            }
+            setTimeout(() => { window.location.href = url; }, 150);
+        }
+
+        function toggleMusic(event) {
+            event.stopPropagation();
+            if (!audio) return;
+            if (audio.paused) {
+                audio.play().then(() => {
+                    updateUI(true);
+                    localStorage.setItem('musicPlaying', 'true');
+                });
+            } else {
+                audio.pause();
+                updateUI(false);
+                localStorage.setItem('musicPlaying', 'false');
+            }
+        }
+
+        function toggleExpand(container) {
+            container.classList.toggle('expanded');
+        }
+
+        function zoomImage(event, img) {
+            if (img.parentElement.classList.contains('expanded')) {
+                event.stopPropagation();
+                document.getElementById('lightbox-img').src = img.src;
+                document.getElementById('lightbox').style.display = 'flex';
+            }
+        }
+
+        function filterWorks(cat) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            const activeBtn = document.getElementById('btn-' + cat);
+            if(activeBtn) activeBtn.classList.add('active');
+            
+            document.querySelectorAll('.project-group').forEach(g => {
+                if (cat === 'all') {
+                    g.style.display = 'block';
+                } else {
+                    g.style.display = (g.getAttribute('data-category') === cat) ? 'block' : 'none';
+                }
+            });
+        }
     </script>
 </body>
 </html>
