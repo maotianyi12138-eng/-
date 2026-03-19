@@ -4,112 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAO TIANYI | 毛天艺</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,900&family=Noto+Serif+SC:wght@200;900&family=Montserrat:wght@100;300;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
-            background: radial-gradient(circle at 50% 50%, #0a0a15 0%, #050505 100%); 
-            color: white; margin: 0; overflow-x: hidden; font-family: 'Inter', sans-serif; 
+            background: #050505; color: white; margin: 0; overflow-x: hidden; 
+            font-family: 'Montserrat', sans-serif; 
         }
-        .vogue-t { font-family: 'Noto Serif SC', serif; }
+        .vogue-zh { font-family: 'Noto Serif SC', serif; font-weight: 200; }
+        .vogue-en { font-family: 'Bodoni Moda', serif; font-style: italic; }
 
-        /* 背景彩色释放 */
         .bg-overlay {
             position: fixed; inset: 0;
             background: url('horse.jpg') center/cover no-repeat;
-            opacity: 0.25; filter: brightness(0.5) contrast(1.2);
+            opacity: 0.2; filter: brightness(0.6) contrast(1.2);
             z-index: -2;
         }
-        .vignette { position: fixed; inset: 0; background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.9) 100%); z-index: -1; }
 
-        /* 板块悬停色彩逻辑 */
+        /* 板块卡片设计 */
         .vogue-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-            position: relative; overflow: hidden;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.7s cubic-bezier(0.15, 1, 0.3, 1);
         }
+        .vogue-card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.05); }
+        
+        /* 颜色系统 */
+        .c-works:hover { border-color: #007bff; }
+        .c-cinema:hover { border-color: #ff3c3c; }
+        .c-read:hover { border-color: #00ff88; }
+        .c-music:hover { border-color: #ffb400; }
 
-        .c-works:hover { border-color: #007bff; box-shadow: 0 0 40px rgba(0, 123, 255, 0.15); }
-        .c-cinema:hover { border-color: #ff3c3c; box-shadow: 0 0 40px rgba(255, 60, 60, 0.15); }
-        .c-read:hover { border-color: #00ff88; box-shadow: 0 0 40px rgba(0, 255, 136, 0.15); }
-        .c-music:hover { border-color: #ffb400; box-shadow: 0 0 40px rgba(255, 180, 0, 0.15); }
-
-        .line { position: absolute; bottom: 0; left: 0; width: 0; height: 4px; transition: 0.5s; }
-        .c-works:hover .line { width: 100%; background: #007bff; }
-        .c-cinema:hover .line { width: 100%; background: #ff3c3c; }
-        .c-read:hover .line { width: 100%; background: #00ff88; }
-        .c-music:hover .line { width: 100%; background: #ffb400; }
+        #app-content { transition: opacity 0.4s ease; opacity: 1; }
+        .page-fade { opacity: 0 !important; }
 
         .bar { width: 2px; height: 12px; background: #ffb400; transition: 0.3s; }
-        .bar-p { height: 2px !important; opacity: 0.3; background: white !important; }
-        
-        #app-content { transition: opacity 0.5s ease; }
-        .page-fade { opacity: 0 !important; }
+        .bar-p { height: 2px !important; opacity: 0.3; }
     </style>
 </head>
 <body>
-
     <div class="bg-overlay"></div>
-    <div class="vignette"></div>
     <audio id="global-bgm" loop src="bgm.mp3"></audio>
 
-    <nav class="fixed top-0 w-full p-8 md:p-12 z-[100] flex justify-between items-center pointer-events-none">
-        <p class="text-[9px] tracking-[0.4em] opacity-40 uppercase pointer-events-auto cursor-pointer hover:text-[#ffb400] transition" onclick="router('index.html')">MAO TIANYI</p>
+    <nav class="fixed top-0 w-full p-10 z-[100] flex justify-between items-center pointer-events-none">
+        <p class="text-[10px] tracking-[0.6em] opacity-40 uppercase pointer-events-auto">Mao Tianyi</p>
         <div onclick="toggleMusic(event)" class="flex items-center gap-3 cursor-pointer pointer-events-auto group">
             <div class="flex items-end gap-1">
                 <div class="bar bar-p"></div><div class="bar bar-p"></div><div class="bar bar-p"></div>
             </div>
-            <span id="m-status" class="text-[9px] opacity-40 uppercase">Music Off</span>
         </div>
     </nav>
 
-    <div id="app-content" class="min-h-screen pt-40 pb-20">
-        <main class="max-w-[1400px] mx-auto px-8">
-            <header class="mb-20">
-                <p class="text-[10px] text-[#ffb400] tracking-[0.5em] uppercase mb-4 font-bold">Visual Archive / 2026</p>
-                <h1 class="vogue-t text-4xl md:text-5xl italic font-black text-white">毛天艺 <span class="text-2xl md:text-3xl ml-2 opacity-50 not-italic font-light">Tianyi Mao</span></h1>
+    <div id="app-content" class="min-h-screen flex items-center justify-center py-20">
+        <main class="w-full max-w-[1600px] px-12">
+            <header class="mb-24">
+                <h1 class="vogue-zh text-5xl md:text-6xl tracking-widest">
+                    毛天艺 <span class="vogue-en text-3xl md:text-4xl ml-4 opacity-40">Tianyi Mao</span>
+                </h1>
             </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <div onclick="router('works.html')" class="vogue-card c-works p-10 aspect-[4/5] flex flex-col justify-between cursor-pointer group">
-                    <div class="text-[9px] opacity-30 group-hover:text-[#007bff] uppercase transition">01 / Project</div>
-                    <div>
-                        <h2 class="vogue-t text-3xl italic mb-1">视觉作品集</h2>
-                        <h3 class="text-2xl font-light opacity-60 group-hover:opacity-100 transition">Works</h3>
-                    </div>
-                    <div class="line"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div onclick="router('works.html')" class="vogue-card c-works p-12 aspect-[3/4] flex flex-col justify-end cursor-pointer group">
+                    <h2 class="vogue-zh text-3xl mb-2">视觉作品集</h2>
+                    <h3 class="vogue-en text-2xl opacity-40 group-hover:opacity-100 transition">Works</h3>
                 </div>
-
-                <div onclick="router('movies.html')" class="vogue-card c-cinema p-10 aspect-[4/5] flex flex-col justify-between cursor-pointer group">
-                    <div class="text-[9px] opacity-30 group-hover:text-[#ff3c3c] uppercase transition">02 / Archive</div>
-                    <div>
-                        <h2 class="vogue-t text-3xl italic mb-1">电影人生</h2>
-                        <h3 class="text-2xl font-light opacity-60 group-hover:opacity-100 transition">Cinema</h3>
-                    </div>
-                    <div class="line"></div>
+                <div onclick="router('movies.html')" class="vogue-card c-cinema p-12 aspect-[3/4] flex flex-col justify-end cursor-pointer group">
+                    <h2 class="vogue-zh text-3xl mb-2">电影人生</h2>
+                    <h3 class="vogue-en text-2xl opacity-40 group-hover:opacity-100 transition">Cinema</h3>
                 </div>
-
-                <div onclick="router('read.html')" class="vogue-card c-read p-10 aspect-[4/5] flex flex-col justify-between cursor-pointer group">
-                    <div class="text-[9px] opacity-30 group-hover:text-[#00ff88] uppercase transition">03 / Notes</div>
-                    <div>
-                        <h2 class="vogue-t text-3xl italic mb-1">阅读人生</h2>
-                        <h3 class="text-2xl font-light opacity-60 group-hover:opacity-100 transition">Read</h3>
-                    </div>
-                    <div class="line"></div>
+                <div onclick="router('read.html')" class="vogue-card c-read p-12 aspect-[3/4] flex flex-col justify-end cursor-pointer group">
+                    <h2 class="vogue-zh text-3xl mb-2">阅读人生</h2>
+                    <h3 class="vogue-en text-2xl opacity-40 group-hover:opacity-100 transition">Read</h3>
                 </div>
-
-                <div onclick="router('music.html')" class="vogue-card c-music p-10 aspect-[4/5] flex flex-col justify-between cursor-pointer group">
-                    <div class="text-[9px] opacity-30 group-hover:text-[#ffb400] uppercase transition">04 / Audio</div>
-                    <div>
-                        <h2 class="vogue-t text-3xl italic mb-1">音乐人生</h2>
-                        <h3 class="text-2xl font-light opacity-60 group-hover:opacity-100 transition">Music</h3>
-                    </div>
-                    <div class="line"></div>
+                <div onclick="router('music.html')" class="vogue-card c-music p-12 aspect-[3/4] flex flex-col justify-end cursor-pointer group">
+                    <h2 class="vogue-zh text-3xl mb-2">音乐人生</h2>
+                    <h3 class="vogue-en text-2xl opacity-40 group-hover:opacity-100 transition">Music</h3>
                 </div>
-
             </div>
         </main>
     </div>
@@ -118,51 +89,43 @@
         const audio = document.getElementById('global-bgm');
         const app = document.getElementById('app-content');
 
-        function upUI(p) {
-            const statusText = document.getElementById('m-status');
-            const bars = document.querySelectorAll('.bar');
-            if (statusText) statusText.innerText = p ? "Music On" : "Music Off";
-            bars.forEach(b => p ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
-        }
-
-        document.addEventListener('click', function init() {
-            if (audio.paused && localStorage.getItem('mPlay') !== 'false') {
-                audio.play().then(() => upUI(true));
-            }
-            document.removeEventListener('click', init);
-        });
-
         function toggleMusic(e) {
             if(e) e.stopPropagation();
-            if (audio.paused) { audio.play(); upUI(true); localStorage.setItem('mPlay', 'true'); }
-            else { audio.pause(); upUI(false); localStorage.setItem('mPlay', 'false'); }
+            const bars = document.querySelectorAll('.bar');
+            if (audio.paused) { 
+                audio.play(); 
+                bars.forEach(b => b.classList.remove('bar-p'));
+                localStorage.setItem('mPlay', 'true');
+            } else { 
+                audio.pause(); 
+                bars.forEach(b => b.classList.add('bar-p'));
+                localStorage.setItem('mPlay', 'false');
+            }
         }
 
         async function router(url) {
-            let targetUrl = (url === 'movie.html') ? 'movies.html' : url;
             app.classList.add('page-fade');
-            try {
-                const res = await fetch(targetUrl);
-                const text = await res.text();
-                const dom = new DOMParser().parseFromString(text, 'text/html');
-                const newContent = dom.getElementById('app-content');
-                setTimeout(() => {
+            setTimeout(async () => {
+                try {
+                    const res = await fetch(url);
+                    const text = await res.text();
+                    const dom = new DOMParser().parseFromString(text, 'text/html');
+                    const newContent = dom.getElementById('app-content');
                     app.innerHTML = newContent.innerHTML;
+                    
                     const scripts = newContent.querySelectorAll('script');
-                    scripts.forEach(oldScript => {
-                        const newScript = document.createElement('script');
-                        if (oldScript.src) newScript.src = oldScript.src;
-                        else newScript.textContent = oldScript.textContent;
-                        document.head.appendChild(newScript).parentNode.removeChild(newScript);
+                    scripts.forEach(s => {
+                        const newS = document.createElement('script');
+                        if (s.src) newS.src = s.src; else newS.textContent = s.textContent;
+                        document.head.appendChild(newS).parentNode.removeChild(newS);
                     });
-                    history.pushState({url: targetUrl}, '', targetUrl);
-                    window.scrollTo(0, 0);
+                    
+                    history.pushState({url}, '', url);
                     app.classList.remove('page-fade');
-                    setTimeout(() => upUI(!audio.paused), 50);
-                }, 400);
-            } catch (err) { window.location.href = targetUrl; }
+                    window.scrollTo(0, 0);
+                } catch (e) { window.location.href = url; }
+            }, 400);
         }
-        window.onpopstate = () => location.reload();
     </script>
 </body>
 </html>
