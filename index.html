@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAO TIANYI | PORTFOLIO</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;600&family=Noto+Sans+SC:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* 核心：引入你上传的上海摩登字体 */
+        @font-face {
+            font-family: 'ShanghaiModeng';
+            src: url('ShanghaiModeng.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body { 
             background: #000; color: white; margin: 0; overflow-x: hidden; 
-            font-family: 'Inter', 'Noto Sans SC', sans-serif; 
+            font-family: 'Inter', sans-serif; 
+        }
+
+        /* 中文字体统一声明 */
+        .sh-modern { 
+            font-family: 'ShanghaiModeng', serif; 
+            -webkit-font-smoothing: antialiased;
         }
 
         .bg-overlay {
@@ -20,8 +34,7 @@
         }
         .vignette { position: fixed; inset: 0; background: radial-gradient(circle, transparent 40%, #000 100%); z-index: -1; }
 
-        /* 核心调整：极细字重 */
-        .hero-name { font-weight: 300; letter-spacing: 0.3em; } /* 中文调细且加大间距 */
+        .hero-name { letter-spacing: 0.4em; font-weight: normal; }
         .hero-en { font-weight: 100; letter-spacing: 0.4em; text-transform: uppercase; }
 
         .vogue-card {
@@ -32,7 +45,6 @@
         }
         .vogue-card:hover { border-top-color: rgba(255,255,255,0.8); padding-top: 4rem; }
         
-        /* 保持你的彩色色彩逻辑 */
         .c-works:hover { color: #007bff; }
         .c-cinema:hover { color: #ff3c3c; }
         .c-read:hover { color: #00ff88; }
@@ -59,18 +71,16 @@
 
     <div id="app-content" class="min-h-screen flex items-center">
         <main class="w-full max-w-[1600px] mx-auto px-12 md:px-24">
-            
             <header class="mb-40">
-                <h1 class="hero-name text-5xl md:text-7xl mb-6">毛天艺</h1>
+                <h1 class="sh-modern hero-name text-6xl md:text-8xl mb-6">毛天艺</h1>
                 <p class="hero-en text-lg md:text-xl opacity-30">Tianyi Mao</p>
             </header>
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                
                 <div onclick="router('works.html')" class="vogue-card c-works group">
                     <span class="text-[9px] opacity-30 font-light tracking-[0.4em] uppercase">01 / Folio</span>
                     <div class="mt-10">
-                        <h2 class="text-2xl font-light mb-2 tracking-widest transition-all group-hover:tracking-[0.4em]">视觉作品集</h2>
+                        <h2 class="sh-modern text-3xl mb-2 tracking-widest transition-all group-hover:tracking-[0.3em]">视觉作品集</h2>
                         <p class="text-sm font-extralight opacity-30 group-hover:opacity-100 uppercase tracking-widest transition">Works</p>
                     </div>
                 </div>
@@ -78,7 +88,7 @@
                 <div onclick="router('movies.html')" class="vogue-card c-cinema group">
                     <span class="text-[9px] opacity-30 font-light tracking-[0.4em] uppercase">02 / Archive</span>
                     <div class="mt-10">
-                        <h2 class="text-2xl font-light mb-2 tracking-widest transition-all group-hover:tracking-[0.4em]">电影人生</h2>
+                        <h2 class="sh-modern text-3xl mb-2 tracking-widest transition-all group-hover:tracking-[0.3em]">电影人生</h2>
                         <p class="text-sm font-extralight opacity-30 group-hover:opacity-100 uppercase tracking-widest transition">Cinema</p>
                     </div>
                 </div>
@@ -86,7 +96,7 @@
                 <div onclick="router('read.html')" class="vogue-card c-read group">
                     <span class="text-[9px] opacity-30 font-light tracking-[0.4em] uppercase">03 / Notes</span>
                     <div class="mt-10">
-                        <h2 class="text-2xl font-light mb-2 tracking-widest transition-all group-hover:tracking-[0.4em]">阅读人生</h2>
+                        <h2 class="sh-modern text-3xl mb-2 tracking-widest transition-all group-hover:tracking-[0.3em]">阅读人生</h2>
                         <p class="text-sm font-extralight opacity-30 group-hover:opacity-100 uppercase tracking-widest transition">Read</p>
                     </div>
                 </div>
@@ -94,11 +104,10 @@
                 <div onclick="router('music.html')" class="vogue-card c-music group">
                     <span class="text-[9px] opacity-30 font-light tracking-[0.4em] uppercase">04 / Audio</span>
                     <div class="mt-10">
-                        <h2 class="text-2xl font-light mb-2 tracking-widest transition-all group-hover:tracking-[0.4em]">音乐人生</h2>
+                        <h2 class="sh-modern text-3xl mb-2 tracking-widest transition-all group-hover:tracking-[0.3em]">音乐人生</h2>
                         <p class="text-sm font-extralight opacity-30 group-hover:opacity-100 uppercase tracking-widest transition">Music</p>
                     </div>
                 </div>
-
             </div>
         </main>
     </div>
@@ -106,17 +115,12 @@
     <script>
         const audio = document.getElementById('global-bgm');
         const app = document.getElementById('app-content');
-
         function toggleMusic(e) {
             if(e) e.stopPropagation();
             const bars = document.querySelectorAll('.bar');
-            if (audio.paused) { 
-                audio.play(); bars.forEach(b => b.classList.remove('bar-p'));
-            } else { 
-                audio.pause(); bars.forEach(b => b.classList.add('bar-p'));
-            }
+            if (audio.paused) { audio.play(); bars.forEach(b => b.classList.remove('bar-p')); }
+            else { audio.pause(); bars.forEach(b => b.classList.add('bar-p')); }
         }
-
         async function router(url) {
             app.classList.add('page-fade');
             setTimeout(() => { window.location.href = url; }, 500);
