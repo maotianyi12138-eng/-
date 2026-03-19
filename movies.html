@@ -4,183 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CINEMA | MAO TIANYI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&family=Noto+Sans+SC:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&family=Noto+Sans+SC:wght@100;300&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="movies.js"></script> <style>
+    <script src="movies.js"></script>
+    <style>
         body { background: #000; color: white; margin: 0; font-family: 'Inter', 'Noto Sans SC', sans-serif; overflow-x: hidden; }
-        
         .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* 1. 个人十佳：龙鳞装 (Dragon Scale Binding) 核心样式 */
-        .dragon-scale-section {
-            min-h-screen; display: flex; flex-direction: column; justify-content: center; background: #000; padding: 10vh 0;
-        }
-
+        /* 统一标题样式：极细、间距大 */
+        .vogue-header { font-weight: 100; letter-spacing: 0.5em; }
+        
+        /* 龙鳞装容器 */
         .dragon-scale-container {
-            display: flex;
-            padding-left: 10%; /* 留出左侧空间，Top 1 在最上面最左边 */
-            padding-right: 5%;
-            align-items: center;
-            height: 60vh;
-            overflow-x: auto;
-            overflow-y: hidden;
+            display: flex; padding-left: 8%; padding-right: 5%; align-items: center; height: 65vh;
+            overflow-x: auto; overflow-y: hidden;
         }
 
         .dragon-card {
-            flex: 0 0 240px; /* 卡片基准宽度 */
-            margin-right: -170px; /* 核心：负边距造成高密度重叠 */
-            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); /* 优雅的展开动画 */
-            position: relative;
-            cursor: crosshair;
+            flex: 0 0 220px; margin-right: -160px;
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative; cursor: crosshair;
         }
 
-        /* 悬停状态：龙鳞被“吹开” */
         .dragon-card:hover {
-            margin-right: 30px; /* 展开间距 */
-            transform: translateY(-25px) scale(1.08); /* 向上浮起并轻微放大 */
-            z-index: 100 !important; /* 强制置顶 */
-            outline: 2px solid white; /* 加入高亮边框 */
+            margin-right: 40px; transform: translateY(-30px);
+            z-index: 100 !important;
         }
 
-        /* 后面所有的卡片在当前卡片悬停时向右推移，露出完整封面 */
-        .dragon-card:hover ~ .dragon-card {
-            transform: translateX(160px);
-        }
+        .dragon-card:hover ~ .dragon-card { transform: translateX(160px); }
 
-        /* Top 排名大字 */
         .top-tag {
-            position: absolute; top: -30px; left: 15px;
-            font-size: 50px; font-weight: 800; font-style: italic;
-            -webkit-text-stroke: 1px rgba(255,255,255,0.6);
-            color: transparent; z-index: 20;
-            pointer-events: none;
+            position: absolute; top: -40px; left: 10px; font-size: 60px; font-weight: 100;
+            color: rgba(255,255,255,0.05); pointer-events: none;
         }
 
-        /* 2. 主体布局：双列名单 + 海报墙 */
-        .main-layout { display: flex; height: 100vh; }
-        /* 布局比例：左 42% 文本，右 58% 海报 */
+        /* 主布局 */
+        .main-layout { display: flex; min-height: 100vh; border-top: 1px solid rgba(255,255,255,0.1); }
         .list-area { width: 42%; overflow-y: auto; background: #050505; border-right: 1px solid rgba(255,255,255,0.05); }
         .wall-area { width: 58%; overflow-y: auto; background: #000; }
 
-        /* 极密名单 */
-        .m-line { 
-            border-bottom: 1px solid rgba(255,255,255,0.02); 
-            padding: 5px 0; transition: 0.1s; cursor: crosshair;
-        }
-        .m-line:hover { color: #ff3c3c; background: rgba(255,255,255,0.05); }
+        .m-line { border-bottom: 1px solid rgba(255,255,255,0.02); padding: 6px 0; transition: 0.2s; }
+        .m-line:hover { color: #ff3c3c; background: rgba(255,255,255,0.03); }
 
-        /* 彩色海报墙矩阵 (亲吻墙) */
         .mosaic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(65px, 1fr)); gap: 1px; }
-        .mosaic-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0.8; transition: 0.4s; }
-        .mosaic-item:hover { opacity: 1; transform: scale(1.8); z-index: 50; outline: 1px solid white; box-shadow: 0 0 30px #000; }
+        .mosaic-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0.7; transition: 0.5s; }
+        .mosaic-item:hover { opacity: 1; transform: scale(1.8); z-index: 50; outline: 1px solid white; }
 
-        /* 响应式适配 */
         @media (max-width: 768px) {
-            .dragon-scale-container { padding-left: 5%; }
-            .dragon-card { flex: 0 0 180px; margin-right: -130px; }
             .main-layout { flex-direction: column; }
-            .list-area, .wall-area { width: 100%; height: 50vh; }
+            .list-area, .wall-area { width: 100%; height: auto; }
         }
     </style>
 </head>
 <body>
 
-    <div onclick="location.href='index.html'" class="fixed top-6 left-6 z-[200] text-[9px] opacity-30 hover:opacity-100 cursor-pointer uppercase tracking-[0.5em] backdrop-blur-md px-3 py-1 bg-black/50">← Index</div>
+    <div onclick="location.href='index.html'" class="fixed top-8 left-8 z-[200] text-[9px] font-light opacity-30 hover:opacity-100 cursor-pointer uppercase tracking-[0.6em]">← Index</div>
 
-    <section class="dragon-scale-section">
-        <header class="px-10 md:px-20 mb-10">
-            <h2 class="text-4xl md:text-5xl font-bold tracking-tighter italic">个人十佳</h2>
-            <p class="text-[10px] opacity-30 tracking-[0.5em] mt-4 uppercase font-extralight">Personal Top 10 Selection / Mao Tianyi</p>
+    <section class="min-h-screen flex flex-col justify-center bg-black">
+        <header class="px-12 md:px-24 mb-16">
+            <h2 class="vogue-header text-4xl md:text-5xl">个人十佳</h2>
+            <p class="text-[9px] opacity-20 tracking-[0.8em] mt-6 uppercase font-light">The Definitive Top Ten</p>
         </header>
 
-        <div class="dragon-scale-container no-scrollbar" id="dragon-content">
-            </div>
+        <div class="dragon-scale-container no-scrollbar" id="dragon-content"></div>
 
-        <div class="mt-16 text-center opacity-20">
-            <p class="text-[9px] tracking-[0.8em] animate-pulse">SCROLL TO ARCHIVE</p>
+        <div class="mt-20 text-center opacity-10">
+            <p class="text-[8px] tracking-[1em] animate-pulse">DISCOVER ARCHIVE</p>
         </div>
     </section>
 
-    <div id="app-content" class="main-layout flex-col md:flex-row">
-        
+    <div id="app-content" class="main-layout">
         <div class="list-area no-scrollbar">
-            <div id="movie-list" class="grid grid-cols-2 gap-x-8 gap-y-1 p-10 pt-20">
-                </div>
+            <header class="p-10 pt-20">
+                <h2 class="vogue-header text-3xl opacity-80">看过</h2>
+                <p class="text-[8px] opacity-20 tracking-[0.5em] mt-2 uppercase font-light">Full Archive / 689 Fragments</p>
+            </header>
+            <div id="movie-list" class="grid grid-cols-2 gap-x-8 gap-y-1 px-10 pb-32"></div>
         </div>
 
         <div class="wall-area no-scrollbar">
-            <div id="mosaic-grid" class="mosaic-grid">
-                </div>
+            <div id="mosaic-grid" class="mosaic-grid"></div>
         </div>
     </div>
 
     <script>
-        // A. 【致命修复】精准匹配你的 Personal Top 10 名单
+        // 已经为你换好的 Top 10 海报链接
         const myTop10 = [
-            { id: 1, title: "杀死比尔 2", en: "Kill Bill: Vol. 2", img: "https://img1.doubanio.com/view/photo/l/public/p641144061.jpg" },
+            { id: 1, title: "杀死比尔 2", en: "Kill Bill: Vol. 2", img: "https://img9.doubanio.com/view/photo/l/public/p641144061.jpg" },
             { id: 2, title: "新世界", en: "New World", img: "https://img1.doubanio.com/view/photo/l/public/p1903379979.jpg" },
-            { id: 3, title: "爱在黎明破晓前", en: "Before Sunrise", img: "https://img1.doubanio.com/view/photo/l/public/p2555872821.jpg" },
-            { id: 4, title: "勇士", en: "Warrior", img: "https://img1.doubanio.com/view/photo/l/public/p1145340118.jpg" },
-            { id: 5, title: "七宗罪", en: "Se7en", img: "https://img1.doubanio.com/view/photo/l/public/p457631605.jpg" },
-            { id: 6, title: "无间道", en: "Infernal Affairs", img: "https://img1.doubanio.com/view/photo/l/public/p2554474775.jpg" },
+            { id: 3, title: "爱在黎明破晓前", en: "Before Sunrise", img: "https://img9.doubanio.com/view/photo/l/public/p2555872821.jpg" },
+            { id: 4, title: "勇士", en: "Warrior", img: "https://img3.doubanio.com/view/photo/l/public/p1145340118.jpg" },
+            { id: 5, title: "七宗罪", en: "Se7en", img: "https://img2.doubanio.com/view/photo/l/public/p457631605.jpg" },
+            { id: 6, title: "无间道", en: "Infernal Affairs", img: "https://img2.doubanio.com/view/photo/l/public/p2554474775.jpg" },
             { id: 7, title: "被解救的姜戈", en: "Django Unchained", img: "https://img1.doubanio.com/view/photo/l/public/p1959977201.jpg" },
             { id: 8, title: "星际穿越", en: "Interstellar", img: "https://img1.doubanio.com/view/photo/l/public/p2614989304.jpg" },
             { id: 9, title: "胭脂扣", en: "Rouge", img: "https://img1.doubanio.com/view/photo/l/public/p2514578848.jpg" },
-            { id: 10, title: "美国丽人", en: "American Beauty", img: "https://img1.doubanio.com/view/photo/l/public/p1463935292.jpg" }
+            { id: 10, title: "美国丽人", en: "American Beauty", img: "https://img9.doubanio.com/view/photo/l/public/p1463935292.jpg" }
         ];
 
         window.onload = () => {
-            // A.1 【致命修复】龙鳞装 Top 10 渲染
             const dragonContainer = document.getElementById('dragon-content');
-            
             dragonContainer.innerHTML = myTop10.map((m, i) => `
-                <div class="dragon-card" style="z-index: ${30 - i}"> <div class="top-tag">${m.id}</div>
-                    <img src="${m.img}" class="w-full shadow-2xl border border-white/5 rounded-sm grayscale hover:grayscale-0 transition-all duration-700">
-                    <div class="mt-6 px-2 opacity-0 hover:opacity-100 transition-opacity duration-500">
-                        <div class="text-[12px] font-bold tracking-tight">${m.title}</div>
-                        <div class="text-[8px] opacity-40 uppercase italic mt-1 font-light tracking-wide">${m.en}</div>
+                <div class="dragon-card" style="z-index: ${30 - i}">
+                    <div class="top-tag">${m.id}</div>
+                    <img src="${m.img}" class="w-full shadow-2xl border border-white/5 grayscale hover:grayscale-0 transition-all duration-1000">
+                    <div class="mt-6 px-1 opacity-0 hover:opacity-100 transition-opacity">
+                        <div class="text-[10px] font-light tracking-widest">${m.title}</div>
+                        <div class="text-[7px] opacity-30 uppercase mt-1 tracking-tighter">${m.en}</div>
                     </div>
                 </div>
             `).join('');
 
-            // B. 后面跟随原有的主 Archive 渲染逻辑
             if (typeof movieData !== 'undefined') {
-                renderMainArchive(); 
-            } else {
-                console.error("movies.js missing.");
+                const list = document.getElementById('movie-list');
+                list.innerHTML = movieData.map(m => `
+                    <div class="m-line">
+                        <span class="text-[9px] font-light truncate tracking-wider">${m.title.split(' / ')[0]}</span>
+                        <span class="text-[7px] opacity-20 truncate italic font-light">${m.title.split(' / ').pop()}</span>
+                    </div>
+                `).join('');
+
+                const wall = document.getElementById('mosaic-grid');
+                movieData.forEach(m => {
+                    if(!m.poster) return;
+                    const img = new Image();
+                    img.src = m.poster;
+                    img.className = 'mosaic-item';
+                    img.loading = "lazy";
+                    img.onload = () => wall.appendChild(img);
+                    img.onerror = () => img.remove();
+                });
             }
         };
-
-        // 用于渲染主 Archive 的函数
-        function renderMainArchive() {
-            // 2. 渲染双列名单
-            const list = document.getElementById('movie-list');
-            list.innerHTML = movieData.map(m => {
-                const parts = m.title.split(' / ');
-                const zh = parts[0];
-                const en = parts[parts.length - 1] || "";
-                return `
-                    <div class="m-line">
-                        <span class="text-[10px] font-bold truncate">${zh}</span>
-                        <span class="text-[8px] opacity-20 truncate italic font-light tracking-tight">${en}</span>
-                    </div>
-                `;
-            }).join('');
-
-            // 3. 渲染彩色矩阵 (自动化死链过滤)
-            const wall = document.getElementById('mosaic-grid');
-            movieData.forEach(m => {
-                if(!m.poster) return;
-                const imgTest = new Image();
-                imgTest.src = m.poster;
-                imgTest.className = 'mosaic-item';
-                imgTest.loading = "lazy"; // 启用懒加载
-                
-                imgTest.onload = () => { wall.appendChild(imgTest); };
-                imgTest.onerror = () => { imgTest.remove(); };
-            });
-        }
     </script>
 </body>
 </html>
