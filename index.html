@@ -3,87 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAO TIANYI | VOGUE ARCHIVE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&family=Cinzel:wght@400;700&family=Noto+Serif+SC:wght@200;500&display=swap" rel="stylesheet">
+    <title>MAO TIANYI | PORTFOLIO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&family=Noto+Sans+SC:wght@300;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background: #000; color: white; margin: 0; overflow-x: hidden; }
-        
-        /* Vogue 标志性字体：大写衬线体 */
-        .vogue-title { font-family: 'Playfair Display', serif; font-style: italic; letter-spacing: -0.02em; }
-        .vogue-caps { font-family: 'Cinzel', serif; letter-spacing: 0.5em; text-transform: uppercase; }
-        .vogue-zh { font-family: 'Noto Serif SC', serif; font-weight: 200; letter-spacing: 0.1em; }
+        body { 
+            background: #000; color: white; margin: 0; overflow-x: hidden; 
+            font-family: 'Inter', 'Noto Sans SC', sans-serif; 
+        }
 
+        /* 背景控制 */
         .bg-overlay {
             position: fixed; inset: 0;
             background: url('horse.jpg') center/cover no-repeat;
-            opacity: 0.3; filter: brightness(0.4) contrast(1.3);
+            opacity: 0.25; filter: brightness(0.4) contrast(1.1);
             z-index: -2;
         }
+        .vignette { position: fixed; inset: 0; background: radial-gradient(circle, transparent 40%, #000 100%); z-index: -1; }
 
-        /* 极简卡片：去掉背景色，只留线条感 */
+        /* 杂志排版：超大字号与极细字重的对比 */
+        .hero-name { font-weight: 700; letter-spacing: -0.02em; }
+        .hero-en { font-weight: 200; letter-spacing: 0.2em; text-transform: uppercase; }
+
+        /* 板块设计：极简横线分割 */
         .vogue-card {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 1.5rem;
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
             cursor: pointer;
         }
-        .vogue-card:hover { border-top-color: #fff; padding-top: 2rem; }
+        .vogue-card:hover { border-top-color: #fff; padding-top: 3rem; }
         
-        /* 悬停色彩溢出 */
+        /* 悬停色彩：保持纯粹，只在文字上体现 */
         .c-works:hover { color: #007bff; }
         .c-cinema:hover { color: #ff3c3c; }
         .c-read:hover { color: #00ff88; }
         .c-music:hover { color: #ffb400; }
 
-        #app-content { transition: opacity 0.6s ease; }
+        #app-content { transition: opacity 0.5s ease; }
         .page-fade { opacity: 0 !important; }
 
-        /* 音乐频谱 */
-        .bar { width: 1px; height: 15px; background: white; transition: 0.3s; }
-        .bar-p { height: 1px !important; opacity: 0.3; }
+        /* 音乐跳动条：极细线条 */
+        .bar { width: 1px; height: 12px; background: white; transition: 0.3s; }
+        .bar-p { height: 1px !important; opacity: 0.2; }
     </style>
 </head>
 <body>
     <div class="bg-overlay"></div>
+    <div class="vignette"></div>
     <audio id="global-bgm" loop src="bgm.mp3"></audio>
 
-    <nav class="fixed top-0 w-full p-12 z-[100] flex justify-between items-end pointer-events-none">
-        <div class="vogue-caps text-[10px] opacity-40 pointer-events-auto">Mao Tianyi</div>
-        <div onclick="toggleMusic(event)" class="flex items-center gap-4 cursor-pointer pointer-events-auto">
-            <div class="flex items-end gap-[2px]">
-                <div class="bar bar-p"></div><div class="bar bar-p"></div><div class="bar bar-p"></div>
-            </div>
+    <nav class="fixed top-0 w-full p-10 md:p-16 z-[100] flex justify-between items-center pointer-events-none">
+        <p class="text-[10px] tracking-[0.6em] opacity-30 uppercase pointer-events-auto">Mao Tianyi</p>
+        <div onclick="toggleMusic(event)" class="flex items-end gap-[3px] cursor-pointer pointer-events-auto group p-2">
+            <div class="bar bar-p"></div><div class="bar bar-p"></div><div class="bar bar-p"></div>
+            <span class="text-[9px] ml-2 opacity-0 group-hover:opacity-40 transition-all uppercase tracking-widest">Sound</span>
         </div>
     </nav>
 
-    <div id="app-content" class="min-h-screen pt-48 pb-24">
-        <main class="max-w-[1600px] mx-auto px-12">
+    <div id="app-content" class="min-h-screen flex items-center">
+        <main class="w-full max-w-[1600px] mx-auto px-10 md:px-20 py-32">
+            
             <header class="mb-32">
-                <h1 class="vogue-zh text-6xl md:text-7xl mb-4">毛天艺</h1>
-                <p class="vogue-title text-4xl md:text-5xl opacity-30">Tianyi Mao</p>
+                <h1 class="hero-name text-6xl md:text-8xl mb-4">毛天艺</h1>
+                <p class="hero-en text-xl md:text-2xl opacity-40">Tianyi Mao</p>
             </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div onclick="router('works.html')" class="vogue-card c-works pt-8 group">
-                    <span class="vogue-caps text-[9px] opacity-30">01 / Folio</span>
-                    <h2 class="vogue-zh text-3xl mt-6 mb-2">视觉作品集</h2>
-                    <h3 class="vogue-title text-2xl opacity-20 group-hover:opacity-100 transition">Works</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
+                
+                <div onclick="router('works.html')" class="vogue-card c-works group">
+                    <span class="text-[10px] opacity-30 font-light tracking-[0.3em] uppercase">01 / Folio</span>
+                    <div class="mt-8">
+                        <h2 class="text-3xl font-bold mb-1">视觉作品集</h2>
+                        <p class="text-lg font-extralight opacity-40 group-hover:opacity-100 uppercase tracking-tighter transition">Works</p>
+                    </div>
                 </div>
-                <div onclick="router('movies.html')" class="vogue-card c-cinema pt-8 group">
-                    <span class="vogue-caps text-[9px] opacity-30">02 / Archive</span>
-                    <h2 class="vogue-zh text-3xl mt-6 mb-2">电影人生</h2>
-                    <h3 class="vogue-title text-2xl opacity-20 group-hover:opacity-100 transition">Cinema</h3>
+
+                <div onclick="router('movies.html')" class="vogue-card c-cinema group">
+                    <span class="text-[10px] opacity-30 font-light tracking-[0.3em] uppercase">02 / Archive</span>
+                    <div class="mt-8">
+                        <h2 class="text-3xl font-bold mb-1">电影人生</h2>
+                        <p class="text-lg font-extralight opacity-40 group-hover:opacity-100 uppercase tracking-tighter transition">Cinema</p>
+                    </div>
                 </div>
-                <div onclick="router('read.html')" class="vogue-card c-read pt-8 group">
-                    <span class="vogue-caps text-[9px] opacity-30">03 / Notes</span>
-                    <h2 class="vogue-zh text-3xl mt-6 mb-2">阅读人生</h2>
-                    <h3 class="vogue-title text-2xl opacity-20 group-hover:opacity-100 transition">Read</h3>
+
+                <div onclick="router('read.html')" class="vogue-card c-read group">
+                    <span class="text-[10px] opacity-30 font-light tracking-[0.3em] uppercase">03 / Notes</span>
+                    <div class="mt-8">
+                        <h2 class="text-3xl font-bold mb-1">阅读人生</h2>
+                        <p class="text-lg font-extralight opacity-40 group-hover:opacity-100 uppercase tracking-tighter transition">Read</p>
+                    </div>
                 </div>
-                <div onclick="router('music.html')" class="vogue-card c-music pt-8 group">
-                    <span class="vogue-caps text-[9px] opacity-30">04 / Audio</span>
-                    <h2 class="vogue-zh text-3xl mt-6 mb-2">音乐人生</h2>
-                    <h3 class="vogue-title text-2xl opacity-20 group-hover:opacity-100 transition">Music</h3>
+
+                <div onclick="router('music.html')" class="vogue-card c-music group">
+                    <span class="text-[10px] opacity-30 font-light tracking-[0.3em] uppercase">04 / Audio</span>
+                    <div class="mt-8">
+                        <h2 class="text-3xl font-bold mb-1">音乐人生</h2>
+                        <p class="text-lg font-extralight opacity-40 group-hover:opacity-100 uppercase tracking-tighter transition">Music</p>
+                    </div>
                 </div>
+
             </div>
         </main>
     </div>
@@ -102,13 +121,22 @@
             }
         }
 
-        // 核心：修复后的路由函数
         async function router(url) {
             app.classList.add('page-fade');
             setTimeout(() => {
-                window.location.href = url; // 强制跳转以确保 movies.js 彻底重新初始化，解决报错
+                // 解决之前报错的关键：使用 location.href 确保子页面环境干净重载
+                window.location.href = url;
             }, 500);
         }
+
+        // 自动检查本地音乐播放偏好
+        window.addEventListener('load', () => {
+            if (localStorage.getItem('mPlay') === 'true') {
+                audio.play().then(() => {
+                    document.querySelectorAll('.bar').forEach(b => b.classList.remove('bar-p'));
+                }).catch(() => {});
+            }
+        });
     </script>
 </body>
 </html>
