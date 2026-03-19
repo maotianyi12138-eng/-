@@ -3,128 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAO TIANYI | PORTFOLIO</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap" rel="stylesheet">
+    <title>MAO TIANYI | ARCHIVE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* 核心：引入你上传的上海摩登字体 */
-        @font-face {
-            font-family: 'ShanghaiModeng';
-            src: url('ShanghaiModeng.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        body { 
-            background: #000; color: white; margin: 0; overflow-x: hidden; 
-            font-family: 'Inter', sans-serif; 
-        }
-
-        /* 中文字体统一声明 */
-        .sh-modern { 
-            font-family: 'ShanghaiModeng', serif; 
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .bg-overlay {
-            position: fixed; inset: 0;
-            background: url('horse.jpg') center/cover no-repeat;
-            opacity: 0.2; filter: brightness(0.4) contrast(1.1);
-            z-index: -2;
-        }
-        .vignette { position: fixed; inset: 0; background: radial-gradient(circle, transparent 40%, #000 100%); z-index: -1; }
-
-        .hero-name { letter-spacing: 0.4em; font-weight: normal; }
-        .hero-en { font-weight: 100; letter-spacing: 0.4em; text-transform: uppercase; }
-
-        .vogue-card {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-            cursor: pointer;
-        }
-        .vogue-card:hover { border-top-color: rgba(255,255,255,0.8); padding-top: 4rem; }
+        body { background: #000; color: white; margin: 0; font-family: 'Inter', sans-serif; overflow: hidden; }
+        #app-content { transition: opacity 0.8s cubic-bezier(0.2, 0, 0.2, 1); opacity: 0; }
+        .page-active { opacity: 1 !important; }
         
-        .c-works:hover { color: #007bff; }
-        .c-cinema:hover { color: #ff3c3c; }
-        .c-read:hover { color: #00ff88; }
-        .c-music:hover { color: #ffb400; }
+        /* 模仿 DrawHistory 的背景流动 */
+        .bg-img {
+            position: fixed; inset: -50px;
+            background: url('image_43641b.jpg') center/cover no-repeat;
+            opacity: 0.12; filter: grayscale(1); z-index: -1;
+            transition: transform 1.5s ease-out;
+        }
+        body:hover .bg-img { transform: scale(1.05) translate(10px, 10px); }
 
-        #app-content { transition: opacity 0.6s ease; }
-        .page-fade { opacity: 0 !important; }
+        .nav-link { font-size: 10px; letter-spacing: 0.6em; opacity: 0.3; transition: 0.5s; cursor: pointer; }
+        .nav-link:hover { opacity: 1; transform: translateX(5px); }
+        
+        /* 非对称大标题 */
+        .hero-title { font-weight: 100; letter-spacing: -0.02em; line-height: 0.9; }
+        .hero-sub { writing-mode: vertical-lr; font-[10px] opacity: 0.2; letter-spacing: 0.8em; }
 
         .bar { width: 1px; height: 12px; background: white; transition: 0.3s; }
         .bar-p { height: 1px !important; opacity: 0.2; }
     </style>
 </head>
-<body>
-    <div class="bg-overlay"></div>
-    <div class="vignette"></div>
+<body class="bg-black text-white">
+    <div class="bg-img"></div>
     <audio id="global-bgm" loop src="bgm.mp3"></audio>
 
-    <nav class="fixed top-0 w-full p-12 md:p-16 z-[100] flex justify-between items-center pointer-events-none">
-        <p class="text-[10px] tracking-[0.6em] opacity-30 uppercase pointer-events-auto">Mao Tianyi</p>
-        <div onclick="toggleMusic(event)" class="flex items-end gap-[3px] cursor-pointer pointer-events-auto group p-2">
+    <nav class="fixed top-0 w-full p-12 z-[100] flex justify-between items-center">
+        <div class="hero-sub uppercase font-light">Archive Project 2026</div>
+        <div onclick="toggleMusic(event)" class="flex items-end gap-[3px] cursor-pointer group p-4">
             <div class="bar bar-p"></div><div class="bar bar-p"></div><div class="bar bar-p"></div>
         </div>
     </nav>
 
-    <div id="app-content" class="min-h-screen flex items-center">
-        <main class="w-full max-w-[1600px] mx-auto px-12 md:px-24">
-            <header class="mb-40">
-                <h1 class="sh-modern hero-name text-6xl md:text-8xl mb-6">毛天艺</h1>
-                <p class="hero-en text-lg md:text-xl opacity-30">Tianyi Mao</p>
-            </header>
-
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div onclick="router('works.html')" class="vogue-card c-works group">
-                    <span class="text-[9px] opacity-30 font-light tracking-[0.4em] uppercase">01 / Folio</span>
-                    <div class="mt-10">
-                        <h2 class="sh-modern text-3xl mb-2 tracking-widest transition-all group-hover:tracking-[0.3em]">视觉作品集</h2>
-                        <p class="text-sm font-extralight opacity-30 group-hover:opacity-100 uppercase tracking-widest transition">Works</p>
+    <div id="app-content" class="min-h-screen flex items-center justify-center">
+        <div class="w-full max-w-[1400px] px-10 grid grid-cols-12 gap-4">
+            <div class="col-span-12 md:col-span-8">
+                <h1 class="hero-title text-[12vw] md:text-[8vw] mb-20">MAO<br><span class="ml-[10%] opacity-50 italic">TIANYI</span></h1>
+                
+                <div class="flex flex-col gap-8 items-start">
+                    <div onclick="router('works.html')" class="nav-link group flex items-center">
+                        <span class="mr-4 opacity-50">01</span> 视觉作品 / VISUAL
                     </div>
-                </div>
-
-                <div onclick="router('movies.html')" class="vogue-card c-cinema group">
-                    <span class="text-[9px] opacity-30 font-light tracking-[0.4em] uppercase">02 / Archive</span>
-                    <div class="mt-10">
-                        <h2 class="sh-modern text-3xl mb-2 tracking-widest transition-all group-hover:tracking-[0.3em]">电影人生</h2>
-                        <p class="text-sm font-extralight opacity-30 group-hover:opacity-100 uppercase tracking-widest transition">Cinema</p>
+                    <div onclick="router('movies.html')" class="nav-link group flex items-center">
+                        <span class="mr-4 opacity-50">02</span> 电影人生 / CINEMA
                     </div>
-                </div>
-
-                <div onclick="router('read.html')" class="vogue-card c-read group">
-                    <span class="text-[9px] opacity-30 font-light tracking-[0.4em] uppercase">03 / Notes</span>
-                    <div class="mt-10">
-                        <h2 class="sh-modern text-3xl mb-2 tracking-widest transition-all group-hover:tracking-[0.3em]">阅读人生</h2>
-                        <p class="text-sm font-extralight opacity-30 group-hover:opacity-100 uppercase tracking-widest transition">Read</p>
-                    </div>
-                </div>
-
-                <div onclick="router('music.html')" class="vogue-card c-music group">
-                    <span class="text-[9px] opacity-30 font-light tracking-[0.4em] uppercase">04 / Audio</span>
-                    <div class="mt-10">
-                        <h2 class="sh-modern text-3xl mb-2 tracking-widest transition-all group-hover:tracking-[0.3em]">音乐人生</h2>
-                        <p class="text-sm font-extralight opacity-30 group-hover:opacity-100 uppercase tracking-widest transition">Music</p>
+                    <div onclick="router('music.html')" class="nav-link group flex items-center">
+                        <span class="mr-4 opacity-50">03</span> 音乐人生 / AUDIO
                     </div>
                 </div>
             </div>
-        </main>
+            <div class="hidden md:block col-span-4 self-end pb-20 opacity-10 text-[9px] leading-loose tracking-[0.5em] uppercase">
+                Digital storytelling<br>curated by Mao Tianyi.<br>Beijing / 2026
+            </div>
+        </div>
     </div>
 
     <script>
         const audio = document.getElementById('global-bgm');
         const app = document.getElementById('app-content');
+
         function toggleMusic(e) {
             if(e) e.stopPropagation();
             const bars = document.querySelectorAll('.bar');
-            if (audio.paused) { audio.play(); bars.forEach(b => b.classList.remove('bar-p')); }
-            else { audio.pause(); bars.forEach(b => b.classList.add('bar-p')); }
+            if (audio.paused) { 
+                audio.play(); bars.forEach(b => b.classList.remove('bar-p'));
+            } else { 
+                audio.pause(); bars.forEach(b => b.classList.add('bar-p'));
+            }
         }
+
         async function router(url) {
-            app.classList.add('page-fade');
-            setTimeout(() => { window.location.href = url; }, 500);
+            app.classList.remove('page-active');
+            localStorage.setItem('bgmTime', audio.currentTime);
+            localStorage.setItem('bgmPlaying', !audio.paused);
+            setTimeout(() => { window.location.href = url; }, 800);
         }
+
+        window.onload = () => {
+            const savedTime = localStorage.getItem('bgmTime');
+            const isPlaying = localStorage.getItem('bgmPlaying') === 'true';
+            if(savedTime) audio.currentTime = savedTime;
+            if(isPlaying) {
+                audio.play().catch(() => {});
+                document.querySelectorAll('.bar').forEach(b => b.classList.remove('bar-p'));
+            }
+            setTimeout(() => app.classList.add('page-active'), 100);
+        };
     </script>
 </body>
 </html>
