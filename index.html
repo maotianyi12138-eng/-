@@ -5,26 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAO TIANYI | 毛天艺</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="movies.js"></script> 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Libre+Baskerville:italic@400&display=swap');
-        body { 
-            background: #000 no-repeat center/cover fixed; color: #fff; font-family: sans-serif; -webkit-font-smoothing: antialiased;
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('mobile_bg.jpg');
-        }
-        @media (min-width: 1024px) { body { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('horse.jpg'); } }
-        .vogue-t { font-family: 'Noto Serif SC', serif; }
-        .vogue-s { font-family: 'Libre Baskerville', serif; }
-        .vogue-card { transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1); border-top: 1px solid rgba(255,255,255,0.1); cursor: pointer; }
-        @media (min-width: 1024px) { .vogue-card:hover { background: rgba(255,255,255,0.05); padding-top: 2rem; } }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Libre+Baskerville:italic@400&family=Inter:wght@100;200;300;400&display=swap');
+        body { background: #000; color: #fff; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        #app-content { transition: opacity 0.4s ease, transform 0.4s ease; min-height: 100vh; }
+        .page-fade { opacity: 0; transform: translateY(10px); }
+        
+        /* 继承 Cinema 页面的样式（必须放在母版，否则跳转后失效） */
+        .vogue-title { font-size: 14vw; font-weight: 100; line-height: 0.8; letter-spacing: -0.04em; }
+        .sub-label { font-size: 10px; letter-spacing: 0.5em; opacity: 0.3; text-transform: uppercase; }
+        .top10-item { display: grid; grid-template-columns: repeat(12, 1fr); margin-bottom: 25vh; align-items: end; }
+        .top10-img-box { grid-column: span 8; position: relative; overflow: hidden; }
+        .top10-item:nth-child(even) .top10-img-box { grid-column: 5 / span 8; }
+        .top10-text { grid-column: span 4; z-index: 2; padding-bottom: 2rem; }
+        .top10-item:nth-child(even) .top10-text { grid-column: 1 / span 4; text-align: right; }
+        .top10-img { width: 100%; filter: grayscale(1); transition: 1.2s cubic-bezier(0.23, 1, 0.32, 1); }
+        .top10-item:hover .top10-img { filter: grayscale(0); transform: scale(1.05); }
+        .big-num { font-size: 10vw; font-weight: 100; opacity: 0.1; margin-bottom: -1.5rem; }
+        .poster-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 1px; background: rgba(255,255,255,0.05); }
+        .poster-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0.3; transition: 0.5s; cursor: crosshair; }
+        .poster-item:hover { opacity: 1; transform: scale(1.6); z-index: 100; box-shadow: 0 0 40px #000; outline: 1px solid #fff; }
+        .name-item { font-size: 1.5rem; font-weight: 200; border-bottom: 1px solid rgba(255,255,255,0.03); padding: 0.8rem 0; transition: 0.3s; display: flex; justify-content: space-between; }
         .bar { width: 2px; background: #fff; animation: play 0.8s infinite alternate; height: 3px; }
         .bar-p { animation-play-state: paused !important; height: 2px !important; opacity: 0.3; }
         @keyframes play { 0% { height: 4px; } 100% { height: 13px; } }
-        /* 切换动画 */
-        #app-content { transition: opacity 0.4s ease, transform 0.4s ease; }
-        .page-fade { opacity: 0; transform: translateY(10px); }
+        /* Works 页面样式 */
+        .stack-c { position: relative; height: 180px; transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1); cursor: s-resize; margin-bottom: 1.5rem; }
+        .s-img { position: absolute; top: 0; left: 0; width: 100%; aspect-ratio: 16/10; object-fit: cover; transition: 0.8s cubic-bezier(0.19,1,0.22,1); border: 1px solid rgba(255,255,255,0.08); }
+        .s-img:nth-child(1) { z-index: 10; transform: translateY(0); }
+        .s-img:nth-child(2) { z-index: 9; transform: translateY(12px) scale(0.97); opacity: 0.8; }
+        .s-img:nth-child(3) { z-index: 8; transform: translateY(24px) scale(0.94); opacity: 0.6; }
+        .expanded { height: auto !important; }
+        .expanded .s-img { position: relative; transform: none !important; opacity: 1 !important; margin-bottom: 1rem; }
     </style>
 </head>
-<body onclick="tryPlay()" onscroll="tryPlay()" class="overflow-x-hidden">
+<body class="overflow-x-hidden">
     <audio id="global-bgm" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
 
     <div id="app-content">
@@ -38,29 +54,28 @@
         </nav>
 
         <section class="pt-24 pb-16 px-6 md:px-10 max-w-7xl mx-auto z-10 relative">
-            <div class="mb-10 h-[1px] w-12 bg-white opacity-50"></div>
-            <h1 class="vogue-t text-4xl md:text-6xl font-black mb-12 tracking-[0.4em]">毛天艺</h1>
+            <h1 class="font-bold text-4xl md:text-6xl mb-12 tracking-[0.4em]">毛天艺</h1>
             <p class="text-[10px] md:text-sm text-gray-400 max-w-md leading-loose font-light">
                 记录关于视觉、影像与声音的思考。探索数字时代下的审美边界。<br>
-                <span class="vogue-s text-[9px] opacity-40 italic mt-4 block tracking-[0.2em]">Curated by Mao Tianyi / 2026</span>
+                <span class="text-[9px] opacity-40 italic mt-4 block tracking-[0.2em]">Curated by Mao Tianyi / 2026</span>
             </p>
         </section>
 
         <section class="px-6 md:px-10 max-w-7xl mx-auto pb-24 z-10 relative">
             <div class="grid grid-cols-2 lg:grid-cols-4">
-                <div onclick="router('works.html')" class="vogue-card p-6 md:py-20 md:px-8 flex flex-col justify-between group">
-                    <div><h2 class="vogue-t text-xl md:text-3xl font-bold group-hover:text-blue-500 transition">视觉作品集</h2><p class="vogue-s text-xs md:text-base opacity-40 italic mt-4 uppercase tracking-wider">Works / Visual Portfolio</p></div>
-                    <div class="text-[9px] opacity-20 group-hover:opacity-100 transition mt-10 tracking-[0.3em]">EXPLORE →</div>
+                <div onclick="router('works.html')" class="p-6 md:py-20 border-t border-white/10 flex flex-col justify-between group cursor-pointer hover:bg-white/5 transition">
+                    <h2 class="text-xl md:text-3xl font-bold">视觉作品集</h2>
+                    <p class="text-[9px] opacity-20 group-hover:opacity-100 transition mt-10 tracking-[0.3em]">EXPLORE →</p>
                 </div>
-                <div onclick="router('cinema.html')" class="vogue-card p-6 md:py-20 md:px-8 flex flex-col justify-between group">
-                    <div><h2 class="vogue-t text-xl md:text-3xl font-bold group-hover:text-red-600 transition">电影板块</h2><p class="vogue-s text-xs md:text-base opacity-40 italic mt-4 uppercase tracking-wider">Cinema / Archive</p></div>
-                    <div class="text-[9px] opacity-20 group-hover:opacity-100 transition mt-10 tracking-[0.3em]">VIEW →</div>
+                <div onclick="router('cinema.html')" class="p-6 md:py-20 border-t border-white/10 flex flex-col justify-between group cursor-pointer hover:bg-white/5 transition">
+                    <h2 class="text-xl md:text-3xl font-bold">电影板块</h2>
+                    <p class="text-[9px] opacity-20 group-hover:opacity-100 transition mt-10 tracking-[0.3em]">VIEW →</p>
                 </div>
-                <div class="vogue-card p-6 md:py-20 md:px-8 opacity-30 cursor-not-allowed">
-                    <h2 class="vogue-t text-xl md:text-3xl font-bold">音乐板块</h2><p class="vogue-s text-xs md:text-base opacity-40 mt-4 uppercase">Music</p>
+                <div class="p-6 md:py-20 border-t border-white/10 opacity-20">
+                    <h2 class="text-xl md:text-3xl font-bold">音乐板块</h2>
                 </div>
-                <div class="vogue-card p-6 md:py-20 md:px-8 opacity-30 border-r lg:border-r-0 border-white/10 cursor-not-allowed">
-                    <h2 class="vogue-t text-xl md:text-3xl font-bold">阅读板块</h2><p class="vogue-s text-xs md:text-base opacity-40 mt-4 uppercase">Read</p>
+                <div class="p-6 md:py-20 border-t border-white/10 opacity-20">
+                    <h2 class="text-xl md:text-3xl font-bold">阅读板块</h2>
                 </div>
             </div>
         </section>
@@ -68,50 +83,80 @@
 
     <script>
         const audio = document.getElementById('global-bgm');
-        const statusText = document.getElementById('m-status');
-        const bars = document.querySelectorAll('.bar');
         const app = document.getElementById('app-content');
 
-        // 刷新判定
-        if (performance.getEntriesByType("navigation")[0].type === 'reload') {
-            audio.currentTime = 0;
-            localStorage.setItem('mPlay', 'false');
-        }
-
-        function upUI(p) {
-            statusText.innerText = p ? "On" : "Off";
-            bars.forEach(b => p ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
-        }
-
-        function tryPlay() {
-            if (audio.paused && localStorage.getItem('mPlay') !== 'false') {
-                audio.play().then(() => upUI(true)).catch(() => {});
-            }
+        function upUI() {
+            const isPlaying = !audio.paused;
+            const statusText = document.getElementById('m-status');
+            const bars = document.querySelectorAll('.bar');
+            if(statusText) statusText.innerText = isPlaying ? "On" : "Off";
+            bars.forEach(b => isPlaying ? b.classList.remove('bar-p') : b.classList.add('bar-p'));
         }
 
         function toggleMusic(e) {
-            e.stopPropagation();
-            if (audio.paused) { audio.play(); upUI(true); localStorage.setItem('mPlay', 'true'); }
-            else { audio.pause(); upUI(false); localStorage.setItem('mPlay', 'false'); }
+            if(e) e.stopPropagation();
+            if (audio.paused) { audio.play(); localStorage.setItem('mPlay', 'true'); }
+            else { audio.pause(); localStorage.setItem('mPlay', 'false'); }
+            upUI();
         }
 
-        // SPA 路由核心：拦截跳转，注入内容
+        // SPA 路由逻辑
         async function router(url) {
             app.classList.add('page-fade');
             setTimeout(async () => {
-                const res = await fetch(url);
-                const text = await res.text();
-                const partial = new DOMParser().parseFromString(text, 'text/html').getElementById('app-content').innerHTML;
-                app.innerHTML = partial;
-                history.pushState({url}, '', url);
-                window.scrollTo(0,0);
-                app.classList.remove('page-fade');
-                // 重新绑定子页面的 UI 状态
-                upUI(!audio.paused);
+                try {
+                    const res = await fetch(url);
+                    const html = await res.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const newContent = doc.getElementById('app-content').innerHTML;
+                    
+                    app.innerHTML = newContent;
+                    history.pushState({url}, '', url);
+                    window.scrollTo(0,0);
+                    app.classList.remove('page-fade');
+                    
+                    reInitPage(); // 核心：跳转后重新渲染内容
+                    upUI();
+                } catch (e) { window.location.href = url; }
             }, 400);
         }
 
+        // 重新初始化各页面的逻辑
+        function reInitPage() {
+            const path = window.location.pathname;
+            
+            // 如果进入电影页面
+            if(path.includes('cinema.html')) {
+                const top10 = [
+                    { id: "01", title: "杀死比尔 2", en: "Kill Bill: Vol. 2", img: "https://image.tmdb.org/t/p/original/27TeSl3S8pZ1v7BNvL97m9v987E.jpg" },
+                    { id: "02", title: "新世界", en: "New World", img: "https://image.tmdb.org/t/p/original/9vHofM6cZonF1Xb1Gcl5CjE3ZkI.jpg" },
+                    { id: "03", title: "爱在黎明破晓前", en: "Before Sunrise", img: "https://image.tmdb.org/t/p/original/i9uQUv9EPia99SStpS68Z99986G.jpg" }
+                ];
+                const top10Area = document.getElementById('top10-area');
+                if(top10Area) top10Area.innerHTML = top10.map(m => `
+                    <div class="top10-item group">
+                        <div class="top10-img-box"><img src="${m.img}" class="top10-img"></div>
+                        <div class="top10-text"><div class="big-num">${m.id}</div><h3 class="text-4xl font-light">${m.title}</h3><p class="sub-label mt-2">${m.en}</p></div>
+                    </div>`).join('');
+
+                if (typeof movieData !== 'undefined') {
+                    const wall = document.getElementById('poster-wall');
+                    const nameList = document.getElementById('movie-names');
+                    if(wall) movieData.forEach(m => {
+                        const img = new Image(); img.src = m.poster; img.className = 'poster-item';
+                        img.loading = "lazy"; img.onerror = () => img.remove();
+                        wall.appendChild(img);
+                    });
+                    if(nameList) nameList.innerHTML = movieData.slice(0, 30).map(m => `
+                        <div class="name-item"><span>${m.title.split(' / ')[0]}</span><span class="text-[10px] opacity-20 italic">${m.title.split(' / ')[1] || ''}</span></div>
+                    `).join('');
+                }
+            }
+        }
+
         window.onpopstate = () => location.reload();
+        window.onload = () => { if(localStorage.getItem('mPlay') === 'true') audio.play().then(upUI); };
     </script>
 </body>
 </html>
