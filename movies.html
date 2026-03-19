@@ -5,54 +5,48 @@
     <title>CINEMA | MAO TIANYI</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="movies.js"></script>
     <style>
-        body { background: #000; color: white; font-family: 'Inter', sans-serif; }
+        body { background: #000; color: #fff; font-family: 'Inter', sans-serif; }
         #app-content { transition: opacity 0.8s ease; opacity: 0; }
         .page-active { opacity: 1 !important; }
 
-        /* 极密画廊：不规则网格 */
-        .poster-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 4px; }
-        .poster-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0.4; transition: 0.8s; cursor: pointer; }
-        .poster-item:hover { opacity: 1; transform: scale(1.15); z-index: 10; box-shadow: 0 20px 40px rgba(0,0,0,0.8); }
+        /* 海报墙：Josh Warner 风格的无边框排版 */
+        .poster-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1px; }
+        .poster-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0.3; transition: 0.6s; cursor: crosshair; }
+        .poster-item:hover { opacity: 1; filter: contrast(1.1); }
 
-        .vogue-title { font-weight: 100; letter-spacing: 0.6em; }
+        .archive-header { border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 4rem; margin-bottom: 0; }
     </style>
 </head>
-<body>
+<body class="p-10 md:p-24">
     <audio id="global-bgm" loop src="bgm.mp3"></audio>
-    <div onclick="router('index.html')" class="fixed top-12 left-12 z-[200] text-[9px] opacity-30 hover:opacity-100 cursor-pointer tracking-[0.5em] uppercase">← Index</div>
+    <div onclick="router('index.html')" class="fixed top-12 right-12 z-[200] text-[10px] opacity-30 hover:opacity-100 cursor-pointer tracking-widest uppercase">Index 00</div>
 
     <div id="app-content">
-        <section class="min-h-screen flex items-center justify-center border-b border-white/5">
-            <div class="text-center">
-                <h2 class="vogue-title text-[10vw] md:text-[6vw] uppercase">Cinema</h2>
-                <p class="text-[10px] opacity-20 tracking-[1em] mt-4 uppercase font-light">The Narrative Archive</p>
-            </div>
-        </section>
+        <header class="archive-header">
+            <h1 class="text-[10vw] font-light tracking-tighter leading-none">CINEMA<br><span class="opacity-10 italic">ARCHIVE</span></h1>
+            <p class="text-[10px] opacity-20 tracking-[1em] mt-10 uppercase font-light">Documenting 689 fragments of time</p>
+        </header>
 
-        <section class="p-4 md:p-8">
-            <div id="mosaic-grid" class="poster-wall">
-                </div>
-        </section>
+        <div id="mosaic-grid" class="poster-wall">
+            </div>
     </div>
 
     <script>
         const audio = document.getElementById('global-bgm');
         const app = document.getElementById('app-content');
-
         async function router(url) {
-            app.classList.remove('page-active');
+            app.style.opacity = "0";
             localStorage.setItem('bgmTime', audio.currentTime);
             localStorage.setItem('bgmPlaying', !audio.paused);
             setTimeout(() => { window.location.href = url; }, 800);
         }
-
         window.onload = () => {
             const savedTime = localStorage.getItem('bgmTime');
             if(savedTime) audio.currentTime = savedTime;
             if(localStorage.getItem('bgmPlaying') === 'true') audio.play().catch(() => {});
 
-            // 假设 movies.js 中有 movieData
             if (typeof movieData !== 'undefined') {
                 const wall = document.getElementById('mosaic-grid');
                 movieData.forEach(m => {
