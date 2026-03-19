@@ -8,12 +8,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="movies.js"></script>
     <style>
-        /* 核心：加载你上传的上海摩登字体 */
         @font-face {
             font-family: 'ShanghaiModeng';
             src: url('ShanghaiModeng.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
+            font-weight: normal; font-style: normal;
         }
 
         body { 
@@ -22,57 +20,156 @@
             overflow-x: hidden; 
         }
 
-        /* 中文字体全局类 */
-        .sh-modern { 
-            font-family: 'ShanghaiModeng', serif; 
-            font-weight: normal;
-            -webkit-font-smoothing: antialiased;
-        }
-
+        .sh-modern { font-family: 'ShanghaiModeng', serif; -webkit-font-smoothing: antialiased; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* 1. 个人十佳：龙鳞装核心样式 */
-        .dragon-scale-section {
-            min-height: 100vh; display: flex; flex-direction: column; justify-content: center; background: #000;
-        }
+        /* 核心：修复黑屏的转场样式 */
+        #app-content { transition: opacity 0.8s ease; opacity: 0; } /* 初始透明 */
+        .page-active { opacity: 1 !important; } /* 激活后显影 */
+        .page-fade { opacity: 0 !important; }
 
-        .dragon-scale-container {
-            display: flex; padding-left: 8%; padding-right: 5%; align-items: center; height: 65vh;
-            overflow-x: auto; overflow-y: hidden;
-        }
+        /* 导航与音轨 */
+        .bar { width: 1px; height: 12px; background: white; transition: 0.3s; }
+        .bar-p { height: 1px !important; opacity: 0.2; }
 
-        .dragon-card {
-            flex: 0 0 220px; margin-right: -160px; /* 重叠度 */
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative; cursor: crosshair;
-        }
-
-        .dragon-card:hover {
-            margin-right: 40px; transform: translateY(-30px);
-            z-index: 100 !important;
-        }
-
+        /* 龙鳞装 */
+        .dragon-scale-section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; background: #000; }
+        .dragon-scale-container { display: flex; padding-left: 8%; padding-right: 5%; align-items: center; height: 65vh; overflow-x: auto; overflow-y: hidden; }
+        .dragon-card { flex: 0 0 220px; margin-right: -160px; transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); position: relative; cursor: crosshair; }
+        .dragon-card:hover { margin-right: 40px; transform: translateY(-30px); z-index: 100 !important; }
         .dragon-card:hover ~ .dragon-card { transform: translateX(160px); }
+        .top-tag { position: absolute; top: -40px; left: 10px; font-size: 60px; font-weight: 100; color: rgba(255,255,255,0.05); pointer-events: none; }
 
-        /* 排名数字背景 */
-        .top-tag {
-            position: absolute; top: -40px; left: 10px; font-size: 60px; font-weight: 100;
-            color: rgba(255,255,255,0.05); pointer-events: none;
-        }
-
-        /* 2. 主布局：双列名单 + 海报墙 */
+        /* 布局 */
         .main-layout { display: flex; min-height: 100vh; border-top: 1px solid rgba(255,255,255,0.1); }
         .list-area { width: 42%; overflow-y: auto; background: #050505; border-right: 1px solid rgba(255,255,255,0.05); }
         .wall-area { width: 58%; overflow-y: auto; background: #000; }
-
-        /* 标题样式：极细且间距拉开 */
         .vogue-header { letter-spacing: 0.5em; font-weight: 100; }
 
         .m-line { border-bottom: 1px solid rgba(255,255,255,0.02); padding: 8px 0; transition: 0.2s; }
         .m-line:hover { color: #ff3c3c; background: rgba(255,255,255,0.03); }
 
-        /* 海报墙矩阵 */
         .mosaic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(65px, 1fr)); gap: 1px; }
         .mosaic-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0.7; transition: 0.5s; }
-        .mosaic-item:hover { opacity: 1; transform: scale(1.8); z-index: 50
+        .mosaic-item:hover { opacity: 1; transform: scale(1.8); z-index: 50; outline: 1px solid white; box-shadow: 0 0 30px #000; }
+
+        @media (max-width: 768px) { .main-layout { flex-direction: column; } .list-area, .wall-area { width: 100%; } }
+    </style>
+</head>
+<body>
+
+    <audio id="global-bgm" loop src="bgm.mp3"></audio>
+
+    <nav class="fixed top-0 w-full p-10 z-[200] flex justify-between items-center pointer-events-none">
+        <div onclick="router('index.html')" class="text-[9px] font-light opacity-30 hover:opacity-100 cursor-pointer uppercase tracking-[0.6em] pointer-events-auto">← Index</div>
+        <div onclick="toggleMusic(event)" class="flex items-end gap-[3px] cursor-pointer pointer-events-auto group p-2">
+            <div class="bar bar-p"></div><div class="bar bar-p"></div><div class="bar bar-p"></div>
+        </div>
+    </nav>
+
+    <div id="app-content">
+        <section class="dragon-scale-section">
+            <header class="px-12 md:px-24 mb-16">
+                <h2 class="sh-modern vogue-header text-5xl md:text-6xl">个人十佳</h2>
+                <p class="text-[9px] opacity-20 tracking-[0.8em] mt-6 uppercase font-light">The Definitive Top Ten</p>
+            </header>
+            <div class="dragon-scale-container no-scrollbar" id="dragon-content"></div>
+        </section>
+
+        <div class="main-layout flex-col md:flex-row">
+            <div class="list-area no-scrollbar">
+                <header class="p-12 pt-24">
+                    <h2 class="sh-modern vogue-header text-4xl opacity-80">看过</h2>
+                    <p class="text-[8px] opacity-20 tracking-[0.5em] mt-4 uppercase font-light">Full Archive / Cinema Fragments</p>
+                </header>
+                <div id="movie-list" class="grid grid-cols-2 gap-x-8 gap-y-1 px-12 pb-32"></div>
+            </div>
+            <div class="wall-area no-scrollbar">
+                <div id="mosaic-grid" class="mosaic-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('global-bgm');
+        const app = document.getElementById('app-content');
+
+        // 1. 音乐控制
+        function toggleMusic(e) {
+            if(e) e.stopPropagation();
+            const bars = document.querySelectorAll('.bar');
+            if (audio.paused) { 
+                audio.play(); bars.forEach(b => b.classList.remove('bar-p'));
+            } else { 
+                audio.pause(); bars.forEach(b => b.classList.add('bar-p'));
+            }
+        }
+
+        // 2. SPA 路由
+        async function router(url) {
+            app.classList.add('page-fade');
+            localStorage.setItem('bgmTime', audio.currentTime);
+            localStorage.setItem('bgmPlaying', !audio.paused);
+            setTimeout(() => { window.location.href = url; }, 500);
+        }
+
+        // 3. 渲染数据
+        const myTop10 = [
+            { id: 1, title: "杀死比尔 2", en: "Kill Bill: Vol. 2", img: "https://image.tmdb.org/t/p/original/27TeSl3S8pZ1v7BNvL97m9v987E.jpg" },
+            { id: 2, title: "新世界", en: "New World", img: "https://image.tmdb.org/t/p/original/9vHofM6cZonF1Xb1Gcl5CjE3ZkI.jpg" },
+            { id: 3, title: "爱在黎明破晓前", en: "Before Sunrise", img: "https://image.tmdb.org/t/p/original/i9uQUv9EPia99SStpS68Z99986G.jpg" },
+            { id: 4, title: "勇士", en: "Warrior", img: "https://image.tmdb.org/t/p/original/pA0VscSByjM3H9R9Zf61X8k8V1B.jpg" },
+            { id: 5, title: "七宗罪", en: "Se7en", img: "https://image.tmdb.org/t/p/original/69Sns8WoYnEJtG69yz6qvev5oM6.jpg" },
+            { id: 6, title: "无间道", en: "Infernal Affairs", img: "https://image.tmdb.org/t/p/original/9XshN8V96qF1eZ0I0P9S6Y8k8V1.jpg" },
+            { id: 7, title: "被解救的姜戈", en: "Django Unchained", img: "https://image.tmdb.org/t/p/original/7oWY86pS9YfcP368oXvR707qqPk.jpg" },
+            { id: 8, title: "星际穿越", en: "Interstellar", img: "https://image.tmdb.org/t/p/original/gEU2QniE6ElobvEviT4YvUHG0vJ.jpg" },
+            { id: 9, title: "胭脂扣", en: "Rouge", img: "https://img1.doubanio.com/view/photo/l/public/p2514578848.jpg" },
+            { id: 10, title: "美国丽人", en: "American Beauty", img: "https://img9.doubanio.com/view/photo/l/public/p1463935292.jpg" }
+        ];
+
+        window.onload = () => {
+            // A. 音乐同步逻辑
+            const savedTime = localStorage.getItem('bgmTime');
+            const isPlaying = localStorage.getItem('bgmPlaying') === 'true';
+            if(savedTime) audio.currentTime = savedTime;
+            if(isPlaying) {
+                audio.play().catch(() => {}); // 捕获浏览器自动播放限制
+                document.querySelectorAll('.bar').forEach(b => b.classList.remove('bar-p'));
+            }
+
+            // B. 内容渲染
+            document.getElementById('dragon-content').innerHTML = myTop10.map((m, i) => `
+                <div class="dragon-card" style="z-index: ${30 - i}">
+                    <div class="top-tag">${m.id}</div>
+                    <img src="${m.img}" class="w-full shadow-2xl border border-white/5 grayscale hover:grayscale-0 transition-all duration-1000" onerror="this.src='https://via.placeholder.com/300x450/000?text=Poster'">
+                    <div class="mt-6 px-1 opacity-0 hover:opacity-100 transition-opacity">
+                        <div class="sh-modern text-xl tracking-widest">${m.title}</div>
+                        <div class="text-[7px] opacity-30 uppercase mt-1 tracking-tighter">${m.en}</div>
+                    </div>
+                </div>
+            `).join('');
+
+            if (typeof movieData !== 'undefined') {
+                document.getElementById('movie-list').innerHTML = movieData.map(m => `
+                    <div class="m-line">
+                        <span class="sh-modern text-lg truncate tracking-wider">${m.title.split(' / ')[0]}</span>
+                        <span class="text-[7px] opacity-20 truncate italic ml-2">${m.title.split(' / ').pop()}</span>
+                    </div>
+                `).join('');
+
+                const wall = document.getElementById('mosaic-grid');
+                movieData.forEach(m => {
+                    if(!m.poster) return;
+                    const img = new Image();
+                    img.src = m.poster; img.className = 'mosaic-item'; img.loading = "lazy";
+                    img.onload = () => wall.appendChild(img);
+                    img.onerror = () => img.remove();
+                });
+            }
+
+            // C. 核心：渲染完成后显影，解决黑屏
+            setTimeout(() => { app.classList.add('page-active'); }, 100);
+        };
+    </script>
+</body>
+</html>
