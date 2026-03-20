@@ -33,14 +33,24 @@
         }
         .back-arrow:hover { transform: translateX(-5px); opacity: 0.6; }
 
-        /* 龙鳞装 */
-        .dragon-row { display: flex; overflow-x: auto; padding: 20px 0 60px 0; scrollbar-width: none; }
+        /* 龙鳞装 + 竖向文字 */
+        .dragon-row { display: flex; overflow-x: auto; padding: 40px 0 60px 0; scrollbar-width: none; align-items: flex-end; }
         .dragon-item {
             flex: 0 0 160px; margin-right: -60px; 
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer; position: relative;
+            display: flex; flex-direction: column; align-items: center;
         }
         .dragon-item:hover { margin-right: 60px; transform: translateY(-15px); z-index: 100 !important; }
+        
+        .vertical-title {
+            writing-mode: vertical-rl; text-orientation: mixed;
+            font-size: 12px; margin-bottom: 15px; letter-spacing: 0.2em;
+            height: 120px; text-align: right; transition: 0.3s;
+        }
+        .vertical-title .v-zh { color: rgba(255,255,255,0.8); margin-left: 4px; }
+        .vertical-title .v-en { color: rgba(255,255,255,0.2); font-size: 8px; font-weight: 100; }
+
         .dragon-item img { width: 100%; aspect-ratio: 2/3; object-fit: cover; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; }
 
         /* 视觉作品集 2:1 */
@@ -50,7 +60,7 @@
         .works-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s ease; }
         .works-card:hover img { transform: scale(1.08); }
 
-        /* 极致亲吻墙：无缝、紧密 */
+        /* 极致亲吻墙 */
         .kiss-wall { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; width: 100%; }
         @media (max-width: 640px) { .kiss-wall { grid-template-columns: repeat(3, 1fr); } }
         .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0; transition: opacity 1s, transform 0.6s; cursor: crosshair; }
@@ -61,16 +71,6 @@
             background: rgba(255,255,255,0.04); border: 0.5px solid rgba(255,255,255,0.1);
             color: white; padding: 0.9rem 1.4rem; width: 100%; border-radius: 1.2rem; outline: none; font-size: 0.85rem;
         }
-        .search-input::placeholder { color: rgba(255,255,255,0.2); }
-        
-        .tag-btn {
-            padding: 0.35rem 0.8rem; border-radius: 1rem; background: rgba(255,255,255,0.03);
-            border: 0.5px solid rgba(255,255,255,0.06); font-size: 10px; color: rgba(255,255,255,0.4);
-            cursor: pointer; transition: 0.3s;
-        }
-        .tag-btn:hover, .tag-active { background: rgba(255,255,255,0.15); color: #fff; }
-
-        /* 广告级弹窗 */
         .ad-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.85); backdrop-filter: blur(20px);
@@ -79,7 +79,7 @@
         }
         .ad-box {
             background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);
-            padding: 60px 40px; border-radius: 3rem; text-align: center; max-width: 480px;
+            padding: 60px 40px; border-radius: 3rem; text-align: center;
         }
 
         .audio-btn {
@@ -103,7 +103,7 @@
             <span class="en text-[10px] opacity-30 mb-12 tracking-[0.3em] uppercase">He hasn't seen this! Recommend it to him</span>
             <div class="mt-10 px-10 py-4 bg-white text-black rounded-full cursor-pointer hover:bg-gray-200 transition active:scale-95 inline-block" onclick="closeAd()">
                 <span class="zh text-sm font-bold">已经告诉他了</span>
-                <span class="en text-[8px] opacity-60 font-black">I'VE TOLD HIM ALREADY</span>
+                <span class="en text-[8px] opacity-60 font-black uppercase">I've told him already</span>
             </div>
         </div>
     </div>
@@ -178,13 +178,39 @@
         }
 
         function renderCinema() {
-            const top10Names = ["杀死比尔 2", "新世界", "爱在黎明破晓前", "勇士", "七宗罪", "无间道", "被解救的姜戈", "星际穿越", "胭脂扣", "美国丽人"];
-            const top10 = top10Names.map(name => movieData.find(m => m.title.includes(name)) || {title: name, poster:''}).slice(0,10);
+            // 十佳电影配置：海报采用豆瓣直链（注意：豆瓣图片可能存在防盗链，建议下载后改名为 1.jpg, 2.jpg 等存放本地）
+            const top10 = [
+                {zh:'新世界', en:'New World', url:'https://movie.douban.com/photos/photo/1903379979/', poster:'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1903379979.jpg'},
+                {zh:'杀死比尔 2', en:'Kill Bill: Vol. 2', url:'https://movie.douban.com/photos/photo/1910897532/', poster:'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1910897532.jpg'},
+                {zh:'无间道', en:'Infernal Affairs', url:'https://movie.douban.com/photos/photo/2880666529/', poster:'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2880666529.jpg'},
+                {zh:'被解救的姜戈', en:'Django Unchained', url:'https://movie.douban.com/subject/6307447/', poster:'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1959317017.jpg'},
+                {zh:'星际穿越', en:'Interstellar', url:'https://movie.douban.com/photos/photo/2206088801/', poster:'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2206088801.jpg'},
+                {zh:'胭脂扣', en:'Rouge', url:'https://movie.douban.com/photos/photo/2205476838/', poster:'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2205476838.jpg'},
+                {zh:'爱在黎明破晓前', en:'Before Sunrise', url:'#', poster:'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2555762374.jpg'},
+                {zh:'勇士', en:'Warrior', url:'#', poster:'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p1145536304.jpg'},
+                {zh:'七宗罪', en:'Se7en', url:'#', poster:'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p457631605.jpg'},
+                {zh:'美国丽人', en:'American Beauty', url:'#', poster:'https://img1.doubanio.com/view/photo/s_ratio_poster/public/p571651817.jpg'}
+            ];
+
             const tags = ['科幻', '爱情', '喜剧', '剧情', '悬疑', '犯罪', '动画', '经典'];
 
             app.innerHTML = `
-                <div class="mb-10 px-4"><span class="zh text-6xl font-light tracking-tighter">电影人生</span><span class="en text-lg">Cinema / Archive / 600+</span></div>
-                <div class="mb-12 px-4"><div class="dragon-row">${top10.map((m, i) => `<div class="dragon-item" style="z-index:${20-i}"><img src="${m.poster}"></div>`).join('')}</div></div>
+                <div class="mb-10 px-4"><span class="zh text-6xl font-light tracking-tighter">电影人生</span><span class="en text-lg">Cinema / Archive / Top 10</span></div>
+                
+                <div class="mb-12 px-4">
+                    <div class="dragon-row">
+                        ${top10.map((m, i) => `
+                            <div class="dragon-item" style="z-index:${20-i}" onclick="window.open('${m.url}', '_blank')">
+                                <div class="vertical-title">
+                                    <span class="v-zh">${m.zh}</span>
+                                    <span class="v-en">${m.en}</span>
+                                </div>
+                                <img src="${m.poster}" onerror="this.src='https://via.placeholder.com/200x300/222?text=${m.zh}'">
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
                 <div class="flex flex-col lg:flex-row gap-8 px-4">
                     <div class="glass p-8 md:p-10 flex-[1.4]">
                         <input type="text" id="movieSearch" class="search-input mb-6" placeholder="搜索一部你觉得毛天艺没有看过的电影" oninput="debounceSearch()">
@@ -222,32 +248,29 @@
             const term = document.getElementById('movieSearch').value.trim().toLowerCase();
             const filtered = movieData.filter(m => m.title.toLowerCase().includes(term));
             displayMovies(term === '' ? movieData : filtered);
-
             searchTimer = setTimeout(() => {
                 if (term !== '' && filtered.length === 0) {
                     adOverlay.style.pointerEvents = 'auto';
                     adOverlay.style.opacity = '1';
                 }
-            }, 1000); // 停顿1秒后判断
+            }, 1000);
         }
 
         function filterByTag(tag, btn) {
             document.getElementById('movieSearch').value = '';
             document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('tag-active'));
             btn.classList.add('tag-active');
-
             const rules = {
-                '科幻': ['星际', '机动', '未来', '攻壳', '蝙蝠侠', '盗梦', '矩阵', '异形', '2049', '球', '战', '星球', '克隆', '赛博'],
-                '爱情': ['爱', '情', '恋', '吻', '胭脂', '罗马', '泰坦尼克', '断背山', '花样', '甜', '心动', '巴黎', '初恋'],
-                '喜剧': ['喜剧', '疯狂', '大话', '唐伯虎', '卓别林', '笑', '触不可及', '泰囧', '之王', '低俗', '顽主'],
-                '剧情': ['霸王', '新世界', '美丽', '钢琴', '海边的', '忠犬', '活着', '美国丽人', '教父', '阿甘', '放牛班', '社会'],
-                '悬疑': ['罪', '侦探', '疑', '无间', '魔术', '局', '岛', '控方', '嫌疑', '致命', '沉默', '电锯', '心理'],
-                '犯罪': ['教父', '黑', '杀死', '姜戈', '往事', '毒', '命', '枭', '汉尼拔', '无间道', '大烟枪', '搏击', '暴力'],
-                '动画': ['千与千寻', '龙猫', '大圣', '哈尔', '天空', '狮子王', '蜘蛛侠', '总动员', '皮克斯', '宫崎骏', '动漫', '动画'],
-                '经典': ['肖申克', '霸王', '辛德勒', '阿甘', '教父', '杀手', '钢琴', '罗马', '乱世', '凯恩', '十二', '黑泽明']
+                '科幻': ['星际', '机动', '未来', '攻壳', '蝙蝠侠', '盗梦', '矩阵', '异形', '2049', '球', '战', '星球'],
+                '爱情': ['爱', '情', '恋', '吻', '胭脂', '罗马', '泰坦尼克', '断背山', '花样', '甜'],
+                '喜剧': ['喜剧', '疯狂', '大话', '唐伯虎', '卓别林', '笑', '触不可及'],
+                '剧情': ['霸王', '新世界', '美丽', '钢琴', '海边的', '忠犬', '活着', '美国丽人'],
+                '悬疑': ['罪', '侦探', '疑', '无间', '魔术', '局', '岛', '控方', '嫌疑'],
+                '犯罪': ['教父', '黑', '杀死', '姜戈', '往事', '毒', '命', '枭', '汉尼拔', '无间道'],
+                '动画': ['千与千寻', '龙猫', '大圣', '哈尔', '天空', '狮子王', '蜘蛛侠', '总动员'],
+                '经典': ['肖申克', '霸王', '辛德勒', '阿甘', '教父', '杀手', '钢琴', '罗马']
             };
-            const keywords = rules[tag];
-            const filtered = movieData.filter(m => keywords.some(key => m.title.includes(key)));
+            const filtered = movieData.filter(m => rules[tag].some(key => m.title.includes(key)));
             displayMovies(filtered);
         }
 
