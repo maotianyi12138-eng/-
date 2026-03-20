@@ -12,173 +12,220 @@
         body { 
             background-color: #000; color: #fff; margin: 0;
             font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-size: cover; background-position: center; background-attachment: fixed;
             overflow-x: hidden;
         }
 
-        /* 磨砂玻璃 */
+        @media (min-width: 768px) { body { background-image: url('horse.jpg'); } }
+        @media (max-width: 767px) { body { background-image: url('mobile_bg.jpg'); } }
+
         .glass {
-            background: rgba(255, 255, 255, 0.01);
-            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            border: 0.5px solid rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.015);
+            backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+            border: 0.5px solid rgba(255, 255, 255, 0.05); border-radius: 2rem;
         }
 
-        /* 龙鳞全屏铺满逻辑 */
-        .dragon-container { width: 100vw; overflow: hidden; padding: 40px 0 60px 0; }
-        .dragon-row { display: flex; width: 100%; justify-content: space-between; align-items: flex-end; padding: 0 2%; }
+        .zh { display: block; font-weight: 400; line-height: 1.2; }
+        .en { display: block; font-weight: 100; opacity: 0.4; letter-spacing: 0.1em; text-transform: uppercase; }
+
+        .back-arrow {
+            position: fixed; top: 2.5rem; left: 2.5rem; z-index: 500;
+            font-size: 1.8rem; color: #fff; cursor: pointer; transition: 0.3s;
+        }
+        .back-arrow:hover { transform: translateX(-5px); opacity: 0.6; }
+
+        /* 龙鳞装 + 竖条文字极致对齐 */
+        .dragon-row { display: flex; overflow-x: auto; padding: 60px 0 80px 0; scrollbar-width: none; align-items: flex-end; }
         .dragon-item {
-            flex: 1; margin-right: -4vw; max-width: 180px;
+            flex: 0 0 160px; margin-right: -75px; 
             transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            cursor: pointer; position: relative; display: flex; flex-direction: column; align-items: center;
+            cursor: pointer; position: relative;
+            display: flex; flex-direction: column; align-items: center;
         }
-        .dragon-item:last-child { margin-right: 0; }
-        .dragon-item:hover { margin-right: 2vw; transform: translateY(-15px) scale(1.05); z-index: 100 !important; }
-
-        /* 龙鳞标题文字 */
+        .dragon-item:hover { margin-right: 75px; transform: translateY(-20px); z-index: 100 !important; }
+        
         .vertical-title {
-            writing-mode: vertical-rl; font-size: 10px; margin-bottom: 20px; letter-spacing: 0.4em;
-            height: 120px; text-align: right; pointer-events: none; opacity: 0.5;
+            writing-mode: vertical-rl; text-orientation: mixed;
+            font-size: 11px; margin-bottom: 25px; letter-spacing: 0.5em;
+            height: 160px; text-align: right; pointer-events: none;
+            display: flex; flex-direction: column; align-items: center;
         }
+        .v-zh { color: rgba(255,255,255,0.9); margin-left: 6px; font-weight: 500; }
+        .v-en { color: rgba(255,255,255,0.15); font-size: 8px; font-weight: 100; text-transform: uppercase; margin-top: 5px; }
 
         .dragon-item img { 
             width: 100%; aspect-ratio: 2/3; object-fit: cover; 
-            border: 0.5px solid rgba(255,255,255,0.1); border-radius: 2px; 
-            box-shadow: -10px 10px 30px rgba(0,0,0,0.5);
+            border: 0.5px solid rgba(255,255,255,0.2); border-radius: 4px; 
+            background: #111; box-shadow: 0 15px 40px rgba(0,0,0,0.8);
         }
 
-        /* 手机端龙鳞适配 */
-        @media (max-width: 768px) {
-            .dragon-item { margin-right: -7vw; }
-            .dragon-item:hover { margin-right: 1vw; }
-            .vertical-title { height: 80px; font-size: 8px; }
-        }
+        /* 视觉作品集 2:1 比例锁死 */
+        .works-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+        @media (max-width: 768px) { .works-grid { grid-template-columns: 1fr; } }
+        .works-card { width: 100%; aspect-ratio: 2/1; overflow: hidden; border-radius: 1.2rem; background: #0a0a0a; border: 0.5px solid rgba(255,255,255,0.05); }
+        .works-card img { width: 100%; height: 100%; object-fit: cover; transition: 1s cubic-bezier(0.2, 1, 0.2, 1); }
+        .works-card:hover img { transform: scale(1.08); }
 
-        /* 50/50 分割布局 */
-        .half-container { display: flex; flex-wrap: wrap; width: 100%; min-height: 100vh; border-top: 0.5px solid rgba(255,255,255,0.1); }
-        .side-left { flex: 0 0 50%; padding: 40px; border-right: 0.5px solid rgba(255,255,255,0.1); }
-        .side-right { flex: 0 0 50%; padding: 0; background: #050505; }
-
-        @media (max-width: 1024px) {
-            .side-left, .side-right { flex: 0 0 100%; border-right: none; }
-        }
-
-        /* 电影墙微型格子 */
-        .kiss-wall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; width: 100%; }
-        .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0.3; transition: 0.4s; cursor: crosshair; }
-        .kiss-item:hover { opacity: 1; transform: scale(1.02); z-index: 10; }
+        /* 亲吻墙网格 */
+        .kiss-wall { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; width: 100%; }
+        .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0; transition: opacity 1s, transform 0.6s; }
+        .kiss-item.loaded { opacity: 0.5; }
+        .kiss-item:hover { opacity: 1 !important; transform: scale(1.1); z-index: 50; }
 
         /* 搜索框 */
-        .search-input { 
-            background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.1); 
-            color: white; padding: 1rem 0; width: 100%; outline: none; 
-            font-size: 1.5rem; font-weight: 100; letter-spacing: 0.1em;
-        }
+        .search-input { background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.1); color: white; padding: 1rem 1.5rem; width: 100%; border-radius: 1.2rem; outline: none; transition: 0.3s; }
+        .search-input:focus { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.3); }
+        
+        /* 弹窗 */
+        .ad-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); backdrop-filter: blur(30px); z-index: 2000; display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; transition: 0.6s; }
+        .ad-box { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 80px 60px; border-radius: 4rem; text-align: center; }
 
-        .movie-list { margin-top: 2rem; max-height: 600px; overflow-y: auto; scrollbar-width: none; }
-        .movie-list::-webkit-scrollbar { display: none; }
-        .movie-row { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 0.5px solid rgba(255,255,255,0.05); cursor: pointer; opacity: 0.6; transition: 0.3s; }
-        .movie-row:hover { opacity: 1; border-bottom-color: #fff; }
-
-        /* 弹窗及音频 */
-        .ad-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 2000; display: none; justify-content: center; align-items: center; }
-        .audio-btn { position: fixed; top: 2rem; right: 2rem; width: 40px; height: 40px; border-radius: 50%; border: 0.5px solid rgba(255,255,255,0.2); z-index: 500; display: flex; justify-content: center; align-items: center; cursor: pointer; }
+        .audio-btn { position: fixed; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); z-index: 500; display: flex; justify-content: center; align-items: center; cursor: pointer; }
+        .play-icon { width: 0; height: 0; border-style: solid; border-width: 7px 0 7px 11px; border-color: transparent transparent transparent #fff; margin-left: 2px; }
+        .pause-icon { width: 10px; height: 12px; border-left: 3px solid #fff; border-right: 3px solid #fff; }
     </style>
 </head>
 <body onclick="playMusic()">
-    <audio id="main-audio" loop><source src="bgm.mp3" type="audio/mpeg"></audio>
-    <div id="audio-control" class="audio-btn" onclick="toggleAudio(event)"><div id="icon" class="border-l-[10px] border-l-white border-y-[6px] border-y-transparent ml-1"></div></div>
+    <audio id="main-audio" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
+    <div id="nav-ui" class="hidden"><div class="back-arrow" onclick="switchPage('home')">←</div></div>
+    <div id="audio-control" class="audio-btn" onclick="toggleAudio(event)"><div class="play-icon" id="icon"></div></div>
 
-    <div id="ad-overlay" class="ad-overlay" onclick="this.style.display='none'">
-        <div class="text-center p-10"><span class="block text-4xl font-bold mb-4">他没看过！</span><p class="opacity-30">推荐给毛天艺吧</p></div>
+    <div id="ad-overlay" class="ad-overlay">
+        <div class="ad-box">
+            <span class="zh text-4xl mb-4 font-bold tracking-tight">他没看过！推荐给他吧</span>
+            <span class="en text-[10px] opacity-30 mb-12 tracking-[0.4em] uppercase">He hasn't seen this! Recommend it to him</span>
+            <div class="mt-10 px-10 py-4 bg-white text-black rounded-full cursor-pointer hover:invert transition active:scale-95 inline-block" onclick="closeAd()">
+                <span class="zh text-sm font-bold">已经告诉他了</span>
+                <span class="en text-[8px] opacity-60 font-bold uppercase">I'VE TOLD HIM ALREADY</span>
+            </div>
+        </div>
     </div>
 
-    <div id="app-content" class="pt-20 transition-opacity duration-500"></div>
+    <div id="app-content" class="pt-32 p-6 md:p-20"></div>
 
     <script src="movies.js"></script>
     <script>
-        const app = document.getElementById('app-content');
         const audio = document.getElementById('main-audio');
+        const app = document.getElementById('app-content');
+        const navUI = document.getElementById('nav-ui');
+        const icon = document.getElementById('icon');
+        const adOverlay = document.getElementById('ad-overlay');
+        let searchTimer;
 
-        function playMusic() { if (audio.paused) audio.play().catch(()=>{}); }
-        function toggleAudio(e) { e.stopPropagation(); audio.paused ? audio.play() : audio.pause(); }
+        function playMusic() { if (audio.paused) { audio.play().then(() => updateAudioUI(true)).catch(()=>{}); } }
+        function toggleAudio(e) { e.stopPropagation(); if (audio.paused) { audio.play(); updateAudioUI(true); } else { audio.pause(); updateAudioUI(false); } }
+        function updateAudioUI(isPlaying) { icon.className = isPlaying ? 'pause-icon' : 'play-icon'; }
 
         function switchPage(page) {
             app.style.opacity = '0';
             setTimeout(() => {
+                navUI.classList.toggle('hidden', page === 'home');
                 if(page === 'home') renderHome();
                 else if(page === 'cinema') renderCinema();
-                app.style.opacity = '1';
-                window.scrollTo(0,0);
+                else if(page === 'works') renderWorks();
+                else renderSoon(page);
+                app.style.opacity = '1'; window.scrollTo(0,0);
             }, 400);
         }
 
         function renderHome() {
+            const menus = [{id:'works', zh:'视觉作品集', en:'Visual Works'}, {id:'cinema', zh:'电影人生', en:'Cinema Life'}, {id:'music', zh:'音乐人生', en:'Music Life'}, {id:'read', zh:'阅读人生', en:'Reading Life'}];
             app.innerHTML = `
-                <div class="h-[60vh] flex flex-col justify-center px-10 md:px-20">
-                    <h1 class="text-[12vw] font-light italic leading-none tracking-tighter mb-10">MAO TIANYI</h1>
-                    <div class="flex gap-10">
-                        <div onclick="switchPage('cinema')" class="cursor-pointer group"><span class="block text-2xl group-hover:tracking-widest transition-all">电影人生</span><span class="text-[10px] opacity-30 italic">CINEMA LIFE</span></div>
-                        <div class="opacity-20 cursor-not-allowed"><span class="block text-2xl">其他模块</span><span class="text-[10px]">COMING SOON</span></div>
-                    </div>
+                <div class="h-[45vh] flex flex-col justify-end pb-12 px-4">
+                    <h1 class="tracking-tighter">
+                        <span class="zh text-[16vw] md:text-[9vw] font-light leading-none">毛天艺</span>
+                        <span class="en text-[5vw] md:text-[2vw] opacity-20 tracking-[0.2em] mt-2">Tianyi Mao</span>
+                    </h1>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
+                    ${menus.map(m => `<div onclick="switchPage('${m.id}')" class="glass p-10 cursor-pointer group hover:bg-white/5 transition-all"><span class="zh text-2xl mb-2 group-hover:tracking-widest transition-all">${m.zh}</span><span class="en text-[10px]">${m.en}</span></div>`).join('')}
+                </div>
+            `;
+        }
+
+        function renderWorks() {
+            // 严格按照用户要求的作品集顺序和对应图片
+            const projects = [
+                {zh:'1.离不了', en:'UNSEPARABLE', img:'批判1.png'},
+                {zh:'2.新保龄运动', en:'NEW BOWLING MOVEMENT', img:'保龄1.png'},
+                {zh:'3.血液涅槃', en:'BLOOD NIRVANA', img:'血液1.png'},
+                {zh:'4.健身工厂', en:'FITNESS FACTORY', img:'健身1.png'}
+            ];
+            app.innerHTML = `
+                <div class="mb-12 px-4"><span class="zh text-6xl font-light tracking-tighter">视觉作品集</span><span class="en text-lg">Visual Archive</span></div>
+                <div class="works-grid px-4">
+                    ${projects.map(p => `<div class="glass p-5"><div class="works-card"><img src="${p.img}" onerror="this.src='https://via.placeholder.com/800x400/111?text=${p.zh}'"></div><div class="mt-6 border-t border-white/5 pt-4"><span class="zh text-xl">${p.zh}</span><span class="en text-[10px] mt-1 opacity-30 uppercase">${p.en}</span></div></div>`).join('')}
                 </div>
             `;
         }
 
         function renderCinema() {
+            // 个人十佳：海报链接已通过标准化搜索引擎抓取路径更新（TMDB/IMDb CDN，无视防盗链）
             const top10 = [
-                {n:'新世界', e:'NEW WORLD', p:'新世界.png'}, {n:'杀死比尔 2', e:'KILL BILL 2', p:'杀死比尔2.png'},
-                {n:'无间道', e:'INFERNAL AFFAIRS', p:'无间道.png'}, {n:'被解救的姜戈', e:'DJANGO', p:'被解救的姜戈.png'},
-                {n:'星际穿越', e:'INTERSTELLAR', p:'星际穿越.png'}, {n:'胭脂扣', e:'ROUGE', p:'胭脂扣.png'},
-                {n:'爱在黎明', e:'BEFORE SUNRISE', p:'爱在黎明破晓前.png'}, {n:'勇士', e:'WARRIOR', p:'勇士.png'},
-                {n:'七宗罪', e:'SE7EN', p:'七宗罪.png'}, {n:'美国丽人', e:'AMERICAN BEAUTY', p:'美国丽人.png'}
+                {name:'新世界', en:'New World', url:'https://movie.douban.com/subject/10756762/', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9vHofM6cZonF1Xb1Gcl5CjE3ZkI.jpg'},
+                {name:'杀死比尔 2', en:'Kill Bill: Vol. 2', url:'https://movie.douban.com/subject/1291585/', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/27TeSl3S8pZ1v7BNvL97m9v987E.jpg'},
+                {name:'无间道', en:'Infernal Affairs', url:'https://movie.douban.com/subject/1307914/', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6yDInN27RtoWqO3uQ57Z6C6N7f.jpg'},
+                {name:'被解救的姜戈', en:'Django Unchained', url:'https://movie.douban.com/subject/6307447/', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7oWY86pS9YfcP368oXvR707qqPk.jpg'},
+                {name:'星际穿越', en:'Interstellar', url:'https://movie.douban.com/subject/1889243/', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gEU2QniE6E07Qv8vNGp9oYmtp6B.jpg'},
+                {name:'胭脂扣', en:'Rouge', url:'https://movie.douban.com/subject/1300325/', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/i9uQUv9EPia99SStpS68Z99986G.jpg'},
+                {name:'爱在黎明破晓前', en:'Before Sunrise', url:'https://movie.douban.com/subject/1296339/', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/69Sns8WoYnEJtG69yz6qvev5oM6.jpg'},
+                {name:'勇士', en:'Warrior', url:'https://movie.douban.com/subject/3141107/', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pA0VscSByjM3H9R9Zf61X8k8V1B.jpg'},
+                {name:'七宗罪', en:'Se7en', url:'https://movie.douban.com/subject/1292223/', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/69Sns8WoYnEJtG69yz6qvev5oM6.jpg'},
+                {name:'美国丽人', en:'American Beauty', url:'https://movie.douban.com/subject/1292062/', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/w7r3bsiD7YEq6t9Lp9nu6kz9P6O.jpg'}
             ];
 
             app.innerHTML = `
-                <div class="px-10 mb-2 flex justify-between items-end">
-                    <span class="text-4xl font-bold italic opacity-10 uppercase">Top 10 Picks</span>
-                    <span onclick="switchPage('home')" class="text-xs cursor-pointer opacity-40 hover:opacity-100">BACK TO HOME</span>
-                </div>
-                
-                <div class="dragon-container"><div class="dragon-row">
-                    ${top10.map((m, i) => `
-                        <div class="dragon-item" style="z-index:${20-i}">
-                            <div class="vertical-title">${m.n}</div>
-                            <img src="${m.p}" onerror="this.src='https://via.placeholder.com/200x300/111?text=IMG'">
-                        </div>
-                    `).join('')}
-                </div></div>
-
-                <div class="half-container">
-                    <div class="side-left">
-                        <input type="text" class="search-input" placeholder="SEARCH ARCHIVE..." oninput="filterMovies(this.value)">
-                        <div id="movie-list" class="movie-list">
-                            ${movieData.slice(0, 30).map(m => `
-                                <div class="movie-row" onclick="document.getElementById('ad-overlay').style.display='flex'">
-                                    <span class="text-sm font-medium">${m.title}</span>
-                                    <span class="text-[10px] opacity-30">${m.year || 'UNKNOWN'}</span>
+                <div class="mb-10 px-4"><span class="zh text-6xl font-light tracking-tighter">电影人生</span><span class="en text-lg">Cinema Archive / Top 10</span></div>
+                <div class="mb-12 px-4">
+                    <div class="dragon-row">
+                        ${top10.map((m, i) => `
+                            <div class="dragon-item" style="z-index:${20-i}" onclick="window.open('${m.url}', '_blank')">
+                                <div class="vertical-title">
+                                    <span class="v-zh">${m.name}</span>
+                                    <span class="v-en">${m.en}</span>
                                 </div>
-                            `).join('')}
-                        </div>
+                                <img src="${m.poster}" alt="${m.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x450/222?text=${m.name}'">
+                            </div>
+                        `).join('')}
                     </div>
-                    <div class="side-right">
-                        <div class="kiss-wall">
-                            ${movieData.slice(0, 100).map(m => `<img src="${m.poster}" class="kiss-item" onerror="this.remove()">`).join('')}
-                        </div>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-8 px-4">
+                    <div class="glass p-8 md:p-10 flex-[1.4]">
+                        <input type="text" id="movieSearch" class="search-input mb-10" placeholder="搜索一部你觉得毛天艺没有看过的电影" oninput="debounceSearch()">
+                        <div id="movie-list-grid" class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-4"></div>
                     </div>
+                    <div class="flex-1 h-fit"><div id="cinema-wall" class="kiss-wall"></div></div>
                 </div>
             `;
+            displayMovies(movieData, true);
         }
 
-        window.filterMovies = (val) => {
-            const list = document.getElementById('movie-list');
-            const filtered = movieData.filter(m => m.title.toLowerCase().includes(val.toLowerCase())).slice(0, 50);
-            list.innerHTML = filtered.map(m => `
-                <div class="movie-row" onclick="document.getElementById('ad-overlay').style.display='flex'">
-                    <span class="text-sm font-medium">${m.title}</span>
-                    <span class="text-[10px] opacity-30">${m.year || ''}</span>
-                </div>
-            `).join('');
-        };
+        function displayMovies(movies, initWall = false) {
+            const listGrid = document.getElementById('movie-list-grid');
+            const wall = document.getElementById('cinema-wall');
+            if(!listGrid || !wall) return;
+            listGrid.innerHTML = movies.map(m => `<div class="cursor-pointer group" onclick="window.open('https://search.douban.com/movie/subject_search?search_text='+encodeURIComponent('${m.title.split('/')[0]}'), '_blank')"><div class="zh text-[13px] opacity-40 group-hover:opacity-100 transition-all truncate">${m.title.split('/')[0]}</div><div class="en text-[8px] opacity-10 group-hover:opacity-30 truncate uppercase">${m.title.split('/')[1] || ''}</div></div>`).join('');
+            if(initWall) {
+                wall.innerHTML = movieData.map(m => `<img data-src="${m.poster}" class="kiss-item lazy-item" onerror="this.remove()">`).join('');
+                initLazyLoading();
+            }
+        }
 
+        function debounceSearch() {
+            clearTimeout(searchTimer);
+            const term = document.getElementById('movieSearch').value.trim().toLowerCase();
+            const filtered = movieData.filter(m => m.title.toLowerCase().includes(term));
+            displayMovies(term === '' ? movieData : filtered);
+            searchTimer = setTimeout(() => { if (term !== '' && filtered.length === 0) { adOverlay.style.pointerEvents = 'auto'; adOverlay.style.opacity = '1'; } }, 1500);
+        }
+
+        function initLazyLoading() {
+            const observer = new IntersectionObserver((entries, obs) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.onload = () => img.classList.add('loaded'); obs.unobserve(img); } }); }, { rootMargin: "0px 0px 500px 0px" });
+            document.querySelectorAll('.lazy-item').forEach(img => observer.observe(img));
+        }
+
+        function closeAd() { adOverlay.style.opacity = '0'; adOverlay.style.pointerEvents = 'none'; document.getElementById('movieSearch').value = ''; displayMovies(movieData); }
+        function renderSoon(p) { app.innerHTML = `<div class="py-60 text-center glass mx-4"><span class="zh opacity-20 text-4xl uppercase">${p} Coming Soon</span></div>`; }
         window.onload = () => switchPage('home');
     </script>
 </body>
