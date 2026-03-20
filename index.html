@@ -6,7 +6,7 @@
     <title>MAO TIANYI | ARCHIVE</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600&family=Noto+Sans+SC:wght@100;300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&family=Noto+Sans+SC:wght@100;300;400;700&display=swap');
         
         body { 
             background-color: #000; color: #fff; margin: 0;
@@ -17,69 +17,103 @@
         @media (min-width: 768px) { body { background-image: url('horse.jpg'); } }
         @media (max-width: 767px) { body { background-image: url('mobile_bg.jpg'); } }
 
-        /* 首页板块辨识度增强：增加文字阴影和背景微光 */
-        .nav-card {
-            background: rgba(0,0,0,0.2);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255,255,255,0.1);
-            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-            transition: all 0.5s ease;
+        /* 全局磨砂玻璃质感 */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
         }
-        .nav-card:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); }
 
         .zh { display: block; font-weight: 400; line-height: 1.2; }
         .en { display: block; font-weight: 100; opacity: 0.6; letter-spacing: 0.1em; text-transform: uppercase; }
         
-        /* 电影页横向龙鳞装：从左到右铺满 */
+        /* 龙鳞装横排优化 */
         .dragon-row {
             display: flex;
             overflow-x: auto;
-            padding: 40px 0;
-            gap: -20px; /* 负间距实现堆叠 */
+            padding: 20px 0 60px 0;
+            scrollbar-width: none;
         }
         .dragon-item {
-            flex: 0 0 200px;
-            margin-right: -100px; /* 龙鳞堆叠效果 */
-            transition: all 0.5s ease;
+            flex: 0 0 160px;
+            margin-right: -80px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
             position: relative;
         }
-        .dragon-item:hover { margin-right: 20px; transform: translateY(-20px); z-index: 100 !important; }
-        .dragon-item img { width: 100%; aspect-ratio: 2/3; object-fit: cover; box-shadow: -10px 0 30px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.2); }
+        .dragon-item:hover { margin-right: 20px; transform: translateY(-15px); z-index: 100 !important; }
+        .dragon-item img { width: 100%; aspect-ratio: 2/3; object-fit: cover; box-shadow: -10px 0 30px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.2); border-radius: 2px; }
 
-        /* 海报墙 (Kiss Wall) */
-        .kiss-wall { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; }
-        .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; filter: grayscale(100%); opacity: 0.4; transition: 0.6s; }
-        .kiss-item:hover { filter: grayscale(0%); opacity: 1; z-index: 10; transform: scale(1.05); }
-
-        /* 搜索框样式 */
-        .search-input {
-            background: transparent;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-            color: white;
-            padding: 8px 0;
-            width: 100%;
-            outline: none;
-            font-size: 1.2rem;
-            transition: border-color 0.3s;
+        /* 亲吻墙 - 恢复原色 */
+        .kiss-wall { 
+            display: grid; 
+            grid-template-columns: repeat(5, 1fr); 
+            gap: 2px; 
         }
-        .search-input:focus { border-color: #fff; }
+        .kiss-item { 
+            width: 100%; aspect-ratio: 2/3; object-fit: cover; 
+            opacity: 0.8; transition: 0.4s; 
+            cursor: pointer;
+        }
+        .kiss-item:hover { opacity: 1; transform: scale(1.05); z-index: 10; box-shadow: 0 0 20px rgba(255,255,255,0.2); }
 
-        ::-webkit-scrollbar { height: 4px; width: 0px; }
-        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); }
+        /* 移动端海报墙优化：改为底部横向滑动“抽屉” */
+        @media (max-width: 767px) {
+            .mobile-wall-container {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 180px;
+                background: rgba(0,0,0,0.8);
+                backdrop-filter: blur(10px);
+                border-top: 1px solid rgba(255,255,255,0.1);
+                z-index: 200;
+                padding: 10px;
+                overflow-x: auto;
+                display: flex;
+                gap: 8px;
+            }
+            .mobile-wall-container img { height: 100%; width: auto; aspect-ratio: 2/3; flex-shrink: 0; }
+            .content-padding-bottom { padding-bottom: 200px; }
+            .kiss-wall-pc { display: none; }
+        }
+        @media (min-width: 768px) {
+            .mobile-wall-container { display: none; }
+        }
+
+        /* 搜索框 */
+        .search-input {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            padding: 12px 20px;
+            width: 100%;
+            border-radius: 30px;
+            outline: none;
+            transition: all 0.3s;
+        }
+        .search-input:focus { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+
+        .movie-card-link { transition: all 0.3s; border-radius: 4px; padding: 8px; }
+        .movie-card-link:hover { background: rgba(255,255,255,0.1); transform: translateX(5px); }
+
+        ::-webkit-scrollbar { width: 0px; height: 0px; }
     </style>
 </head>
 <body onclick="playMusic()">
     <audio id="main-audio" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
 
-    <nav class="fixed top-0 w-full p-8 z-[100] flex justify-between items-start pointer-events-none">
-        <div onclick="switchPage('home')" class="pointer-events-auto cursor-pointer">
-            <span class="zh text-2xl">毛天艺</span><span class="en text-sm">Tianyi Mao</span>
+    <nav class="fixed top-0 w-full p-6 z-[300] flex justify-between items-start pointer-events-none">
+        <div onclick="switchPage('home')" class="pointer-events-auto cursor-pointer glass p-4">
+            <span class="zh text-xl">毛天艺</span><span class="en text-[8px]">Tianyi Mao</span>
         </div>
-        <div id="status" class="opacity-50 text-[10px] tracking-[0.3em]">AUDIO WAITING</div>
+        <div id="status" class="opacity-30 text-[9px] tracking-[0.3em] glass p-2">AUDIO OFF</div>
     </nav>
 
-    <div id="app-content" class="pt-32 p-8 md:p-20"></div>
+    <div id="app-content" class="pt-32 p-6 md:p-20 transition-opacity duration-500"></div>
 
     <script src="movies.js"></script>
     <script>
@@ -89,17 +123,24 @@
         function playMusic() {
             if (audio.paused) {
                 audio.play().catch(() => {});
-                document.getElementById('status').innerText = "AUDIO PLAYING";
+                document.getElementById('status').innerText = "AUDIO ON";
+                document.getElementById('status').classList.remove('opacity-30');
             }
         }
 
+        // 跳转豆瓣函数
+        function goDouban(name) {
+            const query = name.split('/')[0].trim();
+            window.open(`https://www.douban.com/search?cat=1002&q=${encodeURIComponent(query)}`, '_blank');
+        }
+
         function switchPage(page) {
-            app.classList.add('opacity-0');
+            app.style.opacity = '0';
             setTimeout(() => {
                 if(page === 'home') renderHome();
                 else if(page === 'cinema') renderCinema();
                 else renderSoon(page);
-                app.classList.remove('opacity-0');
+                app.style.opacity = '1';
                 window.scrollTo(0,0);
             }, 500);
         }
@@ -112,17 +153,17 @@
                 {id:'read', zh:'阅读人生', en:'Reading Life'}
             ];
             app.innerHTML = `
-                <div class="h-[55vh] flex flex-col justify-end pb-12">
+                <div class="h-[50vh] flex flex-col justify-end pb-12">
                     <h1 class="tracking-tighter">
-                        <span class="zh text-[15vw] md:text-[10vw]">毛天艺</span>
-                        <span class="en text-[4vw] md:text-[2vw]">Tianyi Mao</span>
+                        <span class="zh text-[16vw] md:text-[10vw] font-bold text-white drop-shadow-2xl">毛天艺</span>
+                        <span class="en text-[5vw] md:text-[2vw] opacity-40">Tianyi Mao</span>
                     </h1>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                     ${menus.map(m => `
-                        <div onclick="switchPage('${m.id}')" class="nav-card p-8 cursor-pointer group">
-                            <span class="zh text-2xl mb-2 group-hover:tracking-widest transition-all">${m.zh}</span>
-                            <span class="en text-xs">${m.en}</span>
+                        <div onclick="switchPage('${m.id}')" class="glass p-8 cursor-pointer group hover:bg-white/10 transition-all">
+                            <span class="zh text-xl md:text-2xl mb-2">${m.zh}</span>
+                            <span class="en text-[10px]">${m.en}</span>
                         </div>
                     `).join('')}
                 </div>
@@ -130,76 +171,88 @@
         }
 
         function renderCinema() {
-            // 准备数据：按拼音/字母排序
-            const sortedMovies = [...movieData].sort((a, b) => a.title.localeCompare(b.title, 'zh'));
             const top10Names = ["杀死比尔 2", "新世界", "爱在黎明破晓前", "勇士", "七宗罪", "无间道", "被解救的姜戈", "星际穿越", "胭脂扣", "美国丽人"];
             const top10 = top10Names.map(name => movieData.find(m => m.title.includes(name))).filter(Boolean);
+            const sortedMovies = [...movieData].sort((a, b) => a.title.localeCompare(b.title, 'zh'));
 
             app.innerHTML = `
-                <div class="mb-12"><span class="zh text-6xl">电影人生</span><span class="en text-xl">Cinema Archive</span></div>
+                <div class="mb-12"><span class="zh text-5xl md:text-7xl font-bold">电影人生</span><span class="en text-lg">Cinema Archive</span></div>
                 
-                <div class="mb-24">
-                    <div class="flex justify-between items-end mb-8 border-b border-white/10 pb-4">
-                        <span class="zh text-2xl font-light">个人十佳 / Personal Top 10</span>
+                <div class="glass p-6 md:p-10 mb-20">
+                    <div class="mb-8 border-b border-white/10 pb-4">
+                        <span class="zh text-2xl">个人十佳 / Top 10 Picks</span>
                     </div>
                     <div class="dragon-row">
                         ${top10.map((m, i) => `
-                            <div class="dragon-item" style="z-index: ${10-i}">
+                            <div class="dragon-item" style="z-index: ${20-i}" onclick="goDouban('${m.title}')">
                                 <img src="${m.poster}">
-                                <div class="mt-4 text-center px-2">
-                                    <div class="text-[10px] opacity-80 truncate">${m.title.split('/')[0]}</div>
-                                </div>
+                                <div class="mt-4"><span class="text-[10px] opacity-70 truncate block">${m.title.split('/')[0]}</span></div>
                             </div>
                         `).join('')}
                     </div>
                 </div>
 
-                <div class="flex flex-col md:flex-row gap-16">
-                    <div class="w-full md:w-8/12">
+                <div class="flex flex-col md:flex-row gap-12 content-padding-bottom">
+                    <div class="w-full md:w-8/12 glass p-6 md:p-10">
                         <div class="mb-10">
-                            <input type="text" id="movieSearch" class="search-input" placeholder="搜索电影名称..." oninput="filterMovies()">
+                            <input type="text" id="movieSearch" class="search-input" placeholder="搜索电影，点击名称跳转豆瓣..." oninput="filterMovies()">
                         </div>
-                        <div id="movie-list-grid" class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-4 text-[11px] opacity-60">
+                        <div id="movie-list-grid" class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-2 text-sm">
                             </div>
                     </div>
 
-                    <div class="w-full md:w-4/12">
-                        <div class="mb-6 border-b border-white/10 pb-2"><span class="en text-[10px]">THE KISS WALL</span></div>
+                    <div class="w-full md:w-4/12 kiss-wall-pc">
+                        <div class="mb-6 border-b border-white/10 pb-2 flex justify-between">
+                            <span class="en text-[10px]">THE KISS WALL</span>
+                            <span class="en text-[10px] opacity-30">${movieData.length} POSTERS</span>
+                        </div>
                         <div id="kiss-wall" class="kiss-wall"></div>
                     </div>
                 </div>
+
+                <div id="mobile-wall" class="mobile-wall-container"></div>
             `;
 
-            // 初始化名单和海报墙
             window.currentMovies = sortedMovies;
             displayMovies(sortedMovies);
         }
 
         function displayMovies(movies) {
             const listGrid = document.getElementById('movie-list-grid');
-            const wall = document.getElementById('kiss-wall');
+            const pcWall = document.getElementById('kiss-wall');
+            const mobileWall = document.getElementById('mobile-wall');
             
             if (movies.length === 0) {
-                listGrid.innerHTML = `<div class="col-span-4 py-20 text-center zh text-xl opacity-40">毛天艺还没有看过，请推荐给他</div>`;
-                wall.innerHTML = '';
+                listGrid.innerHTML = `<div class="col-span-full py-20 text-center zh text-lg opacity-40">毛天艺还没有看过，请推荐给他</div>`;
+                if(pcWall) pcWall.innerHTML = '';
+                if(mobileWall) mobileWall.innerHTML = '';
                 return;
             }
 
-            // 渲染名单
+            // 渲染列表
             listGrid.innerHTML = movies.map(m => {
                 const parts = m.title.split('/');
                 return `
-                    <div class="hover:opacity-100 transition-opacity cursor-default border-l border-white/5 pl-2">
-                        <div class="font-medium text-white/90 truncate">${parts[0]}</div>
-                        <div class="opacity-40 truncate scale-90 origin-left">${parts[1] || ''}</div>
+                    <div class="movie-card-link cursor-pointer group" onclick="goDouban('${m.title}')">
+                        <div class="font-bold text-white group-hover:text-yellow-400 transition-colors">${parts[0]}</div>
+                        <div class="text-[9px] opacity-40 truncate">${parts[1] || ''}</div>
                     </div>
                 `;
             }).join('');
 
-            // 渲染海报墙
-            wall.innerHTML = movies.map(m => `
-                <img src="${m.poster}" class="kiss-item" loading="lazy" onerror="this.remove()">
-            `).join('');
+            // 渲染PC墙
+            if(pcWall) {
+                pcWall.innerHTML = movies.map(m => `
+                    <img src="${m.poster}" class="kiss-item" onclick="goDouban('${m.title}')" loading="lazy">
+                `).join('');
+            }
+
+            // 渲染手机墙
+            if(mobileWall) {
+                mobileWall.innerHTML = movies.map(m => `
+                    <img src="${m.poster}" onclick="goDouban('${m.title}')" loading="lazy">
+                `).join('');
+            }
         }
 
         function filterMovies() {
@@ -209,7 +262,7 @@
         }
 
         function renderSoon(p) {
-            app.innerHTML = `<div class="py-60 text-center"><span class="zh opacity-20 text-4xl uppercase tracking-widest">${p} PREPARING</span></div>`;
+            app.innerHTML = `<div class="py-60 text-center glass"><span class="zh opacity-20 text-4xl">${p.toUpperCase()} 准备中</span></div>`;
         }
 
         window.onload = () => switchPage('home');
