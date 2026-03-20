@@ -6,28 +6,30 @@
     <title>MAO TIANYI | ARCHIVE</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&family=Noto+Sans+SC:wght@100;300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600&family=Noto+Sans+SC:wght@100;300;400;700&display=swap');
         
         body { 
             background-color: #000; color: #fff; margin: 0;
             font-family: 'Inter', 'Noto Sans SC', sans-serif;
             background-size: cover; background-position: center; background-attachment: fixed;
+            overflow-x: hidden;
         }
 
+        /* 响应式壁纸：直接调用库里原文件，不改颜色 */
         @media (min-width: 768px) { body { background-image: url('horse.jpg'); } }
         @media (max-width: 767px) { body { background-image: url('mobile_bg.jpg'); } }
 
-        /* 全局磨砂玻璃质感 */
+        /* Apple 风格极致磨砂玻璃质感 */
         .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.01); /* 更细腻的层级 */
+            backdrop-filter: blur(25px); /* 更高模糊度 */
+            -webkit-backdrop-filter: blur(25px);
+            border: 0.5px solid rgba(255, 255, 255, 0.05); /* 极细白边 */
+            border-radius: 2rem; /* rounded-3xl */
         }
 
         .zh { display: block; font-weight: 400; line-height: 1.2; }
-        .en { display: block; font-weight: 100; opacity: 0.6; letter-spacing: 0.1em; text-transform: uppercase; }
+        .en { display: block; font-weight: 100; opacity: 0.5; letter-spacing: 0.1em; text-transform: uppercase; }
         
         /* 龙鳞装横排优化 */
         .dragon-row {
@@ -44,74 +46,67 @@
             position: relative;
         }
         .dragon-item:hover { margin-right: 20px; transform: translateY(-15px); z-index: 100 !important; }
-        .dragon-item img { width: 100%; aspect-ratio: 2/3; object-fit: cover; box-shadow: -10px 0 30px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.2); border-radius: 2px; }
+        .dragon-item img { width: 100%; aspect-ratio: 2/3; object-fit: cover; box-shadow: -10px 0 30px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; }
 
-        /* 亲吻墙 - 恢复原色 */
+        /* 亲吻墙矩阵 - 极致无缝，彩色，各占 50% */
         .kiss-wall { 
             display: grid; 
-            grid-template-columns: repeat(5, 1fr); 
-            gap: 2px; 
+            grid-template-columns: repeat(4, 1fr); /* 极致无缝 4列，各占25% */
+            gap: 1px; 
+            width: 100%;
         }
+        @media (max-width: 767px) { .kiss-wall { grid-template-columns: repeat(3, 1fr); } }
+
         .kiss-item { 
             width: 100%; aspect-ratio: 2/3; object-fit: cover; 
-            opacity: 0.8; transition: 0.4s; 
-            cursor: pointer;
+            opacity: 0.8; transition: all 0.6s ease; 
+            cursor: crosshair;
         }
-        .kiss-item:hover { opacity: 1; transform: scale(1.05); z-index: 10; box-shadow: 0 0 20px rgba(255,255,255,0.2); }
+        .kiss-item:hover { opacity: 1; transform: scale(1.05); z-index: 10; box-shadow: 0 0 30px rgba(255,255,255,0.2); }
 
-        /* 移动端海报墙优化：改为底部横向滑动“抽屉” */
-        @media (max-width: 767px) {
-            .mobile-wall-container {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 180px;
-                background: rgba(0,0,0,0.8);
-                backdrop-filter: blur(10px);
-                border-top: 1px solid rgba(255,255,255,0.1);
-                z-index: 200;
-                padding: 10px;
-                overflow-x: auto;
-                display: flex;
-                gap: 8px;
-            }
-            .mobile-wall-container img { height: 100%; width: auto; aspect-ratio: 2/3; flex-shrink: 0; }
-            .content-padding-bottom { padding-bottom: 200px; }
-            .kiss-wall-pc { display: none; }
-        }
-        @media (min-width: 768px) {
-            .mobile-wall-container { display: none; }
-        }
-
-        /* 搜索框 */
+        /* 搜索框风格升级 */
         .search-input {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
             color: white;
             padding: 12px 20px;
             width: 100%;
             border-radius: 30px;
             outline: none;
-            transition: all 0.3s;
+            transition: border-color 0.3s;
         }
-        .search-input:focus { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+        .search-input:focus { border-color: rgba(255,255,255,0.3); }
 
         .movie-card-link { transition: all 0.3s; border-radius: 4px; padding: 8px; }
-        .movie-card-link:hover { background: rgba(255,255,255,0.1); transform: translateX(5px); }
+        .movie-card-link:hover { background: rgba(255,255,255,0.05); }
 
+        /* 右上角音频控制按钮 */
+        .audio-btn {
+            position: fixed; top: 1.5rem; right: 1.5rem;
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.03);
+            border: 0.5px solid rgba(255,255,255,0.05);
+            backdrop-filter: blur(15px);
+            cursor: pointer;
+            z-index: 500;
+            display: flex; justify-content: center; align-items: center;
+            transition: all 0.3s;
+        }
+        .audio-btn:hover { background: rgba(255,255,255,0.1); }
+        .play-icon { width: 0; height: 0; border-style: solid; border-width: 8px 0 8px 14px; border-color: transparent transparent transparent #fff; margin-left: 3px; }
+        .pause-icon { width: 14px; height: 16px; border-style: double; border-width: 0px 0px 0px 14px; border-color: transparent transparent transparent #fff; }
+
+        #app-content { transition: opacity 0.6s ease; min-height: 100vh; }
         ::-webkit-scrollbar { width: 0px; height: 0px; }
     </style>
 </head>
 <body onclick="playMusic()">
     <audio id="main-audio" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
 
-    <nav class="fixed top-0 w-full p-6 z-[300] flex justify-between items-start pointer-events-none">
-        <div onclick="switchPage('home')" class="pointer-events-auto cursor-pointer glass p-4">
-            <span class="zh text-xl">毛天艺</span><span class="en text-[8px]">Tianyi Mao</span>
-        </div>
-        <div id="status" class="opacity-30 text-[9px] tracking-[0.3em] glass p-2">AUDIO OFF</div>
-    </nav>
+    <div id="audio-control" class="audio-btn" onclick="toggleAudio(event)">
+        <div class="play-icon" id="icon"></div>
+    </div>
 
     <div id="app-content" class="pt-32 p-6 md:p-20 transition-opacity duration-500"></div>
 
@@ -119,19 +114,37 @@
     <script>
         const audio = document.getElementById('main-audio');
         const app = document.getElementById('app-content');
+        const icon = document.getElementById('icon');
 
+        // 音频播放底层逻辑（确保点击屏幕任何地方播放）
         function playMusic() {
             if (audio.paused) {
-                audio.play().catch(() => {});
-                document.getElementById('status').innerText = "AUDIO ON";
-                document.getElementById('status').classList.remove('opacity-30');
+                audio.play();
+                localStorage.setItem('mPlay', 'true');
+                updateAudioUI(true);
             }
         }
 
-        // 跳转豆瓣函数
-        function goDouban(name) {
-            const query = name.split('/')[0].trim();
-            window.open(`https://www.douban.com/search?cat=1002&q=${encodeURIComponent(query)}`, '_blank');
+        // 音频控制按钮逻辑
+        function toggleAudio(e) {
+            e.stopPropagation(); // 阻止触发 playMusic
+            if (audio.paused) {
+                audio.play();
+                localStorage.setItem('mPlay', 'true');
+                updateAudioUI(true);
+            } else {
+                audio.pause();
+                localStorage.setItem('mPlay', 'false');
+                updateAudioUI(false);
+            }
+        }
+
+        function updateAudioUI(isPlaying) {
+            if (isPlaying) {
+                icon.className = 'pause-icon';
+            } else {
+                icon.className = 'play-icon';
+            }
         }
 
         function switchPage(page) {
@@ -155,14 +168,14 @@
             app.innerHTML = `
                 <div class="h-[50vh] flex flex-col justify-end pb-12">
                     <h1 class="tracking-tighter">
-                        <span class="zh text-[16vw] md:text-[10vw] font-bold text-white drop-shadow-2xl">毛天艺</span>
-                        <span class="en text-[5vw] md:text-[2vw] opacity-40">Tianyi Mao</span>
+                        <span class="zh text-[16vw] md:text-[10vw] font-light leading-none">毛天艺</span>
+                        <span class="en text-[5vw] md:text-[2vw] opacity-20 mt-2 tracking-widest">Tianyi Mao</span>
                     </h1>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                     ${menus.map(m => `
-                        <div onclick="switchPage('${m.id}')" class="glass p-8 cursor-pointer group hover:bg-white/10 transition-all">
-                            <span class="zh text-xl md:text-2xl mb-2">${m.zh}</span>
+                        <div onclick="switchPage('${m.id}')" class="glass p-10 cursor-pointer group hover:bg-white/5 transition-all duration-500">
+                            <span class="zh text-2xl mb-2 group-hover:tracking-widest transition-all">${m.zh}</span>
                             <span class="en text-[10px]">${m.en}</span>
                         </div>
                     `).join('')}
@@ -176,41 +189,40 @@
             const sortedMovies = [...movieData].sort((a, b) => a.title.localeCompare(b.title, 'zh'));
 
             app.innerHTML = `
-                <div class="mb-12"><span class="zh text-5xl md:text-7xl font-bold">电影人生</span><span class="en text-lg">Cinema Archive</span></div>
+                <div class="mb-12"><span class="zh text-5xl md:text-7xl font-light">电影人生</span><span class="en text-lg">Cinema Archive / 2026</span></div>
                 
-                <div class="glass p-6 md:p-10 mb-20">
-                    <div class="mb-8 border-b border-white/10 pb-4">
-                        <span class="zh text-2xl">个人十佳 / Top 10 Picks</span>
+                <div class="mb-20">
+                    <div class="mb-8 border-b border-white/10 pb-4 flex justify-between items-end">
+                        <span class="zh text-2xl font-light">个人十佳</span>
+                        <span class="en text-[11px] opacity-30">Top 10 Picks</span>
                     </div>
                     <div class="dragon-row">
                         ${top10.map((m, i) => `
-                            <div class="dragon-item" style="z-index: ${20-i}" onclick="goDouban('${m.title}')">
-                                <img src="${m.poster}">
-                                <div class="mt-4"><span class="text-[10px] opacity-70 truncate block">${m.title.split('/')[0]}</span></div>
+                            <div class="dragon-item" style="z-index: ${20-i}">
+                                <img src="${m.imgs[0]}">
+                                <div class="mt-4"><span class="zh text-base">${m.title.split('/')[0]}</span></div>
                             </div>
                         `).join('')}
                     </div>
                 </div>
 
-                <div class="flex flex-col md:flex-row gap-12 content-padding-bottom">
-                    <div class="w-full md:w-8/12 glass p-6 md:p-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="glass p-8 md:p-12">
                         <div class="mb-10">
-                            <input type="text" id="movieSearch" class="search-input" placeholder="搜索电影，点击名称跳转豆瓣..." oninput="filterMovies()">
+                            <input type="text" id="movieSearch" class="search-input" placeholder="搜索我看过的电影..." oninput="filterMovies()">
                         </div>
-                        <div id="movie-list-grid" class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-2 text-sm">
+                        <div id="movie-list-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1 text-sm">
                             </div>
                     </div>
 
-                    <div class="w-full md:w-4/12 kiss-wall-pc">
-                        <div class="mb-6 border-b border-white/10 pb-2 flex justify-between">
-                            <span class="en text-[10px]">THE KISS WALL</span>
-                            <span class="en text-[10px] opacity-30">${movieData.length} POSTERS</span>
+                    <div id="cinema-wall-area">
+                        <div class="mb-6 border-b border-white/10 pb-2 flex justify-between items-end">
+                            <span class="zh text-lg font-light">视觉档案 / ${movieData.length}P</span>
+                            <span class="en text-[10px] opacity-20">VISUAL WALL</span>
                         </div>
-                        <div id="kiss-wall" class="kiss-wall"></div>
+                        <div id="cinema-wall" class="kiss-wall"></div>
                     </div>
                 </div>
-
-                <div id="mobile-wall" class="mobile-wall-container"></div>
             `;
 
             window.currentMovies = sortedMovies;
@@ -219,40 +231,29 @@
 
         function displayMovies(movies) {
             const listGrid = document.getElementById('movie-list-grid');
-            const pcWall = document.getElementById('kiss-wall');
-            const mobileWall = document.getElementById('mobile-wall');
+            const wall = document.getElementById('cinema-wall');
             
             if (movies.length === 0) {
-                listGrid.innerHTML = `<div class="col-span-full py-20 text-center zh text-lg opacity-40">毛天艺还没有看过，请推荐给他</div>`;
-                if(pcWall) pcWall.innerHTML = '';
-                if(mobileWall) mobileWall.innerHTML = '';
+                listGrid.innerHTML = `<div class="col-span-full py-20 text-center zh text-xl opacity-20">毛天艺还没有看过，请推荐给他</div>`;
+                wall.innerHTML = '';
                 return;
             }
 
-            // 渲染列表
+            // 渲染列表 (亮度降低：opacity-70)
             listGrid.innerHTML = movies.map(m => {
                 const parts = m.title.split('/');
                 return `
-                    <div class="movie-card-link cursor-pointer group" onclick="goDouban('${m.title}')">
-                        <div class="font-bold text-white group-hover:text-yellow-400 transition-colors">${parts[0]}</div>
-                        <div class="text-[9px] opacity-40 truncate">${parts[1] || ''}</div>
+                    <div class="movie-card-link cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="zh text-lg text-white">${parts[0]}</div>
+                        <div class="en text-[9px] truncate">${parts[1] || ''}</div>
                     </div>
                 `;
             }).join('');
 
-            // 渲染PC墙
-            if(pcWall) {
-                pcWall.innerHTML = movies.map(m => `
-                    <img src="${m.poster}" class="kiss-item" onclick="goDouban('${m.title}')" loading="lazy">
-                `).join('');
-            }
-
-            // 渲染手机墙
-            if(mobileWall) {
-                mobileWall.innerHTML = movies.map(m => `
-                    <img src="${m.poster}" onclick="goDouban('${m.title}')" loading="lazy">
-                `).join('');
-            }
+            // 渲染墙 (极致无缝)
+            wall.innerHTML = movies.map(m => `
+                <img src="${m.poster}" class="kiss-item" onerror="this.remove()">
+            `).join('');
         }
 
         function filterMovies() {
@@ -262,10 +263,16 @@
         }
 
         function renderSoon(p) {
-            app.innerHTML = `<div class="py-60 text-center glass"><span class="zh opacity-20 text-4xl">${p.toUpperCase()} 准备中</span></div>`;
+            app.innerHTML = `<div class="py-60 text-center glass"><span class="zh opacity-20 text-4xl">筹备中</span><span class="en opacity-10">Coming Soon</span></div>`;
         }
 
-        window.onload = () => switchPage('home');
+        window.onload = () => {
+            // 恢复音乐状态
+            if(localStorage.getItem('mPlay') === 'true') {
+                audio.play().then(() => updateAudioUI(true));
+            }
+            switchPage('home');
+        };
     </script>
 </body>
 </html>
