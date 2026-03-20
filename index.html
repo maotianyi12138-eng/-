@@ -12,46 +12,52 @@
             background-color: #000; color: #fff; margin: 0;
             font-family: 'Inter', 'Noto Sans SC', sans-serif;
             background-size: cover; background-position: center; background-attachment: fixed;
-            overflow-x: hidden;
+            transition: background 1s ease;
         }
 
-        /* 响应式壁纸：不改颜色，直接调用库里文件 */
+        /* 响应式壁纸 */
         @media (min-width: 768px) { body { background-image: url('horse.jpg'); } }
         @media (max-width: 767px) { body { background-image: url('mobile_bg.jpg'); } }
 
-        /* 文字样式：中文大，英文小，透明度适中 */
+        /* 文字样式：中文大，英文小 */
         .zh { display: block; font-size: 1.5rem; font-weight: 400; line-height: 1.2; }
-        .en { display: block; font-size: 0.9rem; font-weight: 100; opacity: 0.6; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+        .en { display: block; font-size: 0.85rem; font-weight: 100; opacity: 0.6; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 4px; }
         
-        /* 龙鳞装堆叠逻辑 */
-        .dragon-stack { position: relative; height: 300px; width: 100%; transition: all 0.8s ease; cursor: pointer; }
+        /* 龙鳞装核心 */
+        .dragon-stack { position: relative; width: 100%; transition: all 0.8s ease; cursor: pointer; }
         .leaf { 
             position: absolute; width: 100%; height: 100%; object-fit: cover;
             transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            box-shadow: -10px 0 20px rgba(0,0,0,0.5);
+            box-shadow: -10px 0 30px rgba(0,0,0,0.8);
             border: 0.5px solid rgba(255,255,255,0.1);
         }
-        /* 默认叠在一起 */
-        .leaf:nth-child(1) { z-index: 5; transform: translateX(0); }
-        .leaf:nth-child(2) { z-index: 4; transform: translateX(15px) scale(0.98); opacity: 0.8; }
-        .leaf:nth-child(3) { z-index: 3; transform: translateX(30px) scale(0.96); opacity: 0.6; }
-        .leaf:nth-child(4) { z-index: 2; transform: translateX(45px) scale(0.94); opacity: 0.4; }
-        .leaf:nth-child(5) { z-index: 1; transform: translateX(60px) scale(0.92); opacity: 0.2; }
+        .leaf:nth-child(1) { z-index: 10; }
+        .leaf:nth-child(2) { z-index: 9; transform: translateX(20px) scale(0.98); opacity: 0.8; }
+        .leaf:nth-child(3) { z-index: 8; transform: translateX(40px) scale(0.96); opacity: 0.6; }
 
-        /* 展开状态 */
         .expanded { height: auto !important; }
-        .expanded .leaf { position: relative; transform: none !important; opacity: 1 !important; margin-bottom: 10px; width: 100%; height: auto; box-shadow: none; }
+        .expanded .leaf { position: relative; transform: none !important; opacity: 1 !important; margin-bottom: 10px; height: auto; box-shadow: none; }
 
-        /* 响应式网格：电脑1*4，手机2*2 */
-        .grid-main { display: grid; gap: 30px; }
-        @media (min-width: 768px) { .grid-main { grid-template-columns: repeat(4, 1fr); } }
-        @media (max-width: 767px) { .grid-main { grid-template-columns: repeat(2, 1fr); } }
+        /* 西班牙亲吻墙风格 (Kiss Wall) */
+        .kiss-wall { 
+            display: grid; 
+            grid-template-columns: repeat(6, 1fr); 
+            gap: 2px; 
+            width: 100%;
+        }
+        @media (max-width: 767px) { .kiss-wall { grid-template-columns: repeat(4, 1fr); } }
 
-        #app-content { transition: opacity 0.6s ease; }
+        .kiss-item { 
+            width: 100%; aspect-ratio: 2/3; object-fit: cover; 
+            filter: grayscale(100%); 
+            opacity: 0.4; transition: all 0.6s ease;
+            cursor: crosshair;
+        }
+        .kiss-item:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.05); z-index: 10; }
+
+        #app-content { transition: opacity 0.6s ease; min-height: 100vh; }
         .fade-hide { opacity: 0; }
-        
-        /* 隐藏滚动条 */
-        ::-webkit-scrollbar { display: none; }
+        ::-webkit-scrollbar { width: 0px; }
     </style>
 </head>
 <body onclick="playMusic()">
@@ -61,22 +67,21 @@
         <div onclick="switchPage('home')" class="pointer-events-auto cursor-pointer">
             <span class="zh text-2xl">毛天艺</span><span class="en text-sm">Tianyi Mao</span>
         </div>
-        <div id="status" class="sub-label opacity-30 text-[10px] tracking-[0.3em]">AUDIO WAITING</div>
+        <div id="status" class="opacity-30 text-[10px] tracking-[0.3em]">AUDIO WAITING</div>
     </nav>
 
-    <div id="app-content" class="min-h-screen pt-40 p-8 md:p-20">
-        </div>
+    <div id="app-content" class="pt-40 p-8 md:p-20"></div>
 
+    <script src="movies.js"></script>
     <script>
         const audio = document.getElementById('main-audio');
         const app = document.getElementById('app-content');
 
-        // 音乐连贯逻辑：只要不刷新页面，音乐就一直跑
         function playMusic() {
             if (audio.paused) {
-                audio.play();
+                audio.play().catch(() => {});
                 document.getElementById('status').innerText = "AUDIO PLAYING";
-                document.getElementById('status').classList.remove('opacity-30');
+                document.getElementById('status').classList.replace('opacity-30', 'opacity-100');
             }
         }
 
@@ -94,25 +99,17 @@
 
         function renderHome() {
             app.innerHTML = `
-                <div class="h-[60vh] flex flex-col justify-center mb-20">
-                    <h1 class="font-thin tracking-tighter">
-                        <span class="zh text-[15vw] md:text-[10vw]">毛天艺</span>
-                        <span class="en text-[5vw] md:text-[2vw]">Tianyi Mao</span>
+                <div class="h-[60vh] flex flex-col justify-end pb-20">
+                    <h1 class="tracking-tighter">
+                        <span class="zh text-[16vw] md:text-[12vw] leading-none">毛天艺</span>
+                        <span class="en text-[6vw] md:text-[3vw] opacity-30 mt-4">Tianyi Mao</span>
                     </h1>
                 </div>
-                <div class="grid-main border-t border-white/10 pt-10">
-                    <div onclick="switchPage('works')" class="group cursor-pointer">
-                        <span class="zh">视觉作品集</span><span class="en">Visual Works</span>
-                    </div>
-                    <div onclick="switchPage('cinema')" class="group cursor-pointer">
-                        <span class="zh">电影人生</span><span class="en">Cinema Life</span>
-                    </div>
-                    <div onclick="switchPage('music')" class="group cursor-pointer">
-                        <span class="zh">音乐人生</span><span class="en">Music Life</span>
-                    </div>
-                    <div onclick="switchPage('read')" class="group cursor-pointer">
-                        <span class="zh">阅读人生</span><span class="en">Reading Life</span>
-                    </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-12">
+                    <div onclick="switchPage('works')" class="group cursor-pointer py-8"><span class="zh text-2xl group-hover:pl-2 transition-all">视觉作品集</span><span class="en">Visual Works</span></div>
+                    <div onclick="switchPage('cinema')" class="group cursor-pointer py-8"><span class="zh text-2xl group-hover:pl-2 transition-all">电影人生</span><span class="en">Cinema Life</span></div>
+                    <div onclick="switchPage('music')" class="group cursor-pointer py-8 opacity-20"><span class="zh text-2xl">音乐人生</span><span class="en">Music Life / Soon</span></div>
+                    <div onclick="switchPage('read')" class="group cursor-pointer py-8 opacity-20"><span class="zh text-2xl">阅读人生</span><span class="en">Reading Life / Soon</span></div>
                 </div>
             `;
         }
@@ -125,14 +122,14 @@
                 {zh:'保龄档案', en:'Bowling Archive', imgs:['保龄1','保龄2','保龄3','保龄4','保龄5','保龄6']}
             ];
             app.innerHTML = `
-                <h2 class="mb-20"><span class="zh text-5xl">视觉作品集</span><span class="en">Visual Works</span></h2>
-                <div class="grid-main">
+                <div class="mb-20"><span class="zh text-6xl">视觉作品集</span><span class="en text-xl">Visual Archive</span></div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
                     ${projects.map(p => `
                         <div>
-                            <div class="dragon-stack" onclick="this.classList.toggle('expanded')">
-                                ${p.imgs.map(src => `<img src="${src}" class="leaf" onerror="this.style.display='none'">`).join('')}
+                            <div class="dragon-stack h-[280px] md:h-[380px]" onclick="this.classList.toggle('expanded')">
+                                ${p.imgs.map(src => `<img src="${src}" class="leaf" onerror="this.remove()">`).join('')}
                             </div>
-                            <div class="mt-6"><span class="zh text-lg">${p.zh}</span><span class="en">${p.en}</span></div>
+                            <div class="mt-8"><span class="zh text-xl">${p.zh}</span><span class="en">${p.en}</span></div>
                         </div>
                     `).join('')}
                 </div>
@@ -140,41 +137,57 @@
         }
 
         function renderCinema() {
-            // 假设 TOP1 是 杀死比尔，这里可以根据你库里的图修改
+            // 定义你的真实十佳电影名单（根据你的照片确认）
+            const topNames = ["杀死比尔 2", "新世界", "爱在黎明破晓前", "勇士", "七宗罪", "无间道", "被解救的姜戈", "星际穿越", "胭脂扣", "美国丽人"];
+            
+            // 从 movieData 中寻找对应的海报
+            const top10 = topNames.map((name, i) => {
+                const found = movieData.find(m => m.title.includes(name));
+                return {
+                    zh: `${i+1 < 10 ? '0'+(i+1) : (i+1)} ${name}`,
+                    en: found ? found.title.split('/')[1] || "" : "",
+                    img: found ? found.poster : ""
+                };
+            });
+
             app.innerHTML = `
-                <h2 class="mb-20"><span class="zh text-5xl">电影人生</span><span class="en">Cinema Life</span></h2>
-                <div class="flex flex-col md:flex-row gap-20">
-                    <div class="w-full md:w-1/3">
-                        <div class="dragon-stack expanded">
-                            <img src="健身1.png" class="w-full border border-white/10"> 
+                <div class="mb-20"><span class="zh text-6xl">电影人生</span><span class="en text-xl">Cinema & Memories Archive</span></div>
+                <div class="flex flex-col md:flex-row gap-16">
+                    <div class="w-full md:w-5/12">
+                        <div class="dragon-stack h-[480px] expanded mb-16">
+                            <img src="${top10[0].img}" class="w-full shadow-2xl border border-white/10">
                         </div>
-                        <div class="mt-8 border-t border-white/10 pt-8">
-                            <div class="mb-6"><span class="zh text-xl">01 杀死比尔</span><span class="en text-xs italic">Kill Bill</span></div>
-                            <div class="mb-4 opacity-60 hover:opacity-100 transition-opacity"><span class="zh text-sm">02 新世界</span><span class="en text-[10px]">New World</span></div>
-                            <div class="mb-4 opacity-60 hover:opacity-100 transition-opacity"><span class="zh text-sm">03 霸王别姬</span><span class="en text-[10px]">Farewell My Concubine</span></div>
-                            </div>
+                        <div class="grid grid-cols-2 gap-x-10 gap-y-12 border-t border-white/10 pt-12">
+                            ${top10.map(m => `
+                                <div><span class="zh text-xl font-light">${m.zh}</span><span class="en text-[10px] leading-tight">${m.en}</span></div>
+                            `).join('')}
+                        </div>
                     </div>
-                    <div class="w-full md:w-2/3 grid grid-cols-4 md:grid-cols-6 gap-1" id="wall"></div>
+                    <div class="w-full md:w-7/12">
+                        <div class="mb-6 border-b border-white/10 pb-4 flex justify-between items-end">
+                            <span class="zh text-xl">全海报墙 / ${movieData.length}P</span>
+                        </div>
+                        <div id="kiss-container" class="kiss-wall"></div>
+                    </div>
                 </div>
             `;
-            // 加载海报墙逻辑
-            const wall = document.getElementById('wall');
-            if(window.movieData) {
-                movieData.forEach(m => {
-                    const img = document.createElement('img');
-                    img.src = m.poster;
-                    img.className = "w-full aspect-[2/3] object-cover opacity-40 hover:opacity-100 transition-all cursor-crosshair";
-                    img.onerror = () => img.remove();
-                    wall.appendChild(img);
-                });
-            }
+
+            const wall = document.getElementById('kiss-container');
+            movieData.forEach(m => {
+                const img = document.createElement('img');
+                img.src = m.poster;
+                img.className = 'kiss-item';
+                img.loading = "lazy";
+                img.onerror = () => img.remove();
+                wall.appendChild(img);
+            });
         }
 
         function renderSoon() {
-            app.innerHTML = `<div class="py-40 text-center opacity-20"><span class="zh">筹备中</span><span class="en">Coming Soon</span></div>`;
+            app.innerHTML = `<div class="py-60 text-center opacity-20"><span class="zh text-4xl">筹备中</span><span class="en">Coming Soon</span></div>`;
         }
 
-        window.onload = renderHome;
+        window.onload = () => switchPage('home');
     </script>
 </body>
 </html>
