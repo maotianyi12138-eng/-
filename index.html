@@ -1,102 +1,180 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAO TIANYI | ARCHIVE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background: #000; color: #fff; margin: 0; font-family: 'Inter', sans-serif; overflow: hidden; }
-        #app-content { transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.8s ease; opacity: 0; transform: translateY(20px); }
-        .page-active { opacity: 1 !important; transform: translateY(0) !important; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&family=Noto+Sans+SC:wght@100;300;400&display=swap');
         
-        /* Josh Warner 特有的超大标题排版 */
-        .big-title { font-size: 14vw; font-weight: 100; line-height: 0.8; letter-spacing: -0.04em; }
-        .sub-label { font-size: 10px; letter-spacing: 0.5em; opacity: 0.3; text-transform: uppercase; }
-        
-        .nav-item { position: relative; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: 0.4s; }
-        .nav-item:hover { padding-left: 2rem; border-top-color: #fff; }
-        .nav-num { position: absolute; left: -4rem; top: 2.2rem; font-size: 10px; opacity: 0.2; }
+        body { 
+            background-color: #000; color: #fff; margin: 0;
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-size: cover; background-position: center; background-attachment: fixed;
+            overflow-x: hidden;
+        }
 
-        /* 音乐控制条 */
-        .bar { width: 1px; height: 12px; background: white; transition: 0.3s; }
-        .bar-p { height: 1px !important; opacity: 0.2; }
+        /* 响应式壁纸：不改颜色，直接调用库里文件 */
+        @media (min-width: 768px) { body { background-image: url('horse.jpg'); } }
+        @media (max-width: 767px) { body { background-image: url('mobile_bg.jpg'); } }
+
+        /* 文字样式：中文大，英文小，透明度适中 */
+        .zh { display: block; font-size: 1.5rem; font-weight: 400; line-height: 1.2; }
+        .en { display: block; font-size: 0.9rem; font-weight: 100; opacity: 0.6; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+        
+        /* 龙鳞装堆叠逻辑 */
+        .dragon-stack { position: relative; height: 300px; width: 100%; transition: all 0.8s ease; cursor: pointer; }
+        .leaf { 
+            position: absolute; width: 100%; height: 100%; object-fit: cover;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: -10px 0 20px rgba(0,0,0,0.5);
+            border: 0.5px solid rgba(255,255,255,0.1);
+        }
+        /* 默认叠在一起 */
+        .leaf:nth-child(1) { z-index: 5; transform: translateX(0); }
+        .leaf:nth-child(2) { z-index: 4; transform: translateX(15px) scale(0.98); opacity: 0.8; }
+        .leaf:nth-child(3) { z-index: 3; transform: translateX(30px) scale(0.96); opacity: 0.6; }
+        .leaf:nth-child(4) { z-index: 2; transform: translateX(45px) scale(0.94); opacity: 0.4; }
+        .leaf:nth-child(5) { z-index: 1; transform: translateX(60px) scale(0.92); opacity: 0.2; }
+
+        /* 展开状态 */
+        .expanded { height: auto !important; }
+        .expanded .leaf { position: relative; transform: none !important; opacity: 1 !important; margin-bottom: 10px; width: 100%; height: auto; box-shadow: none; }
+
+        /* 响应式网格：电脑1*4，手机2*2 */
+        .grid-main { display: grid; gap: 30px; }
+        @media (min-width: 768px) { .grid-main { grid-template-columns: repeat(4, 1fr); } }
+        @media (max-width: 767px) { .grid-main { grid-template-columns: repeat(2, 1fr); } }
+
+        #app-content { transition: opacity 0.6s ease; }
+        .fade-hide { opacity: 0; }
+        
+        /* 隐藏滚动条 */
+        ::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body>
-    <audio id="global-bgm" loop src="bgm.mp3"></audio>
+<body onclick="playMusic()">
+    <audio id="main-audio" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
 
-    <nav class="fixed top-0 w-full p-10 md:p-16 z-[100] flex justify-between items-start pointer-events-none">
-        <div class="sub-label pointer-events-auto">Portfolio / 2026</div>
-        <div onclick="toggleMusic(event)" class="flex items-end gap-[3px] cursor-pointer pointer-events-auto p-4">
-            <div class="bar bar-p"></div><div class="bar bar-p"></div><div class="bar bar-p"></div>
+    <nav class="fixed top-0 w-full p-8 z-[100] flex justify-between items-start pointer-events-none">
+        <div onclick="switchPage('home')" class="pointer-events-auto cursor-pointer">
+            <span class="zh text-2xl">毛天艺</span><span class="en text-sm">Tianyi Mao</span>
         </div>
+        <div id="status" class="sub-label opacity-30 text-[10px] tracking-[0.3em]">AUDIO WAITING</div>
     </nav>
 
-    <div id="app-content" class="min-h-screen flex flex-col justify-end p-10 md:p-24">
-        <div class="mb-32">
-            <h1 class="big-title">MAO<br>TIANYI</h1>
+    <div id="app-content" class="min-h-screen pt-40 p-8 md:p-20">
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
-            <div class="flex flex-col">
-                <div onclick="router('works.html')" class="nav-item group">
-                    <span class="nav-num">01</span>
-                    <h2 class="text-4xl font-light tracking-tighter">视觉作品 / VISUAL</h2>
-                </div>
-                <div onclick="router('cinema.html')" class="nav-item group">
-                    <span class="nav-num">02</span>
-                    <h2 class="text-4xl font-light tracking-tighter">电影人生 / CINEMA</h2>
-                </div>
-                <div onclick="router('read.html')" class="nav-item group">
-                    <span class="nav-num">03</span>
-                    <h2 class="text-4xl font-light tracking-tighter">阅读人生 / READ</h2>
-                </div>
-                <div onclick="router('music.html')" class="nav-item group">
-                    <span class="nav-num">04</span>
-                    <h2 class="text-4xl font-light tracking-tighter">音乐人生 / AUDIO</h2>
-                </div>
-            </div>
-            <div class="hidden md:flex items-end justify-end">
-                <p class="sub-label leading-loose text-right">
-                    Focused on digital curation<br>and visual storytelling.<br>Based in China.
-                </p>
-            </div>
-        </div>
-    </div>
 
     <script>
-        const audio = document.getElementById('global-bgm');
+        const audio = document.getElementById('main-audio');
         const app = document.getElementById('app-content');
 
-        function toggleMusic(e) {
-            if(e) e.stopPropagation();
-            const bars = document.querySelectorAll('.bar');
-            if (audio.paused) { 
-                audio.play(); bars.forEach(b => b.classList.remove('bar-p'));
-            } else { 
-                audio.pause(); bars.forEach(b => b.classList.add('bar-p'));
+        // 音乐连贯逻辑：只要不刷新页面，音乐就一直跑
+        function playMusic() {
+            if (audio.paused) {
+                audio.play();
+                document.getElementById('status').innerText = "AUDIO PLAYING";
+                document.getElementById('status').classList.remove('opacity-30');
             }
         }
 
-        async function router(url) {
-            app.style.transform = "translateY(-20px)";
-            app.style.opacity = "0";
-            localStorage.setItem('bgmTime', audio.currentTime);
-            localStorage.setItem('bgmPlaying', !audio.paused);
-            setTimeout(() => { window.location.href = url; }, 800);
+        function switchPage(page) {
+            app.classList.add('fade-hide');
+            setTimeout(() => {
+                if(page === 'home') renderHome();
+                else if(page === 'works') renderWorks();
+                else if(page === 'cinema') renderCinema();
+                else renderSoon();
+                app.classList.remove('fade-hide');
+                window.scrollTo(0,0);
+            }, 600);
         }
 
-        window.onload = () => {
-            const savedTime = localStorage.getItem('bgmTime');
-            if(savedTime) audio.currentTime = savedTime;
-            if(localStorage.getItem('bgmPlaying') === 'true') {
-                audio.play().catch(() => {});
-                document.querySelectorAll('.bar').forEach(b => b.classList.remove('bar-p'));
+        function renderHome() {
+            app.innerHTML = `
+                <div class="h-[60vh] flex flex-col justify-center mb-20">
+                    <h1 class="font-thin tracking-tighter">
+                        <span class="zh text-[15vw] md:text-[10vw]">毛天艺</span>
+                        <span class="en text-[5vw] md:text-[2vw]">Tianyi Mao</span>
+                    </h1>
+                </div>
+                <div class="grid-main border-t border-white/10 pt-10">
+                    <div onclick="switchPage('works')" class="group cursor-pointer">
+                        <span class="zh">视觉作品集</span><span class="en">Visual Works</span>
+                    </div>
+                    <div onclick="switchPage('cinema')" class="group cursor-pointer">
+                        <span class="zh">电影人生</span><span class="en">Cinema Life</span>
+                    </div>
+                    <div onclick="switchPage('music')" class="group cursor-pointer">
+                        <span class="zh">音乐人生</span><span class="en">Music Life</span>
+                    </div>
+                    <div onclick="switchPage('read')" class="group cursor-pointer">
+                        <span class="zh">阅读人生</span><span class="en">Reading Life</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderWorks() {
+            const projects = [
+                {zh:'健身系列', en:'Fitness Series', imgs:['健身1.png','健身2.png','健身3.png','健身4.png','健身5.png']},
+                {zh:'血液研究', en:'Blood Study', imgs:['血液1.png','血液2.png','血液3.png','血液4.png']},
+                {zh:'批判思维', en:'Critical Thinking', imgs:['批判1','批判2','批判3','批判4']},
+                {zh:'保龄档案', en:'Bowling Archive', imgs:['保龄1','保龄2','保龄3','保龄4','保龄5','保龄6']}
+            ];
+            app.innerHTML = `
+                <h2 class="mb-20"><span class="zh text-5xl">视觉作品集</span><span class="en">Visual Works</span></h2>
+                <div class="grid-main">
+                    ${projects.map(p => `
+                        <div>
+                            <div class="dragon-stack" onclick="this.classList.toggle('expanded')">
+                                ${p.imgs.map(src => `<img src="${src}" class="leaf" onerror="this.style.display='none'">`).join('')}
+                            </div>
+                            <div class="mt-6"><span class="zh text-lg">${p.zh}</span><span class="en">${p.en}</span></div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function renderCinema() {
+            // 假设 TOP1 是 杀死比尔，这里可以根据你库里的图修改
+            app.innerHTML = `
+                <h2 class="mb-20"><span class="zh text-5xl">电影人生</span><span class="en">Cinema Life</span></h2>
+                <div class="flex flex-col md:flex-row gap-20">
+                    <div class="w-full md:w-1/3">
+                        <div class="dragon-stack expanded">
+                            <img src="健身1.png" class="w-full border border-white/10"> 
+                        </div>
+                        <div class="mt-8 border-t border-white/10 pt-8">
+                            <div class="mb-6"><span class="zh text-xl">01 杀死比尔</span><span class="en text-xs italic">Kill Bill</span></div>
+                            <div class="mb-4 opacity-60 hover:opacity-100 transition-opacity"><span class="zh text-sm">02 新世界</span><span class="en text-[10px]">New World</span></div>
+                            <div class="mb-4 opacity-60 hover:opacity-100 transition-opacity"><span class="zh text-sm">03 霸王别姬</span><span class="en text-[10px]">Farewell My Concubine</span></div>
+                            </div>
+                    </div>
+                    <div class="w-full md:w-2/3 grid grid-cols-4 md:grid-cols-6 gap-1" id="wall"></div>
+                </div>
+            `;
+            // 加载海报墙逻辑
+            const wall = document.getElementById('wall');
+            if(window.movieData) {
+                movieData.forEach(m => {
+                    const img = document.createElement('img');
+                    img.src = m.poster;
+                    img.className = "w-full aspect-[2/3] object-cover opacity-40 hover:opacity-100 transition-all cursor-crosshair";
+                    img.onerror = () => img.remove();
+                    wall.appendChild(img);
+                });
             }
-            setTimeout(() => app.classList.add('page-active'), 100);
-        };
+        }
+
+        function renderSoon() {
+            app.innerHTML = `<div class="py-40 text-center opacity-20"><span class="zh">筹备中</span><span class="en">Coming Soon</span></div>`;
+        }
+
+        window.onload = renderHome;
     </script>
 </body>
 </html>
