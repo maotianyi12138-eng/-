@@ -19,37 +19,28 @@
         @media (min-width: 768px) { body { background-image: url('horse.jpg'); } }
         @media (max-width: 767px) { body { background-image: url('mobile_bg.jpg'); } }
 
-        .glass {
-            background: rgba(255, 255, 255, 0.015);
-            backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
-            border: 0.5px solid rgba(255, 255, 255, 0.05); border-radius: 2rem;
-        }
-
+        .glass { background: rgba(255, 255, 255, 0.015); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 0.5px solid rgba(255, 255, 255, 0.05); border-radius: 2rem; }
         .zh { display: block; font-weight: 400; line-height: 1.2; }
         .en { display: block; font-weight: 100; opacity: 0.4; letter-spacing: 0.1em; text-transform: uppercase; }
 
-        .back-arrow {
-            position: fixed; top: 2.5rem; left: 2.5rem; z-index: 500;
-            font-size: 1.8rem; color: #fff; cursor: pointer; transition: 0.3s;
-        }
+        .back-arrow { position: fixed; top: 2.5rem; left: 2.5rem; z-index: 500; font-size: 1.8rem; color: #fff; cursor: pointer; transition: 0.3s; }
         .back-arrow:hover { transform: translateX(-5px); opacity: 0.6; }
 
-        /* 龙鳞装：横向铺满 */
+        /* 龙鳞通用样式 */
         .dragon-container { width: 100vw; overflow: hidden; margin-left: -1.5rem; }
         .dragon-row { display: flex; width: 100%; padding: 40px 5% 80px; justify-content: space-between; align-items: flex-end; }
-        .dragon-item {
-            flex: 1; margin-right: -4.5vw; max-width: 170px;
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            cursor: pointer; position: relative; display: flex; flex-direction: column; align-items: center;
-        }
-        .dragon-item:last-child { margin-right: 0; }
+        .dragon-item { flex: 1; margin-right: -4.5vw; max-width: 170px; transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; position: relative; }
         .dragon-item:hover { margin-right: 2.5vw; transform: translateY(-20px) scale(1.05); z-index: 100 !important; }
-        
-        .v-zh { writing-mode: vertical-rl; font-size: 11px; margin-bottom: 25px; letter-spacing: 0.5em; height: 150px; text-align: right; color: rgba(255,255,255,0.9); font-weight: 500; }
-
+        .v-zh { writing-mode: vertical-rl; font-size: 11px; margin-bottom: 25px; letter-spacing: 0.5em; height: 150px; text-align: right; color: rgba(255,255,255,0.9); }
         .dragon-item img { width: 100%; aspect-ratio: 2/3; object-fit: cover; border: 0.5px solid rgba(255,255,255,0.2); border-radius: 4px; box-shadow: 0 15px 40px rgba(0,0,0,0.8); }
 
-        /* 极致亲吻墙：8列更致密 */
+        /* 作品集专用的横向龙鳞 */
+        .work-dragon { display: flex; height: 300px; align-items: center; padding-left: 20px; }
+        .stack-img { width: 180px; height: 260px; object-fit: cover; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); margin-left: -120px; transition: 0.4s; box-shadow: -10px 0 30px rgba(0,0,0,0.5); }
+        .stack-img:first-child { margin-left: 0; }
+        .work-card:hover .stack-img { margin-left: -40px; }
+
+        /* 亲吻墙 */
         .kiss-wall { display: grid; grid-template-columns: repeat(8, 1fr); gap: 1px; width: 100%; height: 750px; overflow-y: auto; }
         .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0; transition: opacity 1s; background: #111; }
         .kiss-item.loaded { opacity: 0.35; }
@@ -58,28 +49,21 @@
         .tag-btn { padding: 5px 15px; font-size: 11px; border-radius: 99px; border: 0.5px solid rgba(255,255,255,0.1); cursor: pointer; transition: 0.3s; color: rgba(255,255,255,0.5); }
         .tag-btn:hover, .tag-btn.active { color: #fff; background: rgba(255,255,255,0.1); border-color: white; }
 
-        .search-input { background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.1); color: white; padding: 1rem 1.5rem; width: 100%; border-radius: 1.2rem; outline: none; }
-        
-        /* 音乐按钮 */
-        .audio-btn { position: fixed; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); z-index: 1000; display: flex; justify-content: center; align-items: center; cursor: pointer; border: 0.5px solid rgba(255,255,255,0.1); }
-        .play-icon { width: 0; height: 0; border-style: solid; border-width: 7px 0 7px 11px; border-color: transparent transparent transparent #fff; margin-left: 2px; }
+        .audio-btn { position: fixed; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.05); z-index: 1000; display: flex; justify-content: center; align-items: center; cursor: pointer; border: 0.5px solid rgba(255,255,255,0.1); }
+        .play-icon { width: 0; height: 0; border-style: solid; border-width: 7px 0 7px 11px; border-color: transparent transparent transparent #fff; }
         .pause-icon { width: 10px; height: 12px; border-left: 3px solid #fff; border-right: 3px solid #fff; }
-
         .scrollbar-hide::-webkit-scrollbar { display: none; }
     </style>
 </head>
 <body onclick="playMusic()">
     <audio id="main-audio" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
     <div id="nav-ui" class="hidden"><div class="back-arrow" onclick="switchPage('home')">←</div></div>
-    
     <div id="audio-control" class="audio-btn" onclick="toggleAudio(event)"><div class="play-icon" id="icon"></div></div>
 
-    <div id="ad-overlay" class="fixed inset-0 bg-black/90 backdrop-blur-3xl z-[2000] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500">
+    <div id="ad-overlay" class="fixed inset-0 bg-black/90 backdrop-blur-3xl z-[2000] flex items-center justify-center opacity-0 pointer-events-none transition-opacity">
         <div class="glass p-20 text-center">
             <span class="zh text-4xl mb-4 font-bold">他没看过！</span>
-            <div class="mt-10 px-10 py-4 bg-white text-black rounded-full cursor-pointer hover:invert transition" onclick="closeAd()">
-                <span class="zh text-sm font-bold uppercase">已经告诉他了 I'VE TOLD HIM ALREADY</span>
-            </div>
+            <div class="mt-10 px-10 py-4 bg-white text-black rounded-full cursor-pointer" onclick="closeAd()">已经告诉他了 I'VE TOLD HIM ALREADY</div>
         </div>
     </div>
 
@@ -89,18 +73,17 @@
     <script>
         const audio = document.getElementById('main-audio');
         const app = document.getElementById('app-content');
-        const navUI = document.getElementById('nav-ui');
         const icon = document.getElementById('icon');
         let searchTimer;
 
-        function playMusic() { if (audio.paused) { audio.play().then(() => updateAudioUI(true)).catch(()=>{}); } }
-        function toggleAudio(e) { e.stopPropagation(); if (audio.paused) { audio.play(); updateAudioUI(true); } else { audio.pause(); updateAudioUI(false); } }
+        function playMusic() { if (audio.paused) audio.play().then(() => updateAudioUI(true)).catch(()=>{}); }
+        function toggleAudio(e) { e.stopPropagation(); audio.paused ? audio.play() : audio.pause(); updateAudioUI(!audio.paused); }
         function updateAudioUI(isPlaying) { icon.className = isPlaying ? 'pause-icon' : 'play-icon'; }
 
         function switchPage(page) {
             app.style.opacity = '0';
             setTimeout(() => {
-                navUI.classList.toggle('hidden', page === 'home');
+                document.getElementById('nav-ui').classList.toggle('hidden', page === 'home');
                 if(page === 'home') renderHome();
                 else if(page === 'cinema') renderCinema();
                 else if(page === 'works') renderWorks();
@@ -110,19 +93,19 @@
 
         function renderHome() {
             const menus = [{id:'works', zh:'视觉作品集', en:'Visual Works'}, {id:'cinema', zh:'电影人生', en:'Cinema Life'}, {id:'music', zh:'音乐人生', en:'Music Life'}, {id:'read', zh:'阅读人生', en:'Reading Life'}];
-            app.innerHTML = `
-                <div class="h-[45vh] flex flex-col justify-end pb-12 px-4">
-                    <h1 class="tracking-tighter"><span class="zh text-[16vw] md:text-[9vw] font-light leading-none">毛天艺</span></h1>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
-                    ${menus.map(m => `<div onclick="switchPage('${m.id}')" class="glass p-10 cursor-pointer group hover:bg-white/5 transition-all"><span class="zh text-2xl mb-2">${m.zh}</span><span class="en text-[10px]">${m.en}</span></div>`).join('')}
-                </div>
-            `;
+            app.innerHTML = `<div class="h-[45vh] flex flex-col justify-end pb-12 px-4"><h1 class="tracking-tighter"><span class="zh text-[16vw] md:text-[9vw] font-light">毛天艺</span></h1></div><div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-4">${menus.map(m => `<div onclick="switchPage('${m.id}')" class="glass p-10 cursor-pointer group hover:bg-white/5 transition-all"><span class="zh text-2xl mb-2">${m.zh}</span><span class="en text-[10px]">${m.en}</span></div>`).join('')}</div>`;
         }
 
         function renderCinema() {
-            // 锁定 8 个真实分类（对应数据中的 genres 或 title 包含词）
-            const categories = ['剧情', '犯罪', '动作', '科幻', '惊悚', '悬疑', '喜剧', '爱情'];
+            // --- 自动化标签引擎 ---
+            const allGenres = [];
+            movieData.forEach(m => {
+                const tags = (m.genres || m.type || "").split(/[,，/ ]+/);
+                tags.forEach(t => { if(t.trim()) allGenres.push(t.trim()); });
+            });
+            const counts = allGenres.reduce((acc, g) => { acc[g] = (acc[g] || 0) + 1; return acc; }, {});
+            const sortedTags = Object.keys(counts).sort((a,b) => counts[b] - counts[a]).slice(0, 8);
+
             const top10 = [
                 {name:'新世界', en:'New World', poster:'新世界.png', db:'https://movie.douban.com/subject/10756762/'},
                 {name:'杀死比尔 2', en:'Kill Bill 2', poster:'杀死比尔2.png', db:'https://movie.douban.com/subject/1291585/'},
@@ -138,19 +121,11 @@
 
             app.innerHTML = `
                 <div class="mb-10 px-4"><span class="zh text-6xl font-light tracking-tighter">电影人生</span></div>
-                <div class="dragon-container">
-                    <div class="dragon-row">
-                        ${top10.map((m, i) => `<div class="dragon-item" style="z-index:${20-i}" onclick="window.open('${m.db}', '_blank')"><div class="v-zh">${m.name}</div><img src="${m.poster}"></div>`).join('')}
-                    </div>
-                </div>
-
+                <div class="dragon-container"><div class="dragon-row">${top10.map((m, i) => `<div class="dragon-item" style="z-index:${20-i}" onclick="window.open('${m.db}')"><div class="v-zh">${m.name}</div><img src="${m.poster}"></div>`).join('')}</div></div>
                 <div class="flex flex-col lg:flex-row gap-0 px-4">
                     <div class="glass p-8 md:p-10 flex-1 rounded-r-none border-r-0">
-                        <input type="text" id="movieSearch" class="search-input mb-6" placeholder="搜索一部你觉得毛天艺没有看过的电影" oninput="debounceSearch()">
-                        <div class="flex flex-wrap gap-2 mb-10">
-                            <div class="tag-btn active" onclick="filterTag('', this)">全部 ALL</div>
-                            ${categories.map(t => `<div class="tag-btn" onclick="filterTag('${t}', this)">${t}</div>`).join('')}
-                        </div>
+                        <input type="text" id="movieSearch" class="search-input mb-6" placeholder="搜索一部毛天艺没看过的电影" oninput="debounceSearch()">
+                        <div class="flex flex-wrap gap-2 mb-10"><div class="tag-btn active" onclick="filterTag('', this)">全部 ALL</div>${sortedTags.map(t => `<div class="tag-btn" onclick="filterTag('${t}', this)">${t}</div>`).join('')}</div>
                         <div id="movie-list-grid" class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6 max-h-[600px] overflow-y-auto pr-2 scrollbar-hide"></div>
                     </div>
                     <div class="flex-1 h-fit"><div id="cinema-wall" class="kiss-wall glass rounded-l-none scrollbar-hide"></div></div>
@@ -160,30 +135,20 @@
         }
 
         function filterTag(tag, el) {
-    // 1. 切换按钮高亮
-    document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
-    el.classList.add('active');
-
-    // 2. 如果是“全部”，直接显示
-    if (tag === '') {
-        displayMovies(movieData);
-        return;
-    }
-
-    // 3. 核心修正：将整条数据转为字符串进行模糊匹配，确保 100% 命中
-    const filtered = movieData.filter(m => {
-        const dataString = JSON.stringify(m); 
-        return dataString.includes(tag);
-    });
-
-    displayMovies(filtered);
+            document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+            el.classList.add('active');
+            const filtered = tag === '' ? movieData : movieData.filter(m => {
+                const dataStr = JSON.stringify(m);
+                return dataStr.includes(tag);
+            });
+            displayMovies(filtered);
         }
 
         function displayMovies(movies, initWall = false) {
             const listGrid = document.getElementById('movie-list-grid');
             const wall = document.getElementById('cinema-wall');
             if(!listGrid || !wall) return;
-            listGrid.innerHTML = movies.map(m => `<div class="cursor-pointer group" onclick="window.open('https://search.douban.com/movie/subject_search?search_text='+encodeURIComponent('${m.title.split('/')[0]}'), '_blank')"><div class="zh text-[12px] opacity-40 group-hover:opacity-100 transition-all truncate">${m.title.split('/')[0]}</div><div class="en text-[7px] opacity-10 uppercase truncate">${m.title.split('/')[1] || ''}</div></div>`).join('');
+            listGrid.innerHTML = movies.map(m => `<div class="cursor-pointer group" onclick="window.open('https://search.douban.com/movie/subject_search?search_text='+encodeURIComponent('${m.title.split('/')[0]}'))"><div class="zh text-[12px] opacity-40 group-hover:opacity-100 truncate">${m.title.split('/')[0]}</div><div class="en text-[7px] opacity-10 truncate">${m.title.split('/')[1] || ''}</div></div>`).join('');
             if(initWall) {
                 wall.innerHTML = movieData.map(m => `<img data-src="${m.poster}" class="kiss-item lazy-item" onerror="this.remove()">`).join('');
                 initLazyLoading();
@@ -193,23 +158,39 @@
         function debounceSearch() {
             clearTimeout(searchTimer);
             const term = document.getElementById('movieSearch').value.trim().toLowerCase();
-            const filtered = movieData.filter(m => m.title.toLowerCase().includes(term));
+            const filtered = movieData.filter(m => JSON.stringify(m).toLowerCase().includes(term));
             displayMovies(term === '' ? movieData : filtered);
-            searchTimer = setTimeout(() => { if (term !== '' && filtered.length === 0) { const ad = document.getElementById('ad-overlay'); ad.style.opacity = '1'; ad.style.pointerEvents = 'auto'; } }, 1200);
+            searchTimer = setTimeout(() => { if (term !== '' && filtered.length === 0) { document.getElementById('ad-overlay').style.opacity = '1'; document.getElementById('ad-overlay').style.pointerEvents = 'auto'; } }, 1200);
+        }
+
+        function renderWorks() {
+            const projects = [
+                {zh:'1.离不了', en:'UNSEPARABLE', prefix:'批判', count:4},
+                {zh:'2.新保龄运动', en:'NEW BOWLING MOVEMENT', prefix:'保龄', count:6},
+                {zh:'3.血液涅槃', en:'BLOOD NIRVANA', prefix:'血液', count:4},
+                {zh:'4.健身工厂', en:'FITNESS FACTORY', prefix:'健身', count:5}
+            ];
+            app.innerHTML = `
+                <div class="mb-12 px-4"><span class="zh text-6xl font-light tracking-tighter">视觉作品集</span></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 px-4">
+                    ${projects.map(p => `
+                        <div class="glass p-8 work-card overflow-hidden">
+                            <div class="mb-6"><span class="zh text-2xl">${p.zh}</span><span class="en text-xs opacity-30">${p.en}</span></div>
+                            <div class="work-dragon">
+                                ${Array.from({length: p.count}).map((_, i) => `<img src="${p.prefix}${i+1}.png" class="stack-img" style="z-index:${10-i}">`).join('')}
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
         }
 
         function initLazyLoading() {
-            const observer = new IntersectionObserver((entries, obs) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.onload = () => img.classList.add('loaded'); obs.unobserve(img); } }); }, { rootMargin: "0px 0px 1000px 0px" });
-            document.querySelectorAll('.lazy-item').forEach(img => observer.observe(img));
+            const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) { e.target.src = e.target.dataset.src; e.target.onload = () => e.target.classList.add('loaded'); obs.unobserve(e.target); } }); }, { rootMargin: "0px 0px 1000px 0px" });
+            document.querySelectorAll('.lazy-item').forEach(img => obs.observe(img));
         }
 
-        function closeAd() { document.getElementById('ad-overlay').style.opacity = '0'; document.getElementById('ad-overlay').style.pointerEvents = 'none'; document.getElementById('movieSearch').value = ''; displayMovies(movieData); }
-        
-        function renderWorks() {
-             const projects = [ {zh:'1.离不了', en:'UNSEPARABLE', img:'批判1.png'}, {zh:'2.新保龄运动', en:'NEW BOWLING MOVEMENT', img:'保龄1.png'}, {zh:'3.血液涅槃', en:'BLOOD NIRVANA', img:'血液1.png'}, {zh:'4.健身工厂', en:'FITNESS FACTORY', img:'健身1.png'} ];
-             app.innerHTML = `<div class="mb-12 px-4"><span class="zh text-6xl font-light tracking-tighter">视觉作品集</span></div><div class="grid grid-cols-1 md:grid-cols-2 gap-10 px-4">${projects.map(p => `<div class="glass p-5"><div style="aspect-ratio:2/1;overflow:hidden;border-radius:1rem;"><img src="${p.img}" class="w-full h-full object-cover"></div><div class="mt-4"><span class="zh text-xl">${p.zh}</span><span class="en text-xs opacity-30 uppercase">${p.en}</span></div></div>`).join('')}</div>`;
-        }
-
+        function closeAd() { document.getElementById('ad-overlay').style.opacity = '0'; document.getElementById('ad-overlay').style.pointerEvents = 'none'; displayMovies(movieData); }
         window.onload = () => switchPage('home');
     </script>
 </body>
