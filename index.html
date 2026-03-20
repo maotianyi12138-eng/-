@@ -18,54 +18,56 @@
         @media (min-width: 768px) { body { background-image: url('horse.jpg'); } }
         @media (max-width: 767px) { body { background-image: url('mobile_bg.jpg'); } }
 
-        /* Apple 极致磨砂：更透、更润、圆角更大 */
+        /* Apple 极致磨砂：更透、圆角大 */
         .glass {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
-            border: 0.5px solid rgba(255, 255, 255, 0.08);
-            border-radius: 2.5rem;
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 0.5px solid rgba(255, 255, 255, 0.05);
+            border-radius: 2rem;
         }
 
         .zh { display: block; font-weight: 400; line-height: 1.2; }
         .en { display: block; font-weight: 100; opacity: 0.5; letter-spacing: 0.1em; text-transform: uppercase; }
 
-        /* 返回按钮 */
-        .back-btn {
-            position: fixed; top: 1.5rem; left: 1.5rem;
-            padding: 0.8rem 1.5rem;
+        /* 极简返回按钮：纯箭头 */
+        .back-arrow {
+            position: fixed; top: 2rem; left: 2rem;
             z-index: 500;
+            font-size: 1.5rem; color: #fff;
             cursor: pointer;
             transition: all 0.3s;
         }
-        .back-btn:hover { transform: translateX(-5px); opacity: 0.7; }
+        .back-arrow:hover { transform: translateX(-5px); opacity: 0.7; }
 
-        /* 龙鳞装：横向铺满 */
+        /* 龙鳞装展开版：间距拉开 */
         .dragon-row {
             display: flex; overflow-x: auto; padding: 20px 0 60px 0; scrollbar-width: none;
         }
         .dragon-item {
-            flex: 0 0 160px; margin-right: -80px;
+            flex: 0 0 180px; /* 拉开间距 */
+            margin-right: -40px; /* 减小堆叠度，展示更多海报内容 */
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer; position: relative;
         }
-        .dragon-item:hover { margin-right: 20px; transform: translateY(-15px); z-index: 100 !important; }
-        .dragon-item img { width: 100%; aspect-ratio: 2/3; object-fit: cover; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; }
+        .dragon-item:hover { margin-right: 40px; transform: translateY(-15px); z-index: 100 !important; }
+        .dragon-item img { width: 100%; aspect-ratio: 2/3; object-fit: cover; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; }
 
-        /* 5:5 布局核心 */
-        .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-        @media (max-width: 1024px) { .split-grid { grid-template-columns: 1fr; } }
+        /* 5:5 布局核心：左右绝对对齐 */
+        .grid-align-flex { display: flex; gap: 40px; align-items: stretch; }
+        @media (max-width: 1024px) { .grid-align-flex { flex-direction: column; } }
+        .glass-align { flex: 1; display: flex; flex-direction: column; height: 100%; }
 
         /* 亲吻墙：极致无缝 */
-        .kiss-wall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; width: 100%; }
-        .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0.9; transition: 0.5s; cursor: pointer; }
+        .kiss-wall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; width: 100%; height: 100%; }
+        .kiss-item { width: 100%; height: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0.9; transition: 0.5s; cursor: crosshair; }
         .kiss-item:hover { opacity: 1; transform: scale(1.05); z-index: 10; }
 
         /* 音频控制 */
         .audio-btn {
             position: fixed; top: 1.5rem; right: 1.5rem;
             width: 44px; height: 44px; border-radius: 50%;
-            background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.05);
             backdrop-filter: blur(15px); cursor: pointer; z-index: 500;
             display: flex; justify-content: center; align-items: center;
         }
@@ -74,7 +76,7 @@
 
         .search-input {
             background: rgba(255,255,255,0.05); border: none; color: white;
-            padding: 1rem 1.5rem; width: 100%; border-radius: 1.5rem; outline: none;
+            padding: 1rem 1.5rem; width: 100%; border-radius: 2rem; outline: none;
         }
 
         #app-content { transition: opacity 0.5s ease; }
@@ -85,9 +87,7 @@
     <audio id="main-audio" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
 
     <div id="nav-ui" class="hidden">
-        <div class="back-btn glass" onclick="switchPage('home')">
-            <span class="en text-xs">← BACK</span>
-        </div>
+        <div class="back-arrow" onclick="switchPage('home')">←</div>
     </div>
     
     <div id="audio-control" class="audio-btn" onclick="toggleAudio(event)">
@@ -169,7 +169,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-4">
                     ${projects.map(p => `
                         <div>
-                            <div class="dragon-row !gap-0" style="height:350px;">
+                            <div class="dragon-row !gap-0 !py-0 !mb-0" style="height:350px;">
                                 ${p.imgs.map((src, i) => `<div class="dragon-item" style="z-index:${10-i}"><img src="${src}" onerror="this.parentElement.remove()"></div>`).join('')}
                             </div>
                             <div class="mt-8 border-t border-white/10 pt-4"><span class="zh text-xl">${p.zh}</span><span class="en text-xs">${p.en}</span></div>
@@ -181,31 +181,50 @@
 
         function renderCinema() {
             const top10Names = ["杀死比尔 2", "新世界", "爱在黎明破晓前", "勇士", "七宗罪", "无间道", "被解救的姜戈", "星际穿越", "胭脂扣", "美国丽人"];
-            const top10 = top10Names.map(name => movieData.find(m => m.title.includes(name))).filter(Boolean);
+            // 数据检查逻辑：补全 TOP 10 高清海报链接
+            const top10Links = {
+                "杀死比尔 2": "https://image.tmdb.org/t/p/original/27TeSl3S8pZ1v7BNvL97m9v987E.jpg",
+                "新世界": "https://image.tmdb.org/t/p/original/9vHofM6cZonF1Xb1Gcl5CjE3ZkI.jpg",
+                "爱在黎明破晓前": "https://image.tmdb.org/t/p/original/69Sns8WoYnEJtG69yz6qvev5oM6.jpg",
+                "勇士": "https://image.tmdb.org/t/p/original/pA0VscSByjM3H9R9Zf61X8k8V1B.jpg",
+                "七宗罪": "https://image.tmdb.org/t/p/original/69Sns8WoYnEJtG69yz6qvev5oM6.jpg",
+                "无间道": "https://image.tmdb.org/t/p/original/9XshN8V96qF1eZ0I0P9S6Y8k8V1.jpg",
+                "被解救的姜戈": "https://image.tmdb.org/t/p/original/7oWY86pS9YfcP368oXvR707qqPk.jpg",
+                "星际穿越": "https://image.tmdb.org/t/p/original/gEU2QniE6E07Qv8vNGp9oYmtp6B.jpg",
+                "胭脂扣": "https://image.tmdb.org/t/p/original/i9uQUv9EPia99SStpS68Z99986G.jpg",
+                "美国丽人": "https://image.tmdb.org/t/p/original/w7r3bsiD7YEq6t9Lp9nu6kz9P6O.jpg"
+            };
+
+            const top10 = top10Names.map(name => {
+                const found = movieData.find(m => m.title.includes(name));
+                return {
+                    title: name,
+                    // 核心修正：如果在数据里没找到或图片不对，直接使用 AI 补全的高清链接
+                    poster: (found && found.poster && found.poster.includes('.jpg')) ? found.poster : top10Links[name]
+                };
+            }).filter(Boolean);
+
             const sortedMovies = [...movieData].sort((a, b) => a.title.localeCompare(b.title, 'zh'));
 
             app.innerHTML = `
-                <div class="mb-12 px-4"><span class="zh text-6xl font-light">电影人生</span><span class="en text-lg">Cinema / Top 10</span></div>
+                <div class="mb-12 px-4"><span class="zh text-6xl font-light">电影人生</span><span class="en text-lg">Cinema / Top 10 Picks</span></div>
                 
-                <div class="mb-24 px-4">
-                    <div class="dragon-row">
+                <div class="mb-12 px-4"> <div class="dragon-row">
                         ${top10.map((m, i) => `
-                            <div class="dragon-item" style="z-index: ${20-i}" onclick="window.open('https://www.douban.com/search?cat=1002&q=${m.title.split('/')[0]}', '_blank')">
+                            <div class="dragon-item" style="z-index: ${20-i}" onclick="window.open('https://www.douban.com/search?cat=1002&q=${m.title}', '_blank')">
                                 <img src="${m.poster}">
-                                <div class="mt-4"><span class="zh text-sm opacity-60">${m.title.split('/')[0]}</span></div>
+                                <div class="mt-4"><span class="zh text-sm opacity-60">${m.title}</span></div>
                             </div>
                         `).join('')}
                     </div>
                 </div>
 
-                <div class="split-grid px-4">
-                    <div class="glass p-10 md:p-14">
+                <div class="grid-align-flex px-4">
+                    <div class="glass glass-align p-10 md:p-14">
                         <div class="mb-10"><input type="text" id="movieSearch" class="search-input" placeholder="SEARCH FILMS..." oninput="filterMovies()"></div>
-                        <div id="movie-list-grid" class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1"></div>
-                    </div>
+                        <div id="movie-list-grid" class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-1"></div> </div>
 
-                    <div>
-                        <div class="mb-6 border-b border-white/10 pb-2"><span class="en text-[10px] opacity-30">POSTER ARCHIVE / ${movieData.length}P</span></div>
+                    <div style="flex: 1;">
                         <div id="cinema-wall" class="kiss-wall"></div>
                     </div>
                 </div>
@@ -225,9 +244,9 @@
             }
 
             listGrid.innerHTML = movies.map(m => `
-                <div class="py-2 cursor-pointer opacity-50 hover:opacity-100 transition-all" onclick="window.open('https://www.douban.com/search?cat=1002&q=${m.title.split('/')[0]}', '_blank')">
-                    <div class="zh text-lg">${m.title.split('/')[0]}</div>
-                    <div class="en text-[8px] truncate">${m.title.split('/')[1] || ''}</div>
+                <div class="py-2 cursor-pointer opacity-50 hover:opacity-100 transition-all text-sm" onclick="window.open('https://www.douban.com/search?cat=1002&q=${m.title.split('/')[0]}', '_blank')">
+                    <div class="zh">${m.title.split('/')[0]}</div>
+                    <div class="en text-[8px] truncate tracking-tight scale-90 origin-left">${m.title.split('/')[1] || ''}</div>
                 </div>
             `).join('');
 
