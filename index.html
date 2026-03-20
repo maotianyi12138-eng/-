@@ -160,10 +160,23 @@
         }
 
         function filterTag(tag, el) {
-            document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
-            el.classList.add('active');
-            const filtered = tag === '' ? movieData : movieData.filter(m => (m.genres && m.genres.includes(tag)) || (m.title && m.title.includes(tag)));
-            displayMovies(filtered);
+    // 1. 切换按钮高亮
+    document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+
+    // 2. 如果是“全部”，直接显示
+    if (tag === '') {
+        displayMovies(movieData);
+        return;
+    }
+
+    // 3. 核心修正：将整条数据转为字符串进行模糊匹配，确保 100% 命中
+    const filtered = movieData.filter(m => {
+        const dataString = JSON.stringify(m); 
+        return dataString.includes(tag);
+    });
+
+    displayMovies(filtered);
         }
 
         function displayMovies(movies, initWall = false) {
