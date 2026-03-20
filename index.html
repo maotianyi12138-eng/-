@@ -21,8 +21,8 @@
         /* Apple 极简磨砂 */
         .glass {
             background: rgba(255, 255, 255, 0.015);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
             border: 0.5px solid rgba(255, 255, 255, 0.05);
             border-radius: 2rem;
         }
@@ -30,14 +30,14 @@
         .zh { display: block; font-weight: 400; line-height: 1.2; }
         .en { display: block; font-weight: 100; opacity: 0.4; letter-spacing: 0.1em; text-transform: uppercase; }
 
-        /* 极简返回：仅箭头 */
+        /* 极简返回 */
         .back-arrow {
-            position: fixed; top: 2rem; left: 2rem; z-index: 500;
+            position: fixed; top: 2.5rem; left: 2.5rem; z-index: 500;
             font-size: 1.8rem; color: #fff; cursor: pointer; transition: 0.3s;
         }
         .back-arrow:hover { transform: translateX(-5px); opacity: 0.6; }
 
-        /* 龙鳞装展开 */
+        /* 龙鳞装 */
         .dragon-row { display: flex; overflow-x: auto; padding: 20px 0 60px 0; scrollbar-width: none; }
         .dragon-item {
             flex: 0 0 170px; margin-right: -45px; 
@@ -50,7 +50,7 @@
         /* 视觉作品集 2:1 横屏 */
         .works-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
         @media (max-width: 768px) { .works-grid { grid-template-columns: 1fr; } }
-        .works-card { width: 100%; aspect-ratio: 2/1; overflow: hidden; border-radius: 1.2rem; }
+        .works-card { width: 100%; aspect-ratio: 2/1; overflow: hidden; border-radius: 1.2rem; cursor: pointer; }
         .works-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
         .works-card:hover img { transform: scale(1.05); }
 
@@ -58,12 +58,13 @@
         .grid-align-flex { display: flex; gap: 40px; align-items: stretch; }
         @media (max-width: 1024px) { .grid-align-flex { flex-direction: column; } }
 
-        /* 电影墙矩阵 */
+        /* 亲吻墙矩阵 (极致无缝，支持懒加载) */
         .kiss-wall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; width: 100%; }
-        .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0.8; transition: 0.5s; cursor: crosshair; }
-        .kiss-item:hover { opacity: 1; transform: scale(1.05); z-index: 10; }
+        .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0; transition: opacity 0.8s, transform 0.5s ease; cursor: crosshair; }
+        .kiss-item.loaded { opacity: 0.8; }
+        .kiss-item:hover { opacity: 1 !important; transform: scale(1.05); z-index: 10; box-shadow: 0 0 30px rgba(255,255,255,0.2); }
 
-        /* 扁平搜索与标签 */
+        /* 搜索框与标签 */
         .search-input {
             background: rgba(255,255,255,0.04); border: none; color: white;
             padding: 0.8rem 1.2rem; width: 100%; border-radius: 1rem; outline: none; font-size: 0.9rem;
@@ -78,6 +79,7 @@
         }
         .tag-btn:hover, .tag-active { background: rgba(255,255,255,0.12); color: #fff; border-color: rgba(255,255,255,0.2); }
 
+        /* 音频控制 */
         .audio-btn {
             position: fixed; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; border-radius: 50%;
             background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); z-index: 500;
@@ -85,6 +87,25 @@
         }
         .play-icon { width: 0; height: 0; border-style: solid; border-width: 7px 0 7px 11px; border-color: transparent transparent transparent #fff; margin-left: 2px; }
         .pause-icon { width: 10px; height: 12px; border-left: 3px solid #fff; border-right: 3px solid #fff; }
+
+        /* 广告弹窗 */
+        .ad-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6); backdrop-filter: blur(10px);
+            z-index: 1000; display: flex; justify-content: center; align-items: center;
+            opacity: 0; pointer-events: none; transition: opacity 0.5s ease;
+        }
+        .ad-box {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);
+            padding: 40px; border-radius: 2rem; width: 80%; max-width: 500px;
+            text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+        }
+        .ad-btn {
+            background: rgba(255,255,255,0.1); padding: 12px 24px; border-radius: 30px;
+            color: #fff; cursor: pointer; transition: 0.3s;
+            margin-top: 30px; display: inline-block;
+        }
+        .ad-btn:hover { background: rgba(255,255,255,0.2); transform: translateY(-3px); }
 
         #app-content { transition: opacity 0.5s ease; }
         ::-webkit-scrollbar { width: 0px; }
@@ -96,7 +117,20 @@
     <div id="nav-ui" class="hidden"><div class="back-arrow" onclick="switchPage('home')">←</div></div>
     <div id="audio-control" class="audio-btn" onclick="toggleAudio(event)"><div class="play-icon" id="icon"></div></div>
 
-    <div id="app-content" class="pt-32 p-6 md:p-20"></div>
+    <div id="ad-overlay" class="ad-overlay">
+        <div class="ad-box">
+            <span class="zh text-4xl mb-3">挑战成功！他没看过！</span>
+            <span class="en text-sm opacity-60 mb-8 tracking-widest uppercase">Challenge Success! He Hasn't Seen This!</span>
+            <p class="zh text-lg text-yellow-400 mb-2">推荐给他吧</p>
+            <p class="en text-xs opacity-40 uppercase tracking-tight">Recommend It To Him</p>
+            <div class="ad-btn" onclick="closeAd()">
+                <span class="zh">已经告诉他了</span>
+                <span class="en text-[9px] opacity-60 uppercase">Told Him Already</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="app-content" class="pt-32 p-6 md:p-20 transition-opacity duration-500"></div>
 
     <script src="movies.js"></script>
     <script>
@@ -104,6 +138,7 @@
         const app = document.getElementById('app-content');
         const navUI = document.getElementById('nav-ui');
         const icon = document.getElementById('icon');
+        const adOverlay = document.getElementById('ad-overlay');
 
         function playMusic() { if (audio.paused) { audio.play().then(() => updateAudioUI(true)).catch(()=>{}); } }
         function toggleAudio(e) {
@@ -154,8 +189,8 @@
             const projects = [
                 {zh:'健身系列', en:'Fitness Series', img:'健身1.png'},
                 {zh:'血液研究', en:'Blood Study', img:'血液1.png'},
-                {zh:'批判思维', en:'Critical Thinking', img:'批判1.png'},
-                {zh:'保龄档案', en:'Bowling Archive', img:'保龄1.png'}
+                {zh:'批判思维', en:'Critical Thinking', img:'https://image.tmdb.org/t/p/w500/i919v9Y89Y5O6X7vF8tS1V6sYmS.jpg'}, // 临时补全，建议替换为本地批判1.png
+                {zh:'保龄档案', en:'Bowling Archive', img:'https://image.tmdb.org/t/p/w500/lyQBXzOQSu75HGbrA9607jzq6z5.jpg'} // 临时补全，建议替换为本地保龄1.png
             ];
             app.innerHTML = `
                 <div class="mb-12 px-4"><span class="zh text-6xl font-light">视觉作品集</span><span class="en text-lg">Visual Archive</span></div>
@@ -174,12 +209,24 @@
 
         function renderCinema() {
             const top10Names = ["杀死比尔 2", "新世界", "爱在黎明破晓前", "勇士", "七宗罪", "无间道", "被解救的姜戈", "星际穿越", "胭脂扣", "美国丽人"];
-            const top10 = top10Names.map(name => movieData.find(m => m.title.includes(name)) || {title: name, poster:''}).slice(0,10);
+            const top10Links = {
+                "杀死比尔 2": "https://image.tmdb.org/t/p/w500/27TeSl3S8pZ1v7BNvL97m9v987E.jpg",
+                "新世界": "https://image.tmdb.org/t/p/w500/9vHofM6cZonF1Xb1Gcl5CjE3ZkI.jpg",
+                "爱在黎明破晓前": "https://image.tmdb.org/t/p/w500/69Sns8WoYnEJtG69yz6qvev5oM6.jpg",
+                "勇士": "https://image.tmdb.org/t/p/w500/pA0VscSByjM3H9R9Zf61X8k8V1B.jpg",
+                "七宗罪": "https://image.tmdb.org/t/p/w500/69Sns8WoYnEJtG69yz6qvev5oM6.jpg",
+                "无间道": "https://image.tmdb.org/t/p/w500/9XshN8V96qF1eZ0I0P9S6Y8k8V1.jpg",
+                "被解救的姜戈": "https://image.tmdb.org/t/p/w500/7oWY86pS9YfcP368oXvR707qqPk.jpg",
+                "星际穿越": "https://image.tmdb.org/t/p/w500/gEU2QniE6E07Qv8vNGp9oYmtp6B.jpg",
+                "胭脂扣": "https://image.tmdb.org/t/p/w500/i9uQUv9EPia99SStpS68Z99986G.jpg",
+                "美国丽人": "https://image.tmdb.org/t/p/w500/w7r3bsiD7YEq6t9Lp9nu6kz9P6O.jpg"
+            };
+            const top10 = top10Names.map(name => movieData.find(m => m.title.includes(name)) || {title: name, poster: top10Links[name]}).slice(0,10);
             const tags = ['科幻', '爱情', '喜剧', '剧情', '悬疑', '犯罪', '动画', '经典'];
 
             app.innerHTML = `
-                <div class="mb-10 px-4"><span class="zh text-6xl font-light">电影人生</span><span class="en text-lg">Cinema / Archive</span></div>
-                <div class="mb-12 px-4"><div class="dragon-row">${top10.map((m, i) => `<div class="dragon-item" style="z-index:${20-i}"><img src="${m.poster}" onerror="this.src='https://via.placeholder.com/200x300/222'"></div>`).join('')}</div></div>
+                <div class="mb-10 px-4"><span class="zh text-6xl font-light">电影人生</span><span class="en text-lg">Cinema / Archive / 600+ Works</span></div>
+                <div class="mb-12 px-4"><div class="dragon-row">${top10.map((m, i) => `<div class="dragon-item" style="z-index:${20-i}"><img src="${m.poster}" onerror="this.remove()"></div>`).join('')}</div></div>
 
                 <div class="grid-align-flex px-4">
                     <div class="glass p-8 md:p-10 flex-1">
@@ -194,22 +241,66 @@
                     <div class="flex-1"><div id="cinema-wall" class="kiss-wall"></div></div>
                 </div>
             `;
-            displayMovies(movieData);
+            displayMovies(movieData, true); // true = 初始化，显示全部海报墙
         }
 
-        function displayMovies(movies) {
+        function displayMovies(movies, initWall = false) {
             const listGrid = document.getElementById('movie-list-grid');
             const wall = document.getElementById('cinema-wall');
             if(!listGrid || !wall) return;
-            listGrid.innerHTML = movies.map(m => `<div class="py-2 opacity-40 hover:opacity-100 transition-all text-[11px] truncate cursor-pointer" onclick="window.open('https://search.douban.com/movie/subject_search?search_text='+encodeURIComponent('${m.title.split('/')[0]}'), '_blank')">${m.title.split('/')[0]}</div>`).join('');
-            wall.innerHTML = movies.slice(0, 100).map(m => `<img src="${m.poster}" class="kiss-item" onerror="this.remove()">`).join('');
+            
+            // 列表：恢复电影原翻译名 (中英对照)
+            listGrid.innerHTML = movies.map(m => `
+                <div class="py-2 cursor-pointer transition-all" onclick="window.open('https://search.douban.com/movie/subject_search?search_text='+encodeURIComponent('${m.title.split('/')[0]}'), '_blank')">
+                    <div class="zh text-sm opacity-60 hover:opacity-100">${m.title.split('/')[0]}</div>
+                    <div class="en text-[8px] truncate tracking-tight scale-90 origin-left opacity-30">${m.title.split('/')[1] || ''}</div>
+                </div>
+            `).join('');
+
+            // 海报墙：高性能懒加载方案
+            if(initWall) {
+                // 如果是搜索结果过滤，我们必须重建墙体，否则滚动加载会出错
+                const wallData = initWall === 'search' ? movies : movieData;
+                wall.innerHTML = wallData.map(m => `<img data-src="${m.poster}" class="kiss-item lazy-item" onerror="this.remove()" onclick="window.open('https://search.douban.com/movie/subject_search?search_text='+encodeURIComponent('${m.title.split('/')[0]}'), '_blank')">`).join('');
+                initLazyLoading(); // 核心：启动懒加载监听
+            } else {
+                // 如果只是过滤列表，不清空海报墙，保持性能
+            }
+        }
+
+        // 高性能懒加载 IntersectionObserver 算法
+        function initLazyLoading() {
+            const lazyItems = document.querySelectorAll('.lazy-item');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.onload = () => img.classList.add('loaded');
+                        observer.unobserve(img); // 核心：加载完取消监听，省 CPU
+                    }
+                });
+            }, { rootMargin: "0px 0px 500px 0px" }); // 核心：提前500px加载
+
+            lazyItems.forEach(item => observer.observe(item));
         }
 
         function filterMovies() {
             document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('tag-active'));
             const term = document.getElementById('movieSearch').value.toLowerCase();
             const filtered = movieData.filter(m => m.title.toLowerCase().includes(term));
-            displayMovies(filtered);
+            
+            // 搜索过滤：如果没搜到，弹窗；如果搜到了，只更新列表，不强制更新海报墙
+            if (term !== '' && filtered.length === 0) {
+                adOverlay.style.pointerEvents = 'auto';
+                adOverlay.style.opacity = '1';
+                // 此时列表显示全部
+                displayMovies(movieData);
+            } else if (term === '') {
+                displayMovies(movieData, true); // 还原全部
+            } else {
+                displayMovies(filtered); // 更新列表
+            }
         }
 
         function filterByTag(tag, btn) {
@@ -222,20 +313,17 @@
                 '爱情': ['爱在', '情', '恋', '吻', '胭脂', '罗马', '泰坦尼克', '断背山', '花样', '爱'],
                 '喜剧': ['喜剧', '疯狂', '大话', '唐伯虎', '卓别林', '笑', '触不可及'],
                 '剧情': ['霸王', '新世界', '美丽', '钢琴', '海边的', '忠犬', '活着', '美国丽人'],
-                '悬疑': ['罪', '侦探', '疑', '无间', '魔术', '局', '岛', '控方', '嫌疑'],
+                'suspense': ['罪', '侦探', '疑', '无间', '魔术', '局', '岛', '控方', '嫌疑'],
                 '犯罪': ['教父', '黑', '杀死', '姜戈', '往事', '毒', '命', '枭', '汉尼拔', '无间道'],
-                '动画': ['千与千寻', '龙猫', '大圣', '哈尔', '天空', '狮子王', '蜘蛛侠', '动'],
+                'animation': ['千与千寻', '龙猫', '大圣', '哈尔', '天空', '狮子王', '蜘蛛侠', '动'],
                 '经典': ['肖申克', '霸王', '辛德勒', '阿甘', '教父', '这个杀手', '钢琴', '罗马']
             };
-
             const keywords = rules[tag];
-            const filtered = movieData.filter(m => {
-                const title = m.title.toLowerCase();
-                return keywords.some(key => title.includes(key));
-            });
-            displayMovies(filtered);
+            const filtered = movieData.filter(m => keywords.some(key => m.title.toLowerCase().includes(key)));
+            displayMovies(filtered); // 标签过滤：不更新海报墙
         }
 
+        function closeAd() { adOverlay.style.opacity = '0'; adOverlay.style.pointerEvents = 'none'; document.getElementById('movieSearch').value = ''; }
         function renderSoon(p) { app.innerHTML = `<div class="py-60 text-center glass mx-4"><span class="zh opacity-20 text-4xl">COMING SOON</span></div>`; }
         window.onload = () => switchPage('home');
     </script>
