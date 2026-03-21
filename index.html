@@ -36,22 +36,11 @@
         .v-zh { writing-mode: vertical-rl; font-size: 11px; margin-bottom: 25px; letter-spacing: 0.5em; height: 150px; text-align: right; color: rgba(255,255,255,0.9); font-weight: 500; }
         .dragon-item img { width: 100%; aspect-ratio: 2/3; object-fit: cover; border: 0.5px solid rgba(255,255,255,0.2); border-radius: 4px; box-shadow: 0 15px 40px rgba(0,0,0,0.8); }
 
-        /* 视觉作品集：竖版龙鳞 */
-        .work-dragon-v { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 40px 0; }
-        .stack-img-v { 
-            width: 100%; aspect-ratio: 2/1; object-fit: cover; border-radius: 4px; 
-            border: 0.5px solid rgba(255,255,255,0.1); margin-top: -10vh; 
-            transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1); 
-            box-shadow: 0 -10px 30px rgba(0,0,0,0.6); 
-        }
-        .stack-img-v:first-child { margin-top: 0; }
-        .work-card:hover .stack-img-v { margin-top: 10px; transform: scale(1.02); }
-
-        /* 亲吻墙 */
-        .kiss-wall { display: grid; grid-template-columns: repeat(8, 1fr); gap: 1px; width: 100%; height: 750px; overflow-y: auto; }
-        .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0; transition: opacity 1s; background: #111; }
-        .kiss-item.loaded { opacity: 0.35; }
-        .kiss-item:hover { opacity: 1 !important; transform: scale(1.15); z-index: 50; }
+        /* 亲吻墙 (海报小) */
+        .kiss-wall { display: grid; grid-template-columns: repeat(10, 1fr); gap: 1px; width: 100%; height: 750px; overflow-y: auto; }
+        .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0; transition: opacity 0.8s, transform 0.3s; background: #111; cursor: pointer; }
+        .kiss-item.loaded { opacity: 0.3; }
+        .kiss-item:hover { opacity: 1 !important; transform: scale(1.2); z-index: 50; box-shadow: 0 0 30px rgba(255,255,255,0.2); }
 
         /* 苹果风搜索框 */
         .search-input { 
@@ -61,38 +50,49 @@
         }
         .search-input::placeholder { color: rgba(255,255,255,0.2); }
 
-        /* --- 新：豆瓣风格标签系统 --- */
-        .filter-section { margin-bottom: 2rem; }
+        /* 标签与评分控制 */
+        .filter-section { margin-bottom: 1.5rem; }
         .filter-title { font-size: 10px; opacity: 0.2; letter-spacing: 2px; margin-bottom: 12px; text-transform: uppercase; font-weight: bold; }
-        .tag-group { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag-group { display: flex; flex-wrap: wrap; gap: 6px; }
         .tag-btn { 
-            padding: 6px 12px; font-size: 13px; border-radius: 6px; 
+            padding: 5px 10px; font-size: 11px; border-radius: 4px; 
             background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.08);
-            color: rgba(255,255,255,0.6); cursor: pointer; transition: all 0.2s;
-            display: flex; align-items: center; gap: 6px;
+            color: rgba(255,255,255,0.5); cursor: pointer; transition: 0.2s;
+            display: flex; align-items: center; gap: 4px;
         }
-        .tag-btn .count { opacity: 0.3; font-size: 11px; font-weight: 300; }
-        .tag-btn:hover { background: rgba(255,255,255,0.1); color: #fff; }
-        .tag-btn.active { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color: #fff; }
-        .tag-btn.active .count { opacity: 0.6; }
+        .tag-btn .count { opacity: 0.3; font-size: 9px; }
+        .tag-btn:hover, .tag-btn.active { background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.3); }
 
-        /* 音乐按钮 */
-        .audio-btn { position: fixed; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); z-index: 1000; display: flex; justify-content: center; align-items: center; cursor: pointer; border: 0.5px solid rgba(255,255,255,0.1); }
-        .play-icon { width: 0; height: 0; border-style: solid; border-width: 7px 0 7px 11px; border-color: transparent transparent transparent #fff; margin-left: 2px; }
-        .pause-icon { width: 10px; height: 12px; border-left: 3px solid #fff; border-right: 3px solid #fff; }
+        /* 随机按钮 */
+        .random-btn { 
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
+            border: 0.5px solid rgba(255,255,255,0.2); padding: 12px; border-radius: 1rem;
+            cursor: pointer; transition: 0.3s; text-align: center; margin-top: 10px;
+        }
+        .random-btn:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
 
         .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .movie-title-row:hover { color: #fff; opacity: 1; }
     </style>
 </head>
 <body onclick="playMusic()">
     <audio id="main-audio" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
     <div id="nav-ui" class="hidden"><div class="back-arrow" onclick="switchPage('home')">←</div></div>
-    <div id="audio-control" class="audio-btn" onclick="toggleAudio(event)"><div class="play-icon" id="icon"></div></div>
 
     <div id="ad-overlay" class="fixed inset-0 bg-black/90 backdrop-blur-3xl z-[2000] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500">
         <div class="glass p-20 text-center">
-            <span class="zh text-4xl mb-4 font-bold">他没看过！</span>
-            <div class="mt-10 px-10 py-4 bg-white text-black rounded-full cursor-pointer" onclick="closeAd()">已经告诉他了 I'VE TOLD HIM ALREADY</div>
+            <span class="zh text-4xl mb-4 font-bold">他真没看过！</span>
+            <p class="opacity-40 mb-10">你成功发现了一块毛天艺的电影荒原。</p>
+            <div class="px-10 py-4 bg-white text-black rounded-full cursor-pointer font-bold" onclick="closeAd()">已经推荐给他了 I'VE TOLD HIM</div>
+        </div>
+    </div>
+
+    <div id="random-overlay" class="fixed inset-0 bg-black/80 backdrop-blur-xl z-[2000] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500">
+        <div id="random-card" class="scale-90 transition-transform duration-500 text-center">
+            <img id="random-poster" src="" class="w-[300px] rounded-xl shadow-2xl mb-6 border border-white/20">
+            <h2 id="random-title" class="text-2xl font-bold mb-2"></h2>
+            <div id="random-meta" class="opacity-50 text-sm"></div>
+            <div class="mt-8 text-white/30 text-xs cursor-pointer" onclick="closeRandom()">点击空白处关闭</div>
         </div>
     </div>
 
@@ -100,52 +100,37 @@
 
     <script src="movies.js"></script>
     <script>
-        const audio = document.getElementById('main-audio');
         const app = document.getElementById('app-content');
-        const icon = document.getElementById('icon');
+        const audio = document.getElementById('main-audio');
         let searchTimer;
+        window.currentFilters = { type: '全部', tag: '全部', rating: 0 };
 
-        // 全局筛选器状态
-        window.currentFilters = { type: '全部', tag: '全部' };
-
-        function playMusic() { if (audio.paused) audio.play().then(() => updateAudioUI(true)).catch(()=>{}); }
-        function toggleAudio(e) { e.stopPropagation(); audio.paused ? audio.play() : audio.pause(); updateAudioUI(!audio.paused); }
-        function updateAudioUI(isPlaying) { icon.className = isPlaying ? 'pause-icon' : 'play-icon'; }
-
+        function playMusic() { if (audio.paused) audio.play(); }
         function switchPage(page) {
             app.style.opacity = '0';
             setTimeout(() => {
                 document.getElementById('nav-ui').classList.toggle('hidden', page === 'home');
                 if(page === 'home') renderHome();
                 else if(page === 'cinema') renderCinema();
-                else if(page === 'works') renderWorks();
-                app.style.opacity = '1'; window.scrollTo(0,0);
+                app.style.opacity = '1';
             }, 400);
         }
 
         function renderHome() {
-            const menus = [{id:'works', zh:'视觉作品集', en:'Visual Works'}, {id:'cinema', zh:'电影人生', en:'Cinema Life'}, {id:'music', zh:'音乐人生', en:'Music Life'}, {id:'read', zh:'阅读人生', en:'Reading Life'}];
             app.innerHTML = `
-                <div class="h-[45vh] flex flex-col justify-end pb-12 px-4"><h1 class="tracking-tighter"><span class="zh text-[16vw] md:text-[9vw] font-light">毛天艺</span></h1></div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
-                    ${menus.map(m => `<div onclick="switchPage('${m.id}')" class="glass p-10 cursor-pointer group hover:bg-white/5 transition-all"><span class="zh text-2xl mb-2">${m.zh}</span><span class="en text-[10px]">${m.en}</span></div>`).join('')}
+                <div class="h-[45vh] flex flex-col justify-end pb-12 px-4"><h1><span class="zh text-[16vw] md:text-[9vw] font-light">毛天艺</span></h1></div>
+                <div class="grid grid-cols-2 md:grid-cols-2 gap-6 px-4">
+                    <div onclick="switchPage('cinema')" class="glass p-10 cursor-pointer group hover:bg-white/5"><span class="zh text-2xl mb-2">电影人生</span><span class="en text-[10px]">Cinema Archive</span></div>
+                    <div class="glass p-10 opacity-20"><span class="zh text-2xl mb-2">即将开放</span><span class="en text-[10px]">Coming Soon</span></div>
                 </div>
             `;
         }
 
         function renderCinema() {
-            // 自动化标签提取（根据你的图片需求精准匹配）
-            const typeOpts = ["全部", "电影", "电视"];
-            // 下面这些标签会自动统计 movieData 里的数据
-            const tagOpts = ["全部", "美国", "剧情", "动作", "喜剧", "冒险", "犯罪", "科幻", "英国", "惊悚", "中国大陆", "爱情", "90年代", "奇幻", "动画", "悬疑", "中国香港", "法国", "日本", "韩国"];
-
-            const getCount = (val, isType) => {
-                if(val === '全部') return movieData.length;
-                return movieData.filter(m => {
-                    const dataStr = JSON.stringify(m);
-                    return isType ? (m.type && m.type.includes(val)) : dataStr.includes(val);
-                }).length;
-            };
+            // 自动化提取全量标签并按数量排序
+            const allTags = {};
+            movieData.forEach(m => m.genres.forEach(g => allTags[g] = (allTags[g] || 0) + 1));
+            const topTags = Object.entries(allTags).sort((a,b) => b[1] - a[1]).slice(0, 20).map(i => i[0]);
 
             const top10 = [
                 {name:'新世界', db:'10756762'}, {name:'杀死比尔 2', db:'1291585'}, {name:'无间道', db:'1307914'}, 
@@ -155,118 +140,110 @@
 
             app.innerHTML = `
                 <div class="mb-10 px-4"><span class="zh text-6xl font-light tracking-tighter">电影人生</span></div>
-                <div class="dragon-container"><div class="dragon-row">${top10.map((m, i) => `<div class="dragon-item" style="z-index:${20-i}" onclick="window.open('https://movie.douban.com/subject/${m.db}/')"><div class="v-zh">${m.name}</div><img src="${m.name}.png"></div>`).join('')}</div></div>
+                <div class="dragon-container"><div class="dragon-row">${top10.map((m, i) => `<div class="dragon-item" style="z-index:${20-i}" onclick="window.open('https://movie.douban.com/subject/${m.db}/')"><div class="v-zh">${m.name}</div><img src="${m.name}.png" onerror="this.src='https://via.placeholder.com/200x300/111/fff?text=${m.name}'"></div>`).join('')}</div></div>
                 
                 <div class="flex flex-col lg:flex-row gap-0 px-4">
-                    <div class="glass p-8 md:p-12 flex-[1.4] rounded-r-none border-r-0">
-                        <input type="text" id="movieSearch" class="search-input mb-12" placeholder="搜索一部你觉得毛天艺没有看过的电影" oninput="debounceSearch()">
+                    <div class="glass p-10 flex-[1] rounded-r-none border-r-0">
+                        <input type="text" id="movieSearch" class="search-input mb-8" placeholder="搜一部你认为毛天艺没看过的电影" oninput="debounceSearch()">
                         
-                        <div class="filter-section">
-                            <div class="filter-title">形式</div>
-                            <div class="tag-group">
-                                ${typeOpts.map(t => `
-                                    <button class="tag-btn ${t==='全部'?'active':''}" onclick="applyDoubanFilter('type', '${t}', this)">
-                                        ${t} <span class="count">${getCount(t, true)}</span>
-                                    </button>`).join('')}
+                        <div class="grid grid-cols-2 gap-8 mb-8">
+                            <div class="filter-section">
+                                <div class="filter-title">评分筛选 (★及以上)</div>
+                                <input type="range" min="0" max="5" value="0" class="w-full accent-white opacity-50" oninput="applyFilter('rating', this.value)">
                             </div>
+                            <div class="random-btn" onclick="pickRandom()">🎲 帮我选一部</div>
                         </div>
 
                         <div class="filter-section">
-                            <div class="filter-title">标签</div>
+                            <div class="filter-title">热门流派 / 地区</div>
                             <div class="tag-group">
-                                ${tagOpts.map(t => `
-                                    <button class="tag-btn ${t==='全部'?'active':''}" onclick="applyDoubanFilter('tag', '${t}', this)">
-                                        ${t} <span class="count">${getCount(t, false)}</span>
-                                    </button>`).join('')}
+                                <button class="tag-btn active" onclick="applyFilter('tag', '全部', this)">全部</button>
+                                ${topTags.map(t => `<button class="tag-btn" onclick="applyFilter('tag', '${t}', this)">${t} <span class="count">${allTags[t]}</span></button>`).join('')}
                             </div>
                         </div>
 
-                        <div id="movie-list-grid" class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6 max-h-[500px] overflow-y-auto pr-2 scrollbar-hide border-t border-white/5 pt-8"></div>
+                        <div id="movie-list-grid" class="grid grid-cols-2 gap-x-4 gap-y-3 max-h-[400px] overflow-y-auto pr-2 scrollbar-hide border-t border-white/5 pt-6"></div>
                     </div>
+
                     <div class="flex-1 h-fit"><div id="cinema-wall" class="kiss-wall glass rounded-l-none scrollbar-hide"></div></div>
                 </div>
             `;
-            displayMovies(movieData, true);
+            updateDisplay(movieData, true);
         }
 
-        function applyDoubanFilter(key, val, el) {
-            // UI 更新
-            el.parentElement.querySelectorAll('.tag-btn').forEach(btn => btn.classList.remove('active'));
-            el.classList.add('active');
-
-            // 逻辑更新
+        function applyFilter(key, val, el) {
+            if(el) {
+                el.parentElement.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+                el.classList.add('active');
+            }
             window.currentFilters[key] = val;
-            
             const filtered = movieData.filter(m => {
-                const typeMatch = window.currentFilters.type === '全部' || (m.type && m.type.includes(window.currentFilters.type));
-                const tagMatch = window.currentFilters.tag === '全部' || JSON.stringify(m).includes(window.currentFilters.tag);
-                return typeMatch && tagMatch;
+                const tagMatch = window.currentFilters.tag === '全部' || m.genres.includes(window.currentFilters.tag);
+                const rateMatch = m.rating >= window.currentFilters.rating;
+                return tagMatch && rateMatch;
             });
-
-            displayMovies(filtered);
+            updateDisplay(filtered);
         }
 
-        function displayMovies(movies, initWall = false) {
+        function updateDisplay(movies, initWall = false) {
             const listGrid = document.getElementById('movie-list-grid');
             const wall = document.getElementById('cinema-wall');
-            if(!listGrid || !wall) return;
+            if(!listGrid) return;
             
             listGrid.innerHTML = movies.map(m => `
-                <div class="cursor-pointer group" onclick="window.open('https://search.douban.com/movie/subject_search?search_text='+encodeURIComponent('${m.title.split('/')[0]}'))">
-                    <div class="zh text-[12px] opacity-40 group-hover:opacity-100 truncate transition-all">${m.title.split('/')[0]}</div>
-                    <div class="en text-[7px] opacity-10 truncate">${m.title.split('/')[1] || ''}</div>
+                <div class="movie-title-row cursor-pointer opacity-30 transition-all text-sm truncate" onclick="window.open('https://search.douban.com/movie/subject_search?search_text='+encodeURIComponent('${m.title}'))">
+                    ${m.title.split('/')[0]} <span class="text-[10px] ml-1 opacity-50">${'★'.repeat(m.rating)}</span>
                 </div>`).join('');
 
-            if(initWall) {
-                wall.innerHTML = movieData.map(m => `<img data-src="${m.poster}" class="kiss-item lazy-item" onerror="this.remove()">`).join('');
-                initLazyLoading();
+            if(initWall && wall) {
+                wall.innerHTML = movieData.map(m => `<img data-src="${m.poster}" class="kiss-item lazy-item" onclick="showMovieDetail('${m.title}')">`).join('');
+                initLazy();
             }
         }
 
         function debounceSearch() {
             clearTimeout(searchTimer);
             const term = document.getElementById('movieSearch').value.trim().toLowerCase();
-            const filtered = movieData.filter(m => m.title.toLowerCase().includes(term));
-            displayMovies(term === '' ? movieData : filtered);
-            searchTimer = setTimeout(() => { 
-                if (term !== '' && filtered.length === 0) { 
-                    document.getElementById('ad-overlay').style.opacity = '1'; 
-                    document.getElementById('ad-overlay').style.pointerEvents = 'auto'; 
-                } 
-            }, 1200);
+            searchTimer = setTimeout(() => {
+                const filtered = movieData.filter(m => m.title.toLowerCase().includes(term));
+                updateDisplay(term === '' ? movieData : filtered);
+                if(term !== '' && filtered.length === 0) {
+                    document.getElementById('ad-overlay').style.opacity = '1';
+                    document.getElementById('ad-overlay').style.pointerEvents = 'auto';
+                }
+            }, 800);
         }
 
-        function renderWorks() {
-            const projects = [
-                {zh:'1.离不了', en:'UNSEPARABLE', prefix:'批判', count:4},
-                {zh:'2.新保龄运动', en:'NEW BOWLING MOVEMENT', prefix:'保龄', count:6},
-                {zh:'3.血液涅槃', en:'BLOOD NIRVANA', prefix:'血液', count:4},
-                {zh:'4.健身工厂', en:'FITNESS FACTORY', prefix:'健身', count:5}
-            ];
-            app.innerHTML = `
-                <div class="mb-12 px-4"><span class="zh text-6xl font-light tracking-tighter">视觉作品集</span></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 px-4">
-                    ${projects.map(p => `
-                        <div class="bg-black p-8 work-card overflow-hidden rounded-2xl border border-white/10 transition-all duration-500">
-                            <div class="mb-6 flex justify-between items-end border-b border-white/10 pb-4">
-                                <span class="zh text-2xl font-light">${p.zh}</span>
-                                <span class="en text-[10px] opacity-30">${p.en}</span>
-                            </div>
-                            <div class="work-dragon-v">
-                                ${Array.from({length: p.count}).map((_, i) => `<img src="${p.prefix}${i+1}.png" class="stack-img-v" style="z-index:${20-i}">`).join('')}
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
+        function pickRandom() {
+            const m = movieData[Math.floor(Math.random() * movieData.length)];
+            showMovieDetail(m.title);
         }
 
-        function initLazyLoading() {
-            const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) { e.target.src = e.target.dataset.src; e.target.onload = () => e.target.classList.add('loaded'); obs.unobserve(e.target); } }); }, { rootMargin: "0px 0px 1000px 0px" });
+        function showMovieDetail(title) {
+            const m = movieData.find(i => i.title === title);
+            document.getElementById('random-poster').src = m.poster;
+            document.getElementById('random-title').innerText = m.title.split('/')[0];
+            document.getElementById('random-meta').innerText = `${m.type} · ${m.genres.join(' ')} · ${'★'.repeat(m.rating)}`;
+            const ov = document.getElementById('random-overlay');
+            ov.style.opacity = '1'; ov.style.pointerEvents = 'auto';
+            document.getElementById('random-card').style.transform = 'scale(1)';
+        }
+
+        function closeAd() { document.getElementById('ad-overlay').style.opacity = '0'; document.getElementById('ad-overlay').style.pointerEvents = 'none'; }
+        function closeRandom() { 
+            const ov = document.getElementById('random-overlay');
+            ov.style.opacity = '0'; ov.style.pointerEvents = 'none'; 
+            document.getElementById('random-card').style.transform = 'scale(0.9)';
+        }
+        document.getElementById('random-overlay').onclick = closeRandom;
+
+        function initLazy() {
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(e => { if(e.isIntersecting) { e.target.src = e.target.dataset.src; e.target.onload = () => e.target.classList.add('loaded'); obs.unobserve(e.target); }});
+            }, { rootMargin: "1000px" });
             document.querySelectorAll('.lazy-item').forEach(img => obs.observe(img));
         }
 
-        function closeAd() { document.getElementById('ad-overlay').style.opacity = '0'; document.getElementById('ad-overlay').style.pointerEvents = 'none'; displayMovies(movieData); }
         window.onload = () => switchPage('home');
     </script>
 </body>
