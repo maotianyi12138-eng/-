@@ -26,50 +26,48 @@
         .back-arrow { position: fixed; top: 2.5rem; left: 2.5rem; z-index: 500; font-size: 1.8rem; color: #fff; cursor: pointer; transition: 0.3s; }
         .back-arrow:hover { transform: translateX(-5px); opacity: 0.6; }
 
-        /* 音乐按钮 */
-        .audio-btn { position: fixed; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); z-index: 1000; display: flex; justify-content: center; align-items: center; cursor: pointer; border: 0.5px solid rgba(255,255,255,0.1); }
+        /* 音乐控制 */
+        .audio-btn { position: fixed; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); z-index: 5000; display: flex; justify-content: center; align-items: center; cursor: pointer; border: 0.5px solid rgba(255,255,255,0.1); }
         .play-icon { width: 0; height: 0; border-style: solid; border-width: 7px 0 7px 11px; border-color: transparent transparent transparent #fff; margin-left: 2px; }
         .pause-icon { width: 10px; height: 12px; border-left: 3px solid #fff; border-right: 3px solid #fff; }
 
         /* 龙鳞布局 */
         .dragon-container { width: 100vw; overflow: hidden; margin-left: -1.5rem; }
-        .dragon-row { display: flex; width: 100%; padding: 40px 5% 80px; justify-content: space-between; align-items: flex-end; }
+        .dragon-row { display: flex; width: 100%; padding: 40px 5% 40px; justify-content: space-between; align-items: flex-end; }
         .dragon-item { flex: 1; margin-right: -4.5vw; max-width: 170px; transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer; position: relative; display: flex; flex-direction: column; align-items: center; }
         .dragon-item:hover { margin-right: 2.5vw; transform: translateY(-20px) scale(1.05); z-index: 100 !important; }
         .v-zh { writing-mode: vertical-rl; font-size: 11px; margin-bottom: 25px; letter-spacing: 0.5em; height: 150px; text-align: right; color: rgba(255,255,255,0.9); font-weight: 500; }
         .dragon-item img { width: 100%; aspect-ratio: 2/3; object-fit: cover; border: 0.5px solid rgba(255,255,255,0.2); border-radius: 4px; box-shadow: 0 15px 40px rgba(0,0,0,0.8); }
 
-        /* 亲吻墙 */
-        .kiss-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); gap: 1px; width: 100%; height: 850px; overflow-y: auto; }
+        /* 中间插入板块：图谱与地图 */
+        .mid-stats-section { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 0 1rem; margin-bottom: 2rem; height: 280px; }
+        .mid-box { background: rgba(255,255,255,0.02); border: 0.5px solid rgba(255,255,255,0.05); border-radius: 1.5rem; padding: 1.5rem; position: relative; overflow: hidden; }
+        #graph-canvas { width: 100%; height: 100%; cursor: grab; }
+        .land { fill: #222; stroke: #000; stroke-width: 0.4; transition: 0.3s; }
+        .land:hover { fill: #fff !important; cursor: crosshair; }
+        .map-tooltip { position: fixed; background: #fff; color: #000; padding: 4px 8px; border-radius: 4px; font-size: 10px; pointer-events: none; z-index: 9999; display: none; font-weight: bold; }
+
+        /* 海报墙 */
+        .kiss-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(65px, 1fr)); gap: 1px; width: 100%; height: 750px; overflow-y: auto; }
         .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0; transition: 0.5s; background: #111; }
         .kiss-item.loaded { opacity: 0.3; }
-        .kiss-item:hover { opacity: 1 !important; transform: scale(1.15); z-index: 50; }
+        .kiss-item:hover { opacity: 1 !important; transform: scale(1.1); z-index: 50; }
 
-        /* Obsidian 关系图谱 Canvas */
-        #graph-canvas { cursor: grab; background: rgba(255,255,255,0.02); border-radius: 1rem; }
-        #graph-canvas:active { cursor: grabbing; }
-
-        /* 热力地图样式 */
-        .map-container { position: relative; background: rgba(255,255,255,0.02); border-radius: 1rem; padding: 10px; }
-        .land { fill: #1a1a1a; stroke: #000; stroke-width: 0.5; transition: fill 0.3s; }
-        .land:hover { fill: #fff !important; }
-        .map-tooltip { position: fixed; background: #fff; color: #000; padding: 4px 8px; border-radius: 4px; font-size: 10px; pointer-events: none; z-index: 3000; display: none; font-weight: bold; }
-
-        /* 筛选标签 */
-        .tag-group { display: flex; flex-wrap: wrap; gap: 6px; }
-        .tag-btn { padding: 4px 10px; font-size: 11px; border-radius: 4px; background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.4); border: 0.5px solid rgba(255,255,255,0.1); cursor: pointer; transition: 0.2s; }
+        /* 标签与搜索 */
+        .tag-btn { padding: 4px 10px; font-size: 11px; border-radius: 4px; background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.4); border: 0.5px solid rgba(255,255,255,0.1); cursor: pointer; }
         .tag-btn.active { background: rgba(255,255,255,0.2); color: #fff; border-color: rgba(255,255,255,0.4); }
-
         .search-input { background: rgba(255,255,255,0.05); border: none; color: white; padding: 1rem 1.8rem; width: 100%; border-radius: 1.5rem; outline: none; }
+
         .scrollbar-hide::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body>
-    <audio id="main-audio" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
-    <div id="nav-ui" class="hidden"><div class="back-arrow" onclick="switchPage('home')">←</div></div>
-    <div id="audio-control" class="audio-btn" onclick="toggleAudio()"><div class="play-icon" id="audio-icon"></div></div>
+<body onmousemove="autoPlayOnInteraction()" onclick="autoPlayOnInteraction()">
+    <audio id="global-audio" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
+    <div id="audio-control" class="audio-btn" onclick="toggleAudio(event)"><div class="play-icon" id="audio-icon"></div></div>
 
-    <div id="ad-overlay" class="fixed inset-0 bg-black/95 z-[2000] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500">
+    <div id="nav-ui" class="hidden"><div class="back-arrow" onclick="switchPage('home')">←</div></div>
+
+    <div id="ad-overlay" class="fixed inset-0 bg-black/95 z-[6000] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500">
         <div class="glass p-20 text-center"><span class="zh text-4xl mb-4 font-bold">他真没看过！</span><div class="mt-10 px-10 py-4 bg-white text-black rounded-full cursor-pointer font-bold" onclick="closeAd()">已经告诉他了 I'VE TOLD HIM</div></div>
     </div>
 
@@ -78,32 +76,46 @@
 
     <script src="movies.js"></script>
     <script>
-        const app = document.getElementById('app-content');
-        const audio = document.getElementById('main-audio');
+        const audio = document.getElementById('global-audio');
         const audioIcon = document.getElementById('audio-icon');
-        let searchTimer;
-        let graphNodes = [];
-        let animationId;
+        const app = document.getElementById('app-content');
+        
+        // 核心音乐逻辑锁
+        let musicStatus = {
+            hasInteracted: false,
+            manuallyPaused: false
+        };
 
-        // 音乐控制逻辑（移除 Body 点击）
-        function toggleAudio() {
+        function autoPlayOnInteraction() {
+            if (!musicStatus.hasInteracted && !musicStatus.manuallyPaused) {
+                audio.play().then(() => {
+                    musicStatus.hasInteracted = true;
+                    audioIcon.className = 'pause-icon';
+                }).catch(() => {});
+            }
+        }
+
+        function toggleAudio(e) {
+            e.stopPropagation();
             if (audio.paused) {
                 audio.play();
                 audioIcon.className = 'pause-icon';
+                musicStatus.manuallyPaused = false;
             } else {
                 audio.pause();
                 audioIcon.className = 'play-icon';
+                musicStatus.manuallyPaused = true; // 锁定：用户手动停止后不再自动播放
             }
         }
 
         function switchPage(page) {
             app.style.opacity = '0';
-            cancelAnimationFrame(animationId);
             setTimeout(() => {
                 document.getElementById('nav-ui').classList.toggle('hidden', page === 'home');
                 if(page === 'home') renderHome();
                 else if(page === 'cinema') renderCinema();
                 app.style.opacity = '1';
+                window.scrollTo(0,0);
             }, 400);
         }
 
@@ -112,7 +124,7 @@
                 <div class="h-[45vh] flex flex-col justify-end pb-12 px-4"><h1><span class="zh text-[16vw] md:text-[9vw] font-light">毛天艺</span></h1></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
                     <div onclick="switchPage('cinema')" class="glass p-10 cursor-pointer group hover:bg-white/5"><span class="zh text-2xl mb-2">电影人生</span><span class="en text-[10px]">Cinema Archive</span></div>
-                    <div class="glass p-10 opacity-20"><span class="zh text-2xl mb-2">视觉作品集</span><span class="en text-[10px]">Upcoming</span></div>
+                    <div class="glass p-10 opacity-20"><span class="zh text-2xl mb-2">即将开放</span><span class="en text-[10px]">Upcoming</span></div>
                 </div>
             `;
         }
@@ -123,154 +135,121 @@
                 {name:'胭脂扣', db:'1300325'}, {name:'爱在黎明破晓前', db:'1296339'}, {name:'勇士', db:'3141107'}, {name:'七宗罪', db:'1292223'}, {name:'美国丽人', db:'1292062'}
             ];
 
-            // 统计地区
-            const regions = ["美国", "中国大陆", "日本", "韩国", "法国", "中国香港", "英国", "德国", "意大利", "西班牙"];
-            const regionStats = {};
-            movieData.forEach(m => m.genres.forEach(g => { if(regions.includes(g)) regionStats[g] = (regionStats[g] || 0) + 1; }));
+            // 自动统计热力
+            const regionList = ["美国", "中国大陆", "日本", "韩国", "法国", "中国香港", "英国", "意大利"];
+            const stats = {};
+            movieData.forEach(m => m.genres.forEach(g => { if(regionList.includes(g)) stats[g] = (stats[g] || 0) + 1; }));
 
             app.innerHTML = `
-                <div class="mb-10 px-4"><span class="zh text-6xl font-light tracking-tighter">电影人生</span></div>
-                <div class="dragon-container"><div class="dragon-row">${top10.map((m, i) => `<div class="dragon-item" style="z-index:${20-i}" onclick="window.open('https://movie.douban.com/subject/${m.db}/')"><div class="v-zh">${m.name}</div><img src="${m.name}.png"></div>`).join('')}</div></div>
+                <div class="mb-6 px-4"><span class="zh text-6xl font-light tracking-tighter">电影人生</span></div>
                 
+                <div class="dragon-container"><div class="dragon-row">${top10.map((m, i) => `<div class="dragon-item" style="z-index:${20-i}" onclick="window.open('https://movie.douban.com/subject/${m.db}/')"><div class="v-zh">${m.name}</div><img src="${m.name}.png"></div>`).join('')}</div></div>
+
+                <div class="mid-stats-section">
+                    <div class="mid-box">
+                        <div class="text-[10px] opacity-30 mb-2 uppercase tracking-widest">Obsidian Graph View</div>
+                        <canvas id="graph-canvas"></canvas>
+                    </div>
+                    <div class="mid-box">
+                        <div class="text-[10px] opacity-30 mb-2 uppercase tracking-widest">Region Heatmap</div>
+                        <div id="world-map-svg" class="h-full"></div>
+                    </div>
+                </div>
+
                 <div class="flex flex-col lg:flex-row gap-0 px-4">
                     <div class="glass p-10 flex-[1.4] rounded-r-none border-r-0">
                         <input type="text" id="movieSearch" class="search-input mb-8" placeholder="搜一部你认为毛天艺没看过的电影" oninput="debounceSearch()">
                         
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                            <div class="map-container">
-                                <div class="filter-title mb-4">地区热力图 (REGION HEATMAP)</div>
-                                <div id="world-map-svg"></div>
-                            </div>
-                            <div>
-                                <div class="filter-title mb-4">OBSIDIAN 关系图谱 (GRAPH VIEW)</div>
-                                <canvas id="graph-canvas"></canvas>
-                            </div>
-                        </div>
-
-                        <div class="filter-section mb-6">
-                            <div class="tag-group" id="quick-tags">
+                        <div class="filter-section mb-8">
+                            <div class="text-[10px] opacity-20 mb-3 uppercase font-bold tracking-widest text-white">分类标签种类</div>
+                            <div class="tag-group">
                                 <button class="tag-btn active" onclick="filterByTag('全部', this)">全部</button>
                                 ${["剧情", "动作", "喜剧", "科幻", "犯罪", "动画", "悬疑", "惊悚"].map(t => `<button class="tag-btn" onclick="filterByTag('${t}', this)">${t}</button>`).join('')}
                             </div>
                         </div>
 
-                        <div id="movie-list-grid" class="grid grid-cols-2 gap-x-4 gap-y-2 max-h-[300px] overflow-y-auto pr-2 scrollbar-hide border-t border-white/5 pt-6"></div>
+                        <div id="movie-list-grid" class="grid grid-cols-2 gap-x-4 gap-y-2 max-h-[400px] overflow-y-auto pr-2 scrollbar-hide border-t border-white/5 pt-6"></div>
                     </div>
                     <div class="flex-1"><div id="cinema-wall" class="kiss-wall glass rounded-l-none scrollbar-hide"></div></div>
                 </div>
             `;
+            
             updateDisplay(movieData, true);
-            initObsidianGraph();
-            drawHeatMap(regionStats);
+            initGraph();
+            initMap(stats);
         }
 
-        // --- Obsidian Graph 逻辑 ---
-        function initObsidianGraph() {
+        // 图谱逻辑
+        function initGraph() {
             const canvas = document.getElementById('graph-canvas');
             const ctx = canvas.getContext('2d');
-            const container = canvas.parentElement;
-            canvas.width = container.clientWidth;
-            canvas.height = 250;
-
-            const tags = ["黑泽明", "三船敏郎", "昆汀", "诺兰", "香港电影", "韩国犯罪", "暴力美学", "科幻", "反乌托邦", "黑色幽默"];
-            graphNodes = tags.map(name => ({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                vx: (Math.random() - 0.5) * 0.5,
-                vy: (Math.random() - 0.5) * 0.5,
-                name: name,
-                r: 3 + Math.random() * 4
+            const box = canvas.parentElement;
+            canvas.width = box.clientWidth; canvas.height = box.clientHeight - 40;
+            
+            let nodes = ["黑泽明", "暴力美学", "三船敏郎", "昆汀", "诺兰", "科幻", "犯罪", "香港"].map(name => ({
+                x: Math.random()*canvas.width, y: Math.random()*canvas.height, 
+                vx: (Math.random()-0.5), vy: (Math.random()-0.5), name
             }));
 
-            function animate() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                ctx.strokeStyle = 'rgba(255,255,255,0.05)';
-                ctx.fillStyle = 'rgba(255,255,255,0.4)';
-                ctx.font = '9px Inter';
-
-                graphNodes.forEach((n, i) => {
+            function step() {
+                ctx.clearRect(0,0,canvas.width, canvas.height);
+                nodes.forEach((n, i) => {
                     n.x += n.vx; n.y += n.vy;
-                    if(n.x<0 || n.x>canvas.width) n.vx *= -1;
-                    if(n.y<0 || n.y>canvas.height) n.vy *= -1;
-
-                    ctx.beginPath();
-                    ctx.arc(n.x, n.y, n.r, 0, Math.PI*2);
-                    ctx.fill();
-                    ctx.fillText(n.name, n.x + 10, n.y + 3);
-
-                    for(let j=i+1; j<graphNodes.length; j++) {
-                        const n2 = graphNodes[j];
-                        const dist = Math.hypot(n.x-n2.x, n.y-n2.y);
-                        if(dist < 80) {
-                            ctx.beginPath();
-                            ctx.moveTo(n.x, n.y);
-                            ctx.lineTo(n2.x, n2.y);
-                            ctx.stroke();
-                        }
-                    }
+                    if(n.x<0 || n.x>canvas.width) n.vx*=-1;
+                    if(n.y<0 || n.y>canvas.height) n.vy*=-1;
+                    ctx.fillStyle = "rgba(255,255,255,0.4)";
+                    ctx.beginPath(); ctx.arc(n.x, n.y, 3, 0, Math.PI*2); ctx.fill();
+                    ctx.font = "10px Inter"; ctx.fillText(n.name, n.x+8, n.y+4);
+                    
+                    nodes.forEach(n2 => {
+                        const d = Math.hypot(n.x-n2.x, n.y-n2.y);
+                        if(d<80) { ctx.strokeStyle="rgba(255,255,255,0.05)"; ctx.beginPath(); ctx.moveTo(n.x,n.y); ctx.lineTo(n2.x,n2.y); ctx.stroke(); }
+                    });
                 });
-                animationId = requestAnimationFrame(animate);
+                requestAnimationFrame(step);
             }
-            animate();
+            step();
         }
 
-        // --- 热力地图逻辑 ---
-        function drawHeatMap(stats) {
+        // 地图逻辑
+        function initMap(stats) {
             const max = Math.max(...Object.values(stats));
-            const container = document.getElementById('world-map-svg');
-            
-            // 这是一个极简的世界地图SVG路径组（示例包含主要大国）
             const paths = {
-                "美国": "M30,30 L70,30 L70,60 L30,60 Z", 
-                "中国": "M160,40 L200,40 L200,70 L160,70 Z",
-                "日本": "M210,45 L220,45 L220,60 L210,60 Z",
-                "法国": "M110,35 L120,35 L120,45 L110,45 Z"
+                "美国": "M20,20 L60,20 L60,50 L20,50 Z", "中国": "M150,30 L190,30 L190,60 L150,60 Z",
+                "日本": "M200,35 L210,35 L210,50 L200,50 Z", "法国": "M100,25 L110,25 L110,35 L100,35 Z"
             };
-
-            let svgHtml = `<svg viewBox="0 0 260 120" class="w-full h-auto">`;
-            // 此处简化处理：实际可用完整的世界地图GeoJSON生成的Path
-            Object.keys(paths).forEach(name => {
-                const count = stats[name] || 0;
-                const opacity = count > 0 ? (count / max * 0.8) + 0.1 : 0.05;
-                svgHtml += `<path d="${paths[name]}" class="land" fill="rgba(255,255,255,${opacity})" 
-                            onmousemove="showMapTip(event, '${name}', ${count})" onmouseout="hideMapTip()"></path>`;
+            let svg = `<svg viewBox="0 0 240 100" class="w-full h-full">`;
+            Object.keys(paths).forEach(k => {
+                const opacity = (stats[k] || 0) / max * 0.8 + 0.1;
+                svg += `<path d="${paths[k]}" class="land" fill="rgba(255,255,255,${opacity})" 
+                        onmousemove="showMapTip(event, '${k}', ${stats[k]||0})" onmouseout="hideMapTip()"></path>`;
             });
-            svgHtml += `</svg>`;
-            container.innerHTML = svgHtml;
+            svg += `</svg>`;
+            document.getElementById('world-map-svg').innerHTML = svg;
         }
 
-        function showMapTip(e, name, count) {
+        function showMapTip(e, n, c) {
             const tip = document.getElementById('map-tip');
-            tip.style.display = 'block';
-            tip.style.left = e.clientX + 15 + 'px';
-            tip.style.top = e.clientY + 'px';
-            tip.innerText = `${name}: ${count}部`;
+            tip.style.display = 'block'; tip.style.left = e.clientX + 15 + 'px'; tip.style.top = e.clientY + 'px';
+            tip.innerText = `${n}: ${c}部`;
         }
         function hideMapTip() { document.getElementById('map-tip').style.display = 'none'; }
 
-        // --- 核心业务逻辑 ---
         function filterByTag(tag, el) {
-            if(el) {
-                document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
-                el.classList.add('active');
-            }
-            const filtered = tag === '全部' ? movieData : movieData.filter(m => m.genres.includes(tag));
-            updateDisplay(filtered);
+            document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+            el.classList.add('active');
+            updateDisplay(tag === '全部' ? movieData : movieData.filter(m => m.genres.includes(tag)));
         }
 
         function updateDisplay(movies, initWall = false) {
             const listGrid = document.getElementById('movie-list-grid');
             const wall = document.getElementById('cinema-wall');
             if(!listGrid) return;
-            
-            listGrid.innerHTML = movies.map(m => `
-                <div class="opacity-30 hover:opacity-100 cursor-pointer transition-all text-[12px] truncate" onclick="window.open('https://search.douban.com/movie/subject_search?search_text='+encodeURIComponent('${m.title}'))">
-                    ${m.title.split('/')[0]}
-                </div>`).join('');
-
+            listGrid.innerHTML = movies.map(m => `<div class="opacity-30 hover:opacity-100 cursor-pointer transition-all text-[12px] truncate" onclick="window.open('https://search.douban.com/movie/subject_search?search_text='+encodeURIComponent('${m.title}'))">${m.title.split('/')[0]}</div>`).join('');
             if(initWall && wall) {
                 wall.innerHTML = movieData.map(m => `<img data-src="${m.poster}" class="kiss-item lazy-item" onerror="this.remove()">`).join('');
-                initLazy();
+                const obs = new IntersectionObserver((es) => { es.forEach(e => { if(e.isIntersecting) { e.target.src = e.target.dataset.src; e.target.onload = () => e.target.classList.add('loaded'); obs.unobserve(e.target); }}); }, { rootMargin: "1000px" });
+                document.querySelectorAll('.lazy-item').forEach(img => obs.observe(img));
             }
         }
 
@@ -281,17 +260,9 @@
                 const filtered = movieData.filter(m => m.title.toLowerCase().includes(term));
                 updateDisplay(term === '' ? movieData : filtered);
                 if(term !== '' && filtered.length === 0) {
-                    document.getElementById('ad-overlay').style.opacity = '1';
-                    document.getElementById('ad-overlay').style.pointerEvents = 'auto';
+                    document.getElementById('ad-overlay').style.opacity = '1'; document.getElementById('ad-overlay').style.pointerEvents = 'auto';
                 }
             }, 800);
-        }
-
-        function initLazy() {
-            const obs = new IntersectionObserver((entries) => {
-                entries.forEach(e => { if(e.isIntersecting) { e.target.src = e.target.dataset.src; e.target.onload = () => e.target.classList.add('loaded'); obs.unobserve(e.target); }});
-            }, { rootMargin: "1000px" });
-            document.querySelectorAll('.lazy-item').forEach(img => obs.observe(img));
         }
 
         function closeAd() { document.getElementById('ad-overlay').style.opacity = '0'; document.getElementById('ad-overlay').style.pointerEvents = 'none'; }
