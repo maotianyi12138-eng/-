@@ -19,7 +19,6 @@
         @media (min-width: 768px) { body { background-image: url('horse.jpg'); } }
         @media (max-width: 767px) { body { background-image: url('mobile_bg.jpg'); } }
 
-        /* 基础样式库 */
         .glass { background: rgba(255, 255, 255, 0.015); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 0.5px solid rgba(255, 255, 255, 0.05); border-radius: 2rem; }
         .zh { display: block; font-weight: 400; line-height: 1.2; }
         .en { display: block; font-weight: 100; opacity: 0.4; letter-spacing: 0.1em; text-transform: uppercase; }
@@ -62,16 +61,20 @@
         }
         .search-input::placeholder { color: rgba(255,255,255,0.2); }
 
-        /* 新：豆瓣样式标签按钮 */
+        /* --- 新：豆瓣风格标签系统 --- */
+        .filter-section { margin-bottom: 2rem; }
+        .filter-title { font-size: 10px; opacity: 0.2; letter-spacing: 2px; margin-bottom: 12px; text-transform: uppercase; font-weight: bold; }
+        .tag-group { display: flex; flex-wrap: wrap; gap: 8px; }
         .tag-btn { 
-            padding: 6px 14px; font-size: 12px; border-radius: 8px; 
-            background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.05);
-            cursor: pointer; transition: 0.2s; color: rgba(255,255,255,0.5); 
-            display: flex; align-items: center; gap: 5px;
+            padding: 6px 12px; font-size: 13px; border-radius: 6px; 
+            background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.6); cursor: pointer; transition: all 0.2s;
+            display: flex; align-items: center; gap: 6px;
         }
-        .tag-btn .count { opacity: 0.3; font-size: 10px; font-weight: 100; }
-        .tag-btn:hover { background: rgba(255,255,255,0.08); color: #fff; }
-        .tag-btn.active { color: #fff; background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); }
+        .tag-btn .count { opacity: 0.3; font-size: 11px; font-weight: 300; }
+        .tag-btn:hover { background: rgba(255,255,255,0.1); color: #fff; }
+        .tag-btn.active { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); color: #fff; }
+        .tag-btn.active .count { opacity: 0.6; }
 
         /* 音乐按钮 */
         .audio-btn { position: fixed; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); z-index: 1000; display: flex; justify-content: center; align-items: center; cursor: pointer; border: 0.5px solid rgba(255,255,255,0.1); }
@@ -84,7 +87,6 @@
 <body onclick="playMusic()">
     <audio id="main-audio" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
     <div id="nav-ui" class="hidden"><div class="back-arrow" onclick="switchPage('home')">←</div></div>
-    
     <div id="audio-control" class="audio-btn" onclick="toggleAudio(event)"><div class="play-icon" id="icon"></div></div>
 
     <div id="ad-overlay" class="fixed inset-0 bg-black/90 backdrop-blur-3xl z-[2000] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500">
@@ -103,8 +105,8 @@
         const icon = document.getElementById('icon');
         let searchTimer;
 
-        // 全局筛选状态
-        window.filters = { type: '全部', tag: '全部' };
+        // 全局筛选器状态
+        window.currentFilters = { type: '全部', tag: '全部' };
 
         function playMusic() { if (audio.paused) audio.play().then(() => updateAudioUI(true)).catch(()=>{}); }
         function toggleAudio(e) { e.stopPropagation(); audio.paused ? audio.play() : audio.pause(); updateAudioUI(!audio.paused); }
@@ -132,14 +134,17 @@
         }
 
         function renderCinema() {
-            // 定义预设标签（参考截图）
-            const typeOptions = ["全部", "电影", "电视"];
-            const tagOptions = ["全部", "美国", "剧情", "动作", "喜剧", "冒险", "犯罪", "科幻", "英国", "惊悚", "中国大陆", "爱情", "90年代", "奇幻", "动画", "悬疑", "中国香港", "法国", "日本", "韩国"];
+            // 自动化标签提取（根据你的图片需求精准匹配）
+            const typeOpts = ["全部", "电影", "电视"];
+            // 下面这些标签会自动统计 movieData 里的数据
+            const tagOpts = ["全部", "美国", "剧情", "动作", "喜剧", "冒险", "犯罪", "科幻", "英国", "惊悚", "中国大陆", "爱情", "90年代", "奇幻", "动画", "悬疑", "中国香港", "法国", "日本", "韩国"];
 
-            // 计算初始数量
             const getCount = (val, isType) => {
                 if(val === '全部') return movieData.length;
-                return movieData.filter(m => isType ? (m.type && m.type.includes(val)) : JSON.stringify(m).includes(val)).length;
+                return movieData.filter(m => {
+                    const dataStr = JSON.stringify(m);
+                    return isType ? (m.type && m.type.includes(val)) : dataStr.includes(val);
+                }).length;
             };
 
             const top10 = [
@@ -153,25 +158,30 @@
                 <div class="dragon-container"><div class="dragon-row">${top10.map((m, i) => `<div class="dragon-item" style="z-index:${20-i}" onclick="window.open('https://movie.douban.com/subject/${m.db}/')"><div class="v-zh">${m.name}</div><img src="${m.name}.png"></div>`).join('')}</div></div>
                 
                 <div class="flex flex-col lg:flex-row gap-0 px-4">
-                    <div class="glass p-8 md:p-10 flex-[1.5] rounded-r-none border-r-0">
-                        <input type="text" id="movieSearch" class="search-input mb-10" placeholder="搜索一部你觉得毛天艺没有看过的电影" oninput="debounceSearch()">
+                    <div class="glass p-8 md:p-12 flex-[1.4] rounded-r-none border-r-0">
+                        <input type="text" id="movieSearch" class="search-input mb-12" placeholder="搜索一部你觉得毛天艺没有看过的电影" oninput="debounceSearch()">
                         
-                        <div class="space-y-8 mb-10">
-                            <div>
-                                <div class="text-[10px] opacity-20 mb-4 tracking-widest uppercase font-bold">形式</div>
-                                <div class="flex flex-wrap gap-2">
-                                    ${typeOptions.map(t => `<button class="tag-btn ${t==='全部'?'active':''}" onclick="applyFilter('type', '${t}', this)">${t} <span class="count">${getCount(t, true)}</span></button>`).join('')}
-                                </div>
-                            </div>
-                            <div>
-                                <div class="text-[10px] opacity-20 mb-4 tracking-widest uppercase font-bold">标签</div>
-                                <div class="flex flex-wrap gap-2">
-                                    ${tagOptions.map(t => `<button class="tag-btn ${t==='全部'?'active':''}" onclick="applyFilter('tag', '${t}', this)">${t} <span class="count">${getCount(t, false)}</span></button>`).join('')}
-                                </div>
+                        <div class="filter-section">
+                            <div class="filter-title">形式</div>
+                            <div class="tag-group">
+                                ${typeOpts.map(t => `
+                                    <button class="tag-btn ${t==='全部'?'active':''}" onclick="applyDoubanFilter('type', '${t}', this)">
+                                        ${t} <span class="count">${getCount(t, true)}</span>
+                                    </button>`).join('')}
                             </div>
                         </div>
 
-                        <div id="movie-list-grid" class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6 max-h-[600px] overflow-y-auto pr-2 scrollbar-hide border-t border-white/5 pt-8"></div>
+                        <div class="filter-section">
+                            <div class="filter-title">标签</div>
+                            <div class="tag-group">
+                                ${tagOpts.map(t => `
+                                    <button class="tag-btn ${t==='全部'?'active':''}" onclick="applyDoubanFilter('tag', '${t}', this)">
+                                        ${t} <span class="count">${getCount(t, false)}</span>
+                                    </button>`).join('')}
+                            </div>
+                        </div>
+
+                        <div id="movie-list-grid" class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6 max-h-[500px] overflow-y-auto pr-2 scrollbar-hide border-t border-white/5 pt-8"></div>
                     </div>
                     <div class="flex-1 h-fit"><div id="cinema-wall" class="kiss-wall glass rounded-l-none scrollbar-hide"></div></div>
                 </div>
@@ -179,18 +189,20 @@
             displayMovies(movieData, true);
         }
 
-        function applyFilter(key, val, el) {
-            // UI 切换
-            el.parentElement.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+        function applyDoubanFilter(key, val, el) {
+            // UI 更新
+            el.parentElement.querySelectorAll('.tag-btn').forEach(btn => btn.classList.remove('active'));
             el.classList.add('active');
+
+            // 逻辑更新
+            window.currentFilters[key] = val;
             
-            // 逻辑过滤
-            window.filters[key] = val;
             const filtered = movieData.filter(m => {
-                const typeMatch = window.filters.type === '全部' || (m.type && m.type.includes(window.filters.type));
-                const tagMatch = window.filters.tag === '全部' || JSON.stringify(m).includes(window.filters.tag);
+                const typeMatch = window.currentFilters.type === '全部' || (m.type && m.type.includes(window.currentFilters.type));
+                const tagMatch = window.currentFilters.tag === '全部' || JSON.stringify(m).includes(window.currentFilters.tag);
                 return typeMatch && tagMatch;
             });
+
             displayMovies(filtered);
         }
 
@@ -198,11 +210,13 @@
             const listGrid = document.getElementById('movie-list-grid');
             const wall = document.getElementById('cinema-wall');
             if(!listGrid || !wall) return;
+            
             listGrid.innerHTML = movies.map(m => `
                 <div class="cursor-pointer group" onclick="window.open('https://search.douban.com/movie/subject_search?search_text='+encodeURIComponent('${m.title.split('/')[0]}'))">
-                    <div class="zh text-[12px] opacity-40 group-hover:opacity-100 truncate">${m.title.split('/')[0]}</div>
+                    <div class="zh text-[12px] opacity-40 group-hover:opacity-100 truncate transition-all">${m.title.split('/')[0]}</div>
                     <div class="en text-[7px] opacity-10 truncate">${m.title.split('/')[1] || ''}</div>
                 </div>`).join('');
+
             if(initWall) {
                 wall.innerHTML = movieData.map(m => `<img data-src="${m.poster}" class="kiss-item lazy-item" onerror="this.remove()">`).join('');
                 initLazyLoading();
