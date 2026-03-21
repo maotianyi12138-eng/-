@@ -26,6 +26,11 @@
         .back-arrow { position: fixed; top: 2.5rem; left: 2.5rem; z-index: 500; font-size: 1.8rem; color: #fff; cursor: pointer; transition: 0.3s; }
         .back-arrow:hover { transform: translateX(-5px); opacity: 0.6; }
 
+        /* 音乐按钮 */
+        .audio-btn { position: fixed; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); z-index: 1000; display: flex; justify-content: center; align-items: center; cursor: pointer; border: 0.5px solid rgba(255,255,255,0.1); }
+        .play-icon { width: 0; height: 0; border-style: solid; border-width: 7px 0 7px 11px; border-color: transparent transparent transparent #fff; margin-left: 2px; }
+        .pause-icon { width: 10px; height: 12px; border-left: 3px solid #fff; border-right: 3px solid #fff; }
+
         /* 龙鳞布局 */
         .dragon-container { width: 100vw; overflow: hidden; margin-left: -1.5rem; }
         .dragon-row { display: flex; width: 100%; padding: 40px 5% 80px; justify-content: space-between; align-items: flex-end; }
@@ -34,138 +39,222 @@
         .v-zh { writing-mode: vertical-rl; font-size: 11px; margin-bottom: 25px; letter-spacing: 0.5em; height: 150px; text-align: right; color: rgba(255,255,255,0.9); font-weight: 500; }
         .dragon-item img { width: 100%; aspect-ratio: 2/3; object-fit: cover; border: 0.5px solid rgba(255,255,255,0.2); border-radius: 4px; box-shadow: 0 15px 40px rgba(0,0,0,0.8); }
 
-        /* 海报墙修复 */
-        .kiss-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 2px; width: 100%; height: 850px; overflow-y: auto; padding: 10px; }
-        .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0; transition: 0.5s; background: #111; border-radius: 2px; }
-        .kiss-item.loaded { opacity: 0.35; }
-        .kiss-item:hover { opacity: 1 !important; transform: scale(1.1); z-index: 10; }
+        /* 亲吻墙 */
+        .kiss-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); gap: 1px; width: 100%; height: 850px; overflow-y: auto; }
+        .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0; transition: 0.5s; background: #111; }
+        .kiss-item.loaded { opacity: 0.3; }
+        .kiss-item:hover { opacity: 1 !important; transform: scale(1.15); z-index: 50; }
 
-        /* 搜索框 */
-        .search-input { background: rgba(255,255,255,0.05); border: none; color: white; padding: 1rem 1.8rem; width: 100%; border-radius: 1.5rem; outline: none; font-size: 0.9rem; }
-        
-        /* 统计与云图 */
-        .stat-bar { height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden; margin-top: 4px; }
-        .stat-fill { height: 100%; background: rgba(255,255,255,0.4); transition: 1s; }
-        .cloud-tag { font-size: 12px; color: rgba(255,255,255,0.4); cursor: pointer; transition: 0.3s; padding: 2px 0; }
-        .cloud-tag:hover { color: #fff; }
+        /* Obsidian 关系图谱 Canvas */
+        #graph-canvas { cursor: grab; background: rgba(255,255,255,0.02); border-radius: 1rem; }
+        #graph-canvas:active { cursor: grabbing; }
 
-        /* 作品集竖向龙鳞 */
-        .work-dragon-v { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 40px 0; }
-        .stack-img-v { width: 100%; aspect-ratio: 2/1; object-fit: cover; border-radius: 4px; border: 0.5px solid rgba(255,255,255,0.1); margin-top: -10vh; transition: 0.5s; }
-        .stack-img-v:first-child { margin-top: 0; }
-        .work-card:hover .stack-img-v { margin-top: 10px; transform: scale(1.02); }
+        /* 热力地图样式 */
+        .map-container { position: relative; background: rgba(255,255,255,0.02); border-radius: 1rem; padding: 10px; }
+        .land { fill: #1a1a1a; stroke: #000; stroke-width: 0.5; transition: fill 0.3s; }
+        .land:hover { fill: #fff !important; }
+        .map-tooltip { position: fixed; background: #fff; color: #000; padding: 4px 8px; border-radius: 4px; font-size: 10px; pointer-events: none; z-index: 3000; display: none; font-weight: bold; }
 
+        /* 筛选标签 */
+        .tag-group { display: flex; flex-wrap: wrap; gap: 6px; }
+        .tag-btn { padding: 4px 10px; font-size: 11px; border-radius: 4px; background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.4); border: 0.5px solid rgba(255,255,255,0.1); cursor: pointer; transition: 0.2s; }
+        .tag-btn.active { background: rgba(255,255,255,0.2); color: #fff; border-color: rgba(255,255,255,0.4); }
+
+        .search-input { background: rgba(255,255,255,0.05); border: none; color: white; padding: 1rem 1.8rem; width: 100%; border-radius: 1.5rem; outline: none; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body onclick="playMusic()">
+<body>
     <audio id="main-audio" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
     <div id="nav-ui" class="hidden"><div class="back-arrow" onclick="switchPage('home')">←</div></div>
+    <div id="audio-control" class="audio-btn" onclick="toggleAudio()"><div class="play-icon" id="audio-icon"></div></div>
 
     <div id="ad-overlay" class="fixed inset-0 bg-black/95 z-[2000] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500">
-        <div class="glass p-20 text-center"><span class="zh text-4xl mb-4 font-bold">他真没看过！</span><div class="mt-10 px-10 py-4 bg-white text-black rounded-full cursor-pointer font-bold" onclick="closeAd()">已经推荐给他了 I'VE TOLD HIM</div></div>
+        <div class="glass p-20 text-center"><span class="zh text-4xl mb-4 font-bold">他真没看过！</span><div class="mt-10 px-10 py-4 bg-white text-black rounded-full cursor-pointer font-bold" onclick="closeAd()">已经告诉他了 I'VE TOLD HIM</div></div>
     </div>
 
     <div id="app-content" class="pt-32 p-6 md:p-20 transition-opacity duration-300"></div>
+    <div id="map-tip" class="map-tooltip"></div>
 
     <script src="movies.js"></script>
     <script>
         const app = document.getElementById('app-content');
         const audio = document.getElementById('main-audio');
+        const audioIcon = document.getElementById('audio-icon');
         let searchTimer;
+        let graphNodes = [];
+        let animationId;
 
-        function playMusic() { if (audio.paused) audio.play(); }
+        // 音乐控制逻辑（移除 Body 点击）
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+                audioIcon.className = 'pause-icon';
+            } else {
+                audio.pause();
+                audioIcon.className = 'play-icon';
+            }
+        }
+
         function switchPage(page) {
             app.style.opacity = '0';
+            cancelAnimationFrame(animationId);
             setTimeout(() => {
                 document.getElementById('nav-ui').classList.toggle('hidden', page === 'home');
                 if(page === 'home') renderHome();
                 else if(page === 'cinema') renderCinema();
-                else if(page === 'works') renderWorks();
-                app.style.opacity = '1'; window.scrollTo(0,0);
+                app.style.opacity = '1';
             }, 400);
         }
 
         function renderHome() {
-            const menus = [{id:'works', zh:'视觉作品集', en:'Visual Works'}, {id:'cinema', zh:'电影人生', en:'Cinema Archive'}];
             app.innerHTML = `
                 <div class="h-[45vh] flex flex-col justify-end pb-12 px-4"><h1><span class="zh text-[16vw] md:text-[9vw] font-light">毛天艺</span></h1></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
-                    ${menus.map(m => `<div onclick="switchPage('${m.id}')" class="glass p-10 cursor-pointer group hover:bg-white/5"><span class="zh text-2xl mb-2">${m.zh}</span><span class="en text-[10px]">${m.en}</span></div>`).join('')}
+                    <div onclick="switchPage('cinema')" class="glass p-10 cursor-pointer group hover:bg-white/5"><span class="zh text-2xl mb-2">电影人生</span><span class="en text-[10px]">Cinema Archive</span></div>
+                    <div class="glass p-10 opacity-20"><span class="zh text-2xl mb-2">视觉作品集</span><span class="en text-[10px]">Upcoming</span></div>
                 </div>
             `;
         }
 
         function renderCinema() {
-            // 数据统计：流派云图 & 地区热力
-            const tagStats = {};
-            movieData.forEach(m => m.genres.forEach(g => tagStats[g] = (tagStats[g] || 0) + 1));
-            
-            // 地区热力统计（筛选出常见的地区）
-            const regions = ["美国", "中国大陆", "日本", "韩国", "法国", "中国香港", "英国", "意大利"].map(r => ({name: r, count: tagStats[r] || 0}));
-            const maxCount = Math.max(...regions.map(r => r.count));
-
-            // 影人流派云图（排除地区，取高频关键词）
-            const cloudTags = Object.entries(tagStats)
-                .filter(([name]) => !["美国", "中国大陆", "日本", "韩国", "法国", "中国香港", "英国", "意大利", "剧情", "电影"].includes(name))
-                .sort((a,b) => b[1] - a[1]).slice(0, 30);
-
             const top10 = [
                 {name:'新世界', db:'10756762'}, {name:'杀死比尔 2', db:'1291585'}, {name:'无间道', db:'1307914'}, {name:'被解救的姜戈', db:'6307447'}, {name:'星际穿越', db:'1889243'}, 
                 {name:'胭脂扣', db:'1300325'}, {name:'爱在黎明破晓前', db:'1296339'}, {name:'勇士', db:'3141107'}, {name:'七宗罪', db:'1292223'}, {name:'美国丽人', db:'1292062'}
             ];
+
+            // 统计地区
+            const regions = ["美国", "中国大陆", "日本", "韩国", "法国", "中国香港", "英国", "德国", "意大利", "西班牙"];
+            const regionStats = {};
+            movieData.forEach(m => m.genres.forEach(g => { if(regions.includes(g)) regionStats[g] = (regionStats[g] || 0) + 1; }));
 
             app.innerHTML = `
                 <div class="mb-10 px-4"><span class="zh text-6xl font-light tracking-tighter">电影人生</span></div>
                 <div class="dragon-container"><div class="dragon-row">${top10.map((m, i) => `<div class="dragon-item" style="z-index:${20-i}" onclick="window.open('https://movie.douban.com/subject/${m.db}/')"><div class="v-zh">${m.name}</div><img src="${m.name}.png"></div>`).join('')}</div></div>
                 
                 <div class="flex flex-col lg:flex-row gap-0 px-4">
-                    <div class="glass p-10 flex-[1.2] rounded-r-none border-r-0">
-                        <input type="text" id="movieSearch" class="search-input mb-10" placeholder="搜一部你认为毛天艺没看过的电影" oninput="debounceSearch()">
+                    <div class="glass p-10 flex-[1.4] rounded-r-none border-r-0">
+                        <input type="text" id="movieSearch" class="search-input mb-8" placeholder="搜一部你认为毛天艺没看过的电影" oninput="debounceSearch()">
                         
-                        <div class="grid grid-cols-2 gap-10 mb-10">
-                            <div>
-                                <div class="filter-title">地区热力统计</div>
-                                ${regions.map(r => `
-                                    <div class="mb-3">
-                                        <div class="flex justify-between text-[10px] opacity-40 uppercase"><span>${r.name}</span><span>${r.count}</span></div>
-                                        <div class="stat-bar"><div class="stat-fill" style="width: ${(r.count/maxCount)*100}%"></div></div>
-                                    </div>
-                                `).join('')}
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="map-container">
+                                <div class="filter-title mb-4">地区热力图 (REGION HEATMAP)</div>
+                                <div id="world-map-svg"></div>
                             </div>
                             <div>
-                                <div class="filter-title">影人 / 流派云图</div>
-                                <div class="flex flex-wrap gap-x-4 gap-y-1">
-                                    ${cloudTags.map(t => `<span class="cloud-tag" onclick="filterByTag('${t[0]}')">${t[0]}</span>`).join('')}
-                                </div>
+                                <div class="filter-title mb-4">OBSIDIAN 关系图谱 (GRAPH VIEW)</div>
+                                <canvas id="graph-canvas"></canvas>
                             </div>
                         </div>
 
-                        <div id="movie-list-grid" class="grid grid-cols-2 gap-3 max-h-[350px] overflow-y-auto pr-2 scrollbar-hide border-t border-white/5 pt-6"></div>
+                        <div class="filter-section mb-6">
+                            <div class="tag-group" id="quick-tags">
+                                <button class="tag-btn active" onclick="filterByTag('全部', this)">全部</button>
+                                ${["剧情", "动作", "喜剧", "科幻", "犯罪", "动画", "悬疑", "惊悚"].map(t => `<button class="tag-btn" onclick="filterByTag('${t}', this)">${t}</button>`).join('')}
+                            </div>
+                        </div>
+
+                        <div id="movie-list-grid" class="grid grid-cols-2 gap-x-4 gap-y-2 max-h-[300px] overflow-y-auto pr-2 scrollbar-hide border-t border-white/5 pt-6"></div>
                     </div>
                     <div class="flex-1"><div id="cinema-wall" class="kiss-wall glass rounded-l-none scrollbar-hide"></div></div>
                 </div>
             `;
             updateDisplay(movieData, true);
+            initObsidianGraph();
+            drawHeatMap(regionStats);
         }
 
-        function renderWorks() {
-            const projects = [{zh:'1.离不了', en:'UNSEPARABLE', prefix:'批判', count:4}, {zh:'2.新保龄运动', en:'NEW BOWLING MOVEMENT', prefix:'保龄', count:6}, {zh:'3.血液涅槃', en:'BLOOD NIRVANA', prefix:'血液', count:4}, {zh:'4.健身工厂', en:'FITNESS FACTORY', prefix:'健身', count:5}];
-            app.innerHTML = `
-                <div class="mb-12 px-4"><span class="zh text-6xl font-light tracking-tighter">视觉作品集</span></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 px-4">
-                    ${projects.map(p => `
-                        <div class="bg-black p-8 work-card overflow-hidden rounded-2xl border border-white/10 transition-all">
-                            <div class="mb-6 flex justify-between items-end border-b border-white/10 pb-4"><span class="zh text-2xl font-light">${p.zh}</span><span class="en text-[10px] opacity-30">${p.en}</span></div>
-                            <div class="work-dragon-v">${Array.from({length: p.count}).map((_, i) => `<img src="${p.prefix}${i+1}.png" class="stack-img-v" style="z-index:${20-i}">`).join('')}</div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
+        // --- Obsidian Graph 逻辑 ---
+        function initObsidianGraph() {
+            const canvas = document.getElementById('graph-canvas');
+            const ctx = canvas.getContext('2d');
+            const container = canvas.parentElement;
+            canvas.width = container.clientWidth;
+            canvas.height = 250;
+
+            const tags = ["黑泽明", "三船敏郎", "昆汀", "诺兰", "香港电影", "韩国犯罪", "暴力美学", "科幻", "反乌托邦", "黑色幽默"];
+            graphNodes = tags.map(name => ({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5,
+                name: name,
+                r: 3 + Math.random() * 4
+            }));
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.strokeStyle = 'rgba(255,255,255,0.05)';
+                ctx.fillStyle = 'rgba(255,255,255,0.4)';
+                ctx.font = '9px Inter';
+
+                graphNodes.forEach((n, i) => {
+                    n.x += n.vx; n.y += n.vy;
+                    if(n.x<0 || n.x>canvas.width) n.vx *= -1;
+                    if(n.y<0 || n.y>canvas.height) n.vy *= -1;
+
+                    ctx.beginPath();
+                    ctx.arc(n.x, n.y, n.r, 0, Math.PI*2);
+                    ctx.fill();
+                    ctx.fillText(n.name, n.x + 10, n.y + 3);
+
+                    for(let j=i+1; j<graphNodes.length; j++) {
+                        const n2 = graphNodes[j];
+                        const dist = Math.hypot(n.x-n2.x, n.y-n2.y);
+                        if(dist < 80) {
+                            ctx.beginPath();
+                            ctx.moveTo(n.x, n.y);
+                            ctx.lineTo(n2.x, n2.y);
+                            ctx.stroke();
+                        }
+                    }
+                });
+                animationId = requestAnimationFrame(animate);
+            }
+            animate();
         }
 
-        function filterByTag(tag) {
-            const filtered = movieData.filter(m => m.genres.includes(tag));
+        // --- 热力地图逻辑 ---
+        function drawHeatMap(stats) {
+            const max = Math.max(...Object.values(stats));
+            const container = document.getElementById('world-map-svg');
+            
+            // 这是一个极简的世界地图SVG路径组（示例包含主要大国）
+            const paths = {
+                "美国": "M30,30 L70,30 L70,60 L30,60 Z", 
+                "中国": "M160,40 L200,40 L200,70 L160,70 Z",
+                "日本": "M210,45 L220,45 L220,60 L210,60 Z",
+                "法国": "M110,35 L120,35 L120,45 L110,45 Z"
+            };
+
+            let svgHtml = `<svg viewBox="0 0 260 120" class="w-full h-auto">`;
+            // 此处简化处理：实际可用完整的世界地图GeoJSON生成的Path
+            Object.keys(paths).forEach(name => {
+                const count = stats[name] || 0;
+                const opacity = count > 0 ? (count / max * 0.8) + 0.1 : 0.05;
+                svgHtml += `<path d="${paths[name]}" class="land" fill="rgba(255,255,255,${opacity})" 
+                            onmousemove="showMapTip(event, '${name}', ${count})" onmouseout="hideMapTip()"></path>`;
+            });
+            svgHtml += `</svg>`;
+            container.innerHTML = svgHtml;
+        }
+
+        function showMapTip(e, name, count) {
+            const tip = document.getElementById('map-tip');
+            tip.style.display = 'block';
+            tip.style.left = e.clientX + 15 + 'px';
+            tip.style.top = e.clientY + 'px';
+            tip.innerText = `${name}: ${count}部`;
+        }
+        function hideMapTip() { document.getElementById('map-tip').style.display = 'none'; }
+
+        // --- 核心业务逻辑 ---
+        function filterByTag(tag, el) {
+            if(el) {
+                document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+                el.classList.add('active');
+            }
+            const filtered = tag === '全部' ? movieData : movieData.filter(m => m.genres.includes(tag));
             updateDisplay(filtered);
         }
 
@@ -180,7 +269,7 @@
                 </div>`).join('');
 
             if(initWall && wall) {
-                wall.innerHTML = movieData.map(m => `<img data-src="${m.poster}" class="kiss-item lazy-item" onerror="this.style.display='none'">`).join('');
+                wall.innerHTML = movieData.map(m => `<img data-src="${m.poster}" class="kiss-item lazy-item" onerror="this.remove()">`).join('');
                 initLazy();
             }
         }
@@ -201,11 +290,12 @@
         function initLazy() {
             const obs = new IntersectionObserver((entries) => {
                 entries.forEach(e => { if(e.isIntersecting) { e.target.src = e.target.dataset.src; e.target.onload = () => e.target.classList.add('loaded'); obs.unobserve(e.target); }});
-            }, { rootMargin: "800px" });
+            }, { rootMargin: "1000px" });
             document.querySelectorAll('.lazy-item').forEach(img => obs.observe(img));
         }
 
         function closeAd() { document.getElementById('ad-overlay').style.opacity = '0'; document.getElementById('ad-overlay').style.pointerEvents = 'none'; }
+        
         window.onload = () => switchPage('home');
     </script>
 </body>
