@@ -16,7 +16,6 @@
             overflow-x: hidden;
         }
 
-        /* 响应式壁纸规范 */
         @media (min-width: 768px) { body { background-image: url('horse.jpg'); } }
         @media (max-width: 767px) { body { background-image: url('mobile_bg.jpg'); } }
 
@@ -26,7 +25,6 @@
             border: 0.5px solid rgba(255, 255, 255, 0.05); border-radius: 2rem;
         }
 
-        /* 文字中英对照规范 */
         .zh { display: block; font-weight: 400; line-height: 1.2; }
         .en { display: block; font-weight: 100; opacity: 0.4; letter-spacing: 0.1em; text-transform: uppercase; }
 
@@ -36,39 +34,42 @@
         }
         .back-arrow:hover { transform: translateX(-5px); opacity: 0.6; }
 
-        /* 龙鳞装 + 竖条文字极致对齐 */
-        .dragon-row { display: flex; overflow-x: auto; padding: 60px 0 80px 0; scrollbar-width: none; align-items: flex-end; }
+        /* 个人十佳龙鳞装 */
+        .dragon-row { display: flex; overflow-x: auto; padding: 20px 0 40px 0; scrollbar-width: none; align-items: flex-end; }
         .dragon-item {
-            flex: 0 0 160px; margin-right: -75px; 
+            flex: 0 0 110px; margin-right: -55px; 
             transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
             cursor: pointer; position: relative;
             display: flex; flex-direction: column; align-items: center;
         }
-        .dragon-item:hover { margin-right: 75px; transform: translateY(-20px); z-index: 100 !important; }
+        .dragon-item:hover { margin-right: 55px; transform: translateY(-10px); z-index: 100 !important; }
         
         .vertical-title {
             writing-mode: vertical-rl; text-orientation: mixed;
-            font-size: 11px; margin-bottom: 25px; letter-spacing: 0.5em;
-            height: 160px; text-align: right; pointer-events: none;
-            display: flex; flex-direction: column; align-items: center;
+            font-size: 10px; margin-bottom: 15px; letter-spacing: 0.3em;
+            height: 120px; text-align: right; pointer-events: none;
         }
-        .v-zh { color: rgba(255,255,255,0.9); margin-left: 6px; font-weight: 500; }
-        .v-en { color: rgba(255,255,255,0.15); font-size: 8px; font-weight: 100; text-transform: uppercase; margin-top: 5px; }
+        .v-zh { color: rgba(255,255,255,0.9); font-weight: 500; }
 
         .dragon-item img { 
             width: 100%; aspect-ratio: 2/3; object-fit: cover; 
             border: 0.5px solid rgba(255,255,255,0.2); border-radius: 4px; 
-            background: #111; box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        /* 视觉作品集 2:1 比例锁死 */
+        /* 艺人板块比例对齐海报墙 (2:3) */
+        .artist-card { aspect-ratio: 2/3; overflow: hidden; border-radius: 1rem; position: relative; border: 0.5px solid rgba(255,255,255,0.1); }
+        .artist-card img { width: 100%; height: 100%; object-fit: cover; }
+        .artist-label { position: absolute; bottom: 0; left: 0; width: 100%; padding: 1.5rem 1rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); }
+
+        /* 视觉作品集 2:1 */
         .works-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
         @media (max-width: 768px) { .works-grid { grid-template-columns: 1fr; } }
         .works-card { width: 100%; aspect-ratio: 2/1; overflow: hidden; border-radius: 1.2rem; background: #0a0a0a; border: 0.5px solid rgba(255,255,255,0.05); }
         .works-card img { width: 100%; height: 100%; object-fit: cover; transition: 1s cubic-bezier(0.2, 1, 0.2, 1); }
         .works-card:hover img { transform: scale(1.08); }
 
-        /* 亲吻墙网格 (恢复指定版) */
+        /* 亲吻墙网格 */
         .kiss-wall { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; width: 100%; }
         .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0; transition: opacity 1s, transform 0.6s; }
         .kiss-item.loaded { opacity: 0.5; }
@@ -76,25 +77,19 @@
 
         /* 搜索框 */
         .search-input { background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.1); color: white; padding: 1rem 1.5rem; width: 100%; border-radius: 1.2rem; outline: none; transition: 0.3s; }
-        .search-input:focus { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.3); }
         
-        /* 弹窗广告 */
+        /* 弹窗 */
         .ad-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); backdrop-filter: blur(30px); z-index: 2000; display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; transition: 0.6s; }
         .ad-box { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 80px 60px; border-radius: 4rem; text-align: center; }
 
         .audio-btn { position: fixed; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); z-index: 500; display: flex; justify-content: center; align-items: center; cursor: pointer; }
         .play-icon { width: 0; height: 0; border-style: solid; border-width: 7px 0 7px 11px; border-color: transparent transparent transparent #fff; margin-left: 2px; }
         .pause-icon { width: 10px; height: 12px; border-left: 3px solid #fff; border-right: 3px solid #fff; }
-
-        /* 滚动条隐藏 */
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
     </style>
 </head>
 <body onclick="playMusic()">
     <audio id="main-audio" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
-    
     <div id="nav-ui" class="hidden"><div class="back-arrow" onclick="switchPage('home')">←</div></div>
-    
     <div id="audio-control" class="audio-btn" onclick="toggleAudio(event)"><div class="play-icon" id="icon"></div></div>
 
     <div id="ad-overlay" class="ad-overlay">
@@ -108,7 +103,7 @@
         </div>
     </div>
 
-    <div id="app-content" class="transition-opacity duration-500 pt-32 p-6 md:p-20"></div>
+    <div id="app-content" class="pt-32 p-6 md:p-20 transition-opacity duration-500"></div>
 
     <script src="movies.js"></script>
     <script>
@@ -118,14 +113,11 @@
         const icon = document.getElementById('icon');
         const adOverlay = document.getElementById('ad-overlay');
         let searchTimer;
-        let musicLocked = false;
 
-        // 音频连贯逻辑
-        function playMusic() { if (!musicLocked && audio.paused) { audio.play().then(() => updateAudioUI(true)).catch(()=>{}); } }
-        function toggleAudio(e) { e.stopPropagation(); if (audio.paused) { audio.play(); updateAudioUI(true); musicLocked = false; } else { audio.pause(); updateAudioUI(false); musicLocked = true; } }
+        function playMusic() { if (audio.paused) { audio.play().then(() => updateAudioUI(true)).catch(()=>{}); } }
+        function toggleAudio(e) { e.stopPropagation(); if (audio.paused) { audio.play(); updateAudioUI(true); } else { audio.pause(); updateAudioUI(false); } }
         function updateAudioUI(isPlaying) { icon.className = isPlaying ? 'pause-icon' : 'play-icon'; }
 
-        // SPA 页面切换核心
         function switchPage(page) {
             app.style.opacity = '0';
             setTimeout(() => {
@@ -139,12 +131,7 @@
         }
 
         function renderHome() {
-            const menus = [
-                {id:'works', zh:'视觉作品集', en:'Visual Works'}, 
-                {id:'cinema', zh:'电影人生', en:'Cinema Life'}, 
-                {id:'music', zh:'音乐人生', en:'Music Life'}, 
-                {id:'read', zh:'阅读人生', en:'Reading Life'}
-            ];
+            const menus = [{id:'works', zh:'视觉作品集', en:'Visual Works'}, {id:'cinema', zh:'电影人生', en:'Cinema Life'}, {id:'music', zh:'音乐人生', en:'Music Life'}, {id:'read', zh:'阅读人生', en:'Reading Life'}];
             app.innerHTML = `
                 <div class="h-[40vh] flex flex-col justify-end pb-12 px-4">
                     <h1 class="tracking-tighter">
@@ -153,67 +140,64 @@
                     </h1>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
-                    ${menus.map(m => `
-                        <div onclick="switchPage('${m.id}')" class="glass p-10 cursor-pointer group hover:bg-white/5 transition-all">
-                            <span class="zh text-2xl mb-2 group-hover:tracking-widest transition-all">${m.zh}</span>
-                            <span class="en text-[10px]">${m.en}</span>
-                        </div>`).join('')}
+                    ${menus.map(m => `<div onclick="switchPage('${m.id}')" class="glass p-10 cursor-pointer group hover:bg-white/5 transition-all"><span class="zh text-2xl mb-2 group-hover:tracking-widest transition-all">${m.zh}</span><span class="en text-[10px]">${m.en}</span></div>`).join('')}
                 </div>
             `;
         }
 
         function renderWorks() {
-            const projects = [
-                {zh:'1.离不了', en:'UNSEPARABLE', img:'批判1.png'},
-                {zh:'2.新保龄运动', en:'NEW BOWLING MOVEMENT', img:'保龄1.png'},
-                {zh:'3.血液涅槃', en:'BLOOD NIRVANA', img:'血液1.png'},
-                {zh:'4.健身工厂', en:'FITNESS FACTORY', img:'健身1.png'}
-            ];
+            const projects = [{zh:'1.离不了', en:'UNSEPARABLE', img:'批判1.png'}, {zh:'2.新保龄运动', en:'NEW BOWLING MOVEMENT', img:'保龄1.png'}, {zh:'3.血液涅槃', en:'BLOOD NIRVANA', img:'血液1.png'}, {zh:'4.健身工厂', en:'FITNESS FACTORY', img:'健身1.png'}];
             app.innerHTML = `
-                <div class="mb-12 px-4 text-group">
-                    <span class="zh text-6xl font-light tracking-tighter">视觉作品集</span>
-                    <span class="en text-lg">Visual Archive</span>
-                </div>
+                <div class="mb-12 px-4"><span class="zh text-6xl font-light tracking-tighter">视觉作品集</span><span class="en text-lg">Visual Archive</span></div>
                 <div class="works-grid px-4">
-                    ${projects.map(p => `
-                        <div class="glass p-5">
-                            <div class="works-card"><img src="${p.img}" onerror="this.src='https://via.placeholder.com/800x400/111?text=${p.zh}'"></div>
-                            <div class="mt-6 border-t border-white/5 pt-4">
-                                <span class="zh text-xl">${p.zh}</span>
-                                <span class="en text-[10px] mt-1 opacity-30 uppercase">${p.en}</span>
-                            </div>
-                        </div>`).join('')}
+                    ${projects.map(p => `<div class="glass p-5"><div class="works-card"><img src="${p.img}" onerror="this.src='https://via.placeholder.com/800x400/111?text=${p.zh}'"></div><div class="mt-6 border-t border-white/5 pt-4"><span class="zh text-xl">${p.zh}</span><span class="en text-[10px] mt-1 opacity-30 uppercase">${p.en}</span></div></div>`).join('')}
                 </div>
             `;
         }
 
         function renderCinema() {
             const top10 = [
-                {name:'新世界', en:'New World', url:'10756762', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9vHofM6cZonF1Xb1Gcl5CjE3ZkI.jpg'},
-                {name:'杀死比尔', en:'Kill Bill', url:'1291585', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/27TeSl3S8pZ1v7BNvL97m9v987E.jpg'},
-                {name:'无间道', en:'Infernal Affairs', url:'1307914', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6yDInN27RtoWqO3uQ57Z6C6N7f.jpg'},
-                {name:'姜戈', en:'Django', url:'6307447', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7oWY86pS9YfcP368oXvR707qqPk.jpg'},
-                {name:'星际穿越', en:'Interstellar', url:'1889243', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gEU2QniE6E07Qv8vNGp9oYmtp6B.jpg'},
-                {name:'胭脂扣', en:'Rouge', url:'1300325', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/i9uQUv9EPia99SStpS68Z99986G.jpg'},
-                {name:'爱在黎明', en:'Before Sunrise', url:'1296339', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/69Sns8WoYnEJtG69yz6qvev5oM6.jpg'},
-                {name:'勇士', en:'Warrior', url:'3141107', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pA0VscSByjM3H9R9Zf61X8k8V1B.jpg'},
-                {name:'七宗罪', en:'Se7en', url:'1292223', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/69Sns8WoYnEJtG69yz6qvev5oM6.jpg'},
-                {name:'美国丽人', en:'American Beauty', url:'1292062', poster:'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/w7r3bsiD7YEq6t9Lp9nu6kz9P6O.jpg'}
+                {name:'新世界', en:'New World'}, {name:'杀死比尔', en:'Kill Bill'}, 
+                {name:'无间道', en:'Infernal Affairs'}, {name:'被解救的姜戈', en:'Django Unchained'}, 
+                {name:'星际穿越', en:'Interstellar'}, {name:'胭脂扣', en:'Rouge'}, 
+                {name:'爱在黎明破晓前', en:'Before Sunrise'}, {name:'勇士', en:'Warrior'}, 
+                {name:'七宗罪', en:'Se7en'}, {name:'美国丽人', en:'American Beauty'}
+            ];
+
+            const favorites = [
+                {role:'喜欢的导演', name:'昆汀·塔伦蒂诺', en:'Quentin Tarantino', img:'导演.png'},
+                {role:'喜欢的男演员', name:'李政宰', en:'Lee Jung-jae', img:'男演员.png'},
+                {role:'喜欢的女演员', name:'舒淇', en:'Shu Qi', img:'女演员.png'}
             ];
 
             app.innerHTML = `
-                <div class="mb-10 px-4"><span class="zh text-6xl font-light tracking-tighter">电影人生</span><span class="en text-lg">Cinema Archive / Top 10</span></div>
+                <div class="mb-10 px-4"><span class="zh text-6xl font-light tracking-tighter">电影人生</span><span class="en text-lg">Cinema Archive</span></div>
                 
-                <div class="mb-16 px-4 scrollbar-hide">
-                    <div class="dragon-row">
-                        ${top10.map((m, i) => `
-                            <div class="dragon-item" style="z-index:${20-i}" onclick="window.open('https://movie.douban.com/subject/${m.url}/', '_blank')">
-                                <div class="vertical-title">
-                                    <span class="v-zh">${m.name}</span>
-                                    <span class="v-en">${m.en}</span>
-                                </div>
-                                <img src="${m.poster}" alt="${m.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x450/222?text=${m.name}'">
-                            </div>`).join('')}
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 px-4 mb-16">
+                    <div class="glass p-8 overflow-hidden">
+                        <span class="zh text-sm opacity-30 mb-6 tracking-widest uppercase">My Top 10</span>
+                        <div class="dragon-row">
+                            ${top10.map((m, i) => `
+                                <div class="dragon-item" style="z-index:${20-i}">
+                                    <div class="vertical-title"><span class="v-zh">${m.name}</span></div>
+                                    <img src="${m.name}.png" onerror="this.src='https://via.placeholder.com/300x450/222?text=${m.name}'">
+                                </div>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="glass p-8">
+                        <span class="zh text-sm opacity-30 mb-6 tracking-widest uppercase">Favorite Artists</span>
+                        <div class="grid grid-cols-3 gap-4">
+                            ${favorites.map(f => `
+                                <div class="artist-card">
+                                    <img src="${f.img}" onerror="this.src='https://via.placeholder.com/400x600/111?text=${f.name}'">
+                                    <div class="artist-label">
+                                        <span class="zh text-[10px] opacity-50 mb-1">${f.role}</span>
+                                        <span class="zh text-xs font-bold">${f.name}</span>
+                                        <span class="en text-[7px] opacity-30">${f.en}</span>
+                                    </div>
+                                </div>`).join('')}
+                        </div>
                     </div>
                 </div>
 
@@ -228,20 +212,11 @@
             displayMovies(movieData, true);
         }
 
-        // 电影显示逻辑 (经典版)
         function displayMovies(movies, initWall = false) {
             const listGrid = document.getElementById('movie-list-grid');
             const wall = document.getElementById('cinema-wall');
             if(!listGrid || !wall) return;
-
-            listGrid.innerHTML = movies.map(m => {
-                const parts = m.title.split(' / ');
-                return `<div class="cursor-pointer group" onclick="window.open('https://search.douban.com/movie/subject_search?search_text='+encodeURIComponent('${parts[0]}'), '_blank')">
-                    <div class="zh text-[13px] opacity-40 group-hover:opacity-100 transition-all truncate">${parts[0]}</div>
-                    <div class="en text-[8px] opacity-10 group-hover:opacity-30 truncate uppercase">${parts[1] || ''}</div>
-                </div>`;
-            }).join('');
-
+            listGrid.innerHTML = movies.map(m => `<div class="cursor-pointer group" onclick="window.open('https://search.douban.com/movie/subject_search?search_text='+encodeURIComponent('${m.title.split('/')[0]}'), '_blank')"><div class="zh text-[13px] opacity-40 group-hover:opacity-100 transition-all truncate">${m.title.split('/')[0]}</div><div class="en text-[8px] opacity-10 group-hover:opacity-30 truncate uppercase">${m.title.split('/')[1] || ''}</div></div>`).join('');
             if(initWall) {
                 wall.innerHTML = movieData.map(m => `<img data-src="${m.poster}" class="kiss-item lazy-item" onerror="this.remove()">`).join('');
                 initLazyLoading();
@@ -253,32 +228,16 @@
             const term = document.getElementById('movieSearch').value.trim().toLowerCase();
             const filtered = movieData.filter(m => m.title.toLowerCase().includes(term));
             displayMovies(term === '' ? movieData : filtered);
-            
-            searchTimer = setTimeout(() => { 
-                if (term !== '' && filtered.length === 0) { 
-                    adOverlay.style.pointerEvents = 'auto'; 
-                    adOverlay.style.opacity = '1'; 
-                } 
-            }, 1200);
+            searchTimer = setTimeout(() => { if (term !== '' && filtered.length === 0) { adOverlay.style.opacity = '1'; adOverlay.style.pointerEvents = 'auto'; } }, 1500);
         }
 
         function initLazyLoading() {
-            const observer = new IntersectionObserver((entries, obs) => { 
-                entries.forEach(entry => { 
-                    if (entry.isIntersecting) { 
-                        const img = entry.target; 
-                        img.src = img.dataset.src; 
-                        img.onload = () => img.classList.add('loaded'); 
-                        obs.unobserve(img); 
-                    } 
-                }); 
-            }, { rootMargin: "0px 0px 800px 0px" });
+            const observer = new IntersectionObserver((entries, obs) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.onload = () => img.classList.add('loaded'); obs.unobserve(img); } }); }, { rootMargin: "0px 0px 500px 0px" });
             document.querySelectorAll('.lazy-item').forEach(img => observer.observe(img));
         }
 
         function closeAd() { adOverlay.style.opacity = '0'; adOverlay.style.pointerEvents = 'none'; document.getElementById('movieSearch').value = ''; displayMovies(movieData); }
         function renderSoon(p) { app.innerHTML = `<div class="py-60 text-center glass mx-4"><span class="zh opacity-20 text-4xl uppercase">${p} Coming Soon</span></div>`; }
-        
         window.onload = () => switchPage('home');
     </script>
 </body>
