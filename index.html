@@ -14,7 +14,6 @@
             background-size: cover; background-position: center; background-attachment: fixed;
             overflow-x: hidden;
         }
-        /* 根据你的根目录图片命名 */
         @media (min-width: 768px) { body { background-image: url('horse.jpg'); } }
         @media (max-width: 767px) { body { background-image: url('mobile_bg.jpg'); } }
 
@@ -51,20 +50,23 @@
         .stack-layer { position: absolute; width: 60%; height: 90%; transition: 0.5s; border-radius: 8px; cursor: pointer; }
         .stack-layer:hover { transform: translateX(15px) scale(1.02); z-index: 60 !important; }
 
-        /* 摄影流 */
+        /* 摄影流优化：预留高度减少闪烁 */
         .tight-photo-grid { columns: 3; gap: 4px; }
         @media (min-width: 768px) { .tight-photo-grid { columns: 5; } }
+        .photo-item { break-inside: avoid; margin-bottom: 4px; background: #111; border-radius: 8px; overflow: hidden; }
 
-        /* 电影名单 4 列 */
-        .movie-list-4col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; }
+        /* 电影名单完整显示逻辑 */
+        .movie-list-4col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
         @media (max-width: 767px) { .movie-list-4col { grid-template-columns: repeat(2, 1fr); } }
+        .movie-card { border-left: 1px solid rgba(255,255,255,0.05); padding-left: 8px; transition: 0.3s; }
+        .movie-card:hover { border-left-color: #fff; opacity: 1 !important; }
 
         #viewer, #ad-pop { display: none; position: fixed; inset: 0; z-index: 1000; flex-direction: column; align-items: center; justify-content: center; }
         #viewer { background: rgba(0,0,0,0.98); }
         #ad-pop { background: rgba(0,0,0,0.85); backdrop-filter: blur(40px); }
 
         .zh { display: block; font-weight: 400; line-height: 1.2; }
-        .en { display: block; font-weight: 100; opacity: 0.4; letter-spacing: 0.1em; text-transform: uppercase; }
+        .en { display: block; font-weight: 100; opacity: 0.4; letter-spacing: 0.05em; text-transform: uppercase; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
     </style>
 </head>
@@ -117,7 +119,6 @@
         let currentImgList = [];
         let currentIndex = 0;
 
-        // 核心渲染函数
         function renderHome() {
             app.innerHTML = `
                 <div class="h-[35vh] flex flex-col justify-end pb-12 px-4">
@@ -141,25 +142,14 @@
         }
 
         function renderWorks() {
-            const projects = [
-                {zh: '离不了', prefix: '平面设计/离不了', count: 4},
-                {zh: '新保龄运动', prefix: '平面设计/新保龄运动', count: 6},
-                {zh: '血液涅槃', prefix: '平面设计/血液涅槃', count: 4},
-                {zh: '健身工厂', prefix: '平面设计/健身工厂', count: 5}
-            ];
+            const projects = [{zh: '离不了', prefix: '平面设计/离不了', count: 4}, {zh: '新保龄运动', prefix: '平面设计/新保龄运动', count: 6}, {zh: '血液涅槃', prefix: '平面设计/血液涅槃', count: 4}, {zh: '健身工厂', prefix: '平面设计/健身工厂', count: 5}];
             app.innerHTML = `<div class="mb-12 px-4"><span class="zh text-6xl font-light">视觉作品集</span><span class="en text-sm mt-2 opacity-30">Portfolio</span></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-                    ${projects.map(p => `
-                        <div class="glass p-6 group">
-                            <div class="design-stack">${Array.from({length: p.count}).map((_, i) => `
-                                <div class="stack-layer shadow-xl" style="left:${i*12}%; z-index:${p.count-i}; background:#111;" onclick="openViewer('${p.prefix}', ${i+1}, ${p.count})">
-                                    <img src="${p.prefix}${i+1}.png" class="w-full h-full object-cover rounded-lg">
-                                </div>`).join('')}</div>
-                            <div class="mt-4"><span class="zh text-xl">${p.zh}</span></div>
-                        </div>`).join('')}
+                    ${projects.map(p => `<div class="glass p-6 group"><div class="design-stack">${Array.from({length: p.count}).map((_, i) => `<div class="stack-layer shadow-xl" style="left:${i*12}%; z-index:${p.count-i}; background:#111;" onclick="openViewer('${p.prefix}', ${i+1}, ${p.count})"><img src="${p.prefix}${i+1}.png" class="w-full h-full object-cover rounded-lg"></div>`).join('')}</div><div class="mt-4"><span class="zh text-xl">${p.zh}</span></div></div>`).join('')}
                 </div>`;
         }
 
+        // --- 摄影优化：懒加载与渐进渲染 ---
         function renderPhoto() {
             const cats = [{id:'商业摄影', zh:'商业摄影'}, {id:'情绪摄影', zh:'情绪摄影'}, {id:'自媒体摄影', zh:'自媒体摄影'}];
             app.innerHTML = `<div class="flex flex-col md:flex-row gap-8 px-4 min-h-[70vh]">
@@ -167,7 +157,9 @@
                     <div class="mb-4"><span class="zh text-5xl font-light">摄影</span><span class="en text-xs mt-1 opacity-20">Photography</span></div>
                     ${cats.map(c => `<div onclick="loadPhotoSet('${c.id}')" class="glass p-5 cursor-pointer hover:bg-white/10 transition-all border-l-2 border-transparent hover:border-white/40"><span class="zh text-lg">${c.zh}</span></div>`).join('')}
                 </div>
-                <div class="flex-1 glass p-2 overflow-y-auto max-h-[85vh] no-scrollbar"><div id="photo-grid" class="tight-photo-grid"></div></div>
+                <div class="flex-1 glass p-4 overflow-y-auto max-h-[85vh] no-scrollbar" id="photo-scroll-container">
+                    <div id="photo-grid" class="tight-photo-grid"></div>
+                </div>
             </div>`;
             loadPhotoSet('商业摄影');
         }
@@ -175,11 +167,23 @@
         function loadPhotoSet(prefix) {
             const grid = document.getElementById('photo-grid');
             grid.innerHTML = '';
-            for(let i=1; i<=18; i++) {
-                grid.innerHTML += `<div class="break-inside-avoid mb-1"><img src="摄影/${prefix}${i}.jpg" class="w-full h-auto rounded-lg" onerror="this.parentElement.remove()"></div>`;
+            // 采用递归异步加载，防止阻塞主线程
+            let i = 1;
+            const max = 30; // 假设每组最多30张
+            function addNext() {
+                if(i > max) return;
+                const item = document.createElement('div');
+                item.className = 'photo-item';
+                // 使用 loading="lazy" 和 低质量占位技巧
+                item.innerHTML = `<img src="摄影/${prefix}${i}.jpg" loading="lazy" class="w-full h-auto opacity-0 transition-opacity duration-700" onload="this.style.opacity='1'" onerror="this.parentElement.remove()">`;
+                grid.appendChild(item);
+                i++;
+                setTimeout(addNext, 50); // 每50ms插入一张，保持UI丝滑
             }
+            addNext();
         }
 
+        // --- 电影人生：全量双语显示 ---
         function renderCinema() {
             const top10 = [
                 {zh:'星际穿越', img:'电影个人十佳海报/星际穿越.png'}, {zh:'杀死比尔2', img:'电影个人十佳海报/杀死比尔2.png'},
@@ -188,12 +192,7 @@
                 {zh:'新世界', img:'电影个人十佳海报/新世界.png'}, {zh:'胭脂扣', img:'电影个人十佳海报/胭脂扣.png'},
                 {zh:'被解救的姜戈', img:'电影个人十佳海报/被解救的姜戈.png'}, {zh:'无间道', img:'电影个人十佳海报/无间道.png'}
             ];
-            const artists = [
-                {zh:'凯拉奈特利', img:'电影 演员导演/凯拉奈特利.jpg'}, {zh:'诺兰', img:'电影 演员导演/诺兰.jpg'},
-                {zh:'张国荣', img:'电影 演员导演/张国荣.jpg'}, {zh:'黑泽明', img:'电影 演员导演/黑泽明.jpg'},
-                {zh:'朱莉娅罗伯茨', img:'电影 演员导演/朱莉娅罗伯茨.jpg'}, {zh:'昆汀', img:'电影 演员导演/昆汀.jpg'},
-                {zh:'布拉德皮特', img:'电影 演员导演/布拉德皮特.jpg'}
-            ];
+            const artists = [{zh:'凯拉奈特利', img:'电影 演员导演/凯拉奈特利.jpg'}, {zh:'诺兰', img:'电影 演员导演/诺兰.jpg'}, {zh:'张国荣', img:'电影 演员导演/张国荣.jpg'}, {zh:'黑泽明', img:'电影 演员导演/黑泽明.jpg'}, {zh:'朱莉娅罗伯茨', img:'电影 演员导演/朱莉娅罗伯茨.jpg'}, {zh:'昆汀', img:'电影 演员导演/昆汀.jpg'}, {zh:'布拉德皮特', img:'电影 演员导演/布拉德皮特.jpg'}];
             const genres = [{zh:'全部', en:'ALL'}, {zh:'剧情', en:'DRAMA'}, {zh:'科幻', en:'SCI-FI'}, {zh:'犯罪', en:'CRIME'}, {zh:'悬疑', en:'MYSTERY'}];
 
             app.innerHTML = `
@@ -205,7 +204,7 @@
                 <div class="px-4"><div class="glass p-8 md:p-12">
                     <div class="mb-6 max-w-2xl mx-auto"><input type="text" id="movieSearch" class="apple-search" placeholder="搜一部你觉得毛天艺没看过的电影 / Search..." oninput="liveSearch()" onkeydown="handleSearchEnter(event)"></div>
                     <div class="mb-10 max-w-2xl mx-auto overflow-x-auto no-scrollbar"><div class="flex gap-3 pb-2">${genres.map(g => `<button onclick="filterByGenre('${g.zh}', this)" class="genre-btn px-6 py-2 rounded-xl bg-white/5 border border-white/10 text-[11px] min-w-[90px] hover:bg-white/10 transition-all"><span class="zh">${g.zh}</span><span class="en opacity-30 text-[8px]">${g.en}</span></button>`).join('')}</div></div>
-                    <div id="movie-names" class="movie-list-4col"></div>
+                    <div id="movie-names" class="movie-list-4col overflow-y-auto max-h-[1000px] pr-4 no-scrollbar"></div>
                 </div></div>`;
             updateMovieGrid(movieData);
         }
@@ -213,7 +212,16 @@
         function updateMovieGrid(list) {
             const container = document.getElementById('movie-names');
             if(!container) return;
-            container.innerHTML = list.slice(0, 160).map(m => `<div class="zh text-[10px] opacity-30 hover:opacity-100 truncate border-l border-white/5 pl-2 transition-all">${m.title.split(' / ')[0]}</div>`).join('');
+            // 全量显示 600+ 部，并解析中英文
+            container.innerHTML = list.map(m => {
+                const parts = m.title.split(' / ');
+                const cn = parts[0] || "";
+                const en = parts[1] || "";
+                return `<div class="movie-card opacity-30 hover:opacity-100">
+                    <span class="zh text-[11px] mb-0.5">${cn}</span>
+                    <span class="en text-[8px] leading-tight break-words">${en}</span>
+                </div>`;
+            }).join('');
         }
 
         function liveSearch() {
@@ -245,7 +253,6 @@
                 </div>`;
         }
 
-        // 辅助逻辑
         function switchPage(page) {
             app.style.opacity = '0';
             setTimeout(() => {
@@ -261,8 +268,7 @@
 
         function openViewer(prefix, index, count) {
             currentImgList = Array.from({length: count}, (_, i) => `${prefix}${i+1}.png`);
-            currentIndex = 0;
-            updateViewer();
+            currentIndex = 0; updateViewer();
             document.getElementById('viewer').style.display = 'flex';
         }
         function closeViewer() { document.getElementById('viewer').style.display = 'none'; }
@@ -277,11 +283,9 @@
         }
         function handleGlobalClick() { if (audio.paused) audio.play().catch(()=>{}); updateMusicIcon(); }
 
-        // 初始化
         window.addEventListener('load', () => {
             renderHome();
             app.style.opacity = '1';
-            if(typeof movieData === 'undefined') window.movieData = [];
         });
     </script>
 </body>
