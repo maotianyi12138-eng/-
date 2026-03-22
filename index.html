@@ -23,48 +23,44 @@
             background: rgba(255, 255, 255, 0.015);
             backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
             border: 0.5px solid rgba(255, 255, 255, 0.05); border-radius: 2rem;
-            display: flex; flex-direction: column;
         }
 
         .zh { display: block; font-weight: 400; line-height: 1.2; }
         .en { display: block; font-weight: 100; opacity: 0.4; letter-spacing: 0.1em; text-transform: uppercase; }
 
-        .back-arrow {
-            position: fixed; top: 2.5rem; left: 2.5rem; z-index: 500;
-            font-size: 1.8rem; color: #fff; cursor: pointer; transition: 0.3s;
-        }
-        .back-arrow:hover { transform: translateX(-5px); opacity: 0.6; }
-
-        /* 个人十佳 龙鳞布局优化 */
-        .dragon-row { display: flex; overflow-x: auto; padding: 20px 0; scrollbar-width: none; align-items: flex-end; flex-grow: 1; }
+        /* 龙鳞装 - 侧边栏及对齐优化 */
+        .dragon-row { display: flex; overflow-x: auto; padding: 10px 0; scrollbar-width: none; align-items: flex-end; }
         .dragon-item {
-            flex: 0 0 100px; margin-right: -50px; 
+            flex: 0 0 100px; margin-right: -55px; 
             transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
             cursor: pointer; position: relative;
+            display: flex; flex-direction: column; align-items: center;
         }
-        .dragon-item:hover { margin-right: 50px; transform: translateY(-10px); z-index: 100 !important; }
+        .dragon-item:hover { margin-right: 55px; transform: translateY(-10px); z-index: 100 !important; }
         
         .vertical-title {
             writing-mode: vertical-rl; text-orientation: mixed;
             font-size: 10px; margin-bottom: 15px; letter-spacing: 0.3em;
-            height: 140px; text-align: right; pointer-events: none;
-            color: rgba(255,255,255,0.8);
+            height: 180px; text-align: right; pointer-events: none;
+            display: flex; flex-direction: column; align-items: center;
         }
+        .v-zh { color: rgba(255,255,255,0.9); font-weight: 500; margin-left: 4px; }
+        .v-en { color: rgba(255,255,255,0.2); font-size: 7px; font-weight: 100; text-transform: uppercase; margin-top: 5px; }
 
         .dragon-item img { 
             width: 100%; aspect-ratio: 2/3; object-fit: cover; 
-            border: 0.5px solid rgba(255,255,255,0.2); border-radius: 4px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 0.5px solid rgba(255,255,255,0.15); border-radius: 4px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
         }
 
-        /* 艺人 3x3 板块对齐海报墙比例 */
-        .artist-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; flex-grow: 1; }
+        /* 艺人 3x3 板块对齐海报墙 */
+        .artist-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
         .artist-card { aspect-ratio: 2/3; overflow: hidden; border-radius: 0.8rem; position: relative; border: 0.5px solid rgba(255,255,255,0.08); background: #111; }
-        .artist-card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; transition: 0.5s; }
+        .artist-card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; transition: 0.6s; }
         .artist-card:hover img { opacity: 1; transform: scale(1.05); }
-        .artist-info { position: absolute; bottom: 0; left: 0; width: 100%; padding: 10px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); }
+        .artist-info { position: absolute; bottom: 0; left: 0; width: 100%; padding: 8px; background: linear-gradient(transparent, rgba(0,0,0,0.95)); }
 
-        /* 亲吻墙网格 */
+        /* 电影墙 */
         .kiss-wall { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; width: 100%; }
         .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0; transition: opacity 1s; }
         .kiss-item.loaded { opacity: 0.5; }
@@ -76,8 +72,7 @@
 <body onclick="playMusic()">
     <audio id="main-audio" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
     <div id="nav-ui" class="hidden"><div class="back-arrow" onclick="switchPage('home')">←</div></div>
-    <div id="audio-control" class="audio-btn fixed top-6 right-6 w-11 h-11 rounded-full bg-white/5 backdrop-blur-md z-[500] flex justify-center items-center cursor-pointer" onclick="toggleAudio(event)"><div class="play-icon border-y-[7px] border-y-transparent border-l-[11px] border-l-white ml-0.5" id="icon"></div></div>
-
+    
     <div id="app-content" class="pt-32 p-6 md:p-20 transition-opacity duration-500"></div>
 
     <script src="movies.js"></script>
@@ -85,62 +80,80 @@
         const audio = document.getElementById('main-audio');
         const app = document.getElementById('app-content');
         const navUI = document.getElementById('nav-ui');
-        const icon = document.getElementById('icon');
 
-        function playMusic() { if (audio.paused) { audio.play().then(() => updateAudioUI(true)).catch(()=>{}); } }
-        function toggleAudio(e) { e.stopPropagation(); if (audio.paused) { audio.play(); updateAudioUI(true); } else { audio.pause(); updateAudioUI(false); } }
-        function updateAudioUI(isPlaying) { icon.className = isPlaying ? 'w-[10px] h-[12px] border-l-[3px] border-r-[3px] border-white' : 'border-y-[7px] border-y-transparent border-l-[11px] border-l-white ml-0.5'; }
-
+        function playMusic() { if (audio.paused) { audio.play().catch(()=>{}); } }
         function switchPage(page) {
             app.style.opacity = '0';
             setTimeout(() => {
                 navUI.classList.toggle('hidden', page === 'home');
                 if(page === 'home') renderHome();
                 else if(page === 'cinema') renderCinema();
-                else renderSoon(page);
                 app.style.opacity = '1'; window.scrollTo(0,0);
             }, 400);
         }
 
         function renderHome() {
-            const menus = [{id:'cinema', zh:'电影人生', en:'Cinema Life'}, {id:'music', zh:'音乐人生', en:'Music Life'}, {id:'read', zh:'阅读人生', en:'Reading Life'}];
             app.innerHTML = `<div class="h-[40vh] flex flex-col justify-end pb-12 px-4"><h1><span class="zh text-[16vw] md:text-[9vw] font-light">毛天艺</span></h1></div>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 px-4">${menus.map(m => `<div onclick="switchPage('${m.id}')" class="glass p-10 cursor-pointer group hover:bg-white/5 transition-all"><span class="zh text-2xl mb-2 group-hover:tracking-widest transition-all">${m.zh}</span><span class="en text-[10px]">${m.en}</span></div>`).join('')}</div>`;
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 px-4">
+                    <div onclick="switchPage('cinema')" class="glass p-10 cursor-pointer group hover:bg-white/5 transition-all"><span class="zh text-2xl mb-2 group-hover:tracking-widest transition-all">电影人生</span><span class="en text-[10px]">Cinema Life</span></div>
+                </div>`;
         }
 
         function renderCinema() {
-            const top10 = ['新世界', '杀死比尔', '无间道', '被解救的姜戈', '星际穿越', '胭脂扣', '爱在黎明破晓前', '勇士', '七宗罪', '美国丽人'];
+            const top10 = [
+                {zh:'新世界', en:'New World'}, {zh:'杀死比尔', en:'Kill Bill'}, 
+                {zh:'无间道', en:'Internal Affairs'}, {zh:'被解救的姜戈', en:'Django Unchained'}, 
+                {zh:'星际穿越', en:'Interstellar'}, {zh:'胭脂扣', en:'Rouge'}, 
+                {zh:'爱在黎明破晓前', en:'Before Sunrise'}, {zh:'勇士', en:'Warrior'}, 
+                {zh:'七宗罪', en:'Se7en'}, {zh:'美国丽人', en:'American Beauty'}
+            ];
             
             const artists = [
-                {type:'导演', names:['昆汀', '黑泽明', '诺兰']},
-                {type:'男演员', names:['布拉德皮特', '休格兰特', '张国荣']},
-                {type:'女演员', names:['安吉丽娜朱莉', '凯拉奈特利', '朱莉娅罗伯茨']}
+                {type:'DIRECTOR', names:[
+                    {zh:'昆汀', en:'Quentin Tarantino', img:'https://img1.doubanio.com/view/photo/l/public/p1917601710.jpg'},
+                    {zh:'黑泽明', en:'Akira Kurosawa', img:'https://img1.doubanio.com/view/photo/l/public/p976101747.jpg'},
+                    {zh:'诺兰', en:'Christopher Nolan', img:'https://img1.doubanio.com/view/photo/l/public/p642960334.jpg'}
+                ]},
+                {type:'ACTOR', names:[
+                    {zh:'布拉德皮特', en:'Brad Pitt', img:'https://img1.doubanio.com/view/photo/l/public/p1026468025.jpg'},
+                    {zh:'休格兰特', en:'Hugh Grant', img:'https://img1.doubanio.com/view/photo/l/public/p643096837.jpg'},
+                    {zh:'张国荣', en:'Leslie Cheung', img:'https://img1.doubanio.com/view/photo/l/public/p643053678.jpg'}
+                ]},
+                {type:'ACTRESS', names:[
+                    {zh:'安吉丽娜朱莉', en:'Angelina Jolie', img:'https://img1.doubanio.com/view/photo/l/public/p2211824901.jpg'},
+                    {zh:'凯拉奈特利', en:'Keira Knightley', img:'https://img1.doubanio.com/view/photo/l/public/p1251764866.jpg'},
+                    {zh:'朱莉娅罗伯茨', en:'Julia Roberts', img:'https://img1.doubanio.com/view/photo/l/public/p1704524740.jpg'}
+                ]}
             ];
 
             app.innerHTML = `
                 <div class="mb-10 px-4"><span class="zh text-6xl font-light tracking-tighter">电影人生</span><span class="en text-lg">Cinema Archive</span></div>
                 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 px-4 mb-16 items-stretch">
-                    <div class="glass p-10">
-                        <span class="zh text-sm opacity-30 mb-8 tracking-widest uppercase">My Top 10 Archive</span>
-                        <div class="dragon-row">
-                            ${top10.map((name, i) => `
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 mb-12 items-stretch">
+                    <div class="glass p-10 min-h-[520px] flex flex-col">
+                        <span class="zh text-sm opacity-30 mb-6 tracking-widest uppercase">My Top 10 Selection</span>
+                        <div class="dragon-row flex-grow">
+                            ${top10.map((m, i) => `
                                 <div class="dragon-item" style="z-index:${20-i}">
-                                    <div class="vertical-title"><span class="v-zh">${name}</span></div>
-                                    <img src="${name}.png" onerror="this.src='https://via.placeholder.com/300x450/222?text=${name}'">
+                                    <div class="vertical-title">
+                                        <span class="v-zh">${m.zh}</span>
+                                        <span class="v-en">${m.en}</span>
+                                    </div>
+                                    <img src="${m.zh}.png" onerror="this.src='https://via.placeholder.com/300x450/222?text=${m.zh}'">
                                 </div>`).join('')}
                         </div>
                     </div>
                     
-                    <div class="glass p-10">
-                        <span class="zh text-sm opacity-30 mb-8 tracking-widest uppercase">Favorite Artists</span>
-                        <div class="artist-grid">
+                    <div class="glass p-10 min-h-[520px] flex flex-col">
+                        <span class="zh text-sm opacity-30 mb-6 tracking-widest uppercase">Iconic Directors & Actors</span>
+                        <div class="artist-grid flex-grow">
                             ${artists.map(group => group.names.map(name => `
                                 <div class="artist-card">
-                                    <img src="${name}.png" onerror="this.src='https://via.placeholder.com/400x600/111?text=${name}'">
+                                    <img src="${name.img}" alt="${name.zh}">
                                     <div class="artist-info">
-                                        <span class="zh text-[9px] opacity-40">${group.type}</span>
-                                        <span class="zh text-[11px] font-bold">${name}</span>
+                                        <span class="zh text-[8px] opacity-30 uppercase tracking-tighter">${group.type}</span>
+                                        <span class="zh text-[11px] font-bold">${name.zh}</span>
+                                        <span class="en text-[7px] opacity-40 uppercase truncate">${name.en}</span>
                                     </div>
                                 </div>`).join('')).join('')}
                         </div>
@@ -162,21 +175,19 @@
             const listGrid = document.getElementById('movie-list-grid');
             const wall = document.getElementById('cinema-wall');
             if(!listGrid || !wall) return;
-            listGrid.innerHTML = movies.map(m => `<div class="cursor-pointer group" onclick="window.open('https://search.douban.com/movie/subject_search?search_text='+encodeURIComponent('${m.title.split('/')[0]}'), '_blank')"><div class="zh text-[13px] opacity-40 group-hover:opacity-100 transition-all truncate">${m.title.split('/')[0]}</div><div class="en text-[8px] opacity-10 group-hover:opacity-30 truncate uppercase">${m.title.split('/')[1] || ''}</div></div>`).join('');
+            listGrid.innerHTML = movies.map(m => `<div class="cursor-pointer group"><div class="zh text-[13px] opacity-40 group-hover:opacity-100 transition-all truncate">${m.title.split(' / ')[0]}</div></div>`).join('');
             if(initWall) {
                 wall.innerHTML = movieData.map(m => `<img data-src="${m.poster}" class="kiss-item lazy-item" onerror="this.remove()">`).join('');
-                const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.onload = () => img.classList.add('loaded'); observer.unobserve(img); } }); }, { rootMargin: "500px" });
+                const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.onload = () => img.classList.add('loaded'); observer.unobserve(img); } }); }, { rootMargin: "600px" });
                 document.querySelectorAll('.lazy-item').forEach(img => observer.observe(img));
             }
         }
 
         function debounceSearch() {
             const term = document.getElementById('movieSearch').value.trim().toLowerCase();
-            const filtered = movieData.filter(m => m.title.toLowerCase().includes(term));
-            displayMovies(term === '' ? movieData : filtered);
+            displayMovies(movieData.filter(m => m.title.toLowerCase().includes(term)));
         }
 
-        function renderSoon(p) { app.innerHTML = `<div class="py-60 text-center glass mx-4"><span class="zh opacity-20 text-4xl uppercase">${p} Coming Soon</span></div>`; }
         window.onload = () => switchPage('home');
     </script>
 </body>
