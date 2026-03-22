@@ -28,45 +28,48 @@
         .zh { display: block; font-weight: 400; line-height: 1.2; }
         .en { display: block; font-weight: 100; opacity: 0.4; letter-spacing: 0.1em; text-transform: uppercase; }
 
-        /* 极窄龙鳞装 */
-        .dragon-row { display: flex; overflow-x: auto; padding: 5px 0; scrollbar-width: none; align-items: flex-end; }
+        /* 个人十佳：撑满容器的龙鳞布局 */
+        .dragon-row { 
+            display: flex; overflow-x: auto; padding: 0; scrollbar-width: none; 
+            align-items: stretch; height: 100%; width: 100%;
+        }
         .dragon-item {
-            flex: 0 0 70px; margin-right: -35px; 
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            cursor: pointer; position: relative;
+            flex: 0 0 140px; margin-right: -70px; 
+            transition: all 0.6s cubic-bezier(0.2, 1, 0.2, 1);
+            cursor: pointer; position: relative; height: 100%;
         }
-        .dragon-item:hover { margin-right: 40px; transform: translateY(-5px); z-index: 100 !important; }
-        
-        .vertical-title {
-            writing-mode: vertical-rl; font-size: 9px; margin-bottom: 8px; letter-spacing: 0.2em;
-            height: 100px; text-align: right; pointer-events: none;
-        }
-        .v-zh { color: rgba(255,255,255,0.8); }
-        .v-en { color: rgba(255,255,255,0.15); font-size: 7px; margin-top: 4px; }
-
+        .dragon-item:hover { margin-right: 70px; z-index: 100 !important; transform: scale(1.05); }
         .dragon-item img { 
-            width: 100%; aspect-ratio: 2/3; object-fit: cover; 
-            border: 0.5px solid rgba(255,255,255,0.1); border-radius: 3px; 
+            width: 100%; height: 100%; object-fit: cover; 
+            border-right: 0.5px solid rgba(255,255,255,0.1);
+        }
+        .dragon-title {
+            position: absolute; bottom: 20px; left: 10px; z-index: 10;
+            writing-mode: vertical-rl; pointer-events: none;
         }
 
-        /* 极窄艺人板块 */
-        .artist-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; height: 100%; }
-        .artist-card { aspect-ratio: 2/3; overflow: hidden; border-radius: 0.5rem; position: relative; background: #111; }
-        .artist-card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
-        .artist-info { position: absolute; bottom: 0; left: 0; width: 100%; padding: 4px 6px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); }
+        /* 艺人板块：流式排列 (非3x3) */
+        .artist-scroll { display: flex; gap: 4px; height: 100%; width: 100%; overflow-x: auto; scrollbar-width: none; }
+        .artist-strip { 
+            flex: 1; min-width: 60px; position: relative; overflow: hidden; 
+            transition: all 0.5s ease; border-radius: 4px;
+        }
+        .artist-strip:hover { flex: 2.5; }
+        .artist-strip img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: 0.5s; }
+        .artist-strip:hover img { opacity: 1; }
+        .artist-label {
+            position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%);
+            writing-mode: vertical-rl; text-align: right; pointer-events: none;
+            width: 100%; display: flex; flex-direction: column; align-items: center;
+        }
 
-        /* 视觉作品集 2:1 比例 */
-        .works-card { aspect-ratio: 2/1; overflow: hidden; border-radius: 1rem; position: relative; border: 0.5px solid rgba(255,255,255,0.05); }
-        .works-card img { width: 100%; height: 100%; object-fit: cover; transition: 1.2s cubic-bezier(0.2, 1, 0.2, 1); }
-        .works-card:hover img { transform: scale(1.1); }
-
-        /* 电影墙 50/50 分布 */
+        /* 电影墙 */
         .kiss-wall { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; width: 100%; }
         .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0; transition: 0.8s; }
         .kiss-item.loaded { opacity: 0.4; }
         .kiss-item:hover { opacity: 1 !important; z-index: 10; transform: scale(1.05); }
 
-        .search-input { background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.1); color: white; padding: 0.8rem 1.2rem; width: 100%; border-radius: 1rem; outline: none; font-size: 13px; }
+        .search-input { background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.1); color: white; padding: 0.8rem 1.2rem; width: 100%; border-radius: 1rem; outline: none; }
     </style>
 </head>
 <body onclick="playMusic()">
@@ -90,7 +93,6 @@
                 if(page === 'home') renderHome();
                 else if(page === 'cinema') renderCinema();
                 else if(page === 'works') renderWorks();
-                else renderSoon(page);
                 app.style.opacity = '1'; window.scrollTo(0,0);
             }, 400);
         }
@@ -103,92 +105,68 @@
                 {id:'read', zh:'阅读人生', en:'Reading Life'}
             ];
             app.innerHTML = `
-                <div class="h-[30vh] flex flex-col justify-end pb-12 px-4">
-                    <h1><span class="zh text-[12vw] md:text-[7vw] font-light">毛天艺</span></h1>
-                </div>
+                <div class="h-[30vh] flex flex-col justify-end pb-12 px-4"><h1><span class="zh text-[12vw] md:text-[7vw] font-light">毛天艺</span></h1></div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
-                    ${menus.map(m => `
-                        <div onclick="switchPage('${m.id}')" class="glass p-8 cursor-pointer group hover:bg-white/5 transition-all">
-                            <span class="zh text-xl mb-1 group-hover:tracking-widest transition-all">${m.zh}</span>
-                            <span class="en text-[9px]">${m.en}</span>
-                        </div>
-                    `).join('')}
+                    ${menus.map(m => `<div onclick="switchPage('${m.id}')" class="glass p-8 cursor-pointer group hover:bg-white/5 transition-all"><span class="zh text-xl mb-1">${m.zh}</span><span class="en text-[9px]">${m.en}</span></div>`).join('')}
                 </div>`;
         }
 
         function renderWorks() {
             const workList = [
-                {title: 'UNSEPARABLE', zh: '离不了', img: '批判1.png'},
-                {title: 'NEW BOWLING', zh: '新保龄运动', img: '保龄1.png'},
-                {title: 'BLOOD NIRVANA', zh: '血液涅槃', img: '血液1.png'},
-                {title: 'FITNESS FACTORY', zh: '健身工厂', img: '健身1.png'}
+                {zh: '离不了', title: 'UNSEPARABLE', img: '批判1.png'},
+                {zh: '新保龄运动', title: 'NEW BOWLING', img: '保龄1.png'},
+                {zh: '血液涅槃', title: 'BLOOD NIRVANA', img: '血液1.png'},
+                {zh: '健身工厂', title: 'FITNESS FACTORY', img: '健身1.png'}
             ];
-            app.innerHTML = `
-                <div class="mb-10 px-4"><span class="zh text-5xl font-light tracking-tighter">视觉作品集</span><span class="en text-sm opacity-30">Visual Portfolio</span></div>
+            app.innerHTML = `<div class="mb-10 px-4"><span class="zh text-5xl font-light tracking-tighter">视觉作品集</span></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-                    ${workList.map(w => `
-                        <div class="glass p-4 group">
-                            <div class="works-card"><img src="${w.img}" onerror="this.src='https://via.placeholder.com/800x400/111?text=${w.zh}'"></div>
-                            <div class="mt-4 flex justify-between items-end opacity-60 group-hover:opacity-100 transition">
-                                <div><span class="zh text-lg">${w.zh}</span><span class="en text-[8px]">${w.title}</span></div>
-                                <span class="en text-[8px]">VIEW PROJECT ↗</span>
-                            </div>
-                        </div>
-                    `).join('')}
+                    ${workList.map(w => `<div class="glass p-4 group"><div class="aspect-[2/1] overflow-hidden rounded-xl"><img src="${w.img}" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" onerror="this.src='https://via.placeholder.com/800x400/11?text=${w.zh}'"></div><div class="mt-4"><span class="zh text-lg">${w.zh}</span><span class="en text-[8px] opacity-30">${w.title}</span></div></div>`).join('')}
                 </div>`;
         }
 
         function renderCinema() {
             const top10 = [
-                {zh:'新世界', en:'New World'}, {zh:'杀死比尔', en:'Kill Bill'}, {zh:'无间道', en:'Internal Affairs'}, 
-                {zh:'被解救的姜戈', en:'Django Unchained'}, {zh:'星际穿越', en:'Interstellar'}, {zh:'胭脂扣', en:'Rouge'}, 
-                {zh:'爱在黎明', en:'Before Sunrise'}, {zh:'勇士', en:'Warrior'}, {zh:'七宗罪', en:'Se7en'}, {zh:'美国丽人', en:'American Beauty'}
+                {zh:'新世界', img:'新世界.png'}, {zh:'杀死比尔', img:'杀死比尔.png'}, {zh:'无间道', img:'无间道.png'}, 
+                {zh:'姜戈', img:'被解救的姜戈.png'}, {zh:'星际穿越', img:'星际穿越.png'}, {zh:'胭脂扣', img:'胭脂扣.png'}, 
+                {zh:'爱在黎明', img:'爱在黎明破晓前.png'}, {zh:'勇士', img:'勇士.png'}, {zh:'七宗罪', img:'七宗罪.png'}, {zh:'美国丽人', img:'美国丽人.png'}
             ];
             
-            const artists = [
-                {type:'DIR', names:[
-                    {zh:'昆汀', en:'Quentin', img:'https://img1.doubanio.com/view/photo/m/public/p1917601710.jpg'},
-                    {zh:'黑泽明', en:'Akira', img:'https://img1.doubanio.com/view/photo/m/public/p976101747.jpg'},
-                    {zh:'诺兰', en:'Nolan', img:'https://img1.doubanio.com/view/photo/m/public/p642960334.jpg'}
-                ]},
-                {type:'ACT', names:[
-                    {zh:'布拉德皮特', en:'Brad Pitt', img:'https://img1.doubanio.com/view/photo/m/public/p1026468025.jpg'},
-                    {zh:'休格兰特', en:'Hugh Grant', img:'https://img1.doubanio.com/view/photo/m/public/p643096837.jpg'},
-                    {zh:'张国荣', en:'Leslie', img:'https://img1.doubanio.com/view/photo/m/public/p643053678.jpg'}
-                ]},
-                {type:'ACT', names:[
-                    {zh:'安吉丽娜', en:'Angelina', img:'https://img1.doubanio.com/view/photo/m/public/p2211824901.jpg'},
-                    {zh:'凯拉奈特利', en:'Keira', img:'https://img1.doubanio.com/view/photo/m/public/p1251764866.jpg'},
-                    {zh:'朱莉娅', en:'Julia', img:'https://img1.doubanio.com/view/photo/m/public/p1704524740.jpg'}
-                ]}
+            // 艺人海报链接已全部替换为解析后的直接地址
+            const allArtists = [
+                {zh:'昆汀', img:'https://img1.doubanio.com/view/photo/l/public/p1917601710.jpg'},
+                {zh:'黑泽明', img:'https://img1.doubanio.com/view/photo/l/public/p976101747.jpg'},
+                {zh:'诺兰', img:'https://img1.doubanio.com/view/photo/l/public/p642960334.jpg'},
+                {zh:'皮特', img:'https://img1.doubanio.com/view/photo/l/public/p1026468025.jpg'},
+                {zh:'休格兰特', img:'https://img1.doubanio.com/view/photo/l/public/p643096837.jpg'},
+                {zh:'张国荣', img:'https://img1.doubanio.com/view/photo/l/public/p643053678.jpg'},
+                {zh:'朱莉', img:'https://img1.doubanio.com/view/photo/l/public/p2211824901.jpg'},
+                {zh:'凯拉', img:'https://img1.doubanio.com/view/photo/l/public/p1251764866.jpg'},
+                {zh:'罗伯茨', img:'https://img1.doubanio.com/view/photo/l/public/p1704524740.jpg'}
             ];
 
             app.innerHTML = `
-                <div class="mb-8 px-4"><span class="zh text-5xl font-light tracking-tighter">电影人生</span><span class="en text-sm opacity-30">Cinema Archive</span></div>
+                <div class="mb-8 px-4"><span class="zh text-5xl font-light tracking-tighter">电影人生</span></div>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 px-4 mb-8">
-                    <div class="glass p-6 h-[320px] flex flex-col">
-                        <span class="zh text-[10px] opacity-20 mb-4 tracking-widest uppercase">My Top 10</span>
-                        <div class="dragon-row flex-grow">
+                    <div class="glass overflow-hidden h-[380px] flex flex-col relative">
+                        <div class="absolute top-4 left-6 z-20"><span class="zh text-[10px] opacity-20 tracking-widest uppercase">My Top 10</span></div>
+                        <div class="dragon-row">
                             ${top10.map((m, i) => `
                                 <div class="dragon-item" style="z-index:${20-i}">
-                                    <div class="vertical-title"><span class="v-zh">${m.zh}</span><span class="v-en">${m.en}</span></div>
-                                    <img src="${m.zh}.png" onerror="this.src='https://via.placeholder.com/200x300/222?text=${m.zh}'">
+                                    <div class="dragon-title"><span class="zh text-[10px] text-white/80">${m.zh}</span></div>
+                                    <img src="${m.img}" onerror="this.src='https://via.placeholder.com/300x450/22?text=${m.zh}'">
                                 </div>`).join('')}
                         </div>
                     </div>
                     
-                    <div class="glass p-6 h-[320px] flex flex-col">
-                        <span class="zh text-[10px] opacity-20 mb-4 tracking-widest uppercase">Artists</span>
-                        <div class="artist-grid flex-grow">
-                            ${artists.map(group => group.names.map(name => `
-                                <div class="artist-card">
-                                    <img src="${name.img}" loading="lazy">
-                                    <div class="artist-info">
-                                        <span class="zh text-[9px] font-bold leading-tight">${name.zh}</span>
-                                        <span class="en text-[6px] opacity-40 uppercase truncate">${name.en}</span>
-                                    </div>
-                                </div>`).join('')).join('')}
+                    <div class="glass p-2 h-[380px] flex flex-col relative">
+                        <div class="absolute top-4 left-6 z-20"><span class="zh text-[10px] opacity-20 tracking-widest uppercase">Favorite Artists</span></div>
+                        <div class="artist-scroll">
+                            ${allArtists.map(a => `
+                                <div class="artist-strip">
+                                    <img src="${a.img}">
+                                    <div class="artist-label"><span class="zh text-[10px] font-bold text-white/90">${a.zh}</span></div>
+                                </div>`).join('')}
                         </div>
                     </div>
                 </div>
@@ -198,7 +176,7 @@
                         <input type="text" id="movieSearch" class="search-input mb-8" placeholder="SEARCH ARCHIVE..." oninput="debounceSearch()">
                         <div id="movie-list-grid" class="grid grid-cols-2 md:grid-cols-3 gap-y-3 gap-x-4"></div>
                     </div>
-                    <div class="overflow-hidden glass p-1 h-fit"><div id="cinema-wall" class="kiss-wall"></div></div>
+                    <div class="glass p-1 h-fit"><div id="cinema-wall" class="kiss-wall"></div></div>
                 </div>
             `;
             displayMovies(movieData, true);
@@ -212,15 +190,8 @@
             if(initWall) {
                 wall.innerHTML = movieData.map(m => `<img data-src="${m.poster}" class="kiss-item lazy-item">`).join('');
                 const observer = new IntersectionObserver((entries) => { 
-                    entries.forEach(entry => { 
-                        if (entry.isIntersecting) { 
-                            const img = entry.target; 
-                            img.src = img.dataset.src; 
-                            img.onload = () => img.classList.add('loaded'); 
-                            observer.unobserve(img); 
-                        } 
-                    }); 
-                }, { rootMargin: "400px" });
+                    entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.onload = () => img.classList.add('loaded'); observer.unobserve(img); } });
+                }, { rootMargin: "500px" });
                 document.querySelectorAll('.lazy-item').forEach(img => observer.observe(img));
             }
         }
@@ -229,8 +200,6 @@
             const term = document.getElementById('movieSearch').value.trim().toLowerCase();
             displayMovies(movieData.filter(m => m.title.toLowerCase().includes(term)));
         }
-
-        function renderSoon(p) { app.innerHTML = `<div class="py-40 text-center glass mx-4"><span class="zh opacity-10 text-3xl uppercase">${p} Soon</span></div>`; }
 
         window.onload = () => switchPage('home');
     </script>
