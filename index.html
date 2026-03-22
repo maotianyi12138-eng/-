@@ -9,199 +9,242 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600&family=Noto+Sans+SC:wght@100;300;400;700&display=swap');
         
+        :root { --glass: rgba(255, 255, 255, 0.03); --border: rgba(255, 255, 255, 0.1); }
+
         body { 
             background-color: #000; color: #fff; margin: 0;
             font-family: 'Inter', 'Noto Sans SC', sans-serif;
             background-size: cover; background-position: center; background-attachment: fixed;
-            overflow-x: hidden;
+            overflow-x: hidden; transition: background 0.5s ease;
         }
 
+        /* 双端壁纸逻辑 */
         @media (min-width: 768px) { body { background-image: url('horse.jpg'); } }
         @media (max-width: 767px) { body { background-image: url('mobile_bg.jpg'); } }
 
-        .glass {
-            background: rgba(255, 255, 255, 0.015);
-            backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
-            border: 0.5px solid rgba(255, 255, 255, 0.05); border-radius: 1.5rem;
-        }
+        .glass { background: var(--glass); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 0.5px solid var(--border); border-radius: 1.5rem; }
+        
+        /* 文字对照标准 */
+        .text-pair { display: flex; flex-direction: column; line-height: 1.2; }
+        .text-pair .zh { font-size: 1.25rem; font-weight: 500; color: #fff; }
+        .text-pair .en { font-size: 0.75rem; font-weight: 300; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
 
-        .zh { display: block; font-weight: 400; line-height: 1.2; }
-        .en { display: block; font-weight: 100; opacity: 0.4; letter-spacing: 0.1em; text-transform: uppercase; }
+        /* 龙鳞堆叠通用逻辑 */
+        .dragon-stack { display: flex; position: relative; }
+        .dragon-item { transition: all 0.5s cubic-bezier(0.2, 1, 0.2, 1); cursor: pointer; }
 
-        /* 个人十佳：撑满容器的龙鳞布局 */
-        .dragon-row { 
-            display: flex; overflow-x: auto; padding: 0; scrollbar-width: none; 
-            align-items: stretch; height: 100%; width: 100%;
-        }
-        .dragon-item {
-            flex: 0 0 140px; margin-right: -70px; 
-            transition: all 0.6s cubic-bezier(0.2, 1, 0.2, 1);
-            cursor: pointer; position: relative; height: 100%;
-        }
-        .dragon-item:hover { margin-right: 70px; z-index: 100 !important; transform: scale(1.05); }
-        .dragon-item img { 
-            width: 100%; height: 100%; object-fit: cover; 
-            border-right: 0.5px solid rgba(255,255,255,0.1);
-        }
-        .dragon-title {
-            position: absolute; bottom: 20px; left: 10px; z-index: 10;
-            writing-mode: vertical-rl; pointer-events: none;
-        }
+        /* 电影人生专用 */
+        .movie-dragon { height: 450px; align-items: flex-end; }
+        .movie-dragon .dragon-item { flex: 0 0 140px; margin-right: -80px; height: 100%; border-radius: 4px; overflow: hidden; box-shadow: -10px 0 30px rgba(0,0,0,0.5); }
+        .movie-dragon .dragon-item:hover { margin-right: 20px; transform: translateY(-10px); }
+        .movie-dragon img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* 艺人板块：流式排列 (非3x3) */
-        .artist-scroll { display: flex; gap: 4px; height: 100%; width: 100%; overflow-x: auto; scrollbar-width: none; }
-        .artist-strip { 
-            flex: 1; min-width: 60px; position: relative; overflow: hidden; 
-            transition: all 0.5s ease; border-radius: 4px;
-        }
-        .artist-strip:hover { flex: 2.5; }
-        .artist-strip img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: 0.5s; }
-        .artist-strip:hover img { opacity: 1; }
-        .artist-label {
-            position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%);
-            writing-mode: vertical-rl; text-align: right; pointer-events: none;
-            width: 100%; display: flex; flex-direction: column; align-items: center;
-        }
+        /* 作品集龙鳞 */
+        .work-dragon { height: 200px; width: 100%; margin-top: 1rem; }
+        .work-dragon .dragon-item { width: 120px; height: 160px; margin-right: -90px; border-radius: 8px; border: 1px solid var(--border); overflow: hidden; }
+        .work-dragon .dragon-item:hover { margin-right: 10px; z-index: 50 !important; transform: scale(1.1); }
 
-        /* 电影墙 */
-        .kiss-wall { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; width: 100%; }
-        .kiss-item { width: 100%; aspect-ratio: 2/3; object-fit: cover; opacity: 0; transition: 0.8s; }
-        .kiss-item.loaded { opacity: 0.4; }
-        .kiss-item:hover { opacity: 1 !important; z-index: 10; transform: scale(1.05); }
+        /* 灯箱展示 */
+        #lightbox { position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.9); backdrop-filter: blur(20px); display: none; justify-content: center; align-items: center; }
+        .lightbox-btn { position: absolute; padding: 20px; color: white; cursor: pointer; background: rgba(255,255,255,0.05); border-radius: 50%; border: 1px solid var(--border); }
 
-        .search-input { background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.1); color: white; padding: 0.8rem 1.2rem; width: 100%; border-radius: 1rem; outline: none; }
+        /* 隐藏滚动条 */
+        ::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body onclick="playMusic()">
-    <audio id="main-audio" loop preload="auto"><source src="bgm.mp3" type="audio/mpeg"></audio>
-    <div id="nav-ui" class="hidden"><div class="fixed top-8 left-8 z-[500] text-2xl cursor-pointer opacity-50 hover:opacity-100" onclick="switchPage('home')">←</div></div>
-    
-    <div id="app-content" class="pt-24 p-6 md:p-16 transition-opacity duration-500"></div>
+<body onclick="handleGlobalClick()" onscroll="initAudio()">
+
+    <audio id="bgm-player" loop preload="auto">
+        <source src="bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="nav-ui" class="hidden fixed top-8 left-8 z-[100]">
+        <div onclick="navigateTo('home')" class="glass px-6 py-3 cursor-pointer hover:bg-white/10 transition">
+            <div class="text-pair">
+                <span class="zh">返回</span>
+                <span class="en">Return</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-btn left-10" onclick="prevImg(event)">←</div>
+        <img id="lightbox-img" src="" class="max-h-[85vh] max-w-[90vw] object-contain shadow-2xl">
+        <div class="lightbox-btn right-10" onclick="nextImg(event)">→</div>
+        <div class="absolute top-10 right-10 text-xl cursor-pointer" onclick="closeLightbox()">CLOSE [×]</div>
+    </div>
+
+    <main id="view-port" class="min-h-screen pt-24 pb-20 px-6 md:px-20 transition-opacity duration-500"></main>
 
     <script src="movies.js"></script>
     <script>
-        const audio = document.getElementById('main-audio');
-        const app = document.getElementById('app-content');
+        const player = document.getElementById('bgm-player');
+        const viewPort = document.getElementById('view-port');
         const navUI = document.getElementById('nav-ui');
+        let audioInitialized = false;
 
-        function playMusic() { if (audio.paused) { audio.play().catch(()=>{}); } }
-        
-        function switchPage(page) {
-            app.style.opacity = '0';
+        // 音频逻辑：不间断切换
+        function initAudio() {
+            if (!audioInitialized) {
+                player.play().catch(e => console.log("等待交互播放"));
+                audioInitialized = true;
+            }
+        }
+        function handleGlobalClick() { initAudio(); }
+
+        // 路由逻辑：SPA单页应用架构
+        function navigateTo(page) {
+            viewPort.style.opacity = '0';
             setTimeout(() => {
                 navUI.classList.toggle('hidden', page === 'home');
                 if(page === 'home') renderHome();
-                else if(page === 'cinema') renderCinema();
                 else if(page === 'works') renderWorks();
-                app.style.opacity = '1'; window.scrollTo(0,0);
+                else if(page === 'cinema') renderCinema();
+                else renderPlaceholder(page);
+                viewPort.style.opacity = '1';
+                window.scrollTo(0, 0);
             }, 400);
         }
 
+        // --- 首页渲染 ---
         function renderHome() {
-            const menus = [
-                {id:'works', zh:'视觉作品集', en:'Visual Works'},
-                {id:'cinema', zh:'电影人生', en:'Cinema Life'},
-                {id:'music', zh:'音乐人生', en:'Music Life'},
-                {id:'read', zh:'阅读人生', en:'Reading Life'}
-            ];
-            app.innerHTML = `
-                <div class="h-[30vh] flex flex-col justify-end pb-12 px-4"><h1><span class="zh text-[12vw] md:text-[7vw] font-light">毛天艺</span></h1></div>
+            viewPort.innerHTML = `
+                <section class="h-[40vh] flex flex-col justify-end mb-16 px-4">
+                    <div class="text-pair">
+                        <span class="zh text-7xl md:text-9xl tracking-tighter">毛天艺</span>
+                        <span class="en text-2xl md:text-3xl opacity-40">Tianyi Mao</span>
+                    </div>
+                </section>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
-                    ${menus.map(m => `<div onclick="switchPage('${m.id}')" class="glass p-8 cursor-pointer group hover:bg-white/5 transition-all"><span class="zh text-xl mb-1">${m.zh}</span><span class="en text-[9px]">${m.en}</span></div>`).join('')}
+                    ${['works', 'cinema', 'music', 'read'].map(id => {
+                        const info = {
+                            works: ['视觉作品集', 'Visual Works'],
+                            cinema: ['电影人生', 'Cinema Life'],
+                            music: ['音乐人生', 'Music Life'],
+                            read: ['阅读人生', 'Reading Life']
+                        }[id];
+                        return `
+                        <div onclick="navigateTo('${id}')" class="glass p-10 cursor-pointer group hover:bg-white/5 transition-all">
+                            <div class="text-pair group-hover:tracking-widest transition-all">
+                                <span class="zh text-2xl">${info[0]}</span>
+                                <span class="en">${info[1]}</span>
+                            </div>
+                        </div>`;
+                    }).join('')}
                 </div>`;
         }
 
+        // --- 视觉作品集渲染 ---
         function renderWorks() {
-            const workList = [
-                {zh: '离不了', title: 'UNSEPARABLE', img: '批判1.png'},
-                {zh: '新保龄运动', title: 'NEW BOWLING', img: '保龄1.png'},
-                {zh: '血液涅槃', title: 'BLOOD NIRVANA', img: '血液1.png'},
-                {zh: '健身工厂', title: 'FITNESS FACTORY', img: '健身1.png'}
-            ];
-            app.innerHTML = `<div class="mb-10 px-4"><span class="zh text-5xl font-light tracking-tighter">视觉作品集</span></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-                    ${workList.map(w => `<div class="glass p-4 group"><div class="aspect-[2/1] overflow-hidden rounded-xl"><img src="${w.img}" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" onerror="this.src='https://via.placeholder.com/800x400/11?text=${w.zh}'"></div><div class="mt-4"><span class="zh text-lg">${w.zh}</span><span class="en text-[8px] opacity-30">${w.title}</span></div></div>`).join('')}
-                </div>`;
-        }
-
-        function renderCinema() {
-            const top10 = [
-                {zh:'新世界', img:'新世界.png'}, {zh:'杀死比尔', img:'杀死比尔.png'}, {zh:'无间道', img:'无间道.png'}, 
-                {zh:'姜戈', img:'被解救的姜戈.png'}, {zh:'星际穿越', img:'星际穿越.png'}, {zh:'胭脂扣', img:'胭脂扣.png'}, 
-                {zh:'爱在黎明', img:'爱在黎明破晓前.png'}, {zh:'勇士', img:'勇士.png'}, {zh:'七宗罪', img:'七宗罪.png'}, {zh:'美国丽人', img:'美国丽人.png'}
+            const projects = [
+                {zh:'离不了', en:'Unseparable', count:4, prefix:'批判'},
+                {zh:'新保龄运动', en:'New Bowling', count:6, prefix:'保龄'},
+                {zh:'血液涅槃', en:'Blood Nirvana', count:4, prefix:'血液'},
+                {zh:'健身工厂', en:'Fitness Factory', count:5, prefix:'健身'}
             ];
             
-            // 艺人海报链接已全部替换为解析后的直接地址
-            const allArtists = [
-                {zh:'昆汀', img:'https://img1.doubanio.com/view/photo/l/public/p1917601710.jpg'},
-                {zh:'黑泽明', img:'https://img1.doubanio.com/view/photo/l/public/p976101747.jpg'},
-                {zh:'诺兰', img:'https://img1.doubanio.com/view/photo/l/public/p642960334.jpg'},
-                {zh:'皮特', img:'https://img1.doubanio.com/view/photo/l/public/p1026468025.jpg'},
-                {zh:'休格兰特', img:'https://img1.doubanio.com/view/photo/l/public/p643096837.jpg'},
-                {zh:'张国荣', img:'https://img1.doubanio.com/view/photo/l/public/p643053678.jpg'},
-                {zh:'朱莉', img:'https://img1.doubanio.com/view/photo/l/public/p2211824901.jpg'},
-                {zh:'凯拉', img:'https://img1.doubanio.com/view/photo/l/public/p1251764866.jpg'},
-                {zh:'罗伯茨', img:'https://img1.doubanio.com/view/photo/l/public/p1704524740.jpg'}
+            viewPort.innerHTML = `
+                <div class="mb-12 px-4"><div class="text-pair"><span class="zh text-6xl font-light">视觉作品集</span><span class="en text-xl">Visual Portfolio</span></div></div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-4">
+                    ${projects.map(p => `
+                        <div class="glass p-6">
+                            <div class="text-pair mb-4">
+                                <span class="zh text-xl">${p.zh}</span>
+                                <span class="en text-[10px]">${p.en}</span>
+                            </div>
+                            <div class="work-dragon">
+                                ${Array.from({length: p.count}).map((_, i) => `
+                                    <div class="dragon-item" style="z-index:${10-i}" onclick="openLightbox('${p.prefix}${i+1}.png', '${p.prefix}', ${p.count}, ${i+1})">
+                                        <img src="${p.prefix}${i+1}.png" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/300x400/111?text=IMG'">
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>`;
+        }
+
+        // --- 电影人生渲染 ---
+        function renderCinema() {
+            const top10 = [
+                {zh:'新世界', en:'New World', img:'新世界.png'},
+                {zh:'杀死比尔', en:'Kill Bill', img:'杀死比尔.png'},
+                {zh:'无间道', en:'Internal Affairs', img:'无间道.png'}
+                // ... 后续补充其余Top10
             ];
 
-            app.innerHTML = `
-                <div class="mb-8 px-4"><span class="zh text-5xl font-light tracking-tighter">电影人生</span></div>
+            viewPort.innerHTML = `
+                <div class="mb-12 px-4"><div class="text-pair"><span class="zh text-6xl font-light">电影人生</span><span class="en text-xl">Cinema Archive</span></div></div>
                 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 px-4 mb-8">
-                    <div class="glass overflow-hidden h-[380px] flex flex-col relative">
-                        <div class="absolute top-4 left-6 z-20"><span class="zh text-[10px] opacity-20 tracking-widest uppercase">My Top 10</span></div>
-                        <div class="dragon-row">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 mb-16 h-[500px]">
+                    <div class="glass p-10 flex flex-col justify-center">
+                        <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+                            ${top10.map((m,i) => `
+                                <div class="text-pair">
+                                    <span class="zh text-lg">TOP ${i+1} ${m.zh}</span>
+                                    <span class="en text-[10px]">${m.en}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    <div class="glass flex items-center justify-center overflow-hidden">
+                        <div class="movie-dragon dragon-stack">
                             ${top10.map((m, i) => `
                                 <div class="dragon-item" style="z-index:${20-i}">
-                                    <div class="dragon-title"><span class="zh text-[10px] text-white/80">${m.zh}</span></div>
-                                    <img src="${m.img}" onerror="this.src='https://via.placeholder.com/300x450/22?text=${m.zh}'">
-                                </div>`).join('')}
-                        </div>
-                    </div>
-                    
-                    <div class="glass p-2 h-[380px] flex flex-col relative">
-                        <div class="absolute top-4 left-6 z-20"><span class="zh text-[10px] opacity-20 tracking-widest uppercase">Favorite Artists</span></div>
-                        <div class="artist-scroll">
-                            ${allArtists.map(a => `
-                                <div class="artist-strip">
-                                    <img src="${a.img}">
-                                    <div class="artist-label"><span class="zh text-[10px] font-bold text-white/90">${a.zh}</span></div>
-                                </div>`).join('')}
+                                    <img src="${m.img}" onerror="this.src='https://via.placeholder.com/300x450/222?text=${m.zh}'">
+                                </div>
+                            `).join('')}
                         </div>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 px-4">
-                    <div class="glass p-8 min-h-[600px]">
-                        <input type="text" id="movieSearch" class="search-input mb-8" placeholder="SEARCH ARCHIVE..." oninput="debounceSearch()">
-                        <div id="movie-list-grid" class="grid grid-cols-2 md:grid-cols-3 gap-y-3 gap-x-4"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4">
+                    <div class="glass p-10">
+                        <input type="text" class="bg-white/5 border border-white/10 w-full p-5 rounded-2xl outline-none focus:border-white/30 transition mb-10" placeholder="搜一部你觉得毛天艺没看过的">
+                        <div id="movie-list" class="grid grid-cols-2 gap-2"></div>
                     </div>
-                    <div class="glass p-1 h-fit"><div id="cinema-wall" class="kiss-wall"></div></div>
-                </div>
-            `;
-            displayMovies(movieData, true);
+                    <div class="glass p-2 h-fit">
+                        <div id="wall" class="grid grid-cols-6 gap-px"></div>
+                    </div>
+                </div>`;
+            
+            // 加载数据库
+            const list = document.getElementById('movie-list');
+            const wall = document.getElementById('wall');
+            movieData.slice(0, 50).forEach(m => {
+                list.innerHTML += `<div class="text-pair opacity-30 hover:opacity-100 cursor-default truncate">
+                    <span class="zh text-sm">${m.title.split('/')[0]}</span>
+                    <span class="en text-[8px]">${m.title.split('/')[1] || ''}</span>
+                </div>`;
+                wall.innerHTML += `<img src="${m.poster}" class="aspect-[2/3] object-cover opacity-40 hover:opacity-100 transition duration-700">`;
+            });
         }
 
-        function displayMovies(movies, initWall = false) {
-            const listGrid = document.getElementById('movie-list-grid');
-            const wall = document.getElementById('cinema-wall');
-            if(!listGrid || !wall) return;
-            listGrid.innerHTML = movies.slice(0, 100).map(m => `<div class="group cursor-pointer"><div class="zh text-[12px] opacity-30 group-hover:opacity-100 truncate transition">${m.title.split(' / ')[0]}</div></div>`).join('');
-            if(initWall) {
-                wall.innerHTML = movieData.map(m => `<img data-src="${m.poster}" class="kiss-item lazy-item">`).join('');
-                const observer = new IntersectionObserver((entries) => { 
-                    entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.onload = () => img.classList.add('loaded'); observer.unobserve(img); } });
-                }, { rootMargin: "500px" });
-                document.querySelectorAll('.lazy-item').forEach(img => observer.observe(img));
-            }
+        // --- 灯箱逻辑 ---
+        let currentGroup = { prefix: '', count: 0, index: 1 };
+        function openLightbox(src, prefix, count, index) {
+            currentGroup = { prefix, count, index };
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+        function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
+        function nextImg(e) {
+            e.stopPropagation();
+            currentGroup.index = currentGroup.index >= currentGroup.count ? 1 : currentGroup.index + 1;
+            document.getElementById('lightbox-img').src = `${currentGroup.prefix}${currentGroup.index}.png`;
+        }
+        function prevImg(e) {
+            e.stopPropagation();
+            currentGroup.index = currentGroup.index <= 1 ? currentGroup.count : currentGroup.index - 1;
+            document.getElementById('lightbox-img').src = `${currentGroup.prefix}${currentGroup.index}.png`;
         }
 
-        function debounceSearch() {
-            const term = document.getElementById('movieSearch').value.trim().toLowerCase();
-            displayMovies(movieData.filter(m => m.title.toLowerCase().includes(term)));
+        function renderPlaceholder(p) {
+            viewPort.innerHTML = `<div class="py-60 text-center glass mx-4 opacity-20"><div class="text-pair items-center"><span class="zh text-4xl">${p.toUpperCase()} 施工中</span><span class="en">Coming Soon</span></div></div>`;
         }
 
-        window.onload = () => switchPage('home');
+        // 初始启动
+        window.onload = () => navigateTo('home');
     </script>
 </body>
 </html>
