@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -30,7 +29,6 @@
             color: #fff; border-radius: 12px; padding: 14px 20px; width: 100%; outline: none;
             transition: all 0.3s ease; font-size: 14px;
         }
-        .apple-search:focus { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); }
 
         .dragon-row { display: flex; overflow-x: auto; padding: 0; scrollbar-width: none; height: 100%; }
         .dragon-item { flex: 0 0 160px; margin-right: -100px; transition: 0.6s ease; cursor: pointer; position: relative; }
@@ -41,11 +39,9 @@
         .artist-strip { flex: 1; position: relative; transition: 0.5s ease; border-radius: 4px; overflow: hidden; }
         .artist-strip:hover { flex: 4; }
         .artist-strip img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; transition: 0.5s; }
-        .artist-strip:hover img { opacity: 1; }
 
         .design-stack { position: relative; height: 260px; width: 100%; overflow: hidden; }
         .stack-layer { position: absolute; width: 60%; height: 90%; transition: 0.5s; border-radius: 8px; cursor: pointer; }
-        .stack-layer:hover { transform: translateX(15px) scale(1.02); z-index: 60 !important; }
 
         .tight-photo-grid { columns: 3; gap: 4px; }
         @media (min-width: 768px) { .tight-photo-grid { columns: 5; } }
@@ -53,19 +49,18 @@
 
         .movie-list-4col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
         @media (max-width: 767px) { .movie-list-4col { grid-template-columns: repeat(2, 1fr); } }
-        .movie-card { border-left: 1px solid rgba(255,255,255,0.05); padding-left: 8px; transition: 0.3s; }
-        .movie-card:hover { border-left-color: #fff; opacity: 1 !important; }
-
+        
+        .nav-active { border-left-color: rgba(255,255,255,0.8) !important; background: rgba(255,255,255,0.08); }
+        .zh { display: block; font-weight: 400; line-height: 1.2; }
+        .en { display: block; font-weight: 100; opacity: 0.4; letter-spacing: 0.05em; text-transform: uppercase; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        
         #viewer, #ad-pop { display: none; position: fixed; inset: 0; z-index: 1000; flex-direction: column; align-items: center; justify-content: center; }
         #viewer { background: rgba(0,0,0,0.98); }
         #ad-pop { background: rgba(0,0,0,0.85); backdrop-filter: blur(40px); }
 
-        .zh { display: block; font-weight: 400; line-height: 1.2; }
-        .en { display: block; font-weight: 100; opacity: 0.4; letter-spacing: 0.05em; text-transform: uppercase; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-
-        /* 视频容器优化 */
-        .video-container { width: 100%; max-width: 1000px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+        /* 视频容器：缩小至 70% 宽度，居中显示 */
+        .video-card-mini { width: 70%; max-width: 600px; margin: 2rem auto; }
     </style>
 </head>
 <body>
@@ -94,28 +89,35 @@
 
     <div id="ad-pop">
         <div class="glass p-12 max-w-lg w-[90%] text-center border-none shadow-2xl">
-            <div class="mb-10">
-                <span class="zh text-2xl mb-2">他没看过，快推荐给他吧</span>
-                <span class="en text-xs opacity-40">He hasn't seen it, recommend it to him.</span>
-            </div>
-            <div class="flex flex-col gap-4">
-                <button class="bg-yellow-400 text-black py-4 rounded-xl font-bold hover:scale-105 transition shadow-lg">推荐给他 / Recommend</button>
-                <div class="flex gap-4">
-                    <button class="flex-1 py-3 rounded-xl border border-white/10 opacity-30 text-[10px]" onclick="alert('他肯定会看的')">懒得告诉他 / Lazy</button>
-                    <button class="flex-1 py-3 rounded-xl bg-white/10 text-[10px]" onclick="closeAd()">已经分享给他了 / Shared</button>
-                </div>
+            <span class="zh text-2xl mb-2">他没看过，快推荐给他吧</span>
+            <span class="en text-xs opacity-40">He hasn't seen it, recommend it.</span>
+            <div class="flex flex-col gap-4 mt-8">
+                <button class="bg-yellow-400 text-black py-4 rounded-xl font-bold">推荐 / Recommend</button>
+                <button class="py-3 rounded-xl bg-white/10 text-[10px]" onclick="closeAd()">已经分享 / Shared</button>
             </div>
         </div>
     </div>
 
     <script src="movies.js"></script>
-
     <script>
         const audio = document.getElementById('main-audio');
         const app = document.getElementById('app-content');
         const navUI = document.getElementById('nav-ui');
-        let currentImgList = [];
-        let currentIndex = 0;
+        
+        // 统筹配置：视听影像已合并
+        const photoConfig = {
+            '商业摄影': { type: 'grid', prefix: '摄影/商业摄影', max: 50 },
+            '模特': { type: 'grid', prefix: '摄影/模特', max: 50 },
+            '情绪摄影': { type: 'grid', prefix: '摄影/情绪摄影', max: 50 },
+            '自媒体摄影': { type: 'grid', prefix: '摄影/自媒体摄影', max: 50 },
+            'video': { 
+                type: 'video-list', 
+                links: [
+                    "https://sns-video-zl.xhscdn.com/stream/79/110/115/01e805fb570d7ef74f03700196576619b1_115.mp4",
+                    "https://sns-video-zl.xhscdn.com/stream/1/110/115/01e92c5c4c1b1c6c010370019ad553c5f4_115.mp4"
+                ] 
+            }
+        };
 
         function renderHome() {
             app.innerHTML = `
@@ -128,18 +130,85 @@
                         <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0">
                             <span class="zh text-3xl mb-2">核心业务</span><span class="en text-[10px]">Business Sectors</span>
                         </div>
-                        <div class="biz-sub-layer absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <div onclick="switchPage('works')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">平面设计</span><span class="en text-[9px]">Design</span></div>
-                            <div onclick="switchPage('photo')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">摄影作品</span><span class="en text-[9px]">Photo</span></div>
-                            <div onclick="switchPage('video')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">视听影像</span><span class="en text-[9px]">Video</span></div>
-                            <div onclick="switchPage('coach')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">运动教学</span><span class="en text-[9px]">Coach</span></div>
+                        <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <div onclick="switchPage('works')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">平面设计</span></div>
+                            <div onclick="switchPage('photo')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">摄影作品</span></div>
+                            <div onclick="switchPage('coach')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">运动教学</span></div>
                         </div>
                     </div>
-                    <div onclick="switchPage('cinema')" class="glass p-10 cursor-pointer group hover:bg-white/5 transition-all"><span class="zh text-2xl mb-2">电影人生</span><span class="en text-[10px]">Cinema Life</span></div>
-                    <div class="glass p-10 opacity-30"><span class="zh text-2xl mb-2">更多内容</span><span class="en text-[10px]">Loading...</span></div>
+                    <div onclick="switchPage('cinema')" class="glass p-10 cursor-pointer hover:bg-white/5 transition-all"><span class="zh text-2xl mb-2">电影人生</span><span class="en text-[10px]">Cinema Life</span></div>
+                    <div class="glass p-10 opacity-30"><span class="zh text-2xl mb-2">更多内容</span></div>
                 </div>`;
         }
 
+        function renderPhoto() {
+            const cats = [
+                {id:'商业摄影', zh:'商业摄影'}, {id:'模特', zh:'模特'}, 
+                {id:'情绪摄影', zh:'情绪摄影'}, {id:'自媒体摄影', zh:'自媒体摄影'},
+                {id:'video', zh:'视听影像'}
+            ];
+            app.innerHTML = `
+                <div class="flex flex-col md:flex-row gap-8 px-4 min-h-[70vh]">
+                    <div class="md:w-1/4 flex flex-col gap-3">
+                        <div class="mb-4"><span class="zh text-5xl font-light">摄影</span><span class="en text-xs mt-1 opacity-20">Photography</span></div>
+                        ${cats.map(c => `<div onclick="handlePhotoNav('${c.id}', this)" class="photo-nav-item glass p-5 cursor-pointer hover:bg-white/10 transition-all border-l-2 border-transparent"><span class="zh text-lg">${c.zh}</span></div>`).join('')}
+                    </div>
+                    <div class="flex-1 glass p-4 overflow-y-auto max-h-[85vh] no-scrollbar" id="photo-content-area-parent">
+                        <div id="photo-content-area"></div>
+                    </div>
+                </div>`;
+            handlePhotoNav('商业摄影', document.querySelector('.photo-nav-item'));
+        }
+
+        function handlePhotoNav(id, el) {
+            document.querySelectorAll('.photo-nav-item').forEach(item => item.classList.remove('nav-active'));
+            el.classList.add('nav-active');
+            const container = document.getElementById('photo-content-area');
+            const config = photoConfig[id];
+            container.innerHTML = ''; 
+
+            if (config.type === 'video-list') {
+                container.className = "flex flex-col gap-8 animate-in fade-in duration-700";
+                container.innerHTML = config.links.map(url => `
+                    <div class="video-card-mini glass p-1 overflow-hidden rounded-2xl">
+                        <video loop muted playsinline class="w-full h-auto rounded-xl observer-video">
+                            <source src="${url}" type="video/mp4">
+                        </video>
+                    </div>
+                `).join('');
+                initVideoObserver(); // 开启滑到即播逻辑
+            } else {
+                container.className = "tight-photo-grid animate-in fade-in duration-700";
+                let i = 1;
+                function loadImages() {
+                    if(i > config.max) return;
+                    const item = document.createElement('div');
+                    item.className = 'photo-item';
+                    item.innerHTML = `<img src="${config.prefix}${i}.jpg" loading="lazy" class="w-full h-auto opacity-0 transition-opacity duration-700" onload="this.style.opacity='1'" onerror="this.parentElement.remove()">`;
+                    container.appendChild(item);
+                    i++; setTimeout(loadImages, 30);
+                }
+                loadImages();
+            }
+        }
+
+        // 视口触发播放逻辑
+        function initVideoObserver() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const video = entry.target;
+                    if (entry.isIntersecting) {
+                        video.play().catch(() => {}); // 进入视口自动静音播放
+                    } else {
+                        video.pause(); // 离开视口暂停
+                    }
+                });
+            }, { threshold: 0.6 }); // 当视频露出 60% 时触发
+
+            document.querySelectorAll('.observer-video').forEach(v => observer.observe(v));
+        }
+
+        // 平面设计
         function renderWorks() {
             const projects = [{zh: '离不了', prefix: '平面设计/离不了', count: 4}, {zh: '新保龄运动', prefix: '平面设计/新保龄运动', count: 6}, {zh: '血液涅槃', prefix: '平面设计/血液涅槃', count: 4}, {zh: '健身工厂', prefix: '平面设计/健身工厂', count: 5}];
             app.innerHTML = `<div class="mb-12 px-4"><span class="zh text-6xl font-light">视觉作品集</span><span class="en text-sm mt-2 opacity-30">Portfolio</span></div>
@@ -148,103 +217,7 @@
                 </div>`;
         }
 
-        function renderPhoto() {
-            const cats = [{id:'商业摄影', zh:'商业摄影'}, {id:'情绪摄影', zh:'情绪摄影'}, {id:'模特摄影', zh:'模特摄影'}, {id:'自媒体摄影', zh:'自媒体摄影'}];
-            app.innerHTML = `<div class="flex flex-col md:flex-row gap-8 px-4 min-h-[70vh]">
-                <div class="md:w-1/4 flex flex-col gap-3">
-                    <div class="mb-4"><span class="zh text-5xl font-light">摄影</span><span class="en text-xs mt-1 opacity-20">Photography</span></div>
-                    ${cats.map(c => `<div onclick="loadPhotoSet('${c.id}')" class="glass p-5 cursor-pointer hover:bg-white/10 transition-all border-l-2 border-transparent hover:border-white/40"><span class="zh text-lg">${c.zh}</span></div>`).join('')}
-                </div>
-                <div class="flex-1 glass p-4 overflow-y-auto max-h-[85vh] no-scrollbar" id="photo-scroll-container">
-                    <div id="photo-grid" class="tight-photo-grid"></div>
-                </div>
-            </div>`;
-            loadPhotoSet('商业摄影');
-        }
-
-        function loadPhotoSet(prefix) {
-            const grid = document.getElementById('photo-grid');
-            grid.innerHTML = '';
-            let i = 1;
-            const max = 30; 
-            function addNext() {
-                if(i > max) return;
-                const item = document.createElement('div');
-                item.className = 'photo-item';
-                item.innerHTML = `<img src="摄影/${prefix}${i}.jpg" loading="lazy" class="w-full h-auto opacity-0 transition-opacity duration-700" onload="this.style.opacity='1'" onerror="this.parentElement.remove()">`;
-                grid.appendChild(item);
-                i++;
-                setTimeout(addNext, 50);
-            }
-            addNext();
-        }
-
-        function renderVideo() {
-            const videoUrl = "https://sns-video-zl.xhscdn.com/stream/79/110/115/01e805fb570d7ef74f03700196576619b1_115.mp4";
-            app.innerHTML = `<div class="mb-12 px-4"><span class="zh text-6xl font-light">视听影像</span><span class="en text-sm mt-2 opacity-30">Video Portfolio</span></div>
-                <div class="flex justify-center px-4">
-                    <div class="video-container glass p-1">
-                        <video controls autoplay muted class="w-full h-auto rounded-[18px]">
-                            <source src="${videoUrl}" type="video/mp4">
-                            您的浏览器不支持视频播放。
-                        </video>
-                    </div>
-                </div>`;
-        }
-
-        function renderCinema() {
-            const top10 = [{zh:'星际穿越', img:'电影个人十佳海报/星际穿越.png'}, {zh:'杀死比尔2', img:'电影个人十佳海报/杀死比尔2.png'}, {zh:'七宗罪', img:'电影个人十佳海报/七宗罪.png'}, {zh:'美国丽人', img:'电影个人十佳海报/美国丽人.png'}, {zh:'安吉丽娜朱莉', img:'电影个人十佳海报/安吉丽娜朱莉.jpg'}, {zh:'爱在黎明破晓前', img:'电影个人十佳海报/爱在黎明破晓前.png'}, {zh:'新世界', img:'电影个人十佳海报/新世界.png'}, {zh:'胭脂扣', img:'电影个人十佳海报/胭脂扣.png'}, {zh:'被解救的姜戈', img:'电影个人十佳海报/被解救的姜戈.png'}, {zh:'无间道', img:'电影个人十佳海报/无间道.png'}];
-            const artists = [{zh:'凯拉奈特利', img:'电影 演员导演/凯拉奈特利.jpg'}, {zh:'诺兰', img:'电影 演员导演/诺兰.jpg'}, {zh:'张国荣', img:'电影 演员导演/张国荣.jpg'}, {zh:'黑泽明', img:'电影 演员导演/黑泽明.jpg'}, {zh:'朱莉娅罗伯茨', img:'电影 演员导演/朱莉娅罗伯茨.jpg'}, {zh:'昆汀', img:'电影 演员导演/昆汀.jpg'}, {zh:'布拉德皮特', img:'电影 演员导演/布拉德皮特.jpg'}];
-            const genres = [{zh:'全部', en:'ALL'}, {zh:'剧情', en:'DRAMA'}, {zh:'科幻', en:'SCI-FI'}, {zh:'犯罪', en:'CRIME'}, {zh:'悬疑', en:'MYSTERY'}];
-
-            app.innerHTML = `
-                <div class="mb-12 px-4 flex flex-col"><span class="zh text-6xl font-light">电影人生</span><span class="en text-sm mt-2 opacity-30">Archive</span></div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 mb-12">
-                    <div class="glass overflow-hidden h-[420px] relative"><div class="dragon-row">${top10.map((m, i) => `<div class="dragon-item" style="z-index:${20-i}"><img src="${m.img}"></div>`).join('')}</div></div>
-                    <div class="glass p-2 h-[420px] relative"><div class="artist-scroll">${artists.map(a => `<div class="artist-strip"><img src="${a.img}"><div class="absolute bottom-4 left-1/2 -translate-x-1/2 writing-vertical-rl zh text-[10px] opacity-50">${a.zh}</div></div>`).join('')}</div></div>
-                </div>
-                <div class="px-4"><div class="glass p-8 md:p-12">
-                    <div class="mb-6 max-w-2xl mx-auto"><input type="text" id="movieSearch" class="apple-search" placeholder="搜一部你觉得毛天艺没看过的电影 / Search..." oninput="liveSearch()" onkeydown="handleSearchEnter(event)"></div>
-                    <div class="mb-10 max-w-2xl mx-auto overflow-x-auto no-scrollbar"><div class="flex gap-3 pb-2">${genres.map(g => `<button onclick="filterByGenre('${g.zh}', this)" class="genre-btn px-6 py-2 rounded-xl bg-white/5 border border-white/10 text-[11px] min-w-[90px] hover:bg-white/10 transition-all"><span class="zh">${g.zh}</span><span class="en opacity-30 text-[8px]">${g.en}</span></button>`).join('')}</div></div>
-                    <div id="movie-names" class="movie-list-4col overflow-y-auto max-h-[1000px] pr-4 no-scrollbar"></div>
-                </div></div>`;
-            updateMovieGrid(movieData);
-        }
-
-        function updateMovieGrid(list) {
-            const container = document.getElementById('movie-names');
-            if(!container) return;
-            container.innerHTML = list.map(m => {
-                const parts = m.title.split(' / ');
-                const cn = parts[0] || "";
-                const en = parts[1] || "";
-                return `<div class="movie-card opacity-30 hover:opacity-100">
-                    <span class="zh text-[11px] mb-0.5">${cn}</span>
-                    <span class="en text-[8px] leading-tight break-words">${en}</span>
-                </div>`;
-            }).join('');
-        }
-
-        function liveSearch() {
-            const term = document.getElementById('movieSearch').value.toLowerCase();
-            updateMovieGrid(movieData.filter(m => m.title.toLowerCase().includes(term)));
-        }
-
-        function handleSearchEnter(e) {
-            if (e.key === 'Enter') {
-                const term = e.target.value.trim().toLowerCase();
-                if (term !== '' && !movieData.some(m => m.title.toLowerCase().includes(term))) {
-                    document.getElementById('ad-pop').style.display = 'flex';
-                }
-            }
-        }
-
-        function filterByGenre(genre, btn) {
-            document.querySelectorAll('.genre-btn').forEach(b => b.style.borderColor = 'rgba(255,255,255,0.1)');
-            btn.style.borderColor = 'rgba(255,255,255,0.5)';
-            updateMovieGrid(genre === '全部' ? movieData : movieData.filter(m => m.title.includes(genre)));
-        }
-
+        // 运动教学
         function renderCoach() {
             app.innerHTML = `<div class="mb-12 px-4"><span class="zh text-6xl font-light">运动教学</span><span class="en text-sm mt-2 opacity-30">Coach</span></div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
@@ -254,29 +227,46 @@
                 </div>`;
         }
 
+        // 电影部分保持原样
+        function renderCinema() {
+            const genres = [{zh:'全部', en:'ALL'}, {zh:'剧情', en:'DRAMA'}, {zh:'科幻', en:'SCI-FI'}, {zh:'犯罪', en:'CRIME'}];
+            app.innerHTML = `
+                <div class="mb-12 px-4 flex flex-col"><span class="zh text-6xl font-light">电影人生</span><span class="en text-sm mt-2 opacity-30">Archive</span></div>
+                <div class="px-4"><div class="glass p-8 md:p-12">
+                    <div class="mb-6 max-w-2xl mx-auto"><input type="text" id="movieSearch" class="apple-search" placeholder="搜一部你觉得毛天艺没看过的电影..." oninput="liveSearch()" onkeydown="handleSearchEnter(event)"></div>
+                    <div class="mb-10 max-w-2xl mx-auto overflow-x-auto no-scrollbar"><div class="flex gap-3 pb-2">${genres.map(g => `<button onclick="filterByGenre('${g.zh}', this)" class="px-6 py-2 rounded-xl bg-white/5 border border-white/10 text-[11px] hover:bg-white/10 transition-all"><span class="zh">${g.zh}</span></button>`).join('')}</div></div>
+                    <div id="movie-names" class="movie-list-4col overflow-y-auto max-h-[800px] no-scrollbar"></div>
+                </div></div>`;
+            updateMovieGrid(movieData);
+        }
+
         function switchPage(page) {
             app.style.opacity = '0';
             setTimeout(() => {
                 navUI.classList.toggle('hidden', page === 'home');
                 if(page === 'home') renderHome();
+                else if(page === 'photo') renderPhoto();
                 else if(page === 'cinema') renderCinema();
                 else if(page === 'works') renderWorks();
-                else if(page === 'photo') renderPhoto();
-                else if(page === 'video') renderVideo();
                 else if(page === 'coach') renderCoach();
                 app.style.opacity = '1'; window.scrollTo(0,0);
             }, 300);
         }
 
-        function openViewer(prefix, index, count) {
-            currentImgList = Array.from({length: count}, (_, i) => `${prefix}${i+1}.png`);
-            currentIndex = 0; updateViewer();
-            document.getElementById('viewer').style.display = 'flex';
+        function updateMovieGrid(list) {
+            const container = document.getElementById('movie-names');
+            if(!container) return;
+            container.innerHTML = list.map(m => `<div class="movie-card opacity-30 hover:opacity-100 border-l border-white/5 pl-2"><span class="zh text-[11px]">${m.title.split(' / ')[0]}</span></div>`).join('');
         }
-        function closeViewer() { document.getElementById('viewer').style.display = 'none'; }
-        function nextImg() { currentIndex = (currentIndex + 1) % currentImgList.length; updateViewer(); }
-        function prevImg() { currentIndex = (currentIndex - 1 + currentImgList.length) % currentImgList.length; updateViewer(); }
-        function updateViewer() { document.getElementById('viewer-img').src = currentImgList[currentIndex]; }
+        function liveSearch() {
+            const term = document.getElementById('movieSearch').value.toLowerCase();
+            updateMovieGrid(movieData.filter(m => m.title.toLowerCase().includes(term)));
+        }
+        function handleSearchEnter(e) {
+            if (e.key === 'Enter' && !movieData.some(m => m.title.toLowerCase().includes(e.target.value.toLowerCase()))) {
+                document.getElementById('ad-pop').style.display = 'flex';
+            }
+        }
         function closeAd() { document.getElementById('ad-pop').style.display = 'none'; }
         function toggleMusic(e) { e.stopPropagation(); audio.paused ? audio.play() : audio.pause(); updateMusicIcon(); }
         function updateMusicIcon() {
@@ -284,10 +274,7 @@
             document.getElementById('icon-paused').classList.toggle('hidden', !audio.paused);
         }
 
-        window.addEventListener('load', () => {
-            renderHome();
-            app.style.opacity = '1';
-        });
+        window.addEventListener('load', () => { renderHome(); app.style.opacity = '1'; });
     </script>
 </body>
 </html>
