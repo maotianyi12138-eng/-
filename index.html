@@ -23,22 +23,38 @@
             border: 0.5px solid rgba(255, 255, 255, 0.08); border-radius: 1.5rem;
         }
 
+        /* 核心：动态视频网格系统 */
+        .dynamic-video-grid {
+            display: grid;
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        /* 这里的逻辑会自动适配：4个=2列, 6个=3列, 8个以上=4列 */
+        .grid-cols-auto {
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .video-card-mini {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9; /* 保持统一比例 */
+            background: #000;
+            overflow: hidden;
+            border-radius: 1rem;
+            transition: transform 0.3s ease;
+        }
+        .video-card-mini:hover { transform: scale(1.02); }
+
         .apple-search {
             background: rgba(255, 255, 255, 0.05);
             border: 0.5px solid rgba(255, 255, 255, 0.1);
             color: #fff; border-radius: 12px; padding: 14px 20px; width: 100%; outline: none;
             transition: all 0.3s ease; font-size: 14px;
         }
-
-        .dragon-row { display: flex; overflow-x: auto; padding: 0; scrollbar-width: none; height: 100%; }
-        .dragon-item { flex: 0 0 160px; margin-right: -100px; transition: 0.6s ease; cursor: pointer; position: relative; }
-        .dragon-item:hover { margin-right: 20px; z-index: 100 !important; transform: scale(1.05); }
-        .dragon-item img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
-
-        .artist-scroll { display: flex; gap: 4px; height: 100%; overflow: hidden; }
-        .artist-strip { flex: 1; position: relative; transition: 0.5s ease; border-radius: 4px; overflow: hidden; }
-        .artist-strip:hover { flex: 4; }
-        .artist-strip img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; transition: 0.5s; }
 
         .design-stack { position: relative; height: 260px; width: 100%; overflow: hidden; }
         .stack-layer { position: absolute; width: 60%; height: 90%; transition: 0.5s; border-radius: 8px; cursor: pointer; }
@@ -57,10 +73,6 @@
         
         #viewer, #ad-pop { display: none; position: fixed; inset: 0; z-index: 1000; flex-direction: column; align-items: center; justify-content: center; }
         #viewer { background: rgba(0,0,0,0.98); }
-        #ad-pop { background: rgba(0,0,0,0.85); backdrop-filter: blur(40px); }
-
-        /* 视频容器：缩小至 70% 宽度，居中显示 */
-        .video-card-mini { width: 70%; max-width: 600px; margin: 2rem auto; }
     </style>
 </head>
 <body>
@@ -87,8 +99,8 @@
         </div>
     </div>
 
-    <div id="ad-pop">
-        <div class="glass p-12 max-w-lg w-[90%] text-center border-none shadow-2xl">
+    <div id="ad-pop" style="display:none;" class="fixed inset-0 z-[1001] items-center justify-center bg-black/80 backdrop-blur-xl">
+        <div class="glass p-12 max-w-lg w-[90%] text-center border-none">
             <span class="zh text-2xl mb-2">他没看过，快推荐给他吧</span>
             <span class="en text-xs opacity-40">He hasn't seen it, recommend it.</span>
             <div class="flex flex-col gap-4 mt-8">
@@ -104,7 +116,7 @@
         const app = document.getElementById('app-content');
         const navUI = document.getElementById('nav-ui');
         
-        // 统筹配置：视听影像已合并
+        // 核心配置：在这里添加或删除视频链接即可
         const photoConfig = {
             '商业摄影': { type: 'grid', prefix: '摄影/商业摄影', max: 50 },
             '模特': { type: 'grid', prefix: '摄影/模特', max: 50 },
@@ -114,7 +126,9 @@
                 type: 'video-list', 
                 links: [
                     "https://sns-video-zl.xhscdn.com/stream/79/110/115/01e805fb570d7ef74f03700196576619b1_115.mp4",
-                    "https://sns-video-zl.xhscdn.com/stream/1/110/115/01e92c5c4c1b1c6c010370019ad553c5f4_115.mp4"
+                    "https://sns-video-zl.xhscdn.com/stream/1/110/115/01e92c5c4c1b1c6c010370019ad553c5f4_115.mp4",
+                    "https://www.chali.com/material/brand/ys/video1.mp4",
+                    "https://sns-video-zl.xhscdn.com/stream/79/110/115/01e805fb570d7ef74f03700196576619b1_115.mp4"
                 ] 
             }
         };
@@ -153,8 +167,8 @@
                         <div class="mb-4"><span class="zh text-5xl font-light">摄影</span><span class="en text-xs mt-1 opacity-20">Photography</span></div>
                         ${cats.map(c => `<div onclick="handlePhotoNav('${c.id}', this)" class="photo-nav-item glass p-5 cursor-pointer hover:bg-white/10 transition-all border-l-2 border-transparent"><span class="zh text-lg">${c.zh}</span></div>`).join('')}
                     </div>
-                    <div class="flex-1 glass p-4 overflow-y-auto max-h-[85vh] no-scrollbar" id="photo-content-area-parent">
-                        <div id="photo-content-area"></div>
+                    <div class="flex-1 glass p-4 overflow-y-auto max-h-[85vh] no-scrollbar">
+                        <div id="photo-content-area" class="w-full h-full"></div>
                     </div>
                 </div>`;
             handlePhotoNav('商业摄影', document.querySelector('.photo-nav-item'));
@@ -168,15 +182,22 @@
             container.innerHTML = ''; 
 
             if (config.type === 'video-list') {
-                container.className = "flex flex-col gap-8 animate-in fade-in duration-700";
+                const count = config.links.length;
+                // 动态计算列数：4个=2列, 6个=3列, 8个以上=4列
+                let cols = "grid-cols-1";
+                if(count >= 8) cols = "md:grid-cols-4";
+                else if(count >= 6) cols = "md:grid-cols-3";
+                else if(count >= 4) cols = "md:grid-cols-2";
+
+                container.className = `grid ${cols} gap-4 animate-in fade-in duration-700`;
                 container.innerHTML = config.links.map(url => `
-                    <div class="video-card-mini glass p-1 overflow-hidden rounded-2xl">
-                        <video loop muted playsinline class="w-full h-auto rounded-xl observer-video">
+                    <div class="video-card-mini glass p-1">
+                        <video loop muted playsinline class="w-full h-full object-cover rounded-xl observer-video">
                             <source src="${url}" type="video/mp4">
                         </video>
                     </div>
                 `).join('');
-                initVideoObserver(); // 开启滑到即播逻辑
+                initVideoObserver();
             } else {
                 container.className = "tight-photo-grid animate-in fade-in duration-700";
                 let i = 1;
@@ -192,23 +213,17 @@
             }
         }
 
-        // 视口触发播放逻辑
         function initVideoObserver() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     const video = entry.target;
-                    if (entry.isIntersecting) {
-                        video.play().catch(() => {}); // 进入视口自动静音播放
-                    } else {
-                        video.pause(); // 离开视口暂停
-                    }
+                    if (entry.isIntersecting) video.play().catch(()=>{});
+                    else video.pause();
                 });
-            }, { threshold: 0.6 }); // 当视频露出 60% 时触发
-
+            }, { threshold: 0.5 });
             document.querySelectorAll('.observer-video').forEach(v => observer.observe(v));
         }
 
-        // 平面设计
         function renderWorks() {
             const projects = [{zh: '离不了', prefix: '平面设计/离不了', count: 4}, {zh: '新保龄运动', prefix: '平面设计/新保龄运动', count: 6}, {zh: '血液涅槃', prefix: '平面设计/血液涅槃', count: 4}, {zh: '健身工厂', prefix: '平面设计/健身工厂', count: 5}];
             app.innerHTML = `<div class="mb-12 px-4"><span class="zh text-6xl font-light">视觉作品集</span><span class="en text-sm mt-2 opacity-30">Portfolio</span></div>
@@ -217,7 +232,6 @@
                 </div>`;
         }
 
-        // 运动教学
         function renderCoach() {
             app.innerHTML = `<div class="mb-12 px-4"><span class="zh text-6xl font-light">运动教学</span><span class="en text-sm mt-2 opacity-30">Coach</span></div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
@@ -227,7 +241,6 @@
                 </div>`;
         }
 
-        // 电影部分保持原样
         function renderCinema() {
             const genres = [{zh:'全部', en:'ALL'}, {zh:'剧情', en:'DRAMA'}, {zh:'科幻', en:'SCI-FI'}, {zh:'犯罪', en:'CRIME'}];
             app.innerHTML = `
@@ -252,6 +265,19 @@
                 app.style.opacity = '1'; window.scrollTo(0,0);
             }, 300);
         }
+
+        // 查看器控制
+        let currentImgList = [];
+        let currentIndex = 0;
+        function openViewer(prefix, idx, count) {
+            currentImgList = Array.from({length:count}, (_,i)=>`${prefix}${i+1}.png`);
+            currentIndex = idx - 1; updateViewer();
+            document.getElementById('viewer').style.display='flex';
+        }
+        function closeViewer(){ document.getElementById('viewer').style.display='none'; }
+        function updateViewer(){ document.getElementById('viewer-img').src = currentImgList[currentIndex]; }
+        function nextImg(){ currentIndex=(currentIndex+1)%currentImgList.length; updateViewer(); }
+        function prevImg(){ currentIndex=(currentIndex-1+currentImgList.length)%currentImgList.length; updateViewer(); }
 
         function updateMovieGrid(list) {
             const container = document.getElementById('movie-names');
