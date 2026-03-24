@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,9 +23,9 @@
             border: 0.5px solid rgba(255, 255, 255, 0.08); border-radius: 1.5rem;
         }
 
-        /* 统一字体样式 */
-        .zh { display: block; font-weight: 400; line-height: 1.2; }
-        .en { display: block; font-weight: 100; opacity: 0.5; letter-spacing: 0.05em; text-transform: uppercase; }
+        /* 文字翻转样式：英文为主，中文为辅 */
+        .en-main { display: block; font-weight: 300; letter-spacing: 0.05em; text-transform: uppercase; }
+        .zh-sub { display: block; font-weight: 100; opacity: 0.4; font-size: 0.75rem; line-height: 1.2; }
         
         /* 导航与网格 */
         .nav-active { border-left: 2px solid rgba(255,255,255,0.8) !important; background: rgba(255,255,255,0.08); }
@@ -34,11 +34,9 @@
         @media (min-width: 768px) { .tight-photo-grid { columns: 5; } }
         .photo-item { break-inside: avoid; margin-bottom: 4px; background: #111; border-radius: 8px; overflow: hidden; }
 
-        /* 视频卡片 */
         .video-card-mini { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; border-radius: 1rem; transition: transform 0.3s ease; }
         .video-card-mini:hover { transform: scale(1.02); }
 
-        /* --- 版本1 移植样式：设计堆叠与电影龙鳞 --- */
         .design-stack { position: relative; height: 260px; width: 100%; overflow: hidden; }
         .stack-layer { position: absolute; width: 60%; height: 90%; transition: 0.5s; border-radius: 8px; cursor: pointer; }
         .stack-layer:hover { transform: translateX(15px) scale(1.02); z-index: 60 !important; }
@@ -57,7 +55,6 @@
         .movie-list-4col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; }
         @media (max-width: 767px) { .movie-list-4col { grid-template-columns: repeat(2, 1fr); } }
 
-        /* 搜索框 */
         .apple-search {
             background: rgba(255, 255, 255, 0.05); border: 0.5px solid rgba(255, 255, 255, 0.1);
             color: #fff; border-radius: 12px; padding: 14px 20px; width: 100%; outline: none;
@@ -66,7 +63,6 @@
         #viewer, #ad-pop { display: none; position: fixed; inset: 0; z-index: 1000; flex-direction: column; align-items: center; justify-content: center; }
         #viewer { background: rgba(0,0,0,0.98); }
 
-        /* 翻页卡片辅助样式 */
         .thought-card { background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 1.5rem; transition: 0.3s; }
         .thought-card:hover { background: rgba(255,255,255,0.06); }
     </style>
@@ -76,7 +72,7 @@
 
     <div id="nav-ui">
         <div id="back-btn" class="fixed top-8 left-8 z-[500] cursor-pointer opacity-50 hover:opacity-100 transition hidden" onclick="switchPage('home')">
-            <span class="zh">返回</span><span class="en text-[10px]">Return</span>
+            <span class="en-main text-[10px]">Return</span><span class="zh-sub">返回</span>
         </div>
         <div id="music-toggle" class="fixed top-8 right-8 z-[500] cursor-pointer opacity-40 hover:opacity-100 transition p-3 glass" onclick="toggleMusic()">
             <div id="music-on" class="w-4 h-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
@@ -97,11 +93,11 @@
 
     <div id="ad-pop" class="bg-black/80 backdrop-blur-xl">
         <div class="glass p-12 text-center">
-            <span class="zh text-2xl mb-2">他没看过，快推荐给他吧</span>
-            <span class="en text-xs opacity-40">He hasn't seen it, recommend it.</span>
+            <span class="en-main text-2xl mb-2">Recommend a movie to him</span>
+            <span class="zh-sub">他还没看过，快推荐给他吧</span>
             <div class="flex flex-col gap-4 mt-8">
-                <button class="bg-yellow-400 text-black py-4 rounded-xl font-bold">推荐 / Recommend</button>
-                <button class="py-3 rounded-xl bg-white/10 text-[10px]" onclick="closeAd()">已经分享！/ Shared</button>
+                <button class="bg-white text-black py-4 rounded-xl font-bold uppercase text-xs tracking-widest">Recommend</button>
+                <button class="py-3 rounded-xl bg-white/10 text-[10px] uppercase opacity-40" onclick="closeAd()">Already Shared</button>
             </div>
         </div>
     </div>
@@ -113,6 +109,8 @@
         const backBtn = document.getElementById('back-btn');
         let currentImgList = [];
         let currentIndex = 0;
+
+        const getImdbUrl = (q) => `https://www.imdb.com/find?q=${encodeURIComponent(q)}`;
 
         let hasInteracted = false;
         const startAudio = () => {
@@ -132,39 +130,37 @@
             document.getElementById('music-off').classList.toggle('hidden', !audio.paused);
         }
 
-        // --- 核心渲染引擎 ---
         function renderHome() {
             app.innerHTML = `
                 <div class="h-[25vh] flex flex-col justify-end pb-8 px-4">
                     <div class="flex items-baseline gap-4">
-                        <span class="zh text-[10vw] md:text-[6vw] font-light">毛天艺</span>
-                        <span class="en text-[3vw] md:text-[1.5vw] opacity-20 tracking-tighter">Tianyi Mao</span>
+                        <span class="en-main text-[10vw] md:text-[6vw]">Tianyi Mao</span>
+                        <span class="zh-sub text-[3vw] md:text-[1.5vw] opacity-20">毛天艺</span>
                     </div>
                     <div class="mt-2">
-                        <span class="zh text-sm md:text-base opacity-80">一个只想使过程精彩的人是无法被剥夺的</span>
-                        <span class="en text-[9px] md:text-[10px] opacity-40 tracking-wider mt-1">Those who seek brilliance in the process cannot be deprived.</span>
+                        <span class="en-main text-xs md:text-sm tracking-wider">Those who seek brilliance in the process cannot be deprived.</span>
+                        <span class="zh-sub mt-1">一个只想使过程精彩的人是无法被剥夺的</span>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
                     <div class="glass p-10 relative overflow-hidden group min-h-[200px] md:col-span-2">
                         <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0">
-                            <span class="zh text-3xl mb-2">核心业务</span><span class="en text-[10px]">Business Sectors</span>
+                            <span class="en-main text-3xl mb-2">Business Sectors</span><span class="zh-sub">核心业务</span>
                         </div>
                         <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <div onclick="switchPage('works')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">平面设计</span><span class="en text-[9px]">Design</span></div>
-                            <div onclick="switchPage('photo')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">摄影作品</span><span class="en text-[9px]">Photo</span></div>
-                            <div onclick="switchPage('coach')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">运动教学</span><span class="en text-[9px]">Coach</span></div>
+                            <div onclick="switchPage('works')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Design</span><span class="zh-sub">平面设计</span></div>
+                            <div onclick="switchPage('photo')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Photo</span><span class="zh-sub">摄影作品</span></div>
+                            <div onclick="switchPage('coach')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Coach</span><span class="zh-sub">运动教学</span></div>
                         </div>
                     </div>
-                    
                     <div class="glass p-10 relative overflow-hidden group min-h-[200px] md:col-span-2">
                         <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0">
-                            <span class="zh text-3xl mb-2">更多的我</span><span class="en text-[10px]">More of Me</span>
+                            <span class="en-main text-3xl mb-2">More of Me</span><span class="zh-sub">更多的我</span>
                         </div>
                         <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <div onclick="switchPage('cinema')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">电影人生</span><span class="en text-[9px]">Cinema</span></div>
-                            <div onclick="switchPage('reading')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">音乐阅读</span><span class="en text-[9px]">Media</span></div>
-                            <div onclick="switchPage('thoughts')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">感悟反省</span><span class="en text-[9px]">Reflect</span></div>
+                            <div onclick="switchPage('cinema')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Cinema</span><span class="zh-sub">电影人生</span></div>
+                            <div onclick="switchPage('reading')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Media</span><span class="zh-sub">音乐阅读</span></div>
+                            <div onclick="switchPage('thoughts')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Reflect</span><span class="zh-sub">感悟反省</span></div>
                         </div>
                     </div>
                 </div>`;
@@ -172,12 +168,12 @@
 
         function renderWorks() {
             const projects = [
-                {zh: '离不了', prefix: '平面设计/离不了', count: 4},
-                {zh: '新保龄运动', prefix: '平面设计/新保龄运动', count: 6},
-                {zh: '血液涅槃', prefix: '平面设计/血液涅槃', count: 4},
-                {zh: '健身工厂', prefix: '平面设计/健身工厂', count: 5}
+                {en: 'Inseparable', zh: '离不了', prefix: '平面设计/离不了', count: 4},
+                {en: 'New Bowling', zh: '新保龄运动', prefix: '平面设计/新保龄运动', count: 6},
+                {en: 'Blood Nirvana', zh: '血液涅槃', prefix: '平面设计/血液涅槃', count: 4},
+                {en: 'Fitness Factory', zh: '健身工厂', prefix: '平面设计/健身工厂', count: 5}
             ];
-            app.innerHTML = `<div class="mb-12 px-4"><span class="zh text-6xl font-light">视觉作品集</span><span class="en text-sm mt-2 opacity-30">Portfolio</span></div>
+            app.innerHTML = `<div class="mb-12 px-4"><span class="en-main text-6xl">Portfolio</span><span class="zh-sub text-sm mt-2">视觉作品集</span></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
                     ${projects.map(p => `
                         <div class="glass p-6 group">
@@ -185,97 +181,103 @@
                                 <div class="stack-layer shadow-xl" style="left:${i*12}%; z-index:${p.count-i}; background:#111;" onclick="openViewerList('${p.prefix}', ${i+1}, ${p.count})">
                                     <img src="${p.prefix}${i+1}.png" class="w-full h-full object-cover rounded-lg">
                                 </div>`).join('')}</div>
-                            <div class="mt-4"><span class="zh text-xl">${p.zh}</span></div>
+                            <div class="mt-4"><span class="en-main text-xl">${p.en}</span><span class="zh-sub">${p.zh}</span></div>
                         </div>`).join('')}
                 </div>`;
         }
 
         function renderCinema() {
             const top10 = [
-                {zh:'星际穿越', img:'电影个人十佳海报/星际穿越.png'}, {zh:'杀死比尔2', img:'电影个人十佳海报/杀死比尔2.png'},
-                {zh:'七宗罪', img:'电影个人十佳海报/七宗罪.png'}, {zh:'美国丽人', img:'电影个人十佳海报/美国丽人.png'},
-                {zh:'安吉丽娜朱莉', img:'电影个人十佳海报/安吉丽娜朱莉.jpg'}, {zh:'爱在黎明破晓前', img:'电影个人十佳海报/爱在黎明破晓前.png'},
-                {zh:'新世界', img:'电影个人十佳海报/新世界.png'}, {zh:'胭脂扣', img:'电影个人十佳海报/胭脂扣.png'},
-                {zh:'被解救的姜戈', img:'电影个人十佳海报/被解救的姜戈.png'}, {zh:'无间道', img:'电影个人十佳海报/无间道.png'}
+                {zh:'星际穿越', en:'Interstellar', img:'电影个人十佳海报/星际穿越.png'}, {zh:'杀死比尔2', en:'Kill Bill: Vol. 2', img:'电影个人十佳海报/杀死比尔2.png'},
+                {zh:'七宗罪', en:'Se7en', img:'电影个人十佳海报/七宗罪.png'}, {zh:'美国丽人', en:'American Beauty', img:'电影个人十佳海报/美国丽人.png'},
+                {zh:'安吉丽娜朱莉', en:'Angelina Jolie', img:'电影个人十佳海报/安吉丽娜朱莉.jpg'}, {zh:'爱在黎明破晓前', en:'Before Sunrise', img:'电影个人十佳海报/爱在黎明破晓前.png'},
+                {zh:'新世界', en:'New World', img:'电影个人十佳海报/新世界.png'}, {zh:'胭脂扣', en:'Rouge', img:'电影个人十佳海报/胭脂扣.png'},
+                {zh:'被解救的姜戈', en:'Django Unchained', img:'电影个人十佳海报/被解救的姜戈.png'}, {zh:'无间道', en:'Internal Affairs', img:'电影个人十佳海报/无间道.png'}
             ];
             const artists = [
-                {zh:'凯拉奈特利', img:'电影 演员导演/凯拉奈特利.jpg'}, {zh:'诺兰', img:'电影 演员导演/诺兰.jpg'},
-                {zh:'张国荣', img:'电影 演员导演/张国荣.jpg'}, {zh:'黑泽明', img:'电影 演员导演/黑泽明.jpg'},
-                {zh:'朱莉娅罗伯茨', img:'电影 演员导演/朱莉娅罗伯茨.jpg'}, {zh:'昆汀', img:'电影 演员导演/昆汀.jpg'},
-                {zh:'布拉德皮特', img:'电影 演员导演/布拉德皮特.jpg'}
+                {zh:'凯拉奈特利', en:'Keira Knightley', img:'电影 演员导演/凯拉奈特利.jpg'}, {zh:'诺兰', en:'Christopher Nolan', img:'电影 演员导演/诺兰.jpg'},
+                {zh:'张国荣', en:'Leslie Cheung', img:'电影 演员导演/张国荣.jpg'}, {zh:'黑泽明', en:'Akira Kurosawa', img:'电影 演员导演/黑泽明.jpg'},
+                {zh:'朱莉娅罗伯茨', en:'Julia Roberts', img:'电影 演员导演/朱莉娅罗伯茨.jpg'}, {zh:'昆汀', en:'Quentin Tarantino', img:'电影 演员导演/昆汀.jpg'},
+                {zh:'布拉德皮特', en:'Brad Pitt', img:'电影 演员导演/布拉德皮特.jpg'}
             ];
             app.innerHTML = `
-                <div class="mb-12 px-4 flex flex-col"><span class="zh text-6xl font-light">电影人生</span><span class="en text-sm mt-2 opacity-30">Archive</span></div>
+                <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Cinema Archive</span><span class="zh-sub text-sm mt-2">电影人生</span></div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 mb-12">
-                    <div class="glass overflow-hidden h-[420px] relative"><div class="dragon-row">${top10.map((m, i) => `<div class="dragon-item" style="z-index:${20-i}"><img src="${m.img}"></div>`).join('')}</div></div>
-                    <div class="glass p-2 h-[420px] relative"><div class="artist-scroll">${artists.map(a => `<div class="artist-strip"><img src="${a.img}"><div class="absolute bottom-4 left-1/2 -translate-x-1/2 writing-vertical-rl zh text-[10px] opacity-50">${a.zh}</div></div>`).join('')}</div></div>
+                    <div class="glass overflow-hidden h-[420px] relative">
+                        <div class="dragon-row">${top10.map((m, i) => `
+                            <a href="${getImdbUrl(m.en)}" target="_blank" class="dragon-item" style="z-index:${20-i}"><img src="${m.img}" title="${m.en} / ${m.zh}"></a>`).join('')}
+                        </div>
+                    </div>
+                    <div class="glass p-2 h-[420px] relative">
+                        <div class="artist-scroll">${artists.map(a => `
+                            <a href="${getImdbUrl(a.en)}" target="_blank" class="artist-strip">
+                                <img src="${a.img}">
+                                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 writing-vertical-rl en-main text-[10px] opacity-50">${a.en}</div>
+                            </a>`).join('')}
+                        </div>
+                    </div>
                 </div>
                 <div class="px-4"><div class="glass p-8 md:p-12">
-                    <div class="mb-6 max-w-2xl mx-auto"><input type="text" id="movieSearch" class="apple-search" placeholder="搜一部他没看过的电影..." oninput="liveSearch()" onkeydown="handleSearchEnter(event)"></div>
+                    <div class="mb-6 max-w-2xl mx-auto"><input type="text" id="movieSearch" class="apple-search" placeholder="Search a movie he hasn't seen..." oninput="liveSearch()" onkeydown="handleSearchEnter(event)"></div>
                     <div id="movie-names" class="movie-list-4col"></div>
                 </div></div>`;
             updateMovieGrid(movieData);
         }
 
-        // --- 新增板块：音乐阅读 ---
         function renderReading() {
             app.innerHTML = `
-                <div class="mb-12 px-4 flex flex-col"><span class="zh text-6xl font-light">音乐与阅读</span><span class="en text-sm mt-2 opacity-30">Soul & Rhythm</span></div>
+                <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Soul & Rhythm</span><span class="zh-sub text-sm mt-2">音乐与阅读</span></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
                     <div class="glass p-8">
-                        <span class="zh text-2xl mb-6">正在阅读</span>
+                        <span class="en-main text-2xl mb-6">Currently Reading</span>
                         <div class="flex gap-4">
-                            <div class="w-32 h-44 bg-white/10 rounded-lg overflow-hidden shadow-2xl">
-                                <img src="book_cover.jpg" class="w-full h-full object-cover" onerror="this.style.display='none'">
-                            </div>
+                            <div class="w-32 h-44 bg-white/10 rounded-lg overflow-hidden shadow-2xl"><img src="book_cover.jpg" class="w-full h-full object-cover" onerror="this.style.display='none'"></div>
                             <div class="flex-1">
-                                <span class="zh text-lg">《瓦尔登湖》</span>
-                                <span class="en text-xs opacity-40">Henry David Thoreau</span>
-                                <p class="zh text-xs opacity-60 mt-4 leading-relaxed">“我步入丛林，因为我希望生活得有意义，我希望活得深刻，并汲取生命中所有的精华。”</p>
+                                <span class="en-main text-lg">Walden</span>
+                                <span class="zh-sub text-xs">《瓦尔登湖》 - Henry David Thoreau</span>
+                                <p class="en-main text-[10px] opacity-60 mt-4 leading-relaxed italic">"I went to the woods because I wished to live deliberately..."</p>
                             </div>
                         </div>
                     </div>
                     <div class="glass p-8">
-                        <span class="zh text-2xl mb-6">年度歌单</span>
+                        <span class="en-main text-2xl mb-6">Playlist of the Year</span>
                         <div class="space-y-4">
-                            ${['In the End - Linkin Park', 'Bohemian Rhapsody - Queen', '夜曲 - 周杰伦'].map(song => `
+                            ${['In the End - Linkin Park', 'Bohemian Rhapsody - Queen', 'Nocturne - Jay Chou'].map(song => `
                                 <div class="flex items-center justify-between border-b border-white/5 pb-2">
-                                    <span class="zh text-sm opacity-80">${song}</span>
-                                    <span class="en text-[9px] opacity-30">PLAYING</span>
-                                </div>
-                            `).join('')}
+                                    <span class="en-main text-sm opacity-80">${song}</span>
+                                    <span class="en-main text-[9px] opacity-30">PLAYING</span>
+                                </div>`).join('')}
                         </div>
                     </div>
                 </div>`;
         }
 
-        // --- 新增板块：感悟反省 ---
         function renderThoughts() {
             const thoughts = [
-                { date: '2024.03.15', content: '所有的优越感都来自于缺乏见识。保持好奇，保持谦卑。' },
-                { date: '2024.02.10', content: '设计不是为了好看，而是为了解决沟通的效率问题。' },
-                { date: '2023.12.25', content: '运动带给人的不只是身体的强健，更是对自我的绝对掌握。' }
+                { date: '2024.03.15', en: 'All superiority comes from a lack of insight. Stay curious, stay humble.', zh: '所有的优越感都来自于缺乏见识。保持好奇，保持谦卑。' },
+                { date: '2024.02.10', en: 'Design is not for looking good, but for solving communication efficiency.', zh: '设计不是为了好看，而是为了解决沟通的效率问题。' },
+                { date: '2023.12.25', en: 'Exercise brings not just physical strength, but absolute self-mastery.', zh: '运动带给人的不只是身体的强健，更是对自我的绝对掌握。' }
             ];
             app.innerHTML = `
-                <div class="mb-12 px-4 flex flex-col"><span class="zh text-6xl font-light">感悟反省</span><span class="en text-sm mt-2 opacity-30">Reflection</span></div>
+                <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Reflection</span><span class="zh-sub text-sm mt-2">感悟反省</span></div>
                 <div class="max-w-4xl mx-auto space-y-6 px-4">
                     ${thoughts.map(t => `
                         <div class="thought-card">
-                            <span class="en text-[10px] opacity-20 mb-4">${t.date}</span>
-                            <p class="zh text-lg font-light leading-relaxed">${t.content}</p>
-                        </div>
-                    `).join('')}
+                            <span class="en-main text-[10px] opacity-20 mb-4">${t.date}</span>
+                            <p class="en-main text-lg font-light leading-relaxed mb-2">${t.en}</p>
+                            <p class="zh-sub text-sm">${t.zh}</p>
+                        </div>`).join('')}
                 </div>`;
         }
 
         function renderPhoto() {
-            const cats = [{id:'商业摄影', zh:'商业摄影', en:'Commercial'}, {id:'模特', zh:'模特', en:'Model'}, {id:'情绪摄影', zh:'情绪摄影', en:'Mood'}, {id:'自媒体摄影', zh:'自媒体摄影', en:'Social'}, {id:'video', zh:'视听影像', en:'Visuals'}];
+            const cats = [{id:'商业摄影', en:'Commercial', zh:'商业摄影'}, {id:'模特', en:'Model', zh:'模特'}, {id:'情绪摄影', en:'Mood', zh:'情绪摄影'}, {id:'自媒体摄影', en:'Social', zh:'自媒体摄影'}, {id:'video', en:'Visuals', zh:'视听影像'}];
             app.innerHTML = `
                 <div class="flex flex-col md:flex-row gap-8 px-4 min-h-[70vh]">
                     <div class="md:w-1/4 flex flex-col gap-3">
-                        <div class="mb-4"><span class="zh text-5xl font-light">摄影</span><span class="en text-xs mt-1 opacity-20">Photography</span></div>
+                        <div class="mb-4"><span class="en-main text-5xl">Photography</span><span class="zh-sub text-xs mt-1">摄影</span></div>
                         ${cats.map(c => `<div onclick="handlePhotoNav('${c.id}', this)" class="photo-nav-item glass p-5 cursor-pointer hover:bg-white/10 transition-all border-transparent">
-                            <span class="zh text-lg">${c.zh}</span><span class="en text-[9px]">${c.en}</span>
+                            <span class="en-main text-lg">${c.en}</span><span class="zh-sub text-[9px]">${c.zh}</span>
                         </div>`).join('')}
                     </div>
                     <div class="flex-1 glass p-4 overflow-y-auto max-h-[85vh] no-scrollbar"><div id="photo-content-area"></div></div>
@@ -320,12 +322,24 @@
 
         function updateMovieGrid(list) {
             const container = document.getElementById('movie-names');
-            if(container) container.innerHTML = list.slice(0, 160).map(m => `<div class="zh text-[10px] opacity-30 hover:opacity-100 truncate border-l border-white/5 pl-2 transition-all">${m.title.split(' / ')[0]}</div>`).join('');
+            if(container) {
+                container.innerHTML = list.slice(0, 160).map(m => {
+                    const titles = m.title.split(' / ');
+                    const mainTitle = titles[0];
+                    const altTitle = titles[1] || '';
+                    return `<a href="${getImdbUrl(mainTitle)}" target="_blank" class="block border-l border-white/5 pl-2 transition-all hover:opacity-100 opacity-30">
+                        <div class="en-main text-[9px] truncate">${altTitle || mainTitle}</div>
+                        <div class="zh-sub text-[8px] truncate">${mainTitle}</div>
+                    </a>`;
+                }).join('');
+            }
         }
+
         function liveSearch() {
             const val = document.getElementById('movieSearch').value.toLowerCase();
             updateMovieGrid(movieData.filter(m => m.title.toLowerCase().includes(val)));
         }
+        
         function handleSearchEnter(e) {
             if (e.key === 'Enter') {
                 const term = e.target.value.trim().toLowerCase();
