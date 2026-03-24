@@ -133,9 +133,9 @@
         function renderHome() {
             app.innerHTML = `
                 <div class="h-[25vh] flex flex-col justify-end pb-8 px-4">
-                    <div class="flex items-baseline gap-4">
-                        <span class="en-main text-[10vw] md:text-[6vw]">Tianyi Mao</span>
-                        <span class="zh-sub text-[3vw] md:text-[1.5vw] opacity-20">毛天艺</span>
+                    <div class="flex flex-col md:flex-row items-baseline gap-2">
+                        <span class="zh-sub text-[10vw] md:text-[6vw] opacity-100 order-2 md:order-1" style="font-size: 10vw;">毛天艺</span>
+                        <span class="en-main text-[4vw] md:text-[2.5vw] order-1 md:order-2">Tianyi Mao</span>
                     </div>
                     <div class="mt-2">
                         <span class="en-main text-xs md:text-sm tracking-wider">Those who seek brilliance in the process cannot be deprived.</span>
@@ -145,7 +145,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
                     <div class="glass p-10 relative overflow-hidden group min-h-[200px] md:col-span-2">
                         <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0">
-                            <span class="en-main text-3xl mb-2">Business Sectors</span><span class="zh-sub">核心业务</span>
+                            <span class="en-main text-3xl mb-2">What can i do</span><span class="zh-sub">核心业务</span>
                         </div>
                         <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                             <div onclick="switchPage('works')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Design</span><span class="zh-sub">平面设计</span></div>
@@ -155,7 +155,7 @@
                     </div>
                     <div class="glass p-10 relative overflow-hidden group min-h-[200px] md:col-span-2">
                         <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0">
-                            <span class="en-main text-3xl mb-2">More of Me</span><span class="zh-sub">更多的我</span>
+                            <span class="en-main text-3xl mb-2">More of me</span><span class="zh-sub">更多的我</span>
                         </div>
                         <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                             <div onclick="switchPage('cinema')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Cinema</span><span class="zh-sub">电影人生</span></div>
