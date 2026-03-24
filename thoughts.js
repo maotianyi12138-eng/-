@@ -2,34 +2,17 @@
 // 以后每写一篇新的，就复制其中一个 { } 块到最前面即可
 
 const myThoughts = [
+  
     { 
         date: '2026.03.24', 
-        tag: 'WORK', 
-        en: 'The output quality of deep work is proportional to the degree of digital isolation.', 
-        zh: '深度工作的产出质量，与数字隔离的程度成正比。' 
-    },
-    { 
-        date: '2026.03.23', 
-        tag: 'LIFE', 
-        en: 'Sometimes the best camera is the one you left at home; some moments are meant to be felt, not captured.', 
-        zh: '有时候最好的相机是你留在家里没带出来的那台；有些时刻是用来感受的，而不是用来捕捉的。' 
-    },
-    { 
-        date: '2026.03.22', 
-        tag: 'FILM', 
-        en: 'Rewatched "Before Sunrise". The magic is still in the dialogue, not the scenery.', 
-        zh: '重温了《爱在黎明破晓前》，魅力依然在于对话，而非风景。' 
-    },
-    { 
-        date: '2026.03.21', 
         tag: 'MOOD', 
         en: 'Discipline is choosing between what you want now and what you want most.', 
-        zh: '自律是在“现在想要的”和“最想要的”之间做出选择。' 
+        zh: '正在完善自己成为一个不无聊的人，电影里总是有桥段是意识到下半辈子还有和伴侣生活五六十年，就很绝望。我想不光是伴侣，家庭、朋友之间应该判断自己是否能为他们带去有趣、新鲜的事，因为当我们的身体和性功能退化后，我们只剩下大脑
     },
     { 
-        date: '2026.03.20', 
-        tag: 'TECH', 
-        en: 'Code is poetry that functions. Keep it clean, keep it simple.', 
-        zh: '代码是具备功能的诗。保持整洁，保持简单。' 
+        date: '2026.03.24', 
+        tag: 'Mood', 
+        en: 'I have been continuously improving the functionality, and finally at this point, I can write a diary thoughts here, and only those who care can see it', 
+        zh: '一直完善功能，终于到了这一步可以写日记或者碎碎念了，而且只有在意的人能看到。' 
     }
 ];
