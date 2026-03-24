@@ -23,11 +23,9 @@
             border: 0.5px solid rgba(255, 255, 255, 0.08); border-radius: 1.5rem;
         }
 
-        /* 文字翻转样式：英文为主，中文为辅 */
         .en-main { display: block; font-weight: 300; letter-spacing: 0.05em; text-transform: uppercase; }
         .zh-sub { display: block; font-weight: 100; opacity: 0.4; font-size: 0.75rem; line-height: 1.2; }
         
-        /* 导航与网格 */
         .nav-active { border-left: 2px solid rgba(255,255,255,0.8) !important; background: rgba(255,255,255,0.08); }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .tight-photo-grid { columns: 3; gap: 4px; }
@@ -103,12 +101,18 @@
     </div>
 
     <script src="movies.js"></script>
+    <script src="thoughts.js"></script>
     <script>
         const audio = document.getElementById('main-audio');
         const app = document.getElementById('app-content');
         const backBtn = document.getElementById('back-btn');
         let currentImgList = [];
         let currentIndex = 0;
+
+        // 如果 thoughts.js 还没建，给一个默认内容防止报错
+        if (typeof myThoughts === 'undefined') {
+            window.myThoughts = [{date:'INFO', en:'Create thoughts.js to write diary.', zh:'请创建 thoughts.js 文件开始书写日记。'}];
+        }
 
         const getImdbUrl = (q) => `https://www.imdb.com/find?q=${encodeURIComponent(q)}`;
 
@@ -134,7 +138,7 @@
             app.innerHTML = `
                 <div class="h-[25vh] flex flex-col justify-end pb-8 px-4">
                     <div class="flex flex-col md:flex-row items-baseline gap-2">
-                        <span class="zh-sub text-[10vw] md:text-[6vw] opacity-100 order-2 md:order-1" style="font-size: 10vw;">毛天艺</span>
+                        <span class="zh-sub opacity-100 order-2 md:order-1" style="font-size: 10vw;">毛天艺</span>
                         <span class="en-main text-[4vw] md:text-[2.5vw] order-1 md:order-2">Tianyi Mao</span>
                     </div>
                     <div class="mt-2">
@@ -253,15 +257,10 @@
         }
 
         function renderThoughts() {
-            const thoughts = [
-                { date: '2024.03.15', en: 'All superiority comes from a lack of insight. Stay curious, stay humble.', zh: '所有的优越感都来自于缺乏见识。保持好奇，保持谦卑。' },
-                { date: '2024.02.10', en: 'Design is not for looking good, but for solving communication efficiency.', zh: '设计不是为了好看，而是为了解决沟通的效率问题。' },
-                { date: '2023.12.25', en: 'Exercise brings not just physical strength, but absolute self-mastery.', zh: '运动带给人的不只是身体的强健，更是对自我的绝对掌握。' }
-            ];
             app.innerHTML = `
                 <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Reflection</span><span class="zh-sub text-sm mt-2">感悟反省</span></div>
                 <div class="max-w-4xl mx-auto space-y-6 px-4">
-                    ${thoughts.map(t => `
+                    ${myThoughts.map(t => `
                         <div class="thought-card">
                             <span class="en-main text-[10px] opacity-20 mb-4">${t.date}</span>
                             <p class="en-main text-lg font-light leading-relaxed mb-2">${t.en}</p>
