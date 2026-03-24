@@ -256,17 +256,36 @@
                 </div>`;
         }
 
-        function renderThoughts() {
+       async function renderThoughts() {
+            // 先渲染基础框架和加载状态
             app.innerHTML = `
                 <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Reflection</span><span class="zh-sub text-sm mt-2">感悟反省</span></div>
-                <div class="max-w-4xl mx-auto space-y-6 px-4">
-                    ${myThoughts.map(t => `
-                        <div class="thought-card">
+                <div id="thoughts-container" class="max-w-4xl mx-auto space-y-6 px-4">
+                    ${myThoughts.map((t, i) => `
+                        <div class="thought-card" id="thought-${i}">
                             <span class="en-main text-[10px] opacity-20 mb-4">${t.date}</span>
-                            <p class="en-main text-lg font-light leading-relaxed mb-2">${t.en}</p>
+                            <p class="en-main text-lg font-light leading-relaxed mb-2 trans-target">${t.en || 'Translating...'}</p>
                             <p class="zh-sub text-sm">${t.zh}</p>
                         </div>`).join('')}
                 </div>`;
+
+            // 自动补全缺失的翻译
+            myThoughts.forEach(async (t, i) => {
+                if (!t.en && t.zh) {
+                    try {
+                        const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(t.zh)}&langpair=zh-CN|en`);
+                        const data = await res.json();
+                        const translatedText = data.responseData.translatedText;
+                        // 更新页面显示
+                        const cardText = document.querySelector(`#thought-${i} .trans-target`);
+                        if (cardText) cardText.innerText = translatedText;
+                        // 同步更新内存数据，防止切换页面重复请求
+                        t.en = translatedText;
+                    } catch (err) {
+                        document.querySelector(`#thought-${i} .trans-target`).innerText = "Translation Timeout";
+                    }
+                }
+            });
         }
 
         function renderPhoto() {
