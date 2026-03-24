@@ -23,97 +23,96 @@
             border: 0.5px solid rgba(255, 255, 255, 0.08); border-radius: 1.5rem;
         }
 
-        /* 统一中英对照样式 */
+        /* 统一字体样式 */
         .zh { display: block; font-weight: 400; line-height: 1.2; }
-        .en { display: block; font-weight: 100; opacity: 0.5; letter-spacing: 0.05em; text-transform: uppercase; }
+        .en { display: block; font-weight: 100; opacity: 0.6; letter-spacing: 0.05em; text-transform: uppercase; }
         
-        /* 导航激活状态 */
-        .nav-active { border-left-color: rgba(255,255,255,0.8) !important; background: rgba(255,255,255,0.08); }
+        /* 导航与网格 */
+        .nav-active { border-left: 2px solid rgba(255,255,255,0.8) !important; background: rgba(255,255,255,0.08); }
         .no-scrollbar::-webkit-scrollbar { display: none; }
+        .tight-photo-grid { columns: 3; gap: 4px; }
+        @media (min-width: 768px) { .tight-photo-grid { columns: 5; } }
+        .photo-item { break-inside: avoid; margin-bottom: 4px; background: #111; border-radius: 8px; overflow: hidden; }
 
         /* 视频卡片 */
-        .video-card-mini { aspect-ratio: 16/9; background: #000; overflow: hidden; border-radius: 1rem; transition: transform 0.3s ease; }
+        .video-card-mini { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; border-radius: 1rem; transition: transform 0.3s ease; }
         .video-card-mini:hover { transform: scale(1.02); }
 
-        #app-content { transition: opacity 0.5s ease; }
+        /* 设计堆叠效果 */
+        .design-stack { position: relative; height: 260px; width: 100%; overflow: hidden; }
+        .stack-layer { position: absolute; width: 60%; height: 90%; transition: 0.5s; border-radius: 8px; cursor: pointer; }
+
+        /* 搜索框 */
+        .apple-search {
+            background: rgba(255, 255, 255, 0.05); border: 0.5px solid rgba(255, 255, 255, 0.1);
+            color: #fff; border-radius: 12px; padding: 14px 20px; width: 100%; outline: none;
+        }
+
+        #viewer, #ad-pop { display: none; position: fixed; inset: 0; z-index: 1000; flex-direction: column; align-items: center; justify-content: center; }
+        #viewer { background: rgba(0,0,0,0.98); }
     </style>
 </head>
 <body>
-    <audio id="main-audio" loop>
-        <source src="bgm.mp3" type="audio/mpeg">
-    </audio>
+    <audio id="main-audio" loop><source src="bgm.mp3" type="audio/mpeg"></audio>
 
-    <div id="global-controls">
+    <div id="nav-ui">
         <div id="back-btn" class="fixed top-8 left-8 z-[500] cursor-pointer opacity-50 hover:opacity-100 transition hidden" onclick="switchPage('home')">
             <span class="zh">返回</span><span class="en text-[10px]">Return</span>
         </div>
+        <div id="music-toggle" class="fixed top-8 right-8 z-[500] cursor-pointer opacity-40 hover:opacity-100 transition p-3 glass" onclick="toggleMusic()">
+            <div id="music-on" class="w-4 h-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
+            <div id="music-off" class="w-4 h-4 hidden"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></div>
+        </div>
+    </div>
 
-        <div id="music-btn" class="fixed top-8 right-8 z-[500] cursor-pointer opacity-50 hover:opacity-100 transition p-2 glass" onclick="toggleMusic()">
-            <div id="music-icon-playing" class="w-5 h-5 flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-full h-full">
-                    <line x1="10" y1="5" x2="10" y2="19" /><line x1="14" y1="5" x2="14" y2="19" />
-                </svg>
-            </div>
-            <div id="music-icon-paused" class="w-5 h-5 hidden flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
-                    <path d="M8 5v14l11-7z" />
-                </svg>
+    <div id="app-content" class="pt-16 p-6 md:p-16 opacity-0 transition-opacity duration-500"></div>
+
+    <div id="viewer" onclick="closeViewer()">
+        <img id="viewer-img" src="" class="max-h-[85vh] max-w-[85vw] object-contain rounded shadow-2xl">
+    </div>
+
+    <div id="ad-pop" class="bg-black/80 backdrop-blur-xl">
+        <div class="glass p-12 text-center">
+            <span class="zh text-2xl mb-2">他没看过，快推荐给他吧</span>
+            <span class="en text-xs opacity-40">He hasn't seen it, recommend it.</span>
+            <div class="flex flex-col gap-4 mt-8">
+                <button class="bg-yellow-400 text-black py-4 rounded-xl font-bold">推荐 / Recommend</button>
+                <button class="py-3 rounded-xl bg-white/10 text-[10px]" onclick="closeAd()">已经分享 / Shared</button>
             </div>
         </div>
     </div>
-    
-    <div id="app-content" class="pt-16 p-6 md:p-16 opacity-0"></div>
 
     <script src="movies.js"></script>
     <script>
         const audio = document.getElementById('main-audio');
         const app = document.getElementById('app-content');
         const backBtn = document.getElementById('back-btn');
-        const playIcon = document.getElementById('music-icon-playing');
-        const pauseIcon = document.getElementById('music-icon-paused');
 
-        // --- 音乐控制逻辑 ---
-        
-        let musicStarted = false;
-        function startMusicOnce() {
-            if (!musicStarted) {
-                audio.play().catch(e => console.log("等待用户交互以播放音乐"));
-                musicStarted = true;
-                updateMusicUI();
-                // 播放后移除监听
-                ['click', 'scroll', 'touchstart', 'wheel'].forEach(type => {
-                    window.removeEventListener(type, startMusicOnce);
-                });
+        // --- 音乐连贯播放逻辑 ---
+        let hasInteracted = false;
+        const startAudio = () => {
+            if(!hasInteracted) {
+                audio.play(); hasInteracted = true;
+                updateMusicIcon();
             }
-        }
-
-        // 监听任意用户交互以自动播放
-        ['click', 'scroll', 'touchstart', 'wheel'].forEach(type => {
-            window.addEventListener(type, startMusicOnce, { once: true });
-        });
+        };
+        ['click', 'touchstart', 'scroll', 'wheel'].forEach(e => window.addEventListener(e, startAudio, {once:true}));
 
         function toggleMusic() {
-            if (audio.paused) {
-                audio.play();
-            } else {
-                audio.pause();
-            }
-            updateMusicUI();
+            audio.paused ? audio.play() : audio.pause();
+            updateMusicIcon();
+        }
+        function updateMusicIcon() {
+            document.getElementById('music-on').classList.toggle('hidden', audio.paused);
+            document.getElementById('music-off').classList.toggle('hidden', !audio.paused);
         }
 
-        function updateMusicUI() {
-            if (audio.paused) {
-                playIcon.classList.add('hidden');
-                pauseIcon.classList.remove('hidden');
-            } else {
-                playIcon.classList.remove('hidden');
-                pauseIcon.classList.add('hidden');
-            }
-        }
-
-        // --- 路由与渲染逻辑 ---
-
+        // --- 配置数据 ---
         const photoConfig = {
+            '商业摄影': { type: 'grid', prefix: '摄影/商业摄影', max: 50 },
+            '模特': { type: 'grid', prefix: '摄影/模特', max: 50 },
+            '情绪摄影': { type: 'grid', prefix: '摄影/情绪摄影', max: 50 },
+            '自媒体摄影': { type: 'grid', prefix: '摄影/自媒体摄影', max: 50 },
             'video': { 
                 type: 'video-list', 
                 links: [
@@ -125,19 +124,20 @@
             }
         };
 
+        // --- 渲染引擎 ---
         function renderHome() {
             app.innerHTML = `
-                <div class="h-[30vh] flex flex-col justify-end pb-8 px-4">
+                <div class="h-[35vh] flex flex-col justify-end pb-12 px-4">
                     <span class="zh text-[12vw] md:text-[8vw] font-light">毛天艺</span>
                     <div class="mt-4">
-                        <span class="zh text-base md:text-lg opacity-90">一个只想使过程精彩的人是无法被剥夺的</span>
-                        <span class="en text-xs md:text-sm opacity-60 tracking-[0.2em] mt-2 font-light">Those who seek brilliance in the process cannot be deprived.</span>
+                        <span class="zh text-lg md:text-xl opacity-90">一个只想使过程精彩的人是无法被剥夺的</span>
+                        <span class="en text-sm md:text-base opacity-50 tracking-[0.2em] mt-2 font-light">Those who seek brilliance in the process cannot be deprived.</span>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 mt-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
                     <div class="glass p-10 relative overflow-hidden group min-h-[200px] md:col-span-2">
                         <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0">
-                            <span class="zh text-3xl mb-2">核心业务</span><span class="en text-[10px]">Core Business Sectors</span>
+                            <span class="zh text-3xl mb-2">核心业务</span><span class="en text-[10px]">Business Sectors</span>
                         </div>
                         <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                             <div onclick="switchPage('works')" class="cursor-pointer text-center hover:scale-110 transition">
@@ -155,52 +155,94 @@
                         <span class="zh text-2xl mb-2">电影人生</span><span class="en text-[10px]">Cinema Life</span>
                     </div>
                     <div class="glass p-10 opacity-30">
-                        <span class="zh text-2xl mb-2">更多内容</span><span class="en text-[10px]">More to come</span>
+                        <span class="zh text-2xl mb-2">更多内容</span><span class="en text-[10px]">More Content</span>
                     </div>
                 </div>`;
         }
 
-        // 简化的摄影渲染（包含视听影像）
         function renderPhoto() {
+            const cats = [{id:'商业摄影', zh:'商业摄影', en:'Commercial'}, {id:'模特', zh:'模特', en:'Model'}, {id:'情绪摄影', zh:'情绪摄影', en:'Mood'}, {id:'自媒体摄影', zh:'自媒体摄影', en:'Social'}, {id:'video', zh:'视听影像', en:'Visuals'}];
             app.innerHTML = `
-                <div class="flex flex-col gap-8 px-4">
-                    <div class="mb-4"><span class="zh text-5xl font-light">摄影与影像</span><span class="en text-xs mt-1 opacity-20">Photography & Film</span></div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        ${photoConfig.video.links.map(url => `
-                            <div class="video-card-mini glass p-1">
-                                <video loop muted playsinline autoplay class="w-full h-full object-cover rounded-xl">
-                                    <source src="${url}" type="video/mp4">
-                                </video>
-                            </div>
-                        `).join('')}
+                <div class="flex flex-col md:flex-row gap-8 px-4 min-h-[70vh]">
+                    <div class="md:w-1/4 flex flex-col gap-3">
+                        <div class="mb-4"><span class="zh text-5xl font-light">摄影</span><span class="en text-xs mt-1 opacity-20">Photography</span></div>
+                        ${cats.map(c => `<div onclick="handlePhotoNav('${c.id}', this)" class="photo-nav-item glass p-5 cursor-pointer hover:bg-white/10 transition-all border-transparent">
+                            <span class="zh text-lg">${c.zh}</span><span class="en text-[9px]">${c.en}</span>
+                        </div>`).join('')}
                     </div>
+                    <div class="flex-1 glass p-4 overflow-y-auto max-h-[85vh] no-scrollbar"><div id="photo-content-area"></div></div>
+                </div>`;
+            handlePhotoNav('商业摄影', document.querySelector('.photo-nav-item'));
+        }
+
+        function handlePhotoNav(id, el) {
+            document.querySelectorAll('.photo-nav-item').forEach(i => i.classList.remove('nav-active'));
+            el.classList.add('nav-active');
+            const area = document.getElementById('photo-content-area');
+            const cfg = photoConfig[id];
+            area.innerHTML = ''; area.className = (cfg.type === 'grid' ? "tight-photo-grid" : "grid md:grid-cols-2 gap-4") + " animate-in fade-in duration-700";
+
+            if(cfg.type === 'video-list') {
+                area.innerHTML = cfg.links.map(l => `<div class="video-card-mini glass p-1"><video loop muted playsinline autoplay class="w-full h-full object-cover rounded-xl"><source src="${l}"></video></div>`).join('');
+            } else {
+                let i = 1;
+                const load = () => {
+                    if(i > cfg.max) return;
+                    const div = document.createElement('div'); div.className = 'photo-item';
+                    div.innerHTML = `<img src="${cfg.prefix}${i}.jpg" class="w-full h-auto" onerror="this.parentElement.remove()">`;
+                    area.appendChild(div); i++; setTimeout(load, 20);
+                }
+                load();
+            }
+        }
+
+        function renderCinema() {
+            app.innerHTML = `
+                <div class="mb-12 px-4 flex flex-col"><span class="zh text-6xl font-light">电影人生</span><span class="en text-sm mt-2 opacity-30">Archive</span></div>
+                <div class="px-4"><div class="glass p-8 md:p-12">
+                    <div class="mb-6 max-w-2xl mx-auto"><input type="text" id="movieSearch" class="apple-search" placeholder="搜一部他没看过的电影..." oninput="liveSearch()"></div>
+                    <div id="movie-names" class="grid grid-cols-2 md:grid-cols-4 gap-4 overflow-y-auto max-h-[500px] no-scrollbar"></div>
+                </div></div>`;
+            updateMovieGrid(movieData);
+        }
+
+        function renderWorks() {
+            const projects = [{zh: '离不了', en:'Inseparable', p: '平面设计/离不了', c: 4}, {zh: '新保龄', en:'Bowling', p: '平面设计/新保龄运动', c: 6}, {zh: '血液涅槃', en:'Blood', p: '平面设计/血液涅槃', c: 4}];
+            app.innerHTML = `<div class="mb-12 px-4"><span class="zh text-6xl font-light">作品集</span><span class="en text-sm mt-2 opacity-30">Portfolio</span></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+                    ${projects.map(p => `<div class="glass p-6 group"><div class="design-stack">${Array.from({length: p.c}).map((_, i) => `<div class="stack-layer" style="left:${i*12}%; z-index:${p.c-i}; background:#111;" onclick="openViewer('${p.p}${i+1}.png')"><img src="${p.p}${i+1}.png" class="w-full h-full object-cover rounded-lg"></div>`).join('')}</div><div class="mt-4"><span class="zh text-xl">${p.zh}</span><span class="en text-[10px]">${p.en}</span></div></div>`).join('')}
                 </div>`;
         }
 
-        // 板块切换引擎
         function switchPage(page) {
             app.style.opacity = '0';
             setTimeout(() => {
-                // 控制返回按钮显示
                 backBtn.classList.toggle('hidden', page === 'home');
-                
                 if(page === 'home') renderHome();
                 else if(page === 'photo') renderPhoto();
-                else {
-                    // 占位其他板块
-                    app.innerHTML = `<div class="p-10"><span class="zh text-4xl">${page.toUpperCase()} 正在建设中</span><span class="en">Coming Soon</span></div>`;
-                }
-                
+                else if(page === 'cinema') renderCinema();
+                else if(page === 'works') renderWorks();
                 app.style.opacity = '1';
-                window.scrollTo(0, 0);
+                window.scrollTo(0,0);
             }, 400);
         }
 
-        // 初始化
-        window.addEventListener('load', () => {
-            renderHome();
-            app.style.opacity = '1';
-        });
+        function updateMovieGrid(list) {
+            const container = document.getElementById('movie-names');
+            if(container) container.innerHTML = list.map(m => `<div class="opacity-40 hover:opacity-100 border-l border-white/10 pl-2 py-1"><span class="zh text-[11px]">${m.title.split(' / ')[0]}</span></div>`).join('');
+        }
+        function liveSearch() {
+            const val = document.getElementById('movieSearch').value.toLowerCase();
+            const filtered = movieData.filter(m => m.title.toLowerCase().includes(val));
+            updateMovieGrid(filtered);
+            if(val && filtered.length === 0) document.getElementById('ad-pop').style.display = 'flex';
+        }
+
+        function openViewer(src){ document.getElementById('viewer-img').src = src; document.getElementById('viewer').style.display = 'flex'; }
+        function closeViewer(){ document.getElementById('viewer').style.display = 'none'; }
+        function closeAd(){ document.getElementById('ad-pop').style.display = 'none'; }
+
+        window.onload = () => { renderHome(); app.style.opacity = '1'; };
     </script>
 </body>
 </html>
