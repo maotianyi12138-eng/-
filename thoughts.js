@@ -2,7 +2,7 @@ const myThoughts = [
     { 
         date: '2026.03.24', 
         tag: 'MOOD', 
-        en: 'Discipline is choosing between what you want now and what you want most.', 
+        en: '', 
         zh: '正在完善自己成为一个不无聊的人。电影里总是有桥段：意识到下半辈子还要和伴侣生活五六十年，就很绝望。我想不光是伴侣，家庭、朋友之间也应判断自己是否能为他们带去有趣、新鲜的事。因为当我们的身体和感官退化后，我们最终只剩下灵魂的交流。'
     },
     { 
