@@ -19,61 +19,68 @@
 
         .glass {
             background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
             border: 0.5px solid rgba(255, 255, 255, 0.08); border-radius: 1.5rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .zh { display: block; font-weight: 300; line-height: 1.4; }
-        .en { display: block; font-weight: 100; opacity: 0.4; letter-spacing: 0.2em; text-transform: uppercase; }
+        /* 统一字体样式 */
+        .zh { display: block; font-weight: 400; line-height: 1.2; }
+        .en { display: block; font-weight: 100; opacity: 0.5; letter-spacing: 0.05em; text-transform: uppercase; }
         
         /* 导航与网格 */
-        .nav-active { border-left: 3px solid rgba(255,255,255,0.8) !important; background: rgba(255,255,255,0.1); }
+        .nav-active { border-left: 2px solid rgba(255,255,255,0.8) !important; background: rgba(255,255,255,0.08); }
         .no-scrollbar::-webkit-scrollbar { display: none; }
-        
-        .tight-photo-grid { columns: 2; gap: 8px; }
-        @media (min-width: 768px) { .tight-photo-grid { columns: 4; gap: 12px; } }
-        .photo-item { break-inside: avoid; margin-bottom: 12px; background: #111; border-radius: 12px; overflow: hidden; }
+        .tight-photo-grid { columns: 3; gap: 4px; }
+        @media (min-width: 768px) { .tight-photo-grid { columns: 5; } }
+        .photo-item { break-inside: avoid; margin-bottom: 4px; background: #111; border-radius: 8px; overflow: hidden; }
 
         /* 视频卡片 */
-        .video-card-mini { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; border-radius: 1.5rem; }
+        .video-card-mini { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; border-radius: 1rem; transition: transform 0.3s ease; }
+        .video-card-mini:hover { transform: scale(1.02); }
 
-        /* 设计堆叠样式 */
-        .design-stack { position: relative; height: 280px; width: 100%; overflow: hidden; }
-        .stack-layer { position: absolute; width: 65%; height: 90%; transition: 0.6s cubic-bezier(0.2, 1, 0.3, 1); border-radius: 12px; cursor: pointer; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
-        .stack-layer:hover { transform: translateX(20px) scale(1.05); z-index: 60 !important; }
+        /* --- 版本1 移植样式：设计堆叠与电影龙鳞 --- */
+        .design-stack { position: relative; height: 260px; width: 100%; overflow: hidden; }
+        .stack-layer { position: absolute; width: 60%; height: 90%; transition: 0.5s; border-radius: 8px; cursor: pointer; }
+        .stack-layer:hover { transform: translateX(15px) scale(1.02); z-index: 60 !important; }
 
-        /* 龙鳞滚动 */
-        .dragon-row { display: flex; overflow-x: auto; padding: 20px; scrollbar-width: none; height: 100%; align-items: center; }
-        .dragon-item { flex: 0 0 180px; margin-right: -110px; transition: 0.6s ease; cursor: pointer; position: relative; }
-        .dragon-item:hover { margin-right: 25px; z-index: 100 !important; transform: scale(1.1) rotate(2deg); }
-        .dragon-item img { width: 100%; aspect-ratio: 2/3; object-fit: cover; border-radius: 8px; border: 0.5px solid rgba(255,255,255,0.2); }
+        .dragon-row { display: flex; overflow-x: auto; padding: 0; scrollbar-width: none; height: 100%; }
+        .dragon-item { flex: 0 0 160px; margin-right: -100px; transition: 0.6s ease; cursor: pointer; position: relative; }
+        .dragon-item:hover { margin-right: 20px; z-index: 100 !important; transform: scale(1.05); }
+        .dragon-item img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
+
+        .artist-scroll { display: flex; gap: 4px; height: 100%; overflow: hidden; }
+        .artist-strip { flex: 1; position: relative; transition: 0.5s ease; border-radius: 4px; overflow: hidden; }
+        .artist-strip:hover { flex: 4; }
+        .artist-strip img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; transition: 0.5s; }
+        .artist-strip:hover img { opacity: 1; }
+
+        .movie-list-4col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; }
+        @media (max-width: 767px) { .movie-list-4col { grid-template-columns: repeat(2, 1fr); } }
 
         /* 搜索框 */
         .apple-search {
             background: rgba(255, 255, 255, 0.05); border: 0.5px solid rgba(255, 255, 255, 0.1);
-            color: #fff; border-radius: 16px; padding: 18px 24px; width: 100%; outline: none; transition: all 0.3s;
+            color: #fff; border-radius: 12px; padding: 14px 20px; width: 100%; outline: none;
         }
-        .apple-search:focus { background: rgba(255, 255, 255, 0.08); border-color: rgba(255,255,255,0.3); }
 
         #viewer, #ad-pop { display: none; position: fixed; inset: 0; z-index: 1000; flex-direction: column; align-items: center; justify-content: center; }
-        #viewer { background: rgba(0,0,0,0.98); backdrop-blur: 20px; }
+        #viewer { background: rgba(0,0,0,0.98); }
     </style>
 </head>
 <body>
     <audio id="main-audio" loop><source src="bgm.mp3" type="audio/mpeg"></audio>
 
     <div id="nav-ui">
-        <div id="back-btn" class="fixed top-8 left-8 z-[500] cursor-pointer opacity-50 hover:opacity-100 transition hidden group" onclick="switchPage('home')">
-            <span class="zh text-lg">← 返回</span><span class="en text-[10px] opacity-40">Back to Home</span>
+        <div id="back-btn" class="fixed top-8 left-8 z-[500] cursor-pointer opacity-50 hover:opacity-100 transition hidden" onclick="switchPage('home')">
+            <span class="zh">返回</span><span class="en text-[10px]">Return</span>
         </div>
-        <div id="music-toggle" class="fixed top-8 right-8 z-[500] cursor-pointer opacity-40 hover:opacity-100 transition p-4 glass" onclick="toggleMusic()">
+        <div id="music-toggle" class="fixed top-8 right-8 z-[500] cursor-pointer opacity-40 hover:opacity-100 transition p-3 glass" onclick="toggleMusic()">
             <div id="music-on" class="w-4 h-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
             <div id="music-off" class="w-4 h-4 hidden"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></div>
         </div>
     </div>
 
-    <div id="app-content" class="pt-16 p-6 md:p-16 opacity-0 transition-opacity duration-700"></div>
+    <div id="app-content" class="pt-16 p-6 md:p-16 opacity-0 transition-opacity duration-500"></div>
 
     <div id="viewer" onclick="closeViewer()">
         <button class="absolute top-10 right-10 text-white text-4xl font-light">×</button>
@@ -85,12 +92,12 @@
     </div>
 
     <div id="ad-pop" class="bg-black/80 backdrop-blur-xl">
-        <div class="glass p-12 text-center max-w-sm mx-4">
-            <span class="zh text-2xl mb-2">他还没看过</span>
-            <span class="en text-xs opacity-40 mb-8">Recommend this to him.</span>
-            <div class="flex flex-col gap-3 mt-8">
-                <button class="bg-white text-black py-4 rounded-2xl font-bold hover:bg-gray-200 transition">推荐 / Recommend</button>
-                <button class="py-3 rounded-2xl bg-white/5 text-[10px] opacity-50" onclick="closeAd()">已经分享！/ Shared</button>
+        <div class="glass p-12 text-center">
+            <span class="zh text-2xl mb-2">他没看过，快推荐给他吧</span>
+            <span class="en text-xs opacity-40">He hasn't seen it, recommend it.</span>
+            <div class="flex flex-col gap-4 mt-8">
+                <button class="bg-yellow-400 text-black py-4 rounded-xl font-bold">推荐 / Recommend</button>
+                <button class="py-3 rounded-xl bg-white/10 text-[10px]" onclick="closeAd()">已经分享！/ Shared</button>
             </div>
         </div>
     </div>
@@ -103,6 +110,7 @@
         let currentImgList = [];
         let currentIndex = 0;
 
+        // --- 音乐连贯播放逻辑 (版本2) ---
         let hasInteracted = false;
         const startAudio = () => {
             if(!hasInteracted) {
@@ -110,58 +118,47 @@
                 updateMusicIcon();
             }
         };
-        ['click', 'touchstart'].forEach(e => window.addEventListener(e, startAudio, {once:true}));
+        ['click', 'touchstart', 'scroll', 'wheel'].forEach(e => window.addEventListener(e, startAudio, {once:true}));
 
-        function toggleMusic() { audio.paused ? audio.play() : audio.pause(); updateMusicIcon(); }
+        function toggleMusic() {
+            audio.paused ? audio.play() : audio.pause();
+            updateMusicIcon();
+        }
         function updateMusicIcon() {
             document.getElementById('music-on').classList.toggle('hidden', audio.paused);
             document.getElementById('music-off').classList.toggle('hidden', !audio.paused);
         }
 
-        // --- 核心渲染引擎 (排版优化版) ---
+        // --- 核心渲染引擎 ---
         function renderHome() {
             app.innerHTML = `
-                <div class="h-[35vh] flex flex-col justify-end pb-12 px-4 max-w-7xl mx-auto">
-                    <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6">
-                        <span class="zh text-6xl md:text-8xl font-extralight tracking-widest">毛天艺</span>
-                        <span class="en text-sm md:text-xl opacity-20 tracking-[0.4em]">Tianyi Mao</span>
+                <div class="h-[25vh] flex flex-col justify-end pb-8 px-4">
+                    <div class="flex items-baseline gap-4">
+                        <span class="zh text-[10vw] md:text-[6vw] font-light">毛天艺</span>
+                        <span class="en text-[3vw] md:text-[1.5vw] opacity-20 tracking-tighter">Tianyi Mao</span>
                     </div>
-                    <div class="mt-8 h-[1px] w-12 bg-white/30"></div>
-                    <div class="mt-8">
-                        <span class="zh text-base md:text-lg opacity-70">一个只想使过程精彩的人是无法被剥夺的</span>
-                        <span class="en text-[10px] opacity-30 mt-2">Those who seek brilliance in the process cannot be deprived.</span>
+                    <div class="mt-2">
+                        <span class="zh text-sm md:text-base opacity-80">一个只想使过程精彩的人是无法被剥夺的</span>
+                        <span class="en text-[9px] md:text-[10px] opacity-40 tracking-wider mt-1">Those who seek brilliance in the process cannot be deprived.</span>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 max-w-7xl mx-auto">
-                    <div class="glass p-10 md:p-12 relative overflow-hidden group min-h-[280px] sm:col-span-2 flex flex-col justify-center">
-                        <div class="relative z-10 transition-all duration-700 group-hover:-translate-y-4 group-hover:opacity-20">
-                            <span class="zh text-3xl md:text-4xl mb-2 font-light">核心业务</span>
-                            <span class="en text-[10px]">Business Sectors</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+                    <div class="glass p-10 relative overflow-hidden group min-h-[200px] md:col-span-2">
+                        <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0">
+                            <span class="zh text-3xl mb-2">核心业务</span><span class="en text-[10px]">Business Sectors</span>
                         </div>
-                        <div class="absolute inset-0 bg-white/[0.03] backdrop-blur-2xl flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out px-4">
-                            <div onclick="switchPage('works')" class="cursor-pointer text-center hover:scale-110 transition group/item">
-                                <span class="zh text-xl">平面设计</span><span class="en text-[9px] opacity-40">Design</span>
-                            </div>
-                            <div onclick="switchPage('photo')" class="cursor-pointer text-center hover:scale-110 transition group/item">
-                                <span class="zh text-xl">摄影作品</span><span class="en text-[9px] opacity-40">Photo</span>
-                            </div>
-                            <div onclick="switchPage('coach')" class="cursor-pointer text-center hover:scale-110 transition group/item">
-                                <span class="zh text-xl">运动教学</span><span class="en text-[9px] opacity-40">Coach</span>
-                            </div>
+                        <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <div onclick="switchPage('works')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">平面设计</span><span class="en text-[9px]">Design</span></div>
+                            <div onclick="switchPage('photo')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">摄影作品</span><span class="en text-[9px]">Photo</span></div>
+                            <div onclick="switchPage('coach')" class="cursor-pointer text-center hover:scale-110 transition"><span class="zh text-xl">运动教学</span><span class="en text-[9px]">Coach</span></div>
                         </div>
                     </div>
-                    <div onclick="switchPage('cinema')" class="glass p-10 md:p-12 cursor-pointer hover:bg-white/5 flex flex-col justify-center items-center text-center group">
-                        <span class="zh text-2xl md:text-3xl font-light group-hover:scale-110 transition">电影人生</span>
-                        <span class="en text-[10px] opacity-40">Cinema Life</span>
-                    </div>
-                    <div class="glass p-10 md:p-12 opacity-20 flex flex-col justify-center items-center text-center">
-                        <span class="zh text-2xl font-light">更多内容</span>
-                        <span class="en text-[10px]">Loading...</span>
-                    </div>
+                    <div onclick="switchPage('cinema')" class="glass p-10 cursor-pointer hover:bg-white/5 transition-all"><span class="zh text-2xl mb-2">电影人生</span><span class="en text-[10px]">Cinema Life</span></div>
+                    <div class="glass p-10 opacity-30"><span class="zh text-2xl mb-2">更多内容</span><span class="en text-[10px]">Loading...</span></div>
                 </div>`;
         }
 
-        // --- 其他渲染函数 (加入 Max-Width 限制) ---
+        // --- 移植自版本1: 平面设计 ---
         function renderWorks() {
             const projects = [
                 {zh: '离不了', prefix: '平面设计/离不了', count: 4},
@@ -169,23 +166,20 @@
                 {zh: '血液涅槃', prefix: '平面设计/血液涅槃', count: 4},
                 {zh: '健身工厂', prefix: '平面设计/健身工厂', count: 5}
             ];
-            app.innerHTML = `<div class="max-w-7xl mx-auto">
-                <div class="mb-16 px-4"><span class="zh text-6xl font-extralight tracking-tight">视觉作品集</span><span class="en text-sm mt-4 opacity-20">Portfolio Collection</span></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-4">
+            app.innerHTML = `<div class="mb-12 px-4"><span class="zh text-6xl font-light">视觉作品集</span><span class="en text-sm mt-2 opacity-30">Portfolio</span></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
                     ${projects.map(p => `
-                        <div class="glass p-8 group">
+                        <div class="glass p-6 group">
                             <div class="design-stack">${Array.from({length: p.count}).map((_, i) => `
-                                <div class="stack-layer" style="left:${i*12}%; z-index:${p.count-i}; background:#111;" onclick="openViewerList('${p.prefix}', ${i+1}, ${p.count})">
-                                    <img src="${p.prefix}${i+1}.png" class="w-full h-full object-cover rounded-xl border border-white/10">
+                                <div class="stack-layer shadow-xl" style="left:${i*12}%; z-index:${p.count-i}; background:#111;" onclick="openViewerList('${p.prefix}', ${i+1}, ${p.count})">
+                                    <img src="${p.prefix}${i+1}.png" class="w-full h-full object-cover rounded-lg">
                                 </div>`).join('')}</div>
-                            <div class="mt-8 flex justify-between items-end">
-                                <div><span class="zh text-2xl font-light">${p.zh}</span><span class="en text-[10px] opacity-30 mt-1">Series 0${projects.indexOf(p)+1}</span></div>
-                                <div class="en text-[10px] opacity-20">${p.count} Plates</div>
-                            </div>
+                            <div class="mt-4"><span class="zh text-xl">${p.zh}</span></div>
                         </div>`).join('')}
-                </div></div>`;
+                </div>`;
         }
 
+        // --- 移植自版本1: 电影人生 ---
         function renderCinema() {
             const top10 = [
                 {zh:'星际穿越', img:'电影个人十佳海报/星际穿越.png'}, {zh:'杀死比尔2', img:'电影个人十佳海报/杀死比尔2.png'},
@@ -194,37 +188,41 @@
                 {zh:'新世界', img:'电影个人十佳海报/新世界.png'}, {zh:'胭脂扣', img:'电影个人十佳海报/胭脂扣.png'},
                 {zh:'被解救的姜戈', img:'电影个人十佳海报/被解救的姜戈.png'}, {zh:'无间道', img:'电影个人十佳海报/无间道.png'}
             ];
-            app.innerHTML = `<div class="max-w-7xl mx-auto">
-                <div class="mb-12 px-4"><span class="zh text-6xl font-extralight">电影人生</span><span class="en text-sm mt-2 opacity-20">Cinematography Archive</span></div>
+            const artists = [
+                {zh:'凯拉奈特利', img:'电影 演员导演/凯拉奈特利.jpg'}, {zh:'诺兰', img:'电影 演员导演/诺兰.jpg'},
+                {zh:'张国荣', img:'电影 演员导演/张国荣.jpg'}, {zh:'黑泽明', img:'电影 演员导演/黑泽明.jpg'},
+                {zh:'朱莉娅罗伯茨', img:'电影 演员导演/朱莉娅罗伯茨.jpg'}, {zh:'昆汀', img:'电影 演员导演/昆汀.jpg'},
+                {zh:'布拉德皮特', img:'电影 演员导演/布拉德皮特.jpg'}
+            ];
+            app.innerHTML = `
+                <div class="mb-12 px-4 flex flex-col"><span class="zh text-6xl font-light">电影人生</span><span class="en text-sm mt-2 opacity-30">Archive</span></div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 mb-12">
-                    <div class="glass overflow-hidden h-[450px] relative"><div class="dragon-row">${top10.map((m, i) => `<div class="dragon-item" style="z-index:${20-i}"><img src="${m.img}"></div>`).join('')}</div></div>
-                    <div class="glass p-8 flex items-center justify-center text-center opacity-40">
-                         <div><span class="zh text-xl">演员与导演墙</span><span class="en text-xs">Curated Artists</span></div>
-                    </div>
+                    <div class="glass overflow-hidden h-[420px] relative"><div class="dragon-row">${top10.map((m, i) => `<div class="dragon-item" style="z-index:${20-i}"><img src="${m.img}"></div>`).join('')}</div></div>
+                    <div class="glass p-2 h-[420px] relative"><div class="artist-scroll">${artists.map(a => `<div class="artist-strip"><img src="${a.img}"><div class="absolute bottom-4 left-1/2 -translate-x-1/2 writing-vertical-rl zh text-[10px] opacity-50">${a.zh}</div></div>`).join('')}</div></div>
                 </div>
-                <div class="px-4"><div class="glass p-8 md:p-16">
-                    <div class="mb-10 max-w-2xl mx-auto"><input type="text" id="movieSearch" class="apple-search" placeholder="输入电影名，看看他看过了吗..." oninput="liveSearch()" onkeydown="handleSearchEnter(event)"></div>
-                    <div id="movie-names" class="movie-list-4col grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4"></div>
-                </div></div></div>`;
+                <div class="px-4"><div class="glass p-8 md:p-12">
+                    <div class="mb-6 max-w-2xl mx-auto"><input type="text" id="movieSearch" class="apple-search" placeholder="搜一部他没看过的电影..." oninput="liveSearch()" onkeydown="handleSearchEnter(event)"></div>
+                    <div id="movie-names" class="movie-list-4col"></div>
+                </div></div>`;
             updateMovieGrid(movieData);
         }
 
+        // --- 摄影板块 (版本2 逻辑) ---
         function renderPhoto() {
             const cats = [{id:'商业摄影', zh:'商业摄影', en:'Commercial'}, {id:'模特', zh:'模特', en:'Model'}, {id:'情绪摄影', zh:'情绪摄影', en:'Mood'}, {id:'自媒体摄影', zh:'自媒体摄影', en:'Social'}, {id:'video', zh:'视听影像', en:'Visuals'}];
-            app.innerHTML = `<div class="max-w-7xl mx-auto">
-                <div class="flex flex-col md:flex-row gap-12 px-4 min-h-[70vh]">
-                    <div class="md:w-1/4 flex flex-col gap-4">
-                        <div class="mb-8"><span class="zh text-5xl font-extralight">摄影</span><span class="en text-xs mt-2 opacity-20">Still & Motion</span></div>
-                        ${cats.map(c => `<div onclick="handlePhotoNav('${c.id}', this)" class="photo-nav-item glass p-6 cursor-pointer hover:bg-white/10 transition-all border-transparent">
-                            <span class="zh text-lg">${c.zh}</span><span class="en text-[9px] opacity-40">${c.en}</span>
+            app.innerHTML = `
+                <div class="flex flex-col md:flex-row gap-8 px-4 min-h-[70vh]">
+                    <div class="md:w-1/4 flex flex-col gap-3">
+                        <div class="mb-4"><span class="zh text-5xl font-light">摄影</span><span class="en text-xs mt-1 opacity-20">Photography</span></div>
+                        ${cats.map(c => `<div onclick="handlePhotoNav('${c.id}', this)" class="photo-nav-item glass p-5 cursor-pointer hover:bg-white/10 transition-all border-transparent">
+                            <span class="zh text-lg">${c.zh}</span><span class="en text-[9px]">${c.en}</span>
                         </div>`).join('')}
                     </div>
-                    <div class="flex-1 glass p-6 overflow-y-auto max-h-[85vh] no-scrollbar"><div id="photo-content-area"></div></div>
-                </div></div>`;
+                    <div class="flex-1 glass p-4 overflow-y-auto max-h-[85vh] no-scrollbar"><div id="photo-content-area"></div></div>
+                </div>`;
             handlePhotoNav('商业摄影', document.querySelector('.photo-nav-item'));
         }
 
-        // --- 逻辑函数保持原有，仅微调 UI ---
         function handlePhotoNav(id, el) {
             document.querySelectorAll('.photo-nav-item').forEach(i => i.classList.remove('nav-active'));
             el.classList.add('nav-active');
@@ -232,20 +230,21 @@
             const photoCfg = { '商业摄影': '摄影/商业摄影', '模特': '摄影/模特', '情绪摄影': '摄影/情绪摄影', '自媒体摄影': '摄影/自媒体摄影' };
             
             if(id === 'video') {
-                const links = ["https://sns-video-zl.xhscdn.com/stream/79/110/115/01e805fb570d7ef74f03700196576619b1_115.mp4", "https://sns-video-zl.xhscdn.com/stream/110/4/01e6cd6d950f58330103700391927eff1a_4.mp4"];
-                area.className = "grid grid-cols-1 gap-6";
-                area.innerHTML = links.map(l => `<div class="video-card-mini glass p-2"><video loop muted playsinline autoplay class="w-full h-full object-cover rounded-[1.2rem]"><source src="${l}"></video></div>`).join('');
+                const links = ["https://sns-video-zl.xhscdn.com/stream/79/110/115/01e805fb570d7ef74f03700196576619b1_115.mp4", "https://sns-video-zl.xhscdn.com/stream/110/4/01e6cd6d950f58330103700391927eff1a_4.mp4", "https://www.chali.com/material/brand/ys/video1.mp4", "https://sns-video-zl.xhscdn.com/stream/79/110/115/01e805fb570d7ef74f03700196576619b1_115.mp4"];
+                area.className = "grid md:grid-cols-2 gap-4 animate-in fade-in duration-700";
+                area.innerHTML = links.map(l => `<div class="video-card-mini glass p-1"><video loop muted playsinline autoplay class="w-full h-full object-cover rounded-xl"><source src="${l}"></video></div>`).join('');
             } else {
-                area.className = "tight-photo-grid";
+                area.className = "tight-photo-grid animate-in fade-in duration-700";
                 area.innerHTML = '';
                 for(let i=1; i<=30; i++) {
                     const div = document.createElement('div'); div.className = 'photo-item';
-                    div.innerHTML = `<img src="${photoCfg[id]}${i}.jpg" class="w-full h-auto" onerror="this.parentElement.remove()" onclick="openViewerList('${photoCfg[id]}', ${i}, 30)">`;
+                    div.innerHTML = `<img src="${photoCfg[id]}${i}.jpg" class="w-full h-auto" onerror="this.parentElement.remove()">`;
                     area.appendChild(div);
                 }
             }
         }
 
+        // --- 辅助逻辑 ---
         function switchPage(page) {
             app.style.opacity = '0';
             setTimeout(() => {
@@ -260,16 +259,26 @@
 
         function updateMovieGrid(list) {
             const container = document.getElementById('movie-names');
-            if(container) container.innerHTML = list.slice(0, 100).map(m => `<div class="zh text-[11px] opacity-30 hover:opacity-100 truncate border-l border-white/10 pl-3 py-1 transition-all cursor-default">${m.title.split(' / ')[0]}</div>`).join('');
+            if(container) container.innerHTML = list.slice(0, 160).map(m => `<div class="zh text-[10px] opacity-30 hover:opacity-100 truncate border-l border-white/5 pl-2 transition-all">${m.title.split(' / ')[0]}</div>`).join('');
         }
         function liveSearch() {
             const val = document.getElementById('movieSearch').value.toLowerCase();
             updateMovieGrid(movieData.filter(m => m.title.toLowerCase().includes(val)));
         }
-        function handleSearchEnter(e) { if (e.key === 'Enter' && e.target.value.trim() !== '') { document.getElementById('ad-pop').style.display = 'flex'; } }
+        function handleSearchEnter(e) {
+            if (e.key === 'Enter') {
+                const term = e.target.value.trim().toLowerCase();
+                if (term !== '' && !movieData.some(m => m.title.toLowerCase().includes(term))) {
+                    document.getElementById('ad-pop').style.display = 'flex';
+                }
+            }
+        }
+
         function openViewerList(prefix, index, count) {
-            currentImgList = Array.from({length: count}, (_, i) => `${prefix}${i+1}.png`.replace('.png', prefix.includes('摄影') ? '.jpg' : '.png'));
-            currentIndex = index - 1; updateViewer(); document.getElementById('viewer').style.display = 'flex';
+            currentImgList = Array.from({length: count}, (_, i) => `${prefix}${i+1}.png`);
+            currentIndex = index - 1;
+            updateViewer();
+            document.getElementById('viewer').style.display = 'flex';
         }
         function closeViewer() { document.getElementById('viewer').style.display = 'none'; }
         function nextImg() { currentIndex = (currentIndex + 1) % currentImgList.length; updateViewer(); }
@@ -277,7 +286,7 @@
         function updateViewer() { document.getElementById('viewer-img').src = currentImgList[currentIndex]; }
         function closeAd() { document.getElementById('ad-pop').style.display = 'none'; }
 
-        window.onload = () => { renderHome(); setTimeout(() => app.style.opacity = '1', 100); };
+        window.onload = () => { renderHome(); app.style.opacity = '1'; };
     </script>
 </body>
 </html>
