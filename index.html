@@ -64,12 +64,6 @@
 
         .thought-card { background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 1.5rem; transition: 0.3s; }
         .thought-card:hover { background: rgba(255,255,255,0.06); }
-        
-        /* 方案三专属补丁：Dock 动画与布局 */
-        .dock-item { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-        .dock-item:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-10px); }
-        .sub-menu-pop { transform: translateY(20px); opacity: 0; pointer-events: none; transition: 0.4s; }
-        .dock-item:hover .sub-menu-pop { transform: translateY(0); opacity: 1; pointer-events: auto; }
     </style>
 </head>
 <body>
@@ -85,7 +79,7 @@
         </div>
     </div>
 
-    <div id="app-content" class="min-h-screen flex flex-col justify-between p-6 md:p-16 opacity-0 transition-opacity duration-500"></div>
+    <div id="app-content" class="pt-16 p-6 md:p-16 opacity-0 transition-opacity duration-500"></div>
 
     <div id="viewer" onclick="closeViewer()">
         <button class="absolute top-10 right-10 text-white text-4xl font-light">×</button>
@@ -142,39 +136,35 @@
 
         function renderHome() {
             app.innerHTML = `
-                <div class="flex flex-col justify-start">
+                <div class="h-[25vh] flex flex-col justify-end pb-8 px-4">
                     <div class="flex flex-col md:flex-row items-baseline gap-2">
-                        <span class="zh-sub opacity-100 order-2 md:order-1" style="font-size: 8vw; md:font-size: 5vw;">毛天艺</span>
-                        <span class="en-main text-[4vw] md:text-[2vw] order-1 md:order-2">Tianyi Mao</span>
+                        <span class="zh-sub opacity-100 order-2 md:order-1" style="font-size: 10vw;">毛天艺</span>
+                        <span class="en-main text-[4vw] md:text-[2.5vw] order-1 md:order-2">Tianyi Mao</span>
                     </div>
                     <div class="mt-2">
-                        <span class="en-main text-xs md:text-sm tracking-wider opacity-60">Those who seek brilliance in the process cannot be deprived.</span>
+                        <span class="en-main text-xs md:text-sm tracking-wider">Those who seek brilliance in the process cannot be deprived.</span>
                         <span class="zh-sub mt-1">一个只想使过程精彩的人是无法被剥夺的</span>
                     </div>
                 </div>
-
-                <div class="w-full flex justify-center pb-8">
-                    <div class="glass flex items-center gap-2 p-2 px-4 md:px-8 max-w-full overflow-x-auto no-scrollbar">
-                        <div class="relative dock-item group p-4 rounded-2xl cursor-default min-w-[140px] text-center">
-                            <span class="en-main text-sm">Capabilities</span>
-                            <span class="zh-sub text-[9px]">核心业务</span>
-                            <div class="absolute bottom-full left-0 w-full mb-4 flex flex-col gap-2 sub-menu-pop">
-                                <div onclick="switchPage('works')" class="glass p-3 hover:bg-white/10 cursor-pointer transition"><span class="en-main text-xs">Design</span></div>
-                                <div onclick="switchPage('photo')" class="glass p-3 hover:bg-white/10 cursor-pointer transition"><span class="en-main text-xs">Photo</span></div>
-                                <div onclick="switchPage('coach')" class="glass p-3 hover:bg-white/10 cursor-pointer transition"><span class="en-main text-xs">Coach</span></div>
-                            </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+                    <div class="glass p-10 relative overflow-hidden group min-h-[200px] md:col-span-2">
+                        <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0">
+                            <span class="en-main text-3xl mb-2">What can i do</span><span class="zh-sub">核心业务</span>
                         </div>
-
-                        <div class="w-[1px] h-8 bg-white/10 mx-2"></div>
-
-                        <div class="relative dock-item group p-4 rounded-2xl cursor-default min-w-[140px] text-center">
-                            <span class="en-main text-sm">Exploration</span>
-                            <span class="zh-sub text-[9px]">更多的我</span>
-                            <div class="absolute bottom-full left-0 w-full mb-4 flex flex-col gap-2 sub-menu-pop">
-                                <div onclick="switchPage('cinema')" class="glass p-3 hover:bg-white/10 cursor-pointer transition"><span class="en-main text-xs">Cinema</span></div>
-                                <div onclick="switchPage('reading')" class="glass p-3 hover:bg-white/10 cursor-pointer transition"><span class="en-main text-xs">Media</span></div>
-                                <div onclick="switchPage('thoughts')" class="glass p-3 hover:bg-white/10 cursor-pointer transition"><span class="en-main text-xs">Reflect</span></div>
-                            </div>
+                        <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <div onclick="switchPage('works')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Design</span><span class="zh-sub">平面设计</span></div>
+                            <div onclick="switchPage('photo')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Photo</span><span class="zh-sub">摄影作品</span></div>
+                            <div onclick="switchPage('coach')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Coach</span><span class="zh-sub">运动教学</span></div>
+                        </div>
+                    </div>
+                    <div class="glass p-10 relative overflow-hidden group min-h-[200px] md:col-span-2">
+                        <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0">
+                            <span class="en-main text-3xl mb-2">More of me</span><span class="zh-sub">更多的我</span>
+                        </div>
+                        <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <div onclick="switchPage('cinema')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Cinema</span><span class="zh-sub">电影人生</span></div>
+                            <div onclick="switchPage('reading')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Media</span><span class="zh-sub">音乐阅读</span></div>
+                            <div onclick="switchPage('thoughts')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Reflect</span><span class="zh-sub">感悟反省</span></div>
                         </div>
                     </div>
                 </div>`;
@@ -188,7 +178,7 @@
                 {en: 'Fitness Factory', zh: '健身工厂', prefix: '平面设计/健身工厂', count: 5}
             ];
             app.innerHTML = `<div class="mb-12 px-4"><span class="en-main text-6xl">Portfolio</span><span class="zh-sub text-sm mt-2">视觉作品集</span></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 flex-1 overflow-y-auto no-scrollbar">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
                     ${projects.map(p => `
                         <div class="glass p-6 group">
                             <div class="design-stack">${Array.from({length: p.count}).map((_, i) => `
@@ -216,35 +206,33 @@
             ];
             app.innerHTML = `
                 <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Cinema Archive</span><span class="zh-sub text-sm mt-2">电影人生</span></div>
-                <div class="flex-1 overflow-y-auto no-scrollbar pb-20">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 mb-12">
-                        <div class="glass overflow-hidden h-[420px] relative">
-                            <div class="dragon-row">${top10.map((m, i) => `
-                                <a href="${getImdbUrl(m.en)}" target="_blank" class="dragon-item" style="z-index:${20-i}"><img src="${m.img}" title="${m.en} / ${m.zh}"></a>`).join('')}
-                            </div>
-                        </div>
-                        <div class="glass p-2 h-[420px] relative">
-                            <div class="artist-scroll">${artists.map(a => `
-                                <a href="${getImdbUrl(a.en)}" target="_blank" class="artist-strip">
-                                    <img src="${a.img}">
-                                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 writing-vertical-rl en-main text-[10px] opacity-50">${a.en}</div>
-                                </a>`).join('')}
-                            </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 mb-12">
+                    <div class="glass overflow-hidden h-[420px] relative">
+                        <div class="dragon-row">${top10.map((m, i) => `
+                            <a href="${getImdbUrl(m.en)}" target="_blank" class="dragon-item" style="z-index:${20-i}"><img src="${m.img}" title="${m.en} / ${m.zh}"></a>`).join('')}
                         </div>
                     </div>
-                    <div class="px-4"><div class="glass p-8 md:p-12">
-                        <div class="mb-6 max-w-2xl mx-auto"><input type="text" id="movieSearch" class="apple-search" placeholder="Search a movie he hasn't seen..." oninput="liveSearch()" onkeydown="handleSearchEnter(event)"></div>
-                        <div id="movie-names" class="movie-list-4col"></div>
-                    </div></div>
-                </div>`;
+                    <div class="glass p-2 h-[420px] relative">
+                        <div class="artist-scroll">${artists.map(a => `
+                            <a href="${getImdbUrl(a.en)}" target="_blank" class="artist-strip">
+                                <img src="${a.img}">
+                                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 writing-vertical-rl en-main text-[10px] opacity-50">${a.en}</div>
+                            </a>`).join('')}
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4"><div class="glass p-8 md:p-12">
+                    <div class="mb-6 max-w-2xl mx-auto"><input type="text" id="movieSearch" class="apple-search" placeholder="Search a movie he hasn't seen..." oninput="liveSearch()" onkeydown="handleSearchEnter(event)"></div>
+                    <div id="movie-names" class="movie-list-4col"></div>
+                </div></div>`;
             updateMovieGrid(movieData);
         }
 
         function renderReading() {
             app.innerHTML = `
                 <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Soul & Rhythm</span><span class="zh-sub text-sm mt-2">音乐与阅读</span></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 flex-1">
-                    <div class="glass p-8 h-fit">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+                    <div class="glass p-8">
                         <span class="en-main text-2xl mb-6">Currently Reading</span>
                         <div class="flex gap-4">
                             <div class="w-32 h-44 bg-white/10 rounded-lg overflow-hidden shadow-2xl"><img src="book_cover.jpg" class="w-full h-full object-cover" onerror="this.style.display='none'"></div>
@@ -255,7 +243,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="glass p-8 h-fit">
+                    <div class="glass p-8">
                         <span class="en-main text-2xl mb-6">Playlist of the Year</span>
                         <div class="space-y-4">
                             ${['In the End - Linkin Park', 'Bohemian Rhapsody - Queen', 'Nocturne - Jay Chou'].map(song => `
@@ -271,7 +259,7 @@
         async function renderThoughts() {
             app.innerHTML = `
                 <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Reflection</span><span class="zh-sub text-sm mt-2">感悟反省</span></div>
-                <div id="thoughts-container" class="max-w-4xl mx-auto space-y-6 px-4 flex-1 overflow-y-auto no-scrollbar pb-20">
+                <div id="thoughts-container" class="max-w-4xl mx-auto space-y-6 px-4">
                     ${myThoughts.map((t, i) => `
                         <div class="thought-card" id="thought-${i}">
                             <span class="en-main text-[10px] opacity-20 mb-4">${t.date}</span>
@@ -290,8 +278,7 @@
                         if (cardText) cardText.innerText = translatedText;
                         t.en = translatedText;
                     } catch (err) {
-                        const target = document.querySelector(`#thought-${i} .trans-target`);
-                        if(target) target.innerText = "Translation Timeout";
+                        document.querySelector(`#thought-${i} .trans-target`).innerText = "Translation Timeout";
                     }
                 }
             });
@@ -300,14 +287,14 @@
         function renderPhoto() {
             const cats = [{id:'商业摄影', en:'Commercial', zh:'商业摄影'}, {id:'模特', en:'Model', zh:'模特'}, {id:'情绪摄影', en:'Mood', zh:'情绪摄影'}, {id:'自媒体摄影', en:'Social', zh:'自媒体摄影'}, {id:'video', en:'Visuals', zh:'视听影像'}];
             app.innerHTML = `
-                <div class="flex flex-col md:flex-row gap-8 px-4 flex-1 min-h-0">
+                <div class="flex flex-col md:flex-row gap-8 px-4 min-h-[70vh]">
                     <div class="md:w-1/4 flex flex-col gap-3">
                         <div class="mb-4"><span class="en-main text-5xl">Photography</span><span class="zh-sub text-xs mt-1">摄影</span></div>
                         ${cats.map(c => `<div onclick="handlePhotoNav('${c.id}', this)" class="photo-nav-item glass p-5 cursor-pointer hover:bg-white/10 transition-all border-transparent">
                             <span class="en-main text-lg">${c.en}</span><span class="zh-sub text-[9px]">${c.zh}</span>
                         </div>`).join('')}
                     </div>
-                    <div class="flex-1 glass p-4 overflow-y-auto no-scrollbar"><div id="photo-content-area"></div></div>
+                    <div class="flex-1 glass p-4 overflow-y-auto max-h-[85vh] no-scrollbar"><div id="photo-content-area"></div></div>
                 </div>`;
             handlePhotoNav('商业摄影', document.querySelector('.photo-nav-item'));
         }
@@ -338,6 +325,7 @@
             setTimeout(() => {
                 backBtn.classList.toggle('hidden', page === 'home');
                 
+                // 仅在反思感悟板块使用 反思横屏.jpg
                 if (page === 'thoughts') {
                     document.body.style.backgroundImage = "url('反思横屏.jpg')";
                 } else {
