@@ -6,11 +6,11 @@
     <title>MAO TIANYI | ARCHIVE</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600&family=Noto+Sans+SC:wght@100;300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;700&display=swap');
         
         body { 
             background-color: #000; color: #fff; margin: 0;
-            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            font-family: 'Times New Roman', 'Noto Sans SC', serif;
             background-size: cover; background-position: center; background-attachment: fixed;
             overflow-x: hidden;
             transition: background-image 0.8s ease-in-out;
@@ -24,7 +24,14 @@
             border: 0.5px solid rgba(255, 255, 255, 0.08); border-radius: 1.5rem;
         }
 
-        .en-main { display: block; font-weight: 300; letter-spacing: 0.05em; text-transform: uppercase; }
+        /* 英文文字使用 Times New Roman */
+        .en-main { 
+            display: block; 
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 400; 
+            letter-spacing: 0.02em; 
+            /* 移除 text-transform: uppercase 以支持常规大小写 */
+        }
         .zh-sub { display: block; font-weight: 100; opacity: 0.4; font-size: 0.75rem; line-height: 1.2; }
         
         .nav-active { border-left: 2px solid rgba(255,255,255,0.8) !important; background: rgba(255,255,255,0.08); }
@@ -57,6 +64,7 @@
         .apple-search {
             background: rgba(255, 255, 255, 0.05); border: 0.5px solid rgba(255, 255, 255, 0.1);
             color: #fff; border-radius: 12px; padding: 14px 20px; width: 100%; outline: none;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         #viewer, #ad-pop { display: none; position: fixed; inset: 0; z-index: 1000; flex-direction: column; align-items: center; justify-content: center; }
@@ -64,6 +72,18 @@
 
         .thought-card { background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 1.5rem; transition: 0.3s; }
         .thought-card:hover { background: rgba(255,255,255,0.06); }
+        
+        /* 反思感悟专属：Times New Roman 斜体 */
+        .thought-text-en {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-weight: 400;
+        }
+        
+        /* 标题加粗效果 */
+        .bold-title {
+            font-weight: bold !important;
+        }
     </style>
 </head>
 <body>
@@ -71,7 +91,7 @@
 
     <div id="nav-ui">
         <div id="back-btn" class="fixed top-8 left-8 z-[500] cursor-pointer opacity-50 hover:opacity-100 transition hidden" onclick="switchPage('home')">
-            <span class="en-main text-[10px]">Return</span><span class="zh-sub">返回</span>
+            <span class="en-main text-[10px] bold-title">Return</span><span class="zh-sub">返回</span>
         </div>
         <div id="music-toggle" class="fixed top-8 right-8 z-[500] cursor-pointer opacity-40 hover:opacity-100 transition p-3 glass" onclick="toggleMusic()">
             <div id="music-on" class="w-4 h-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
@@ -92,10 +112,10 @@
 
     <div id="ad-pop" class="bg-black/80 backdrop-blur-xl">
         <div class="glass p-12 text-center">
-            <span class="en-main text-2xl mb-2">Recommend a movie to him</span>
+            <span class="en-main text-2xl mb-2 bold-title">Recommend a movie to him</span>
             <span class="zh-sub">他还没看过，快推荐给他吧</span>
             <div class="flex flex-col gap-4 mt-8">
-                <button class="bg-white text-black py-4 rounded-xl font-bold uppercase text-xs tracking-widest">Recommend</button>
+                <button class="bg-white text-black py-4 rounded-xl font-bold text-xs tracking-widest uppercase">Recommend</button>
                 <button class="py-3 rounded-xl bg-white/10 text-[10px] uppercase opacity-40" onclick="closeAd()">Already Shared</button>
             </div>
         </div>
@@ -139,32 +159,32 @@
                 <div class="h-[25vh] flex flex-col justify-end pb-8 px-4">
                     <div class="flex flex-col md:flex-row items-baseline gap-2">
                         <span class="zh-sub opacity-100 order-2 md:order-1" style="font-size: 10vw;">毛天艺</span>
-                        <span class="en-main text-[4vw] md:text-[2.5vw] order-1 md:order-2">Tianyi Mao</span>
+                        <span class="en-main text-[4vw] md:text-[2.5vw] order-1 md:order-2 bold-title">Tianyi Mao</span>
                     </div>
                     <div class="mt-2">
-                        <span class="en-main text-xs md:text-sm tracking-wider">Those who seek brilliance in the process cannot be deprived.</span>
+                        <span class="en-main text-xs md:text-sm tracking-wider italic">Those who seek brilliance in the process cannot be deprived.</span>
                         <span class="zh-sub mt-1">一个只想使过程精彩的人是无法被剥夺的</span>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
                     <div class="glass p-10 relative overflow-hidden group min-h-[200px] md:col-span-2">
                         <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0">
-                            <span class="en-main text-3xl mb-2">What can i do</span><span class="zh-sub">核心业务</span>
+                            <span class="en-main text-3xl mb-2 bold-title">What can i do</span><span class="zh-sub">核心业务</span>
                         </div>
                         <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <div onclick="switchPage('works')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Design</span><span class="zh-sub">平面设计</span></div>
-                            <div onclick="switchPage('photo')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Photo</span><span class="zh-sub">摄影作品</span></div>
-                            <div onclick="switchPage('coach')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Coach</span><span class="zh-sub">运动教学</span></div>
+                            <div onclick="switchPage('works')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl bold-title">Design</span><span class="zh-sub">平面设计</span></div>
+                            <div onclick="switchPage('photo')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl bold-title">Photo</span><span class="zh-sub">摄影作品</span></div>
+                            <div onclick="switchPage('coach')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl bold-title">Coach</span><span class="zh-sub">运动教学</span></div>
                         </div>
                     </div>
                     <div class="glass p-10 relative overflow-hidden group min-h-[200px] md:col-span-2">
                         <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0">
-                            <span class="en-main text-3xl mb-2">More of me</span><span class="zh-sub">更多的我</span>
+                            <span class="en-main text-3xl mb-2 bold-title">More of me</span><span class="zh-sub">更多的我</span>
                         </div>
                         <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <div onclick="switchPage('cinema')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Cinema</span><span class="zh-sub">电影人生</span></div>
-                            <div onclick="switchPage('reading')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Media</span><span class="zh-sub">音乐阅读</span></div>
-                            <div onclick="switchPage('thoughts')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Reflect</span><span class="zh-sub">感悟反省</span></div>
+                            <div onclick="switchPage('cinema')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl bold-title">Cinema</span><span class="zh-sub">电影人生</span></div>
+                            <div onclick="switchPage('reading')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl bold-title">Media</span><span class="zh-sub">音乐阅读</span></div>
+                            <div onclick="switchPage('thoughts')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl bold-title">Reflect</span><span class="zh-sub">感悟反省</span></div>
                         </div>
                     </div>
                 </div>`;
@@ -177,7 +197,7 @@
                 {en: 'Blood Nirvana', zh: '血液涅槃', prefix: '平面设计/血液涅槃', count: 4},
                 {en: 'Fitness Factory', zh: '健身工厂', prefix: '平面设计/健身工厂', count: 5}
             ];
-            app.innerHTML = `<div class="mb-12 px-4"><span class="en-main text-6xl">Portfolio</span><span class="zh-sub text-sm mt-2">视觉作品集</span></div>
+            app.innerHTML = `<div class="mb-12 px-4"><span class="en-main text-6xl bold-title">Portfolio</span><span class="zh-sub text-sm mt-2">视觉作品集</span></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
                     ${projects.map(p => `
                         <div class="glass p-6 group">
@@ -185,7 +205,7 @@
                                 <div class="stack-layer shadow-xl" style="left:${i*12}%; z-index:${p.count-i}; background:#111;" onclick="openViewerList('${p.prefix}', ${i+1}, ${p.count})">
                                     <img src="${p.prefix}${i+1}.png" class="w-full h-full object-cover rounded-lg">
                                 </div>`).join('')}</div>
-                            <div class="mt-4"><span class="en-main text-xl">${p.en}</span><span class="zh-sub">${p.zh}</span></div>
+                            <div class="mt-4"><span class="en-main text-xl bold-title">${p.en}</span><span class="zh-sub">${p.zh}</span></div>
                         </div>`).join('')}
                 </div>`;
         }
@@ -205,7 +225,7 @@
                 {zh:'布拉德皮特', en:'Brad Pitt', img:'电影 演员导演/布拉德皮特.jpg'}
             ];
             app.innerHTML = `
-                <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Cinema Archive</span><span class="zh-sub text-sm mt-2">电影人生</span></div>
+                <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl bold-title">Cinema Archive</span><span class="zh-sub text-sm mt-2">电影人生</span></div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 mb-12">
                     <div class="glass overflow-hidden h-[420px] relative">
                         <div class="dragon-row">${top10.map((m, i) => `
@@ -230,25 +250,25 @@
 
         function renderReading() {
             app.innerHTML = `
-                <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Soul & Rhythm</span><span class="zh-sub text-sm mt-2">音乐与阅读</span></div>
+                <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl bold-title">Soul & Rhythm</span><span class="zh-sub text-sm mt-2">音乐与阅读</span></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
                     <div class="glass p-8">
-                        <span class="en-main text-2xl mb-6">Currently Reading</span>
+                        <span class="en-main text-2xl mb-6 bold-title">Currently Reading</span>
                         <div class="flex gap-4">
                             <div class="w-32 h-44 bg-white/10 rounded-lg overflow-hidden shadow-2xl"><img src="book_cover.jpg" class="w-full h-full object-cover" onerror="this.style.display='none'"></div>
                             <div class="flex-1">
-                                <span class="en-main text-lg">Walden</span>
+                                <span class="en-main text-lg bold-title">Walden</span>
                                 <span class="zh-sub text-xs">《瓦尔登湖》 - Henry David Thoreau</span>
                                 <p class="en-main text-[10px] opacity-60 mt-4 leading-relaxed italic">"I went to the woods because I wished to live deliberately..."</p>
                             </div>
                         </div>
                     </div>
                     <div class="glass p-8">
-                        <span class="en-main text-2xl mb-6">Playlist of the Year</span>
+                        <span class="en-main text-2xl mb-6 bold-title">Playlist of the Year</span>
                         <div class="space-y-4">
                             ${['In the End - Linkin Park', 'Bohemian Rhapsody - Queen', 'Nocturne - Jay Chou'].map(song => `
                                 <div class="flex items-center justify-between border-b border-white/5 pb-2">
-                                    <span class="en-main text-sm opacity-80">${song}</span>
+                                    <span class="en-main text-sm opacity-80 italic">${song}</span>
                                     <span class="en-main text-[9px] opacity-30">PLAYING</span>
                                 </div>`).join('')}
                         </div>
@@ -258,12 +278,12 @@
 
         async function renderThoughts() {
             app.innerHTML = `
-                <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Reflection</span><span class="zh-sub text-sm mt-2">感悟反省</span></div>
+                <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl bold-title">Reflection</span><span class="zh-sub text-sm mt-2">感悟反省</span></div>
                 <div id="thoughts-container" class="max-w-4xl mx-auto space-y-6 px-4">
                     ${myThoughts.map((t, i) => `
                         <div class="thought-card" id="thought-${i}">
                             <span class="en-main text-[10px] opacity-20 mb-4">${t.date}</span>
-                            <p class="en-main text-lg font-light leading-relaxed mb-4 trans-target">${t.en || 'Translating...'}</p>
+                            <p class="thought-text-en text-lg leading-relaxed mb-4 trans-target">${t.en || 'Translating...'}</p>
                             <p class="zh-sub text-lg opacity-100 font-light leading-relaxed">${t.zh}</p>
                         </div>`).join('')}
                 </div>`;
@@ -273,7 +293,11 @@
                     try {
                         const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(t.zh)}&langpair=zh-CN|en`);
                         const data = await res.json();
-                        const translatedText = data.responseData.translatedText;
+                        let translatedText = data.responseData.translatedText;
+                        
+                        // 简单处理：仅首字母大写，其余小写
+                        translatedText = translatedText.charAt(0).toUpperCase() + translatedText.slice(1).toLowerCase();
+                        
                         const cardText = document.querySelector(`#thought-${i} .trans-target`);
                         if (cardText) cardText.innerText = translatedText;
                         t.en = translatedText;
@@ -289,9 +313,9 @@
             app.innerHTML = `
                 <div class="flex flex-col md:flex-row gap-8 px-4 min-h-[70vh]">
                     <div class="md:w-1/4 flex flex-col gap-3">
-                        <div class="mb-4"><span class="en-main text-5xl">Photography</span><span class="zh-sub text-xs mt-1">摄影</span></div>
+                        <div class="mb-4"><span class="en-main text-5xl bold-title">Photography</span><span class="zh-sub text-xs mt-1">摄影</span></div>
                         ${cats.map(c => `<div onclick="handlePhotoNav('${c.id}', this)" class="photo-nav-item glass p-5 cursor-pointer hover:bg-white/10 transition-all border-transparent">
-                            <span class="en-main text-lg">${c.en}</span><span class="zh-sub text-[9px]">${c.zh}</span>
+                            <span class="en-main text-lg bold-title">${c.en}</span><span class="zh-sub text-[9px]">${c.zh}</span>
                         </div>`).join('')}
                     </div>
                     <div class="flex-1 glass p-4 overflow-y-auto max-h-[85vh] no-scrollbar"><div id="photo-content-area"></div></div>
@@ -325,7 +349,6 @@
             setTimeout(() => {
                 backBtn.classList.toggle('hidden', page === 'home');
                 
-                // 仅在反思感悟板块使用 反思横屏.jpg
                 if (page === 'thoughts') {
                     document.body.style.backgroundImage = "url('反思横屏.jpg')";
                 } else {
@@ -351,7 +374,7 @@
                     const mainTitle = titles[0];
                     const altTitle = titles[1] || '';
                     return `<a href="${getImdbUrl(mainTitle)}" target="_blank" class="block border-l border-white/5 pl-2 transition-all hover:opacity-100 opacity-30">
-                        <div class="en-main text-[9px] truncate">${altTitle || mainTitle}</div>
+                        <div class="en-main text-[9px] truncate italic">${altTitle || mainTitle}</div>
                         <div class="zh-sub text-[8px] truncate">${mainTitle}</div>
                     </a>`;
                 }).join('');
