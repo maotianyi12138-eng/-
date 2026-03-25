@@ -13,6 +13,7 @@
             font-family: 'Inter', 'Noto Sans SC', sans-serif;
             background-size: cover; background-position: center; background-attachment: fixed;
             overflow-x: hidden;
+            transition: background-image 0.8s ease-in-out;
         }
         @media (min-width: 768px) { body { background-image: url('horse.jpg'); } }
         @media (max-width: 767px) { body { background-image: url('mobile_bg.jpg'); } }
@@ -109,7 +110,6 @@
         let currentImgList = [];
         let currentIndex = 0;
 
-        // 如果 thoughts.js 还没建，给一个默认内容防止报错
         if (typeof myThoughts === 'undefined') {
             window.myThoughts = [{date:'INFO', en:'Create thoughts.js to write diary.', zh:'请创建 thoughts.js 文件开始书写日记。'}];
         }
@@ -256,30 +256,26 @@
                 </div>`;
         }
 
-       async function renderThoughts() {
-            // 先渲染基础框架和加载状态
+        async function renderThoughts() {
             app.innerHTML = `
                 <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Reflection</span><span class="zh-sub text-sm mt-2">感悟反省</span></div>
                 <div id="thoughts-container" class="max-w-4xl mx-auto space-y-6 px-4">
                     ${myThoughts.map((t, i) => `
                         <div class="thought-card" id="thought-${i}">
                             <span class="en-main text-[10px] opacity-20 mb-4">${t.date}</span>
-                            <p class="en-main text-lg font-light leading-relaxed mb-2 trans-target">${t.en || 'Translating...'}</p>
-                            <p class="zh-sub text-sm">${t.zh}</p>
+                            <p class="en-main text-lg font-light leading-relaxed mb-4 trans-target">${t.en || 'Translating...'}</p>
+                            <p class="zh-sub text-lg opacity-100 font-light leading-relaxed">${t.zh}</p>
                         </div>`).join('')}
                 </div>`;
 
-            // 自动补全缺失的翻译
             myThoughts.forEach(async (t, i) => {
                 if (!t.en && t.zh) {
                     try {
                         const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(t.zh)}&langpair=zh-CN|en`);
                         const data = await res.json();
                         const translatedText = data.responseData.translatedText;
-                        // 更新页面显示
                         const cardText = document.querySelector(`#thought-${i} .trans-target`);
                         if (cardText) cardText.innerText = translatedText;
-                        // 同步更新内存数据，防止切换页面重复请求
                         t.en = translatedText;
                     } catch (err) {
                         document.querySelector(`#thought-${i} .trans-target`).innerText = "Translation Timeout";
@@ -328,12 +324,21 @@
             app.style.opacity = '0';
             setTimeout(() => {
                 backBtn.classList.toggle('hidden', page === 'home');
+                
+                // 仅在反思感悟板块使用 反思横屏.jpg
+                if (page === 'thoughts') {
+                    document.body.style.backgroundImage = "url('反思横屏.jpg')";
+                } else {
+                    document.body.style.backgroundImage = window.innerWidth >= 768 ? "url('horse.jpg')" : "url('mobile_bg.jpg')";
+                }
+
                 if(page === 'home') renderHome();
                 else if(page === 'photo') renderPhoto();
                 else if(page === 'cinema') renderCinema();
                 else if(page === 'works') renderWorks();
                 else if(page === 'reading') renderReading();
                 else if(page === 'thoughts') renderThoughts();
+                
                 app.style.opacity = '1'; window.scrollTo(0,0);
             }, 400);
         }
