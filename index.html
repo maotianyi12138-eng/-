@@ -363,7 +363,14 @@
             document.querySelectorAll('.photo-nav-item').forEach(i => i.classList.remove('nav-active'));
             el.classList.add('nav-active');
             const area = document.getElementById('photo-content-area');
-            const photoCfg = { '商业摄影': '摄影/商业摄影', '模特': '摄影/模特', '情绪摄影': '摄影/情绪摄影', '自媒体摄影': '摄影/自媒体摄影' };
+            
+            // 修正后的路径配置，模特部分使用大写 JPG 匹配你上传的文件
+            const photoCfg = { 
+                '商业摄影': { path: '摄影/商业摄影', ext: '.jpg' }, 
+                '模特': { path: '模特/模特', ext: '.JPG' }, 
+                '情绪摄影': { path: '摄影/情绪摄影', ext: '.jpg' }, 
+                '自媒体摄影': { path: '摄影/自媒体摄影', ext: '.jpg' } 
+            };
             
             if(id === 'video') {
                 const links = ["https://sns-video-zl.xhscdn.com/stream/79/110/115/01e805fb570d7ef74f03700196576619b1_115.mp4", "https://sns-video-zl.xhscdn.com/stream/110/4/01e6cd6d950f58330103700391927eff1a_4.mp4", "https://www.chali.com/material/brand/ys/video1.mp4", "https://sns-video-zl.xhscdn.com/stream/1/110/115/01e92c5c4c1b1c6c010370019ad553c5f4_115.mp4"];
@@ -372,14 +379,16 @@
             } else {
                 area.className = "tight-photo-grid animate-in fade-in duration-700";
                 area.innerHTML = '';
-                // 自动尝试加载 1-50 张图片，不存在的会自动剔除
+                // 自动检索逻辑：循环尝试加载 1-50 张，不存在则自动移除容器
+                const cfg = photoCfg[id];
                 for(let i=1; i<=50; i++) {
                     const div = document.createElement('div'); 
                     div.className = 'photo-item';
                     const img = document.createElement('img');
-                    img.src = `${photoCfg[id]}${i}.jpg`;
+                    img.src = `${cfg.path}${i}${cfg.ext}`;
                     img.className = 'w-full h-auto cursor-zoom-in';
                     img.onclick = () => openViewerSingle(img.src);
+                    // 核心：加载失败即代表文件序列结束，自动删除占位
                     img.onerror = function() { this.parentElement.remove(); };
                     div.appendChild(img);
                     area.appendChild(div);
