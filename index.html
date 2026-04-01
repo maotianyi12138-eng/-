@@ -143,7 +143,7 @@
 
         function renderHome() {
             app.innerHTML = `
-                <div class="h-[25vh] flex flex-col justify-end pb-8 px-4">
+                <div class="h-[35vh] md:h-[45vh] flex flex-col justify-end pb-8 px-4">
                     <div class="flex flex-col md:flex-row items-baseline gap-2">
                         <span class="zh-sub opacity-100 order-2 md:order-1" style="font-size: 10vw;">毛天艺</span>
                         <span class="en-main text-[4vw] md:text-[2.5vw] order-1 md:order-2">Tianyi Mao</span>
@@ -153,32 +153,30 @@
                         <span class="zh-sub mt-1">一个只想使过程精彩的人是无法被剥夺的</span>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
-                    <div class="glass p-10 relative overflow-hidden group min-h-[220px]">
-                        <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0">
-                            <span class="en-main text-3xl mb-2">What can i do</span><span class="zh-sub">核心业务</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 mt-12 md:mt-24">
+                    <div class="glass p-6 relative overflow-hidden group h-[140px]">
+                        <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0 flex items-center h-full">
+                            <div>
+                                <span class="en-main text-2xl mb-1">What can i do</span><span class="zh-sub">核心业务</span>
+                            </div>
                         </div>
                         <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <div onclick="switchPage('works')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Design</span><span class="zh-sub">平面设计</span></div>
-                            <div onclick="switchPage('photo')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Photo</span><span class="zh-sub">摄影作品</span></div>
-                            <div onclick="switchPage('coach')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-xl">Coach</span><span class="zh-sub">运动教学</span></div>
+                            <div onclick="switchPage('works')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-lg">Design</span><span class="zh-sub">平面设计</span></div>
+                            <div onclick="switchPage('photo')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-lg">Photo</span><span class="zh-sub">摄影作品</span></div>
+                            <div onclick="switchPage('coach')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-lg">Coach</span><span class="zh-sub">运动教学</span></div>
                         </div>
                     </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="glass p-6 group cursor-pointer relative overflow-hidden" onclick="switchPage('cinema')">
-                             <span class="en-main text-lg">Cinema</span><span class="zh-sub">电影人生</span>
+                    <div class="glass p-6 relative overflow-hidden group h-[140px]">
+                        <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0 flex items-center h-full">
+                            <div>
+                                <span class="en-main text-2xl mb-1">More of me</span><span class="zh-sub">个人兴趣</span>
+                            </div>
                         </div>
-                        <div class="glass p-6 group cursor-pointer relative overflow-hidden" onclick="switchPage('reading')">
-                             <span class="en-main text-lg">Media</span><span class="zh-sub">音乐阅读</span>
-                        </div>
-                        <div class="glass p-6 group cursor-pointer relative overflow-hidden" onclick="switchPage('thoughts')">
-                             <span class="en-main text-lg">Reflect</span><span class="zh-sub">感悟反省</span>
-                        </div>
-                        <div class="glass p-6 group cursor-pointer relative overflow-hidden" onclick="switchPage('calligraphy')">
-                             <div class="relative z-10">
-                                <span class="en-main text-lg">Ink</span><span class="zh-sub">书法练习</span>
-                             </div>
-                             <img id="home-calligraphy-preview" src="书法/latest.jpg" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-30 transition-opacity" onerror="this.style.display='none'">
+                        <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <div onclick="switchPage('cinema')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Cinema</span><span class="zh-sub">电影</span></div>
+                            <div onclick="switchPage('reading')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Media</span><span class="zh-sub">视听</span></div>
+                            <div onclick="switchPage('thoughts')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Reflect</span><span class="zh-sub">感悟</span></div>
+                            <div onclick="switchPage('calligraphy')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Ink</span><span class="zh-sub">书法</span></div>
                         </div>
                     </div>
                 </div>`;
@@ -286,17 +284,14 @@
                 if (!t.en && t.zh) {
                     const cardText = document.querySelector(`#thought-${i} .trans-target`);
                     try {
-                        // 解决500字符限制：切段翻译
                         const chunks = t.zh.match(/[^，。！？；\n]+[，。！？；\n]?/g) || [t.zh];
                         let finalEn = "";
-                        
                         for(let chunk of chunks) {
                             if(chunk.trim().length === 0) continue;
                             const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(chunk)}&langpair=zh-CN|en`);
                             const data = await res.json();
                             finalEn += (data.responseData.translatedText + " ");
                         }
-                        
                         if (cardText) cardText.innerText = finalEn.trim();
                         t.en = finalEn.trim();
                     } catch (err) {
@@ -372,7 +367,6 @@
             setTimeout(() => {
                 backBtn.classList.toggle('hidden', page === 'home');
                 
-                // 适配背景图
                 const isMobile = window.innerWidth < 768;
                 if (page === 'thoughts' || page === 'calligraphy') {
                     document.body.style.backgroundImage = isMobile ? "url('mobile_bg.jpg')" : "url('反思横屏.jpg')";
