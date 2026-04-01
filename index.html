@@ -11,7 +11,8 @@
         body { 
             background-color: #000; color: #fff; margin: 0;
             font-family: 'Times New Roman', 'Noto Sans SC', serif;
-            background-size: cover; background-position: center; background-attachment: fixed;
+            background-size: cover; background-position: center; 
+            background-attachment: fixed; /* 电脑端保持固定 */
             overflow-x: hidden;
             transition: background-image 0.8s ease-in-out;
         }
@@ -20,7 +21,12 @@
         * { font-weight: 300 !important; }
 
         @media (min-width: 768px) { body { background-image: url('horse.jpg'); } }
-        @media (max-width: 767px) { body { background-image: url('mobile_bg.jpg'); } }
+        @media (max-width: 767px) { 
+            body { 
+                background-image: url('mobile_bg.jpg'); 
+                background-attachment: scroll; /* 手机端禁止缩放关键：改为跟随滚动 */
+            } 
+        }
 
         .glass {
             background: rgba(255, 255, 255, 0.02);
@@ -136,7 +142,7 @@
         }
 
         if (typeof myThoughts === 'undefined') {
-            window.myThoughts = [{date:'INFO', en:'Create thoughts.js to write diary.', zh:'请创建 thoughts.js 文件开始书写日记。'}];
+            window.myThoughts = [{date:'INFO', zh:'请创建 thoughts.js 文件开始书写日记。'}];
         }
 
         const getImdbUrl = (q) => `https://www.imdb.com/find?q=${encodeURIComponent(q)}`;
@@ -286,37 +292,16 @@
                 </div>`;
         }
 
-        async function renderThoughts() {
+        function renderThoughts() {
             app.innerHTML = `
                 <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Reflection</span><span class="zh-sub text-sm mt-2">感悟反省</span></div>
                 <div id="thoughts-container" class="max-w-4xl mx-auto space-y-6 px-4 pb-20">
                     ${myThoughts.map((t, i) => `
                         <div class="thought-card" id="thought-${i}">
                             <span class="en-main text-[10px] opacity-20 mb-4">${t.date}</span>
-                            <p class="en-main text-lg font-light leading-relaxed mb-4 trans-target whitespace-pre-wrap">${t.en || 'Translating...'}</p>
                             <p class="zh-sub text-lg opacity-100 font-light leading-relaxed whitespace-pre-wrap">${t.zh}</p>
                         </div>`).join('')}
                 </div>`;
-
-            myThoughts.forEach(async (t, i) => {
-                if (!t.en && t.zh) {
-                    const cardText = document.querySelector(`#thought-${i} .trans-target`);
-                    try {
-                        const chunks = t.zh.match(/[^，。！？；\n]+[，。！？；\n]?/g) || [t.zh];
-                        let finalEn = "";
-                        for(let chunk of chunks) {
-                            if(chunk.trim().length === 0) continue;
-                            const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(chunk)}&langpair=zh-CN|en`);
-                            const data = await res.json();
-                            finalEn += (data.responseData.translatedText + " ");
-                        }
-                        if (cardText) cardText.innerText = finalEn.trim();
-                        t.en = finalEn.trim();
-                    } catch (err) {
-                        if (cardText) cardText.innerText = "Translation Unavailable";
-                    }
-                }
-            });
         }
 
         function renderCalligraphy() {
@@ -364,7 +349,6 @@
             el.classList.add('nav-active');
             const area = document.getElementById('photo-content-area');
             
-            // 修正后的路径配置，模特部分使用大写 JPG 匹配你上传的文件
             const photoCfg = { 
                 '商业摄影': { path: '摄影/商业摄影', ext: '.jpg' }, 
                 '模特': { path: '模特/模特', ext: '.JPG' }, 
@@ -379,7 +363,6 @@
             } else {
                 area.className = "tight-photo-grid animate-in fade-in duration-700";
                 area.innerHTML = '';
-                // 自动检索逻辑：循环尝试加载 1-50 张，不存在则自动移除容器
                 const cfg = photoCfg[id];
                 for(let i=1; i<=50; i++) {
                     const div = document.createElement('div'); 
@@ -388,7 +371,6 @@
                     img.src = `${cfg.path}${i}${cfg.ext}`;
                     img.className = 'w-full h-auto cursor-zoom-in';
                     img.onclick = () => openViewerSingle(img.src);
-                    // 核心：加载失败即代表文件序列结束，自动删除占位
                     img.onerror = function() { this.parentElement.remove(); };
                     div.appendChild(img);
                     area.appendChild(div);
