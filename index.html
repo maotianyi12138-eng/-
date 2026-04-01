@@ -273,32 +273,39 @@
         async function renderThoughts() {
             app.innerHTML = `
                 <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Reflection</span><span class="zh-sub text-sm mt-2">感悟反省</span></div>
-                <div id="thoughts-container" class="max-w-4xl mx-auto space-y-6 px-4">
+                <div id="thoughts-container" class="max-w-4xl mx-auto space-y-6 px-4 pb-20">
                     ${myThoughts.map((t, i) => `
                         <div class="thought-card" id="thought-${i}">
                             <span class="en-main text-[10px] opacity-20 mb-4">${t.date}</span>
-                            <p class="en-main text-lg font-light leading-relaxed mb-4 trans-target">${t.en || 'Translating...'}</p>
-                            <p class="zh-sub text-lg opacity-100 font-light leading-relaxed">${t.zh}</p>
+                            <p class="en-main text-lg font-light leading-relaxed mb-4 trans-target whitespace-pre-wrap">${t.en || 'Translating...'}</p>
+                            <p class="zh-sub text-lg opacity-100 font-light leading-relaxed whitespace-pre-wrap">${t.zh}</p>
                         </div>`).join('')}
                 </div>`;
 
             myThoughts.forEach(async (t, i) => {
                 if (!t.en && t.zh) {
+                    const cardText = document.querySelector(`#thought-${i} .trans-target`);
                     try {
-                        const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(t.zh)}&langpair=zh-CN|en`);
-                        const data = await res.json();
-                        const translatedText = data.responseData.translatedText;
-                        const cardText = document.querySelector(`#thought-${i} .trans-target`);
-                        if (cardText) cardText.innerText = translatedText;
-                        t.en = translatedText;
+                        // 解决500字符限制：切段翻译
+                        const chunks = t.zh.match(/[^，。！？；\n]+[，。！？；\n]?/g) || [t.zh];
+                        let finalEn = "";
+                        
+                        for(let chunk of chunks) {
+                            if(chunk.trim().length === 0) continue;
+                            const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(chunk)}&langpair=zh-CN|en`);
+                            const data = await res.json();
+                            finalEn += (data.responseData.translatedText + " ");
+                        }
+                        
+                        if (cardText) cardText.innerText = finalEn.trim();
+                        t.en = finalEn.trim();
                     } catch (err) {
-                        document.querySelector(`#thought-${i} .trans-target`).innerText = "Translation Timeout";
+                        if (cardText) cardText.innerText = "Translation Unavailable";
                     }
                 }
             });
         }
 
-        // 新增书法板块渲染逻辑
         function renderCalligraphy() {
             app.innerHTML = `
                 <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Daily Ink</span><span class="zh-sub text-sm mt-2">书法日常</span></div>
@@ -315,8 +322,6 @@
                         </div>
                     </div>
                 </div>`;
-            
-            // 自动尝试获取昨天的日期如果latest.jpg不存在，或者你可以手动将每天的画命名为latest.jpg覆盖
             const today = new Date().toISOString().split('T')[0];
             document.getElementById('cal-date').innerText = today;
         }
@@ -367,10 +372,12 @@
             setTimeout(() => {
                 backBtn.classList.toggle('hidden', page === 'home');
                 
+                // 适配背景图
+                const isMobile = window.innerWidth < 768;
                 if (page === 'thoughts' || page === 'calligraphy') {
-                    document.body.style.backgroundImage = "url('反思横屏.jpg')";
+                    document.body.style.backgroundImage = isMobile ? "url('反思竖屏.jpg')" : "url('反思横屏.jpg')";
                 } else {
-                    document.body.style.backgroundImage = window.innerWidth >= 768 ? "url('horse.jpg')" : "url('mobile_bg.jpg')";
+                    document.body.style.backgroundImage = isMobile ? "url('mobile_bg.jpg')" : "url('horse.jpg')";
                 }
 
                 if(page === 'home') renderHome();
