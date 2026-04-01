@@ -11,7 +11,7 @@
         body { 
             background-color: #000; color: #fff; margin: 0;
             font-family: 'Times New Roman', 'Noto Sans SC', serif;
-            background-size: 100% 100%; background-position: center; background-attachment: fixed;
+            background-size: cover; background-position: center; background-attachment: fixed;
             overflow-x: hidden;
             transition: background-image 0.8s ease-in-out;
         }
@@ -91,9 +91,11 @@
     <div id="viewer" onclick="closeViewer()">
         <button class="absolute top-10 right-10 text-white text-4xl font-light">×</button>
         <div class="flex items-center gap-8 w-full justify-center px-4" onclick="event.stopPropagation()">
-            <button class="text-5xl opacity-20 hover:opacity-100" onclick="prevImg()">‹</button>
-            <img id="viewer-img" src="" class="max-h-[85vh] max-w-[85vw] object-contain rounded shadow-2xl transition-all">
-            <button class="text-5xl opacity-20 hover:opacity-100" onclick="nextImg()">›</button>
+            <button class="text-5xl opacity-20 hover:opacity-100 hidden md:block" onclick="prevImg()">‹</button>
+            <div id="viewer-touch-area" class="relative">
+                <img id="viewer-img" src="" class="max-h-[85vh] max-w-[85vw] object-contain rounded shadow-2xl transition-all">
+            </div>
+            <button class="text-5xl opacity-20 hover:opacity-100 hidden md:block" onclick="nextImg()">›</button>
         </div>
     </div>
 
@@ -116,6 +118,22 @@
         const backBtn = document.getElementById('back-btn');
         let currentImgList = [];
         let currentIndex = 0;
+
+        // 触摸滑动支持
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const viewerArea = document.getElementById('viewer-touch-area');
+        
+        viewerArea.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; });
+        viewerArea.addEventListener('touchend', e => { 
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) nextImg();
+            if (touchEndX > touchStartX + 50) prevImg();
+        }
 
         if (typeof myThoughts === 'undefined') {
             window.myThoughts = [{date:'INFO', en:'Create thoughts.js to write diary.', zh:'请创建 thoughts.js 文件开始书写日记。'}];
@@ -268,17 +286,37 @@
                 </div>`;
         }
 
-        function renderThoughts() {
+        async function renderThoughts() {
             app.innerHTML = `
                 <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Reflection</span><span class="zh-sub text-sm mt-2">感悟反省</span></div>
                 <div id="thoughts-container" class="max-w-4xl mx-auto space-y-6 px-4 pb-20">
                     ${myThoughts.map((t, i) => `
                         <div class="thought-card" id="thought-${i}">
                             <span class="en-main text-[10px] opacity-20 mb-4">${t.date}</span>
-                            <p class="en-main text-lg font-light leading-relaxed mb-4 whitespace-pre-wrap">${t.en || ''}</p>
+                            <p class="en-main text-lg font-light leading-relaxed mb-4 trans-target whitespace-pre-wrap">${t.en || 'Translating...'}</p>
                             <p class="zh-sub text-lg opacity-100 font-light leading-relaxed whitespace-pre-wrap">${t.zh}</p>
                         </div>`).join('')}
                 </div>`;
+
+            myThoughts.forEach(async (t, i) => {
+                if (!t.en && t.zh) {
+                    const cardText = document.querySelector(`#thought-${i} .trans-target`);
+                    try {
+                        const chunks = t.zh.match(/[^，。！？；\n]+[，。！？；\n]?/g) || [t.zh];
+                        let finalEn = "";
+                        for(let chunk of chunks) {
+                            if(chunk.trim().length === 0) continue;
+                            const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(chunk)}&langpair=zh-CN|en`);
+                            const data = await res.json();
+                            finalEn += (data.responseData.translatedText + " ");
+                        }
+                        if (cardText) cardText.innerText = finalEn.trim();
+                        t.en = finalEn.trim();
+                    } catch (err) {
+                        if (cardText) cardText.innerText = "Translation Unavailable";
+                    }
+                }
+            });
         }
 
         function renderCalligraphy() {
@@ -334,9 +372,16 @@
             } else {
                 area.className = "tight-photo-grid animate-in fade-in duration-700";
                 area.innerHTML = '';
-                for(let i=1; i<=30; i++) {
-                    const div = document.createElement('div'); div.className = 'photo-item';
-                    div.innerHTML = `<img src="${photoCfg[id]}${i}.jpg" class="w-full h-auto" onerror="this.parentElement.remove()">`;
+                // 自动尝试加载 1-50 张图片，不存在的会自动剔除
+                for(let i=1; i<=50; i++) {
+                    const div = document.createElement('div'); 
+                    div.className = 'photo-item';
+                    const img = document.createElement('img');
+                    img.src = `${photoCfg[id]}${i}.jpg`;
+                    img.className = 'w-full h-auto cursor-zoom-in';
+                    img.onclick = () => openViewerSingle(img.src);
+                    img.onerror = function() { this.parentElement.remove(); };
+                    div.appendChild(img);
                     area.appendChild(div);
                 }
             }
@@ -348,16 +393,10 @@
                 backBtn.classList.toggle('hidden', page === 'home');
                 
                 const isMobile = window.innerWidth < 768;
-                if (isMobile) {
-                    // 手机端强制统一背景
-                    document.body.style.backgroundImage = "url('mobile_bg.jpg')";
+                if (page === 'thoughts' || page === 'calligraphy') {
+                    document.body.style.backgroundImage = isMobile ? "url('mobile_bg.jpg')" : "url('反思横屏.jpg')";
                 } else {
-                    // 电脑端按模块切换背景
-                    if (page === 'thoughts' || page === 'calligraphy') {
-                        document.body.style.backgroundImage = "url('反思横屏.jpg')";
-                    } else {
-                        document.body.style.backgroundImage = "url('horse.jpg')";
-                    }
+                    document.body.style.backgroundImage = isMobile ? "url('mobile_bg.jpg')" : "url('horse.jpg')";
                 }
 
                 if(page === 'home') renderHome();
@@ -416,8 +455,8 @@
         }
 
         function closeViewer() { document.getElementById('viewer').style.display = 'none'; }
-        function nextImg() { currentIndex = (currentIndex + 1) % currentImgList.length; updateViewer(); }
-        function prevImg() { currentIndex = (currentIndex - 1 + currentImgList.length) % currentImgList.length; updateViewer(); }
+        function nextImg() { if(currentImgList.length <= 1) return; currentIndex = (currentIndex + 1) % currentImgList.length; updateViewer(); }
+        function prevImg() { if(currentImgList.length <= 1) return; currentIndex = (currentIndex - 1 + currentImgList.length) % currentImgList.length; updateViewer(); }
         function updateViewer() { document.getElementById('viewer-img').src = currentImgList[currentIndex]; }
         function closeAd() { document.getElementById('ad-pop').style.display = 'none'; }
 
