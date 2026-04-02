@@ -1,4 +1,10 @@
 const myThoughts = [
+            { 
+        date: '2026.04.1', 
+        tag: 'MOOD', 
+        zh: `
+        好烦啊 我的生活节奏又被打乱`
+    },
            { 
         date: '2026.03.31', 
         tag: 'MOOD', 
