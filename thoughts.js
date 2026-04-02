@@ -33,7 +33,7 @@ const myThoughts = [
         从哪来、
         从哪来，
         从哪来。 `
-    }，
+    },
          { 
         date: '2026.03.30', 
         tag: 'MOOD', 
