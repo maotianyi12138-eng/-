@@ -42,9 +42,23 @@
         @media (min-width: 768px) { .tight-photo-grid { columns: 5; } }
         .photo-item { break-inside: avoid; margin-bottom: 4px; background: #111; border-radius: 8px; overflow: hidden; }
 
-        /* 项目卡片样式 */
-        .project-card { cursor: pointer; transition: 0.4s; overflow: hidden; border-radius: 1rem; background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.05); }
-        .project-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); }
+        .video-card-mini { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; overflow: hidden; border-radius: 1rem; transition: transform 0.3s ease; }
+        .video-card-mini:hover { transform: scale(1.02); }
+
+        /* 项目卡片 */
+        .project-card { cursor: pointer; transition: 0.4s; overflow: hidden; border-radius: 1rem; background: rgba(255,255,255,0.03); }
+        .project-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.08); }
+
+        .dragon-row { display: flex; overflow-x: auto; padding: 0; scrollbar-width: none; height: 100%; }
+        .dragon-item { flex: 0 0 160px; margin-right: -100px; transition: 0.6s ease; cursor: pointer; position: relative; }
+        .dragon-item:hover { margin-right: 20px; z-index: 100 !important; transform: scale(1.05); }
+        .dragon-item img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
+
+        .artist-scroll { display: flex; gap: 4px; height: 100%; overflow: hidden; }
+        .artist-strip { flex: 1; position: relative; transition: 0.5s ease; border-radius: 4px; overflow: hidden; }
+        .artist-strip:hover { flex: 4; }
+        .artist-strip img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; transition: 0.5s; }
+        .artist-strip:hover img { opacity: 1; }
 
         .movie-list-4col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; }
         @media (max-width: 767px) { .movie-list-4col { grid-template-columns: repeat(2, 1fr); } }
@@ -54,7 +68,8 @@
             color: #fff; border-radius: 12px; padding: 14px 20px; width: 100%; outline: none;
         }
 
-        #viewer, #project-detail { display: none; position: fixed; inset: 0; z-index: 1000; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.98); }
+        #viewer, #ad-pop, #project-detail { display: none; position: fixed; inset: 0; z-index: 1000; flex-direction: column; align-items: center; justify-content: center; }
+        #viewer, #project-detail { background: rgba(0,0,0,0.98); }
 
         .thought-card { background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 1.5rem; transition: 0.3s; }
         .thought-card:hover { background: rgba(255,255,255,0.06); }
@@ -79,35 +94,45 @@
         <button class="absolute top-10 right-10 text-white text-4xl font-light">×</button>
         <div class="flex items-center gap-8 w-full justify-center px-4" onclick="event.stopPropagation()">
             <button class="text-5xl opacity-20 hover:opacity-100 hidden md:block" onclick="prevImg()">‹</button>
-            <img id="viewer-img" src="" class="max-h-[85vh] max-w-[85vw] object-contain rounded shadow-2xl transition-all">
+            <div id="viewer-touch-area" class="relative">
+                <img id="viewer-img" src="" class="max-h-[85vh] max-w-[85vw] object-contain rounded shadow-2xl transition-all">
+            </div>
             <button class="text-5xl opacity-20 hover:opacity-100 hidden md:block" onclick="nextImg()">›</button>
         </div>
     </div>
 
     <div id="project-detail" onclick="this.style.display='none'">
-        <div class="glass w-[95vw] h-[90vh] md:w-[85vw] md:h-[80vh] flex flex-col md:flex-row overflow-hidden" onclick="event.stopPropagation()">
-            <div class="w-full md:w-2/3 bg-black/40 relative group flex items-center justify-center border-b md:border-b-0 md:border-r border-white/10">
-                <button class="absolute left-4 z-10 text-5xl opacity-30 group-hover:opacity-100 transition" onclick="detailNav(-1)">‹</button>
-                <img id="detail-main-img" src="" class="max-w-full max-h-full object-contain p-4">
-                <button class="absolute right-4 z-10 text-5xl opacity-30 group-hover:opacity-100 transition" onclick="detailNav(1)">›</button>
-                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 bg-black/50 rounded-full text-[10px] en-main" id="detail-counter">1 / 1</div>
+        <div class="glass w-[95vw] h-[90vh] md:w-[80vw] md:h-[80vh] flex flex-col md:flex-row overflow-hidden" onclick="event.stopPropagation()">
+            <div class="w-full md:w-2/3 bg-black/40 relative group flex items-center justify-center">
+                <button class="absolute left-4 z-10 text-4xl opacity-0 group-hover:opacity-100 transition" onclick="detailNav(-1)">‹</button>
+                <img id="detail-main-img" src="" class="max-w-full max-h-full object-contain">
+                <button class="absolute right-4 z-10 text-4xl opacity-0 group-hover:opacity-100 transition" onclick="detailNav(1)">›</button>
             </div>
-            <div class="w-full md:w-1/3 p-8 flex flex-col justify-between overflow-y-auto bg-black/20">
+            <div class="w-full md:w-1/3 p-8 flex flex-col justify-between border-t md:border-t-0 md:border-l border-white/10 overflow-y-auto">
                 <div>
-                    <h2 id="detail-title" class="en-main text-3xl mb-1">PROJECT</h2>
+                    <h2 id="detail-title" class="en-main text-3xl mb-1">PROJECT NAME</h2>
                     <p id="detail-zh" class="zh-sub text-lg opacity-80 mb-6">项目名称</p>
-                    <div class="space-y-6">
-                        <div>
-                            <span class="en-main text-[10px] opacity-30">Category</span>
-                            <p id="detail-cat" class="en-main text-xs mt-1">Classification</p>
-                        </div>
-                        <div>
-                            <span class="en-main text-[10px] opacity-30">Brief / Reflection</span>
-                            <p id="detail-desc" class="zh-sub opacity-60 leading-relaxed mt-2 text-xs">正在加载感悟反省...</p>
-                        </div>
+                    <div class="mb-6">
+                        <span class="en-main text-[10px] opacity-30">Timeline</span>
+                        <p id="detail-time" class="en-main text-sm">2026.03</p>
+                    </div>
+                    <div>
+                        <span class="en-main text-[10px] opacity-30">Brief</span>
+                        <p id="detail-desc" class="zh-sub opacity-60 leading-relaxed mt-2 text-xs">项目详细介绍加载中...</p>
                     </div>
                 </div>
-                <button class="mt-8 py-3 border border-white/10 rounded-full en-main text-[10px] hover:bg-white/10 transition" onclick="document.getElementById('project-detail').style.display='none'">Close Archive</button>
+                <button class="mt-8 py-3 border border-white/10 rounded-full en-main text-[10px] hover:bg-white/5 transition" onclick="document.getElementById('project-detail').style.display='none'">Close Window</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="ad-pop" class="bg-black/80 backdrop-blur-xl">
+        <div class="glass p-12 text-center">
+            <span class="en-main text-2xl mb-2">Recommend a movie to him</span>
+            <span class="zh-sub">他还没看过，快推荐给他吧</span>
+            <div class="flex flex-col gap-4 mt-8">
+                <button class="bg-white text-black py-4 rounded-xl text-xs tracking-widest uppercase">Recommend</button>
+                <button class="py-3 rounded-xl bg-white/10 text-[10px] uppercase opacity-40" onclick="closeAd()">Already Shared</button>
             </div>
         </div>
     </div>
@@ -121,23 +146,254 @@
         let currentImgList = [];
         let currentIndex = 0;
 
-        // 【核心逻辑】严格分类检索
+        /**
+         * 自动检索与分组逻辑：
+         * 1. 严格基于 category (type) 隔离，防止串位。
+         * 2. 正则表达式剔除末尾数字和后缀，支持 .png, .jpg, .JPG, .PNG 等。
+         */
         async function getProjectData(type) {
-            // 这里定义了每个物理分类下对应的文件前缀（需与你Github仓库一致）
-            const registry = {
-                '工作实践': ['离不了', '血液涅槃'],
-                '批判设计': ['新保龄运动', '离不了', '血液涅槃', '健身工厂'], // 确保这四个只出现在这里
-                '个人创意': ['健身工厂']
+            // 这里定义你目前所有的文件资产，未来新增只需往对应的数组里填入即可
+            const allAssets = {
+                '工作实践': ['离不了1.png', '离不了2.png', '离不了3.png', '离不了4.png', '血液涅槃1.png', '血液涅槃2.png', '工作项目A1.jpg'],
+                '批判设计': ['新保龄运动1.png', '新保龄运动2.png', '新保龄运动3.png', '社会实验1.png', '数字孤岛1.jpg', '数字孤岛2.jpg'],
+                '个人创意': ['健身工厂1.png', '健身工厂2.png', '健身工厂3.png', '健身工厂4.png', '健身工厂5.png', '创意海报1.png']
             };
             
-            const prefixes = registry[type] || [];
+            const files = allAssets[type] || [];
             const groups = {};
 
-            // 自动检索逻辑：遍历前缀，尝试生成1-10张图的路径
-            prefixes.forEach(name => {
-                if(!groups[name]) {
-                    groups[name] = { 
-                        en: name.toUpperCase(), 
-                        zh: name, 
+            files.forEach(file => {
+                // 正则说明：匹配末尾的数字及其后的扩展名（如 1.png, 12.JPG）并替换为空
+                // 这样 "离不了1.png" 变成 "离不了"；"新保龄运动2.jpg" 变成 "新保龄运动"
+                const projectName = file.replace(/\d+\.(png|jpg|jpeg|PNG|JPG|JPEG)$/i, ''); 
+                
+                if(!groups[projectName]) {
+                    groups[projectName] = { 
+                        en: projectName.toUpperCase(), 
+                        zh: projectName, 
                         images: [], 
-                        path: `平面设计/${type}/`
+                        path: `平面设计/${type}/` 
+                    };
+                }
+                groups[projectName].images.push(`${groups[projectName].path}${file}`);
+            });
+
+            return Object.values(groups);
+        }
+
+        // 详情页导航
+        function detailNav(dir) {
+            currentIndex = (currentIndex + dir + currentImgList.length) % currentImgList.length;
+            document.getElementById('detail-main-img').src = currentImgList[currentIndex];
+        }
+
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play().catch(e => console.log("Audio play blocked"));
+            } else {
+                audio.pause();
+            }
+            updateMusicIcon();
+        }
+
+        function updateMusicIcon() {
+            document.getElementById('music-on').classList.toggle('hidden', audio.paused);
+            document.getElementById('music-off').classList.toggle('hidden', !audio.paused);
+        }
+
+        function renderHome() {
+            app.innerHTML = `
+                <div class="h-[35vh] md:h-[45vh] flex flex-col justify-end pb-8 px-4">
+                    <div class="flex flex-col md:flex-row items-baseline gap-2">
+                        <span class="zh-sub opacity-100 order-2 md:order-1" style="font-size: 10vw;">毛天艺</span>
+                        <span class="en-main text-[4vw] md:text-[2.5vw] order-1 md:order-2">Tianyi Mao</span>
+                    </div>
+                    <div class="mt-2">
+                        <span class="en-main text-xs md:text-sm tracking-wider">Those who seek brilliance in the process cannot be deprived.</span>
+                        <span class="zh-sub mt-1">一个只想使过程精彩的人是无法被剥夺的</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 mt-12 md:mt-24">
+                    <div class="glass p-6 relative overflow-hidden group h-[140px]">
+                        <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0 flex items-center h-full">
+                            <div>
+                                <span class="en-main text-2xl mb-1">What can i do</span><span class="zh-sub">核心业务</span>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <div onclick="switchPage('works')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-lg">Design</span><span class="zh-sub">平面设计</span></div>
+                            <div onclick="switchPage('photo')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-lg">Photo</span><span class="zh-sub">摄影作品</span></div>
+                            <div onclick="switchPage('coach')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-lg">Coach</span><span class="zh-sub">运动教学</span></div>
+                        </div>
+                    </div>
+                    <div class="glass p-6 relative overflow-hidden group h-[140px]">
+                        <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0 flex items-center h-full">
+                            <div>
+                                <span class="en-main text-2xl mb-1">More of me</span><span class="zh-sub">个人兴趣</span>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <div onclick="switchPage('cinema')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Cinema</span><span class="zh-sub">电影</span></div>
+                            <div onclick="switchPage('reading')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Media</span><span class="zh-sub">视听</span></div>
+                            <div onclick="switchPage('thoughts')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Reflect</span><span class="zh-sub">感悟</span></div>
+                            <div onclick="switchPage('calligraphy')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Ink</span><span class="zh-sub">书法</span></div>
+                        </div>
+                    </div>
+                </div>`;
+        }
+
+        // --- 视觉作品集板块 ---
+        function renderWorks() {
+            const cats = [
+                {id:'工作实践', en:'Practice', zh:'工作实践'}, 
+                {id:'批判设计', en:'Critical', zh:'批判设计'}, 
+                {id:'个人创意', en:'Creative', zh:'个人创意'}
+            ];
+            app.innerHTML = `
+                <div class="flex flex-col md:flex-row gap-8 px-4 min-h-[70vh]">
+                    <div class="md:w-1/4 flex flex-col gap-3">
+                        <div class="mb-4"><span class="en-main text-5xl">Design Portfolio</span><span class="zh-sub text-xs mt-1">视觉作品集</span></div>
+                        ${cats.map(c => `<div onclick="handleDesignNav('${c.id}', this)" class="design-nav-item glass p-5 cursor-pointer hover:bg-white/10 transition-all border-transparent">
+                            <span class="en-main text-lg">${c.en}</span><span class="zh-sub text-[9px]">${c.zh}</span>
+                        </div>`).join('')}
+                    </div>
+                    <div class="flex-1 glass p-8 overflow-y-auto max-h-[85vh] no-scrollbar">
+                        <div id="design-content-area" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                    </div>
+                </div>`;
+            handleDesignNav('工作实践', document.querySelector('.design-nav-item'));
+        }
+
+        async function handleDesignNav(id, el) {
+            document.querySelectorAll('.design-nav-item').forEach(i => i.classList.remove('nav-active'));
+            el.classList.add('nav-active');
+            const area = document.getElementById('design-content-area');
+            area.innerHTML = `<p class="en-main opacity-20 col-span-full">Indexing Project Files...</p>`;
+            
+            const projects = await getProjectData(id);
+            if (projects.length === 0) {
+                area.innerHTML = `<p class="en-main opacity-20 col-span-full">No projects found in this category.</p>`;
+                return;
+            }
+
+            area.innerHTML = projects.map(p => `
+                <div class="project-card group" onclick="openProjectDetail('${p.zh}', '${p.en}', '${JSON.stringify(p.images).replace(/"/g, '&quot;')}')">
+                    <div class="aspect-[4/3] bg-white/5 overflow-hidden">
+                        <img src="${p.images[0]}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-4 flex justify-between items-center">
+                        <div><span class="en-main text-xs">${p.en}</span><span class="zh-sub text-[10px]">${p.zh}</span></div>
+                        <span class="en-main text-[8px] opacity-20">${p.images.length} PICS</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openProjectDetail(zh, en, imgsJson) {
+            const imgs = JSON.parse(imgsJson);
+            currentImgList = imgs;
+            currentIndex = 0;
+            
+            document.getElementById('detail-title').innerText = en;
+            document.getElementById('detail-zh').innerText = zh;
+            document.getElementById('detail-main-img').src = imgs[0];
+            document.getElementById('detail-desc').innerText = `这是关于 ${zh} 的设计项目。通过对视觉语言的探索，我们将核心概念转化为具体的设计成果。本项目包含 ${imgs.length} 张视觉产出。`;
+            document.getElementById('detail-time').innerText = "2026.03 - Archive";
+            
+            document.getElementById('project-detail').style.display = 'flex';
+        }
+
+        // --- 摄影板块 ---
+        function renderPhoto() {
+            const cats = [{id:'商业摄影', en:'Commercial', zh:'商业摄影'}, {id:'模特', en:'Model', zh:'模特'}, {id:'情绪摄影', en:'Mood', zh:'情绪摄影'}, {id:'自媒体摄影', en:'Social', zh:'自媒体摄影'}, {id:'video', en:'Visuals', zh:'视听影像'}];
+            app.innerHTML = `
+                <div class="flex flex-col md:flex-row gap-8 px-4 min-h-[70vh]">
+                    <div class="md:w-1/4 flex flex-col gap-3">
+                        <div class="mb-4"><span class="en-main text-5xl">Photography</span><span class="zh-sub text-xs mt-1">摄影</span></div>
+                        ${cats.map(c => `<div onclick="handlePhotoNav('${c.id}', this)" class="photo-nav-item glass p-5 cursor-pointer hover:bg-white/10 transition-all border-transparent">
+                            <span class="en-main text-lg">${c.en}</span><span class="zh-sub text-[9px]">${c.zh}</span>
+                        </div>`).join('')}
+                    </div>
+                    <div class="flex-1 glass p-4 overflow-y-auto max-h-[85vh] no-scrollbar"><div id="photo-content-area"></div></div>
+                </div>`;
+            handlePhotoNav('商业摄影', document.querySelector('.photo-nav-item'));
+        }
+
+        function handlePhotoNav(id, el) {
+            document.querySelectorAll('.photo-nav-item').forEach(i => i.classList.remove('nav-active'));
+            el.classList.add('nav-active');
+            const area = document.getElementById('photo-content-area');
+            const photoCfg = { '商业摄影': { path: '摄影/商业摄影', ext: '.jpg' }, '模特': { path: '模特/模特', ext: '.JPG' }, '情绪摄影': { path: '摄影/情绪摄影', ext: '.jpg' }, '自媒体摄影': { path: '摄影/自媒体摄影', ext: '.jpg' } };
+            
+            if(id === 'video') {
+                const links = ["https://sns-video-zl.xhscdn.com/stream/79/110/115/01e805fb570d7ef74f03700196576619b1_115.mp4", "https://sns-video-zl.xhscdn.com/stream/110/4/01e6cd6d950f58330103700391927eff1a_4.mp4"];
+                area.className = "grid md:grid-cols-2 gap-4 animate-in fade-in duration-700";
+                area.innerHTML = links.map(l => `<div class="video-card-mini glass p-1"><video loop muted playsinline autoplay class="w-full h-full object-cover rounded-xl"><source src="${l}"></video></div>`).join('');
+            } else {
+                area.className = "tight-photo-grid animate-in fade-in duration-700";
+                area.innerHTML = '';
+                const cfg = photoCfg[id];
+                for(let i=1; i<=30; i++) {
+                    const img = document.createElement('img');
+                    img.src = `${cfg.path}${i}${cfg.ext}`;
+                    img.className = 'w-full h-auto cursor-zoom-in photo-item';
+                    img.onclick = () => openViewerSingle(img.src);
+                    img.onerror = function() { this.remove(); };
+                    area.appendChild(img);
+                }
+            }
+        }
+
+        function renderCinema() {
+            app.innerHTML = `<div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Cinema Archive</span><span class="zh-sub text-sm mt-2">电影人生</span></div><div class="px-4"><div class="glass p-8 md:p-12"><div class="mb-6 max-w-2xl mx-auto"><input type="text" id="movieSearch" class="apple-search" placeholder="Search a movie he hasn't seen..." oninput="liveSearch()"></div><div id="movie-names" class="movie-list-4col"></div></div></div>`;
+            updateMovieGrid(movieData);
+        }
+
+        function renderThoughts() {
+            app.innerHTML = `<div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Reflection</span><span class="zh-sub text-sm mt-2">感悟反省</span></div><div id="thoughts-container" class="max-w-4xl mx-auto space-y-6 px-4 pb-20">${myThoughts.map(t => `<div class="thought-card"><span class="en-main text-[10px] opacity-20 mb-4">${t.date}</span><p class="zh-sub text-lg opacity-100 font-light leading-relaxed whitespace-pre-wrap">${t.zh}</p></div>`).join('')}</div>`;
+        }
+
+        function switchPage(page) {
+            app.style.opacity = '0';
+            setTimeout(() => {
+                backBtn.classList.toggle('hidden', page === 'home');
+                const isMobile = window.innerWidth < 768;
+                
+                // 动态背景逻辑
+                if (page === 'thoughts') document.body.style.backgroundImage = isMobile ? "url('mobile_bg.jpg')" : "url('反思横屏.jpg')";
+                else document.body.style.backgroundImage = isMobile ? "url('mobile_bg.jpg')" : "url('horse.jpg')";
+
+                if(page === 'home') renderHome();
+                else if(page === 'photo') renderPhoto();
+                else if(page === 'cinema') renderCinema();
+                else if(page === 'works') renderWorks();
+                else if(page === 'thoughts') renderThoughts();
+                
+                app.style.opacity = '1'; window.scrollTo(0,0);
+            }, 400);
+        }
+
+        function updateMovieGrid(list) {
+            const container = document.getElementById('movie-names');
+            if(container) container.innerHTML = list.slice(0, 80).map(m => `<div class="opacity-30 text-[10px] en-main">${m.title}</div>`).join('');
+        }
+
+        function liveSearch() {
+            const val = document.getElementById('movieSearch').value.toLowerCase();
+            updateMovieGrid(movieData.filter(m => m.title.toLowerCase().includes(val)));
+        }
+
+        function openViewerSingle(src) {
+            currentImgList = [src]; currentIndex = 0;
+            document.getElementById('viewer-img').src = src;
+            document.getElementById('viewer').style.display = 'flex';
+        }
+        function closeViewer() { document.getElementById('viewer').style.display = 'none'; }
+        function nextImg() { currentIndex = (currentIndex + 1) % currentImgList.length; document.getElementById('viewer-img').src = currentImgList[currentIndex]; }
+        function prevImg() { currentIndex = (currentIndex - 1 + currentImgList.length) % currentImgList.length; document.getElementById('viewer-img').src = currentImgList[currentIndex]; }
+        function closeAd() { document.getElementById('ad-pop').style.display = 'none'; }
+
+        window.onload = () => { renderHome(); app.style.opacity = '1'; };
+    </script>
+</body>
+</html>
