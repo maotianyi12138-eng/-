@@ -74,6 +74,9 @@
 
         .thought-card { background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 1.5rem; transition: 0.3s; }
         .thought-card:hover { background: rgba(255,255,255,0.06); }
+        @media (max-width: 767px) {
+            .thought-card { padding: 1.25rem; border-radius: 1rem; }
+        }
 
         .calligraphy-preview { width: 100%; height: 120px; object-fit: cover; border-radius: 8px; opacity: 0.6; transition: 0.5s; }
         .group:hover .calligraphy-preview { opacity: 1; }
@@ -83,23 +86,23 @@
     <audio id="main-audio" loop><source src="bgm.mp3" type="audio/mpeg"></audio>
 
     <div id="nav-ui">
-        <div id="back-btn" class="fixed top-8 left-8 z-[500] cursor-pointer opacity-50 hover:opacity-100 transition hidden" onclick="switchPage('home')">
+        <div id="back-btn" class="fixed top-4 left-4 md:top-8 md:left-8 z-[500] cursor-pointer opacity-50 hover:opacity-100 transition hidden" onclick="switchPage('home')">
             <span class="en-main text-[10px]">Return</span><span class="zh-sub">返回</span>
         </div>
-        <div id="music-toggle" class="fixed top-8 right-8 z-[500] cursor-pointer opacity-40 hover:opacity-100 transition p-3 glass" onclick="toggleMusic()">
+        <div id="music-toggle" class="fixed top-4 right-4 md:top-8 md:right-8 z-[500] cursor-pointer opacity-40 hover:opacity-100 transition p-3 glass" onclick="toggleMusic()">
             <div id="music-on" class="w-4 h-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
             <div id="music-off" class="w-4 h-4 hidden"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></div>
         </div>
     </div>
 
-    <div id="app-content" class="pt-16 p-6 md:p-16 opacity-0 transition-opacity duration-500"></div>
+    <div id="app-content" class="pt-14 px-4 pb-6 md:pt-16 md:p-16 opacity-0 transition-opacity duration-500"></div>
 
     <div id="viewer" onclick="closeViewer()">
         <button class="absolute top-10 right-10 text-white text-4xl font-light">×</button>
         <div class="flex items-center gap-8 w-full justify-center px-4" onclick="event.stopPropagation()">
             <button class="text-5xl opacity-20 hover:opacity-100 hidden md:block" onclick="prevImg()">‹</button>
             <div id="viewer-touch-area" class="relative">
-                <img id="viewer-img" src="" class="max-h-[85vh] max-w-[85vw] object-contain rounded shadow-2xl transition-all">
+                <img id="viewer-img" src="" alt="Preview image" class="max-h-[85vh] max-w-[85vw] object-contain rounded shadow-2xl transition-all">
             </div>
             <button class="text-5xl opacity-20 hover:opacity-100 hidden md:block" onclick="nextImg()">›</button>
         </div>
@@ -188,7 +191,7 @@
                     <div class="glass p-6 relative overflow-hidden group h-[140px]">
                         <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0 flex items-center h-full">
                             <div>
-                                <span class="en-main text-2xl mb-1">What can i do</span><span class="zh-sub">核心业务</span>
+                                <span class="en-main text-2xl mb-1">What Can I Do</span><span class="zh-sub">核心业务</span>
                             </div>
                         </div>
                         <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
@@ -200,7 +203,7 @@
                     <div class="glass p-6 relative overflow-hidden group h-[140px]">
                         <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0 flex items-center h-full">
                             <div>
-                                <span class="en-main text-2xl mb-1">More of me</span><span class="zh-sub">个人兴趣</span>
+                                <span class="en-main text-2xl mb-1">More of Me</span><span class="zh-sub">个人兴趣</span>
                             </div>
                         </div>
                         <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
@@ -226,7 +229,7 @@
                         <div class="glass p-6 group">
                             <div class="design-stack">${Array.from({length: p.count}).map((_, i) => `
                                 <div class="stack-layer shadow-xl" style="left:${i*12}%; z-index:${p.count-i}; background:#111;" onclick="openViewerList('${p.prefix}', ${i+1}, ${p.count})">
-                                    <img src="${p.prefix}${i+1}.png" class="w-full h-full object-cover rounded-lg">
+                                    <img src="${p.prefix}${i+1}.png" loading="lazy" decoding="async" class="w-full h-full object-cover rounded-lg">
                                 </div>`).join('')}</div>
                             <div class="mt-4"><span class="en-main text-xl">${p.en}</span><span class="zh-sub">${p.zh}</span></div>
                         </div>`).join('')}
@@ -252,13 +255,13 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 mb-12">
                     <div class="glass overflow-hidden h-[420px] relative">
                         <div class="dragon-row">${top10.map((m, i) => `
-                            <a href="${getImdbUrl(m.en)}" target="_blank" rel="noopener noreferrer" class="dragon-item" style="z-index:${20-i}"><img src="${m.img}" title="${m.en} / ${m.zh}"></a>`).join('')}
+                            <a href="${getImdbUrl(m.en)}" target="_blank" rel="noopener noreferrer" class="dragon-item" style="z-index:${20-i}"><img src="${m.img}" loading="lazy" decoding="async" title="${m.en} / ${m.zh}"></a>`).join('')}
                         </div>
                     </div>
                     <div class="glass p-2 h-[420px] relative">
                         <div class="artist-scroll">${artists.map(a => `
                             <a href="${getImdbUrl(a.en)}" target="_blank" rel="noopener noreferrer" class="artist-strip">
-                                <img src="${a.img}">
+                                <img src="${a.img}" loading="lazy" decoding="async">
                                 <div class="absolute bottom-4 left-1/2 -translate-x-1/2 writing-vertical-rl en-main text-[10px] opacity-50">${a.en}</div>
                             </a>`).join('')}
                         </div>
@@ -278,7 +281,7 @@
                     <div class="glass p-8">
                         <span class="en-main text-2xl mb-6">Currently Reading</span>
                         <div class="flex gap-4">
-                            <div class="w-32 h-44 bg-white/10 rounded-lg overflow-hidden shadow-2xl"><img src="book_cover.jpg" class="w-full h-full object-cover" onerror="this.style.display='none'"></div>
+                            <div class="w-32 h-44 bg-white/10 rounded-lg overflow-hidden shadow-2xl"><img src="book_cover.jpg" loading="lazy" decoding="async" class="w-full h-full object-cover" onerror="this.style.display='none'"></div>
                             <div class="flex-1">
                                 <span class="en-main text-lg">Walden</span>
                                 <span class="zh-sub text-xs">《瓦尔登湖》 - Henry David Thoreau</span>
@@ -311,6 +314,30 @@
                 </div>`;
         }
 
+        function renderCoach() {
+            app.innerHTML = `
+                <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Coach</span><span class="zh-sub text-sm mt-2">运动教学</span></div>
+                <div class="px-4 max-w-4xl mx-auto">
+                    <div class="glass p-8 md:p-12">
+                        <span class="en-main text-2xl mb-6">Training Focus</span>
+                        <div class="space-y-4">
+                            <div class="border-l border-white/20 pl-4">
+                                <span class="en-main text-sm">Strength Foundations</span>
+                                <span class="zh-sub">基础力量与动作模式</span>
+                            </div>
+                            <div class="border-l border-white/20 pl-4">
+                                <span class="en-main text-sm">Fat Loss & Conditioning</span>
+                                <span class="zh-sub">减脂与体能提升</span>
+                            </div>
+                            <div class="border-l border-white/20 pl-4">
+                                <span class="en-main text-sm">Lifestyle Programming</span>
+                                <span class="zh-sub">按生活节奏定制计划</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+        }
+
         function renderCalligraphy() {
             app.innerHTML = `
                 <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Daily Ink</span><span class="zh-sub text-sm mt-2">书法日常</span></div>
@@ -319,7 +346,7 @@
                         <div id="cal-container" class="flex flex-col items-center">
                             <span id="cal-date" class="en-main text-xs opacity-40 mb-8 tracking-[0.2em]">LOADING ARCHIVE...</span>
                             <div class="relative group cursor-zoom-in" onclick="openViewerSingle(document.getElementById('main-cal-img').src)">
-                                <img id="main-cal-img" src="书法/latest.jpg" class="max-h-[70vh] rounded shadow-2xl transition-all duration-700" onerror="handleCalligraphyError(this)">
+                                <img id="main-cal-img" src="书法/latest.jpg" loading="lazy" decoding="async" class="max-h-[70vh] rounded shadow-2xl transition-all duration-700" onerror="handleCalligraphyError(this)">
                             </div>
                             <div class="mt-12 opacity-20 hover:opacity-100 transition">
                                 <span class="en-main text-[10px]">Keep practicing. Every stroke matters.</span>
@@ -366,7 +393,7 @@
             if(id === 'video') {
                 const links = ["https://sns-video-zl.xhscdn.com/stream/79/110/115/01e805fb570d7ef74f03700196576619b1_115.mp4", "https://sns-video-zl.xhscdn.com/stream/110/4/01e6cd6d950f58330103700391927eff1a_4.mp4", "https://www.chali.com/material/brand/ys/video1.mp4", "https://sns-video-zl.xhscdn.com/stream/1/110/115/01e92c5c4c1b1c6c010370019ad553c5f4_115.mp4"];
                 area.className = "grid md:grid-cols-2 gap-4 animate-in fade-in duration-700";
-                area.innerHTML = links.map(l => `<div class="video-card-mini glass p-1"><video loop muted playsinline autoplay class="w-full h-full object-cover rounded-xl"><source src="${l}"></video></div>`).join('');
+                area.innerHTML = links.map(l => `<div class="video-card-mini glass p-1"><video loop muted playsinline autoplay preload="metadata" class="w-full h-full object-cover rounded-xl"><source src="${l}"></video></div>`).join('');
             } else {
                 area.className = "tight-photo-grid animate-in fade-in duration-700";
                 area.innerHTML = '';
@@ -377,6 +404,9 @@
                     const img = document.createElement('img');
                     img.src = `${cfg.path}${i}${cfg.ext}`;
                     img.className = 'w-full h-auto cursor-zoom-in';
+                    img.loading = 'lazy';
+                    img.decoding = 'async';
+                    img.alt = `${id}-${i}`;
                     img.onclick = () => openViewerSingle(img.src);
                     img.onerror = function() { this.parentElement.remove(); };
                     div.appendChild(img);
@@ -399,6 +429,7 @@
 
                 if(page === 'home') renderHome();
                 else if(page === 'photo') renderPhoto();
+                else if(page === 'coach') renderCoach();
                 else if(page === 'cinema') renderCinema();
                 else if(page === 'works') renderWorks();
                 else if(page === 'reading') renderReading();
