@@ -86,10 +86,16 @@
         .works-thumb { width: 68px; height: 68px; object-fit: cover; border-radius: 8px; opacity: 0.45; border: 1px solid rgba(255,255,255,0.1); transition: opacity 0.2s ease; }
         .works-thumb:hover, .works-thumb.active { opacity: 1; }
         .works-intro-text { overflow-wrap: anywhere; word-break: break-word; }
+        .works-detail-label { letter-spacing: 0.18em; }
+        .works-detail-title { font-size: 1.1rem; line-height: 1.5; }
+        .works-detail-time { font-size: 0.95rem; line-height: 1.6; opacity: 0.86; }
         @media (max-width: 767px) {
             .works-project-cover { border-radius: 10px; }
             .works-detail-main { max-height: 54vh; }
             .works-thumb { width: 56px; height: 56px; border-radius: 7px; }
+            .works-detail-title { font-size: 1.18rem; line-height: 1.55; }
+            .works-detail-time { font-size: 0.92rem; line-height: 1.65; opacity: 0.78; }
+            .works-intro-text { font-size: 1rem; line-height: 1.88; }
         }
     </style>
 </head>
@@ -474,17 +480,17 @@
                             </div>` : ''}
                         </div>
                         <div class="md:w-2/5">
-                            <div class="space-y-5">
+                            <div class="space-y-4 md:space-y-5">
                                 <div>
-                                    <span class="en-main text-[10px] opacity-30">Project Name</span>
-                                    <p class="zh-sub text-lg opacity-100 mt-2">${escapeHtml(project.name)}</p>
+                                    <span class="works-detail-label en-main text-[10px] opacity-30">Project Name</span>
+                                    <p class="works-detail-title zh-sub opacity-100 mt-2">${escapeHtml(project.name)}</p>
                                 </div>
                                 <div>
-                                    <span class="en-main text-[10px] opacity-30">Time</span>
-                                    <p class="zh-sub text-base opacity-100 mt-2">${escapeHtml(meta.time)}</p>
+                                    <span class="works-detail-label en-main text-[10px] opacity-30">Time</span>
+                                    <p class="works-detail-time zh-sub mt-2">${escapeHtml(meta.time)}</p>
                                 </div>
-                                <div>
-                                    <span class="en-main text-[10px] opacity-30">Introduction</span>
+                                <div class="pt-1.5 border-t border-white/10">
+                                    <span class="works-detail-label en-main text-[10px] opacity-30">Introduction</span>
                                     <p class="works-intro-text zh-sub text-base opacity-100 leading-relaxed whitespace-pre-wrap mt-2">${escapeHtml(meta.intro)}</p>
                                 </div>
                             </div>
