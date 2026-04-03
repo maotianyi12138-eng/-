@@ -150,14 +150,21 @@
         let hasInteracted = false;
         const startAudio = () => {
             if(!hasInteracted) {
-                audio.play(); hasInteracted = true;
+                const playPromise = audio.play();
+                if (playPromise && typeof playPromise.catch === 'function') playPromise.catch(() => {});
+                hasInteracted = true;
                 updateMusicIcon();
             }
         };
         ['click', 'touchstart', 'scroll', 'wheel'].forEach(e => window.addEventListener(e, startAudio, {once:true}));
 
         function toggleMusic() {
-            audio.paused ? audio.play() : audio.pause();
+            if (audio.paused) {
+                const playPromise = audio.play();
+                if (playPromise && typeof playPromise.catch === 'function') playPromise.catch(() => {});
+            } else {
+                audio.pause();
+            }
             updateMusicIcon();
         }
         function updateMusicIcon() {
@@ -245,12 +252,12 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 mb-12">
                     <div class="glass overflow-hidden h-[420px] relative">
                         <div class="dragon-row">${top10.map((m, i) => `
-                            <a href="${getImdbUrl(m.en)}" target="_blank" class="dragon-item" style="z-index:${20-i}"><img src="${m.img}" title="${m.en} / ${m.zh}"></a>`).join('')}
+                            <a href="${getImdbUrl(m.en)}" target="_blank" rel="noopener noreferrer" class="dragon-item" style="z-index:${20-i}"><img src="${m.img}" title="${m.en} / ${m.zh}"></a>`).join('')}
                         </div>
                     </div>
                     <div class="glass p-2 h-[420px] relative">
                         <div class="artist-scroll">${artists.map(a => `
-                            <a href="${getImdbUrl(a.en)}" target="_blank" class="artist-strip">
+                            <a href="${getImdbUrl(a.en)}" target="_blank" rel="noopener noreferrer" class="artist-strip">
                                 <img src="${a.img}">
                                 <div class="absolute bottom-4 left-1/2 -translate-x-1/2 writing-vertical-rl en-main text-[10px] opacity-50">${a.en}</div>
                             </a>`).join('')}
@@ -385,7 +392,7 @@
                 
                 const isMobile = window.innerWidth < 768;
                 if (page === 'thoughts' || page === 'calligraphy') {
-                    document.body.style.backgroundImage = isMobile ? "url('mobile_bg.jpg')" : "url('反思横屏.jpg')";
+                    document.body.style.backgroundImage = isMobile ? "url('反思竖屏.jpg')" : "url('反思横屏.jpg')";
                 } else {
                     document.body.style.backgroundImage = isMobile ? "url('mobile_bg.jpg')" : "url('horse.jpg')";
                 }
@@ -409,7 +416,7 @@
                     const titles = m.title.split(' / ');
                     const mainTitle = titles[0];
                     const altTitle = titles[1] || '';
-                    return `<a href="${getImdbUrl(mainTitle)}" target="_blank" class="block border-l border-white/5 pl-2 transition-all hover:opacity-100 opacity-30">
+                    return `<a href="${getImdbUrl(mainTitle)}" target="_blank" rel="noopener noreferrer" class="block border-l border-white/5 pl-2 transition-all hover:opacity-100 opacity-30">
                         <div class="en-main text-[9px] truncate">${altTitle || mainTitle}</div>
                         <div class="zh-sub text-[8px] truncate">${mainTitle}</div>
                     </a>`;
