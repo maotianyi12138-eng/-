@@ -89,6 +89,9 @@
         .works-detail-label { letter-spacing: 0.18em; }
         .works-detail-title { font-size: 1.1rem; line-height: 1.5; }
         .works-detail-time { font-size: 0.95rem; line-height: 1.6; opacity: 0.86; }
+        .works-detail-header { border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.03); border-radius: 0.9rem; }
+        .works-detail-back { min-height: 40px; display: inline-flex; align-items: center; }
+        .works-detail-name-chip { max-width: 58vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; letter-spacing: 0.08em; }
         @media (max-width: 767px) {
             .works-project-cover { border-radius: 10px; }
             .works-detail-main { max-height: 54vh; }
@@ -96,6 +99,8 @@
             .works-detail-title { font-size: 1.18rem; line-height: 1.55; }
             .works-detail-time { font-size: 0.92rem; line-height: 1.65; opacity: 0.78; }
             .works-intro-text { font-size: 1rem; line-height: 1.88; }
+            .works-detail-header { border-radius: 0.95rem; }
+            .works-detail-name-chip { max-width: 52vw; }
         }
     </style>
 </head>
@@ -461,9 +466,10 @@
             area.className = 'animate-in fade-in duration-500';
             area.innerHTML = `
                 <div class="glass p-3.5 md:p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <button onclick="renderWorksProjectList('${categoryId}')" class="en-main text-[11px] md:text-[10px] px-3 py-2 rounded-lg bg-white/5 opacity-80 hover:opacity-100 transition">← Back to list</button>
-                        <span class="en-main text-[10px] opacity-40">${worksState.currentImageIndex + 1} / ${project.images.length}</span>
+                    <div class="works-detail-header flex items-center justify-between gap-2 px-2.5 py-2 mb-4">
+                        <button onclick="renderWorksProjectList('${categoryId}')" class="works-detail-back en-main text-[11px] md:text-[10px] px-3 py-1.5 rounded-lg bg-white/5 opacity-90 hover:opacity-100 transition">← Back</button>
+                        <span class="works-detail-name-chip en-main text-[10px] opacity-55">${escapeHtml(project.name)}</span>
+                        <span class="en-main text-[10px] opacity-45">${worksState.currentImageIndex + 1} / ${project.images.length}</span>
                     </div>
                     <div class="flex flex-col md:flex-row gap-4 md:gap-6">
                         <div class="md:w-3/5">
