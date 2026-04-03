@@ -80,6 +80,10 @@
 
         .calligraphy-preview { width: 100%; height: 120px; object-fit: cover; border-radius: 8px; opacity: 0.6; transition: 0.5s; }
         .group:hover .calligraphy-preview { opacity: 1; }
+        .works-project-cover { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+        .works-detail-main { max-height: 72vh; width: 100%; object-fit: contain; background: #000; }
+        .works-thumb { width: 68px; height: 68px; object-fit: cover; border-radius: 8px; opacity: 0.45; border: 1px solid rgba(255,255,255,0.1); transition: opacity 0.2s ease; }
+        .works-thumb:hover, .works-thumb.active { opacity: 1; }
     </style>
 </head>
 <body>
@@ -149,6 +153,134 @@
         }
 
         const getImdbUrl = (q) => `https://www.imdb.com/find?q=${encodeURIComponent(q)}`;
+        const worksCategories = [
+            { id: '工作实践', en: 'Work Practice', path: '平面设计/工作实践' },
+            { id: '批判设计', en: 'Critical Design', path: '平面设计/批判设计' },
+            { id: '个人创意', en: 'Personal Creation', path: '平面设计/个人创意' }
+        ];
+        const worksFallbackManifest = {
+            '工作实践': [
+                '平面设计/工作实践/56851639451479_.pic.jpg',
+                '平面设计/工作实践/56951639451522_.pic.jpg',
+                '平面设计/工作实践/57031639451560_.pic.jpg',
+                '平面设计/工作实践/57051639451575_.pic.jpg'
+            ],
+            '批判设计': [
+                '平面设计/批判设计/健身工厂1.png',
+                '平面设计/批判设计/健身工厂2.png',
+                '平面设计/批判设计/健身工厂3.png',
+                '平面设计/批判设计/健身工厂4.png',
+                '平面设计/批判设计/健身工厂5.png',
+                '平面设计/批判设计/离不了1.png',
+                '平面设计/批判设计/离不了2.png',
+                '平面设计/批判设计/离不了3.png',
+                '平面设计/批判设计/离不了4.png',
+                '平面设计/批判设计/新保龄运动1.png',
+                '平面设计/批判设计/新保龄运动2.png',
+                '平面设计/批判设计/新保龄运动3.png',
+                '平面设计/批判设计/新保龄运动4.png',
+                '平面设计/批判设计/新保龄运动5.png',
+                '平面设计/批判设计/新保龄运动6.png',
+                '平面设计/批判设计/血液涅槃1.png',
+                '平面设计/批判设计/血液涅槃2.png',
+                '平面设计/批判设计/血液涅槃3.png',
+                '平面设计/批判设计/血液涅槃4.png'
+            ],
+            '个人创意': [
+                '平面设计/个人创意/mobile_bg.jpg'
+            ]
+        };
+        const worksProjectMeta = {
+            '工作实践': {},
+            '批判设计': {},
+            '个人创意': {}
+        };
+        const worksState = {
+            filesByCategory: {},
+            projectsByCategory: {},
+            currentCategory: '工作实践',
+            currentProjectName: '',
+            currentImageIndex: 0
+        };
+
+        function escapeHtml(str = '') {
+            return String(str)
+                .replaceAll('&', '&amp;')
+                .replaceAll('<', '&lt;')
+                .replaceAll('>', '&gt;')
+                .replaceAll('"', '&quot;')
+                .replaceAll("'", '&#39;');
+        }
+
+        function getWorksCategoryById(id) {
+            return worksCategories.find(c => c.id === id);
+        }
+
+        function parseWorksProjectFromFile(filePath) {
+            const rawName = decodeURIComponent((filePath.split('/').pop() || '').trim());
+            const extLess = rawName.replace(/\.[^.]+$/, '');
+            const cleanBase = extLess.replace(/[.。](pic|heic|jpeg|jpg|png|webp|gif)$/i, '');
+            const match = cleanBase.match(/^(.*?)(?:[\s_-]*(\d+))$/);
+            const projectName = (match?.[1] || cleanBase || '未命名项目').trim();
+            const order = match?.[2] ? parseInt(match[2], 10) : Number.MAX_SAFE_INTEGER;
+            return { projectName, order };
+        }
+
+        function groupWorksProjects(files = []) {
+            const projectMap = new Map();
+            const sorted = [...files].sort((a, b) => a.localeCompare(b, 'zh-Hans-CN', { numeric: true, sensitivity: 'base' }));
+            sorted.forEach(path => {
+                const { projectName, order } = parseWorksProjectFromFile(path);
+                if (!projectMap.has(projectName)) projectMap.set(projectName, []);
+                projectMap.get(projectName).push({ path, order });
+            });
+
+            return [...projectMap.entries()]
+                .map(([name, images]) => ({
+                    name,
+                    images: images
+                        .sort((a, b) => a.order - b.order || a.path.localeCompare(b.path, 'zh-Hans-CN', { numeric: true }))
+                        .map(item => item.path)
+                }))
+                .sort((a, b) => a.name.localeCompare(b.name, 'zh-Hans-CN', { numeric: true }));
+        }
+
+        async function fetchWorksFilesFromDirectory(dirPath) {
+            try {
+                const res = await fetch(encodeURI(`${dirPath}/`), { cache: 'no-store' });
+                if (!res.ok) return [];
+                const html = await res.text();
+                const doc = new DOMParser().parseFromString(html, 'text/html');
+                const hrefs = [...doc.querySelectorAll('a[href]')].map(a => a.getAttribute('href') || '');
+                const files = hrefs
+                    .filter(href => href && !href.startsWith('?') && !href.startsWith('#') && !href.endsWith('/'))
+                    .map(href => decodeURIComponent(href.split('/').pop() || '').trim())
+                    .filter(name => /\.(png|jpe?g|webp|gif)$/i.test(name))
+                    .map(name => `${dirPath}/${name}`);
+                return [...new Set(files)];
+            } catch (_) {
+                return [];
+            }
+        }
+
+        async function getWorksFilesByCategory(categoryId) {
+            if (worksState.filesByCategory[categoryId]) return worksState.filesByCategory[categoryId];
+            const category = getWorksCategoryById(categoryId);
+            if (!category) return [];
+
+            const autoFiles = await fetchWorksFilesFromDirectory(category.path);
+            const files = autoFiles.length > 0 ? autoFiles : (worksFallbackManifest[categoryId] || []);
+            worksState.filesByCategory[categoryId] = files;
+            return files;
+        }
+
+        function getWorksProjectMeta(categoryId, projectName) {
+            const meta = worksProjectMeta?.[categoryId]?.[projectName] || {};
+            return {
+                time: meta.time || '时间待补充',
+                intro: meta.intro || '项目介绍待补充（可在 worksProjectMeta 中按项目名填写）。'
+            };
+        }
 
         let hasInteracted = false;
         const startAudio = () => {
@@ -217,22 +349,140 @@
         }
 
         function renderWorks() {
-            const projects = [
-                {en: 'Inseparable', zh: '离不了', prefix: '平面设计/离不了', count: 4},
-                {en: 'New Bowling', zh: '新保龄运动', prefix: '平面设计/新保龄运动', count: 6},
-                {en: 'Blood Nirvana', zh: '血液涅槃', prefix: '平面设计/血液涅槃', count: 4},
-                {en: 'Fitness Factory', zh: '健身工厂', prefix: '平面设计/健身工厂', count: 5}
-            ];
-            app.innerHTML = `<div class="mb-12 px-4"><span class="en-main text-6xl">Portfolio</span><span class="zh-sub text-sm mt-2">视觉作品集</span></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-                    ${projects.map(p => `
-                        <div class="glass p-6 group">
-                            <div class="design-stack">${Array.from({length: p.count}).map((_, i) => `
-                                <div class="stack-layer shadow-xl" style="left:${i*12}%; z-index:${p.count-i}; background:#111;" onclick="openViewerList('${p.prefix}', ${i+1}, ${p.count})">
-                                    <img src="${p.prefix}${i+1}.png" loading="lazy" decoding="async" class="w-full h-full object-cover rounded-lg">
-                                </div>`).join('')}</div>
-                            <div class="mt-4"><span class="en-main text-xl">${p.en}</span><span class="zh-sub">${p.zh}</span></div>
-                        </div>`).join('')}
+            app.innerHTML = `
+                <div class="flex flex-col md:flex-row gap-8 px-4 min-h-[70vh]">
+                    <div class="md:w-1/4 flex flex-col gap-3">
+                        <div class="mb-4"><span class="en-main text-5xl">Portfolio</span><span class="zh-sub text-xs mt-1">视觉作品集</span></div>
+                        ${worksCategories.map((c, idx) => `
+                            <div onclick="handleWorksNav('${c.id}', this)" class="works-nav-item glass p-5 cursor-pointer hover:bg-white/10 transition-all border-transparent">
+                                <span class="en-main text-lg">${idx + 1}. ${c.en}</span>
+                                <span class="zh-sub text-[9px]">${c.id}</span>
+                            </div>`).join('')}
+                    </div>
+                    <div class="flex-1 glass p-4 overflow-y-auto max-h-[85vh] no-scrollbar">
+                        <div id="works-content-area" class="min-h-[300px]"></div>
+                    </div>
+                </div>`;
+            handleWorksNav('工作实践', document.querySelector('.works-nav-item'));
+        }
+
+        async function handleWorksNav(categoryId, el) {
+            document.querySelectorAll('.works-nav-item').forEach(i => i.classList.remove('nav-active'));
+            el?.classList.add('nav-active');
+
+            worksState.currentCategory = categoryId;
+            worksState.currentProjectName = '';
+            worksState.currentImageIndex = 0;
+
+            const area = document.getElementById('works-content-area');
+            area.innerHTML = `<div class="h-48 flex items-center justify-center"><span class="en-main text-xs opacity-40">LOADING PROJECTS...</span></div>`;
+
+            const files = await getWorksFilesByCategory(categoryId);
+            worksState.projectsByCategory[categoryId] = groupWorksProjects(files);
+            renderWorksProjectList(categoryId);
+        }
+
+        function renderWorksProjectList(categoryId) {
+            const area = document.getElementById('works-content-area');
+            const projects = worksState.projectsByCategory[categoryId] || [];
+
+            if (!projects.length) {
+                area.innerHTML = `<div class="h-48 flex items-center justify-center"><span class="zh-sub text-sm opacity-70">该分类暂无项目文件</span></div>`;
+                return;
+            }
+
+            area.className = 'grid grid-cols-1 md:grid-cols-2 gap-4 animate-in fade-in duration-700';
+            area.innerHTML = projects.map((project, idx) => `
+                <button onclick="openWorksProject('${categoryId}', '${encodeURIComponent(project.name)}')" class="text-left glass p-3 md:p-4 hover:bg-white/10 transition-all">
+                    <div class="overflow-hidden rounded-lg bg-black/40">
+                        <img src="${project.images[0]}" loading="lazy" decoding="async" class="works-project-cover">
+                    </div>
+                    <div class="mt-3 flex items-center justify-between">
+                        <div>
+                            <span class="en-main text-sm">${idx + 1}. ${escapeHtml(project.name)}</span>
+                            <span class="zh-sub text-[10px]">点击查看项目详情</span>
+                        </div>
+                        <span class="en-main text-[10px] opacity-30">${project.images.length}P</span>
+                    </div>
+                </button>`).join('');
+        }
+
+        function openWorksProject(categoryId, encodedProjectName) {
+            const projectName = decodeURIComponent(encodedProjectName);
+            const projects = worksState.projectsByCategory[categoryId] || [];
+            const project = projects.find(item => item.name === projectName);
+            if (!project) return;
+
+            worksState.currentCategory = categoryId;
+            worksState.currentProjectName = projectName;
+            worksState.currentImageIndex = 0;
+            renderWorksProjectDetail(categoryId, project);
+        }
+
+        function changeWorksImage(categoryId, encodedProjectName, delta) {
+            const projectName = decodeURIComponent(encodedProjectName);
+            const projects = worksState.projectsByCategory[categoryId] || [];
+            const project = projects.find(item => item.name === projectName);
+            if (!project || !project.images.length) return;
+
+            const max = project.images.length;
+            worksState.currentImageIndex = (worksState.currentImageIndex + delta + max) % max;
+            renderWorksProjectDetail(categoryId, project);
+        }
+
+        function setWorksImage(categoryId, encodedProjectName, index) {
+            const projectName = decodeURIComponent(encodedProjectName);
+            const projects = worksState.projectsByCategory[categoryId] || [];
+            const project = projects.find(item => item.name === projectName);
+            if (!project || !project.images.length) return;
+            worksState.currentImageIndex = Math.max(0, Math.min(index, project.images.length - 1));
+            renderWorksProjectDetail(categoryId, project);
+        }
+
+        function renderWorksProjectDetail(categoryId, project) {
+            const area = document.getElementById('works-content-area');
+            const meta = getWorksProjectMeta(categoryId, project.name);
+            const currentImage = project.images[worksState.currentImageIndex] || project.images[0];
+            const encodedProjectName = encodeURIComponent(project.name);
+
+            area.className = 'animate-in fade-in duration-500';
+            area.innerHTML = `
+                <div class="glass p-4 md:p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <button onclick="renderWorksProjectList('${categoryId}')" class="en-main text-[10px] opacity-60 hover:opacity-100 transition">← Back to list</button>
+                        <span class="en-main text-[10px] opacity-40">${worksState.currentImageIndex + 1} / ${project.images.length}</span>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-3/5">
+                            <div class="relative rounded-xl overflow-hidden bg-black/60 border border-white/10">
+                                <img src="${currentImage}" loading="lazy" decoding="async" class="works-detail-main">
+                                ${project.images.length > 1 ? `
+                                <button onclick="changeWorksImage('${categoryId}', '${encodedProjectName}', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/60 text-white text-xl">‹</button>
+                                <button onclick="changeWorksImage('${categoryId}', '${encodedProjectName}', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/60 text-white text-xl">›</button>` : ''}
+                            </div>
+                            ${project.images.length > 1 ? `
+                            <div class="mt-3 flex gap-2 overflow-x-auto no-scrollbar">
+                                ${project.images.map((img, idx) => `
+                                    <img src="${img}" loading="lazy" decoding="async" onclick="setWorksImage('${categoryId}', '${encodedProjectName}', ${idx})" class="works-thumb ${idx === worksState.currentImageIndex ? 'active' : ''} cursor-pointer">`).join('')}
+                            </div>` : ''}
+                        </div>
+                        <div class="md:w-2/5">
+                            <div class="space-y-5">
+                                <div>
+                                    <span class="en-main text-[10px] opacity-30">Project Name</span>
+                                    <p class="zh-sub text-lg opacity-100 mt-2">${escapeHtml(project.name)}</p>
+                                </div>
+                                <div>
+                                    <span class="en-main text-[10px] opacity-30">Time</span>
+                                    <p class="zh-sub text-base opacity-100 mt-2">${escapeHtml(meta.time)}</p>
+                                </div>
+                                <div>
+                                    <span class="en-main text-[10px] opacity-30">Introduction</span>
+                                    <p class="zh-sub text-base opacity-100 leading-relaxed whitespace-pre-wrap mt-2">${escapeHtml(meta.intro)}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>`;
         }
 
