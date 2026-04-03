@@ -74,6 +74,7 @@
 
         .thought-card { background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 1.5rem; transition: 0.3s; }
         .thought-card:hover { background: rgba(255,255,255,0.06); }
+        .thought-text { overflow-wrap: anywhere; word-break: break-word; }
         @media (max-width: 767px) {
             .thought-card { padding: 1.25rem; border-radius: 1rem; }
         }
@@ -559,7 +560,7 @@
                     ${myThoughts.map((t, i) => `
                         <div class="thought-card" id="thought-${i}">
                             <span class="en-main text-[10px] opacity-20 mb-4">${t.date}</span>
-                            <p class="zh-sub text-lg opacity-100 font-light leading-relaxed whitespace-pre-wrap">${t.zh}</p>
+                            <p class="thought-text zh-sub text-lg opacity-100 font-light leading-relaxed whitespace-pre-wrap">${t.zh}</p>
                         </div>`).join('')}
                 </div>`;
         }
