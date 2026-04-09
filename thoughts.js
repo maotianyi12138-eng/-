@@ -1,4 +1,9 @@
 const myThoughts = [
+  { 
+        date: '2026.04.10', 
+        tag: 'MOOD', 
+        zh: ` 爱我你辛苦了 `
+    },
                   { 
         date: '2026.04.3', 
         tag: 'MOOD', 
