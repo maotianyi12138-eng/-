@@ -559,7 +559,7 @@
                     ${myThoughts.map((t, i) => `
                         <div class="thought-card" id="thought-${i}">
                             <span class="en-main text-[10px] opacity-20 mb-4">${t.date}</span>
-                            <p class="zh-sub text-lg opacity-100 font-light leading-relaxed whitespace-pre-wrap">${t.zh}</p>
+                            <p class="zh-sub text-lg opacity-100 font-light leading-relaxed">${escapeHtml(t.zh).replace(/\r?\n/g, '<br>')}</p>
                         </div>`).join('')}
                 </div>`;
         }
