@@ -49,12 +49,12 @@ const myThoughts = [
 但这些事也确实发生了
 
 这冰淇淋怎么变得好苦，手机又坏了 `
+        images: ['IMG_4935.JPG']
     },
   { 
         date: '2026.04.10', 
         tag: 'MOOD', 
         zh: ` 爱我你辛苦了 `,
-        images: []
     },
                   { 
         date: '2026.04.3', 
