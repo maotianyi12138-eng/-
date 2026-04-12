@@ -1,4 +1,5 @@
 const myThoughts = [
+    { 
   date: '2026.04.12', 
         tag: 'MOOD', 
         zh: ` 点了柠檬味的和牛奶味的冰淇淋，感觉淡淡的，也不甜，
