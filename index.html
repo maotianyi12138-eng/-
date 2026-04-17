@@ -851,6 +851,35 @@
             setCoachStatus('未命中本地缓存，请点击“读取训练数据”');
         }
 
+        async function parseTrainApiPayload(response) {
+            try {
+                return await response.clone().json();
+            } catch (_) {
+                // 某些环境会遇到 gzip JSON 解析失败，继续走兜底分支
+            }
+
+            const rawBuffer = await response.arrayBuffer();
+            const utf8Text = new TextDecoder('utf-8').decode(rawBuffer);
+            try {
+                return JSON.parse(utf8Text);
+            } catch (_) {
+                // 如果是压缩字节流，尝试使用浏览器内置解压能力
+            }
+
+            if (typeof DecompressionStream === 'function') {
+                try {
+                    const compressedStream = new Blob([rawBuffer]).stream();
+                    const decompressed = compressedStream.pipeThrough(new DecompressionStream('gzip'));
+                    const text = await new Response(decompressed).text();
+                    return JSON.parse(text);
+                } catch (_) {
+                    // ignore and throw统一错误
+                }
+            }
+
+            throw new Error('接口响应解析失败（无法识别 JSON / gzip JSON）');
+        }
+
         async function fetchTrainsForDate(datestr, { forceRefresh = false } = {}) {
             const normalizedDate = normalizeDateStr(datestr);
             const cached = !forceRefresh ? readTrainCache(normalizedDate) : null;
@@ -869,14 +898,18 @@
                     body: JSON.stringify({ datestr: normalizedDate }),
                     cache: 'no-store'
                 });
-                const payload = await response.json().catch(() => null);
+                const payload = await parseTrainApiPayload(response).catch(() => null);
                 const errMsg = payload?.msg || payload?.message || payload?.error || `request failed (${response.status})`;
-                if (!response.ok || payload?.success === false) {
+                const hasResArray = Array.isArray(payload?.res);
+                const msgText = String(payload?.msg || payload?.message || payload?.error || '').toLowerCase();
+                const isAuthFailure = msgText.includes('apikey missing') || msgText.includes('apikey invalid');
+                const isTooFrequent = msgText.includes('too frequent');
+                if (!response.ok || payload?.success === false || !hasResArray || isAuthFailure || isTooFrequent) {
                     throw new Error(errMsg);
                 }
                 const result = {
                     datestr: normalizedDate,
-                    res: Array.isArray(payload?.res) ? payload.res : [],
+                    res: payload.res,
                     fetchedAt: Date.now()
                 };
                 saveTrainCache(normalizedDate, result);
