@@ -209,6 +209,26 @@
             currentProjectName: '',
             currentImageIndex: 0
         };
+        const xunjiTrainApi = Object.freeze({
+            baseUrl: 'https://trains.xunjiapp.cn',
+            path: '/api_trains_for_llm',
+            apiKey: 'xjllm_e172093b32ee9b30426167d4fbf12898191e4f60aee8061e'
+        });
+        const xunjiTrainCachePrefix = 'xunji-trains-cache-v1';
+        const coachGoalProfile = Object.freeze({
+            primary: '肌肥大',
+            secondary: '偏心肺功能',
+            outcomes: [
+                '强化腰腹能力',
+                '优化头肩腰比例',
+                '提升握力与手指控制',
+                '提升性功能相关体能（骨盆控制/血流/耐力）'
+            ]
+        });
+        const trainApiState = {
+            latestResult: null,
+            inFlightByDate: new Map()
+        };
 
         function escapeHtml(str = '') {
             return String(str)
@@ -591,27 +611,351 @@
         }
 
         function renderCoach() {
+            const today = new Date().toISOString().split('T')[0];
             app.innerHTML = `
-                <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Coach</span><span class="zh-sub text-sm mt-2">运动教学</span></div>
-                <div class="px-4 max-w-4xl mx-auto">
-                    <div class="glass p-8 md:p-12">
-                        <span class="en-main text-2xl mb-6">Training Focus</span>
-                        <div class="space-y-4">
+                <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Coach</span><span class="zh-sub text-sm mt-2">运动教学 · 训练数据接入</span></div>
+                <div class="px-4 max-w-6xl mx-auto space-y-6">
+                    <div class="glass p-6 md:p-8">
+                        <span class="en-main text-2xl mb-4">Goal Profile</span>
+                        <div class="space-y-2">
                             <div class="border-l border-white/20 pl-4">
-                                <span class="en-main text-sm">Strength Foundations</span>
-                                <span class="zh-sub">基础力量与动作模式</span>
+                                <span class="en-main text-sm">${coachGoalProfile.primary}</span>
+                                <span class="zh-sub">核心目标：增肌（肌肥大）</span>
                             </div>
                             <div class="border-l border-white/20 pl-4">
-                                <span class="en-main text-sm">Fat Loss & Conditioning</span>
-                                <span class="zh-sub">减脂与体能提升</span>
+                                <span class="en-main text-sm">${coachGoalProfile.secondary}</span>
+                                <span class="zh-sub">偏向心肺能力，兼顾体态、性功能相关体能与手部控制</span>
                             </div>
-                            <div class="border-l border-white/20 pl-4">
-                                <span class="en-main text-sm">Lifestyle Programming</span>
-                                <span class="zh-sub">按生活节奏定制计划</span>
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                ${coachGoalProfile.outcomes.map(item => `<span class="text-[11px] border border-white/20 rounded-full px-3 py-1 text-white/80">${escapeHtml(item)}</span>`).join('')}
                             </div>
                         </div>
                     </div>
+                    <div class="glass p-6 md:p-8">
+                        <div class="flex flex-col lg:flex-row lg:items-end gap-4">
+                            <label class="flex-1">
+                                <span class="en-main text-xs opacity-40">Train Date (YYYY-MM-DD)</span>
+                                <input id="coach-train-date" type="date" value="${today}" class="mt-2 w-full bg-white/5 border border-white/20 rounded-xl px-4 py-3 text-sm text-white outline-none focus:border-white/50">
+                            </label>
+                            <button onclick="handleCoachFetchTrain(false)" class="rounded-xl border border-white/30 px-5 py-3 text-xs tracking-wider uppercase hover:bg-white/10 transition">读取训练数据</button>
+                            <button onclick="handleCoachFetchTrain(true)" class="rounded-xl border border-white/20 px-5 py-3 text-xs tracking-wider uppercase text-white/70 hover:bg-white/10 transition">强制刷新</button>
+                            <button onclick="handleCoachBuildPlan()" class="rounded-xl border border-white/20 px-5 py-3 text-xs tracking-wider uppercase text-white/70 hover:bg-white/10 transition">基于缓存重算计划</button>
+                        </div>
+                        <p id="coach-fetch-status" class="text-xs text-white/60 mt-3">等待读取训练数据...</p>
+                        <p class="zh-sub mt-2 text-[11px]">请求将使用 Authorization: Bearer；成功响应会读取 res 数组并缓存在本地，默认优先命中缓存，避免重复请求。</p>
+                    </div>
+                    <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                        <div class="glass p-6 md:p-8">
+                            <span class="en-main text-xl">Train Records</span>
+                            <p class="zh-sub mt-1">保留原始训练文本，尤其是 id:... 与 train_time:... token</p>
+                            <div id="coach-train-result" class="mt-5 space-y-3"></div>
+                        </div>
+                        <div class="glass p-6 md:p-8">
+                            <span class="en-main text-xl">Future Plan</span>
+                            <p class="zh-sub mt-1">以肌肥大为主线，提高心肺、腰腹与握力/手指控制</p>
+                            <div id="coach-plan-result" class="mt-5 space-y-3"></div>
+                        </div>
+                    </div>
                 </div>`;
+            bootstrapCoachFromCache(today);
+        }
+
+        function normalizeDateStr(rawDate) {
+            const value = String(rawDate || '').trim();
+            if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+                throw new Error('datestr 必须是 YYYY-MM-DD 格式');
+            }
+            return value;
+        }
+
+        function getTrainCacheKey(datestr) {
+            return `${xunjiTrainCachePrefix}:${datestr}`;
+        }
+
+        function readTrainCache(datestr) {
+            try {
+                const cachedRaw = localStorage.getItem(getTrainCacheKey(datestr));
+                if (!cachedRaw) return null;
+                const parsed = JSON.parse(cachedRaw);
+                if (!Array.isArray(parsed?.res)) return null;
+                return parsed;
+            } catch (_) {
+                return null;
+            }
+        }
+
+        function saveTrainCache(datestr, payload) {
+            try {
+                localStorage.setItem(getTrainCacheKey(datestr), JSON.stringify(payload));
+            } catch (_) {
+                // localStorage 容量不足时静默失败，不影响页面使用
+            }
+        }
+
+        function getCoachSelectedDate() {
+            const input = document.getElementById('coach-train-date');
+            return normalizeDateStr(input?.value || new Date().toISOString().split('T')[0]);
+        }
+
+        function setCoachStatus(message, isError = false) {
+            const el = document.getElementById('coach-fetch-status');
+            if (!el) return;
+            el.textContent = message;
+            el.className = `text-xs mt-3 ${isError ? 'text-red-300' : 'text-white/60'}`;
+        }
+
+        function parseTrainRecord(rawItem, idx) {
+            const raw = String(rawItem || '').trim();
+            const parts = raw.split(',').map(part => part.trim()).filter(Boolean);
+            const idToken = parts.find(part => part.startsWith('id:')) || '';
+            const trainTimeToken = parts.find(part => part.startsWith('train_time:')) || '';
+            const title = parts.find((part, partIdx) => partIdx > 0 && !part.startsWith('id:') && !part.startsWith('train_time:')) || `训练记录 ${idx + 1}`;
+            const timeValue = trainTimeToken.replace('train_time:', '');
+            const [startRaw, endRaw] = timeValue.split('-');
+            const start = Number(startRaw);
+            const end = Number(endRaw);
+            const durationMin = Number.isFinite(start) && Number.isFinite(end) && end > start
+                ? Math.round((end - start) / 60000)
+                : null;
+            return { raw, parts, idToken, trainTimeToken, title, durationMin };
+        }
+
+        function includesAnyKeyword(text, keywords) {
+            return keywords.some(keyword => text.includes(keyword));
+        }
+
+        function summarizeTrainRecords(records) {
+            const keywordGroups = {
+                cardio: ['跑', '骑', '划船', '心肺', '有氧', '跳绳', '冲刺', 'HIIT', 'hiit'],
+                core: ['核心', '腹', '卷腹', '抗旋转', '平板', '死虫', 'Pallof', 'plank'],
+                grip: ['握力', '手指', '悬垂', '农夫', '腕', '前臂', '抓握', 'pinch'],
+                hypertrophy: ['卧推', '深蹲', '硬拉', '划船', '推举', '弯举', '腿举', '臀桥', '胸', '肩', '背', '腿']
+            };
+            const counts = { cardio: 0, core: 0, grip: 0, hypertrophy: 0 };
+            let totalDurationMin = 0;
+            let withDuration = 0;
+            let hasIdToken = false;
+            let hasTrainTimeToken = false;
+
+            records.forEach(record => {
+                const text = record.raw;
+                if (record.idToken) hasIdToken = true;
+                if (record.trainTimeToken) hasTrainTimeToken = true;
+                if (typeof record.durationMin === 'number' && record.durationMin > 0) {
+                    totalDurationMin += record.durationMin;
+                    withDuration += 1;
+                }
+                if (includesAnyKeyword(text, keywordGroups.cardio)) counts.cardio += 1;
+                if (includesAnyKeyword(text, keywordGroups.core)) counts.core += 1;
+                if (includesAnyKeyword(text, keywordGroups.grip)) counts.grip += 1;
+                if (includesAnyKeyword(text, keywordGroups.hypertrophy)) counts.hypertrophy += 1;
+            });
+
+            return {
+                totalSessions: records.length,
+                totalDurationMin,
+                withDuration,
+                avgDurationMin: withDuration ? Math.round(totalDurationMin / withDuration) : null,
+                counts,
+                hasIdToken,
+                hasTrainTimeToken
+            };
+        }
+
+        function renderCoachTrainData(result) {
+            const trainContainer = document.getElementById('coach-train-result');
+            if (!trainContainer) return;
+            const sourceLabel = result.source === 'remote' ? 'remote' : (result.source === 'cache' ? 'cache' : 'none');
+            const parsedRecords = (result.res || []).map(parseTrainRecord);
+            const fetchedText = result.fetchedAt ? new Date(result.fetchedAt).toLocaleString() : '--';
+            if (!parsedRecords.length) {
+                trainContainer.innerHTML = `
+                    <div class="border border-white/10 rounded-xl p-4 bg-white/5">
+                        <p class="text-sm text-white/80">当前日期暂无训练数据。</p>
+                        <p class="zh-sub mt-2">建议先读取接口数据，然后再自动生成更精准的未来训练计划。</p>
+                    </div>`;
+            } else {
+                trainContainer.innerHTML = `
+                    <div class="text-[11px] text-white/50 mb-3">datestr: ${escapeHtml(result.datestr)} | source: ${sourceLabel} | cached_at: ${escapeHtml(fetchedText)}</div>
+                    ${parsedRecords.map((record, index) => `
+                        <div class="border border-white/10 rounded-xl p-3 bg-white/5">
+                            <div class="flex flex-wrap items-center gap-2 mb-2">
+                                <span class="text-[10px] uppercase tracking-widest text-white/40">#${index + 1}</span>
+                                ${record.idToken ? `<span class="text-[10px] border border-white/30 rounded-full px-2 py-0.5">${escapeHtml(record.idToken)}</span>` : ''}
+                                ${record.trainTimeToken ? `<span class="text-[10px] border border-white/20 rounded-full px-2 py-0.5 text-white/70">${escapeHtml(record.trainTimeToken)}</span>` : ''}
+                                ${typeof record.durationMin === 'number' ? `<span class="text-[10px] text-emerald-300">~${record.durationMin}min</span>` : ''}
+                            </div>
+                            <p class="text-sm text-white/90 mb-2">${escapeHtml(record.title)}</p>
+                            <code class="block text-[11px] leading-relaxed text-white/65 whitespace-pre-wrap break-all">${escapeHtml(record.raw)}</code>
+                        </div>`).join('')}
+                `;
+            }
+            renderFuturePlan(result.datestr, parsedRecords);
+        }
+
+        function renderFuturePlan(datestr, parsedRecords = []) {
+            const planContainer = document.getElementById('coach-plan-result');
+            if (!planContainer) return;
+            const summary = summarizeTrainRecords(parsedRecords);
+            const weeklyStrengthDays = summary.totalSessions >= 4 ? 4 : 3;
+            const cardioPrescription = summary.counts.cardio >= 2 ? '每周 3 次 Zone2（30-40 分钟） + 1 次短间歇' : '每周 3 次 Zone2（30-45 分钟） + 2 次短间歇';
+            const gripPrescription = summary.counts.grip >= 1 ? '每周 2 次握力/手指专项（10-12 分钟）' : '每周 3 次握力/手指专项（12-15 分钟）';
+            const corePrescription = summary.counts.core >= 2 ? '每周 3 次核心（抗伸展+抗旋转）' : '每周 4 次核心（每天 8-12 分钟）';
+            const hypertrophyPrescription = `每周 ${weeklyStrengthDays} 天肌肥大训练（RPE 7-9，复合动作+孤立动作）`;
+            const tokenAdvice = [
+                summary.hasIdToken ? '已检测到 id token，可用于后续更新原训练记录。' : '未检测到 id token，后续写回时请保留服务端返回的 id:... 字段。',
+                summary.hasTrainTimeToken ? '已检测到 train_time token，可用于后续写回保留训练时间。' : '未检测到 train_time token，如接口返回请原样保留。'
+            ];
+
+            planContainer.innerHTML = `
+                <div class="border border-white/10 rounded-xl p-4 bg-white/5">
+                    <p class="text-sm text-white/90">计划基准日：${escapeHtml(datestr)}</p>
+                    <p class="text-[11px] text-white/60 mt-2">基于近似 ${summary.totalSessions} 条历史记录自动生成；核心方向是“肌肥大 + 心肺优先 + 腰腹 + 握力/手指控制”。</p>
+                </div>
+                <div class="border border-white/10 rounded-xl p-4 bg-white/5 space-y-2">
+                    <p class="text-sm text-white/90">未来 8 周框架</p>
+                    <p class="text-[12px] text-white/80">1) ${hypertrophyPrescription}</p>
+                    <p class="text-[12px] text-white/80">2) ${cardioPrescription}</p>
+                    <p class="text-[12px] text-white/80">3) ${corePrescription}</p>
+                    <p class="text-[12px] text-white/80">4) ${gripPrescription}</p>
+                    <p class="text-[12px] text-white/80">5) 每周 3-4 次盆底肌 + 呼吸控制 + 髋部灵活（帮助性功能相关体能）</p>
+                </div>
+                <div class="border border-white/10 rounded-xl p-4 bg-white/5 space-y-2">
+                    <p class="text-sm text-white/90">一周模板（示例）</p>
+                    <p class="text-[12px] text-white/80">Day1：上肢推（胸肩三头）+ Zone2 30 分钟</p>
+                    <p class="text-[12px] text-white/80">Day2：下肢臀腿 + 核心抗旋转 + 握力（农夫行走/悬垂）</p>
+                    <p class="text-[12px] text-white/80">Day3：恢复日（低强度有氧 + 髋部灵活 + 盆底肌）</p>
+                    <p class="text-[12px] text-white/80">Day4：上肢拉（背二头）+ 手指捏握/腕屈伸耐力</p>
+                    <p class="text-[12px] text-white/80">Day5：全身代谢循环 + 短间歇（6-10 组）</p>
+                    <p class="text-[12px] text-white/80">Day6：核心强化（腹横肌/下腹/侧链）+ 轻有氧</p>
+                    <p class="text-[12px] text-white/80">Day7：完全休息或散步恢复</p>
+                </div>
+                <div class="border border-white/10 rounded-xl p-4 bg-white/5">
+                    <p class="text-sm text-white/90 mb-2">数据写回注意</p>
+                    ${tokenAdvice.map(item => `<p class="text-[11px] text-white/70">- ${escapeHtml(item)}</p>`).join('')}
+                </div>
+            `;
+        }
+
+        function bootstrapCoachFromCache(datestr) {
+            const normalizedDate = normalizeDateStr(datestr);
+            const cache = readTrainCache(normalizedDate);
+            if (cache) {
+                trainApiState.latestResult = { ...cache, source: 'cache' };
+                setCoachStatus(`已加载本地缓存：${cache.res.length} 条`);
+                renderCoachTrainData(trainApiState.latestResult);
+                return;
+            }
+            trainApiState.latestResult = { datestr: normalizedDate, res: [], fetchedAt: 0, source: 'none' };
+            renderCoachTrainData(trainApiState.latestResult);
+            setCoachStatus('未命中本地缓存，请点击“读取训练数据”');
+        }
+
+        async function parseTrainApiPayload(response) {
+            try {
+                return await response.clone().json();
+            } catch (_) {
+                // 某些环境会遇到 gzip JSON 解析失败，继续走兜底分支
+            }
+
+            const rawBuffer = await response.arrayBuffer();
+            const utf8Text = new TextDecoder('utf-8').decode(rawBuffer);
+            try {
+                return JSON.parse(utf8Text);
+            } catch (_) {
+                // 如果是压缩字节流，尝试使用浏览器内置解压能力
+            }
+
+            if (typeof DecompressionStream === 'function') {
+                try {
+                    const compressedStream = new Blob([rawBuffer]).stream();
+                    const decompressed = compressedStream.pipeThrough(new DecompressionStream('gzip'));
+                    const text = await new Response(decompressed).text();
+                    return JSON.parse(text);
+                } catch (_) {
+                    // ignore and throw统一错误
+                }
+            }
+
+            throw new Error('接口响应解析失败（无法识别 JSON / gzip JSON）');
+        }
+
+        async function fetchTrainsForDate(datestr, { forceRefresh = false } = {}) {
+            const normalizedDate = normalizeDateStr(datestr);
+            const cached = !forceRefresh ? readTrainCache(normalizedDate) : null;
+            if (cached) return { ...cached, source: 'cache' };
+            if (trainApiState.inFlightByDate.has(normalizedDate)) {
+                return trainApiState.inFlightByDate.get(normalizedDate);
+            }
+
+            const task = (async () => {
+                const response = await fetch(`${xunjiTrainApi.baseUrl}${xunjiTrainApi.path}`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${xunjiTrainApi.apiKey}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ datestr: normalizedDate }),
+                    cache: 'no-store'
+                });
+                const payload = await parseTrainApiPayload(response).catch(() => null);
+                const errMsg = payload?.msg || payload?.message || payload?.error || `request failed (${response.status})`;
+                const hasResArray = Array.isArray(payload?.res);
+                const msgText = String(payload?.msg || payload?.message || payload?.error || '').toLowerCase();
+                const isAuthFailure = msgText.includes('apikey missing') || msgText.includes('apikey invalid');
+                const isTooFrequent = msgText.includes('too frequent');
+                if (!response.ok || payload?.success === false || !hasResArray || isAuthFailure || isTooFrequent) {
+                    throw new Error(errMsg);
+                }
+                const result = {
+                    datestr: normalizedDate,
+                    res: payload.res,
+                    fetchedAt: Date.now()
+                };
+                saveTrainCache(normalizedDate, result);
+                return { ...result, source: 'remote' };
+            })();
+
+            trainApiState.inFlightByDate.set(normalizedDate, task);
+            try {
+                return await task;
+            } finally {
+                trainApiState.inFlightByDate.delete(normalizedDate);
+            }
+        }
+
+        async function handleCoachFetchTrain(forceRefresh = false) {
+            try {
+                const date = getCoachSelectedDate();
+                setCoachStatus(`正在读取 ${date} 的训练数据...`);
+                const result = await fetchTrainsForDate(date, { forceRefresh });
+                trainApiState.latestResult = result;
+                renderCoachTrainData(result);
+                const sourceLabel = result.source === 'cache' ? '本地缓存' : '远程接口';
+                setCoachStatus(`读取成功：${result.res.length} 条（来源：${sourceLabel}）`);
+            } catch (error) {
+                setCoachStatus(`读取失败：${error?.message || 'unknown error'}`, true);
+            }
+        }
+
+        function handleCoachBuildPlan() {
+            try {
+                const date = getCoachSelectedDate();
+                const cached = readTrainCache(date);
+                if (cached) {
+                    trainApiState.latestResult = { ...cached, source: 'cache' };
+                    renderCoachTrainData(trainApiState.latestResult);
+                    setCoachStatus(`已基于本地缓存重算计划：${cached.res.length} 条`);
+                    return;
+                }
+                const fallback = trainApiState.latestResult?.datestr === date
+                    ? trainApiState.latestResult
+                    : { datestr: date, res: [], fetchedAt: 0, source: 'none' };
+                renderCoachTrainData(fallback);
+                setCoachStatus('未找到本地缓存，已按空数据给出基础计划');
+            } catch (error) {
+                setCoachStatus(`计划生成失败：${error?.message || 'unknown error'}`, true);
+            }
         }
 
         function renderCalligraphy() {
