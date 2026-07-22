@@ -135,6 +135,18 @@
         .reading-feature { padding: 20px 22px; border-radius: 1.2rem; background: rgba(255,255,255,0.035); border: 1px solid rgba(255,255,255,0.08); }
         .reading-feature strong { display: block; margin-bottom: 7px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
         .reading-feature span { color: rgba(255,255,255,0.38); font-size: 10px; line-height: 1.7; }
+        .reading-inline-shell {
+            overflow: hidden; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.12);
+            background: #d8dde0; box-shadow: 0 26px 70px rgba(0,0,0,0.28);
+        }
+        .reading-inline-head {
+            min-height: 72px; padding: 16px 22px; display: flex; align-items: center; justify-content: space-between;
+            gap: 20px; background: #f2eee5; color: #171b1d; border-bottom: 1px solid rgba(23,27,29,0.14);
+        }
+        .reading-inline-head strong { display: block; font: 500 19px Georgia, 'Noto Sans SC', serif; letter-spacing: 0.06em; }
+        .reading-inline-head span { display: block; margin-top: 5px; color: rgba(23,27,29,0.5); font-size: 9px; letter-spacing: 0.08em; }
+        .reading-inline-head a { flex: none; border: 1px solid rgba(23,27,29,0.22); border-radius: 999px; padding: 10px 14px; font-size: 9px; letter-spacing: 0.08em; }
+        .reading-inline-frame { display: block; width: 100%; height: clamp(760px, 86vh, 1040px); border: 0; background: #d8dde0; }
         .playlist-card { min-height: 100%; }
         .playlist-index { color: rgba(255,255,255,0.2); font-size: 9px; }
 
@@ -152,6 +164,9 @@
             .reading-feature { padding: 16px 18px; }
             .reading-visual { min-height: 290px; }
             .reading-shelf { height: 235px; }
+            .reading-inline-shell { border-radius: 1.4rem; }
+            .reading-inline-head { padding: 14px 16px; }
+            .reading-inline-frame { height: 780px; }
         }
 
         .thought-card { background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 1.5rem; transition: 0.3s; }
@@ -218,7 +233,7 @@
                 <strong>阅境</strong><span>WeRead visual reading space</span>
             </div>
             <div class="reading-frame-actions">
-                <a href="https://yuejing-reading-wall.maotianyi12138.chatgpt.site" target="_blank" rel="noopener noreferrer">在新窗口打开 ↗</a>
+                <a href="reading.html" target="_blank" rel="noopener noreferrer">在新窗口打开 ↗</a>
                 <button type="button" aria-label="关闭阅境" onclick="closeReadingExperience()">×</button>
             </div>
         </div>
@@ -630,31 +645,16 @@
             app.innerHTML = `
                 <div class="mb-10 px-4 flex flex-col"><span class="en-main text-5xl md:text-6xl">Soul & Rhythm</span><span class="zh-sub text-sm mt-2">音乐与阅读</span></div>
                 <div class="px-4 pb-8">
-                    <section class="reading-portal" aria-label="阅境微信读书可视化入口">
-                        <div class="reading-portal-copy">
-                            <span class="reading-kicker">A private reading archive</span>
-                            <h2>把读过的时光，<em>陈列成一面墙。</em></h2>
-                            <p>连接微信读书，生成属于你的书架墙、月度阅读节奏与阅读偏好；还能保存数据，制作一张可分享的阅读卡片。</p>
-                            <div class="reading-portal-actions">
-                                <button type="button" class="reading-launch" onclick="openReadingExperience()">进入我的阅读世界 →</button>
-                                <a class="reading-external" href="https://yuejing-reading-wall.maotianyi12138.chatgpt.site" target="_blank" rel="noopener noreferrer">独立打开 ↗</a>
-                            </div>
-                            <span class="reading-privacy">API Key 只用于本次连接，不在此网站保存</span>
+                    <section class="reading-inline-shell" aria-label="毛天艺的微信读书书架">
+                        <div class="reading-inline-head">
+                            <div><strong>阅境 · 我的微信读书书架</strong><span>无需登录，打开即自动同步当前书架与阅读状态</span></div>
+                            <a href="reading.html" target="_blank" rel="noopener noreferrer">独立打开 ↗</a>
                         </div>
-                        <div class="reading-visual" aria-hidden="true">
-                            <div class="reading-sun"></div>
-                            <div class="reading-shelf">
-                                <span class="reading-book">加缪</span>
-                                <span class="reading-book">动物农场</span>
-                                <span class="reading-book">创意行为</span>
-                                <span class="reading-book">苔藓森林</span>
-                                <span class="reading-book">罐头厂街</span>
-                            </div>
-                        </div>
+                        <iframe class="reading-inline-frame" src="reading.html" title="阅境 · 毛天艺的微信读书书架"></iframe>
                     </section>
                     <div class="reading-feature-grid" aria-label="阅境功能">
-                        <div class="reading-feature"><strong>Bookshelf Wall</strong><span>同步书架，让每一本书都有自己的位置。</span></div>
-                        <div class="reading-feature"><strong>Reading Insights</strong><span>查看月度与总览阅读时长、节奏和偏好。</span></div>
+                        <div class="reading-feature"><strong>Bookshelf Wall</strong><span>真实书架自动变成一面彩色书脊墙。</span></div>
+                        <div class="reading-feature"><strong>Reading Insights</strong><span>直接查看月度与总览阅读时长、节奏和偏好。</span></div>
                         <div class="reading-feature"><strong>Share Your Month</strong><span>保存原始数据，生成可分享的阅读卡片。</span></div>
                     </div>
                 </div>
@@ -689,7 +689,7 @@
                 </div>`;
         }
 
-        const readingAppUrl = 'https://yuejing-reading-wall.maotianyi12138.chatgpt.site';
+        const readingAppUrl = 'reading.html';
         function openReadingExperience() {
             const experience = document.getElementById('reading-experience');
             const frame = document.getElementById('reading-frame');
