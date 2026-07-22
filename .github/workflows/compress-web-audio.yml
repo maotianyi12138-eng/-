@@ -1,0 +1,34 @@
+name: Compress music for the website
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compress:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download the original FLAC files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p source web-audio
+          gh release download music-v1 --repo "${{ github.repository }}" --pattern '*.flac' --dir source
+
+      - name: Convert to 192 kbps MP3
+        run: |
+          for source_file in source/*.flac; do
+            file_name="$(basename "$source_file" .flac)"
+            ffmpeg -hide_banner -loglevel error -y -i "$source_file" -vn -map_metadata 0 -codec:a libmp3lame -b:a 192k "web-audio/${file_name}.mp3"
+          done
+
+      - name: Publish compressed audio assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh release view music-web-v1 --repo "${{ github.repository }}" >/dev/null 2>&1; then
+            gh release create music-web-v1 --repo "${{ github.repository }}" --title "Website audio" --notes "Compressed copies used by the portfolio website."
+          fi
+          gh release upload music-web-v1 --repo "${{ github.repository }}" web-audio/*.mp3 --clobber
