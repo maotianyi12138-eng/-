@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-07-22T15:23:15Z",
+  "updatedAt": "2026-07-22T16:13:44Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -19,6 +19,18 @@
     "albums": [],
     "archive": [],
     "books": [
+      {
+        "bookId": "3300190668",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=18b32200813abb0fag01892b",
+        "title": "论人生短暂",
+        "author": "[古罗马]塞涅卡",
+        "updateTime": 1769484304,
+        "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/t6_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
+        "finishReading": 0,
+        "readUpdateTime": 1784736806,
+        "secret": 0,
+        "category": "文学-外国文学"
+      },
       {
         "bookId": "CB_Djp4Tt4V55Oi73w75h4jb9UW",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=92e42153643425f446a70345474345635354f69373377373568346a623955576f8",
@@ -120,9 +132,11 @@
       "1784131200": 497,
       "1784390400": 1939,
       "1784476800": 0,
-      "1784563200": 79
+      "1784563200": 79,
+      "1784649600": 29,
+      "1784736000": 483
     },
-    "readDays": 3,
+    "readDays": 4,
     "readLongest": [
       {
         "book": {
@@ -274,6 +288,56 @@
         },
         "readTime": 497,
         "tags": []
+      },
+      {
+        "book": {
+          "bookId": "3300190668",
+          "title": "论人生短暂",
+          "author": "[古罗马]塞涅卡",
+          "translator": "刘漪",
+          "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
+          "version": 73733271,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 3,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 3,
+            "maxfreeChapterUid": 6,
+            "maxfreeChapterRatio": 100
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000190,
+          "publishTime": "2026-01-27 00:00:00",
+          "lastChapterIdx": 5,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 2100,
+          "copyrightChapterUids": [
+            5
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 483,
+        "tags": []
       }
     ],
     "preferCategory": [
@@ -282,7 +346,7 @@
         "categoryTitle": "文学",
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
-        "readingCount": 3,
+        "readingCount": 4,
         "readingTime": 2073
       },
       {
@@ -294,11 +358,19 @@
         "readingTime": 1063
       },
       {
+        "categoryId": 600000,
+        "categoryTitle": "哲学宗教",
+        "parentCategoryId": 600000,
+        "parentCategoryTitle": "哲学宗教",
+        "readingCount": 1,
+        "readingTime": 0
+      },
+      {
         "categoryId": 1000000,
         "categoryTitle": "个人成长",
         "parentCategoryId": 1000000,
         "parentCategoryTitle": "个人成长",
-        "readingCount": 0,
+        "readingCount": 1,
         "readingTime": 0
       },
       {
@@ -326,14 +398,6 @@
         "readingTime": 0
       },
       {
-        "categoryId": 600000,
-        "categoryTitle": "哲学宗教",
-        "parentCategoryId": 600000,
-        "parentCategoryTitle": "哲学宗教",
-        "readingCount": 0,
-        "readingTime": 0
-      },
-      {
         "categoryId": 800000,
         "categoryTitle": "心理",
         "parentCategoryId": 800000,
@@ -346,26 +410,26 @@
     "readStat": [
       {
         "stat": "读过",
-        "counts": "3本"
+        "counts": "5本"
       },
       {
         "stat": "读完",
-        "counts": "0本"
+        "counts": "1本"
       },
       {
         "stat": "阅读",
-        "counts": "3天"
+        "counts": "4天"
       },
       {
         "stat": "笔记",
-        "counts": "0条"
+        "counts": "2条"
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.6853050601444802,
-    "dayAverageReadTime": 114,
+    "compare": -0.6377077565089725,
+    "dayAverageReadTime": 131,
     "baseTime": 1782835200,
-    "totalReadTime": 2515,
+    "totalReadTime": 3027,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -523,9 +587,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 56679
+      "1767196800": 57191
     },
-    "readDays": 39,
+    "readDays": 40,
     "readLongest": [
       {
         "book": {
@@ -968,6 +1032,56 @@
         },
         "readTime": 567,
         "tags": []
+      },
+      {
+        "book": {
+          "bookId": "3300190668",
+          "title": "论人生短暂",
+          "author": "[古罗马]塞涅卡",
+          "translator": "刘漪",
+          "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
+          "version": 73733271,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 3,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 3,
+            "maxfreeChapterUid": 6,
+            "maxfreeChapterRatio": 100
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000190,
+          "publishTime": "2026-01-27 00:00:00",
+          "lastChapterIdx": 5,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 2100,
+          "copyrightChapterUids": [
+            5
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 483,
+        "tags": []
       }
     ],
     "preferCategory": [
@@ -976,8 +1090,8 @@
         "categoryTitle": "文学",
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
-        "readingCount": 5,
-        "readingTime": 22408
+        "readingCount": 6,
+        "readingTime": 22891
       },
       {
         "categoryId": 1100000,
@@ -1000,8 +1114,16 @@
         "categoryTitle": "个人成长",
         "parentCategoryId": 1000000,
         "parentCategoryTitle": "个人成长",
-        "readingCount": 1,
+        "readingCount": 2,
         "readingTime": 8170
+      },
+      {
+        "categoryId": 600000,
+        "categoryTitle": "哲学宗教",
+        "parentCategoryId": 600000,
+        "parentCategoryTitle": "哲学宗教",
+        "readingCount": 1,
+        "readingTime": 483
       },
       {
         "categoryId": 200000,
@@ -1016,14 +1138,6 @@
         "categoryTitle": "社会文化",
         "parentCategoryId": 900000,
         "parentCategoryTitle": "社会文化",
-        "readingCount": 0,
-        "readingTime": 0
-      },
-      {
-        "categoryId": 600000,
-        "categoryTitle": "哲学宗教",
-        "parentCategoryId": 600000,
-        "parentCategoryTitle": "哲学宗教",
         "readingCount": 0,
         "readingTime": 0
       },
@@ -1100,25 +1214,25 @@
     "readStat": [
       {
         "stat": "读过",
-        "counts": "9本"
+        "counts": "11本"
       },
       {
         "stat": "读完",
-        "counts": "4本"
+        "counts": "5本"
       },
       {
         "stat": "阅读",
-        "counts": "39天"
+        "counts": "40天"
       },
       {
         "stat": "笔记",
-        "counts": "86条"
+        "counts": "88条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 56692,
+    "totalReadTime": 57204,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1490,12 +1604,2525 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有4115人读过"
+        "reason": "仅有4122人读过"
       },
       {
         "type": 8,
         "title": "总有一天读完"
       }
     ]
+  },
+  "notesByBook": {
+    "3300190668": {
+      "highlights": {
+        "synckey": 1784736687,
+        "updated": [
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 3,
+            "bookmarkId": "3300190668_6_3834-3890",
+            "range": "3834-3890",
+            "markText": "你没有理由因施予关注而向任何人邀功——你之所以会关注他人，不是因为你想要他人的陪伴，而是因为无法忍受与自己独处。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1784736687
+          },
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 3,
+            "bookmarkId": "3300190668_6_1510-1534",
+            "range": "1510-1534",
+            "markText": "你在恐惧中表现得像凡人，却在欲望中行事如不朽者。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1784736273
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "论人生短暂",
+            "chapterUid": 6,
+            "chapterIdx": 3
+          }
+        ],
+        "book": {
+          "bookId": "3300190668",
+          "version": 73733271,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
+          "title": "论人生短暂",
+          "author": "[古罗马]塞涅卡",
+          "coverBoxInfo": {
+            "blurhash": "KMQmeKEK~D?IWBE1t4oes:",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#1c1d17"
+              },
+              {
+                "key": "1/6",
+                "hex": "#1c1d17"
+              },
+              {
+                "key": "1/8",
+                "hex": "#1c1d17"
+              },
+              {
+                "key": "2/4",
+                "hex": "#31312b"
+              },
+              {
+                "key": "2/6",
+                "hex": "#31312b"
+              },
+              {
+                "key": "2/8",
+                "hex": "#31312b"
+              },
+              {
+                "key": "3/4",
+                "hex": "#484840"
+              },
+              {
+                "key": "3/6",
+                "hex": "#484840"
+              },
+              {
+                "key": "3/8",
+                "hex": "#484840"
+              },
+              {
+                "key": "3/12",
+                "hex": "#484840"
+              },
+              {
+                "key": "4/6",
+                "hex": "#606158"
+              },
+              {
+                "key": "4/10",
+                "hex": "#606158"
+              },
+              {
+                "key": "4/4",
+                "hex": "#606158"
+              },
+              {
+                "key": "5/10",
+                "hex": "#7a7a71"
+              },
+              {
+                "key": "5/4",
+                "hex": "#7a7a71"
+              },
+              {
+                "key": "5/8",
+                "hex": "#7a7a71"
+              },
+              {
+                "key": "6/4",
+                "hex": "#949489"
+              },
+              {
+                "key": "6/6",
+                "hex": "#949489"
+              },
+              {
+                "key": "6/8",
+                "hex": "#949489"
+              },
+              {
+                "key": "6/12",
+                "hex": "#949489"
+              },
+              {
+                "key": "7/8",
+                "hex": "#aeaea3"
+              },
+              {
+                "key": "7/10",
+                "hex": "#aeaea3"
+              },
+              {
+                "key": "7/12",
+                "hex": "#aeaea3"
+              },
+              {
+                "key": "8/4",
+                "hex": "#c9c9bc"
+              },
+              {
+                "key": "8/6",
+                "hex": "#c9c9bc"
+              },
+              {
+                "key": "8/12",
+                "hex": "#c9c9bc"
+              },
+              {
+                "key": "9/2",
+                "hex": "#e4e4d6"
+              },
+              {
+                "key": "9/12",
+                "hex": "#e4e4d6"
+              },
+              {
+                "key": "1/100",
+                "hex": "#949489"
+              },
+              {
+                "key": "2/100",
+                "hex": "#aeaea3"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#F3F1E5"
+              },
+              {
+                "key": "5/100",
+                "hex": "#F3F1E5"
+              },
+              {
+                "key": "6/100",
+                "hex": "#271E00"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#fefeef",
+              "hsv": [
+                56.9969150540824,
+                5.903352501032236,
+                99.79647831297396
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/668/3300190668/s_3300190668.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/668/3300190668/s_3300190668.jpg",
+            "colorsPure": [
+              "#949489",
+              "#aeaea3"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "CB_Djp4Tt4V55Oi73w75h4jb9UW": {
+      "highlights": {
+        "synckey": 0,
+        "updated": [],
+        "removed": [],
+        "chapters": [],
+        "book": {
+          "bookId": "CB_Djp4Tt4V55Oi73w75h4jb9UW",
+          "version": 2042793201,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://res.weread.qq.com/wrepub/CB_2njAvTAwD2jO73m74sF4K934_parsecover",
+          "title": "伦敦国家美术馆（伟大的博物馆）",
+          "author": "达尼埃拉·塔拉布拉",
+          "coverBoxInfo": {
+            "colorsPure": [
+              "#93B0DA",
+              "#98B8DD"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "3300155373": {
+      "highlights": {
+        "synckey": 1781730372,
+        "updated": [
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 16,
+            "bookmarkId": "3300155373_16_7824-7920",
+            "range": "7824-7920",
+            "markText": "而我知道，在某些时刻和某些地点，幸福可能会显得十分苦涩，以至于人们更倾心于它的承诺，胜过喜欢它本身。但这是因为，在这些时刻和这些地点，我没有足够的心性去爱，也就是说，没有足够的心性做到不放弃。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 16,
+            "createTime": 1781730372
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 16,
+            "bookmarkId": "3300155373_16_4212-4376",
+            "range": "4212-4376",
+            "markText": "没有比为爱而死更徒劳无功的事了。活着才是我们应当做的事。所以活着的罗兰佐比长眠地下的罗密欧更加值得，尽管后者的确纯洁无瑕。身处鲜活爱情的盛宴间——午后在教堂广场修剪一新的草坪上打盹，躺在总会有时间来参观的古迹间，啜饮城市喷泉微微温热但快速流淌的泉水，再度看见那个女人的笑靥，以及她长长的鼻子和骄傲的嘴巴——这叫人怎能不欣然起舞？",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 16,
+            "createTime": 1781689200
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 14,
+            "bookmarkId": "3300155373_14_964-1030",
+            "range": "964-1030",
+            "markText": "去贾米拉要花费很多时间。它不是一座人们可以暂歇，然后继续出发的城市。它不通往任何地方，不向任何地方开放。它是一个去了就要回来的地方。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 14,
+            "createTime": 1781522578
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 13,
+            "bookmarkId": "3300155373_13_1167-1194",
+            "range": "1167-1194",
+            "markText": "朝海边的岩石而去，大海吮吸着这些岩石，发出亲吻的声音。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 13,
+            "createTime": 1781521658
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 13,
+            "bookmarkId": "3300155373_13_5144-5411",
+            "range": "5144-5411",
+            "markText": "我的内心升起一阵莫名的欢乐，它源自我无愧的良知。当演员觉得自己将角色扮演得惟妙惟肖时，他们的内心会有一种感觉，或者更确切地说，当演员觉得自己的每一个动作都与理想中人物的动作相贴合，从某种程度而言就像进入了一幅预先绘制好的画作，然后他们突然间让画作活了过来，赋予画作他们自己的心跳时，他们的内心便会有这种感觉。确切而言，这也正是我所感觉到的：我演好了我的角色。我做好了作为人的本职工作，对我而言，一整天里都体验到欢乐并非什么了不起的成就，很多时候这只是完成了一个任务，把欢乐当成义务。于是，我们又一次感到孤独，但这次，是心满意足的孤独。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 13,
+            "createTime": 1781364184
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 13,
+            "bookmarkId": "3300155373_13_5092-5143",
+            "range": "5092-5143",
+            "markText": "群山被树木簇拥着，更远处，大海像是一道窄窄的镶边，再往上就是天空了，像艘抛锚的帆船，温柔地停泊在海面上",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 13,
+            "createTime": 1781364105
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 13,
+            "bookmarkId": "3300155373_13_3579-3801",
+            "range": "3579-3801",
+            "markText": "天空一片湛蓝。我毫无保留地热爱这样的生命，想要自由地谈论它：它给予我做人的骄傲。可是，人们却常常跟我说：没有什么值得骄傲的。他们错了，这里有值得骄傲的东西：这太阳，这大海，我年轻易动的心，我咸涩的盐渍身躯，以及这广阔无边的布景，温柔与荣耀在这片黄色与蓝色中相遇。我的力量和才智应该用在征服这里的一切之上，它们让我变得完美无瑕，我无须舍弃自己的任何一部分，也不用穿戴任何假面；我只需耐心学习“生活”这门难以掌握的科学，它的价值抵过所有的人情世故。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 13,
+            "createTime": 1781363814
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 10,
+            "bookmarkId": "3300155373_10_2232-2275",
+            "range": "2232-2275",
+            "markText": "永恒就在那儿，而我盼望着它。现在，我所期盼的不再是成为幸福的人，而仅仅是成为清醒的人。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 10,
+            "createTime": 1780832402
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 10,
+            "bookmarkId": "3300155373_10_1881-1930",
+            "range": "1881-1930",
+            "markText": "生命短暂，挥霍时间是一种罪过。人们说，我是个行动者。但作为行动者，只要迷失方向，那就是在挥霍时间。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 10,
+            "createTime": 1780832246
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 10,
+            "bookmarkId": "3300155373_10_572-610",
+            "range": "572-610",
+            "markText": "尽管几乎每个人都有驾驭大额财富的能力，但在处理小额财富的时候，困难就显现了。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 10,
+            "createTime": 1780831701
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 9,
+            "bookmarkId": "3300155373_9_4261-4296",
+            "range": "4261-4296",
+            "markText": "在热那亚，我曾爱上几个女人的笑容，爱了整整一个上午。我不会再见到她们了",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 9,
+            "createTime": 1780831583
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 9,
+            "bookmarkId": "3300155373_9_4225-4261",
+            "range": "4225-4261",
+            "markText": "但爱没有界限；如果我能拥抱一切，那么即使我拥抱得很糟糕，也没有什么关系。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 9,
+            "createTime": 1780831561
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 8,
+            "bookmarkId": "3300155373_8_1406-1615",
+            "range": "1406-1615",
+            "markText": "服务生想向我推销当日的特别主菜。我就是那么容易认输——接受了他的推销，点了当日的特别主菜。女孩继续跟我说话，但我再也听不懂了。当然，我还是对她连连说“是”，做出一副对她极其信服的模样。但我内心并非这么想。一切都令我恼火，我犹豫不决，我并不饿。身上总有一根针刺痛着我，肚子紧紧的。当日的特别主菜已经上桌，我开动了：一团粗粒小麦粉和肉的混合物，因加了量大到不可思议的孜然而令人作呕。但我在想其他事情，更确切地说是什么都没想",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 8,
+            "createTime": 1780830610
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 8,
+            "bookmarkId": "3300155373_8_423-501",
+            "range": "423-501",
+            "markText": "我于傍晚六点抵达布拉格，立刻把行李存放到了寄存处。还有两个小时的时间来找旅馆。我觉得自己身上充斥着一种奇怪的自由感，因为那两个行李箱不再沉重地拖着我的双臂。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 8,
+            "createTime": 1780830610
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 7,
+            "bookmarkId": "3300155373_7_4809-4845",
+            "range": "4809-4845",
+            "markText": "。因此，每当我觉得自己领悟了世界的深刻意义时，令我震撼不已的总是它的简单",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7,
+            "createTime": 1780830609
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 6,
+            "bookmarkId": "3300155373_6_3022-3056",
+            "range": "3022-3056",
+            "markText": "年轻人不知道，阅历等同于失败，而为了懂得些许道理，他们必须失去一切。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1780830561
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 7,
+            "bookmarkId": "3300155373_7_1807-1861",
+            "range": "1807-1861",
+            "markText": "贫穷中有一种孤独，但这孤独使每样事物都弥足珍贵。当富裕达到某一程度，天空本身和繁星闪烁的夜晚都像是自然资源。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7,
+            "createTime": 1778693799
+          },
+          {
+            "bookId": "3300155373",
+            "chapterIdx": 6,
+            "bookmarkId": "3300155373_6_3122-3147",
+            "range": "3122-3147",
+            "markText": "当你全然忙于生活时，一个老人的痛苦又算得了什么呢？",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1778529447
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "荒漠",
+            "chapterUid": 16,
+            "chapterIdx": 16
+          },
+          {
+            "title": "贾米拉的风",
+            "chapterUid": 14,
+            "chapterIdx": 14
+          },
+          {
+            "title": "提帕萨的婚礼",
+            "chapterUid": 13,
+            "chapterIdx": 13
+          },
+          {
+            "title": "反与正",
+            "chapterUid": 10,
+            "chapterIdx": 10
+          },
+          {
+            "title": "是与否之间",
+            "chapterUid": 7,
+            "chapterIdx": 7
+          },
+          {
+            "title": "灵魂之死",
+            "chapterUid": 8,
+            "chapterIdx": 8
+          },
+          {
+            "title": "讥讽",
+            "chapterUid": 6,
+            "chapterIdx": 6
+          },
+          {
+            "title": "对生活的爱",
+            "chapterUid": 9,
+            "chapterIdx": 9
+          }
+        ],
+        "book": {
+          "bookId": "3300155373",
+          "version": 76757252,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/s_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
+          "title": "在我身上有一个不可战胜的夏天",
+          "author": "[法]阿尔贝·加缪",
+          "coverBoxInfo": {
+            "blurhash": "K-KxMCWAxZ~qWUt7s*R*Rk",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#1f1b1c"
+              },
+              {
+                "key": "1/6",
+                "hex": "#1f1b1c"
+              },
+              {
+                "key": "1/8",
+                "hex": "#1f1b1c"
+              },
+              {
+                "key": "2/4",
+                "hex": "#343030"
+              },
+              {
+                "key": "2/6",
+                "hex": "#343030"
+              },
+              {
+                "key": "2/8",
+                "hex": "#343030"
+              },
+              {
+                "key": "3/4",
+                "hex": "#4b4747"
+              },
+              {
+                "key": "3/6",
+                "hex": "#4b4747"
+              },
+              {
+                "key": "3/8",
+                "hex": "#4b4747"
+              },
+              {
+                "key": "3/12",
+                "hex": "#4b4747"
+              },
+              {
+                "key": "4/6",
+                "hex": "#635f5f"
+              },
+              {
+                "key": "4/10",
+                "hex": "#635f5f"
+              },
+              {
+                "key": "4/4",
+                "hex": "#635f5f"
+              },
+              {
+                "key": "5/10",
+                "hex": "#7c7979"
+              },
+              {
+                "key": "5/4",
+                "hex": "#7c7979"
+              },
+              {
+                "key": "5/8",
+                "hex": "#7c7979"
+              },
+              {
+                "key": "6/4",
+                "hex": "#969392"
+              },
+              {
+                "key": "6/6",
+                "hex": "#969392"
+              },
+              {
+                "key": "6/8",
+                "hex": "#969392"
+              },
+              {
+                "key": "6/12",
+                "hex": "#969392"
+              },
+              {
+                "key": "7/8",
+                "hex": "#b0adad"
+              },
+              {
+                "key": "7/10",
+                "hex": "#b0adad"
+              },
+              {
+                "key": "7/12",
+                "hex": "#b0adad"
+              },
+              {
+                "key": "8/4",
+                "hex": "#cac7c7"
+              },
+              {
+                "key": "8/6",
+                "hex": "#cac7c7"
+              },
+              {
+                "key": "8/12",
+                "hex": "#cac7c7"
+              },
+              {
+                "key": "9/2",
+                "hex": "#e5e2e2"
+              },
+              {
+                "key": "9/12",
+                "hex": "#e5e2e2"
+              },
+              {
+                "key": "1/100",
+                "hex": "#969392"
+              },
+              {
+                "key": "2/100",
+                "hex": "#b0adad"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#EEEEEE"
+              },
+              {
+                "key": "5/100",
+                "hex": "#EEEEEE"
+              },
+              {
+                "key": "6/100",
+                "hex": "#000000"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#555151",
+              "hsv": [
+                359.5168595517663,
+                5.046999133323704,
+                33.34955943954933
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/373/3300155373/s_3300155373.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/373/3300155373/s_3300155373.jpg",
+            "colorsPure": [
+              "#969392",
+              "#b0adad"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "3300197381": {
+      "highlights": {
+        "synckey": 1778362529,
+        "updated": [
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 53,
+            "bookmarkId": "3300197381_53_8382-8404",
+            "range": "8382-8404",
+            "markText": "你要意识到一路走来真正的瓶颈从来都是你自己。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 53,
+            "createTime": 1778362529
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 53,
+            "bookmarkId": "3300197381_53_4717-4784",
+            "range": "4717-4784",
+            "markText": "“知道在哪里画叉，就是你的核心竞争力。”你的核心竞争力是你发挥独特才能的能量集合。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 53,
+            "createTime": 1778360886
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 24,
+            "bookmarkId": "3300197381_24_3288-3374",
+            "range": "3288-3374",
+            "markText": "4C公式”：承诺（Commitment）、勇气（courage）、能力（capability）、信心（confidence）。\n",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 24,
+            "createTime": 1778241921
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 46,
+            "bookmarkId": "3300197381_46_5302-5374",
+            "range": "5302-5374",
+            "markText": "请确保你每天的3项活动都超出自己当前的技能或知识水平，让你更加投入并富有勇气。这也是你自我成长和转变的方式。你将会发展出新的技能，培养出新的自信",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 46,
+            "createTime": 1778241833
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 46,
+            "bookmarkId": "3300197381_46_3896-4015",
+            "range": "3896-4015",
+            "markText": "当你需要解决重大挑战或完成创造性任务时，你至少要预留4小时的完整时间块。34如果你追求的是10倍增长，那么你要尽可能地避免时间碎片化。你需要更多自由开放的工作日和更多更大的时间块",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 46,
+            "createTime": 1778241245
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 44,
+            "bookmarkId": "3300197381_44_1428-1523",
+            "range": "1428-1523",
+            "markText": "产生创意和创新的关键在于，建立事物之间独特且超乎寻常的联系。这不仅需要输入新颖有趣的信息，还需要一个间接思考和酝酿的过程，而这个过程只有在你拥有充足的空间和时间时才有可能发生。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 44,
+            "createTime": 1778240451
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 43,
+            "bookmarkId": "3300197381_43_3103-3191",
+            "range": "3103-3191",
+            "markText": "这些标准包括你摄入的营养和食物质量、你的睡眠环境及质量、你的恢复质量以及你的生活体验质量，包括纯粹为了乐趣和建立联系而获得的新颖体验。真正的治愈和疗愈在于建立健康亲密的人际关系",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 43,
+            "createTime": 1778240163
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 43,
+            "bookmarkId": "3300197381_43_2249-2336",
+            "range": "2249-2336",
+            "markText": "如果你从未完全放松，就不会真正进入状态。你能够百分百启动并进入心流状态工作的能力，与你完全彻底放松和释放压力的能力是成正比的。专注是一种收缩，恢复则是一种扩张。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 43,
+            "createTime": 1778240021
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 42,
+            "bookmarkId": "3300197381_42_3145-3227",
+            "range": "3145-3227",
+            "markText": "．自由日（恢复日）。\n2．专注日（表演日）。\n3．缓冲日（练习日或排练日）。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 42,
+            "createTime": 1778239860
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 42,
+            "bookmarkId": "3300197381_42_2104-2153",
+            "range": "2104-2153",
+            "markText": "当你进展困难时，时间对你来说会加速流逝；但当你取得巨大进展时，你的时间会膨胀并放慢。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 42,
+            "createTime": 1778239630
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 41,
+            "bookmarkId": "3300197381_41_2561-2667",
+            "range": "2561-2667",
+            "markText": "只有当你完全沉浸于某一刻，你才能真切地体验和感受。你能处于关键时刻的频率越高，你能维持心流的时间也就越长。你会拥有更多巅峰体验，感受敬畏、自我扩展和生命的意义。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 41,
+            "createTime": 1778239454
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 41,
+            "bookmarkId": "3300197381_41_1094-1237",
+            "range": "1094-1237",
+            "markText": "时间的扩张与收缩取决于物体在特定方向上穿越空间的速度和距离。物体移动得越快，相对于其他物体，它的时间流逝得就越慢，这就是时间膨胀（time dilation）。它是描述物体加速通过空间时，时间“放慢”的术语。在相同时间内，你体验得越多，你的旅行距离就越远，你的时间膨胀或拉伸得也就越长。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 41,
+            "createTime": 1778239300
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 41,
+            "bookmarkId": "3300197381_41_1421-1446",
+            "range": "1421-1446",
+            "markText": "“你走得越快，时间流逝得就越慢，生命体验就越长。”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 41,
+            "createTime": 1778239280
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 39,
+            "bookmarkId": "3300197381_39_4154-4276",
+            "range": "4154-4276",
+            "markText": "·　我需要提供哪些具体价值，才能使那些愿意支付我“梦想支票”的人认为这笔交易极具价值且完全合理？\n·　我的独特才能需要达到哪些标准，才能让那些愿意支付我“梦想支票”的人毫不犹豫地视其为一笔值得的投资？",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 39,
+            "createTime": 1778239058
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 39,
+            "bookmarkId": "3300197381_39_2588-2719",
+            "range": "2588-2719",
+            "markText": "你的独特才能发展得越好，就越能获得别人的高度认可和价值评估。你对独特才能投入得越多，你将实现的10倍转变也就越多。你的独特才能让你一次又一次将自己转化为最独特、最有价值和最真实的自我。独特才能是你创造独一无二的财富和价值的方式，别人更愿意为此支付更多资金和资源。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 39,
+            "createTime": 1778238934
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 39,
+            "bookmarkId": "3300197381_39_645-684",
+            "range": "645-684",
+            "markText": "首先，你需要在一个能够衡量你表现的场景中，否则你就无法通过增加工作量来增加收益",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 39,
+            "createTime": 1778238519
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 37,
+            "bookmarkId": "3300197381_37_747-770",
+            "range": "747-770",
+            "markText": "“没有所谓通往幸福的道路，幸福本身就是道路。”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 37,
+            "createTime": 1778237845
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 35,
+            "bookmarkId": "3300197381_35_1571-1705",
+            "range": "1571-1705",
+            "markText": "人的常规思维模式。例如，每到饭点，我的孩子们就会来到餐桌旁，他们有时会因为餐桌上的食物不符合自己的期望而失望叹息。他们不会感激妈妈不辞辛劳地为他们做饭，也不会感激自己有一个温馨和睦的家庭，更不会感谢自己有一顿丰盛的晚餐，只会用脑海中任意设定的某个理想标准来贬低整体体验",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 35,
+            "createTime": 1778092387
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 35,
+            "bookmarkId": "3300197381_35_1458-1492",
+            "range": "1458-1492",
+            "markText": "差距思维是一种将实际情况与所谓原本有可能的理想情况相比较的评估方式。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 35,
+            "createTime": 1778092356
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 32,
+            "bookmarkId": "3300197381_32_613-806",
+            "range": "613-806",
+            "markText": "我认识的唯一明智的人就是我的裁缝，他每次见到我都会重新量我的尺寸。其他人呢？只会沿用往日的旧尺，而且还期望我去适应他们。\n——萧伯纳",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 32,
+            "createTime": 1778091688
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 31,
+            "bookmarkId": "3300197381_31_9761-9837",
+            "range": "9761-9837",
+            "markText": "指数级拓展自己的视野，为自己有可能成为的人、能做的事、能拥有的选择，设立更远大的目标。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 31,
+            "createTime": 1778091500
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 31,
+            "bookmarkId": "3300197381_31_9164-9201",
+            "range": "9164-9201",
+            "markText": "精通并非什么天才之举，而是一个人将时间和精力专注投入在某个特定领域的结果。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 31,
+            "createTime": 1778091466
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 29,
+            "bookmarkId": "3300197381_29_4091-4173",
+            "range": "4091-4173",
+            "markText": "10倍增长是一个提升自我价值的定性游戏。你通过创造真正想要创造的财富，譬如技能、知识、产品等，并分享给越来越重视和欣赏你的价值的特定人群，从而实现价值的10倍增长。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 29,
+            "createTime": 1777911402
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 29,
+            "bookmarkId": "3300197381_29_3590-3640",
+            "range": "3590-3640",
+            "markText": "你可以将自己的价值提升10倍，从而变得富有，而无须直接拥有10倍的金钱。事实上，金钱会追随财富而来。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 29,
+            "createTime": 1777907961
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 29,
+            "bookmarkId": "3300197381_29_2709-2792",
+            "range": "2709-2792",
+            "markText": "金钱本身是不值得追求的。如果你只是追求金钱，那么你在获取财富时将会遇到困难。财富指的是有价值的资产、技能和创造力。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 29,
+            "createTime": 1777907840
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 29,
+            "bookmarkId": "3300197381_29_1767-1991",
+            "range": "1767-1991",
+            "markText": "．想要与丰盛和创造有关。创造力不是一种稀缺资源，也无须从他人那里获得。相反，创造力实际上是在创造以往没有的新资源和新机会。\n2．想要无须理由。当你想要某种东西时，你无须向他人解释和证明你为什么想要。这可能会让那些总要自我证明的“需求者”感到困惑。他们可能会试图用稀缺思维框架来影响你，让你产生愧疚感并迫使你去做他们认为你应该做的事情。然而，为了实现10倍增长并过上真正适合自己的生活，你不必受这些人影响。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 29,
+            "createTime": 1777907685
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 29,
+            "bookmarkId": "3300197381_29_931-1593",
+            "range": "931-1593",
+            "markText": "身处一个需要的世界，你总是被迫说明和证明自己为什么需要，因为这是一个基于匮乏的世界。如果你需要某种稀缺资源，那么你必须解释为什么是你应该拥有它，而非其他人。于是，一个“需求者”终其一生都在花费大量时间和精力去思考和解释。但是，如果你能跨越这道边界，踏进“想要”的世界，你便再也无须证明任何东西。这是身为企业家必须明确的立场：不再屈从于既往需要自我证明的状态。你需要具备足够的勇气来迈出这一步，进入一个想要的世界，一个追求的世界，而不是基于需要的世界。当有人问“你为什么需要那个？”（他们常把想要说成需要），你可能会忍不住地回到之前的状态，试图自我证明和辩解。这时，请不要屈从于这种欲望，告诉自己：“首先，我不是需要它，我是想要它；其次，我想要它的理由很简单，就是我想要。”对大多数人来说，这一点并不容易理解，因为在需要的世界里，你的任何需要都要有一个合理的解释。如果你从匮乏角度来理解这个世界，那么你的获取就意味着你在争夺他人的稀缺资源。然而，在一个想要的世界里，你不会有匮乏感，因为这是一个创新的世界，你是在创造而非夺取。追求者创造的是之前并不存在的东西，你是在创造无须从他人那里获得的全新的东西。1",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 29,
+            "createTime": 1777907498
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 28,
+            "bookmarkId": "3300197381_28_3587-3673",
+            "range": "3587-3673",
+            "markText": "今天是我的一个里程碑，我完成了一个项目。在过去的25年里，除了12天（总计9 131天），我每天都会写下自己想要追求的东西。25年过去了，我可以说自己成了一个强大的追求者。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 28,
+            "createTime": 1777907275
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 28,
+            "bookmarkId": "3300197381_28_3402-3443",
+            "range": "3402-3443",
+            "markText": "他想让自己过上一种基于想要而非需要、基于自由而非安全、基于丰富而非匮乏的全新生活。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 28,
+            "createTime": 1777907247
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 27,
+            "bookmarkId": "3300197381_27_3753-3845",
+            "range": "3753-3845",
+            "markText": "每实现一次10倍增长，你所做事情的质量和规模都会向上提升。你烹饪的不再是快餐，而是精致料理，这就需要你具备更高的专业性和专注度。你不可能再同时做很多事情，因为你需要更多的时间来理解和整",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 27,
+            "createTime": 1777898839
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 26,
+            "bookmarkId": "3300197381_26_1946-2659",
+            "range": "1946-2659",
+            "markText": "尽管听起来有些奇怪，但打造一个获得500万次观看量的爆款，远比让50个视频各获得10万次观看量容易得多。你一年只需上传一个精彩的视频，它的观看量肯定比一年上传100个平庸的视频更多，并且是指数级的区别。想要在YouTube上受欢迎，就要让人们点击并完整观看你的视频。如果你的视频点击率比别人高10%，观看时长也多10%，那么你得到的观看量不止多10%，而是多4倍。你需要具备指数级的思维模式，点击率高出10%的视频会获得4倍的观看量。一旦理解了这一点，你就会更好地集中精力投入视频制作中。如果视频的制作时间增加了3倍，那么你收获的观看量不只是3倍，而是10倍。因此，我建议他们把视频做到足够好，同时还会帮助他们组建团队，譬如增加剪辑人员。如果一个人做5件事，那么每一件事只能投入20%的时间和精力。但是，如果你聘请一位剪辑师，那么他可以将100%的时间和精力投入剪辑工作中。你可能无法做到一天剪辑10小时，但是他可以。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 26,
+            "createTime": 1777896905
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 24,
+            "bookmarkId": "3300197381_24_3049-3153",
+            "range": "3049-3153",
+            "markText": "你可能对线上游戏毫无兴趣，但是我想强调的是我们每个人都有自己的标准。我们选择自己在意的标准，并努力达到这些标准所设定的水准。譬如，两个热衷于打网球的人分别是职业选手和业余选手，那么职业选手的打球标准显然会更高",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 24,
+            "createTime": 1777841296
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 24,
+            "bookmarkId": "3300197381_24_2737-3026",
+            "range": "2737-3026",
+            "markText": "一个人的身份是由其全力追求的东西决定的。这是一个你想全心投入抒写的个人故事，也是你最坚守的个人标准。这些标准是你为自己设定的行为规范，代表你对自己的承诺。一旦某项准则被视为标准，它便成为你坚守的信念。因此，你的行为和决策很少低于这些标准，否则它们就不能被称为真正的标准。\n我们都在坚守自己设定的标准，即便自己没有意识到。比如，我的一个朋友是《魔兽世界》的狂热玩家，每天花16小时玩游戏，是所在服务器上的顶尖玩家之一。可是，最近他告诉我他退出了所在的游戏社区，原因是他觉得其他玩家达不到他的标准，他想和更高级别的玩家组队。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 24,
+            "createTime": 1777841286
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 21,
+            "bookmarkId": "3300197381_21_975-1137",
+            "range": "975-1137",
+            "markText": "500美元客户：鉴于我即将对你进行这笔投资，我认为我们应该了解清楚我们的生活将会发生什么样的改变。我需要看到你能为我们带来什么样的成果，毕竟我把身家都托付给你了。\n50 000美元客户：钱已转，谢谢。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 21,
+            "createTime": 1777827605
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 19,
+            "bookmarkId": "3300197381_19_4335-4425",
+            "range": "4335-4425",
+            "markText": "假如你想要一座非常精美的房子，那么可供选择的家具并不多。你对细节的要求越苛刻，符合要求的设计师越少。相反，假如你对房子的要求标准低或者没有什么具体要求，那么可选择的家具就数不胜数。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 19,
+            "createTime": 1777821430
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 19,
+            "bookmarkId": "3300197381_19_3553-3604",
+            "range": "3553-3604",
+            "markText": "“如果你瞄准的是月亮，即使迷失，也是在星辰之间。”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 19,
+            "createTime": 1777821285
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 19,
+            "bookmarkId": "3300197381_19_3040-3134",
+            "range": "3040-3134",
+            "markText": "目标决定了过程。丹·沙利文说：“唯有拓展未来，方能过好现在。”将目标提升10倍，它会迫使你寻找不同的实现路径，向不同的人提出不同的问题。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 19,
+            "createTime": 1777821036
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 14,
+            "bookmarkId": "3300197381_14_5766-6016",
+            "range": "5766-6016",
+            "markText": "自由一点儿也不廉价，它要求你极度真诚地面对自己和他人。这一点既令人害怕又让人感到解脱。在追求10倍增长的过程中，你不能有一丝犹豫或半途而废。为了实现目标自由，你必须舍弃生活中所有不符合10倍增长的部分。然而，要做到这一点并不容易，因为你的大部分时间很可能被那些只能带来2倍增长的工作所占据。\n迈向10倍增长，就是要去掉一切不符合你心目中“隶属于大卫”的东西。追求10倍增长，意味着你选择参与一个可以拓展自由的无限游戏。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 14,
+            "createTime": 1777819743
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 14,
+            "bookmarkId": "3300197381_14_615-1035",
+            "range": "615-1035",
+            "markText": "但是，作品的质量又该如何呢？\n对最高品质的追求早已融入他的骨髓，\n他始终致力于创作远超自己能力范围的作品，\n因为除了新颖、独特、颠覆性，以及作为整体艺术的显著延伸，\n任何东西都不会让他感到满足。\n他从未在质量上做出妥协，",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 14,
+            "createTime": 1777763088
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 12,
+            "bookmarkId": "3300197381_12_5570-5631",
+            "range": "5570-5631",
+            "markText": "当你将自己视为广阔的背景而非具体的内容时，你会更具有灵活性和适应性。你可以像更换房间里的家具或重新装修一样，实现自我转变。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 12,
+            "createTime": 1777736090
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 12,
+            "bookmarkId": "3300197381_12_5389-5454",
+            "range": "5389-5454",
+            "markText": "心理灵活性的一个核心特质是将自己视为一个更广阔的背景而存在，而不是情感和经历的集合。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 12,
+            "createTime": 1777736030
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "结语 成为破局者：未来属于拆天花板的人",
+            "chapterUid": 53,
+            "chapterIdx": 53
+          },
+          {
+            "title": "“每日3个重点”原则",
+            "chapterUid": 46,
+            "chapterIdx": 46
+          },
+          {
+            "title": "自由日：恢复与创新",
+            "chapterUid": 43,
+            "chapterIdx": 43
+          },
+          {
+            "title": "3大时间类型：自由日、专注日与缓冲日",
+            "chapterUid": 42,
+            "chapterIdx": 42
+          },
+          {
+            "title": "时间膨胀原理：质量优于数量",
+            "chapterUid": 41,
+            "chapterIdx": 41
+          },
+          {
+            "title": "梦想支票：设定突破性目标",
+            "chapterUid": 39,
+            "chapterIdx": 39
+          },
+          {
+            "title": "规划10倍未来的两大工具",
+            "chapterUid": 37,
+            "chapterIdx": 37
+          },
+          {
+            "title": "收获思维：看见已经取得的进步",
+            "chapterUid": 35,
+            "chapterIdx": 35
+          },
+          {
+            "title": "自由的本质：10倍增长带来的4大自由",
+            "chapterUid": 14,
+            "chapterIdx": 14
+          },
+          {
+            "title": "颠覆认知：更大的目标反而更容易实现",
+            "chapterUid": 12,
+            "chapterIdx": 12
+          },
+          {
+            "title": "2倍增长的陷阱：越努力越受限",
+            "chapterUid": 19,
+            "chapterIdx": 19
+          },
+          {
+            "title": "第3章 动机升级：从“需要”到“想要”",
+            "chapterUid": 28,
+            "chapterIdx": 28
+          },
+          {
+            "title": "专注日：心流与突破",
+            "chapterUid": 44,
+            "chapterIdx": 44
+          },
+          {
+            "title": "成为能实现10倍目标的自己",
+            "chapterUid": 24,
+            "chapterIdx": 24
+          },
+          {
+            "title": "案例：0团队扩张带来4倍盈利",
+            "chapterUid": 21,
+            "chapterIdx": 21
+          },
+          {
+            "title": "打造不可替代的竞争优势",
+            "chapterUid": 27,
+            "chapterIdx": 27
+          },
+          {
+            "title": "聚焦带来最大回报的领域",
+            "chapterUid": 26,
+            "chapterIdx": 26
+          },
+          {
+            "title": "丰盈心态vs.匮乏心态",
+            "chapterUid": 29,
+            "chapterIdx": 29
+          },
+          {
+            "title": "精进之路：持续强化独特才能",
+            "chapterUid": 31,
+            "chapterIdx": 31
+          },
+          {
+            "title": "建立“买家思维”：掌握选择主动权",
+            "chapterUid": 32,
+            "chapterIdx": 32
+          }
+        ],
+        "book": {
+          "bookId": "3300197381",
+          "version": 996621170,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/49/cpplatform_8pe4n9gxbb22ofnsynyphg/s_cpplatform_8pe4n9gxbb22ofnsynyphg1772705172.jpg",
+          "title": "为什么10倍增长比2倍更容易",
+          "author": "[美]丹·沙利文  [美]本杰明·哈迪",
+          "coverBoxInfo": {
+            "blurhash": "KNI#fM~S%f%KNOIwD,9dIv",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#131b35"
+              },
+              {
+                "key": "1/6",
+                "hex": "#0b1941"
+              },
+              {
+                "key": "1/8",
+                "hex": "#03174c"
+              },
+              {
+                "key": "2/4",
+                "hex": "#27304b"
+              },
+              {
+                "key": "2/6",
+                "hex": "#202f58"
+              },
+              {
+                "key": "2/8",
+                "hex": "#162d64"
+              },
+              {
+                "key": "3/4",
+                "hex": "#3d4765"
+              },
+              {
+                "key": "3/6",
+                "hex": "#364672"
+              },
+              {
+                "key": "3/8",
+                "hex": "#2d457e"
+              },
+              {
+                "key": "3/12",
+                "hex": "#0f4297"
+              },
+              {
+                "key": "4/6",
+                "hex": "#505f89"
+              },
+              {
+                "key": "4/10",
+                "hex": "#3d5ea3"
+              },
+              {
+                "key": "4/4",
+                "hex": "#565f7c"
+              },
+              {
+                "key": "5/10",
+                "hex": "#5878bd"
+              },
+              {
+                "key": "5/4",
+                "hex": "#707994"
+              },
+              {
+                "key": "5/8",
+                "hex": "#6178b0"
+              },
+              {
+                "key": "6/4",
+                "hex": "#8993ad"
+              },
+              {
+                "key": "6/6",
+                "hex": "#8293bc"
+              },
+              {
+                "key": "6/8",
+                "hex": "#7b92ca"
+              },
+              {
+                "key": "6/12",
+                "hex": "#6692e8"
+              },
+              {
+                "key": "7/8",
+                "hex": "#93ade6"
+              },
+              {
+                "key": "7/10",
+                "hex": "#89adf7"
+              },
+              {
+                "key": "7/12",
+                "hex": "#7cacff"
+              },
+              {
+                "key": "8/4",
+                "hex": "#bcc8e2"
+              },
+              {
+                "key": "8/6",
+                "hex": "#b4c8f4"
+              },
+              {
+                "key": "8/12",
+                "hex": "#95c7ff"
+              },
+              {
+                "key": "9/2",
+                "hex": "#dee3ed"
+              },
+              {
+                "key": "9/12",
+                "hex": "#aee1ff"
+              },
+              {
+                "key": "1/100",
+                "hex": "#7b92ca"
+              },
+              {
+                "key": "2/100",
+                "hex": "#93ade6"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#E5ECF3"
+              },
+              {
+                "key": "5/100",
+                "hex": "#E5ECF3"
+              },
+              {
+                "key": "6/100",
+                "hex": "#001927"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#8890a6",
+              "hsv": [
+                224.14319156503434,
+                18.03294491115327,
+                64.97232782315823
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/381/3300197381/s_3300197381.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/381/3300197381/s_3300197381.jpg",
+            "colorsPure": [
+              "#6692e8",
+              "#7cacff"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "CB_3yaBmI0UWAJP6qW71N0nfE7v": {
+      "highlights": {
+        "synckey": 1775487543,
+        "updated": [
+          {
+            "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
+            "chapterIdx": 26,
+            "bookmarkId": "CB_3yaBmI0UWAJP6qW71N0nfE7v_26_8153-8318",
+            "range": "8153-8318",
+            "markText": "一位奥农达加族长老曾经对我说，植物来到我们身边，是因为它们被我们需要。如果我们能通过使用它们，通过感激它们的天赋来表达敬畏，它们就会生长得更加繁茂。只要被敬畏，它们就会一直和我们在一起。但如果我们忘记了它们，它们就会离去。",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 26,
+            "createTime": 1775487543
+          },
+          {
+            "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
+            "chapterIdx": 23,
+            "bookmarkId": "CB_3yaBmI0UWAJP6qW71N0nfE7v_23_22560-22867",
+            "range": "22560-22867",
+            "markText": "雇主是一个喜爱苔藓的人。同时，他也是一个热衷权力操控的人。只要苔藓服帖地融入他的景观设计，他一定会认认真真地保护苔藓免受伤害，对此我毫不怀疑。但我认为拥有与热爱不能同时发生。拥有，会消解一样东西的天赋主权，让占有者更富足，却使被占有者遭到削减。如果那位雇主真的爱苔藓，且他的热爱超过了掌控欲，那么他就不会打扰那些苔藓，只是每天走去看看它们。芭芭拉·金索沃(BarbaraKingsolver)写道:“我们要准备好付出最无私的爱，做正确的事，才能呵护我们的珍爱之物，并保护它能够在我们的占有欲之外茂盛生长。”",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 23,
+            "createTime": 1775487065
+          },
+          {
+            "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
+            "chapterIdx": 9,
+            "bookmarkId": "CB_3yaBmI0UWAJP6qW71N0nfE7v_9_4650-4894",
+            "range": "4650-4894",
+            "markText": "站在苔藓的角度来看，一个身高一米八的人类穿过树林，就跟我们人类看到飞机在万米高空飞过没什么两样。飞机离地面那样远，当我们选择坐飞机去往某个地方的时候，就遗憾地错过了下面一整个遍布生命的王国。每天我们从它们身边经过，却从未看见过它们。苔藓和其他微小的生命向我们发出邀请，请求在我们可感知范围的边界上短暂地存在。我们需要做的只是留心。以另一种方式去看，一个崭新的世界将出现在我们眼前。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 9,
+            "createTime": 1775244604
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "把稻草纺成金线",
+            "chapterUid": 26,
+            "chapterIdx": 26
+          },
+          {
+            "title": "匿名雇主",
+            "chapterUid": 23,
+            "chapterIdx": 23
+          },
+          {
+            "title": "学会去看见",
+            "chapterUid": 9,
+            "chapterIdx": 9
+          }
+        ],
+        "book": {
+          "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
+          "version": 0,
+          "format": "pdf",
+          "soldout": 0,
+          "bookStatus": 2,
+          "cover": "https://res.weread.qq.com/wrepub/CB_B3A5my5lA5d66xg6xFFBX9Z7_parsecover",
+          "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
+          "author": "",
+          "coverBoxInfo": {
+            "colorsPure": [
+              "#93B0DA",
+              "#98B8DD"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "3300175674": {
+      "highlights": {
+        "synckey": 0,
+        "updated": [],
+        "removed": [],
+        "chapters": [],
+        "book": {
+          "bookId": "3300175674",
+          "version": 1700012358,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_e1wvnlkxez6bq6ucipa9oy/s_cpplatform_e1wvnlkxez6bq6ucipa9oy1762742145.jpg",
+          "title": "动物农场",
+          "author": "[英]乔治·奥威尔",
+          "coverBoxInfo": {
+            "blurhash": "KH7;?^xun,uxxuWBldxbWB",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#002311"
+              },
+              {
+                "key": "1/6",
+                "hex": "#00260b"
+              },
+              {
+                "key": "1/8",
+                "hex": "#002906"
+              },
+              {
+                "key": "2/4",
+                "hex": "#153725"
+              },
+              {
+                "key": "2/6",
+                "hex": "#003a20"
+              },
+              {
+                "key": "2/8",
+                "hex": "#003d1a"
+              },
+              {
+                "key": "3/4",
+                "hex": "#294f39"
+              },
+              {
+                "key": "3/6",
+                "hex": "#095332"
+              },
+              {
+                "key": "3/8",
+                "hex": "#00552c"
+              },
+              {
+                "key": "3/12",
+                "hex": "#005a20"
+              },
+              {
+                "key": "4/6",
+                "hex": "#256d47"
+              },
+              {
+                "key": "4/10",
+                "hex": "#007337"
+              },
+              {
+                "key": "4/4",
+                "hex": "#40694f"
+              },
+              {
+                "key": "5/10",
+                "hex": "#008e4d"
+              },
+              {
+                "key": "5/4",
+                "hex": "#598367"
+              },
+              {
+                "key": "5/8",
+                "hex": "#238b55"
+              },
+              {
+                "key": "6/4",
+                "hex": "#719e7e"
+              },
+              {
+                "key": "6/6",
+                "hex": "#5ea275"
+              },
+              {
+                "key": "6/8",
+                "hex": "#45a66c"
+              },
+              {
+                "key": "6/12",
+                "hex": "#00ac5a"
+              },
+              {
+                "key": "7/8",
+                "hex": "#63c083"
+              },
+              {
+                "key": "7/10",
+                "hex": "#44c479"
+              },
+              {
+                "key": "7/12",
+                "hex": "#00c86f"
+              },
+              {
+                "key": "8/4",
+                "hex": "#a4d3b0"
+              },
+              {
+                "key": "8/6",
+                "hex": "#90d8a4"
+              },
+              {
+                "key": "8/12",
+                "hex": "#39e484"
+              },
+              {
+                "key": "9/2",
+                "hex": "#ceead4"
+              },
+              {
+                "key": "9/12",
+                "hex": "#56ff99"
+              },
+              {
+                "key": "1/100",
+                "hex": "#45a66c"
+              },
+              {
+                "key": "2/100",
+                "hex": "#63c083"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#E5F3E9"
+              },
+              {
+                "key": "5/100",
+                "hex": "#E5F3E9"
+              },
+              {
+                "key": "6/100",
+                "hex": "#002706"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#308c59",
+              "hsv": [
+                146.99141611393774,
+                65.55729360645562,
+                54.768094351334578
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/674/3300175674/s_3300175674.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/674/3300175674/s_3300175674.jpg",
+            "colorsPure": [
+              "#00ac5a",
+              "#00c86f"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "3300199881": {
+      "highlights": {
+        "synckey": 0,
+        "updated": [],
+        "removed": [],
+        "chapters": [],
+        "book": {
+          "bookId": "3300199881",
+          "version": 847933132,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/19/cpplatform_uxgat2cacw5ne8darcgwa2/s_cpplatform_uxgat2cacw5ne8darcgwa21775208984.jpg",
+          "title": "Claude Code橙皮书：从入门到精通（微信读书特别版）",
+          "author": "花叔",
+          "coverBoxInfo": {
+            "blurhash": "K]OobVfPoee.j[aeD4ayRj",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#1e1c19"
+              },
+              {
+                "key": "1/6",
+                "hex": "#1e1c19"
+              },
+              {
+                "key": "1/8",
+                "hex": "#1e1c19"
+              },
+              {
+                "key": "2/4",
+                "hex": "#32312d"
+              },
+              {
+                "key": "2/6",
+                "hex": "#32312d"
+              },
+              {
+                "key": "2/8",
+                "hex": "#32312d"
+              },
+              {
+                "key": "3/4",
+                "hex": "#494743"
+              },
+              {
+                "key": "3/6",
+                "hex": "#494743"
+              },
+              {
+                "key": "3/8",
+                "hex": "#494743"
+              },
+              {
+                "key": "3/12",
+                "hex": "#494743"
+              },
+              {
+                "key": "4/6",
+                "hex": "#62605b"
+              },
+              {
+                "key": "4/10",
+                "hex": "#62605b"
+              },
+              {
+                "key": "4/4",
+                "hex": "#62605b"
+              },
+              {
+                "key": "5/10",
+                "hex": "#7b7974"
+              },
+              {
+                "key": "5/4",
+                "hex": "#7b7974"
+              },
+              {
+                "key": "5/8",
+                "hex": "#7b7974"
+              },
+              {
+                "key": "6/4",
+                "hex": "#95938e"
+              },
+              {
+                "key": "6/6",
+                "hex": "#95938e"
+              },
+              {
+                "key": "6/8",
+                "hex": "#95938e"
+              },
+              {
+                "key": "6/12",
+                "hex": "#95938e"
+              },
+              {
+                "key": "7/8",
+                "hex": "#afada8"
+              },
+              {
+                "key": "7/10",
+                "hex": "#afada8"
+              },
+              {
+                "key": "7/12",
+                "hex": "#afada8"
+              },
+              {
+                "key": "8/4",
+                "hex": "#cac8c2"
+              },
+              {
+                "key": "8/6",
+                "hex": "#cac8c2"
+              },
+              {
+                "key": "8/12",
+                "hex": "#cac8c2"
+              },
+              {
+                "key": "9/2",
+                "hex": "#e5e3dc"
+              },
+              {
+                "key": "9/12",
+                "hex": "#e5e3dc"
+              },
+              {
+                "key": "1/100",
+                "hex": "#95938e"
+              },
+              {
+                "key": "2/100",
+                "hex": "#afada8"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#F3F1E5"
+              },
+              {
+                "key": "5/100",
+                "hex": "#F3F1E5"
+              },
+              {
+                "key": "6/100",
+                "hex": "#271E00"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#f7f5ee",
+              "hsv": [
+                48.63511471909134,
+                3.651539892246837,
+                96.73262545733972
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/881/3300199881/s_3300199881.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/881/3300199881/s_3300199881.jpg",
+            "colorsPure": [
+              "#95938e",
+              "#afada8"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "3300140838": {
+      "highlights": {
+        "synckey": 1777678873,
+        "updated": [
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 73,
+            "bookmarkId": "3300140838_73_1789-1907",
+            "range": "1789-1907",
+            "markText": "回想一下，当你还是新手的时候，你的技艺还比较稚嫩，什么技巧都是新颖的，什么花样都是新鲜的。记住你学到新东西的兴奋，记住你迈出第一步的喜悦。\n这也许就是保持工作的动力，并一次又一次爱",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 73,
+            "createTime": 1777678873
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 54,
+            "bookmarkId": "3300140838_54_1203-1280",
+            "range": "1203-1280",
+            "markText": "除了冥想，我们还可以带着问题出门散步、游泳或开车。我们不再紧紧抓着问题，只是让它在意识后面保留着。这样做，是在把问题轻轻地提给宇宙，然后打开自己，接收答案",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 54,
+            "createTime": 1776955490
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 47,
+            "bookmarkId": "3300140838_47_1255-1301",
+            "range": "1255-1301",
+            "markText": "要格外注意强烈的反应。如果你一上来就觉得反感，那反而值得研究一下原因。强烈的反应往往有深意。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 47,
+            "createTime": 1776939710
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 43,
+            "bookmarkId": "3300140838_43_1280-1379",
+            "range": "1280-1379",
+            "markText": "只以出色的作品为目标，会产生涟漪效应。为你所做的每一件事设定一个标准，这可能不仅会把你的作品提升到新的高度，而且会增加你整个生命的活力。它甚至会激励其他人把工作做到最好。伟大孕育伟大。它具有感染力。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 43,
+            "createTime": 1776939224
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 43,
+            "bookmarkId": "3300140838_43_787-846",
+            "range": "787-846",
+            "markText": "如果你认为“我不喜欢，但别人会喜欢”，那你就不是在为自己创作艺术。那样你就是在做商业了，这也没什么；只不过这不是艺术。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 43,
+            "createTime": 1776939195
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 43,
+            "bookmarkId": "3300140838_43_387-690",
+            "range": "387-690",
+            "markText": "象自己一个人永远住在山顶。你建造了一个永远不会有人拜访的家。尽管如此，你还是要投入时间和精力来打造这个空间，毕竟你要在里面生活。\n木材、盘子、枕头，无一不精美绝伦，为你量身定制。\n这就是伟大艺术的精髓。我们创作的目的无非是创造属于我们的美丽，将我们的全部投入每一个项目，无论这个项目受到何种局限。将其视为一种奉献，一种虔诚。我们按照我们认为的最好，去做到最好——用我们自己的，和别人完全不同的品味。\n我们创作艺术，是为了让自己能够栖居于此",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 43,
+            "createTime": 1776939162
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 39,
+            "bookmarkId": "3300140838_39_3010-3227",
+            "range": "3010-3227",
+            "markText": "我们要记住，没有一件作品能完全完整地反映我们自己，它只能反映当下的我们。记住这一点，向世界发布作品就容易得多。如果我们等待，它就不能反映今天的我们了。一年后，我们可能会受到另一种能量的引导，创作出与它完全不同的作品。作品是有时效性的。时光流转，作品中蕴含的我们，也会逐渐消散。\n抓着自己的作品不放，就像日复一日地写同一篇日记。宝贵的时刻和机会就这样流失，还会阻碍下一个作品的诞生",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 39,
+            "createTime": 1775575200
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 31,
+            "bookmarkId": "3300140838_31_2466-2681",
+            "range": "2466-2681",
+            "markText": "随意尝试吧。目标是建立一个自身有生命力的稳定结构，或者每天起床时决定自己今天什么时候创作、怎么创作，而不是只有在兴致来临时才创作。\n把决策力用在工作，而不是什么时候工作上。你越减少日常生活琐事对自己的占据，你可以用于创作的带宽就越大。阿尔伯特·爱因斯坦每天都穿同样的衣服：一套灰色西装。埃里克·萨蒂有7套相同的衣服，一周每天一套。少做生活琐事的选择，多释放你的创造力和想象力",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 31,
+            "createTime": 1775567886
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 31,
+            "bookmarkId": "3300140838_31_1671-1862",
+            "range": "1671-1862",
+            "markText": "纪律和自由看似对立。实际上，它们是互补的。纪律不是缺乏自由，而是与时间形成和谐的关系。管理好自己的日程安排，形成良好的每日习惯，等于把自由集中在了创作实践上，这是创作出伟大艺术的必要组成部分。\n甚至可以说，效率在生活中比在创作中更为重要。对待日常生活，拿出军队执行命令一般的严谨精确，在艺术方面，才能更好地进入孩童般的自由状态",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 31,
+            "createTime": 1775567402
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 31,
+            "bookmarkId": "3300140838_31_1327-1418",
+            "range": "1327-1418",
+            "markText": "竞技体育的至高目标是完美无瑕的表现。伍登经常说，你唯一的对手就是你自己，其余都不是你能控制的。\n这种思维方式同样适用于创作。对",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 31,
+            "createTime": 1775567206
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 30,
+            "bookmarkId": "3300140838_30_2315-2667",
+            "range": "2315-2667",
+            "markText": "这样的时刻独一无二，值得我们虔诚对待。片刻的启示之光到来时，什么日程安排都应该放下。此时就全心全意地奉献自己，即使它出现得好像不合时宜。这正是严肃艺术家的义务。\n约翰·列侬提过这样的建议：如果你开始写一首歌，那就一口气把它写完。最初的灵感蕴含一种生命力，可以牵引着你完成整个作品。有些细节没达到最好的水平不要紧。完成草稿即可。通常而言，一个完整而不完美的版本，比看似完美的小片段更为有益。\n当一个想法逐渐清晰，或者我们已经动笔写下一个引子时，我们可能会觉得自己已经抓到了诀窍，剩余部分会水到渠成。但如果这时候就停下，任凭最初的火花逐渐消退，要重新点燃可能就难了。灵感也免不了受到熵定律的约束。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 30,
+            "createTime": 1775491223
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 30,
+            "bookmarkId": "3300140838_30_1952-2286",
+            "range": "1952-2286",
+            "markText": "尽你所能，驾驭这股浪潮。如果你幸运地体会到灵感来临，那就紧紧抓住这个机会。尽量长时间地保持在这罕见的能量中。只要它还在流动，你就顺流前行。\n如果你是作家，在临睡前突然有源源不断的创意来袭，你大可以通宵写作到天亮。如果你是音乐家，哪怕你已经完成了目标，比如创作1首或10首歌，可音乐仍在继续涌现，那就尽可能多地吸收、捕捉。\n也许这些成果当前用不上，但可能在其他时候有用。用不上也没关系。艺术家的任务只是识别这种传输，心怀感激地与之相伴，直到它完整地实现。\n在优先级方面，灵感当先。你其次。观众排在最后。",
+            "colorStyle": 3,
+            "type": 1,
+            "chapterUid": 30,
+            "createTime": 1775491197
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 30,
+            "bookmarkId": "3300140838_30_1225-1579",
+            "range": "1225-1579",
+            "markText": "灵感到来，总带着充沛的能量。但它不是让我们依赖的拐棍。艺术生活不能完全建立在等待灵感之上。灵感是稀有的，来去不在我们掌控之中。我们要做的就是努力创作，同时保持对灵感的邀请和欢迎。没有灵感的时候，我们依然可以做艺术的其他部分，跟这种宇宙传输无关的部分。\n顿悟隐藏在平凡里：影子投射的形状，火柴划燃的气味，无意间听到或者听错了的奇怪言语。这些主要要求我们养成定期留意的习惯。\n要获得丰富多变的灵感，请考虑改变你的输入。比如看电影时关掉声音，反复听同一首歌，读短篇小说时只看每句话的第一个单词，按大小或颜色排列石头，学习做清醒梦，等等。\n打破习惯",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 30,
+            "createTime": 1775491116
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 30,
+            "bookmarkId": "3300140838_30_632-970",
+            "range": "632-970",
+            "markText": "inspiration（灵感）这个词源于拉丁语——inspirare，意思是吸入或吹进。\n肺要吸入空气，就必须先排空。头脑要得到灵感，就需要腾出空间，虚位以待。宇宙总在寻求平衡。你创造空白，就是在邀请能量进入。\n同样的道理适用于生活的方方面面。如果人身处一段亲密关系之中，却还在寻找另一段关系，那就没有空间让新人进入，因为我们的感情空间已经是满的了，无法迎接我们想要的新关系。\n为了留出空间迎接灵感，我们可以考虑尝试一些让头脑安静的做法——冥想、觉察、静默、沉思、祈祷，任何有助于减少分心和杂念的仪式都可以。",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 30,
+            "createTime": 1775491059
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 29,
+            "bookmarkId": "3300140838_29_4083-4133",
+            "range": "4083-4133",
+            "markText": "让想法经由你外化出来的能力，\n就是才华。",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 29,
+            "createTime": 1775490408
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 21,
+            "bookmarkId": "3300140838_21_1541-1790",
+            "range": "1541-1790",
+            "markText": "有一次我与另一位艺术家开会，她刚发布了一张非常成功的专辑，但她害怕继续做音乐，列出了各种不想再做音乐的原因。要是想找不做事的理由，总是有很多。\n我说：“没关系，你永远也不用再创作音乐。这没什么不好。如果做音乐不让你感到快乐，那就不做。这是你的选择。”\n我一说完这话，她的表情就变了，因为她意识到，创作还是更让她快乐。\n另一个有帮助",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 21,
+            "createTime": 1775489468
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 20,
+            "bookmarkId": "3300140838_20_1165-1319",
+            "range": "1165-1319",
+            "markText": "我们并不是因为具备才华或技能，而有响应这个召唤的义务。请记住，能创作是一种福气，是一种特权。我们自愿选择创作。我们并没有被命令去从事创作。如果我们真的不想做，那就别做。\n有些成功的艺术家极度缺乏安全感，他们自我破坏，深陷成瘾问题，或者面临着其他制约创作",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 20,
+            "createTime": 1775489252
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 19,
+            "bookmarkId": "3300140838_19_1029-1318",
+            "range": "1029-1318",
+            "markText": "追随宇宙所示的微妙的能量信息没那么容易，尤其当你的朋友、家人、同事或跟你的创作有商业利益关系的人提供的貌似理性的建议往往是在反对你的直觉时。我在能力所及的范围内，一直按照自己的直觉做出职业决定，虽然别人每次都建议我不要这样做。意识到这一点会对你有帮助：比起跟随身边的人，不如跟随宇宙的指引。\n干扰的声音也可能来自内心。那些在你脑海中低语的声音，说你不够有才华，你的想法不够好，你的时间要是花在艺术上就白费了，你的作品不会有人喜欢，如果这次创作不成功你就完了。调低这些声音，让自己能够听到那宇宙的钟声吧。提醒自己现在是时候了",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 19,
+            "createTime": 1775489126
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 18,
+            "bookmarkId": "3300140838_18_452-511",
+            "range": "452-511",
+            "markText": "阴天时，将意识调谐到这个事实很有帮助：太阳还在那里。它只是被厚厚的云层遮住了。无论天空是明是暗，太阳在中午都如明镜高悬",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 18,
+            "createTime": 1775488695
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 15,
+            "bookmarkId": "3300140838_15_1014-1107",
+            "range": "1014-1107",
+            "markText": "今天创造事物的那个人，\n与明天回来继续创造的那个人，\n不是同一个。",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 15,
+            "createTime": 1775488531
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 14,
+            "bookmarkId": "3300140838_14_1143-1314",
+            "range": "1143-1314",
+            "markText": "我们都迷恋大海，喜欢注视海面，\n这是有原因的。\n有人说，大海提供了\n比任何镜子都更准确的\n我们的投影。",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 14,
+            "createTime": 1775488395
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 11,
+            "bookmarkId": "3300140838_11_642-739",
+            "range": "642-739",
+            "markText": "我们只要保持开放状态，就能不断收到这种消息。一本书读着读着，会出来一句引人注目的引语；一部电影看着看着，会浮现一句让我们停下来反思甚至倒回去反复播放的台词。有时候，这就是我们一直在寻找的那个答案",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 11,
+            "createTime": 1775160595
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 7,
+            "bookmarkId": "3300140838_7_1209-1262",
+            "range": "1209-1262",
+            "markText": "艺术就是带着能量的思想在循环流通。之所以看似新颖，是因为它每次回归都以不同的方式重组。没有两朵云是一样的。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 7,
+            "createTime": 1775156758
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "玩耍",
+            "chapterUid": 73,
+            "chapterIdx": 73
+          },
+          {
+            "title": "灵感",
+            "chapterUid": 30,
+            "chapterIdx": 30
+          },
+          {
+            "title": "初学者心态",
+            "chapterUid": 29,
+            "chapterIdx": 29
+          },
+          {
+            "title": "伟大",
+            "chapterUid": 43,
+            "chapterIdx": 43
+          },
+          {
+            "title": "完成",
+            "chapterUid": 39,
+            "chapterIdx": 39
+          },
+          {
+            "title": "环境",
+            "chapterUid": 19,
+            "chapterIdx": 19
+          },
+          {
+            "title": "没有什么是静止的",
+            "chapterUid": 15,
+            "chapterIdx": 15
+          },
+          {
+            "title": "虚构",
+            "chapterUid": 21,
+            "chapterIdx": 21
+          },
+          {
+            "title": "常在",
+            "chapterUid": 18,
+            "chapterIdx": 18
+          },
+          {
+            "title": "寻找线索",
+            "chapterUid": 11,
+            "chapterIdx": 11
+          },
+          {
+            "title": "创造力的源泉",
+            "chapterUid": 7,
+            "chapterIdx": 7
+          },
+          {
+            "title": "自然作为老师",
+            "chapterUid": 14,
+            "chapterIdx": 14
+          },
+          {
+            "title": "习惯",
+            "chapterUid": 31,
+            "chapterIdx": 31
+          },
+          {
+            "title": "参考点",
+            "chapterUid": 47,
+            "chapterIdx": 47
+          },
+          {
+            "title": "自我怀疑",
+            "chapterUid": 20,
+            "chapterIdx": 20
+          },
+          {
+            "title": "时间的耳语",
+            "chapterUid": 54,
+            "chapterIdx": 54
+          }
+        ],
+        "book": {
+          "bookId": "3300140838",
+          "version": 1935243306,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/46/cpplatform_bpydeflrt9d2xtkdsjzqqj/s_cpplatform_bpydeflrt9d2xtkdsjzqqj1744601841.jpg",
+          "title": "创意行为：存在即答案",
+          "author": "[美]里克·鲁宾",
+          "coverBoxInfo": {
+            "blurhash": "K1N,}HM{.8M{_3%M~qIU00",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#1c1c1c"
+              },
+              {
+                "key": "1/6",
+                "hex": "#1c1c1c"
+              },
+              {
+                "key": "1/8",
+                "hex": "#1c1c1c"
+              },
+              {
+                "key": "2/4",
+                "hex": "#313130"
+              },
+              {
+                "key": "2/6",
+                "hex": "#313130"
+              },
+              {
+                "key": "2/8",
+                "hex": "#313130"
+              },
+              {
+                "key": "3/4",
+                "hex": "#484846"
+              },
+              {
+                "key": "3/6",
+                "hex": "#484846"
+              },
+              {
+                "key": "3/8",
+                "hex": "#484846"
+              },
+              {
+                "key": "3/12",
+                "hex": "#484846"
+              },
+              {
+                "key": "4/6",
+                "hex": "#60605f"
+              },
+              {
+                "key": "4/10",
+                "hex": "#60605f"
+              },
+              {
+                "key": "4/4",
+                "hex": "#60605f"
+              },
+              {
+                "key": "5/10",
+                "hex": "#7a7a78"
+              },
+              {
+                "key": "5/4",
+                "hex": "#7a7a78"
+              },
+              {
+                "key": "5/8",
+                "hex": "#7a7a78"
+              },
+              {
+                "key": "6/4",
+                "hex": "#939392"
+              },
+              {
+                "key": "6/6",
+                "hex": "#939392"
+              },
+              {
+                "key": "6/8",
+                "hex": "#939392"
+              },
+              {
+                "key": "6/12",
+                "hex": "#939392"
+              },
+              {
+                "key": "7/8",
+                "hex": "#adaeac"
+              },
+              {
+                "key": "7/10",
+                "hex": "#adaeac"
+              },
+              {
+                "key": "7/12",
+                "hex": "#adaeac"
+              },
+              {
+                "key": "8/4",
+                "hex": "#c8c8c6"
+              },
+              {
+                "key": "8/6",
+                "hex": "#c8c8c6"
+              },
+              {
+                "key": "8/12",
+                "hex": "#c8c8c6"
+              },
+              {
+                "key": "9/2",
+                "hex": "#e3e3e1"
+              },
+              {
+                "key": "9/12",
+                "hex": "#e3e3e1"
+              },
+              {
+                "key": "1/100",
+                "hex": "#939392"
+              },
+              {
+                "key": "2/100",
+                "hex": "#adaeac"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#EEEEEE"
+              },
+              {
+                "key": "5/100",
+                "hex": "#EEEEEE"
+              },
+              {
+                "key": "6/100",
+                "hex": "#000000"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#d2d2d0",
+              "hsv": [
+                74.47783750833665,
+                1.048606544319774,
+                82.4896190308917
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/838/3300140838/s_3300140838.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/838/3300140838/s_3300140838.jpg",
+            "colorsPure": [
+              "#939392",
+              "#adaeac"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "3300043405": {
+      "highlights": {
+        "synckey": 1779182214,
+        "updated": [
+          {
+            "bookId": "3300043405",
+            "chapterIdx": 24,
+            "bookmarkId": "3300043405_24_2520-2578",
+            "range": "3635-3693",
+            "markText": "可价值两美元的早餐——培根和鸡蛋——已经进了肚子，而这早餐的底下是一口上好的威士忌，早餐的上面又是一口上好的威士忌。",
+            "colorStyle": 3,
+            "type": 1,
+            "chapterUid": 59,
+            "createTime": 1774091380
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "第二十章",
+            "chapterUid": 59,
+            "chapterIdx": 24
+          }
+        ],
+        "book": {
+          "bookId": "3300043405",
+          "version": 1086045397,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/89/cpPlatform_k1Eud7zDEcjzyUHn7KPLzy/s_cpPlatform_k1Eud7zDEcjzyUHn7KPLzy.jpg",
+          "title": "罐头厂街",
+          "author": "约翰·斯坦贝克",
+          "coverBoxInfo": {
+            "blurhash": "KPM%=ls._NITt7xu_NofIU",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#1e1c18"
+              },
+              {
+                "key": "1/6",
+                "hex": "#1e1c18"
+              },
+              {
+                "key": "1/8",
+                "hex": "#1e1c18"
+              },
+              {
+                "key": "2/4",
+                "hex": "#32312d"
+              },
+              {
+                "key": "2/6",
+                "hex": "#32312d"
+              },
+              {
+                "key": "2/8",
+                "hex": "#32312d"
+              },
+              {
+                "key": "3/4",
+                "hex": "#494742"
+              },
+              {
+                "key": "3/6",
+                "hex": "#494742"
+              },
+              {
+                "key": "3/8",
+                "hex": "#494742"
+              },
+              {
+                "key": "3/12",
+                "hex": "#494742"
+              },
+              {
+                "key": "4/6",
+                "hex": "#62605a"
+              },
+              {
+                "key": "4/10",
+                "hex": "#62605a"
+              },
+              {
+                "key": "4/4",
+                "hex": "#62605a"
+              },
+              {
+                "key": "5/10",
+                "hex": "#7b7973"
+              },
+              {
+                "key": "5/4",
+                "hex": "#7b7973"
+              },
+              {
+                "key": "5/8",
+                "hex": "#7b7973"
+              },
+              {
+                "key": "6/4",
+                "hex": "#95938d"
+              },
+              {
+                "key": "6/6",
+                "hex": "#95938d"
+              },
+              {
+                "key": "6/8",
+                "hex": "#95938d"
+              },
+              {
+                "key": "6/12",
+                "hex": "#95938d"
+              },
+              {
+                "key": "7/8",
+                "hex": "#afada6"
+              },
+              {
+                "key": "7/10",
+                "hex": "#afada6"
+              },
+              {
+                "key": "7/12",
+                "hex": "#afada6"
+              },
+              {
+                "key": "8/4",
+                "hex": "#cac8c0"
+              },
+              {
+                "key": "8/6",
+                "hex": "#cac8c0"
+              },
+              {
+                "key": "8/12",
+                "hex": "#cac8c0"
+              },
+              {
+                "key": "9/2",
+                "hex": "#e5e3db"
+              },
+              {
+                "key": "9/12",
+                "hex": "#e5e3db"
+              },
+              {
+                "key": "1/100",
+                "hex": "#95938d"
+              },
+              {
+                "key": "2/100",
+                "hex": "#afada6"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#F3F1E5"
+              },
+              {
+                "key": "5/100",
+                "hex": "#F3F1E5"
+              },
+              {
+                "key": "6/100",
+                "hex": "#271E00"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#dcdad2",
+              "hsv": [
+                47.91883182410322,
+                4.6562743615443689,
+                86.37642652411683
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/405/3300043405/s_3300043405.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/405/3300043405/s_3300043405.jpg",
+            "colorsPure": [
+              "#95938d",
+              "#afada6"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    }
   }
 }
