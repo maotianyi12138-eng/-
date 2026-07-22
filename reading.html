@@ -2,133 +2,242 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="毛天艺的微信读书书架与阅读状态">
-    <title>阅境 · 毛天艺的微信读书书架</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="毛天艺的音乐与微信读书书架">
+    <title>Books & Vinyl · Mao Tianyi</title>
     <style>
-        :root { --ink:#171b1d; --paper:#f1eee6; --wall:#d8dde0; --orange:#b94b32; --muted:#6d7673; }
+        :root {
+            --wall:#cdd2d2;
+            --wall-deep:#b9c0bf;
+            --ink:#141719;
+            --cream:#ece7d9;
+            --leaf:#245b43;
+            --leaf-light:#4c8261;
+            --red:#bd382e;
+            --yellow:#dfbd36;
+        }
         * { box-sizing:border-box; }
-        html { scroll-behavior:smooth; }
-        body { margin:0; color:var(--ink); background:var(--paper); font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif; }
-        a { color:inherit; text-decoration:none; }
-        button { font:inherit; cursor:pointer; }
-        .topbar { height:70px; padding:0 clamp(20px,6vw,82px); display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:20; background:rgba(245,241,231,.94); border-bottom:1px solid rgba(23,27,29,.14); backdrop-filter:blur(15px); }
-        .brand { display:flex; align-items:center; gap:10px; font:700 20px Georgia,"Songti SC",serif; letter-spacing:.08em; }
-        .brand b { width:33px; height:33px; display:grid; place-items:center; border:1px solid currentColor; font-size:16px; transform:rotate(-3deg); }
-        .brand small { margin-left:-3px; color:#78807d; font:700 8px Arial; letter-spacing:.22em; }
-        .sync { display:flex; align-items:center; gap:8px; border:1px solid rgba(23,27,29,.2); border-radius:99px; padding:9px 13px; font-size:10px; }
-        .sync i { width:7px; height:7px; border-radius:50%; background:#ca8730; animation:pulse 1s infinite alternate; }
-        .sync.ready i { background:#319466; animation:none; box-shadow:0 0 0 4px rgba(49,148,102,.13); }
-        .sync.error i { background:#c74635; animation:none; }
+        html { background:var(--wall); scroll-behavior:smooth; }
+        body { margin:0; min-width:320px; color:var(--ink); background:var(--wall); font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif; }
+        button { color:inherit; font:inherit; }
+        .scene { min-height:100svh; display:grid; grid-template-columns:minmax(390px,.84fr) minmax(540px,1.16fr); grid-template-areas:"music books"; overflow:hidden; }
+        .music-panel,.books-panel { position:relative; min-width:0; background-color:var(--wall); background-image:linear-gradient(102deg,rgba(255,255,255,.16),transparent 28%),repeating-linear-gradient(1deg,rgba(20,23,25,.016) 0 1px,transparent 1px 7px); }
+        .music-panel { grid-area:music; min-height:100svh; padding:clamp(22px,3vw,46px); border-right:12px solid var(--ink); display:grid; grid-template-rows:minmax(250px,1fr) auto; gap:26px; }
+        .books-panel { grid-area:books; min-height:100svh; padding:clamp(18px,2.7vw,42px) clamp(14px,2.5vw,36px) 0; display:flex; align-items:stretch; }
+        .sync-dot { position:absolute; top:14px; right:14px; z-index:8; width:9px; height:9px; border-radius:50%; background:#bd7b32; box-shadow:0 0 0 5px rgba(255,255,255,.34); animation:pulse 1s infinite alternate; }
+        .sync-dot.ready { background:#2f7957; animation:none; }
+        .sync-dot.error { background:#b5362f; animation:none; }
         @keyframes pulse { to { opacity:.35; } }
 
-        .hero { min-height:590px; display:grid; grid-template-columns:.92fr 1.08fr; overflow:hidden; }
-        .hero-copy { align-self:center; padding:78px 5vw 70px max(7vw,34px); }
-        .kicker { color:var(--orange); font-size:9px; font-weight:800; letter-spacing:.25em; }
-        h1 { margin:23px 0; font:500 clamp(43px,5.7vw,76px)/1.1 Georgia,"Songti SC",serif; letter-spacing:-.045em; }
-        h1 em { color:var(--orange); font-weight:400; }
-        .hero-copy>p { max-width:500px; color:#5f6966; font-size:13px; line-height:1.9; }
-        .hero-numbers { display:flex; margin-top:32px; }
-        .hero-numbers div { min-width:100px; padding:0 20px; border-left:1px solid rgba(23,27,29,.17); display:flex; flex-direction:column; gap:4px; }
-        .hero-numbers div:first-child { padding-left:0; border-left:0; }
-        .hero-numbers strong { font:500 28px Georgia,serif; }
-        .hero-numbers span { color:#7d8582; font-size:8px; letter-spacing:.08em; }
-        .hero-art { padding:38px clamp(18px,4vw,50px); display:grid; place-items:center; background:var(--wall); position:relative; overflow:hidden; }
-        .hero-art:before { content:""; position:absolute; width:430px; height:430px; right:-130px; top:-210px; border-radius:50%; background:rgba(248,246,238,.58); }
-        .mini-case { width:min(100%,590px); padding:14px 18px 0; background:rgba(244,244,239,.42); box-shadow:0 20px 42px rgba(23,27,29,.13); position:relative; z-index:2; }
-        .mini-row { height:145px; display:flex; align-items:flex-end; gap:5px; position:relative; overflow:hidden; padding:0 8px 12px; }
-        .mini-row:after { content:""; position:absolute; height:12px; left:-12px; right:-12px; bottom:0; background:#17191a; }
+        /* The furniture is intentionally drawn with flat, imperfect blocks to echo the reference painting. */
+        .listening-room { position:relative; min-height:330px; display:grid; grid-template-columns:minmax(125px,.68fr) minmax(240px,1.32fr); gap:clamp(12px,2vw,30px); align-items:end; }
+        .plant { height:min(43vw,430px); min-height:270px; position:relative; filter:drop-shadow(9px 14px 0 rgba(20,23,25,.08)); }
+        .pot { position:absolute; bottom:0; left:16%; width:68%; height:28%; background:#b94b34; clip-path:polygon(4% 0,96% 2%,82% 100%,18% 100%); border-top:9px solid #7e3326; }
+        .pot:after { content:""; position:absolute; inset:17% 13%; background:linear-gradient(112deg,#cf6c42 0 32%,#a83e2d 33% 68%,#d37a4a 69%); opacity:.62; }
+        .stem { position:absolute; left:48%; bottom:25%; width:8px; height:53%; background:#203f31; transform:rotate(-2deg); }
+        .leaf { position:absolute; width:52%; height:17%; background:var(--leaf); border:2px solid rgba(20,23,25,.25); border-radius:100% 0 100% 0; transform-origin:10% 80%; }
+        .leaf:nth-of-type(1) { left:45%; top:10%; transform:rotate(-26deg); background:#3f7655; }
+        .leaf:nth-of-type(2) { right:48%; top:21%; transform:scaleX(-1) rotate(-14deg); }
+        .leaf:nth-of-type(3) { left:47%; top:34%; transform:rotate(-9deg); background:#548663; }
+        .leaf:nth-of-type(4) { right:48%; top:45%; transform:scaleX(-1) rotate(3deg); background:#315f47; }
+        .leaf:nth-of-type(5) { left:48%; top:56%; transform:rotate(14deg); }
+        .leaf:nth-of-type(6) { right:48%; top:64%; transform:scaleX(-1) rotate(16deg); background:#477958; }
+        .player-wrap { align-self:end; min-width:0; }
+        .player { position:relative; width:100%; aspect-ratio:1.55/1; min-height:215px; padding:8%; background:#a9673c; border:5px solid var(--ink); box-shadow:13px 17px 0 rgba(20,23,25,.14),inset 0 0 0 5px rgba(238,231,214,.16); }
+        .player:before { content:""; position:absolute; left:-4%; right:-4%; bottom:-11%; height:12%; background:#151819; }
+        .platter { position:absolute; width:64%; aspect-ratio:1; left:5%; top:10%; border-radius:50%; background:repeating-radial-gradient(circle,#111416 0 3px,#25292a 4px 6px); box-shadow:0 0 0 5px #3c4444,0 7px 0 rgba(20,23,25,.18); }
+        .player.playing .platter { animation:spin 5.5s linear infinite; }
+        .record-label { position:absolute; inset:36%; display:grid; place-items:center; border-radius:50%; background:var(--record-color,#c34b35); border:3px solid #e5d7a8; color:#f1eadb; font:bold 8px/1 Arial; text-align:center; overflow:hidden; }
+        .record-label:after { content:""; width:7px; height:7px; border-radius:50%; background:#151819; }
+        .tonearm { position:absolute; right:12%; top:18%; width:10px; height:63%; background:#ded8c9; border:3px solid #282d2f; transform:rotate(17deg); transform-origin:50% 9%; border-radius:7px; }
+        .tonearm:before { content:""; position:absolute; width:30px; height:30px; left:-13px; top:-17px; border-radius:50%; background:#363d3d; border:5px solid #d1cab9; }
+        .tonearm:after { content:""; position:absolute; width:25px; height:14px; left:-8px; bottom:-4px; background:#242829; transform:rotate(-8deg); }
+        .player-copy { min-height:35px; margin:18px 4px 0; display:flex; align-items:flex-end; justify-content:space-between; gap:10px; font-family:Georgia,"Songti SC",serif; }
+        .player-copy strong { max-width:72%; font-size:clamp(15px,1.4vw,20px); font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+        .player-copy span { color:#59615f; font-size:9px; letter-spacing:.08em; text-align:right; }
 
-        .shelf-section { padding:82px max(5vw,24px) 58px; color:#f4f1e9; background:#1b2022; }
-        .section-head { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:34px; }
-        .section-head h2 { margin:9px 0 0; font:500 clamp(32px,4vw,50px) Georgia,"Songti SC",serif; letter-spacing:-.03em; }
-        .shelf-meta { color:#aab5b0; font-size:10px; text-align:right; line-height:1.8; }
-        .shelf-meta strong { color:#efd058; font:500 30px Georgia; }
-        .bookcase { padding:10px 14px 0; background:var(--wall); box-shadow:0 26px 48px rgba(0,0,0,.35); overflow:hidden; }
-        .case-row { height:190px; display:flex; align-items:flex-end; position:relative; }
-        .book-line { width:100%; height:100%; padding:10px 10px 15px; display:flex; align-items:flex-end; gap:clamp(3px,.55vw,8px); overflow:hidden; }
-        .case-row:after { content:""; position:absolute; left:-18px; right:-18px; bottom:0; height:15px; background:#17191a; box-shadow:0 9px 13px rgba(0,0,0,.25); }
-        .spine { width:var(--w); height:var(--h); flex:0 0 var(--w); position:relative; display:flex; flex-direction:column; align-items:center; overflow:hidden; color:var(--text); background:var(--color); border:1px solid rgba(23,27,29,.2); box-shadow:inset 4px 0 rgba(255,255,255,.08),inset -3px 0 rgba(0,0,0,.08); transform:rotate(var(--lean)); transform-origin:center bottom; transition:.22s; }
-        .spine:before { content:""; position:absolute; top:var(--band); left:-2px; right:-2px; height:11px; background:var(--accent); border-block:2px solid rgba(23,27,29,.14); }
-        .spine:after { content:""; position:absolute; left:18%; right:18%; bottom:7px; height:3px; background:currentColor; opacity:.45; }
-        .spine span { max-height:72%; margin-top:13px; writing-mode:vertical-rl; font:600 8px/1.2 "Songti SC",serif; letter-spacing:.08em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-        .spine i { position:absolute; left:0; right:0; bottom:13px; font:normal 6px Arial; text-align:center; }
-        .spine:hover { transform:translateY(-8px) rotate(0); filter:brightness(1.08); z-index:4; }
-        .spine.album { border-radius:7px 7px 1px 1px; }
-        .shelf-note { margin:24px 0 0; color:#95a09b; font-size:9px; letter-spacing:.07em; text-align:right; }
-        .empty { min-height:310px; display:grid; place-items:center; background:var(--wall); color:var(--ink); text-align:center; padding:35px; }
-        .empty b { display:block; margin-bottom:12px; font:500 28px Georgia,"Songti SC",serif; }
-        .empty p { color:#66706d; font-size:11px; line-height:1.8; }
+        .album-rack { min-width:0; padding-top:16px; border-top:14px solid var(--ink); }
+        .album-rail { display:grid; grid-template-columns:repeat(2,minmax(110px,1fr)); gap:clamp(9px,1.2vw,18px); }
+        .album { appearance:none; width:100%; min-width:0; padding:0; border:4px solid var(--ink); background:#ddd5c2; text-align:left; cursor:pointer; box-shadow:7px 9px 0 rgba(20,23,25,.13); transition:transform .22s,filter .22s; }
+        .album:hover,.album.active { transform:translateY(-7px) rotate(-.5deg); filter:saturate(1.12); }
+        .cover-art { position:relative; display:block; width:100%; aspect-ratio:1; overflow:hidden; background:var(--cover); }
+        .cover-art:before,.cover-art:after { content:""; position:absolute; }
+        .album:nth-child(1) .cover-art:before { width:58%; height:58%; left:21%; top:20%; border-radius:50%; background:repeating-radial-gradient(circle,#d83e31 0 9%,#17191b 10% 17%); }
+        .album:nth-child(1) .cover-art:after { width:13%; height:100%; left:13%; background:#e6bc36; transform:skew(-7deg); }
+        .album:nth-child(2) .cover-art:before { width:68%; height:68%; left:15%; top:15%; background:linear-gradient(45deg,#e8d9b8 0 25%,#bd3e32 25% 51%,#243d69 51% 75%,#d2a72c 75%); transform:rotate(9deg); }
+        .album:nth-child(2) .cover-art:after { inset:29%; border:8px solid #17191b; }
+        .album:nth-child(3) .cover-art:before { width:78%; height:16%; left:10%; top:19%; background:#d7be4a; box-shadow:0 32px #d65a3e,0 64px #294f45,0 96px #e6dfcf; transform:rotate(-5deg); }
+        .album:nth-child(3) .cover-art:after { width:19%; height:84%; right:13%; top:8%; background:rgba(28,31,32,.78); transform:rotate(7deg); }
+        .album small { display:block; min-height:43px; padding:9px 8px 8px; color:#1c2021; font-size:8px; line-height:1.45; letter-spacing:.025em; }
 
-        .reading { padding:86px max(7vw,30px); }
-        .reading .section-head { color:var(--ink); }
-        .modes { display:flex; padding:3px; border:1px solid rgba(23,27,29,.2); }
-        .modes button { border:0; background:transparent; color:#6f7774; padding:8px 18px; font-size:10px; }
-        .modes button.active { color:#fff; background:var(--ink); }
-        .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
-        .stat { min-height:165px; padding:23px; background:#e5e1d8; border:1px solid rgba(23,27,29,.08); }
-        .stat:first-child { color:#f7f1e5; background:var(--ink); }
-        .stat p { margin:0 0 20px; color:#6d7673; font-size:9px; letter-spacing:.1em; }
-        .stat:first-child p { color:#a9b2ae; }
-        .stat strong { display:block; font:500 clamp(25px,3vw,38px) Georgia,serif; }
-        .stat strong i { margin-left:4px; font:normal 12px Arial; }
-        .stat small { display:block; margin-top:10px; color:#808784; font-size:8px; }
-        .stat:first-child small { color:#e4bf4d; }
-        .detail-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:12px; margin-top:12px; }
-        .card { padding:26px; background:#fbf8f0; border:1px solid rgba(23,27,29,.09); }
-        .card h3 { margin:6px 0 0; font:500 22px Georgia,"Songti SC",serif; }
-        .card-title { display:flex; align-items:flex-start; justify-content:space-between; gap:15px; }
-        .card-title>strong { color:var(--orange); font:500 19px Georgia; }
-        .bars { height:165px; margin-top:24px; display:flex; align-items:flex-end; gap:7px; border-bottom:1px solid #cccac3; }
-        .bars i { flex:1; min-width:5px; background:#285d4f; }
-        .bars i:nth-child(3n) { background:#d1a532; }
-        .bars i:nth-child(4n) { background:#c45236; }
-        .taste { display:grid; gap:17px; margin-top:25px; }
-        .taste>div { display:grid; grid-template-columns:55px 1fr 65px; gap:9px; align-items:center; font-size:9px; }
-        .taste>div>div { height:6px; overflow:hidden; border-radius:6px; background:#e3e0d8; }
-        .taste i { display:block; height:100%; background:#b94b32; }
-        .taste small { color:#838a87; font-size:7px; text-align:right; }
-        .longest { grid-column:1/-1; }
-        .longest-list { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:21px; }
-        .longest-item { display:grid; grid-template-columns:22px 38px 1fr; gap:9px; align-items:center; border-top:1px solid #d8d5cd; padding-top:13px; min-width:0; }
-        .longest-item>b { color:var(--orange); font:italic 15px Georgia; }
-        .longest-item img,.cover-placeholder { width:38px; height:53px; object-fit:cover; background:#45695d; }
-        .longest-item div { min-width:0; }
-        .longest-item strong { display:block; font-size:9px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-        .longest-item span { display:block; margin-top:5px; color:#858c88; font-size:7px; }
-        footer { padding:26px max(7vw,30px); display:flex; align-items:center; justify-content:space-between; gap:20px; color:#eeeae1; background:#171b1d; font-size:8px; letter-spacing:.08em; }
+        .bookcase { width:100%; align-self:stretch; display:grid; grid-template-rows:repeat(4,minmax(180px,1fr)); background:rgba(238,239,233,.22); box-shadow:inset 0 0 0 1px rgba(20,23,25,.08); }
+        .shelf { position:relative; display:flex; align-items:flex-end; gap:clamp(3px,.5vw,7px); min-width:0; padding:12px clamp(8px,1.3vw,18px) 20px; overflow:hidden; }
+        .shelf:after { content:""; position:absolute; z-index:6; left:-15px; right:-15px; bottom:0; height:19px; background:#151819; box-shadow:0 9px 13px rgba(20,23,25,.28); }
+        .book,.filler { position:relative; flex:0 0 var(--w); height:var(--h); min-width:14px; border:0; padding:0; overflow:hidden; background:var(--color); color:var(--text,#eee8dc); box-shadow:inset 4px 0 rgba(255,255,255,.11),inset -4px 0 rgba(20,23,25,.12); transform:rotate(var(--lean,0deg)); transform-origin:center bottom; }
+        .book { cursor:pointer; border:1px solid rgba(20,23,25,.3); transition:transform .2s,filter .2s; }
+        .book:hover,.book:focus-visible { z-index:8; transform:translateY(-10px) rotate(0); filter:brightness(1.08); outline:2px solid #f3e9c8; outline-offset:2px; }
+        .book:before,.filler:before { content:""; position:absolute; left:0; right:0; top:var(--band,28%); height:11px; background:var(--accent); border-block:2px solid rgba(20,23,25,.16); }
+        .book:after,.filler:after { content:""; position:absolute; left:14%; right:14%; bottom:8px; height:4px; background:currentColor; opacity:.52; }
+        .book span { position:absolute; inset:12px 2px 23px; display:flex; justify-content:center; align-items:flex-start; writing-mode:vertical-rl; overflow:hidden; font:600 clamp(8px,.68vw,11px)/1.15 Georgia,"Songti SC",serif; letter-spacing:.06em; text-align:left; }
+        .book i { position:absolute; left:1px; right:1px; bottom:14px; overflow:hidden; font:normal 6px/1 Arial; text-align:center; text-overflow:ellipsis; white-space:nowrap; }
+        .stack { transform:rotate(90deg) translateY(-12px); transform-origin:left bottom; }
 
-        @media(max-width:850px){ .hero{grid-template-columns:1fr}.hero-art{min-height:450px}.stats{grid-template-columns:repeat(2,1fr)}.detail-grid{grid-template-columns:1fr}.longest-list{grid-template-columns:repeat(2,1fr)} }
-        @media(max-width:560px){ .topbar{height:62px;padding:0 16px}.sync{width:34px;height:34px;padding:0;justify-content:center;font-size:0}.hero-copy{padding:60px 22px 52px}.hero h1{font-size:43px}.hero-numbers div{min-width:0;flex:1;padding:0 11px}.hero-art{min-height:380px;padding:25px 14px}.mini-row{height:115px;gap:3px}.shelf-section,.reading{padding:58px 20px}.section-head{align-items:flex-start;flex-direction:column}.shelf-meta{text-align:left}.bookcase{overflow-x:auto;padding-inline:4px}.case-row{min-width:690px;height:175px}.stats{gap:7px}.stat{min-height:155px;padding:17px}.stat strong{font-size:25px}.card{padding:19px}.card-title{flex-direction:column}.longest-list{grid-template-columns:1fr}footer{flex-wrap:wrap} }
+        .note-layer { position:fixed; inset:0; z-index:100; display:grid; place-items:center; padding:18px; background:rgba(15,17,18,.66); backdrop-filter:blur(9px); opacity:0; visibility:hidden; transition:.2s; }
+        .note-layer.open { opacity:1; visibility:visible; }
+        .notes { width:min(720px,100%); max-height:min(86svh,860px); display:flex; flex-direction:column; background:#eee9dc; border:7px solid #171a1b; box-shadow:18px 22px 0 rgba(0,0,0,.2); transform:translateY(16px); transition:.2s; }
+        .note-layer.open .notes { transform:translateY(0); }
+        .notes-head { display:grid; grid-template-columns:58px 1fr 42px; gap:14px; align-items:center; padding:18px 18px 15px; border-bottom:4px solid #171a1b; }
+        .notes-head img,.notes-cover { width:58px; height:80px; object-fit:cover; background:#416d59; }
+        .notes-head strong { display:block; font:500 clamp(18px,3vw,28px)/1.24 Georgia,"Songti SC",serif; }
+        .notes-head span { display:block; margin-top:6px; color:#6c706d; font-size:9px; }
+        .close-notes { align-self:start; width:38px; height:38px; border:2px solid #171a1b; background:transparent; font-size:24px; cursor:pointer; }
+        .notes-body { overflow:auto; padding:8px 20px 26px; }
+        .chapter { margin:22px 0 9px; color:#727673; font-size:9px; letter-spacing:.12em; }
+        .mark { position:relative; margin:0 0 9px; padding:15px 17px 13px 25px; background:#f8f4e8; border-left:7px solid var(--mark,#d0a732); }
+        .mark q { display:block; font:500 15px/1.75 Georgia,"Songti SC",serif; quotes:none; white-space:pre-wrap; }
+        .mark time { display:block; margin-top:8px; color:#91928c; font-size:8px; }
+        .thought { border-left-color:#3f7359; }
+        .thought .abstract { display:block; margin-bottom:8px; color:#7d817e; font-size:10px; line-height:1.55; }
+        .empty-notes { min-height:230px; display:grid; place-items:center; color:#777b78; font:500 16px Georgia,"Songti SC",serif; text-align:center; }
+        body.modal-open { overflow:hidden; }
+
+        @keyframes spin { to { transform:rotate(360deg); } }
+        @media (max-width:980px) {
+            .scene { grid-template-columns:minmax(330px,.83fr) minmax(470px,1.17fr); }
+            .music-panel { padding-inline:24px; }
+            .listening-room { grid-template-columns:110px 1fr; }
+            .bookcase { grid-template-rows:repeat(4,minmax(165px,1fr)); }
+        }
+        @media (max-width:760px) {
+            .scene { display:grid; grid-template-columns:1fr; grid-template-areas:"books" "music"; overflow:visible; }
+            .books-panel { min-height:100svh; width:100%; padding:8px 7px 0; }
+            .bookcase { min-height:100svh; grid-template-rows:repeat(4,minmax(155px,1fr)); }
+            .shelf { gap:4px; padding-inline:7px; }
+            .book span { font-size:8px; }
+            .music-panel { min-height:100svh; width:100%; padding:34px 18px 46px; border:0; border-top:16px solid var(--ink); grid-template-rows:auto auto; }
+            .listening-room { min-height:430px; grid-template-columns:120px minmax(205px,1fr); gap:8px; }
+            .plant { height:350px; }
+            .player { min-height:190px; }
+            .album-rack { margin-inline:-18px; padding:19px 18px 8px; }
+            .album-rail { display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; overscroll-behavior-x:contain; padding:6px 18vw 16px 2px; scrollbar-width:none; }
+            .album-rail::-webkit-scrollbar { display:none; }
+            .album { flex:0 0 min(68vw,260px); scroll-snap-align:center; }
+            .notes { max-height:92svh; border-width:5px; }
+            .notes-head { grid-template-columns:46px 1fr 38px; gap:10px; padding:13px; }
+            .notes-head img,.notes-cover { width:46px; height:64px; }
+            .notes-body { padding-inline:13px; }
+        }
+        @media (max-width:420px) {
+            .listening-room { grid-template-columns:94px minmax(190px,1fr); min-height:390px; }
+            .plant { height:310px; min-height:250px; }
+            .player { border-width:4px; min-height:170px; }
+            .player-copy { flex-direction:column; align-items:flex-start; }
+            .player-copy strong { max-width:100%; }
+        }
+        @media (prefers-reduced-motion:reduce) { *,*:before,*:after { animation-duration:.01ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; } }
     </style>
 </head>
 <body>
-    <header class="topbar"><a class="brand" href="#top"><b>阅</b><span>阅境</span><small>YUEJING</small></a><div class="sync" id="sync"><i></i><span>正在同步</span></div></header>
-    <main>
-        <section class="hero" id="top">
-            <div class="hero-copy"><span class="kicker">MAO TIANYI'S READING ROOM</span><h1>把读过的时光，<br><em>摆进一面书墙。</em></h1><p>这里直接陈列我的微信读书书架与阅读状态。无需登录，也无需输入任何密钥。</p><div class="hero-numbers"><div><strong id="hero-total">—</strong><span>书架条目</span></div><div><strong id="hero-finished">—</strong><span>已经读完</span></div><div><strong id="hero-days">—</strong><span>本月阅读日</span></div></div></div>
-            <div class="hero-art"><div class="mini-case" id="mini-case"></div></div>
+    <main class="scene">
+        <section class="books-panel" aria-label="我的微信读书书架">
+            <i class="sync-dot" id="sync" title="正在同步"></i>
+            <div class="bookcase" id="bookcase" aria-live="polite"></div>
         </section>
-        <section class="shelf-section" id="shelf"><div class="section-head"><div><span class="kicker">01 / THE SHELF</span><h2>我的微信读书书架</h2></div><div class="shelf-meta" id="shelf-meta">正在取回书架…</div></div><div id="bookcase" class="bookcase"></div><p class="shelf-note">每一本真实藏书都被转译成一册独特的彩色书脊。悬停可见书名，点击可前往微信读书。</p></section>
-        <section class="reading" id="reading"><div class="section-head"><div><span class="kicker">02 / READING STATUS</span><h2>阅读留下的纹路</h2></div><div class="modes"><button class="active" data-mode="monthly">本月</button><button data-mode="overall">全部</button></div></div><div class="stats" id="stats"></div><div class="detail-grid"><article class="card"><div class="card-title"><div><span class="kicker">READING RHYTHM</span><h3>近期阅读节奏</h3></div><strong id="average">0 分钟 / 日</strong></div><div class="bars" id="bars"></div></article><article class="card"><div class="card-title"><div><span class="kicker">READING TASTE</span><h3>阅读偏好</h3></div></div><div class="taste" id="taste"></div></article><article class="card longest"><div class="card-title"><div><span class="kicker">TIME WELL SPENT</span><h3>读得最久</h3></div></div><div class="longest-list" id="longest"></div></article></div></section>
+
+        <section class="music-panel" aria-label="黑胶唱片与音乐">
+            <div class="listening-room">
+                <div class="plant" aria-hidden="true">
+                    <i class="stem"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="pot"></i>
+                </div>
+                <div class="player-wrap">
+                    <div class="player playing" id="player" aria-hidden="true">
+                        <div class="platter"><span class="record-label" id="record-label"></span></div><i class="tonearm"></i>
+                    </div>
+                    <div class="player-copy"><strong id="track-title"></strong><span id="track-artist"></span></div>
+                </div>
+            </div>
+            <div class="album-rack">
+                <div class="album-rail" id="album-rail" aria-label="滑动切换唱片">
+                    <button class="album active" data-title="In the End" data-artist="Linkin Park" data-color="#bd3d31" style="--cover:#304d62"><span class="cover-art"></span><small>IN THE END<br>LINKIN PARK</small></button>
+                    <button class="album" data-title="Bohemian Rhapsody" data-artist="Queen" data-color="#d3aa35" style="--cover:#b9b4a5"><span class="cover-art"></span><small>BOHEMIAN RHAPSODY<br>QUEEN</small></button>
+                    <button class="album" data-title="Nocturne" data-artist="Jay Chou" data-color="#315e4b" style="--cover:#ded9ca"><span class="cover-art"></span><small>NOCTURNE<br>JAY CHOU</small></button>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer><div class="brand"><b>阅</b><span>阅境</span></div><span>让每一次阅读，都有迹可循。</span><span>公开展示 · 数据来自微信读书</span></footer>
+
+    <div class="note-layer" id="note-layer" role="dialog" aria-modal="true" aria-labelledby="note-title">
+        <article class="notes" onclick="event.stopPropagation()">
+            <header class="notes-head">
+                <div id="note-cover"></div>
+                <div><strong id="note-title"></strong><span id="note-meta"></span></div>
+                <button class="close-notes" type="button" aria-label="关闭笔记">×</button>
+            </header>
+            <div class="notes-body" id="notes-body"></div>
+        </article>
+    </div>
+
     <script>
-        const palette=['#c93b2f','#e07a2c','#e7c83f','#71a66f','#15937d','#3286a4','#3855a4','#613c91','#d7687b','#202a30','#f0eee2','#8a6a48'];
-        const state={items:[],shelf:{},monthly:{},overall:{},mode:'monthly',updatedAt:null};
-        const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
-        const safeUrl=value=>/^(https?:|weread:)/i.test(String(value||''))?escapeHtml(value):'#reading';
+        const colors=['#bd382e','#df772e','#dfbd36','#5f9a65','#188b7d','#317d9a','#304d79','#633f78','#ca6675','#222a2d','#e6e1d3','#876443'];
+        const state={books:[],notesByBook:{}};
+        const esc=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
         function hash(value){let result=2166136261;for(const char of String(value)){result^=char.charCodeAt(0);result=Math.imul(result,16777619)}return Math.abs(result>>>0)}
-        function duration(seconds=0){const hours=Math.floor(seconds/3600),minutes=Math.floor((seconds%3600)/60);return hours?`${hours} 小时${minutes?` ${minutes} 分`:''}`:`${minutes} 分钟`}
-        function spine(item,index,mini=false){const seed=hash(`${item.id}-${item.title}`),color=palette[seed%palette.length],accent=palette[(seed+5)%palette.length],text=['#f0eee2','#e7c83f'].includes(color)?'#19252a':'#f4f1e8';const w=(mini?15:22)+(seed%(mini?12:20)),h=(mini?78:112)+(seed%(mini?38:65)),lean=seed%9===0?(seed%2?-7:7):seed%5===0?2:0;return `<a class="spine ${item.kind==='album'?'album':''}" href="${safeUrl(item.deepLink)}" ${item.deepLink?'target="_blank" rel="noreferrer"':''} title="${escapeHtml(item.title)} — ${escapeHtml(item.author)}" style="--w:${w}px;--h:${h}px;--lean:${lean}deg;--color:${color};--accent:${accent};--text:${text};--band:${18+seed%58}%"><span>${escapeHtml(item.title)}</span><i>${item.finished?'读完':index%3===0?escapeHtml(item.author.slice(0,4)):''}</i></a>`}
-        function normalize(shelf){const books=(shelf.books||[]).map(book=>({id:book.bookId,title:book.title||'未命名书籍',author:book.author||'未知作者',cover:book.cover,deepLink:book.deepLink,finished:book.finishReading===1,kind:'book'}));const albums=(shelf.albums||[]).map((album,index)=>{const info=album.albumInfo||album;return{id:String(info.albumId||info.bookId||`album-${index}`),title:info.title||info.name||'有声内容',author:info.author||info.authorName||'微信听书',cover:info.cover,deepLink:album.deepLink||info.deepLink,kind:'album'}});return [...books,...albums,...(shelf.mp?[{id:'mp',title:'我的收藏',author:'微信读书',kind:'mp'}]:[])]}
-        function renderMini(){const placeholders=Array.from({length:33},(_,i)=>({id:`placeholder-${i}`,title:'阅境',author:'',kind:'book'}));const all=[...state.items,...placeholders].slice(0,33);document.getElementById('mini-case').innerHTML=[0,1,2].map(row=>`<div class="mini-row">${all.slice(row*11,row*11+11).map((item,i)=>spine(item,row*11+i,true)).join('')}</div>`).join('')}
-        function renderShelf(){const box=document.getElementById('bookcase');if(!state.items.length){box.className='empty';box.innerHTML='<div><b>书架数据准备中</b><p>同步完成后，真实藏书会在这里变成彩色书脊墙。</p></div>';return}box.className='bookcase';const visible=state.items.slice(0,84),rows=Math.max(1,Math.min(6,Math.ceil(visible.length/14))),per=Math.ceil(visible.length/rows);box.innerHTML=Array.from({length:rows},(_,row)=>`<div class="case-row"><div class="book-line">${visible.slice(row*per,(row+1)*per).map((item,index)=>spine(item,index+row*20)).join('')}</div></div>`).join('')}
-        function renderStats(){const data=state[state.mode]||{},finished=(state.shelf.books||[]).filter(book=>book.finishReading===1).length,compare=state.mode==='monthly'&&data.compare!=null?`较上期 ${data.compare>=0?'↑':'↓'} ${Math.abs(Math.round(data.compare*100))}%`:'每一分钟都算数';document.getElementById('stats').innerHTML=`<article class="stat"><p>阅读总时长</p><strong>${duration(data.totalReadTime)}</strong><small>${compare}</small></article><article class="stat"><p>阅读天数</p><strong>${data.readDays||0}<i>天</i></strong><small>${state.mode==='monthly'?'本月有效阅读日':'一路积累的阅读日'}</small></article><article class="stat"><p>书架条目</p><strong>${state.items.length}<i>个</i></strong><small>电子书、有声内容与收藏</small></article><article class="stat"><p>已经读完</p><strong>${finished}<i>本</i></strong><small>来自当前书架状态</small></article>`;document.getElementById('average').textContent=`${duration(data.dayAverageReadTime)} / 日`;const values=Object.values(data.readTimes||{}).slice(-14),max=Math.max(...values,1);document.getElementById('bars').innerHTML=values.length?values.map(value=>`<i style="height:${Math.max(7,Math.round(value/max*100))}%"></i>`).join(''):'<span style="margin:auto;color:#888;font-size:9px">暂无节奏数据</span>';document.getElementById('taste').innerHTML=(data.preferCategory||[]).slice(0,4).map(item=>`<div><span>${escapeHtml(item.categoryTitle||item.parentCategoryTitle||'其他')}</span><div><i style="width:${Math.max(10,Math.round((item.val||.3)*100))}%"></i></div><small>${duration(item.readingTime)}</small></div>`).join('')||'<span style="color:#888;font-size:9px">暂无偏好数据</span>';document.getElementById('longest').innerHTML=(data.readLongest||[]).slice(0,4).map((entry,index)=>{const book=entry.book||entry.albumInfo||{},title=book.title||book.name||'一本好书',author=book.author||book.authorName||'',cover=/^https:/i.test(book.cover||'')?`<img src="${escapeHtml(book.cover)}" alt="">`:'<div class="cover-placeholder"></div>';return `<div class="longest-item"><b>0${index+1}</b>${cover}<div><strong>${escapeHtml(title)}</strong><span>${escapeHtml(author)} · ${duration(entry.readTime)}</span></div></div>`}).join('')||'<span style="color:#888;font-size:9px">暂无阅读排行</span>'}
-        function render(){const finished=(state.shelf.books||[]).filter(book=>book.finishReading===1).length;document.getElementById('hero-total').textContent=state.items.length;document.getElementById('hero-finished').textContent=finished;document.getElementById('hero-days').textContent=state.monthly.readDays||0;document.getElementById('shelf-meta').innerHTML=`<strong>${state.items.length}</strong> 个条目<br>${state.updatedAt?`数据更新于 ${new Date(state.updatedAt).toLocaleString('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})}`:'等待首次同步'}`;renderMini();renderShelf();renderStats()}
-        async function load(){try{const response=await fetch(`./data/weread.json?t=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error('书架数据尚未生成');const data=await response.json();if(data.status==='pending')throw new Error('书架正在等待首次同步');state.shelf=data.shelf||{};state.monthly=data.monthly||{};state.overall=data.overall||{};state.updatedAt=data.updatedAt;state.items=normalize(state.shelf);render();const sync=document.getElementById('sync');sync.className='sync ready';sync.querySelector('span').textContent='书架已同步'}catch(error){renderMini();renderShelf();const sync=document.getElementById('sync');sync.className='sync error';sync.querySelector('span').textContent='等待同步';document.getElementById('shelf-meta').textContent=error.message}}
-        document.querySelectorAll('.modes button').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.modes button').forEach(item=>item.classList.remove('active'));button.classList.add('active');state.mode=button.dataset.mode;renderStats()}));
-        renderMini();renderShelf();renderStats();load();
+        function styleFor(seed,real=true){const color=colors[seed%colors.length],accent=colors[(seed+5)%colors.length],text=['#dfbd36','#e6e1d3'].includes(color)?'#171a1b':'#f2ecdf';const width=(real?27:15)+(seed%(real?17:15));const height=(real?118:105)+(seed%(real?62:70));const lean=seed%11===0?(seed%2?-6:6):seed%7===0?2:0;return `--w:${width}px;--h:${height}px;--color:${color};--accent:${accent};--text:${text};--lean:${lean}deg;--band:${15+seed%63}%`}
+        function filler(index,row){const seed=hash(`painted-filler-${row}-${index}`);return `<i class="filler" aria-hidden="true" style="${styleFor(seed,false)}"></i>`}
+        function bookSpine(book,index){const seed=hash(`${book.bookId}-${book.title}`);return `<button class="book" type="button" data-book-id="${esc(book.bookId)}" title="${esc(book.title)} — ${esc(book.author||'')}" aria-label="打开《${esc(book.title)}》的微信读书笔记" style="${styleFor(seed,true)}"><span>${esc(book.title||'未命名书籍')}</span><i>${book.finishReading===1?'读完':esc((book.author||'').slice(0,4))}</i></button>`}
+        function renderShelf(){
+            const box=document.getElementById('bookcase');
+            if(!state.books.length){box.innerHTML=Array.from({length:4},(_,row)=>`<div class="shelf">${Array.from({length:12},(_,i)=>filler(i,row)).join('')}</div>`).join('');return}
+            const rows=Array.from({length:4},()=>[]);
+            state.books.forEach((book,index)=>rows[index%4].push(book));
+            box.innerHTML=rows.map((books,row)=>{
+                const pieces=[];let realIndex=0;
+                for(let i=0;i<13;i++){
+                    const insertAt=[1,6,10][realIndex]??99;
+                    if(realIndex<books.length&&i===insertAt){pieces.push(bookSpine(books[realIndex],row*10+realIndex));realIndex++;}
+                    else pieces.push(filler(i,row));
+                }
+                while(realIndex<books.length){pieces.push(bookSpine(books[realIndex],row*10+realIndex));realIndex++;}
+                return `<div class="shelf">${pieces.join('')}</div>`;
+            }).join('');
+            box.querySelectorAll('.book').forEach(button=>button.addEventListener('click',()=>openNotes(button.dataset.bookId)));
+        }
+        function dateText(value){if(!value)return'';const date=new Date(Number(value)*1000);return Number.isNaN(date.getTime())?'':date.toLocaleDateString('zh-CN',{year:'numeric',month:'2-digit',day:'2-digit'}).replaceAll('/','-')}
+        function noteData(id){const raw=state.notesByBook[id]||{};const highlightData=raw.highlights||{};const thoughtsData=raw.thoughts||{};const chapters=new Map((highlightData.chapters||[]).map(item=>[String(item.chapterUid),item.title||'']));const highlights=(highlightData.updated||[]).map(item=>({...item,chapterTitle:chapters.get(String(item.chapterUid))||''}));const thoughts=(thoughtsData.reviews||[]).map(item=>item.review||item).filter(Boolean);return{highlights,thoughts,chapters}}
+        function openNotes(id){
+            const book=state.books.find(item=>String(item.bookId)===String(id));if(!book)return;
+            const {highlights,thoughts,chapters}=noteData(id),all=[];
+            highlights.forEach(item=>all.push({kind:'mark',chapter:item.chapterTitle||'未命名章节',text:item.markText||'',date:item.createTime,color:colors[(Number(item.colorStyle)||2)%colors.length]}));
+            thoughts.forEach(item=>all.push({kind:'thought',chapter:chapters.get(String(item.chapterUid))||item.chapterTitle||'阅读想法',text:item.content||'',abstract:item.abstract||'',date:item.createTime,color:'#3f7359'}));
+            all.sort((a,b)=>(Number(a.date)||0)-(Number(b.date)||0));
+            document.getElementById('note-title').textContent=book.title||'未命名书籍';
+            document.getElementById('note-meta').textContent=`${book.author||'未知作者'} · ${highlights.length} 条划线${thoughts.length?` · ${thoughts.length} 条想法`:''}`;
+            document.getElementById('note-cover').innerHTML=/^https:\/\//i.test(book.cover||'')?`<img src="${esc(book.cover)}" alt="">`:'<div class="notes-cover"></div>';
+            const body=document.getElementById('notes-body');
+            if(!all.length){body.innerHTML='<div class="empty-notes">这本书还没有可展示的划线</div>'}
+            else {let last='';body.innerHTML=all.map(item=>{const chapter=item.chapter!==last?`<div class="chapter">${esc(item.chapter)}</div>`:'';last=item.chapter;const abstract=item.abstract?`<span class="abstract">${esc(item.abstract)}</span>`:'';return `${chapter}<article class="mark ${item.kind==='thought'?'thought':''}" style="--mark:${item.color}">${abstract}<q>${esc(item.text||item.abstract||'')}</q>${item.date?`<time>${dateText(item.date)}</time>`:''}</article>`}).join('')}
+            const layer=document.getElementById('note-layer');layer.classList.add('open');document.body.classList.add('modal-open');document.querySelector('.close-notes').focus();
+        }
+        function closeNotes(){document.getElementById('note-layer').classList.remove('open');document.body.classList.remove('modal-open')}
+        async function load(){
+            renderShelf();
+            try{
+                const response=await fetch(`./data/weread.json?t=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error('等待同步');
+                const data=await response.json();if(data.status==='pending')throw new Error('等待同步');
+                state.books=data.shelf?.books||[];state.notesByBook=data.notesByBook||{};renderShelf();
+                const sync=document.getElementById('sync');sync.className='sync-dot ready';sync.title=`微信读书已同步${data.updatedAt?` · ${new Date(data.updatedAt).toLocaleString('zh-CN')}`:''}`;
+            }catch(error){const sync=document.getElementById('sync');sync.className='sync-dot error';sync.title=error.message}
+        }
+        function selectAlbum(button){
+            document.querySelectorAll('.album').forEach(item=>item.classList.toggle('active',item===button));
+            document.getElementById('track-title').textContent=button.dataset.title;document.getElementById('track-artist').textContent=button.dataset.artist;
+            document.getElementById('record-label').style.setProperty('--record-color',button.dataset.color);document.getElementById('player').classList.add('playing');
+            if(innerWidth<=760)button.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+        }
+        document.querySelectorAll('.album').forEach(button=>button.addEventListener('click',()=>selectAlbum(button)));
+        document.getElementById('note-layer').addEventListener('click',closeNotes);document.querySelector('.close-notes').addEventListener('click',closeNotes);
+        document.addEventListener('keydown',event=>{if(event.key==='Escape')closeNotes()});
+        selectAlbum(document.querySelector('.album.active'));load();
     </script>
 </body>
 </html>
