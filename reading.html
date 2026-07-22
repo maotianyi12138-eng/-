@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="毛天艺的微信读书书架与阅读状态">
+    <title>阅境 · 毛天艺的微信读书书架</title>
+    <style>
+        :root { --ink:#171b1d; --paper:#f1eee6; --wall:#d8dde0; --orange:#b94b32; --muted:#6d7673; }
+        * { box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body { margin:0; color:var(--ink); background:var(--paper); font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif; }
+        a { color:inherit; text-decoration:none; }
+        button { font:inherit; cursor:pointer; }
+        .topbar { height:70px; padding:0 clamp(20px,6vw,82px); display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:20; background:rgba(245,241,231,.94); border-bottom:1px solid rgba(23,27,29,.14); backdrop-filter:blur(15px); }
+        .brand { display:flex; align-items:center; gap:10px; font:700 20px Georgia,"Songti SC",serif; letter-spacing:.08em; }
+        .brand b { width:33px; height:33px; display:grid; place-items:center; border:1px solid currentColor; font-size:16px; transform:rotate(-3deg); }
+        .brand small { margin-left:-3px; color:#78807d; font:700 8px Arial; letter-spacing:.22em; }
+        .sync { display:flex; align-items:center; gap:8px; border:1px solid rgba(23,27,29,.2); border-radius:99px; padding:9px 13px; font-size:10px; }
+        .sync i { width:7px; height:7px; border-radius:50%; background:#ca8730; animation:pulse 1s infinite alternate; }
+        .sync.ready i { background:#319466; animation:none; box-shadow:0 0 0 4px rgba(49,148,102,.13); }
+        .sync.error i { background:#c74635; animation:none; }
+        @keyframes pulse { to { opacity:.35; } }
+
+        .hero { min-height:590px; display:grid; grid-template-columns:.92fr 1.08fr; overflow:hidden; }
+        .hero-copy { align-self:center; padding:78px 5vw 70px max(7vw,34px); }
+        .kicker { color:var(--orange); font-size:9px; font-weight:800; letter-spacing:.25em; }
+        h1 { margin:23px 0; font:500 clamp(43px,5.7vw,76px)/1.1 Georgia,"Songti SC",serif; letter-spacing:-.045em; }
+        h1 em { color:var(--orange); font-weight:400; }
+        .hero-copy>p { max-width:500px; color:#5f6966; font-size:13px; line-height:1.9; }
+        .hero-numbers { display:flex; margin-top:32px; }
+        .hero-numbers div { min-width:100px; padding:0 20px; border-left:1px solid rgba(23,27,29,.17); display:flex; flex-direction:column; gap:4px; }
+        .hero-numbers div:first-child { padding-left:0; border-left:0; }
+        .hero-numbers strong { font:500 28px Georgia,serif; }
+        .hero-numbers span { color:#7d8582; font-size:8px; letter-spacing:.08em; }
+        .hero-art { padding:38px clamp(18px,4vw,50px); display:grid; place-items:center; background:var(--wall); position:relative; overflow:hidden; }
+        .hero-art:before { content:""; position:absolute; width:430px; height:430px; right:-130px; top:-210px; border-radius:50%; background:rgba(248,246,238,.58); }
+        .mini-case { width:min(100%,590px); padding:14px 18px 0; background:rgba(244,244,239,.42); box-shadow:0 20px 42px rgba(23,27,29,.13); position:relative; z-index:2; }
+        .mini-row { height:145px; display:flex; align-items:flex-end; gap:5px; position:relative; overflow:hidden; padding:0 8px 12px; }
+        .mini-row:after { content:""; position:absolute; height:12px; left:-12px; right:-12px; bottom:0; background:#17191a; }
+
+        .shelf-section { padding:82px max(5vw,24px) 58px; color:#f4f1e9; background:#1b2022; }
+        .section-head { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:34px; }
+        .section-head h2 { margin:9px 0 0; font:500 clamp(32px,4vw,50px) Georgia,"Songti SC",serif; letter-spacing:-.03em; }
+        .shelf-meta { color:#aab5b0; font-size:10px; text-align:right; line-height:1.8; }
+        .shelf-meta strong { color:#efd058; font:500 30px Georgia; }
+        .bookcase { padding:10px 14px 0; background:var(--wall); box-shadow:0 26px 48px rgba(0,0,0,.35); overflow:hidden; }
+        .case-row { height:190px; display:flex; align-items:flex-end; position:relative; }
+        .book-line { width:100%; height:100%; padding:10px 10px 15px; display:flex; align-items:flex-end; gap:clamp(3px,.55vw,8px); overflow:hidden; }
+        .case-row:after { content:""; position:absolute; left:-18px; right:-18px; bottom:0; height:15px; background:#17191a; box-shadow:0 9px 13px rgba(0,0,0,.25); }
+        .spine { width:var(--w); height:var(--h); flex:0 0 var(--w); position:relative; display:flex; flex-direction:column; align-items:center; overflow:hidden; color:var(--text); background:var(--color); border:1px solid rgba(23,27,29,.2); box-shadow:inset 4px 0 rgba(255,255,255,.08),inset -3px 0 rgba(0,0,0,.08); transform:rotate(var(--lean)); transform-origin:center bottom; transition:.22s; }
+        .spine:before { content:""; position:absolute; top:var(--band); left:-2px; right:-2px; height:11px; background:var(--accent); border-block:2px solid rgba(23,27,29,.14); }
+        .spine:after { content:""; position:absolute; left:18%; right:18%; bottom:7px; height:3px; background:currentColor; opacity:.45; }
+        .spine span { max-height:72%; margin-top:13px; writing-mode:vertical-rl; font:600 8px/1.2 "Songti SC",serif; letter-spacing:.08em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+        .spine i { position:absolute; left:0; right:0; bottom:13px; font:normal 6px Arial; text-align:center; }
+        .spine:hover { transform:translateY(-8px) rotate(0); filter:brightness(1.08); z-index:4; }
+        .spine.album { border-radius:7px 7px 1px 1px; }
+        .shelf-note { margin:24px 0 0; color:#95a09b; font-size:9px; letter-spacing:.07em; text-align:right; }
+        .empty { min-height:310px; display:grid; place-items:center; background:var(--wall); color:var(--ink); text-align:center; padding:35px; }
+        .empty b { display:block; margin-bottom:12px; font:500 28px Georgia,"Songti SC",serif; }
+        .empty p { color:#66706d; font-size:11px; line-height:1.8; }
+
+        .reading { padding:86px max(7vw,30px); }
+        .reading .section-head { color:var(--ink); }
+        .modes { display:flex; padding:3px; border:1px solid rgba(23,27,29,.2); }
+        .modes button { border:0; background:transparent; color:#6f7774; padding:8px 18px; font-size:10px; }
+        .modes button.active { color:#fff; background:var(--ink); }
+        .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+        .stat { min-height:165px; padding:23px; background:#e5e1d8; border:1px solid rgba(23,27,29,.08); }
+        .stat:first-child { color:#f7f1e5; background:var(--ink); }
+        .stat p { margin:0 0 20px; color:#6d7673; font-size:9px; letter-spacing:.1em; }
+        .stat:first-child p { color:#a9b2ae; }
+        .stat strong { display:block; font:500 clamp(25px,3vw,38px) Georgia,serif; }
+        .stat strong i { margin-left:4px; font:normal 12px Arial; }
+        .stat small { display:block; margin-top:10px; color:#808784; font-size:8px; }
+        .stat:first-child small { color:#e4bf4d; }
+        .detail-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:12px; margin-top:12px; }
+        .card { padding:26px; background:#fbf8f0; border:1px solid rgba(23,27,29,.09); }
+        .card h3 { margin:6px 0 0; font:500 22px Georgia,"Songti SC",serif; }
+        .card-title { display:flex; align-items:flex-start; justify-content:space-between; gap:15px; }
+        .card-title>strong { color:var(--orange); font:500 19px Georgia; }
+        .bars { height:165px; margin-top:24px; display:flex; align-items:flex-end; gap:7px; border-bottom:1px solid #cccac3; }
+        .bars i { flex:1; min-width:5px; background:#285d4f; }
+        .bars i:nth-child(3n) { background:#d1a532; }
+        .bars i:nth-child(4n) { background:#c45236; }
+        .taste { display:grid; gap:17px; margin-top:25px; }
+        .taste>div { display:grid; grid-template-columns:55px 1fr 65px; gap:9px; align-items:center; font-size:9px; }
+        .taste>div>div { height:6px; overflow:hidden; border-radius:6px; background:#e3e0d8; }
+        .taste i { display:block; height:100%; background:#b94b32; }
+        .taste small { color:#838a87; font-size:7px; text-align:right; }
+        .longest { grid-column:1/-1; }
+        .longest-list { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:21px; }
+        .longest-item { display:grid; grid-template-columns:22px 38px 1fr; gap:9px; align-items:center; border-top:1px solid #d8d5cd; padding-top:13px; min-width:0; }
+        .longest-item>b { color:var(--orange); font:italic 15px Georgia; }
+        .longest-item img,.cover-placeholder { width:38px; height:53px; object-fit:cover; background:#45695d; }
+        .longest-item div { min-width:0; }
+        .longest-item strong { display:block; font-size:9px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+        .longest-item span { display:block; margin-top:5px; color:#858c88; font-size:7px; }
+        footer { padding:26px max(7vw,30px); display:flex; align-items:center; justify-content:space-between; gap:20px; color:#eeeae1; background:#171b1d; font-size:8px; letter-spacing:.08em; }
+
+        @media(max-width:850px){ .hero{grid-template-columns:1fr}.hero-art{min-height:450px}.stats{grid-template-columns:repeat(2,1fr)}.detail-grid{grid-template-columns:1fr}.longest-list{grid-template-columns:repeat(2,1fr)} }
+        @media(max-width:560px){ .topbar{height:62px;padding:0 16px}.sync{width:34px;height:34px;padding:0;justify-content:center;font-size:0}.hero-copy{padding:60px 22px 52px}.hero h1{font-size:43px}.hero-numbers div{min-width:0;flex:1;padding:0 11px}.hero-art{min-height:380px;padding:25px 14px}.mini-row{height:115px;gap:3px}.shelf-section,.reading{padding:58px 20px}.section-head{align-items:flex-start;flex-direction:column}.shelf-meta{text-align:left}.bookcase{overflow-x:auto;padding-inline:4px}.case-row{min-width:690px;height:175px}.stats{gap:7px}.stat{min-height:155px;padding:17px}.stat strong{font-size:25px}.card{padding:19px}.card-title{flex-direction:column}.longest-list{grid-template-columns:1fr}footer{flex-wrap:wrap} }
+    </style>
+</head>
+<body>
+    <header class="topbar"><a class="brand" href="#top"><b>阅</b><span>阅境</span><small>YUEJING</small></a><div class="sync" id="sync"><i></i><span>正在同步</span></div></header>
+    <main>
+        <section class="hero" id="top">
+            <div class="hero-copy"><span class="kicker">MAO TIANYI'S READING ROOM</span><h1>把读过的时光，<br><em>摆进一面书墙。</em></h1><p>这里直接陈列我的微信读书书架与阅读状态。无需登录，也无需输入任何密钥。</p><div class="hero-numbers"><div><strong id="hero-total">—</strong><span>书架条目</span></div><div><strong id="hero-finished">—</strong><span>已经读完</span></div><div><strong id="hero-days">—</strong><span>本月阅读日</span></div></div></div>
+            <div class="hero-art"><div class="mini-case" id="mini-case"></div></div>
+        </section>
+        <section class="shelf-section" id="shelf"><div class="section-head"><div><span class="kicker">01 / THE SHELF</span><h2>我的微信读书书架</h2></div><div class="shelf-meta" id="shelf-meta">正在取回书架…</div></div><div id="bookcase" class="bookcase"></div><p class="shelf-note">每一本真实藏书都被转译成一册独特的彩色书脊。悬停可见书名，点击可前往微信读书。</p></section>
+        <section class="reading" id="reading"><div class="section-head"><div><span class="kicker">02 / READING STATUS</span><h2>阅读留下的纹路</h2></div><div class="modes"><button class="active" data-mode="monthly">本月</button><button data-mode="overall">全部</button></div></div><div class="stats" id="stats"></div><div class="detail-grid"><article class="card"><div class="card-title"><div><span class="kicker">READING RHYTHM</span><h3>近期阅读节奏</h3></div><strong id="average">0 分钟 / 日</strong></div><div class="bars" id="bars"></div></article><article class="card"><div class="card-title"><div><span class="kicker">READING TASTE</span><h3>阅读偏好</h3></div></div><div class="taste" id="taste"></div></article><article class="card longest"><div class="card-title"><div><span class="kicker">TIME WELL SPENT</span><h3>读得最久</h3></div></div><div class="longest-list" id="longest"></div></article></div></section>
+    </main>
+    <footer><div class="brand"><b>阅</b><span>阅境</span></div><span>让每一次阅读，都有迹可循。</span><span>公开展示 · 数据来自微信读书</span></footer>
+    <script>
+        const palette=['#c93b2f','#e07a2c','#e7c83f','#71a66f','#15937d','#3286a4','#3855a4','#613c91','#d7687b','#202a30','#f0eee2','#8a6a48'];
+        const state={items:[],shelf:{},monthly:{},overall:{},mode:'monthly',updatedAt:null};
+        const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
+        const safeUrl=value=>/^(https?:|weread:)/i.test(String(value||''))?escapeHtml(value):'#reading';
+        function hash(value){let result=2166136261;for(const char of String(value)){result^=char.charCodeAt(0);result=Math.imul(result,16777619)}return Math.abs(result>>>0)}
+        function duration(seconds=0){const hours=Math.floor(seconds/3600),minutes=Math.floor((seconds%3600)/60);return hours?`${hours} 小时${minutes?` ${minutes} 分`:''}`:`${minutes} 分钟`}
+        function spine(item,index,mini=false){const seed=hash(`${item.id}-${item.title}`),color=palette[seed%palette.length],accent=palette[(seed+5)%palette.length],text=['#f0eee2','#e7c83f'].includes(color)?'#19252a':'#f4f1e8';const w=(mini?15:22)+(seed%(mini?12:20)),h=(mini?78:112)+(seed%(mini?38:65)),lean=seed%9===0?(seed%2?-7:7):seed%5===0?2:0;return `<a class="spine ${item.kind==='album'?'album':''}" href="${safeUrl(item.deepLink)}" ${item.deepLink?'target="_blank" rel="noreferrer"':''} title="${escapeHtml(item.title)} — ${escapeHtml(item.author)}" style="--w:${w}px;--h:${h}px;--lean:${lean}deg;--color:${color};--accent:${accent};--text:${text};--band:${18+seed%58}%"><span>${escapeHtml(item.title)}</span><i>${item.finished?'读完':index%3===0?escapeHtml(item.author.slice(0,4)):''}</i></a>`}
+        function normalize(shelf){const books=(shelf.books||[]).map(book=>({id:book.bookId,title:book.title||'未命名书籍',author:book.author||'未知作者',cover:book.cover,deepLink:book.deepLink,finished:book.finishReading===1,kind:'book'}));const albums=(shelf.albums||[]).map((album,index)=>({id:String(album.albumId||album.bookId||`album-${index}`),title:album.title||album.name||'有声内容',author:album.author||album.authorName||'微信听书',cover:album.cover,deepLink:album.deepLink,kind:'album'}));return [...books,...albums,...(shelf.mp?[{id:'mp',title:'我的收藏',author:'微信读书',kind:'mp'}]:[])]}
+        function renderMini(){const placeholders=Array.from({length:33},(_,i)=>({id:`placeholder-${i}`,title:'阅境',author:'',kind:'book'}));const all=[...state.items,...placeholders].slice(0,33);document.getElementById('mini-case').innerHTML=[0,1,2].map(row=>`<div class="mini-row">${all.slice(row*11,row*11+11).map((item,i)=>spine(item,row*11+i,true)).join('')}</div>`).join('')}
+        function renderShelf(){const box=document.getElementById('bookcase');if(!state.items.length){box.className='empty';box.innerHTML='<div><b>书架数据准备中</b><p>同步完成后，真实藏书会在这里变成彩色书脊墙。</p></div>';return}box.className='bookcase';const visible=state.items.slice(0,84),rows=Math.max(1,Math.min(6,Math.ceil(visible.length/14))),per=Math.ceil(visible.length/rows);box.innerHTML=Array.from({length:rows},(_,row)=>`<div class="case-row"><div class="book-line">${visible.slice(row*per,(row+1)*per).map((item,index)=>spine(item,index+row*20)).join('')}</div></div>`).join('')}
+        function renderStats(){const data=state[state.mode]||{},finished=(state.shelf.books||[]).filter(book=>book.finishReading===1).length,compare=state.mode==='monthly'&&data.compare!=null?`较上期 ${data.compare>=0?'↑':'↓'} ${Math.abs(Math.round(data.compare*100))}%`:'每一分钟都算数';document.getElementById('stats').innerHTML=`<article class="stat"><p>阅读总时长</p><strong>${duration(data.totalReadTime)}</strong><small>${compare}</small></article><article class="stat"><p>阅读天数</p><strong>${data.readDays||0}<i>天</i></strong><small>${state.mode==='monthly'?'本月有效阅读日':'一路积累的阅读日'}</small></article><article class="stat"><p>书架条目</p><strong>${state.items.length}<i>个</i></strong><small>电子书、有声内容与收藏</small></article><article class="stat"><p>已经读完</p><strong>${finished}<i>本</i></strong><small>来自当前书架状态</small></article>`;document.getElementById('average').textContent=`${duration(data.dayAverageReadTime)} / 日`;const values=Object.values(data.readTimes||{}).slice(-14),max=Math.max(...values,1);document.getElementById('bars').innerHTML=values.length?values.map(value=>`<i style="height:${Math.max(7,Math.round(value/max*100))}%"></i>`).join(''):'<span style="margin:auto;color:#888;font-size:9px">暂无节奏数据</span>';document.getElementById('taste').innerHTML=(data.preferCategory||[]).slice(0,4).map(item=>`<div><span>${escapeHtml(item.categoryTitle||item.parentCategoryTitle||'其他')}</span><div><i style="width:${Math.max(10,Math.round((item.val||.3)*100))}%"></i></div><small>${duration(item.readingTime)}</small></div>`).join('')||'<span style="color:#888;font-size:9px">暂无偏好数据</span>';document.getElementById('longest').innerHTML=(data.readLongest||[]).slice(0,4).map((entry,index)=>{const book=entry.book||entry.albumInfo||{},title=book.title||book.name||'一本好书',author=book.author||book.authorName||'',cover=/^https:/i.test(book.cover||'')?`<img src="${escapeHtml(book.cover)}" alt="">`:'<div class="cover-placeholder"></div>';return `<div class="longest-item"><b>0${index+1}</b>${cover}<div><strong>${escapeHtml(title)}</strong><span>${escapeHtml(author)} · ${duration(entry.readTime)}</span></div></div>`}).join('')||'<span style="color:#888;font-size:9px">暂无阅读排行</span>'}
+        function render(){const finished=(state.shelf.books||[]).filter(book=>book.finishReading===1).length;document.getElementById('hero-total').textContent=state.items.length;document.getElementById('hero-finished').textContent=finished;document.getElementById('hero-days').textContent=state.monthly.readDays||0;document.getElementById('shelf-meta').innerHTML=`<strong>${state.items.length}</strong> 个条目<br>${state.updatedAt?`数据更新于 ${new Date(state.updatedAt).toLocaleString('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})}`:'等待首次同步'}`;renderMini();renderShelf();renderStats()}
+        async function load(){try{const response=await fetch(`./data/weread.json?t=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error('书架数据尚未生成');const data=await response.json();if(data.status==='pending')throw new Error('书架正在等待首次同步');state.shelf=data.shelf||{};state.monthly=data.monthly||{};state.overall=data.overall||{};state.updatedAt=data.updatedAt;state.items=normalize(state.shelf);render();const sync=document.getElementById('sync');sync.className='sync ready';sync.querySelector('span').textContent='书架已同步'}catch(error){renderMini();renderShelf();const sync=document.getElementById('sync');sync.className='sync error';sync.querySelector('span').textContent='等待同步';document.getElementById('shelf-meta').textContent=error.message}}
+        document.querySelectorAll('.modes button').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.modes button').forEach(item=>item.classList.remove('active'));button.classList.add('active');state.mode=button.dataset.mode;renderStats()}));
+        renderMini();renderShelf();renderStats();load();
+    </script>
+</body>
+</html>
