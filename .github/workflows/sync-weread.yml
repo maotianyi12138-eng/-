@@ -34,13 +34,55 @@ jobs:
               "https://i.weread.qq.com/api/agent/gateway"
           }
 
+          check_payload() {
+            jq -e '((.errcode // 0) == 0) and (has("upgrade_info") | not)' <<<"$1" >/dev/null
+          }
+
           shelf="$(gateway '{"api_name":"/shelf/sync","skill_version":"1.0.4"}')"
           monthly="$(gateway '{"api_name":"/readdata/detail","skill_version":"1.0.4","mode":"monthly","baseTime":0}')"
           overall="$(gateway '{"api_name":"/readdata/detail","skill_version":"1.0.4","mode":"overall","baseTime":0}')"
 
           for payload in "$shelf" "$monthly" "$overall"; do
-            jq -e '((.errcode // 0) == 0) and (has("upgrade_info") | not)' <<<"$payload" >/dev/null
+            check_payload "$payload"
           done
+
+          notes='{}'
+          while IFS= read -r book_id; do
+            [ -n "$book_id" ] || continue
+
+            highlights_request="$(jq -cn --arg bookId "$book_id" \
+              '{api_name:"/book/bookmarklist",skill_version:"1.0.4",bookId:$bookId}')"
+            highlights="$(gateway "$highlights_request")"
+            check_payload "$highlights"
+
+            thought_items='[]'
+            thought_synckey=0
+            thought_page=0
+            while [ "$thought_page" -lt 20 ]; do
+              thoughts_request="$(jq -cn --arg bookid "$book_id" --argjson synckey "$thought_synckey" \
+                '{api_name:"/review/list/mine",skill_version:"1.0.4",bookid:$bookid,synckey:$synckey,count:100}')"
+              thoughts_page="$(gateway "$thoughts_request")"
+              check_payload "$thoughts_page"
+              thought_items="$(jq -cn --argjson current "$thought_items" --argjson page "$thoughts_page" \
+                '$current + ($page.reviews // [])')"
+
+              if ! jq -e '(.hasMore == 1) or (.hasMore == true)' <<<"$thoughts_page" >/dev/null; then
+                break
+              fi
+              next_synckey="$(jq -r '.synckey // empty' <<<"$thoughts_page")"
+              [ -n "$next_synckey" ] && [ "$next_synckey" != "$thought_synckey" ] || break
+              thought_synckey="$next_synckey"
+              thought_page=$((thought_page + 1))
+            done
+
+            thoughts="$(jq -cn --argjson reviews "$thought_items" '{reviews:$reviews}')"
+            notes="$(jq -cn \
+              --argjson notes "$notes" \
+              --arg bookId "$book_id" \
+              --argjson highlights "$highlights" \
+              --argjson thoughts "$thoughts" \
+              '$notes + {($bookId): {highlights:$highlights,thoughts:$thoughts}}')"
+          done < <(jq -r '.books[]?.bookId // empty' <<<"$shelf")
 
           mkdir -p data
           jq -n \
@@ -48,7 +90,8 @@ jobs:
             --argjson shelf "$shelf" \
             --argjson monthly "$monthly" \
             --argjson overall "$overall" \
-            '{status:"ready",updatedAt:$updatedAt,shelf:$shelf,monthly:$monthly,overall:$overall}' \
+            --argjson notesByBook "$notes" \
+            '{status:"ready",updatedAt:$updatedAt,shelf:$shelf,monthly:$monthly,overall:$overall,notesByBook:$notesByBook}' \
             > data/weread.json
 
       - name: Publish refreshed data
