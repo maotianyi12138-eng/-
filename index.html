@@ -72,6 +72,88 @@
         #viewer, #ad-pop { display: none; position: fixed; inset: 0; z-index: 1000; flex-direction: column; align-items: center; justify-content: center; }
         #viewer { background: rgba(0,0,0,0.98); }
 
+        body.reading-modal-open { overflow: hidden; }
+        #reading-experience {
+            display: none; position: fixed; inset: 0; z-index: 1400; flex-direction: column;
+            color: #17372e; background: #f4efdf;
+        }
+        #reading-experience.is-open { display: flex; }
+        .reading-frame-bar {
+            height: 64px; flex: 0 0 64px; display: flex; align-items: center; justify-content: space-between;
+            gap: 16px; padding: 0 24px; background: rgba(244,239,223,0.96);
+            border-bottom: 1px solid rgba(23,55,46,0.14); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+        }
+        .reading-frame-brand { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
+        .reading-frame-brand strong { font-family: Georgia, 'Noto Sans SC', serif; font-size: 18px; letter-spacing: 0.14em; }
+        .reading-frame-brand span { color: rgba(23,55,46,0.52); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; }
+        .reading-frame-actions { display: flex; align-items: center; gap: 10px; }
+        .reading-frame-actions a, .reading-frame-actions button {
+            border: 1px solid rgba(23,55,46,0.18); background: transparent; color: #17372e;
+            border-radius: 999px; padding: 9px 14px; font-size: 10px; letter-spacing: 0.08em;
+        }
+        .reading-frame-actions button { width: 36px; height: 36px; padding: 0; font-size: 20px; line-height: 1; }
+        #reading-frame { display: block; width: 100%; flex: 1 1 auto; border: 0; background: #f8f4e9; }
+
+        .reading-portal {
+            position: relative; overflow: hidden; display: grid; grid-template-columns: 1.08fr 0.92fr;
+            min-height: 470px; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.12);
+            background: linear-gradient(135deg, rgba(16,47,39,0.95), rgba(30,62,51,0.78));
+            box-shadow: 0 26px 70px rgba(0,0,0,0.28);
+        }
+        .reading-portal::before {
+            content: ''; position: absolute; width: 360px; height: 360px; border-radius: 50%;
+            right: -70px; top: -130px; background: rgba(224,189,116,0.13); filter: blur(2px);
+        }
+        .reading-portal-copy { position: relative; z-index: 2; padding: clamp(34px,5vw,72px); align-self: center; }
+        .reading-kicker { display: flex; align-items: center; gap: 12px; color: #d8b46c; font-size: 9px; letter-spacing: 0.24em; text-transform: uppercase; }
+        .reading-kicker::before { content: ''; width: 38px; height: 1px; background: currentColor; }
+        .reading-portal h2 { margin: 22px 0 18px; font-family: Georgia, 'Noto Sans SC', serif; font-size: clamp(38px,5vw,70px); line-height: 1.05; letter-spacing: -0.04em; }
+        .reading-portal h2 em { display: block; color: #d9b56e; font-style: normal; }
+        .reading-portal-copy > p { max-width: 560px; color: rgba(237,243,234,0.62); font-size: 13px; line-height: 1.9; }
+        .reading-portal-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+        .reading-launch, .reading-external {
+            display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px;
+            border-radius: 999px; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; transition: 0.25s ease;
+        }
+        .reading-launch { border: 0; color: #17372e; background: #e9d29d; }
+        .reading-launch:hover { background: #fff1c9; transform: translateY(-2px); }
+        .reading-external { border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.68); }
+        .reading-external:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
+        .reading-privacy { display: flex; align-items: center; gap: 8px; margin-top: 18px; color: rgba(255,255,255,0.35); font-size: 9px; letter-spacing: 0.06em; }
+        .reading-privacy::before { content: ''; width: 6px; height: 6px; border: 1px solid #b6d1c3; border-radius: 50%; }
+        .reading-visual { position: relative; min-height: 390px; align-self: stretch; }
+        .reading-sun { position: absolute; width: 250px; height: 250px; right: 7%; top: 13%; border-radius: 50%; background: rgba(234,211,164,0.15); }
+        .reading-shelf { position: absolute; left: 7%; right: 8%; bottom: 13%; height: 280px; display: flex; align-items: flex-end; gap: 8px; }
+        .reading-book { flex: 1; min-width: 34px; max-width: 74px; border-radius: 3px 3px 0 0; box-shadow: -8px 10px 18px rgba(0,0,0,0.22); writing-mode: vertical-rl; padding-top: 20px; text-align: center; font-size: 10px; letter-spacing: 0.12em; color: #ecdfc5; }
+        .reading-book:nth-child(1) { height: 68%; background: #8e5c43; }
+        .reading-book:nth-child(2) { height: 90%; background: #bd8c47; color: #17372e; }
+        .reading-book:nth-child(3) { height: 78%; background: #66806f; }
+        .reading-book:nth-child(4) { height: 100%; background: #dfc686; color: #17372e; }
+        .reading-book:nth-child(5) { height: 74%; background: #7f4d3a; }
+        .reading-shelf::after { content: ''; position: absolute; left: -3%; right: -2%; bottom: -12px; height: 12px; background: #8e5c3e; box-shadow: 0 18px 30px rgba(0,0,0,0.32); }
+        .reading-feature-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 18px; }
+        .reading-feature { padding: 20px 22px; border-radius: 1.2rem; background: rgba(255,255,255,0.035); border: 1px solid rgba(255,255,255,0.08); }
+        .reading-feature strong { display: block; margin-bottom: 7px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+        .reading-feature span { color: rgba(255,255,255,0.38); font-size: 10px; line-height: 1.7; }
+        .playlist-card { min-height: 100%; }
+        .playlist-index { color: rgba(255,255,255,0.2); font-size: 9px; }
+
+        @media (max-width: 900px) {
+            .reading-portal { grid-template-columns: 1fr; }
+            .reading-visual { min-height: 330px; }
+            .reading-portal-copy { padding-bottom: 18px; }
+        }
+        @media (max-width: 767px) {
+            .reading-frame-bar { height: 58px; flex-basis: 58px; padding: 0 12px; }
+            .reading-frame-brand span, .reading-frame-actions a { display: none; }
+            .reading-portal { border-radius: 1.4rem; }
+            .reading-portal h2 { font-size: 44px; }
+            .reading-feature-grid { grid-template-columns: 1fr; gap: 8px; }
+            .reading-feature { padding: 16px 18px; }
+            .reading-visual { min-height: 290px; }
+            .reading-shelf { height: 235px; }
+        }
+
         .thought-card { background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 1.5rem; transition: 0.3s; }
         .thought-card:hover { background: rgba(255,255,255,0.06); }
         .thought-images { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 1rem; }
@@ -129,6 +211,19 @@
             </div>
         </div>
     </div>
+
+    <section id="reading-experience" aria-hidden="true" aria-label="阅境微信读书可视化空间">
+        <div class="reading-frame-bar">
+            <div class="reading-frame-brand">
+                <strong>阅境</strong><span>WeRead visual reading space</span>
+            </div>
+            <div class="reading-frame-actions">
+                <a href="https://yuejing-reading-wall.maotianyi12138.chatgpt.site" target="_blank" rel="noopener noreferrer">在新窗口打开 ↗</a>
+                <button type="button" aria-label="关闭阅境" onclick="closeReadingExperience()">×</button>
+            </div>
+        </div>
+        <iframe id="reading-frame" title="阅境 · 微信读书可视化书架" loading="lazy" allow="clipboard-write"></iframe>
+    </section>
 
     <script src="movies.js"></script>
     <script src="thoughts.js"></script>
@@ -347,7 +442,7 @@
                         </div>
                         <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                             <div onclick="switchPage('cinema')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Cinema</span><span class="zh-sub">电影</span></div>
-                            <div onclick="switchPage('reading')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Media</span><span class="zh-sub">视听</span></div>
+                            <div onclick="switchPage('reading')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Books & Music</span><span class="zh-sub">音乐与阅读</span></div>
                             <div onclick="switchPage('thoughts')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Reflect</span><span class="zh-sub">感悟</span></div>
                             <div onclick="switchPage('calligraphy')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Ink</span><span class="zh-sub">书法</span></div>
                         </div>
@@ -533,31 +628,89 @@
 
         function renderReading() {
             app.innerHTML = `
-                <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Soul & Rhythm</span><span class="zh-sub text-sm mt-2">音乐与阅读</span></div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-                    <div class="glass p-8">
-                        <span class="en-main text-2xl mb-6">Currently Reading</span>
-                        <div class="flex gap-4">
-                            <div class="w-32 h-44 bg-white/10 rounded-lg overflow-hidden shadow-2xl"><img src="book_cover.jpg" loading="lazy" decoding="async" class="w-full h-full object-cover" onerror="this.style.display='none'"></div>
-                            <div class="flex-1">
+                <div class="mb-10 px-4 flex flex-col"><span class="en-main text-5xl md:text-6xl">Soul & Rhythm</span><span class="zh-sub text-sm mt-2">音乐与阅读</span></div>
+                <div class="px-4 pb-8">
+                    <section class="reading-portal" aria-label="阅境微信读书可视化入口">
+                        <div class="reading-portal-copy">
+                            <span class="reading-kicker">A private reading archive</span>
+                            <h2>把读过的时光，<em>陈列成一面墙。</em></h2>
+                            <p>连接微信读书，生成属于你的书架墙、月度阅读节奏与阅读偏好；还能保存数据，制作一张可分享的阅读卡片。</p>
+                            <div class="reading-portal-actions">
+                                <button type="button" class="reading-launch" onclick="openReadingExperience()">进入我的阅读世界 →</button>
+                                <a class="reading-external" href="https://yuejing-reading-wall.maotianyi12138.chatgpt.site" target="_blank" rel="noopener noreferrer">独立打开 ↗</a>
+                            </div>
+                            <span class="reading-privacy">API Key 只用于本次连接，不在此网站保存</span>
+                        </div>
+                        <div class="reading-visual" aria-hidden="true">
+                            <div class="reading-sun"></div>
+                            <div class="reading-shelf">
+                                <span class="reading-book">加缪</span>
+                                <span class="reading-book">动物农场</span>
+                                <span class="reading-book">创意行为</span>
+                                <span class="reading-book">苔藓森林</span>
+                                <span class="reading-book">罐头厂街</span>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="reading-feature-grid" aria-label="阅境功能">
+                        <div class="reading-feature"><strong>Bookshelf Wall</strong><span>同步书架，让每一本书都有自己的位置。</span></div>
+                        <div class="reading-feature"><strong>Reading Insights</strong><span>查看月度与总览阅读时长、节奏和偏好。</span></div>
+                        <div class="reading-feature"><strong>Share Your Month</strong><span>保存原始数据，生成可分享的阅读卡片。</span></div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 mt-4 pb-10">
+                    <div class="glass p-8 playlist-card">
+                        <div class="flex justify-between items-start mb-7">
+                            <div><span class="en-main text-2xl">Currently Reading</span><span class="zh-sub mt-1">此刻正在读</span></div>
+                            <span class="playlist-index">01 / BOOKS</span>
+                        </div>
+                        <div class="flex gap-5">
+                            <div class="w-28 h-40 bg-white/10 rounded-lg overflow-hidden shadow-2xl flex-none"><img src="book_cover.jpg" loading="lazy" decoding="async" class="w-full h-full object-cover" onerror="this.style.display='none'"></div>
+                            <div class="flex-1 pt-2">
                                 <span class="en-main text-lg">Walden</span>
-                                <span class="zh-sub text-xs">《瓦尔登湖》 - Henry David Thoreau</span>
-                                <p class="en-main text-[10px] opacity-60 mt-4 leading-relaxed italic">"I went to the woods because I wished to live deliberately..."</p>
+                                <span class="zh-sub text-xs">《瓦尔登湖》 · Henry David Thoreau</span>
+                                <p class="en-main text-[10px] opacity-50 mt-5 leading-relaxed italic">“I went to the woods because I wished to live deliberately...”</p>
                             </div>
                         </div>
                     </div>
-                    <div class="glass p-8">
-                        <span class="en-main text-2xl mb-6">Playlist of the Year</span>
+                    <div class="glass p-8 playlist-card">
+                        <div class="flex justify-between items-start mb-7">
+                            <div><span class="en-main text-2xl">Playlist of the Year</span><span class="zh-sub mt-1">年度歌单</span></div>
+                            <span class="playlist-index">02 / MUSIC</span>
+                        </div>
                         <div class="space-y-4">
-                            ${['In the End - Linkin Park', 'Bohemian Rhapsody - Queen', 'Nocturne - Jay Chou'].map(song => `
+                            ${['In the End · Linkin Park', 'Bohemian Rhapsody · Queen', 'Nocturne · Jay Chou'].map((song, index) => `
                                 <div class="flex items-center justify-between border-b border-white/5 pb-2">
-                                    <span class="en-main text-sm opacity-80">${song}</span>
-                                    <span class="en-main text-[9px] opacity-30">PLAYING</span>
+                                    <span class="en-main text-sm opacity-80"><span class="opacity-30 mr-3">0${index + 1}</span>${song}</span>
+                                    <span class="en-main text-[9px] opacity-30">PLAY</span>
                                 </div>`).join('')}
                         </div>
                     </div>
                 </div>`;
         }
+
+        const readingAppUrl = 'https://yuejing-reading-wall.maotianyi12138.chatgpt.site';
+        function openReadingExperience() {
+            const experience = document.getElementById('reading-experience');
+            const frame = document.getElementById('reading-frame');
+            if (!frame.src) frame.src = readingAppUrl;
+            experience.classList.add('is-open');
+            experience.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('reading-modal-open');
+        }
+
+        function closeReadingExperience() {
+            const experience = document.getElementById('reading-experience');
+            experience.classList.remove('is-open');
+            experience.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('reading-modal-open');
+        }
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && document.getElementById('reading-experience').classList.contains('is-open')) {
+                closeReadingExperience();
+            }
+        });
 
         function renderThoughts() {
             const renderThoughtImages = (thought) => {
