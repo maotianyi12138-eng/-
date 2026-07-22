@@ -114,26 +114,39 @@
             .thought-card.expanded { grid-column:span 2; }
         }
 
-        .ink-gallery-shell { position:relative; width:min(1700px,100%); margin:0 auto; padding:clamp(18px,3vw,42px) 0 clamp(22px,4vw,54px); overflow:hidden; border:1px solid rgba(255,255,255,.12); border-radius:1.5rem; background:linear-gradient(110deg,rgba(255,255,255,.05),rgba(4,4,4,.28)); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); box-shadow:0 35px 90px rgba(0,0,0,.24); }
-        .ink-gallery-track { display:grid; grid-auto-flow:column; grid-auto-columns:clamp(250px,28vw,390px); gap:clamp(18px,2.5vw,38px); overflow-x:auto; scroll-snap-type:x mandatory; overscroll-behavior-x:contain; scrollbar-width:none; padding:8px clamp(26px,5vw,76px) 24px; }
+        body.calligraphy-page { background-color:#b8b0a3!important; background-image:linear-gradient(180deg,#d8d2c8 0%,#c9c1b5 60%,#958a7b 100%)!important; color:#27231d; }
+        body.calligraphy-page #app-content { padding:0!important; }
+        body.calligraphy-page #back-btn,
+        body.calligraphy-page #music-toggle { color:#28241e; opacity:.7; background:rgba(244,240,231,.62); border:1px solid rgba(44,38,30,.22); box-shadow:0 8px 24px rgba(51,42,31,.12); backdrop-filter:blur(10px); }
+        .ink-gallery-page { position:relative; isolation:isolate; min-height:100svh; overflow:hidden; padding:clamp(76px,9vh,112px) 0 clamp(76px,9vh,116px); background:linear-gradient(90deg,rgba(89,78,62,.13) 1px,transparent 1px) 0 0/18% 100%,linear-gradient(180deg,#ded8cd 0%,#cbc3b7 73%,#968a7b 73%,#817464 100%); box-shadow:inset 0 30px 70px rgba(255,255,255,.35),inset 0 -34px 80px rgba(54,43,31,.2); }
+        .ink-gallery-page:before { content:""; position:absolute; z-index:0; inset:0 0 27%; pointer-events:none; background:radial-gradient(ellipse at 18% -8%,rgba(255,251,226,.94) 0,rgba(255,247,211,.38) 19%,transparent 47%),radial-gradient(ellipse at 50% -8%,rgba(255,251,226,.9) 0,rgba(255,247,211,.34) 20%,transparent 48%),radial-gradient(ellipse at 82% -8%,rgba(255,251,226,.9) 0,rgba(255,247,211,.34) 20%,transparent 48%); mix-blend-mode:screen; }
+        .ink-gallery-page:after { content:""; position:absolute; z-index:0; left:-10%; right:-10%; bottom:-10%; height:38%; pointer-events:none; transform:perspective(600px) rotateX(58deg); transform-origin:50% 100%; background:repeating-linear-gradient(90deg,rgba(58,47,36,.14) 0 1px,transparent 1px 9%),linear-gradient(180deg,#a89d8d,#766958); box-shadow:inset 0 2px rgba(255,255,255,.35); }
+        .ink-gallery-plaque { position:relative; z-index:3; width:max-content; max-width:calc(100% - 40px); margin:0 auto clamp(28px,4vh,48px); padding:9px 15px 8px; text-align:center; color:#40382e; background:#e8e2d7; border:1px solid rgba(63,52,39,.22); box-shadow:0 7px 18px rgba(62,50,36,.1); }
+        .ink-gallery-plaque-title { display:block; font:300 10px/1.2 'Noto Sans SC',sans-serif; letter-spacing:.22em; }
+        .ink-gallery-status { display:block; margin-top:5px; color:#766d61; font:300 8px/1.2 'Noto Sans SC',sans-serif; letter-spacing:.11em; }
+        .ink-gallery-shell { position:relative; z-index:2; width:min(1780px,100%); margin:0 auto; padding:0 0 clamp(16px,3vh,32px); overflow:hidden; }
+        .ink-gallery-track { display:grid; grid-auto-flow:column; grid-auto-columns:clamp(270px,25vw,390px); align-items:center; gap:clamp(28px,3.2vw,58px); overflow-x:auto; scroll-snap-type:x mandatory; overscroll-behavior-x:contain; scrollbar-width:none; padding:34px clamp(38px,6vw,106px) 54px; }
         .ink-gallery-track::-webkit-scrollbar { display:none; }
-        .ink-frame { scroll-snap-align:center; position:relative; min-height:clamp(390px,61vh,720px); display:grid; grid-template-rows:1fr auto; padding:clamp(12px,1.5vw,20px); color:#171512; background:#ded6c3; border:clamp(8px,1vw,14px) solid #24211d; box-shadow:0 20px 36px rgba(0,0,0,.38),inset 0 0 0 3px rgba(255,255,255,.44); transform:rotate(var(--tilt,0deg)); cursor:zoom-in; }
-        .ink-frame:before { content:""; position:absolute; inset:7px; border:1px solid rgba(255,255,255,.35); pointer-events:none; }
-        .ink-frame:nth-child(3n+1) { --tilt:-.4deg; }
-        .ink-frame:nth-child(3n+2) { --tilt:.35deg; }
-        .ink-art { min-height:0; display:grid; place-items:center; overflow:hidden; background:#f1ede2; }
-        .ink-art img { width:100%; height:100%; object-fit:contain; display:block; filter:contrast(1.02) saturate(.94); transition:transform .45s; }
-        .ink-frame:hover .ink-art img { transform:scale(1.025); }
-        .ink-caption { display:flex; justify-content:space-between; gap:12px; padding:12px 2px 0; color:#24211d; font:300 9px/1.4 'Noto Sans SC',sans-serif; letter-spacing:.1em; }
+        .ink-frame { scroll-snap-align:center; position:relative; height:clamp(420px,62vh,690px); display:grid; grid-template-rows:minmax(0,1fr) auto; padding:clamp(13px,1.35vw,19px); color:#242019; background:#ede7dc; border:clamp(7px,.7vw,11px) solid #332c23; box-shadow:0 31px 40px rgba(53,42,29,.26),0 6px 13px rgba(53,42,29,.25),inset 0 0 0 2px rgba(255,255,255,.74); transform:none; cursor:zoom-in; transition:transform .35s ease,box-shadow .35s ease; }
+        .ink-frame:before { content:""; position:absolute; inset:-54px -34px 52%; z-index:-1; background:radial-gradient(ellipse at 50% 0,rgba(255,247,213,.75),transparent 68%); pointer-events:none; }
+        .ink-frame:hover { transform:translateY(-5px); box-shadow:0 37px 50px rgba(53,42,29,.3),0 8px 16px rgba(53,42,29,.24),inset 0 0 0 2px rgba(255,255,255,.8); }
+        .ink-art { min-height:0; display:grid; place-items:center; overflow:hidden; background:#f7f3e9; border:1px solid rgba(71,59,44,.18); box-shadow:inset 0 0 34px rgba(83,66,45,.08); }
+        .ink-art img { width:100%; height:100%; object-fit:contain; display:block; filter:contrast(1.02) saturate(.92); transition:transform .45s; }
+        .ink-frame:hover .ink-art img { transform:scale(1.012); }
+        .ink-caption { display:flex; justify-content:space-between; gap:12px; padding:12px 2px 0; color:#40372d; font:300 9px/1.4 'Noto Sans SC',sans-serif; letter-spacing:.11em; }
         .ink-gallery-controls { display:flex; justify-content:center; align-items:center; gap:14px; }
-        .ink-gallery-controls button { width:42px; height:42px; border:1px solid rgba(255,255,255,.24); border-radius:50%; color:white; background:rgba(0,0,0,.32); cursor:pointer; transition:.2s; }
-        .ink-gallery-controls button:hover { background:rgba(255,255,255,.16); }
-        .ink-gallery-count { min-width:76px; text-align:center; color:rgba(255,255,255,.55); font-size:9px; letter-spacing:.14em; }
-        .ink-empty { min-height:56vh; display:grid; place-items:center; padding:32px; text-align:center; color:rgba(255,255,255,.66); }
+        .ink-gallery-controls button { width:39px; height:39px; border:1px solid rgba(54,45,34,.28); border-radius:50%; color:#41382d; background:rgba(238,232,220,.72); box-shadow:0 8px 22px rgba(54,45,34,.12); cursor:pointer; transition:.2s; }
+        .ink-gallery-controls button:hover { color:#17130f; background:#f3eee4; transform:translateY(-2px); }
+        .ink-gallery-count { min-width:76px; text-align:center; color:#655b4f; font-size:9px; letter-spacing:.14em; }
+        .ink-empty { min-height:52vh; display:grid; place-items:center; padding:32px; text-align:center; color:#5d5347; }
         @media (max-width:767px) {
-            .ink-gallery-shell { border-radius:1rem; padding-top:12px; }
-            .ink-gallery-track { grid-auto-columns:82vw; gap:16px; padding-inline:9vw; }
-            .ink-frame { min-height:57svh; border-width:8px; padding:10px; }
+            .ink-gallery-page { min-height:100svh; padding:68px 0 58px; background:linear-gradient(180deg,#dcd6ca 0%,#cbc2b4 87%,#978b7b 87%,#837564 100%); }
+            .ink-gallery-page:after { display:none; }
+            .ink-gallery-plaque { margin-bottom:14px; padding:8px 12px 7px; }
+            .ink-gallery-track { grid-auto-columns:82vw; gap:18px; padding:22px 9vw 38px; }
+            .ink-frame { height:64svh; min-height:440px; border-width:7px; padding:10px; box-shadow:0 22px 30px rgba(53,42,29,.26),0 5px 11px rgba(53,42,29,.2),inset 0 0 0 2px rgba(255,255,255,.7); }
+            .ink-frame:hover { transform:none; }
+            body.calligraphy-page #back-btn { top:10px; left:10px; }
         }
         .works-project-cover { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
         .works-detail-main { max-height: 72vh; width: 100%; object-fit: contain; background: #000; }
@@ -671,38 +684,79 @@
                 </div>`;
         }
 
-        const calligraphyState = { items: [], current: 0 };
+        const CALLIGRAPHY_ENDPOINT = 'https://api.github.com/repos/maotianyi12138-eng/-/contents/%E4%B9%A6%E6%B3%95?ref=main';
+        const CALLIGRAPHY_CACHE_KEY = 'maotianyi-calligraphy-auto-index-v1';
+        const calligraphyFallbackItems = [
+            { name: '2026-07-21.jpg', src: '书法/2026-07-21.jpg' },
+            { name: '2026-07-20.jpg', src: '书法/2026-07-20.jpg' },
+            { name: '2026-07-19.jpg', src: '书法/2026-07-19.jpg' }
+        ];
+        const calligraphyState = { items: [], current: 0, signature: '', refreshTimer: 0 };
 
         function calligraphyLabel(name = '') {
             return decodeURIComponent(name).replace(/\.[^.]+$/, '').replace(/[_]/g, ' · ').replace(/-/g, '.');
         }
 
-        async function loadCalligraphyGallery() {
+        function normalizeCalligraphyItems(payload = []) {
+            return (Array.isArray(payload) ? payload : [])
+                .filter(item => (!item.type || item.type === 'file') && /\.(png|jpe?g|webp|gif)$/i.test(item.name || '') && !/^latest\./i.test(item.name || ''))
+                .sort((a, b) => b.name.localeCompare(a.name, 'zh-Hans-CN', { numeric: true }))
+                .map(item => ({ name: item.name, src: item.download_url || item.src || encodeURI(item.path || '') }))
+                .filter(item => item.name && item.src);
+        }
+
+        function renderCalligraphyItems(items) {
             const track = document.getElementById('ink-gallery-track');
             const count = document.getElementById('ink-gallery-count');
+            const status = document.getElementById('ink-gallery-status');
             if (!track) return;
-            try {
-                const endpoint = 'https://api.github.com/repos/maotianyi12138-eng/-/contents/%E4%B9%A6%E6%B3%95?ref=main';
-                const response = await fetch(endpoint, { headers: { Accept: 'application/vnd.github+json' }, cache: 'no-store' });
-                if (!response.ok) throw new Error('暂时没有作品');
-                const payload = await response.json();
-                calligraphyState.items = (Array.isArray(payload) ? payload : [])
-                    .filter(item => item.type === 'file' && /\.(png|jpe?g|webp|gif)$/i.test(item.name) && !/^latest\./i.test(item.name))
-                    .sort((a, b) => b.name.localeCompare(a.name, 'zh-Hans-CN', { numeric: true }))
-                    .map(item => ({ name: item.name, src: item.download_url || encodeURI(item.path) }));
-                if (!calligraphyState.items.length) throw new Error('暂时没有作品');
-                track.innerHTML = calligraphyState.items.map((item, index) => `
+            const signature = items.map(item => `${item.name}:${item.src}`).join('|');
+            calligraphyState.items = items;
+            if (signature !== calligraphyState.signature || !track.querySelector('.ink-frame')) {
+                calligraphyState.signature = signature;
+                track.innerHTML = items.map((item, index) => `
                     <article class="ink-frame" onclick="openCalligraphyViewer(${index})">
                         <div class="ink-art"><img src="${escapeHtml(item.src)}" loading="${index < 3 ? 'eager' : 'lazy'}" decoding="async" alt="${escapeHtml(calligraphyLabel(item.name))} 书法练习"></div>
                         <div class="ink-caption"><span>${escapeHtml(calligraphyLabel(item.name))}</span><span>${String(index + 1).padStart(2, '0')}</span></div>
                     </article>`).join('');
                 calligraphyState.current = 0;
-                updateCalligraphyCount();
-                track.addEventListener('scroll', updateCalligraphyCount, { passive: true });
-            } catch (error) {
-                track.innerHTML = `<div class="ink-empty"><div><span class="en-main text-xs">AWAITING TODAY'S INK</span><span class="zh-sub mt-3 opacity-70">把作品上传到“书法”文件夹，建议命名为 YYYY-MM-DD.jpg</span></div></div>`;
-                if (count) count.textContent = '0 / 0';
+                track.scrollLeft = 0;
             }
+            if (status) status.textContent = `AUTO INDEX · ${items.length} WORK${items.length === 1 ? '' : 'S'}`;
+            updateCalligraphyCount();
+        }
+
+        async function loadCalligraphyGallery({ silent = false } = {}) {
+            const track = document.getElementById('ink-gallery-track');
+            const count = document.getElementById('ink-gallery-count');
+            const status = document.getElementById('ink-gallery-status');
+            if (!track) return;
+            window.clearTimeout(calligraphyState.refreshTimer);
+            if (!silent && status) status.textContent = 'AUTO INDEX · SEARCHING';
+            try {
+                const response = await fetch(CALLIGRAPHY_ENDPOINT, { headers: { Accept: 'application/vnd.github+json' }, cache: 'no-store' });
+                if (!response.ok) throw new Error('暂时没有作品');
+                const payload = await response.json();
+                const items = normalizeCalligraphyItems(payload);
+                if (!items.length) throw new Error('暂时没有作品');
+                try { localStorage.setItem(CALLIGRAPHY_CACHE_KEY, JSON.stringify(items)); } catch (_) {}
+                renderCalligraphyItems(items);
+            } catch (error) {
+                let cachedItems = [];
+                try { cachedItems = normalizeCalligraphyItems(JSON.parse(localStorage.getItem(CALLIGRAPHY_CACHE_KEY) || '[]')); } catch (_) {}
+                const items = cachedItems.length ? cachedItems : normalizeCalligraphyItems(calligraphyFallbackItems);
+                if (items.length) {
+                    renderCalligraphyItems(items);
+                    if (status) status.textContent = `CACHED INDEX · ${items.length} WORK${items.length === 1 ? '' : 'S'}`;
+                } else {
+                    track.innerHTML = `<div class="ink-empty"><div><span class="en-main text-xs">AWAITING TODAY'S INK</span><span class="zh-sub mt-3 opacity-70">把作品上传到“书法”文件夹，建议命名为 YYYY-MM-DD.jpg</span></div></div>`;
+                    if (count) count.textContent = '0 / 0';
+                    if (status) status.textContent = 'AUTO INDEX · STANDBY';
+                }
+            }
+            calligraphyState.refreshTimer = window.setTimeout(() => {
+                if (document.body.classList.contains('calligraphy-page')) loadCalligraphyGallery({ silent: true });
+            }, 120000);
         }
 
         function updateCalligraphyCount() {
@@ -735,8 +789,11 @@
 
         function renderCalligraphy() {
             app.innerHTML = `
-                <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Daily Ink</span><span class="zh-sub text-sm mt-2">书法日常</span></div>
-                <div class="px-4 pb-16">
+                <div class="ink-gallery-page">
+                    <header class="ink-gallery-plaque">
+                        <span class="ink-gallery-plaque-title">DAILY INK · 书法日常</span>
+                        <span id="ink-gallery-status" class="ink-gallery-status">AUTO INDEX · SEARCHING</span>
+                    </header>
                     <section class="ink-gallery-shell" aria-label="每日书法作品画廊">
                         <div id="ink-gallery-track" class="ink-gallery-track"><div class="ink-empty"><span class="en-main text-xs">LOADING GALLERY...</span></div></div>
                         <div class="ink-gallery-controls">
@@ -746,6 +803,7 @@
                         </div>
                     </section>
                 </div>`;
+            document.getElementById('ink-gallery-track')?.addEventListener('scroll', updateCalligraphyCount, { passive: true });
             loadCalligraphyGallery();
         }
 
@@ -803,13 +861,20 @@
 
         function switchPage(page) {
             if (page === 'home') restoreMainAudioFromReading();
+            if (page !== 'calligraphy') {
+                window.clearTimeout(calligraphyState.refreshTimer);
+                calligraphyState.refreshTimer = 0;
+            }
             app.style.opacity = '0';
             setTimeout(() => {
                 backBtn.classList.toggle('hidden', page === 'home');
                 document.body.classList.toggle('reading-page', page === 'reading');
+                document.body.classList.toggle('calligraphy-page', page === 'calligraphy');
                 
                 const isMobile = window.innerWidth < 768;
-                if (page === 'thoughts' || page === 'calligraphy') {
+                if (page === 'calligraphy') {
+                    document.body.style.backgroundImage = 'none';
+                } else if (page === 'thoughts') {
                     document.body.style.backgroundImage = isMobile ? "url('反思竖屏.jpg')" : "url('反思横屏.jpg')";
                 } else {
                     document.body.style.backgroundImage = isMobile ? "url('mobile_bg.jpg')" : "url('horse.jpg')";
