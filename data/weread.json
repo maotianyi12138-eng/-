@@ -1,7 +1,1501 @@
 {
-  "status": "pending",
-  "updatedAt": null,
-  "shelf": { "books": [], "albums": [], "mp": null },
-  "monthly": {},
-  "overall": {}
+  "status": "ready",
+  "updatedAt": "2026-07-22T15:23:15Z",
+  "shelf": {
+    "mp": {
+      "show": 1,
+      "book": {
+        "bookId": "mpbook",
+        "title": "文章收藏",
+        "cover": "https://weread-1258476243.file.myqcloud.com/app/assets/bookcover/book_cover_app_favorite_articles.png",
+        "secret": 1,
+        "payType": 32,
+        "paid": 0,
+        "updateTime": 0,
+        "readUpdateTime": 0,
+        "isTop": false
+      }
+    },
+    "albums": [],
+    "archive": [],
+    "books": [
+      {
+        "bookId": "CB_Djp4Tt4V55Oi73w75h4jb9UW",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=92e42153643425f446a70345474345635354f69373377373568346a623955576f8",
+        "title": "伦敦国家美术馆（伟大的博物馆）",
+        "author": "达尼埃拉·塔拉布拉",
+        "cover": "https://res.weread.qq.com/wrepub/CB_2njAvTAwD2jO73m74sF4K934_parsecover",
+        "updateTime": 1779450701,
+        "secret": 1,
+        "finishReading": 0,
+        "readUpdateTime": 1781687045
+      },
+      {
+        "bookId": "3300155373",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=80332260813aba331g013372",
+        "title": "在我身上有一个不可战胜的夏天",
+        "author": "[法]阿尔贝·加缪",
+        "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/t6_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
+        "category": "文学-外国文学",
+        "finishReading": 0,
+        "readUpdateTime": 1784135798,
+        "secret": 0,
+        "updateTime": 1753950608
+      },
+      {
+        "bookId": "3300197381",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=32732670813abb39ag011d6c",
+        "title": "为什么10倍增长比2倍更容易",
+        "author": "[美]丹·沙利文  [美]本杰明·哈迪",
+        "updateTime": 1772710347,
+        "cover": "https://cdn.weread.qq.com/weread/cover/49/cpplatform_8pe4n9gxbb22ofnsynyphg/t6_cpplatform_8pe4n9gxbb22ofnsynyphg1772705172.jpg",
+        "finishReading": 1,
+        "readUpdateTime": 1779391515,
+        "secret": 0,
+        "category": "经济理财-管理"
+      },
+      {
+        "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=55a42743643425f337961426d49305557414a5036715737314e306e664537763c4",
+        "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
+        "author": "",
+        "cover": "https://res.weread.qq.com/wrepub/CB_B3A5my5lA5d66xg6xFFBX9Z7_parsecover",
+        "updateTime": 1775241182,
+        "secret": 1,
+        "finishReading": 0,
+        "readUpdateTime": 1775487644
+      },
+      {
+        "bookId": "3300175674",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=ce332d50813abab1fg014aaa",
+        "title": "动物农场",
+        "author": "[英]乔治·奥威尔",
+        "updateTime": 1774923903,
+        "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_e1wvnlkxez6bq6ucipa9oy/t6_cpplatform_e1wvnlkxez6bq6ucipa9oy1762742145.jpg",
+        "finishReading": 0,
+        "readUpdateTime": 1784644362,
+        "secret": 0,
+        "category": "文学-外国文学"
+      },
+      {
+        "bookId": "3300199881",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=870320d0813abb494g0113ca",
+        "title": "Claude Code橙皮书：从入门到精通（微信读书特别版）",
+        "author": "花叔",
+        "cover": "https://cdn.weread.qq.com/weread/cover/19/cpplatform_uxgat2cacw5ne8darcgwa2/t6_cpplatform_uxgat2cacw5ne8darcgwa21775208984.jpg",
+        "category": "计算机-人工智能",
+        "finishReading": 0,
+        "readUpdateTime": 1784392199,
+        "secret": 0,
+        "updateTime": 1780977452
+      },
+      {
+        "bookId": "3300140838",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
+        "title": "创意行为：存在即答案",
+        "author": "[美]里克·鲁宾",
+        "updateTime": 1744604811,
+        "cover": "https://cdn.weread.qq.com/weread/cover/46/cpplatform_bpydeflrt9d2xtkdsjzqqj/t6_cpplatform_bpydeflrt9d2xtkdsjzqqj1744601841.jpg",
+        "finishReading": 1,
+        "readUpdateTime": 1777735967,
+        "secret": 0,
+        "category": "个人成长-人生哲学"
+      },
+      {
+        "bookId": "3300043405",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=3c632e90813ab7774g015d62",
+        "title": "罐头厂街",
+        "author": "约翰·斯坦贝克",
+        "updateTime": 1779182927,
+        "cover": "https://cdn.weread.qq.com/weread/cover/89/cpPlatform_k1Eud7zDEcjzyUHn7KPLzy/t6_cpPlatform_k1Eud7zDEcjzyUHn7KPLzy.jpg",
+        "finishReading": 1,
+        "readUpdateTime": 1779827104,
+        "secret": 1,
+        "category": "文学-外国文学"
+      }
+    ]
+  },
+  "monthly": {
+    "readTimes": {
+      "1784131200": 497,
+      "1784390400": 1939,
+      "1784476800": 0,
+      "1784563200": 79
+    },
+    "readDays": 3,
+    "readLongest": [
+      {
+        "book": {
+          "bookId": "3300171413",
+          "title": "赞美闲散（果麦经典）",
+          "author": "[英]伯特兰·罗素",
+          "translator": "黄菡",
+          "intro": "诺贝尔文学奖得主罗素的随笔合集，共14篇文章,内容包括工作、教育、社会、文明、如何获得幸福等，融合了哲学与心理学，经济学，科学和历史等观点。\n罗素在百年前精准地预见了现代社会的“内卷”问题：科技越发展，人们反而陷入了更加激烈的竞争和更长的工时。本书大胆挑战了“核心工作论”：工作即美德的信念正在现代世界中制造大量危害，而通往幸福与繁荣之路在于有组织地减少工作。工作的道德是奴隶的道德，现代世界不需要奴隶。\n每天工作只4小时，一切都会好起来！真正的闲散并非游手好闲，而是从工作的重压下解放出来，将努力的方向从“谋生”转向“生活本身”，去追求那些真正定义文明和幸福的事——艺术、爱、知识、休闲和对世界的探索。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/64/cpplatform_7luzwyjdjm3kwkjwswkdyg/s_cpplatform_7luzwyjdjm3kwkjwswkdyg1761214962.jpg",
+          "version": 984273295,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 5,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 5,
+            "maxfreeChapterUid": 5,
+            "maxfreeChapterRatio": 64
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": -3319053,
+          "publishTime": "2025-10-01 00:00:00",
+          "lastChapterIdx": 18,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 4980,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 1010,
+        "tags": [
+          "单日阅读最久"
+        ]
+      },
+      {
+        "book": {
+          "bookId": "3300175674",
+          "title": "动物农场",
+          "author": "[英]乔治·奥威尔",
+          "translator": "尤玉金",
+          "intro": "一场由动物发起的革命，在曼诺农场悄然爆发。琼斯先生的残暴统治被推翻，动物们建立起 “动物农场”，立下 “所有动物一律平等” 的七诫，立志打造没有剥削的家园。\n然而，理想很快遭遇现实冲击。猪凭借智慧掌控权力，拿破仑逐渐显露独裁野心，驱逐异己、修改诫命，曾经的革命伙伴沦为新的 “被统治者”。平等的口号下，是越来越悬殊的阶级差距，动物们辛苦劳作的成果，最终流向少数统治者。\n这部作品以动物喻人，用荒诞故事揭露权力变质的真相，字里行间藏着对现实的深刻反思。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_e1wvnlkxez6bq6ucipa9oy/s_cpplatform_e1wvnlkxez6bq6ucipa9oy1762742145.jpg",
+          "version": 1700012358,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 4,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 4,
+            "maxfreeChapterUid": 4,
+            "maxfreeChapterRatio": 9
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000190,
+          "publishTime": "2025-11-10 00:00:00",
+          "lastChapterIdx": 12,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 2000,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 566,
+        "tags": []
+      },
+      {
+        "book": {
+          "bookId": "3300155373",
+          "title": "在我身上有一个不可战胜的夏天",
+          "author": "[法]阿尔贝·加缪",
+          "intro": "在我身上有一个不可战胜的夏天",
+          "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/s_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
+          "version": 76757252,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 6,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 6,
+            "maxfreeChapterUid": 6,
+            "maxfreeChapterRatio": 19
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": -60041,
+          "publishTime": "2025-07-15 00:00:00",
+          "lastChapterIdx": 25,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 5800,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 497,
+        "tags": []
+      }
+    ],
+    "preferCategory": [
+      {
+        "categoryId": 300000,
+        "categoryTitle": "文学",
+        "parentCategoryId": 300000,
+        "parentCategoryTitle": "文学",
+        "readingCount": 3,
+        "readingTime": 2073
+      },
+      {
+        "categoryId": 100001,
+        "categoryTitle": "社会小说",
+        "parentCategoryId": 100000,
+        "parentCategoryTitle": "精品小说",
+        "readingCount": 2,
+        "readingTime": 1063
+      },
+      {
+        "categoryId": 1000000,
+        "categoryTitle": "个人成长",
+        "parentCategoryId": 1000000,
+        "parentCategoryTitle": "个人成长",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 200000,
+        "categoryTitle": "历史",
+        "parentCategoryId": 200000,
+        "parentCategoryTitle": "历史",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 1100000,
+        "categoryTitle": "经济理财",
+        "parentCategoryId": 1100000,
+        "parentCategoryTitle": "经济理财",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 900000,
+        "categoryTitle": "社会文化",
+        "parentCategoryId": 900000,
+        "parentCategoryTitle": "社会文化",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 600000,
+        "categoryTitle": "哲学宗教",
+        "parentCategoryId": 600000,
+        "parentCategoryTitle": "哲学宗教",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 800000,
+        "categoryTitle": "心理",
+        "parentCategoryId": 800000,
+        "parentCategoryTitle": "心理",
+        "readingCount": 0,
+        "readingTime": 0
+      }
+    ],
+    "preferCategoryWord": "偏好阅读文学",
+    "readStat": [
+      {
+        "stat": "读过",
+        "counts": "3本"
+      },
+      {
+        "stat": "读完",
+        "counts": "0本"
+      },
+      {
+        "stat": "阅读",
+        "counts": "3天"
+      },
+      {
+        "stat": "笔记",
+        "counts": "0条"
+      }
+    ],
+    "registTime": 1645667800,
+    "compare": -0.6853050601444802,
+    "dayAverageReadTime": 114,
+    "baseTime": 1782835200,
+    "totalReadTime": 2515,
+    "readDistributionWord": "点评分布",
+    "preferBooks": [
+      {
+        "type": 13,
+        "title": "我的最爱"
+      },
+      {
+        "type": 1,
+        "title": "近期偏爱"
+      },
+      {
+        "type": 0,
+        "title": "常读常新"
+      },
+      {
+        "type": 5,
+        "title": "思考最多"
+      },
+      {
+        "type": 3,
+        "title": "最沉浸的"
+      },
+      {
+        "type": 4,
+        "title": "读到深夜"
+      },
+      {
+        "type": 7,
+        "title": "第一本阅读",
+        "bookInfo": {
+          "bookId": "3300171413",
+          "title": "赞美闲散（果麦经典）",
+          "author": "[英]伯特兰·罗素",
+          "translator": "黄菡",
+          "intro": "诺贝尔文学奖得主罗素的随笔合集，共14篇文章,内容包括工作、教育、社会、文明、如何获得幸福等，融合了哲学与心理学，经济学，科学和历史等观点。\n罗素在百年前精准地预见了现代社会的“内卷”问题：科技越发展，人们反而陷入了更加激烈的竞争和更长的工时。本书大胆挑战了“核心工作论”：工作即美德的信念正在现代世界中制造大量危害，而通往幸福与繁荣之路在于有组织地减少工作。工作的道德是奴隶的道德，现代世界不需要奴隶。\n每天工作只4小时，一切都会好起来！真正的闲散并非游手好闲，而是从工作的重压下解放出来，将努力的方向从“谋生”转向“生活本身”，去追求那些真正定义文明和幸福的事——艺术、爱、知识、休闲和对世界的探索。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/64/cpplatform_7luzwyjdjm3kwkjwswkdyg/s_cpplatform_7luzwyjdjm3kwkjwswkdyg1761214962.jpg",
+          "version": 984273295,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 5,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 5,
+            "maxfreeChapterUid": 5,
+            "maxfreeChapterRatio": 64
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": -3319053,
+          "publishTime": "2025-10-01 00:00:00",
+          "lastChapterIdx": 18,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 4980,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "2026/07/19/阅读"
+      },
+      {
+        "type": 6,
+        "title": "最爱文学",
+        "bookInfo": {
+          "bookId": "3300171413",
+          "title": "赞美闲散（果麦经典）",
+          "author": "[英]伯特兰·罗素",
+          "translator": "黄菡",
+          "intro": "诺贝尔文学奖得主罗素的随笔合集，共14篇文章,内容包括工作、教育、社会、文明、如何获得幸福等，融合了哲学与心理学，经济学，科学和历史等观点。\n罗素在百年前精准地预见了现代社会的“内卷”问题：科技越发展，人们反而陷入了更加激烈的竞争和更长的工时。本书大胆挑战了“核心工作论”：工作即美德的信念正在现代世界中制造大量危害，而通往幸福与繁荣之路在于有组织地减少工作。工作的道德是奴隶的道德，现代世界不需要奴隶。\n每天工作只4小时，一切都会好起来！真正的闲散并非游手好闲，而是从工作的重压下解放出来，将努力的方向从“谋生”转向“生活本身”，去追求那些真正定义文明和幸福的事——艺术、爱、知识、休闲和对世界的探索。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/64/cpplatform_7luzwyjdjm3kwkjwswkdyg/s_cpplatform_7luzwyjdjm3kwkjwswkdyg1761214962.jpg",
+          "version": 984273295,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 5,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 5,
+            "maxfreeChapterUid": 5,
+            "maxfreeChapterRatio": 64
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": -3319053,
+          "publishTime": "2025-10-01 00:00:00",
+          "lastChapterIdx": 18,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 4980,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "最爱分类"
+      },
+      {
+        "type": 2,
+        "title": "最爱分享"
+      },
+      {
+        "type": 12,
+        "title": "共读最多"
+      },
+      {
+        "type": 10,
+        "title": "欣赏小众"
+      },
+      {
+        "type": 8,
+        "title": "总有一天读完"
+      }
+    ],
+    "readRecordsWord": "书籍分布"
+  },
+  "overall": {
+    "readTimes": {
+      "1514736000": 0,
+      "1546272000": 0,
+      "1577808000": 0,
+      "1609430400": 0,
+      "1640966400": 13,
+      "1672502400": 0,
+      "1704038400": 0,
+      "1735660800": 0,
+      "1767196800": 56679
+    },
+    "readDays": 39,
+    "readLongest": [
+      {
+        "book": {
+          "bookId": "3300197381",
+          "title": "为什么10倍增长比2倍更容易",
+          "author": "[美]丹·沙利文  [美]本杰明·哈迪",
+          "translator": "白瑞霞",
+          "intro": "为什么10倍增长比2倍更容易？因为真正的高增长并非源于盲目努力，而是敢于放弃“看起来很多”的不错机会，转而深耕“看起来很少”但极具潜力的高质量机会。这本书告诉我们：10倍增长的关键，是用洞察代替惯性，在投入时间不变的情况下，让产出不断增加。做得更少，但做得更好——这也是复利人生的核心机制之一。\n本书颠覆传统增长逻辑，提出反直觉的“10倍增长法则”：当你设定10倍目标时，可选路径急剧减少，反而迫使你聚焦那20%高价值事项，主动过滤80%低效行为。作者丹·沙利文通过2.5万名顶尖企业家的实践,系统阐述三大核心方法:\n培养“增益思维”：关注已经取得的进步，在正确的方向上规划10倍增长。\n采用“时间膨胀术”：用\"自由日-专注日-缓冲日\"系统重构时间,创造指数级成果。\n打造“人脉杠杆”：用\"谁来做\"而非\"如何做\"思维,将80%事务交给团队。\n10倍增长不是做得更多，而是拆掉天花板——当你敢于用10倍视野重新定义目标，那些看似遥不可及的突破，其实比2倍优化容易得多。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/49/cpplatform_8pe4n9gxbb22ofnsynyphg/s_cpplatform_8pe4n9gxbb22ofnsynyphg1772705172.jpg",
+          "version": 996621170,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 14,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 14,
+            "maxfreeChapterUid": 14,
+            "maxfreeChapterRatio": 68
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 4789723,
+          "publishTime": "2025-10-23 00:00:00",
+          "lastChapterIdx": 57,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 7418,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 18026,
+        "tags": [
+          "笔记最多",
+          "单日阅读最久"
+        ]
+      },
+      {
+        "book": {
+          "bookId": "3300155373",
+          "title": "在我身上有一个不可战胜的夏天",
+          "author": "[法]阿尔贝·加缪",
+          "intro": "在我身上有一个不可战胜的夏天",
+          "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/s_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
+          "version": 76757252,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 6,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 6,
+            "maxfreeChapterUid": 6,
+            "maxfreeChapterRatio": 19
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": -60041,
+          "publishTime": "2025-07-15 00:00:00",
+          "lastChapterIdx": 25,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 5800,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 11886,
+        "tags": []
+      },
+      {
+        "book": {
+          "bookId": "3300140838",
+          "title": "创意行为：存在即答案",
+          "author": "[美]里克·鲁宾",
+          "translator": "重轻",
+          "intro": "※ 荣登《纽约时报》2023年畅销书榜 首！亚马逊2023年创意类销量第 一图书，全网期待中文版！ ※ 一手打造阿黛尔、侃爷、Jay-Z、Lana Del Rey等畅销专辑的美国传奇音乐教父里克·鲁宾 「九座格莱美奖杯得主，首度公开创意底层逻辑！」一本关于“创意来源”的答案之书，却不止于此。 ※ 人气音乐漫谈播客「不在场」主理人 重轻 倾情翻译，知名播客品牌「日谈公园」真诚推荐，创意领域博主“自来水”式力荐！ ※ 给所有深夜改稿/写歌/设计/策划的人——当灵感罢工时怎么办？里克·鲁宾用40年的创意经验，治好你的创作内耗。 78篇哲学思考分享艺术家的创意智慧，为突破创造力瓶颈提供有用的思考框架。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/46/cpplatform_bpydeflrt9d2xtkdsjzqqj/s_cpplatform_bpydeflrt9d2xtkdsjzqqj1744601841.jpg",
+          "version": 1935243306,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 14,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 14,
+            "maxfreeChapterUid": 14,
+            "maxfreeChapterRatio": 36
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 4525313,
+          "publishTime": "2025-03-01 00:00:00",
+          "lastChapterIdx": 82,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 6160,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 8170,
+        "tags": []
+      },
+      {
+        "book": {
+          "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
+          "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
+          "author": "",
+          "cover": "https://res.weread.qq.com/wrepub/CB_B3A5my5lA5d66xg6xFFBX9Z7_parsecover",
+          "version": 414581707,
+          "format": "pdf",
+          "type": 11,
+          "soldout": 0,
+          "bookStatus": 2,
+          "payType": 134217761,
+          "finished": 1,
+          "free": 1,
+          "mcardDiscount": 0,
+          "ispub": 0,
+          "cpid": 0,
+          "publishTime": "",
+          "lastChapterIdx": 30,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 0,
+          "otherType": [
+            {
+              "type": "epub",
+              "showType": true,
+              "cht2sShowType": false,
+              "cht2sStatus": "traditional",
+              "translateDone": false
+            }
+          ],
+          "copyrightChapterUids": [],
+          "limitShareChat": 0,
+          "inStoreBookId": "3004118569",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 5038,
+        "tags": []
+      },
+      {
+        "book": {
+          "bookId": "3300043405",
+          "title": "罐头厂街",
+          "author": "约翰·斯坦贝克",
+          "translator": "李家珅 钱凯娜 魏艳艳",
+          "intro": "《罐头厂街》（Cannery Row）首次出版于1945年。本书描写了大萧条时期美国加利福尼亚州蒙特雷市一条被称为“罐头厂街”的海边街道上的故事。这里因当时建有多家沙丁鱼罐头加工厂而得名。书中所写的实际地点是蒙特雷市的海景大道，这里后来被重新命名为“罐头厂街”以纪念此书。约翰·斯坦贝克在本书中的创作取材于他对加州蒙特雷真实居民的记忆，他将一众小人物们在这个残酷世界中生活的故事编织在一起，创造了这部含着幽默与辛酸的作品。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/89/cpPlatform_k1Eud7zDEcjzyUHn7KPLzy/s_cpPlatform_k1Eud7zDEcjzyUHn7KPLzy.jpg",
+          "version": 1086045397,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 7,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 7,
+            "maxfreeChapterUid": 42,
+            "maxfreeChapterRatio": 36
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 2684482,
+          "publishTime": "2022-12-18 00:00:00",
+          "lastChapterIdx": 36,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 899,
+          "copyrightChapterUids": [
+            37
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 4916,
+        "tags": []
+      },
+      {
+        "book": {
+          "bookId": "3300194532",
+          "title": "罐头厂街",
+          "author": "[美]约翰·斯坦贝克",
+          "translator": "周坤",
+          "intro": "加州海岸的小街上，罐头厂的机器声与海浪声交织。这里没有光鲜的生活，却藏着最鲜活的人间百态——流浪汉组成“罐头厂街协会”，在破旧棚屋自得其乐；生物学家在实验室与海星为伴，守着孤独的热爱。\n人们靠打零工过活，偶尔为一顿饱饭奔波，却从不缺对彼此的善意。有人为朋友的梦想奔走，有人在深夜分享仅有的温暖，粗粝的日子里，始终透着生活最本真的热望。\n这里没有跌宕的剧情，却用细碎的日常，勾勒出一群“边缘人”的温柔与坚韧，让平凡街巷成为治愈人心的港湾。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/7/cpplatform_kjkxbrfzhx96iqs1qhrzgm/s_cpplatform_kjkxbrfzhx96iqs1qhrzgm1770118858.jpg",
+          "version": 1273470875,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 8,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 8,
+            "maxfreeChapterUid": 8,
+            "maxfreeChapterRatio": 77
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000190,
+          "publishTime": "2026-03-02 00:00:00",
+          "lastChapterIdx": 37,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 3700,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 4029,
+        "tags": []
+      },
+      {
+        "book": {
+          "bookId": "CB_Djp4Tt4V55Oi73w75h4jb9UW",
+          "title": "伦敦国家美术馆（伟大的博物馆）",
+          "author": "达尼埃拉·塔拉布拉",
+          "cover": "https://res.weread.qq.com/wrepub/CB_2njAvTAwD2jO73m74sF4K934_parsecover",
+          "version": 2042793201,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 134217761,
+          "finished": 1,
+          "free": 1,
+          "mcardDiscount": 0,
+          "ispub": 0,
+          "cpid": 0,
+          "publishTime": "",
+          "lastChapterIdx": 8,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 0,
+          "copyrightChapterUids": [],
+          "hasKeyPoint": true,
+          "limitShareChat": 0,
+          "inStoreBookId": "3000015047",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 2449,
+        "tags": []
+      },
+      {
+        "book": {
+          "bookId": "3300171413",
+          "title": "赞美闲散（果麦经典）",
+          "author": "[英]伯特兰·罗素",
+          "translator": "黄菡",
+          "intro": "诺贝尔文学奖得主罗素的随笔合集，共14篇文章,内容包括工作、教育、社会、文明、如何获得幸福等，融合了哲学与心理学，经济学，科学和历史等观点。\n罗素在百年前精准地预见了现代社会的“内卷”问题：科技越发展，人们反而陷入了更加激烈的竞争和更长的工时。本书大胆挑战了“核心工作论”：工作即美德的信念正在现代世界中制造大量危害，而通往幸福与繁荣之路在于有组织地减少工作。工作的道德是奴隶的道德，现代世界不需要奴隶。\n每天工作只4小时，一切都会好起来！真正的闲散并非游手好闲，而是从工作的重压下解放出来，将努力的方向从“谋生”转向“生活本身”，去追求那些真正定义文明和幸福的事——艺术、爱、知识、休闲和对世界的探索。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/64/cpplatform_7luzwyjdjm3kwkjwswkdyg/s_cpplatform_7luzwyjdjm3kwkjwswkdyg1761214962.jpg",
+          "version": 984273295,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 5,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 5,
+            "maxfreeChapterUid": 5,
+            "maxfreeChapterRatio": 64
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": -3319053,
+          "publishTime": "2025-10-01 00:00:00",
+          "lastChapterIdx": 18,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 4980,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 1010,
+        "tags": []
+      },
+      {
+        "book": {
+          "bookId": "3300175674",
+          "title": "动物农场",
+          "author": "[英]乔治·奥威尔",
+          "translator": "尤玉金",
+          "intro": "一场由动物发起的革命，在曼诺农场悄然爆发。琼斯先生的残暴统治被推翻，动物们建立起 “动物农场”，立下 “所有动物一律平等” 的七诫，立志打造没有剥削的家园。\n然而，理想很快遭遇现实冲击。猪凭借智慧掌控权力，拿破仑逐渐显露独裁野心，驱逐异己、修改诫命，曾经的革命伙伴沦为新的 “被统治者”。平等的口号下，是越来越悬殊的阶级差距，动物们辛苦劳作的成果，最终流向少数统治者。\n这部作品以动物喻人，用荒诞故事揭露权力变质的真相，字里行间藏着对现实的深刻反思。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_e1wvnlkxez6bq6ucipa9oy/s_cpplatform_e1wvnlkxez6bq6ucipa9oy1762742145.jpg",
+          "version": 1700012358,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 4,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 4,
+            "maxfreeChapterUid": 4,
+            "maxfreeChapterRatio": 9
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000190,
+          "publishTime": "2025-11-10 00:00:00",
+          "lastChapterIdx": 12,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 2000,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 567,
+        "tags": []
+      }
+    ],
+    "preferCategory": [
+      {
+        "categoryId": 300000,
+        "categoryTitle": "文学",
+        "parentCategoryId": 300000,
+        "parentCategoryTitle": "文学",
+        "readingCount": 5,
+        "readingTime": 22408
+      },
+      {
+        "categoryId": 1100000,
+        "categoryTitle": "经济理财",
+        "parentCategoryId": 1100000,
+        "parentCategoryTitle": "经济理财",
+        "readingCount": 1,
+        "readingTime": 18026
+      },
+      {
+        "categoryId": 100001,
+        "categoryTitle": "社会小说",
+        "parentCategoryId": 100000,
+        "parentCategoryTitle": "精品小说",
+        "readingCount": 3,
+        "readingTime": 17369
+      },
+      {
+        "categoryId": 1000000,
+        "categoryTitle": "个人成长",
+        "parentCategoryId": 1000000,
+        "parentCategoryTitle": "个人成长",
+        "readingCount": 1,
+        "readingTime": 8170
+      },
+      {
+        "categoryId": 200000,
+        "categoryTitle": "历史",
+        "parentCategoryId": 200000,
+        "parentCategoryTitle": "历史",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 900000,
+        "categoryTitle": "社会文化",
+        "parentCategoryId": 900000,
+        "parentCategoryTitle": "社会文化",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 600000,
+        "categoryTitle": "哲学宗教",
+        "parentCategoryId": 600000,
+        "parentCategoryTitle": "哲学宗教",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 800000,
+        "categoryTitle": "心理",
+        "parentCategoryId": 800000,
+        "parentCategoryTitle": "心理",
+        "readingCount": 0,
+        "readingTime": 0
+      }
+    ],
+    "preferCategoryWord": "偏好阅读文学",
+    "preferTimeWord": "偏好夜晚阅读",
+    "preferTime": [
+      703,
+      2093,
+      420,
+      10,
+      7,
+      0,
+      0,
+      0,
+      0,
+      67,
+      1489,
+      3195,
+      1799,
+      12856,
+      1984,
+      2095,
+      2748,
+      10170,
+      1974,
+      3319,
+      1697,
+      2389,
+      4443,
+      3221
+    ],
+    "preferAuthor": [
+      {
+        "authorId": 222757,
+        "name": "约翰·斯坦贝克",
+        "count": 2,
+        "readTime": "2小时29分钟"
+      },
+      {
+        "authorId": 522347,
+        "name": "丹·沙利文",
+        "count": 1,
+        "readTime": "5小时"
+      },
+      {
+        "authorId": 24128,
+        "name": "阿尔贝·加缪",
+        "count": 1,
+        "readTime": "3小时18分钟"
+      },
+      {
+        "authorId": 2426523,
+        "name": "里克·鲁宾",
+        "count": 1,
+        "readTime": "2小时16分钟"
+      },
+      {
+        "authorId": 183442,
+        "name": "罗素",
+        "count": 1,
+        "readTime": "16分钟"
+      }
+    ],
+    "authorCount": 5,
+    "readStat": [
+      {
+        "stat": "读过",
+        "counts": "9本"
+      },
+      {
+        "stat": "读完",
+        "counts": "4本"
+      },
+      {
+        "stat": "阅读",
+        "counts": "39天"
+      },
+      {
+        "stat": "笔记",
+        "counts": "86条"
+      }
+    ],
+    "registTime": 1645667800,
+    "readRecordsWord": "书籍分布",
+    "baseTime": 0,
+    "totalReadTime": 56692,
+    "readDistributionWord": "点评分布",
+    "preferBooks": [
+      {
+        "type": 13,
+        "title": "我的最爱"
+      },
+      {
+        "type": 1,
+        "title": "近期偏爱",
+        "bookInfo": {
+          "bookId": "3300155373",
+          "title": "在我身上有一个不可战胜的夏天",
+          "author": "[法]阿尔贝·加缪",
+          "intro": "在我身上有一个不可战胜的夏天",
+          "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/s_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
+          "version": 76757252,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 6,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 6,
+            "maxfreeChapterUid": 6,
+            "maxfreeChapterRatio": 19
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": -60041,
+          "publishTime": "2025-07-15 00:00:00",
+          "lastChapterIdx": 25,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 5800,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "最近阅读3小时"
+      },
+      {
+        "type": 0,
+        "title": "常读常新"
+      },
+      {
+        "type": 5,
+        "title": "思考最多",
+        "bookInfo": {
+          "bookId": "3300197381",
+          "title": "为什么10倍增长比2倍更容易",
+          "author": "[美]丹·沙利文  [美]本杰明·哈迪",
+          "translator": "白瑞霞",
+          "intro": "为什么10倍增长比2倍更容易？因为真正的高增长并非源于盲目努力，而是敢于放弃“看起来很多”的不错机会，转而深耕“看起来很少”但极具潜力的高质量机会。这本书告诉我们：10倍增长的关键，是用洞察代替惯性，在投入时间不变的情况下，让产出不断增加。做得更少，但做得更好——这也是复利人生的核心机制之一。\n本书颠覆传统增长逻辑，提出反直觉的“10倍增长法则”：当你设定10倍目标时，可选路径急剧减少，反而迫使你聚焦那20%高价值事项，主动过滤80%低效行为。作者丹·沙利文通过2.5万名顶尖企业家的实践,系统阐述三大核心方法:\n培养“增益思维”：关注已经取得的进步，在正确的方向上规划10倍增长。\n采用“时间膨胀术”：用\"自由日-专注日-缓冲日\"系统重构时间,创造指数级成果。\n打造“人脉杠杆”：用\"谁来做\"而非\"如何做\"思维,将80%事务交给团队。\n10倍增长不是做得更多，而是拆掉天花板——当你敢于用10倍视野重新定义目标，那些看似遥不可及的突破，其实比2倍优化容易得多。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/49/cpplatform_8pe4n9gxbb22ofnsynyphg/s_cpplatform_8pe4n9gxbb22ofnsynyphg1772705172.jpg",
+          "version": 996621170,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 14,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 14,
+            "maxfreeChapterUid": 14,
+            "maxfreeChapterRatio": 68
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 4789723,
+          "publishTime": "2025-10-23 00:00:00",
+          "lastChapterIdx": 57,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 7418,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "共记录41条笔记"
+      },
+      {
+        "type": 3,
+        "title": "最沉浸的"
+      },
+      {
+        "type": 4,
+        "title": "读到深夜",
+        "bookInfo": {
+          "bookId": "3300197381",
+          "title": "为什么10倍增长比2倍更容易",
+          "author": "[美]丹·沙利文  [美]本杰明·哈迪",
+          "translator": "白瑞霞",
+          "intro": "为什么10倍增长比2倍更容易？因为真正的高增长并非源于盲目努力，而是敢于放弃“看起来很多”的不错机会，转而深耕“看起来很少”但极具潜力的高质量机会。这本书告诉我们：10倍增长的关键，是用洞察代替惯性，在投入时间不变的情况下，让产出不断增加。做得更少，但做得更好——这也是复利人生的核心机制之一。\n本书颠覆传统增长逻辑，提出反直觉的“10倍增长法则”：当你设定10倍目标时，可选路径急剧减少，反而迫使你聚焦那20%高价值事项，主动过滤80%低效行为。作者丹·沙利文通过2.5万名顶尖企业家的实践,系统阐述三大核心方法:\n培养“增益思维”：关注已经取得的进步，在正确的方向上规划10倍增长。\n采用“时间膨胀术”：用\"自由日-专注日-缓冲日\"系统重构时间,创造指数级成果。\n打造“人脉杠杆”：用\"谁来做\"而非\"如何做\"思维,将80%事务交给团队。\n10倍增长不是做得更多，而是拆掉天花板——当你敢于用10倍视野重新定义目标，那些看似遥不可及的突破，其实比2倍优化容易得多。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/49/cpplatform_8pe4n9gxbb22ofnsynyphg/s_cpplatform_8pe4n9gxbb22ofnsynyphg1772705172.jpg",
+          "version": 996621170,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 14,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 14,
+            "maxfreeChapterUid": 14,
+            "maxfreeChapterRatio": 68
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 4789723,
+          "publishTime": "2025-10-23 00:00:00",
+          "lastChapterIdx": 57,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 7418,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "阅读至04:59"
+      },
+      {
+        "type": 7,
+        "title": "第一本阅读",
+        "bookInfo": {
+          "bookId": "3300043405",
+          "title": "罐头厂街",
+          "author": "约翰·斯坦贝克",
+          "translator": "李家珅 钱凯娜 魏艳艳",
+          "intro": "《罐头厂街》（Cannery Row）首次出版于1945年。本书描写了大萧条时期美国加利福尼亚州蒙特雷市一条被称为“罐头厂街”的海边街道上的故事。这里因当时建有多家沙丁鱼罐头加工厂而得名。书中所写的实际地点是蒙特雷市的海景大道，这里后来被重新命名为“罐头厂街”以纪念此书。约翰·斯坦贝克在本书中的创作取材于他对加州蒙特雷真实居民的记忆，他将一众小人物们在这个残酷世界中生活的故事编织在一起，创造了这部含着幽默与辛酸的作品。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/89/cpPlatform_k1Eud7zDEcjzyUHn7KPLzy/s_cpPlatform_k1Eud7zDEcjzyUHn7KPLzy.jpg",
+          "version": 1086045397,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 7,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 7,
+            "maxfreeChapterUid": 42,
+            "maxfreeChapterRatio": 36
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 2684482,
+          "publishTime": "2022-12-18 00:00:00",
+          "lastChapterIdx": 36,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 899,
+          "copyrightChapterUids": [
+            37
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "2026/03/15/阅读"
+      },
+      {
+        "type": 6,
+        "title": "最爱文学",
+        "bookInfo": {
+          "bookId": "3300155373",
+          "title": "在我身上有一个不可战胜的夏天",
+          "author": "[法]阿尔贝·加缪",
+          "intro": "在我身上有一个不可战胜的夏天",
+          "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/s_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
+          "version": 76757252,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 6,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 6,
+            "maxfreeChapterUid": 6,
+            "maxfreeChapterRatio": 19
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": -60041,
+          "publishTime": "2025-07-15 00:00:00",
+          "lastChapterIdx": 25,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 5800,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "阅读了3小时"
+      },
+      {
+        "type": 2,
+        "title": "最爱分享",
+        "bookInfo": {
+          "bookId": "3300140838",
+          "title": "创意行为：存在即答案",
+          "author": "[美]里克·鲁宾",
+          "translator": "重轻",
+          "intro": "※ 荣登《纽约时报》2023年畅销书榜 首！亚马逊2023年创意类销量第 一图书，全网期待中文版！ ※ 一手打造阿黛尔、侃爷、Jay-Z、Lana Del Rey等畅销专辑的美国传奇音乐教父里克·鲁宾 「九座格莱美奖杯得主，首度公开创意底层逻辑！」一本关于“创意来源”的答案之书，却不止于此。 ※ 人气音乐漫谈播客「不在场」主理人 重轻 倾情翻译，知名播客品牌「日谈公园」真诚推荐，创意领域博主“自来水”式力荐！ ※ 给所有深夜改稿/写歌/设计/策划的人——当灵感罢工时怎么办？里克·鲁宾用40年的创意经验，治好你的创作内耗。 78篇哲学思考分享艺术家的创意智慧，为突破创造力瓶颈提供有用的思考框架。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/46/cpplatform_bpydeflrt9d2xtkdsjzqqj/s_cpplatform_bpydeflrt9d2xtkdsjzqqj1744601841.jpg",
+          "version": 1935243306,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 14,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 14,
+            "maxfreeChapterUid": 14,
+            "maxfreeChapterRatio": 36
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 4525313,
+          "publishTime": "2025-03-01 00:00:00",
+          "lastChapterIdx": 82,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 6160,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "分享5次"
+      },
+      {
+        "type": 12,
+        "title": "共读最多"
+      },
+      {
+        "type": 10,
+        "title": "欣赏小众",
+        "bookInfo": {
+          "bookId": "3300194532",
+          "title": "罐头厂街",
+          "author": "[美]约翰·斯坦贝克",
+          "translator": "周坤",
+          "intro": "加州海岸的小街上，罐头厂的机器声与海浪声交织。这里没有光鲜的生活，却藏着最鲜活的人间百态——流浪汉组成“罐头厂街协会”，在破旧棚屋自得其乐；生物学家在实验室与海星为伴，守着孤独的热爱。\n人们靠打零工过活，偶尔为一顿饱饭奔波，却从不缺对彼此的善意。有人为朋友的梦想奔走，有人在深夜分享仅有的温暖，粗粝的日子里，始终透着生活最本真的热望。\n这里没有跌宕的剧情，却用细碎的日常，勾勒出一群“边缘人”的温柔与坚韧，让平凡街巷成为治愈人心的港湾。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/7/cpplatform_kjkxbrfzhx96iqs1qhrzgm/s_cpplatform_kjkxbrfzhx96iqs1qhrzgm1770118858.jpg",
+          "version": 1273470875,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 8,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 8,
+            "maxfreeChapterUid": 8,
+            "maxfreeChapterRatio": 77
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000190,
+          "publishTime": "2026-03-02 00:00:00",
+          "lastChapterIdx": 37,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 3700,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "仅有4115人读过"
+      },
+      {
+        "type": 8,
+        "title": "总有一天读完"
+      }
+    ]
+  }
 }
