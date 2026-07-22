@@ -75,8 +75,16 @@
         body.reading-page { background:#cdd2d2!important; background-image:none!important; }
         body.reading-page #app-content { min-height:100svh; padding:0!important; }
         body.reading-page #music-toggle { display:none; }
+        body.reading-page #back-btn {
+            top:24px; left:24px; padding:11px 15px; color:#151819; opacity:.78;
+            background:rgba(239,235,220,.74); border:1px solid rgba(21,24,25,.36);
+            box-shadow:7px 8px 0 rgba(21,24,25,.12); backdrop-filter:blur(8px);
+        }
         .reading-inline-frame { display:block; width:100%; height:100svh; border:0; background:#cdd2d2; }
-        @media (max-width:760px) { .reading-inline-frame { height:200svh; } }
+        @media (max-width:760px) {
+            .reading-inline-frame { height:200svh; }
+            body.reading-page #back-btn { top:10px; left:10px; padding:7px 10px; box-shadow:4px 5px 0 rgba(21,24,25,.1); }
+        }
 
         .thought-card { background: rgba(255,255,255,0.03); border: 0.5px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 1.5rem; transition: 0.3s; }
         .thought-card:hover { background: rgba(255,255,255,0.06); }
@@ -142,6 +150,8 @@
         const audio = document.getElementById('main-audio');
         const app = document.getElementById('app-content');
         const backBtn = document.getElementById('back-btn');
+        let readingAlbumOwnsAudio = false;
+        let mainAudioWasPlayingBeforeAlbums = false;
         let currentImgList = [];
         let currentIndex = 0;
 
@@ -318,6 +328,27 @@
         function updateMusicIcon() {
             document.getElementById('music-on').classList.toggle('hidden', audio.paused);
             document.getElementById('music-off').classList.toggle('hidden', !audio.paused);
+        }
+
+        window.addEventListener('message', event => {
+            if (event.origin !== window.location.origin || event.data?.type !== 'reading-album-playing') return;
+            const readingFrame = document.querySelector('.reading-inline-frame');
+            if (!readingFrame || event.source !== readingFrame.contentWindow) return;
+            if (!readingAlbumOwnsAudio) mainAudioWasPlayingBeforeAlbums = !audio.paused;
+            readingAlbumOwnsAudio = true;
+            audio.pause();
+            updateMusicIcon();
+        });
+
+        function restoreMainAudioFromReading() {
+            if (!readingAlbumOwnsAudio) return;
+            readingAlbumOwnsAudio = false;
+            if (mainAudioWasPlayingBeforeAlbums) {
+                const playPromise = audio.play();
+                if (playPromise && typeof playPromise.catch === 'function') playPromise.catch(() => {});
+            }
+            mainAudioWasPlayingBeforeAlbums = false;
+            updateMusicIcon();
         }
 
         function renderHome() {
@@ -674,6 +705,7 @@
         }
 
         function switchPage(page) {
+            if (page === 'home') restoreMainAudioFromReading();
             app.style.opacity = '0';
             setTimeout(() => {
                 backBtn.classList.toggle('hidden', page === 'home');
