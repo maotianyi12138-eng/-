@@ -38,6 +38,7 @@
         .listening-room { grid-area:listen; position:relative; z-index:2; isolation:isolate; min-height:270px; display:grid; grid-template-columns:minmax(95px,.58fr) minmax(225px,1.42fr); gap:clamp(10px,1.8vw,26px); align-items:end; transform:perspective(1000px) rotateY(3deg); transform-origin:right bottom; }
         .listening-room:before { content:""; position:absolute; z-index:0; left:-9%; right:-12%; bottom:-17%; height:59%; background:repeating-linear-gradient(90deg,#7c4035 0 11%,#d5aa54 11% 22%,#315f58 22% 33%,#d8c584 33% 44%); opacity:.7; clip-path:polygon(8% 6%,92% 0,100% 78%,0 100%); box-shadow:0 -7px 0 rgba(20,23,25,.16); }
         .listening-room:after { content:""; position:absolute; z-index:1; right:-4%; bottom:-3%; width:69%; height:47%; background:repeating-linear-gradient(90deg,#8b5336 0 31%,#6d402f 31% 33%,#a26842 33% 65%,#6d402f 65% 67%,#875034 67% 100%); border:5px solid #242829; box-shadow:11px 15px 0 rgba(20,23,25,.17); clip-path:polygon(2% 3%,98% 0,100% 93%,4% 100%); }
+        .lamp-glow { position:absolute; z-index:0; right:-24%; bottom:18%; width:min(38vw,430px); height:min(48vw,520px); border-radius:50%; background:radial-gradient(ellipse at 48% 45%,rgba(248,220,124,.42),rgba(232,197,92,.16) 42%,transparent 72%); filter:blur(12px); mix-blend-mode:screen; opacity:.78; pointer-events:none; }
         .plant { z-index:3; height:min(29vw,330px); min-height:225px; position:relative; filter:drop-shadow(9px 14px 0 rgba(20,23,25,.08)); }
         .pot { position:absolute; bottom:0; left:16%; width:68%; height:28%; background:#b94b34; clip-path:polygon(4% 0,96% 2%,82% 100%,18% 100%); border-top:9px solid #7e3326; }
         .pot:after { content:""; position:absolute; inset:17% 13%; background:linear-gradient(112deg,#cf6c42 0 32%,#a83e2d 33% 68%,#d37a4a 69%); opacity:.62; }
@@ -52,14 +53,18 @@
         .floor-lamp { position:absolute; z-index:2; right:-2%; bottom:34%; width:7px; height:59%; background:#303636; transform:rotate(1.5deg); box-shadow:4px 5px 0 rgba(20,23,25,.08); }
         .floor-lamp:before { content:""; position:absolute; left:50%; top:-3%; width:74px; height:57px; background:#d8c579; border:4px solid #272b2c; clip-path:polygon(19% 0,81% 3%,100% 100%,0 96%); transform:translateX(-50%); }
         .floor-lamp:after { content:""; position:absolute; left:50%; bottom:-7px; width:72px; height:13px; border-radius:50%; background:#2a2f30; transform:translateX(-50%); }
-        .player-wrap { position:relative; z-index:4; align-self:end; min-width:0; padding-bottom:18px; transform:translateY(-6px); }
+        .player-wrap { position:relative; z-index:4; align-self:end; min-width:0; padding-bottom:18px; transform:translateY(-6px); filter:drop-shadow(10px 17px 8px rgba(20,23,25,.14)); }
         .player { position:relative; width:100%; aspect-ratio:1.62/1; min-height:190px; padding:8%; background:#a9673c; border:5px solid var(--ink); box-shadow:13px 17px 0 rgba(20,23,25,.16),inset 0 0 0 5px rgba(238,231,214,.16); transform:perspective(850px) rotateX(9deg) rotateZ(-1deg); transform-origin:center bottom; cursor:pointer; }
         .player:before { content:""; position:absolute; left:-4%; right:-4%; bottom:-13%; height:14%; background:#151819; clip-path:polygon(2% 0,98% 0,100% 72%,0 100%); }
         .platter { position:absolute; width:64%; aspect-ratio:1; left:5%; top:10%; border-radius:50%; background:repeating-radial-gradient(circle,#111416 0 3px,#25292a 4px 6px); box-shadow:0 0 0 5px #3c4444,0 7px 0 rgba(20,23,25,.18); }
         .player.playing .platter { animation:spin 5.5s linear infinite; }
+        .player.loading .platter { animation:loadingPulse .8s ease-in-out infinite alternate; }
+        .player.loading:after,.player.error:after { content:"LOADING"; position:absolute; z-index:8; right:7%; bottom:8%; padding:5px 7px 4px; color:#eee7d2; background:#232728; border:2px solid #eee7d2; font:700 7px/1 Arial,sans-serif; letter-spacing:.14em; box-shadow:4px 5px 0 rgba(20,23,25,.14); }
+        .player.error:after { content:"RETRY"; color:#f2d0c6; border-color:#c35b49; }
         .record-label { position:absolute; inset:36%; display:grid; place-items:center; border-radius:50%; background:var(--record-color,#c34b35); border:3px solid #e5d7a8; color:#f1eadb; font:bold 8px/1 Arial; text-align:center; overflow:hidden; }
         .record-label:after { content:""; width:7px; height:7px; border-radius:50%; background:#151819; }
-        .tonearm { position:absolute; right:12%; top:18%; width:10px; height:63%; background:#ded8c9; border:3px solid #282d2f; transform:rotate(17deg); transform-origin:50% 9%; border-radius:7px; }
+        .tonearm { position:absolute; right:12%; top:18%; width:10px; height:63%; background:#ded8c9; border:3px solid #282d2f; transform:rotate(17deg); transform-origin:50% 9%; border-radius:7px; transition:transform .75s cubic-bezier(.2,.8,.2,1); }
+        .player.playing .tonearm { transform:rotate(30deg); }
         .tonearm:before { content:""; position:absolute; width:30px; height:30px; left:-13px; top:-17px; border-radius:50%; background:#363d3d; border:5px solid #d1cab9; }
         .tonearm:after { content:""; position:absolute; width:25px; height:14px; left:-8px; bottom:-4px; background:#242829; transform:rotate(-8deg); }
         .player-copy { display:none; }
@@ -110,6 +115,21 @@
         body.modal-open { overflow:hidden; }
 
         @keyframes spin { to { transform:rotate(360deg); } }
+        @keyframes loadingPulse { to { opacity:.46; transform:scale(.97); } }
+        @media (min-width:761px) and (max-height:820px) {
+            .scene,.music-panel,.books-panel { min-height:0; height:100svh; }
+            .music-panel { padding:96px clamp(22px,2.6vw,38px) 16px; grid-template-rows:minmax(250px,.57fr) minmax(185px,.43fr); gap:16px; }
+            .album-rack { width:min(100%,460px); justify-self:center; padding:10px; }
+            .album-rail { gap:9px; }
+            .album { border-width:4px; box-shadow:5px 7px 0 rgba(20,23,25,.13),inset 0 0 0 1px rgba(255,255,255,.18); }
+            .listening-room { min-height:0; grid-template-columns:80px minmax(180px,1fr); gap:10px; }
+            .plant { height:min(24vw,238px); min-height:175px; }
+            .player-wrap { padding-bottom:6px; transform:translateY(-2px); }
+            .player { min-height:145px; max-height:210px; }
+            .books-panel { padding:20px 22px 15px 35px; }
+            .bookcase { grid-template-rows:repeat(3,minmax(180px,1fr)); }
+            .shelf { padding-top:8px; padding-bottom:18px; }
+        }
         @media (max-width:980px) {
             .scene { grid-template-columns:minmax(360px,.83fr) minmax(500px,1.17fr); }
             .music-panel { padding-inline:24px; }
@@ -164,21 +184,22 @@
         <section class="music-panel" aria-label="黑胶唱片与音乐">
             <div class="album-rack">
                 <div class="album-rail" id="album-rail" aria-label="十二张专辑封面">
-                    <button class="album filled active" type="button" aria-label="播放 Adele《21》" data-title="21" data-artist="Adele" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/1.flac" data-color="#667066"><img src="music/covers/01.jpg" alt="Adele《21》封面"></button>
-                    <button class="album filled" type="button" aria-label="播放 Queen《Absolute Greatest》" data-title="Absolute Greatest" data-artist="Queen" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/2.flac" data-color="#a33b2d"><img src="music/covers/02.jpg" alt="Queen《Absolute Greatest》封面"></button>
-                    <button class="album filled" type="button" aria-label="播放 马思唯《黑马王子》" data-title="黑马王子" data-artist="马思唯" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/3.flac" data-color="#a31e27"><img src="music/covers/03.jpg" alt="马思唯《黑马王子》封面"></button>
-                    <button class="album filled" type="button" aria-label="播放 XXXTENTACION《?》" data-title="?" data-artist="XXXTENTACION" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/4.flac" data-color="#202020"><img src="music/covers/04.jpg" alt="XXXTENTACION《?》封面"></button>
-                    <button class="album filled" type="button" aria-label="播放 AC/DC《Highway to Hell》" data-title="Highway to Hell" data-artist="AC/DC" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/5.flac" data-color="#9d3327"><img src="music/covers/05.jpg" alt="AC/DC《Highway to Hell》封面"></button>
-                    <button class="album filled" type="button" aria-label="播放 陶喆《陶喆》" data-title="陶喆" data-artist="陶喆" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/6.flac" data-color="#174f91"><img src="music/covers/06.jpg" alt="陶喆同名专辑封面"></button>
-                    <button class="album filled" type="button" aria-label="播放 Justin Bieber《Changes》" data-title="Changes" data-artist="Justin Bieber" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/7.flac" data-color="#b74031"><img src="music/covers/07.jpg" alt="Justin Bieber《Changes》封面"></button>
-                    <button class="album filled" type="button" aria-label="播放 Michael Jackson《Off the Wall》" data-title="Off the Wall" data-artist="Michael Jackson" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/8.flac" data-color="#875544"><img src="music/covers/08.jpg" alt="Michael Jackson《Off the Wall》封面"></button>
-                    <button class="album filled" type="button" aria-label="播放 卢广仲《大人中》" data-title="大人中" data-artist="卢广仲" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/9.flac" data-color="#e0c318"><img src="music/covers/09.jpg" alt="卢广仲《大人中》封面"></button>
-                    <button class="album filled" type="button" aria-label="播放 高中正义《Brazilian Skies》" data-title="Brazilian Skies" data-artist="高中正义" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/10.flac" data-color="#376f9c"><img src="music/covers/10.jpg" alt="高中正义《Brazilian Skies》封面"></button>
-                    <button class="album filled" type="button" aria-label="播放 The Weeknd《Starboy》" data-title="Starboy" data-artist="The Weeknd" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/11.flac" data-color="#b92838"><img src="music/covers/11.jpg" alt="The Weeknd《Starboy》封面"></button>
-                    <button class="album filled" type="button" aria-label="播放 Bruno Mars《It's Better If You Don't Understand》" data-title="It's Better If You Don't Understand" data-artist="Bruno Mars" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/12.flac" data-color="#bd3226"><img src="music/covers/12.jpg" alt="Bruno Mars《It's Better If You Don't Understand》封面"></button>
+                    <button class="album filled active" type="button" aria-label="播放 Adele《21》" data-title="21" data-artist="Adele" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/1.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/1.flac" data-color="#667066"><img src="music/covers/01.jpg" alt="Adele《21》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 Queen《Absolute Greatest》" data-title="Absolute Greatest" data-artist="Queen" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/2.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/2.flac" data-color="#a33b2d"><img src="music/covers/02.jpg" alt="Queen《Absolute Greatest》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 马思唯《黑马王子》" data-title="黑马王子" data-artist="马思唯" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/3.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/3.flac" data-color="#a31e27"><img src="music/covers/03.jpg" alt="马思唯《黑马王子》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 XXXTENTACION《?》" data-title="?" data-artist="XXXTENTACION" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/4.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/4.flac" data-color="#202020"><img src="music/covers/04.jpg" alt="XXXTENTACION《?》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 AC/DC《Highway to Hell》" data-title="Highway to Hell" data-artist="AC/DC" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/5.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/5.flac" data-color="#9d3327"><img src="music/covers/05.jpg" alt="AC/DC《Highway to Hell》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 陶喆《陶喆》" data-title="陶喆" data-artist="陶喆" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/6.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/6.flac" data-color="#174f91"><img src="music/covers/06.jpg" alt="陶喆同名专辑封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 Justin Bieber《Changes》" data-title="Changes" data-artist="Justin Bieber" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/7.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/7.flac" data-color="#b74031"><img src="music/covers/07.jpg" alt="Justin Bieber《Changes》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 Michael Jackson《Off the Wall》" data-title="Off the Wall" data-artist="Michael Jackson" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/8.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/8.flac" data-color="#875544"><img src="music/covers/08.jpg" alt="Michael Jackson《Off the Wall》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 卢广仲《大人中》" data-title="大人中" data-artist="卢广仲" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/9.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/9.flac" data-color="#e0c318"><img src="music/covers/09.jpg" alt="卢广仲《大人中》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 高中正义《Brazilian Skies》" data-title="Brazilian Skies" data-artist="高中正义" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/10.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/10.flac" data-color="#376f9c"><img src="music/covers/10.jpg" alt="高中正义《Brazilian Skies》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 The Weeknd《Starboy》" data-title="Starboy" data-artist="The Weeknd" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/11.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/11.flac" data-color="#b92838"><img src="music/covers/11.jpg" alt="The Weeknd《Starboy》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 Bruno Mars《It's Better If You Don't Understand》" data-title="It's Better If You Don't Understand" data-artist="Bruno Mars" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/12.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/12.flac" data-color="#bd3226"><img src="music/covers/12.jpg" alt="Bruno Mars《It's Better If You Don't Understand》封面"></button>
                 </div>
             </div>
             <div class="listening-room">
+                <i class="lamp-glow" aria-hidden="true"></i>
                 <i class="floor-lamp" aria-hidden="true"></i>
                 <div class="plant" aria-hidden="true">
                     <i class="stem"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="pot"></i>
@@ -260,21 +281,44 @@
         const albumAudio=document.getElementById('album-audio');
         const player=document.getElementById('player');
         let selectedAlbum=null;
+        let fallbackTried=false;
+        let shouldBePlaying=false;
+        function setPlayerState(stateName=''){
+            player.classList.toggle('loading',stateName==='loading');
+            player.classList.toggle('error',stateName==='error');
+            player.setAttribute('aria-busy',stateName==='loading'?'true':'false');
+        }
+        async function playSelected(){
+            if(!selectedAlbum)return;
+            shouldBePlaying=true;setPlayerState('loading');
+            try{await albumAudio.play()}
+            catch(error){
+                const fallback=selectedAlbum.dataset.fallback;
+                if(!fallbackTried&&fallback){
+                    fallbackTried=true;albumAudio.src=fallback;albumAudio.load();
+                    try{await albumAudio.play()}catch(fallbackError){shouldBePlaying=false;setPlayerState('error');console.warn('暂时无法播放音频',fallbackError)}
+                }else{shouldBePlaying=false;setPlayerState('error');console.warn('暂时无法播放音频',error)}
+            }
+        }
         async function selectAlbum(button,autoplay=true){
             if(!button)return;
-            if(selectedAlbum===button&&autoplay&&!albumAudio.paused){albumAudio.pause();return}
+            if(selectedAlbum===button&&autoplay&&!albumAudio.paused){shouldBePlaying=false;albumAudio.pause();setPlayerState();return}
             document.querySelectorAll('.album').forEach(item=>item.classList.toggle('active',item===button));
             selectedAlbum=button;
             document.getElementById('track-title').textContent=button.dataset.title;document.getElementById('track-artist').textContent=button.dataset.artist;
             document.getElementById('record-label').style.setProperty('--record-color',button.dataset.color);
-            if(albumAudio.getAttribute('src')!==button.dataset.audio){albumAudio.pause();albumAudio.currentTime=0;albumAudio.src=button.dataset.audio;albumAudio.load()}
-            if(autoplay){try{await albumAudio.play()}catch(error){console.warn('暂时无法播放音频',error)}}
+            if(albumAudio.getAttribute('src')!==button.dataset.audio){shouldBePlaying=false;albumAudio.pause();albumAudio.currentTime=0;fallbackTried=false;albumAudio.src=button.dataset.audio;albumAudio.load()}
+            if(autoplay)await playSelected();
             if(innerWidth<=760)button.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
         }
         document.querySelectorAll('.album').forEach(button=>button.addEventListener('click',()=>selectAlbum(button)));
-        function togglePlayback(){if(!selectedAlbum)return;if(albumAudio.paused){albumAudio.play().catch(error=>console.warn('暂时无法播放音频',error))}else albumAudio.pause()}
+        function togglePlayback(){if(!selectedAlbum)return;if(albumAudio.paused)playSelected();else{shouldBePlaying=false;albumAudio.pause();setPlayerState()}}
         player.addEventListener('click',togglePlayback);player.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();togglePlayback()}});
-        albumAudio.addEventListener('play',()=>{player.classList.add('playing');if(window.parent!==window)window.parent.postMessage({type:'reading-album-playing'},window.location.origin)});albumAudio.addEventListener('pause',()=>player.classList.remove('playing'));albumAudio.addEventListener('ended',()=>player.classList.remove('playing'));
+        ['loadstart','waiting','stalled'].forEach(name=>albumAudio.addEventListener(name,()=>{if(shouldBePlaying)setPlayerState('loading')}));
+        albumAudio.addEventListener('playing',()=>setPlayerState());
+        albumAudio.addEventListener('play',()=>{player.classList.add('playing');if(window.parent!==window)window.parent.postMessage({type:'reading-album-playing'},window.location.origin)});
+        albumAudio.addEventListener('pause',()=>player.classList.remove('playing'));
+        albumAudio.addEventListener('ended',()=>{shouldBePlaying=false;player.classList.remove('playing');setPlayerState()});
         document.getElementById('note-layer').addEventListener('click',closeNotes);document.querySelector('.close-notes').addEventListener('click',closeNotes);
         document.addEventListener('keydown',event=>{if(event.key==='Escape')closeNotes()});
         selectAlbum(document.querySelector('.album.active'),false);load();
