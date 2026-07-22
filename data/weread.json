@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-07-22T16:13:44Z",
+  "updatedAt": "2026-07-22T19:42:57Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -27,9 +27,21 @@
         "updateTime": 1769484304,
         "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/t6_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1784736806,
+        "readUpdateTime": 1784745355,
         "secret": 0,
         "category": "文学-外国文学"
+      },
+      {
+        "bookId": "3300106416",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
+        "title": "箭术与禅心：一位西方哲学家的禅悟实录",
+        "author": "[德]奥根·赫立格尔",
+        "updateTime": 1782095492,
+        "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/t6_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
+        "finishReading": 1,
+        "readUpdateTime": 1784740409,
+        "secret": 0,
+        "category": "个人成长-人生哲学"
       },
       {
         "bookId": "CB_Djp4Tt4V55Oi73w75h4jb9UW",
@@ -134,10 +146,63 @@
       "1784476800": 0,
       "1784563200": 79,
       "1784649600": 29,
-      "1784736000": 483
+      "1784736000": 2609
     },
     "readDays": 4,
     "readLongest": [
+      {
+        "book": {
+          "bookId": "3300190668",
+          "title": "论人生短暂",
+          "author": "[古罗马]塞涅卡",
+          "translator": "刘漪",
+          "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
+          "version": 73733271,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 3,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 3,
+            "maxfreeChapterUid": 6,
+            "maxfreeChapterRatio": 100
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000190,
+          "publishTime": "2026-01-27 00:00:00",
+          "lastChapterIdx": 5,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 2100,
+          "copyrightChapterUids": [
+            5
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 2609,
+        "tags": [
+          "笔记最多",
+          "单日阅读最久"
+        ]
+      },
       {
         "book": {
           "bookId": "3300171413",
@@ -186,9 +251,7 @@
           "isAutoDownload": 1
         },
         "readTime": 1010,
-        "tags": [
-          "单日阅读最久"
-        ]
+        "tags": []
       },
       {
         "book": {
@@ -288,56 +351,6 @@
         },
         "readTime": 497,
         "tags": []
-      },
-      {
-        "book": {
-          "bookId": "3300190668",
-          "title": "论人生短暂",
-          "author": "[古罗马]塞涅卡",
-          "translator": "刘漪",
-          "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
-          "version": 73733271,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 3,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 3,
-            "maxfreeChapterUid": 6,
-            "maxfreeChapterRatio": 100
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1000000190,
-          "publishTime": "2026-01-27 00:00:00",
-          "lastChapterIdx": 5,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 2100,
-          "copyrightChapterUids": [
-            5
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 483,
-        "tags": []
       }
     ],
     "preferCategory": [
@@ -358,18 +371,18 @@
         "readingTime": 1063
       },
       {
-        "categoryId": 600000,
-        "categoryTitle": "哲学宗教",
-        "parentCategoryId": 600000,
-        "parentCategoryTitle": "哲学宗教",
-        "readingCount": 1,
-        "readingTime": 0
-      },
-      {
         "categoryId": 1000000,
         "categoryTitle": "个人成长",
         "parentCategoryId": 1000000,
         "parentCategoryTitle": "个人成长",
+        "readingCount": 1,
+        "readingTime": 29
+      },
+      {
+        "categoryId": 600000,
+        "categoryTitle": "哲学宗教",
+        "parentCategoryId": 600000,
+        "parentCategoryTitle": "哲学宗教",
         "readingCount": 1,
         "readingTime": 0
       },
@@ -422,14 +435,14 @@
       },
       {
         "stat": "笔记",
-        "counts": "2条"
+        "counts": "9条"
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.6377077565089725,
-    "dayAverageReadTime": 131,
+    "compare": -0.3832534090818419,
+    "dayAverageReadTime": 224,
     "baseTime": 1782835200,
-    "totalReadTime": 3027,
+    "totalReadTime": 5153,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -446,7 +459,54 @@
       },
       {
         "type": 5,
-        "title": "思考最多"
+        "title": "思考最多",
+        "bookInfo": {
+          "bookId": "3300190668",
+          "title": "论人生短暂",
+          "author": "[古罗马]塞涅卡",
+          "translator": "刘漪",
+          "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
+          "version": 73733271,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 3,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 3,
+            "maxfreeChapterUid": 6,
+            "maxfreeChapterRatio": 100
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000190,
+          "publishTime": "2026-01-27 00:00:00",
+          "lastChapterIdx": 5,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 2100,
+          "copyrightChapterUids": [
+            5
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "笔记最多"
       },
       {
         "type": 3,
@@ -587,7 +647,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 57191
+      "1767196800": 59317
     },
     "readDays": 40,
     "readLongest": [
@@ -894,6 +954,56 @@
       },
       {
         "book": {
+          "bookId": "3300190668",
+          "title": "论人生短暂",
+          "author": "[古罗马]塞涅卡",
+          "translator": "刘漪",
+          "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
+          "version": 73733271,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 3,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 3,
+            "maxfreeChapterUid": 6,
+            "maxfreeChapterRatio": 100
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000190,
+          "publishTime": "2026-01-27 00:00:00",
+          "lastChapterIdx": 5,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 2100,
+          "copyrightChapterUids": [
+            5
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 2609,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "CB_Djp4Tt4V55Oi73w75h4jb9UW",
           "title": "伦敦国家美术馆（伟大的博物馆）",
           "author": "达尼埃拉·塔拉布拉",
@@ -1032,56 +1142,6 @@
         },
         "readTime": 567,
         "tags": []
-      },
-      {
-        "book": {
-          "bookId": "3300190668",
-          "title": "论人生短暂",
-          "author": "[古罗马]塞涅卡",
-          "translator": "刘漪",
-          "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
-          "version": 73733271,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 3,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 3,
-            "maxfreeChapterUid": 6,
-            "maxfreeChapterRatio": 100
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1000000190,
-          "publishTime": "2026-01-27 00:00:00",
-          "lastChapterIdx": 5,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 2100,
-          "copyrightChapterUids": [
-            5
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 483,
-        "tags": []
       }
     ],
     "preferCategory": [
@@ -1091,7 +1151,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 6,
-        "readingTime": 22891
+        "readingTime": 25017
       },
       {
         "categoryId": 1100000,
@@ -1115,7 +1175,7 @@
         "parentCategoryId": 1000000,
         "parentCategoryTitle": "个人成长",
         "readingCount": 2,
-        "readingTime": 8170
+        "readingTime": 8199
       },
       {
         "categoryId": 600000,
@@ -1123,7 +1183,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 1,
-        "readingTime": 483
+        "readingTime": 2609
       },
       {
         "categoryId": 200000,
@@ -1170,7 +1230,7 @@
       1984,
       2095,
       2748,
-      10170,
+      10199,
       1974,
       3319,
       1697,
@@ -1204,13 +1264,37 @@
         "readTime": "2小时16分钟"
       },
       {
+        "authorId": 315670,
+        "name": "塞涅卡",
+        "count": 1,
+        "readTime": "43分钟"
+      },
+      {
         "authorId": 183442,
         "name": "罗素",
         "count": 1,
         "readTime": "16分钟"
       }
     ],
-    "authorCount": 5,
+    "authorCount": 6,
+    "preferPublisher": [
+      {
+        "name": "浙江人民出版社有限公司",
+        "count": 1
+      },
+      {
+        "name": "浙江科学技术出版社",
+        "count": 1
+      },
+      {
+        "name": "中信出版集团",
+        "count": 1
+      },
+      {
+        "name": "山东文艺出版社",
+        "count": 1
+      }
+    ],
     "readStat": [
       {
         "stat": "读过",
@@ -1226,13 +1310,13 @@
       },
       {
         "stat": "笔记",
-        "counts": "88条"
+        "counts": "95条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 57204,
+    "totalReadTime": 59330,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1604,7 +1688,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有4122人读过"
+        "reason": "仅有4129人读过"
       },
       {
         "type": 8,
@@ -1615,8 +1699,85 @@
   "notesByBook": {
     "3300190668": {
       "highlights": {
-        "synckey": 1784736687,
+        "synckey": 1784745353,
         "updated": [
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 3,
+            "bookmarkId": "3300190668_6_16157-16231",
+            "range": "16157-16231",
+            "markText": "而对于那些忘却过去、轻忽现在、惧怕未来的人而言，生命则极其短促且焦虑不安。当生命走到尽头时，这些可怜人才恍然惊觉：他们终其一生所忙碌的原是镜花水月。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1784745353
+          },
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 3,
+            "bookmarkId": "3300190668_6_10253-10328",
+            "range": "10253-10328",
+            "markText": "我们必须以猛力攻击诸种激情，而非凭借逻辑劝导；正如面对敌人的阵线，不应以针刺细琐之法应对，而应以强攻彻底击溃；因为恶习需要的是碾压摧毁，而非挑剔剥离。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1784742993
+          },
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 3,
+            "bookmarkId": "3300190668_6_9339-9398",
+            "range": "9339-9398",
+            "markText": "但拖延就是对生命最大的浪费：它夺走每一个到来的日子，以空许未来否定现在。对生活最大的阻碍便是期待，因寄望明天而错失今日",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1784742780
+          },
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 3,
+            "bookmarkId": "3300190668_6_8409-8499",
+            "range": "8409-8499",
+            "markText": "他并没有活得更长，而只是在世上待的时间长了些。就像一个人刚刚启航便遇上狂风，之后一直被变幻莫测的狂风拨弄，在海上东飘西荡、原地打转，你总不会说他“航程遥远”，只能说他“漂了挺久”。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1784742589
+          },
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 3,
+            "bookmarkId": "3300190668_6_7634-7713",
+            "range": "7634-7713",
+            "markText": "作为自己时间的管理者，他锱铢必较，认为没有任何东西宝贵到值得用时间来交换。正因为此，他拥有“足够”的时间；而那些任凭公众闯入其生活之人，必然剩不下多少时间了。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1784742285
+          },
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 3,
+            "bookmarkId": "3300190668_6_7296-7404",
+            "range": "7296-7404",
+            "markText": "心神被他物所据者无法成就任何事业：无论是修辞之术，抑或博雅之学，挂虑纷繁者都无法成功从事。因为心灵一旦涣散，就难以深刻领受任何事物，凡所强塞其中者，皆被排拒于外。而生活，这项忙碌之人最为轻视的事业，是世间最难学的技艺",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1784742172
+          },
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 3,
+            "bookmarkId": "3300190668_6_7158-7257",
+            "range": "7158-7257",
+            "markText": "他们耗费多长时间在核算账目上，在谋害他人或惧怕他人谋害中，在逢迎他人或被人逢迎之间，在担保与索保的往来里，在那如今已被当作公事的宴饮中。你将发现，这些俗务无论是好是坏，都未尝留给他们片刻喘息的余地。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1784742139
+          },
           {
             "bookId": "3300190668",
             "chapterIdx": 3,
@@ -1810,6 +1971,182 @@
             "colorsPure": [
               "#949489",
               "#aeaea3"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "3300106416": {
+      "highlights": {
+        "synckey": 0,
+        "updated": [],
+        "removed": [],
+        "chapters": [],
+        "book": {
+          "bookId": "3300106416",
+          "version": 1037611980,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/s_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
+          "title": "箭术与禅心：一位西方哲学家的禅悟实录",
+          "author": "[德]奥根·赫立格尔",
+          "coverBoxInfo": {
+            "blurhash": "K1S6Plxu~q?bofD%9FRjt7",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#201b1b"
+              },
+              {
+                "key": "1/6",
+                "hex": "#201b1b"
+              },
+              {
+                "key": "1/8",
+                "hex": "#201b1b"
+              },
+              {
+                "key": "2/4",
+                "hex": "#343030"
+              },
+              {
+                "key": "2/6",
+                "hex": "#343030"
+              },
+              {
+                "key": "2/8",
+                "hex": "#343030"
+              },
+              {
+                "key": "3/4",
+                "hex": "#4b4746"
+              },
+              {
+                "key": "3/6",
+                "hex": "#4b4746"
+              },
+              {
+                "key": "3/8",
+                "hex": "#4b4746"
+              },
+              {
+                "key": "3/12",
+                "hex": "#4b4746"
+              },
+              {
+                "key": "4/6",
+                "hex": "#645f5e"
+              },
+              {
+                "key": "4/10",
+                "hex": "#645f5e"
+              },
+              {
+                "key": "4/4",
+                "hex": "#645f5e"
+              },
+              {
+                "key": "5/10",
+                "hex": "#7d7978"
+              },
+              {
+                "key": "5/4",
+                "hex": "#7d7978"
+              },
+              {
+                "key": "5/8",
+                "hex": "#7d7978"
+              },
+              {
+                "key": "6/4",
+                "hex": "#979291"
+              },
+              {
+                "key": "6/6",
+                "hex": "#979291"
+              },
+              {
+                "key": "6/8",
+                "hex": "#979291"
+              },
+              {
+                "key": "6/12",
+                "hex": "#979291"
+              },
+              {
+                "key": "7/8",
+                "hex": "#b1adac"
+              },
+              {
+                "key": "7/10",
+                "hex": "#b1adac"
+              },
+              {
+                "key": "7/12",
+                "hex": "#b1adac"
+              },
+              {
+                "key": "8/4",
+                "hex": "#cbc7c6"
+              },
+              {
+                "key": "8/6",
+                "hex": "#cbc7c6"
+              },
+              {
+                "key": "8/12",
+                "hex": "#cbc7c6"
+              },
+              {
+                "key": "9/2",
+                "hex": "#e6e2e1"
+              },
+              {
+                "key": "9/12",
+                "hex": "#e6e2e1"
+              },
+              {
+                "key": "1/100",
+                "hex": "#979291"
+              },
+              {
+                "key": "2/100",
+                "hex": "#b1adac"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#EEEEEE"
+              },
+              {
+                "key": "5/100",
+                "hex": "#EEEEEE"
+              },
+              {
+                "key": "6/100",
+                "hex": "#000000"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#b0acab",
+              "hsv": [
+                9.45589578007366,
+                2.874086332919598,
+                68.97241759757275
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/416/3300106416/s_3300106416.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/416/3300106416/s_3300106416.jpg",
+            "colorsPure": [
+              "#979291",
+              "#b1adac"
             ]
           }
         }
