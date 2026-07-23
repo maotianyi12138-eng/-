@@ -859,7 +859,24 @@
             }
         }
 
-        function switchPage(page) {
+        const siteSections = new Set(['home', 'photo', 'coach', 'cinema', 'works', 'reading', 'thoughts', 'calligraphy']);
+
+        function sectionFromUrl() {
+            const section = new URL(window.location.href).searchParams.get('section') || 'home';
+            return siteSections.has(section) ? section : 'home';
+        }
+
+        function updateSectionRoute(page, replace = false) {
+            const url = new URL(window.location.href);
+            if (page === 'home') url.searchParams.delete('section');
+            else url.searchParams.set('section', page);
+            const method = replace ? 'replaceState' : 'pushState';
+            history[method]({ page }, '', `${url.pathname}${url.search}${url.hash}`);
+        }
+
+        function switchPage(page, { updateHistory = true } = {}) {
+            if (!siteSections.has(page)) page = 'home';
+            if (updateHistory && sectionFromUrl() !== page) updateSectionRoute(page);
             if (page === 'home') restoreMainAudioFromReading();
             if (page !== 'calligraphy') {
                 window.clearTimeout(calligraphyState.refreshTimer);
@@ -942,7 +959,20 @@
         function updateViewer() { document.getElementById('viewer-img').src = currentImgList[currentIndex]; }
         function closeAd() { document.getElementById('ad-pop').style.display = 'none'; }
 
-        window.onload = () => { renderHome(); app.style.opacity = '1'; };
+        window.addEventListener('popstate', () => switchPage(sectionFromUrl(), { updateHistory: false }));
+        window.onload = () => {
+            const initialSection = sectionFromUrl();
+            updateSectionRoute(initialSection, true);
+            if (initialSection === 'home') {
+                renderHome();
+                app.style.opacity = '1';
+            } else {
+                switchPage(initialSection, { updateHistory: false });
+            }
+        };
     </script>
+    <!-- Cloudflare Web Analytics -->
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"bd29032e37994008b8c591d932cf24f3"}'></script>
+    <!-- End Cloudflare Web Analytics -->
 </body>
 </html>
