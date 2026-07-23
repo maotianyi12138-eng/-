@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-07-23T14:30:45Z",
+  "updatedAt": "2026-07-23T19:45:12Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -27,7 +27,7 @@
         "updateTime": 1769484304,
         "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/t6_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1784745355,
+        "readUpdateTime": 1784826856,
         "secret": 0,
         "category": "文学-外国文学"
       },
@@ -146,9 +146,10 @@
       "1784476800": 0,
       "1784563200": 79,
       "1784649600": 29,
-      "1784736000": 2609
+      "1784736000": 2609,
+      "1784822400": 691
     },
-    "readDays": 4,
+    "readDays": 5,
     "readLongest": [
       {
         "book": {
@@ -197,7 +198,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 2609,
+        "readTime": 3300,
         "tags": [
           "笔记最多",
           "单日阅读最久"
@@ -360,7 +361,15 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 4,
-        "readingTime": 2073
+        "readingTime": 4682
+      },
+      {
+        "categoryId": 600000,
+        "categoryTitle": "哲学宗教",
+        "parentCategoryId": 600000,
+        "parentCategoryTitle": "哲学宗教",
+        "readingCount": 1,
+        "readingTime": 2609
       },
       {
         "categoryId": 100001,
@@ -377,14 +386,6 @@
         "parentCategoryTitle": "个人成长",
         "readingCount": 1,
         "readingTime": 29
-      },
-      {
-        "categoryId": 600000,
-        "categoryTitle": "哲学宗教",
-        "parentCategoryId": 600000,
-        "parentCategoryTitle": "哲学宗教",
-        "readingCount": 1,
-        "readingTime": 0
       },
       {
         "categoryId": 200000,
@@ -431,18 +432,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "4天"
+        "counts": "5天"
       },
       {
         "stat": "笔记",
-        "counts": "9条"
+        "counts": "11条"
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.3832534090818419,
-    "dayAverageReadTime": 224,
+    "compare": -0.3296935217471096,
+    "dayAverageReadTime": 243,
     "baseTime": 1782835200,
-    "totalReadTime": 5153,
+    "totalReadTime": 5844,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -571,38 +572,38 @@
         "type": 6,
         "title": "最爱文学",
         "bookInfo": {
-          "bookId": "3300171413",
-          "title": "赞美闲散（果麦经典）",
-          "author": "[英]伯特兰·罗素",
-          "translator": "黄菡",
-          "intro": "诺贝尔文学奖得主罗素的随笔合集，共14篇文章,内容包括工作、教育、社会、文明、如何获得幸福等，融合了哲学与心理学，经济学，科学和历史等观点。\n罗素在百年前精准地预见了现代社会的“内卷”问题：科技越发展，人们反而陷入了更加激烈的竞争和更长的工时。本书大胆挑战了“核心工作论”：工作即美德的信念正在现代世界中制造大量危害，而通往幸福与繁荣之路在于有组织地减少工作。工作的道德是奴隶的道德，现代世界不需要奴隶。\n每天工作只4小时，一切都会好起来！真正的闲散并非游手好闲，而是从工作的重压下解放出来，将努力的方向从“谋生”转向“生活本身”，去追求那些真正定义文明和幸福的事——艺术、爱、知识、休闲和对世界的探索。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/64/cpplatform_7luzwyjdjm3kwkjwswkdyg/s_cpplatform_7luzwyjdjm3kwkjwswkdyg1761214962.jpg",
-          "version": 984273295,
+          "bookId": "3300190668",
+          "title": "论人生短暂",
+          "author": "[古罗马]塞涅卡",
+          "translator": "刘漪",
+          "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
+          "version": 73733271,
           "format": "epub",
           "type": 0,
           "soldout": 0,
           "bookStatus": 1,
           "payType": 4097,
           "finished": 1,
-          "maxFreeChapter": 5,
+          "maxFreeChapter": 3,
           "maxFreeInfo": {
-            "maxfreeChapterIdx": 5,
-            "maxfreeChapterUid": 5,
-            "maxfreeChapterRatio": 64
+            "maxfreeChapterIdx": 3,
+            "maxfreeChapterUid": 6,
+            "maxfreeChapterRatio": 100
           },
           "free": 0,
           "mcardDiscount": 0,
           "ispub": 1,
           "extra_type": 5,
-          "cpid": -3319053,
-          "publishTime": "2025-10-01 00:00:00",
-          "lastChapterIdx": 18,
+          "cpid": 1000000190,
+          "publishTime": "2026-01-27 00:00:00",
+          "lastChapterIdx": 5,
           "paperBook": {
             "skuId": ""
           },
-          "centPrice": 4980,
+          "centPrice": 2100,
           "copyrightChapterUids": [
-            2
+            5
           ],
           "inStoreBookId": "",
           "blockSaveImg": 0,
@@ -647,9 +648,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 59317
+      "1767196800": 60008
     },
-    "readDays": 40,
+    "readDays": 41,
     "readLongest": [
       {
         "book": {
@@ -999,7 +1000,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 2609,
+        "readTime": 3300,
         "tags": []
       },
       {
@@ -1151,7 +1152,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 6,
-        "readingTime": 25017
+        "readingTime": 25708
       },
       {
         "categoryId": 1100000,
@@ -1183,7 +1184,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 1,
-        "readingTime": 2609
+        "readingTime": 3300
       },
       {
         "categoryId": 200000,
@@ -1231,9 +1232,9 @@
       2095,
       2748,
       10199,
-      1974,
-      3319,
-      1697,
+      2805,
+      3933,
+      2861,
       2389,
       4443,
       3221
@@ -1267,7 +1268,7 @@
         "authorId": 315670,
         "name": "塞涅卡",
         "count": 1,
-        "readTime": "43分钟"
+        "readTime": "55分钟"
       },
       {
         "authorId": 183442,
@@ -1306,17 +1307,17 @@
       },
       {
         "stat": "阅读",
-        "counts": "40天"
+        "counts": "41天"
       },
       {
         "stat": "笔记",
-        "counts": "95条"
+        "counts": "97条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 59330,
+    "totalReadTime": 60021,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1688,7 +1689,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有4200人读过"
+        "reason": "仅有4206人读过"
       },
       {
         "type": 8,
@@ -1699,8 +1700,30 @@
   "notesByBook": {
     "3300190668": {
       "highlights": {
-        "synckey": 1784745353,
+        "synckey": 1784826599,
         "updated": [
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 4,
+            "bookmarkId": "3300190668_7_3127-3315",
+            "range": "3127-3315",
+            "markText": "我将让你的心灵面对一切哀恸、披挂一切丧服。这不是温和的方剂，而是火灼与刀割。我的目的何在？我要让一个已征服诸多苦难的灵魂，羞于为身体又添一道新疤而忧愁。让那些在长期的顺境中养成怯懦性情的人哭泣去吧，他们在最微不足道的创伤面前也会崩溃；而那些长年沉浮于患难中的人，理应能以坚毅果敢之心面对最惨烈的打击。长久不息的厄运，虽令人悲伤，却也有其恩赐：它最终会使那些恒久受难者变得坚强。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7,
+            "createTime": 1784826599
+          },
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 3,
+            "bookmarkId": "3300190668_6_19098-19219",
+            "range": "19098-19219",
+            "markText": "诚然，一切为俗务所缠者皆可谓不幸，而其中最不幸者，莫过于连所忙之事都不属于自己的人。他们须依他人作息而起居，依他人步伐而行走，甚至在爱恋与憎恶这类最应自由之事上，也必须受命于人。若他们想知道自己人生之短暂，只需反思，真正属于自己的时光有多少？",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1784825822
+          },
           {
             "bookId": "3300190668",
             "chapterIdx": 3,
@@ -1803,6 +1826,11 @@
         ],
         "removed": [],
         "chapters": [
+          {
+            "title": "慰藉赫尔维娅",
+            "chapterUid": 7,
+            "chapterIdx": 4
+          },
           {
             "title": "论人生短暂",
             "chapterUid": 6,
