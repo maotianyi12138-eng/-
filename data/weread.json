@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-07-23T19:45:12Z",
+  "updatedAt": "2026-07-24T03:43:20Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -27,7 +27,7 @@
         "updateTime": 1769484304,
         "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/t6_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1784826856,
+        "readUpdateTime": 1784852017,
         "secret": 0,
         "category": "文学-外国文学"
       },
@@ -147,7 +147,7 @@
       "1784563200": 79,
       "1784649600": 29,
       "1784736000": 2609,
-      "1784822400": 691
+      "1784822400": 702
     },
     "readDays": 5,
     "readLongest": [
@@ -198,7 +198,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 3300,
+        "readTime": 3311,
         "tags": [
           "笔记最多",
           "单日阅读最久"
@@ -440,10 +440,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.3296935217471096,
+    "compare": -0.3284318223527252,
     "dayAverageReadTime": 243,
     "baseTime": 1782835200,
-    "totalReadTime": 5844,
+    "totalReadTime": 5855,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -648,7 +648,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 60008
+      "1767196800": 60019
     },
     "readDays": 41,
     "readLongest": [
@@ -1000,7 +1000,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 3300,
+        "readTime": 3311,
         "tags": []
       },
       {
@@ -1152,7 +1152,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 6,
-        "readingTime": 25708
+        "readingTime": 25719
       },
       {
         "categoryId": 1100000,
@@ -1184,7 +1184,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 1,
-        "readingTime": 3300
+        "readingTime": 3311
       },
       {
         "categoryId": 200000,
@@ -1317,7 +1317,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 60021,
+    "totalReadTime": 60032,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1689,7 +1689,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有4206人读过"
+        "reason": "仅有4223人读过"
       },
       {
         "type": 8,
