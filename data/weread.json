@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-07-24T14:12:08Z",
+  "updatedAt": "2026-07-24T19:45:59Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -145,7 +145,7 @@
         "updateTime": 1769484304,
         "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/t6_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1784900933,
+        "readUpdateTime": 1784917970,
         "secret": 0,
         "category": "文学-外国文学"
       }
@@ -159,9 +159,10 @@
       "1784563200": 79,
       "1784649600": 29,
       "1784736000": 2609,
-      "1784822400": 2031
+      "1784822400": 3049,
+      "1784908800": 1253
     },
-    "readDays": 5,
+    "readDays": 6,
     "readLongest": [
       {
         "book": {
@@ -210,7 +211,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 4640,
+        "readTime": 6911,
         "tags": [
           "笔记最多",
           "单日阅读最久"
@@ -373,7 +374,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 4,
-        "readingTime": 4682
+        "readingTime": 7731
       },
       {
         "categoryId": 600000,
@@ -381,7 +382,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 1,
-        "readingTime": 2609
+        "readingTime": 5658
       },
       {
         "categoryId": 100001,
@@ -444,18 +445,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "5天"
+        "counts": "6天"
       },
       {
         "stat": "笔记",
-        "counts": "13条"
+        "counts": "19条"
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.17599559552211417,
-    "dayAverageReadTime": 299,
+    "compare": 0.04110846026793908,
+    "dayAverageReadTime": 378,
     "baseTime": 1782835200,
-    "totalReadTime": 7184,
+    "totalReadTime": 9455,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -660,9 +661,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 61348
+      "1767196800": 63619
     },
-    "readDays": 41,
+    "readDays": 42,
     "readLongest": [
       {
         "book": {
@@ -818,6 +819,56 @@
       },
       {
         "book": {
+          "bookId": "3300190668",
+          "title": "论人生短暂",
+          "author": "[古罗马]塞涅卡",
+          "translator": "刘漪",
+          "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
+          "version": 73733271,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 3,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 3,
+            "maxfreeChapterUid": 6,
+            "maxfreeChapterRatio": 100
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000190,
+          "publishTime": "2026-01-27 00:00:00",
+          "lastChapterIdx": 5,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 2100,
+          "copyrightChapterUids": [
+            5
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 6911,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
           "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
           "author": "",
@@ -913,56 +964,6 @@
           "isAutoDownload": 1
         },
         "readTime": 4916,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "3300190668",
-          "title": "论人生短暂",
-          "author": "[古罗马]塞涅卡",
-          "translator": "刘漪",
-          "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
-          "version": 73733271,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 3,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 3,
-            "maxfreeChapterUid": 6,
-            "maxfreeChapterRatio": 100
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1000000190,
-          "publishTime": "2026-01-27 00:00:00",
-          "lastChapterIdx": 5,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 2100,
-          "copyrightChapterUids": [
-            5
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 4640,
         "tags": []
       },
       {
@@ -1164,7 +1165,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 6,
-        "readingTime": 27048
+        "readingTime": 29319
       },
       {
         "categoryId": 1100000,
@@ -1196,7 +1197,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 1,
-        "readingTime": 4640
+        "readingTime": 6911
       },
       {
         "categoryId": 200000,
@@ -1228,7 +1229,7 @@
     "preferTime": [
       703,
       2093,
-      420,
+      431,
       10,
       7,
       0,
@@ -1241,11 +1242,11 @@
       1799,
       12856,
       1984,
-      2095,
+      3424,
       2748,
-      10199,
-      2805,
-      3933,
+      11217,
+      3231,
+      4198,
       2861,
       2389,
       4443,
@@ -1280,7 +1281,7 @@
         "authorId": 315670,
         "name": "塞涅卡",
         "count": 1,
-        "readTime": "1小时17分钟"
+        "readTime": "1小时55分钟"
       },
       {
         "authorId": 183442,
@@ -1319,17 +1320,17 @@
       },
       {
         "stat": "阅读",
-        "counts": "41天"
+        "counts": "42天"
       },
       {
         "stat": "笔记",
-        "counts": "99条"
+        "counts": "105条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 61361,
+    "totalReadTime": 63632,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1701,7 +1702,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有4243人读过"
+        "reason": "仅有4253人读过"
       },
       {
         "type": 8,
@@ -4370,8 +4371,74 @@
     },
     "3300190668": {
       "highlights": {
-        "synckey": 1784899696,
+        "synckey": 1784917932,
         "updated": [
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 5,
+            "bookmarkId": "3300190668_8_14128-14224",
+            "range": "14128-14224",
+            "markText": "无论人生处于何等境况，你只要愿意轻视苦难，不为之所扰，便总能在其中觅得欣慰、消遣与欢愉。自然在这一点上尤为厚待我们：她深知我们生来注定多苦，便赐予“习惯”来抚慰灾厄，使我们迅速适应最沉重的不幸",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 8,
+            "createTime": 1784917932
+          },
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 5,
+            "bookmarkId": "3300190668_8_11575-11649",
+            "range": "11575-11649",
+            "markText": "不过，你还须尤为谨慎地避开那些忧心忡忡、整日哀叹、抓住一切借口抱怨的人。即使此人忠诚无虞、情谊深厚，若时时愁眉苦脸、怨声不断，也终究是心灵安宁的大敌",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 8,
+            "createTime": 1784917047
+          },
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 5,
+            "bookmarkId": "3300190668_8_11061-11385",
+            "range": "11061-11385",
+            "markText": "然而，没有什么比亲密忠诚的友谊更能令人心悦神怡。能够拥有几颗愿意，也能够安全地容纳你一切秘密的心灵，是何等的福分，你与他们分享秘密甚至比藏秘密于心中还要安心；他们的言语安慰你的痛苦，他们的建议帮助你做出决断，他们的欢悦驱散你的忧愁，仅是看到他们的面容你就精神振奋！诚然，我们应当选择那些远离强烈欲望的人为友，因为恶习往往潜移默化，近在咫尺者最易因接触而染病。疫病流行时我们必须避免坐在发热者身边，以免吸入他们的气息而遭感染，同理，在择友时我们也当以品德纯良无玷者为先。将健康人与病患混在一起，便是灾患之源。不过，我并不是要你只与智者为友，毕竟我们已经寻找多年，那样的人又在哪里呢？既然无法找到理想中的贤人，我们也只能退而求其次，容忍最不坏的那一些。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 8,
+            "createTime": 1784917022
+          },
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 5,
+            "bookmarkId": "3300190668_8_10920-11032",
+            "range": "10920-11032",
+            "markText": "你必须仔细权衡自己的天性究竟更适合实务活动，还是静心思索与学术探究，并朝着你的天资与个性自然指引的方向去努力。演说家伊索克拉底曾强行将学生埃福罗斯从公共广场上拉走，认为他写史才是正道。天赋的性情难以违拗，与自然作对只是徒劳。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 8,
+            "createTime": 1784916810
+          },
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 5,
+            "bookmarkId": "3300190668_8_6459-6490",
+            "range": "6459-6490",
+            "markText": "那些欲望像恶疮般在心灵上破裂的人，也会在劳累与烦扰中获得快感。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 8,
+            "createTime": 1784915820
+          },
+          {
+            "bookId": "3300190668",
+            "chapterIdx": 5,
+            "bookmarkId": "3300190668_8_1412-1467",
+            "range": "1412-1467",
+            "markText": "我们之所以误入歧途，并不总是因为他人的奉承，更多时候是因为我们自己对自己的谄媚。谁敢直言不讳地对自己说出真相？",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 8,
+            "createTime": 1784908017
+          },
           {
             "bookId": "3300190668",
             "chapterIdx": 4,
@@ -4518,6 +4585,11 @@
         ],
         "removed": [],
         "chapters": [
+          {
+            "title": "论心灵之安宁",
+            "chapterUid": 8,
+            "chapterIdx": 5
+          },
           {
             "title": "慰藉赫尔维娅",
             "chapterUid": 7,
