@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-07-25T14:01:08Z",
+  "updatedAt": "2026-07-25T19:34:16Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -51,7 +51,7 @@
         "updateTime": 1689693337,
         "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/t6_35523642.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1784900045,
+        "readUpdateTime": 1785001024,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -66,18 +66,6 @@
         "readUpdateTime": 1777735967,
         "secret": 0,
         "category": "个人成长-人生哲学"
-      },
-      {
-        "bookId": "3300175674",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=ce332d50813abab1fg014aaa",
-        "title": "动物农场",
-        "author": "[英]乔治·奥威尔",
-        "updateTime": 1774923903,
-        "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_e1wvnlkxez6bq6ucipa9oy/t6_cpplatform_e1wvnlkxez6bq6ucipa9oy1762742145.jpg",
-        "finishReading": 0,
-        "readUpdateTime": 1784644362,
-        "secret": 0,
-        "category": "文学-外国文学"
       },
       {
         "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
@@ -136,18 +124,6 @@
         "readUpdateTime": 1784740409,
         "secret": 0,
         "category": "个人成长-人生哲学"
-      },
-      {
-        "bookId": "3300190668",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=18b32200813abb0fag01892b",
-        "title": "论人生短暂",
-        "author": "[古罗马]塞涅卡",
-        "updateTime": 1769484304,
-        "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/t6_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
-        "finishReading": 0,
-        "readUpdateTime": 1784917970,
-        "secret": 0,
-        "category": "文学-外国文学"
       }
     ]
   },
@@ -160,9 +136,10 @@
       "1784649600": 29,
       "1784736000": 2609,
       "1784822400": 3049,
-      "1784908800": 1253
+      "1784908800": 1253,
+      "1784995200": 2160
     },
-    "readDays": 6,
+    "readDays": 7,
     "readLongest": [
       {
         "book": {
@@ -211,11 +188,61 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 6911,
+        "readTime": 7794,
         "tags": [
           "笔记最多",
           "单日阅读最久"
         ]
+      },
+      {
+        "book": {
+          "bookId": "35523642",
+          "title": "丰饶之海（第一卷）：春雪",
+          "author": "三岛由纪夫",
+          "translator": "陈德文",
+          "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
+          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
+          "version": 1873098669,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 7,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 7,
+            "maxfreeChapterUid": 64,
+            "maxfreeChapterRatio": 32
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 1,
+          "cpid": -2571052,
+          "publishTime": "2018-10-15 00:00:00",
+          "lastChapterIdx": 58,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 3000,
+          "copyrightChapterUids": [
+            59
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 1051,
+        "tags": []
       },
       {
         "book": {
@@ -373,8 +400,8 @@
         "categoryTitle": "文学",
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
-        "readingCount": 4,
-        "readingTime": 7731
+        "readingCount": 5,
+        "readingTime": 8984
       },
       {
         "categoryId": 600000,
@@ -382,14 +409,14 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 1,
-        "readingTime": 5658
+        "readingTime": 6911
       },
       {
         "categoryId": 100001,
         "categoryTitle": "社会小说",
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
-        "readingCount": 2,
+        "readingCount": 3,
         "readingTime": 1063
       },
       {
@@ -437,15 +464,15 @@
     "readStat": [
       {
         "stat": "读过",
-        "counts": "5本"
+        "counts": "6本"
       },
       {
         "stat": "读完",
-        "counts": "1本"
+        "counts": "2本"
       },
       {
         "stat": "阅读",
-        "counts": "6天"
+        "counts": "7天"
       },
       {
         "stat": "笔记",
@@ -453,10 +480,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 0.04110846026793908,
-    "dayAverageReadTime": 378,
+    "compare": 0.2297598712537234,
+    "dayAverageReadTime": 446,
     "baseTime": 1782835200,
-    "totalReadTime": 9455,
+    "totalReadTime": 11615,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -630,7 +657,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "阅读了1小时"
+        "reason": "阅读了2小时"
       },
       {
         "type": 2,
@@ -661,9 +688,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 63619
+      "1767196800": 65779
     },
-    "readDays": 42,
+    "readDays": 43,
     "readLongest": [
       {
         "book": {
@@ -864,7 +891,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 6911,
+        "readTime": 7794,
         "tags": []
       },
       {
@@ -1059,6 +1086,56 @@
       },
       {
         "book": {
+          "bookId": "35523642",
+          "title": "丰饶之海（第一卷）：春雪",
+          "author": "三岛由纪夫",
+          "translator": "陈德文",
+          "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
+          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
+          "version": 1873098669,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 7,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 7,
+            "maxfreeChapterUid": 64,
+            "maxfreeChapterRatio": 32
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 1,
+          "cpid": -2571052,
+          "publishTime": "2018-10-15 00:00:00",
+          "lastChapterIdx": 58,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 3000,
+          "copyrightChapterUids": [
+            59
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 1051,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "3300171413",
           "title": "赞美闲散（果麦经典）",
           "author": "[英]伯特兰·罗素",
@@ -1106,56 +1183,6 @@
         },
         "readTime": 1010,
         "tags": []
-      },
-      {
-        "book": {
-          "bookId": "3300175674",
-          "title": "动物农场",
-          "author": "[英]乔治·奥威尔",
-          "translator": "尤玉金",
-          "intro": "一场由动物发起的革命，在曼诺农场悄然爆发。琼斯先生的残暴统治被推翻，动物们建立起 “动物农场”，立下 “所有动物一律平等” 的七诫，立志打造没有剥削的家园。\n然而，理想很快遭遇现实冲击。猪凭借智慧掌控权力，拿破仑逐渐显露独裁野心，驱逐异己、修改诫命，曾经的革命伙伴沦为新的 “被统治者”。平等的口号下，是越来越悬殊的阶级差距，动物们辛苦劳作的成果，最终流向少数统治者。\n这部作品以动物喻人，用荒诞故事揭露权力变质的真相，字里行间藏着对现实的深刻反思。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_e1wvnlkxez6bq6ucipa9oy/s_cpplatform_e1wvnlkxez6bq6ucipa9oy1762742145.jpg",
-          "version": 1700012358,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 4,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 4,
-            "maxfreeChapterUid": 4,
-            "maxfreeChapterRatio": 9
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1000000190,
-          "publishTime": "2025-11-10 00:00:00",
-          "lastChapterIdx": 12,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 2000,
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 567,
-        "tags": []
       }
     ],
     "preferCategory": [
@@ -1164,8 +1191,16 @@
         "categoryTitle": "文学",
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
-        "readingCount": 6,
-        "readingTime": 29319
+        "readingCount": 7,
+        "readingTime": 31253
+      },
+      {
+        "categoryId": 100001,
+        "categoryTitle": "社会小说",
+        "parentCategoryId": 100000,
+        "parentCategoryTitle": "精品小说",
+        "readingCount": 4,
+        "readingTime": 18420
       },
       {
         "categoryId": 1100000,
@@ -1174,14 +1209,6 @@
         "parentCategoryTitle": "经济理财",
         "readingCount": 1,
         "readingTime": 18026
-      },
-      {
-        "categoryId": 100001,
-        "categoryTitle": "社会小说",
-        "parentCategoryId": 100000,
-        "parentCategoryTitle": "精品小说",
-        "readingCount": 3,
-        "readingTime": 17369
       },
       {
         "categoryId": 1000000,
@@ -1197,7 +1224,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 1,
-        "readingTime": 6911
+        "readingTime": 7794
       },
       {
         "categoryId": 200000,
@@ -1246,8 +1273,8 @@
       2748,
       11217,
       3231,
-      4198,
-      2861,
+      4434,
+      3878,
       2389,
       4443,
       3221
@@ -1281,7 +1308,13 @@
         "authorId": 315670,
         "name": "塞涅卡",
         "count": 1,
-        "readTime": "1小时55分钟"
+        "readTime": "2小时9分钟"
+      },
+      {
+        "authorId": 394948,
+        "name": "三岛由纪夫",
+        "count": 1,
+        "readTime": "17分钟"
       },
       {
         "authorId": 183442,
@@ -1290,7 +1323,7 @@
         "readTime": "16分钟"
       }
     ],
-    "authorCount": 6,
+    "authorCount": 7,
     "preferPublisher": [
       {
         "name": "浙江人民出版社有限公司",
@@ -1305,6 +1338,10 @@
         "count": 1
       },
       {
+        "name": "人民文学出版社",
+        "count": 1
+      },
+      {
         "name": "山东文艺出版社",
         "count": 1
       }
@@ -1312,15 +1349,15 @@
     "readStat": [
       {
         "stat": "读过",
-        "counts": "11本"
+        "counts": "12本"
       },
       {
         "stat": "读完",
-        "counts": "5本"
+        "counts": "6本"
       },
       {
         "stat": "阅读",
-        "counts": "42天"
+        "counts": "43天"
       },
       {
         "stat": "笔记",
@@ -1330,7 +1367,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 63632,
+    "totalReadTime": 65792,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1702,7 +1739,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有4285人读过"
+        "reason": "仅有4300人读过"
       },
       {
         "type": 8,
@@ -2760,182 +2797,6 @@
             "colorsPure": [
               "#939392",
               "#adaeac"
-            ]
-          }
-        }
-      },
-      "thoughts": {
-        "reviews": []
-      }
-    },
-    "3300175674": {
-      "highlights": {
-        "synckey": 0,
-        "updated": [],
-        "removed": [],
-        "chapters": [],
-        "book": {
-          "bookId": "3300175674",
-          "version": 1700012358,
-          "format": "epub",
-          "soldout": 0,
-          "bookStatus": 1,
-          "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_e1wvnlkxez6bq6ucipa9oy/s_cpplatform_e1wvnlkxez6bq6ucipa9oy1762742145.jpg",
-          "title": "动物农场",
-          "author": "[英]乔治·奥威尔",
-          "coverBoxInfo": {
-            "blurhash": "KH7;?^xun,uxxuWBldxbWB",
-            "colors": [
-              {
-                "key": "1/4",
-                "hex": "#002311"
-              },
-              {
-                "key": "1/6",
-                "hex": "#00260b"
-              },
-              {
-                "key": "1/8",
-                "hex": "#002906"
-              },
-              {
-                "key": "2/4",
-                "hex": "#153725"
-              },
-              {
-                "key": "2/6",
-                "hex": "#003a20"
-              },
-              {
-                "key": "2/8",
-                "hex": "#003d1a"
-              },
-              {
-                "key": "3/4",
-                "hex": "#294f39"
-              },
-              {
-                "key": "3/6",
-                "hex": "#095332"
-              },
-              {
-                "key": "3/8",
-                "hex": "#00552c"
-              },
-              {
-                "key": "3/12",
-                "hex": "#005a20"
-              },
-              {
-                "key": "4/6",
-                "hex": "#256d47"
-              },
-              {
-                "key": "4/10",
-                "hex": "#007337"
-              },
-              {
-                "key": "4/4",
-                "hex": "#40694f"
-              },
-              {
-                "key": "5/10",
-                "hex": "#008e4d"
-              },
-              {
-                "key": "5/4",
-                "hex": "#598367"
-              },
-              {
-                "key": "5/8",
-                "hex": "#238b55"
-              },
-              {
-                "key": "6/4",
-                "hex": "#719e7e"
-              },
-              {
-                "key": "6/6",
-                "hex": "#5ea275"
-              },
-              {
-                "key": "6/8",
-                "hex": "#45a66c"
-              },
-              {
-                "key": "6/12",
-                "hex": "#00ac5a"
-              },
-              {
-                "key": "7/8",
-                "hex": "#63c083"
-              },
-              {
-                "key": "7/10",
-                "hex": "#44c479"
-              },
-              {
-                "key": "7/12",
-                "hex": "#00c86f"
-              },
-              {
-                "key": "8/4",
-                "hex": "#a4d3b0"
-              },
-              {
-                "key": "8/6",
-                "hex": "#90d8a4"
-              },
-              {
-                "key": "8/12",
-                "hex": "#39e484"
-              },
-              {
-                "key": "9/2",
-                "hex": "#ceead4"
-              },
-              {
-                "key": "9/12",
-                "hex": "#56ff99"
-              },
-              {
-                "key": "1/100",
-                "hex": "#45a66c"
-              },
-              {
-                "key": "2/100",
-                "hex": "#63c083"
-              },
-              {
-                "key": "3/100",
-                "hex": "#ffffff"
-              },
-              {
-                "key": "4/100",
-                "hex": "#E5F3E9"
-              },
-              {
-                "key": "5/100",
-                "hex": "#E5F3E9"
-              },
-              {
-                "key": "6/100",
-                "hex": "#002706"
-              }
-            ],
-            "dominate_color": {
-              "hex": "#308c59",
-              "hsv": [
-                146.99141611393774,
-                65.55729360645562,
-                54.768094351334578
-              ]
-            },
-            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/674/3300175674/s_3300175674.jpg",
-            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/674/3300175674/s_3300175674.jpg",
-            "colorsPure": [
-              "#00ac5a",
-              "#00c86f"
             ]
           }
         }
@@ -4361,408 +4222,6 @@
             "colorsPure": [
               "#979291",
               "#b1adac"
-            ]
-          }
-        }
-      },
-      "thoughts": {
-        "reviews": []
-      }
-    },
-    "3300190668": {
-      "highlights": {
-        "synckey": 1784917932,
-        "updated": [
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 5,
-            "bookmarkId": "3300190668_8_14128-14224",
-            "range": "14128-14224",
-            "markText": "无论人生处于何等境况，你只要愿意轻视苦难，不为之所扰，便总能在其中觅得欣慰、消遣与欢愉。自然在这一点上尤为厚待我们：她深知我们生来注定多苦，便赐予“习惯”来抚慰灾厄，使我们迅速适应最沉重的不幸",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 8,
-            "createTime": 1784917932
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 5,
-            "bookmarkId": "3300190668_8_11575-11649",
-            "range": "11575-11649",
-            "markText": "不过，你还须尤为谨慎地避开那些忧心忡忡、整日哀叹、抓住一切借口抱怨的人。即使此人忠诚无虞、情谊深厚，若时时愁眉苦脸、怨声不断，也终究是心灵安宁的大敌",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 8,
-            "createTime": 1784917047
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 5,
-            "bookmarkId": "3300190668_8_11061-11385",
-            "range": "11061-11385",
-            "markText": "然而，没有什么比亲密忠诚的友谊更能令人心悦神怡。能够拥有几颗愿意，也能够安全地容纳你一切秘密的心灵，是何等的福分，你与他们分享秘密甚至比藏秘密于心中还要安心；他们的言语安慰你的痛苦，他们的建议帮助你做出决断，他们的欢悦驱散你的忧愁，仅是看到他们的面容你就精神振奋！诚然，我们应当选择那些远离强烈欲望的人为友，因为恶习往往潜移默化，近在咫尺者最易因接触而染病。疫病流行时我们必须避免坐在发热者身边，以免吸入他们的气息而遭感染，同理，在择友时我们也当以品德纯良无玷者为先。将健康人与病患混在一起，便是灾患之源。不过，我并不是要你只与智者为友，毕竟我们已经寻找多年，那样的人又在哪里呢？既然无法找到理想中的贤人，我们也只能退而求其次，容忍最不坏的那一些。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 8,
-            "createTime": 1784917022
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 5,
-            "bookmarkId": "3300190668_8_10920-11032",
-            "range": "10920-11032",
-            "markText": "你必须仔细权衡自己的天性究竟更适合实务活动，还是静心思索与学术探究，并朝着你的天资与个性自然指引的方向去努力。演说家伊索克拉底曾强行将学生埃福罗斯从公共广场上拉走，认为他写史才是正道。天赋的性情难以违拗，与自然作对只是徒劳。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 8,
-            "createTime": 1784916810
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 5,
-            "bookmarkId": "3300190668_8_6459-6490",
-            "range": "6459-6490",
-            "markText": "那些欲望像恶疮般在心灵上破裂的人，也会在劳累与烦扰中获得快感。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 8,
-            "createTime": 1784915820
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 5,
-            "bookmarkId": "3300190668_8_1412-1467",
-            "range": "1412-1467",
-            "markText": "我们之所以误入歧途，并不总是因为他人的奉承，更多时候是因为我们自己对自己的谄媚。谁敢直言不讳地对自己说出真相？",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 8,
-            "createTime": 1784908017
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 4,
-            "bookmarkId": "3300190668_7_8344-8674",
-            "range": "8344-8674",
-            "markText": "所以，让我们昂首挺胸、正直无畏地，随命运之引导快步前行吧！任它把我们带往何方，我们都要坦然穿越任何土地；因为在这世界之中，并无所谓流放之地，没有什么地方对于人是陌生的。从大地上任何一点仰望天宇，从人世到神界的距离始终如一。因而，只要我的眼睛未曾被剥夺那从未令我厌倦的景象，只要我仍能看见日与月，观测诸行星之飞转，追踪它们的升起与沉落，它们的周期及其快慢有因的运行；只要我可以凝视夜空中光辉闪耀的恒星——有些恒定不动，有些则在同一区域内缓慢游移，有些倏忽射出，有些拖曳着炽亮的尾焰掠过天际，如陨落、如滑翔；只要我能与这些天体交谈，尽人类之所能，与神明为伴，只要我能令我的心灵常常向上举目，努力通达那与我灵魂同源的境界——那么，我脚下踏的是哪片土地，又有什么关系？",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 7,
-            "createTime": 1784899696
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 4,
-            "bookmarkId": "3300190668_7_5447-5727",
-            "range": "5447-5727",
-            "markText": "有人说：“失去祖国是难以忍受的。”可是，请看看这庞大的人群，连广袤的罗马城都几乎容纳不下：其中的大多数人其实都失去了他们的祖国。他们从各自的城镇、殖民地，甚至从整个世界的各处蜂拥而来，有人为求取功名，有人为履行公职，有人来此出使，也有人是贪图这里放纵享乐的便利，有人因热爱博雅之学，有人被公共表演吸引，有人因友情而至，有人因希望在这里施展抱负和才能，有人来此出卖美貌，有人兜售口才。总之，几乎每一种人都涌入这座城市，因为这座城市对美德与恶行都给予厚赏。若你挨个点名，问他们来自何方，你就会发现他们中的大多数人都是从家乡来到这座宏伟而美丽、但并不属于他们的城市。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 7,
-            "createTime": 1784899310
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 4,
-            "bookmarkId": "3300190668_7_3127-3315",
-            "range": "3127-3315",
-            "markText": "我将让你的心灵面对一切哀恸、披挂一切丧服。这不是温和的方剂，而是火灼与刀割。我的目的何在？我要让一个已征服诸多苦难的灵魂，羞于为身体又添一道新疤而忧愁。让那些在长期的顺境中养成怯懦性情的人哭泣去吧，他们在最微不足道的创伤面前也会崩溃；而那些长年沉浮于患难中的人，理应能以坚毅果敢之心面对最惨烈的打击。长久不息的厄运，虽令人悲伤，却也有其恩赐：它最终会使那些恒久受难者变得坚强。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 7,
-            "createTime": 1784826599
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 3,
-            "bookmarkId": "3300190668_6_19098-19219",
-            "range": "19098-19219",
-            "markText": "诚然，一切为俗务所缠者皆可谓不幸，而其中最不幸者，莫过于连所忙之事都不属于自己的人。他们须依他人作息而起居，依他人步伐而行走，甚至在爱恋与憎恶这类最应自由之事上，也必须受命于人。若他们想知道自己人生之短暂，只需反思，真正属于自己的时光有多少？",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 6,
-            "createTime": 1784825822
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 3,
-            "bookmarkId": "3300190668_6_16157-16231",
-            "range": "16157-16231",
-            "markText": "而对于那些忘却过去、轻忽现在、惧怕未来的人而言，生命则极其短促且焦虑不安。当生命走到尽头时，这些可怜人才恍然惊觉：他们终其一生所忙碌的原是镜花水月。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 6,
-            "createTime": 1784745353
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 3,
-            "bookmarkId": "3300190668_6_10253-10328",
-            "range": "10253-10328",
-            "markText": "我们必须以猛力攻击诸种激情，而非凭借逻辑劝导；正如面对敌人的阵线，不应以针刺细琐之法应对，而应以强攻彻底击溃；因为恶习需要的是碾压摧毁，而非挑剔剥离。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 6,
-            "createTime": 1784742993
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 3,
-            "bookmarkId": "3300190668_6_9339-9398",
-            "range": "9339-9398",
-            "markText": "但拖延就是对生命最大的浪费：它夺走每一个到来的日子，以空许未来否定现在。对生活最大的阻碍便是期待，因寄望明天而错失今日",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 6,
-            "createTime": 1784742780
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 3,
-            "bookmarkId": "3300190668_6_8409-8499",
-            "range": "8409-8499",
-            "markText": "他并没有活得更长，而只是在世上待的时间长了些。就像一个人刚刚启航便遇上狂风，之后一直被变幻莫测的狂风拨弄，在海上东飘西荡、原地打转，你总不会说他“航程遥远”，只能说他“漂了挺久”。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 6,
-            "createTime": 1784742589
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 3,
-            "bookmarkId": "3300190668_6_7634-7713",
-            "range": "7634-7713",
-            "markText": "作为自己时间的管理者，他锱铢必较，认为没有任何东西宝贵到值得用时间来交换。正因为此，他拥有“足够”的时间；而那些任凭公众闯入其生活之人，必然剩不下多少时间了。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 6,
-            "createTime": 1784742285
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 3,
-            "bookmarkId": "3300190668_6_7296-7404",
-            "range": "7296-7404",
-            "markText": "心神被他物所据者无法成就任何事业：无论是修辞之术，抑或博雅之学，挂虑纷繁者都无法成功从事。因为心灵一旦涣散，就难以深刻领受任何事物，凡所强塞其中者，皆被排拒于外。而生活，这项忙碌之人最为轻视的事业，是世间最难学的技艺",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 6,
-            "createTime": 1784742172
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 3,
-            "bookmarkId": "3300190668_6_7158-7257",
-            "range": "7158-7257",
-            "markText": "他们耗费多长时间在核算账目上，在谋害他人或惧怕他人谋害中，在逢迎他人或被人逢迎之间，在担保与索保的往来里，在那如今已被当作公事的宴饮中。你将发现，这些俗务无论是好是坏，都未尝留给他们片刻喘息的余地。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 6,
-            "createTime": 1784742139
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 3,
-            "bookmarkId": "3300190668_6_3834-3890",
-            "range": "3834-3890",
-            "markText": "你没有理由因施予关注而向任何人邀功——你之所以会关注他人，不是因为你想要他人的陪伴，而是因为无法忍受与自己独处。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 6,
-            "createTime": 1784736687
-          },
-          {
-            "bookId": "3300190668",
-            "chapterIdx": 3,
-            "bookmarkId": "3300190668_6_1510-1534",
-            "range": "1510-1534",
-            "markText": "你在恐惧中表现得像凡人，却在欲望中行事如不朽者。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 6,
-            "createTime": 1784736273
-          }
-        ],
-        "removed": [],
-        "chapters": [
-          {
-            "title": "论心灵之安宁",
-            "chapterUid": 8,
-            "chapterIdx": 5
-          },
-          {
-            "title": "慰藉赫尔维娅",
-            "chapterUid": 7,
-            "chapterIdx": 4
-          },
-          {
-            "title": "论人生短暂",
-            "chapterUid": 6,
-            "chapterIdx": 3
-          }
-        ],
-        "book": {
-          "bookId": "3300190668",
-          "version": 73733271,
-          "format": "epub",
-          "soldout": 0,
-          "bookStatus": 1,
-          "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
-          "title": "论人生短暂",
-          "author": "[古罗马]塞涅卡",
-          "coverBoxInfo": {
-            "blurhash": "KMQmeKEK~D?IWBE1t4oes:",
-            "colors": [
-              {
-                "key": "1/4",
-                "hex": "#1c1d17"
-              },
-              {
-                "key": "1/6",
-                "hex": "#1c1d17"
-              },
-              {
-                "key": "1/8",
-                "hex": "#1c1d17"
-              },
-              {
-                "key": "2/4",
-                "hex": "#31312b"
-              },
-              {
-                "key": "2/6",
-                "hex": "#31312b"
-              },
-              {
-                "key": "2/8",
-                "hex": "#31312b"
-              },
-              {
-                "key": "3/4",
-                "hex": "#484840"
-              },
-              {
-                "key": "3/6",
-                "hex": "#484840"
-              },
-              {
-                "key": "3/8",
-                "hex": "#484840"
-              },
-              {
-                "key": "3/12",
-                "hex": "#484840"
-              },
-              {
-                "key": "4/6",
-                "hex": "#606158"
-              },
-              {
-                "key": "4/10",
-                "hex": "#606158"
-              },
-              {
-                "key": "4/4",
-                "hex": "#606158"
-              },
-              {
-                "key": "5/10",
-                "hex": "#7a7a71"
-              },
-              {
-                "key": "5/4",
-                "hex": "#7a7a71"
-              },
-              {
-                "key": "5/8",
-                "hex": "#7a7a71"
-              },
-              {
-                "key": "6/4",
-                "hex": "#949489"
-              },
-              {
-                "key": "6/6",
-                "hex": "#949489"
-              },
-              {
-                "key": "6/8",
-                "hex": "#949489"
-              },
-              {
-                "key": "6/12",
-                "hex": "#949489"
-              },
-              {
-                "key": "7/8",
-                "hex": "#aeaea3"
-              },
-              {
-                "key": "7/10",
-                "hex": "#aeaea3"
-              },
-              {
-                "key": "7/12",
-                "hex": "#aeaea3"
-              },
-              {
-                "key": "8/4",
-                "hex": "#c9c9bc"
-              },
-              {
-                "key": "8/6",
-                "hex": "#c9c9bc"
-              },
-              {
-                "key": "8/12",
-                "hex": "#c9c9bc"
-              },
-              {
-                "key": "9/2",
-                "hex": "#e4e4d6"
-              },
-              {
-                "key": "9/12",
-                "hex": "#e4e4d6"
-              },
-              {
-                "key": "1/100",
-                "hex": "#949489"
-              },
-              {
-                "key": "2/100",
-                "hex": "#aeaea3"
-              },
-              {
-                "key": "3/100",
-                "hex": "#ffffff"
-              },
-              {
-                "key": "4/100",
-                "hex": "#F3F1E5"
-              },
-              {
-                "key": "5/100",
-                "hex": "#F3F1E5"
-              },
-              {
-                "key": "6/100",
-                "hex": "#271E00"
-              }
-            ],
-            "dominate_color": {
-              "hex": "#fefeef",
-              "hsv": [
-                56.9969150540824,
-                5.903352501032236,
-                99.79647831297396
-              ]
-            },
-            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/668/3300190668/s_3300190668.jpg",
-            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/668/3300190668/s_3300190668.jpg",
-            "colorsPure": [
-              "#949489",
-              "#aeaea3"
             ]
           }
         }
