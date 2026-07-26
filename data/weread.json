@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-07-25T19:34:16Z",
+  "updatedAt": "2026-07-26T03:54:44Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1378,37 +1378,38 @@
         "type": 1,
         "title": "近期偏爱",
         "bookInfo": {
-          "bookId": "3300155373",
-          "title": "在我身上有一个不可战胜的夏天",
-          "author": "[法]阿尔贝·加缪",
-          "intro": "在我身上有一个不可战胜的夏天",
-          "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/s_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
-          "version": 76757252,
+          "bookId": "3300190668",
+          "title": "论人生短暂",
+          "author": "[古罗马]塞涅卡",
+          "translator": "刘漪",
+          "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
+          "version": 73733271,
           "format": "epub",
           "type": 0,
           "soldout": 0,
           "bookStatus": 1,
           "payType": 4097,
           "finished": 1,
-          "maxFreeChapter": 6,
+          "maxFreeChapter": 3,
           "maxFreeInfo": {
-            "maxfreeChapterIdx": 6,
+            "maxfreeChapterIdx": 3,
             "maxfreeChapterUid": 6,
-            "maxfreeChapterRatio": 19
+            "maxfreeChapterRatio": 100
           },
           "free": 0,
           "mcardDiscount": 0,
           "ispub": 1,
           "extra_type": 5,
-          "cpid": -60041,
-          "publishTime": "2025-07-15 00:00:00",
-          "lastChapterIdx": 25,
+          "cpid": 1000000190,
+          "publishTime": "2026-01-27 00:00:00",
+          "lastChapterIdx": 5,
           "paperBook": {
             "skuId": ""
           },
-          "centPrice": 5800,
+          "centPrice": 2100,
           "copyrightChapterUids": [
-            2
+            5
           ],
           "inStoreBookId": "",
           "blockSaveImg": 0,
@@ -1422,7 +1423,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "最近阅读3小时"
+        "reason": "最近阅读1小时"
       },
       {
         "type": 0,
@@ -1739,7 +1740,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有4300人读过"
+        "reason": "仅有4301人读过"
       },
       {
         "type": 8,
