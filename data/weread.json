@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-07-26T13:55:28Z",
+  "updatedAt": "2026-07-26T19:33:41Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -193,56 +193,6 @@
           "笔记最多",
           "单日阅读最久"
         ]
-      },
-      {
-        "book": {
-          "bookId": "35523642",
-          "title": "丰饶之海（第一卷）：春雪",
-          "author": "三岛由纪夫",
-          "translator": "陈德文",
-          "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
-          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
-          "version": 1873098669,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 7,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 7,
-            "maxfreeChapterUid": 64,
-            "maxfreeChapterRatio": 32
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 1,
-          "cpid": -2571052,
-          "publishTime": "2018-10-15 00:00:00",
-          "lastChapterIdx": 58,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 3000,
-          "copyrightChapterUids": [
-            59
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 1051,
-        "tags": []
       },
       {
         "book": {
@@ -480,8 +430,8 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 0.2297598712537234,
-    "dayAverageReadTime": 446,
+    "compare": 0.18421320935543729,
+    "dayAverageReadTime": 430,
     "baseTime": 1782835200,
     "totalReadTime": 11615,
     "readDistributionWord": "点评分布",
@@ -1740,7 +1690,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有4327人读过"
+        "reason": "仅有4340人读过"
       },
       {
         "type": 8,
