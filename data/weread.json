@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-01T08:33:45Z",
+  "updatedAt": "2026-08-01T13:53:59Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -51,7 +51,7 @@
         "updateTime": 1689693337,
         "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/t6_35523642.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1785526811,
+        "readUpdateTime": 1785582064,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -129,7 +129,7 @@
   },
   "monthly": {
     "readTimes": {
-      "1785513600": 647
+      "1785513600": 716
     },
     "readDays": 1,
     "readLongest": [
@@ -180,7 +180,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 647,
+        "readTime": 716,
         "tags": [
           "单日阅读最久"
         ]
@@ -205,10 +205,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 0.5456997533908755,
-    "dayAverageReadTime": 647,
+    "compare": 0.7105425400739828,
+    "dayAverageReadTime": 716,
     "baseTime": 1785513600,
-    "totalReadTime": 647,
+    "totalReadTime": 716,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -272,7 +272,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 67787
+      "1767196800": 67856
     },
     "readDays": 45,
     "readLongest": [
@@ -674,7 +674,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 3059,
+        "readTime": 3128,
         "tags": []
       },
       {
@@ -776,7 +776,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 7,
-        "readingTime": 33261
+        "readingTime": 33330
       },
       {
         "categoryId": 100001,
@@ -784,7 +784,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 4,
-        "readingTime": 20428
+        "readingTime": 20497
       },
       {
         "categoryId": 1100000,
@@ -898,7 +898,7 @@
         "authorId": 394948,
         "name": "三岛由纪夫",
         "count": 1,
-        "readTime": "50分钟"
+        "readTime": "52分钟"
       },
       {
         "authorId": 183442,
@@ -951,7 +951,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 67800,
+    "totalReadTime": 67869,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1324,7 +1324,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有4617人读过"
+        "reason": "仅有4624人读过"
       },
       {
         "type": 8,
