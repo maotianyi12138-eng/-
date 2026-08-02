@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-01T19:33:01Z",
+  "updatedAt": "2026-08-02T03:51:38Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1037,11 +1037,11 @@
         "count": 1
       },
       {
-        "name": "中信出版集团",
+        "name": "山东文艺出版社",
         "count": 1
       },
       {
-        "name": "山东文艺出版社",
+        "name": "中信出版集团",
         "count": 1
       }
     ],
@@ -1439,7 +1439,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有4634人读过"
+        "reason": "仅有4643人读过"
       },
       {
         "type": 8,
