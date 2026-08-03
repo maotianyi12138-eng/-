@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-03T15:14:59Z",
+  "updatedAt": "2026-08-03T19:56:38Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -27,7 +27,7 @@
         "updateTime": 1722588817,
         "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/t6_YueWen_30181899.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1785703639,
+        "readUpdateTime": 1785775037,
         "secret": 0,
         "category": "生活百科-体育"
       },
@@ -110,7 +110,7 @@
         "updateTime": 1772710347,
         "cover": "https://cdn.weread.qq.com/weread/cover/49/cpplatform_8pe4n9gxbb22ofnsynyphg/t6_cpplatform_8pe4n9gxbb22ofnsynyphg1772705172.jpg",
         "finishReading": 1,
-        "readUpdateTime": 1779391515,
+        "readUpdateTime": 1785773896,
         "secret": 0,
         "category": "经济理财-管理"
       },
@@ -155,9 +155,10 @@
     "readTimes": {
       "1785513600": 716,
       "1785600000": 996,
-      "1785686400": 742
+      "1785686400": 742,
+      "1785772800": 813
     },
-    "readDays": 3,
+    "readDays": 4,
     "readLongest": [
       {
         "book": {
@@ -256,7 +257,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 486,
+        "readTime": 1297,
         "tags": []
       }
     ],
@@ -267,7 +268,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 2,
-        "readingTime": 1712
+        "readingTime": 1961
       },
       {
         "categoryId": 100001,
@@ -275,7 +276,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 2,
-        "readingTime": 1712
+        "readingTime": 1961
       },
       {
         "categoryId": 2100000,
@@ -283,7 +284,7 @@
         "parentCategoryId": 2100000,
         "parentCategoryTitle": "医学健康",
         "readingCount": 1,
-        "readingTime": 0
+        "readingTime": 486
       },
       {
         "categoryId": 1600000,
@@ -291,7 +292,7 @@
         "parentCategoryId": 1600000,
         "parentCategoryTitle": "生活百科",
         "readingCount": 1,
-        "readingTime": 0
+        "readingTime": 486
       },
       {
         "categoryId": 1000000,
@@ -338,18 +339,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "3天"
+        "counts": "4天"
       },
       {
         "stat": "笔记",
-        "counts": "1条"
+        "counts": "2条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 0.9542231812577066,
-    "dayAverageReadTime": 818,
+    "compare": 0.951236898890259,
+    "dayAverageReadTime": 816,
     "baseTime": 1785513600,
-    "totalReadTime": 2454,
+    "totalReadTime": 3267,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -506,9 +507,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 69594
+      "1767196800": 70407
     },
-    "readDays": 47,
+    "readDays": 48,
     "readLongest": [
       {
         "book": {
@@ -557,7 +558,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 18026,
+        "readTime": 18028,
         "tags": [
           "笔记最多",
           "单日阅读最久"
@@ -954,42 +955,40 @@
       },
       {
         "book": {
-          "bookId": "3300171413",
-          "title": "赞美闲散（果麦经典）",
-          "author": "[英]伯特兰·罗素",
-          "translator": "黄菡",
-          "intro": "诺贝尔文学奖得主罗素的随笔合集，共14篇文章,内容包括工作、教育、社会、文明、如何获得幸福等，融合了哲学与心理学，经济学，科学和历史等观点。\n罗素在百年前精准地预见了现代社会的“内卷”问题：科技越发展，人们反而陷入了更加激烈的竞争和更长的工时。本书大胆挑战了“核心工作论”：工作即美德的信念正在现代世界中制造大量危害，而通往幸福与繁荣之路在于有组织地减少工作。工作的道德是奴隶的道德，现代世界不需要奴隶。\n每天工作只4小时，一切都会好起来！真正的闲散并非游手好闲，而是从工作的重压下解放出来，将努力的方向从“谋生”转向“生活本身”，去追求那些真正定义文明和幸福的事——艺术、爱、知识、休闲和对世界的探索。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/64/cpplatform_7luzwyjdjm3kwkjwswkdyg/s_cpplatform_7luzwyjdjm3kwkjwswkdyg1761214962.jpg",
-          "version": 984273295,
+          "bookId": "30181899",
+          "title": "高级运动营养学",
+          "author": "丹·贝纳多特",
+          "translator": "安江红,刘勇,周帆扬,赵之光",
+          "intro": "世界各地的精英运动员都知道丹·贝纳多特（Dan Benardot）博士，并渴望得到他的指导，因为他们知道，他的真知灼见可能是运动员能否获得金牌的决定性因素。来自各个大洲的很多高等院校都邀请丹前去讲学，他们希望学生们能师从最好的专家。在佐治亚州立大学（Georgia State University），我们只知道他是丹——一位了不起的朋友，一位出色的同事，一位忠实的丈夫，以及世界上最棒的孩子的父亲。《高级运动营养学》的第1 版非常成功。它被广泛应用于各种教学场合，以及拥有不同身材、体型和技能的运动员。精英运动员和普通运动员都在使用这本书。它已经成为运动营养师和运动科学专业的学生学习人类运动表现相关营养知识的必读书。对那些需要指导运动员如何在比赛中取得优势的教练员而言，它同样是首选读物。但就像每一本成功的图书一样，它需要进行一些修订和更新。这正是《高级运动营养学（第2 版）》如此重要的原因。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/s_YueWen_30181899.jpg",
+          "version": 315626625,
           "format": "epub",
           "type": 0,
           "soldout": 0,
           "bookStatus": 1,
-          "payType": 4097,
+          "payType": 1048577,
           "finished": 1,
-          "maxFreeChapter": 5,
+          "maxFreeChapter": 17,
           "maxFreeInfo": {
-            "maxfreeChapterIdx": 5,
-            "maxfreeChapterUid": 5,
-            "maxfreeChapterRatio": 64
+            "maxfreeChapterIdx": 17,
+            "maxfreeChapterUid": 17,
+            "maxfreeChapterRatio": 8
           },
           "free": 0,
           "mcardDiscount": 0,
           "ispub": 1,
           "extra_type": 5,
-          "cpid": -3319053,
-          "publishTime": "2025-10-01 00:00:00",
-          "lastChapterIdx": 18,
+          "cpid": 1765053,
+          "publishTime": "2019-01-08 00:00:00",
+          "lastChapterIdx": 95,
           "paperBook": {
             "skuId": ""
           },
-          "centPrice": 4980,
-          "copyrightChapterUids": [
-            2
-          ],
+          "centPrice": 8398,
+          "copyrightChapterUids": [],
           "inStoreBookId": "",
           "blockSaveImg": 0,
-          "language": "zh-wr",
+          "language": "zh",
           "isTraditionalChinese": false,
           "hideUpdateTime": false,
           "isEPUBComics": 0,
@@ -999,7 +998,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 1010,
+        "readTime": 1297,
         "tags": []
       }
     ],
@@ -1026,7 +1025,7 @@
         "parentCategoryId": 1100000,
         "parentCategoryTitle": "经济理财",
         "readingCount": 1,
-        "readingTime": 18026
+        "readingTime": 18028
       },
       {
         "categoryId": 1000000,
@@ -1050,7 +1049,7 @@
         "parentCategoryId": 2100000,
         "parentCategoryTitle": "医学健康",
         "readingCount": 1,
-        "readingTime": 0
+        "readingTime": 1297
       },
       {
         "categoryId": 1600000,
@@ -1058,7 +1057,7 @@
         "parentCategoryId": 1600000,
         "parentCategoryTitle": "生活百科",
         "readingCount": 1,
-        "readingTime": 0
+        "readingTime": 1297
       },
       {
         "categoryId": 200000,
@@ -1091,10 +1090,10 @@
       3265,
       11217,
       3712,
-      6564,
+      6813,
       4363,
       3036,
-      4443,
+      4936,
       3221
     ],
     "preferAuthor": [
@@ -1135,13 +1134,19 @@
         "readTime": "1小时12分钟"
       },
       {
+        "authorId": 778714,
+        "name": "丹·贝纳多特",
+        "count": 1,
+        "readTime": "21分钟"
+      },
+      {
         "authorId": 183442,
         "name": "罗素",
         "count": 1,
         "readTime": "16分钟"
       }
     ],
-    "authorCount": 7,
+    "authorCount": 8,
     "preferPublisher": [
       {
         "name": "中信出版集团",
@@ -1162,6 +1167,10 @@
       {
         "name": "山东文艺出版社",
         "count": 1
+      },
+      {
+        "name": "北京科学技术出版社有限公司",
+        "count": 1
       }
     ],
     "readStat": [
@@ -1175,17 +1184,17 @@
       },
       {
         "stat": "阅读",
-        "counts": "47天"
+        "counts": "48天"
       },
       {
         "stat": "笔记",
-        "counts": "106条"
+        "counts": "107条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 69607,
+    "totalReadTime": 70420,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1558,7 +1567,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有4728人读过"
+        "reason": "仅有4736人读过"
       },
       {
         "type": 8,
@@ -1569,10 +1578,28 @@
   "notesByBook": {
     "30181899": {
       "highlights": {
-        "synckey": 0,
-        "updated": [],
+        "synckey": 1785773787,
+        "updated": [
+          {
+            "bookId": "30181899",
+            "chapterIdx": 13,
+            "bookmarkId": "30181899_13_8228-8283",
+            "range": "8228-8283",
+            "markText": "当运动强度降低，并且运动员体内有足够的氧气来进行有氧代谢时，乳酸将重新转化成丙酮酸，然后通过有氧方式生成ATP",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 13,
+            "createTime": 1785773787
+          }
+        ],
         "removed": [],
-        "chapters": [],
+        "chapters": [
+          {
+            "title": "碳水化合物",
+            "chapterUid": 13,
+            "chapterIdx": 13
+          }
+        ],
         "book": {
           "bookId": "30181899",
           "version": 315626625,
