@@ -46,6 +46,82 @@ jobs:
             check_payload "$payload"
           done
 
+          notebook_books='[]'
+          last_sort=''
+          notebook_page=0
+          while [ "$notebook_page" -lt 100 ]; do
+            if [ -n "$last_sort" ]; then
+              notebook_request="$(jq -cn --argjson lastSort "$last_sort" \
+                '{api_name:"/user/notebooks",skill_version:"1.0.4",count:100,lastSort:$lastSort}')"
+            else
+              notebook_request='{"api_name":"/user/notebooks","skill_version":"1.0.4","count":100}'
+            fi
+            notebook_result="$(gateway "$notebook_request")"
+            check_payload "$notebook_result"
+            notebook_books="$(jq -cn --argjson current "$notebook_books" --argjson page "$notebook_result" \
+              '$current + ($page.books // [])')"
+
+            if ! jq -e '(.hasMore == 1) or (.hasMore == true)' <<<"$notebook_result" >/dev/null; then
+              break
+            fi
+            next_sort="$(jq -r '.books[-1].sort // empty' <<<"$notebook_result")"
+            [ -n "$next_sort" ] && [ "$next_sort" != "$last_sort" ] || break
+            last_sort="$next_sort"
+            notebook_page=$((notebook_page + 1))
+          done
+          notebooks="$(jq -cn --argjson books "$notebook_books" '{books:$books}')"
+
+          annual_reports='[]'
+          current_year="$(date -u +%Y)"
+          registration_time="$(jq -r '.registTime // 0' <<<"$overall")"
+          if [ "$registration_time" -gt 0 ]; then
+            registration_year="$(date -u -d "@${registration_time}" +%Y)"
+          else
+            registration_year="$current_year"
+          fi
+          for ((year=registration_year; year<=current_year; year++)); do
+            base_time="$(date -u -d "${year}-01-01 00:00:00" +%s)"
+            annual_request="$(jq -cn --argjson baseTime "$base_time" \
+              '{api_name:"/readdata/detail",skill_version:"1.0.4",mode:"annually",baseTime:$baseTime}')"
+            annual_result="$(gateway "$annual_request")"
+            check_payload "$annual_result"
+            annual_reports="$(jq -cn --argjson current "$annual_reports" --argjson report "$annual_result" \
+              '$current + [$report]')"
+          done
+
+          history_books="$(jq -cn \
+            --argjson shelf "$shelf" \
+            --argjson notebooks "$notebooks" \
+            --argjson overall "$overall" \
+            --argjson annual "$annual_reports" '
+              [
+                ($notebooks.books[]? |
+                  ((.book // {}) + {
+                    bookId:(.bookId // .book.bookId),
+                    readingProgress:.readingProgress,
+                    markedStatus:.markedStatus,
+                    lastNoteSort:.sort
+                  }) | with_entries(select(.value != null))),
+                $overall.readLongest[]?.book,
+                $overall.preferBooks[]?.bookInfo,
+                $annual[]?.readLongest[]?.book,
+                $annual[]?.preferBooks[]?.bookInfo,
+                $shelf.books[]?
+              ]
+              | map(select((.bookId // "") != ""))
+              | reduce .[] as $book ({};
+                  ($book.bookId | tostring) as $id |
+                  .[$id] = ((.[$id] // {}) + $book)
+                )
+              | [.[]]
+              | map(. + {
+                  finishReading:(.finishReading // (if .markedStatus == 1 then 1 else 0 end))
+                })
+              | sort_by(-(.readUpdateTime // .lastNoteSort // .finishTime // .updateTime // 0), (.title // ""))
+            ')"
+
+          total_read_count="$(jq -r '[.readStat[]? | select(.stat == "读过") | .counts | capture("(?<n>[0-9]+)").n][0] // "0"' <<<"$overall")"
+
           notes='{}'
           while IFS= read -r book_id; do
             [ -n "$book_id" ] || continue
@@ -82,7 +158,7 @@ jobs:
               --argjson highlights "$highlights" \
               --argjson thoughts "$thoughts" \
               '$notes + {($bookId): {highlights:$highlights,thoughts:$thoughts}}')"
-          done < <(jq -r '.books[]?.bookId // empty' <<<"$shelf")
+          done < <(jq -r '.[]?.bookId // empty' <<<"$history_books")
 
           mkdir -p data
           jq -n \
@@ -90,8 +166,22 @@ jobs:
             --argjson shelf "$shelf" \
             --argjson monthly "$monthly" \
             --argjson overall "$overall" \
+            --argjson notebooks "$notebooks" \
+            --argjson annualReports "$annual_reports" \
+            --argjson historyBooks "$history_books" \
+            --argjson totalReadCount "$total_read_count" \
             --argjson notesByBook "$notes" \
-            '{status:"ready",updatedAt:$updatedAt,shelf:$shelf,monthly:$monthly,overall:$overall,notesByBook:$notesByBook}' \
+            '{
+              status:"ready",
+              updatedAt:$updatedAt,
+              shelf:$shelf,
+              history:{books:$historyBooks,totalReadCount:$totalReadCount},
+              notebooks:$notebooks,
+              monthly:$monthly,
+              overall:$overall,
+              annualReports:$annualReports,
+              notesByBook:$notesByBook
+            }' \
             > data/weread.json
 
       - name: Publish refreshed data
