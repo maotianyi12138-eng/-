@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-04T17:22:57Z",
+  "updatedAt": "2026-08-04T19:55:49Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -27,7 +27,7 @@
         "updateTime": 1722588817,
         "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/t6_YueWen_30181899.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1785864146,
+        "readUpdateTime": 1785871862,
         "secret": 0,
         "category": "生活百科-体育"
       },
@@ -220,7 +220,7 @@
         "intro": "世界各地的精英运动员都知道丹·贝纳多特（Dan Benardot）博士，并渴望得到他的指导，因为他们知道，他的真知灼见可能是运动员能否获得金牌的决定性因素。来自各个大洲的很多高等院校都邀请丹前去讲学，他们希望学生们能师从最好的专家。在佐治亚州立大学（Georgia State University），我们只知道他是丹——一位了不起的朋友，一位出色的同事，一位忠实的丈夫，以及世界上最棒的孩子的父亲。《高级运动营养学》的第1 版非常成功。它被广泛应用于各种教学场合，以及拥有不同身材、体型和技能的运动员。精英运动员和普通运动员都在使用这本书。它已经成为运动营养师和运动科学专业的学生学习人类运动表现相关营养知识的必读书。对那些需要指导运动员如何在比赛中取得优势的教练员而言，它同样是首选读物。但就像每一本成功的图书一样，它需要进行一些修订和更新。这正是《高级运动营养学（第2 版）》如此重要的原因。",
         "updateTime": 1722588817,
         "finishReading": 0,
-        "readUpdateTime": 1785864146,
+        "readUpdateTime": 1785871862,
         "secret": 0,
         "category": "生活百科-体育"
       },
@@ -1397,7 +1397,7 @@
       "1785600000": 996,
       "1785686400": 742,
       "1785772800": 1823,
-      "1785859200": 654
+      "1785859200": 1322
     },
     "readDays": 5,
     "readLongest": [
@@ -1446,7 +1446,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 2961,
+        "readTime": 3629,
         "tags": [
           "单日阅读最久"
         ]
@@ -1588,10 +1588,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 1.3560573366214553,
-    "dayAverageReadTime": 986,
+    "compare": 1.675231196054254,
+    "dayAverageReadTime": 1119,
     "baseTime": 1785513600,
-    "totalReadTime": 4931,
+    "totalReadTime": 5599,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1748,7 +1748,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 72071
+      "1767196800": 72739
     },
     "readDays": 49,
     "readLongest": [
@@ -2198,7 +2198,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 2961,
+        "readTime": 3629,
         "tags": []
       },
       {
@@ -2290,7 +2290,7 @@
         "parentCategoryId": 1600000,
         "parentCategoryTitle": "生活百科",
         "readingCount": 1,
-        "readingTime": 2961
+        "readingTime": 3629
       },
       {
         "categoryId": 2100000,
@@ -2298,7 +2298,7 @@
         "parentCategoryId": 2100000,
         "parentCategoryTitle": "医学健康",
         "readingCount": 1,
-        "readingTime": 2961
+        "readingTime": 3629
       },
       {
         "categoryId": 200000,
@@ -2378,7 +2378,7 @@
         "authorId": 778714,
         "name": "丹·贝纳多特",
         "count": 1,
-        "readTime": "49分钟"
+        "readTime": "1小时"
       },
       {
         "authorId": 183442,
@@ -2435,7 +2435,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 72084,
+    "totalReadTime": 72752,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3139,7 +3139,7 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 4931,
+        "1785513600": 5599,
         "1788192000": 0,
         "1790784000": 0,
         "1793462400": 0,
@@ -3594,7 +3594,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 2961,
+          "readTime": 3629,
           "tags": []
         },
         {
@@ -3792,9 +3792,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 332,
+      "dayAverageReadTime": 335,
       "baseTime": 1767196800,
-      "totalReadTime": 72071,
+      "totalReadTime": 72739,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
