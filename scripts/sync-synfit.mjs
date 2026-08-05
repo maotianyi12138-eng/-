@@ -3,7 +3,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 const trainingKey = process.env.SYNFIT_TRAINING_API_KEY;
 const bodyKey = process.env.SYNFIT_BODY_API_KEY;
 const outputPath = new URL('../data/synfit.json', import.meta.url);
-const normalizationVersion = 2;
+const normalizationVersion = 3;
 
 if (!trainingKey || !bodyKey) {
   throw new Error('SynFit repository secrets are not configured.');
@@ -39,23 +39,31 @@ async function requestJson(url, key, body, retry = true) {
 }
 
 function setStats(set = {}) {
-  if (set.done === false || set.done === 0) return { sets: 0, volume: 0, seconds: 0 };
+  if (set.done === false || set.done === 0) return { sets: 0, volume: 0, seconds: 0, reps: 0, maxWeight: 0 };
   let sets = 1;
-  let volume = number(set.weight_kg ?? set.weight) * number(set.reps);
+  const rawWeight = number(set.weight_kg ?? set.weight);
+  const weight = set.weight_kg != null || !/lb/i.test(String(set.unit || '')) ? rawWeight : rawWeight * 0.453592;
+  let reps = number(set.reps);
+  let maxWeight = weight;
+  let volume = weight * reps;
   let seconds = number(set.duration_s ?? set.metrics?.workoutTime ?? set.metrics?.duration_s);
   for (const child of set.items || []) {
     const stats = setStats(child.set || child);
     sets += stats.sets;
     volume += stats.volume;
     seconds += stats.seconds;
+    reps += stats.reps;
+    maxWeight = Math.max(maxWeight, stats.maxWeight);
   }
   for (const child of set.dropSets || []) {
     const stats = setStats(child.set || child);
     sets += stats.sets;
     volume += stats.volume;
     seconds += stats.seconds;
+    reps += stats.reps;
+    maxWeight = Math.max(maxWeight, stats.maxWeight);
   }
-  return { sets, volume, seconds };
+  return { sets, volume, seconds, reps, maxWeight };
 }
 
 function normalizeSession(train = {}, fallbackDate = '') {
@@ -66,9 +74,15 @@ function normalizeSession(train = {}, fallbackDate = '') {
   let distance = 0;
   const movements = (Array.isArray(train.movements) ? train.movements : []).map(move => {
     let movementSets = 0;
+    let movementVolume = 0;
+    let movementReps = 0;
+    let movementMaxWeight = 0;
     for (const set of move.sets || []) {
       const stats = setStats(set);
       movementSets += stats.sets;
+      movementVolume += stats.volume;
+      movementReps += stats.reps;
+      movementMaxWeight = Math.max(movementMaxWeight, stats.maxWeight);
       setCount += stats.sets;
       volumeKg += stats.volume;
       setSeconds += stats.seconds;
@@ -80,7 +94,10 @@ function normalizeSession(train = {}, fallbackDate = '') {
     setSeconds += number(move.metrics?.workoutTime ?? move.metrics?.duration_s);
     return {
       name: String(move.name || '未命名动作').slice(0, 80),
-      setCount: movementSets
+      setCount: movementSets,
+      totalReps: round(movementReps, 0),
+      volumeKg: round(movementVolume, 1),
+      maxWeightKg: round(movementMaxWeight, 1)
     };
   });
   const start = number(train.start);
