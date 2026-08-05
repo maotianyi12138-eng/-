@@ -222,6 +222,129 @@
             .training-session { flex:0 0 76%; scroll-snap-align:start; }
             body.sports-page #back-btn { top:10px; left:10px; }
         }
+
+        .more-menu { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); align-items:stretch; }
+        .more-menu:before { display:none; }
+        .more-menu > div { min-width:0; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:10px 7px; }
+        .more-training-link { color:#ff3ca6; }
+
+        body.sports-page { background:#f3efe7!important; color:#111!important; }
+        body.sports-page #back-btn,
+        body.sports-page #music-toggle { color:#111; background:rgba(247,243,235,.84); border:2px solid #111; box-shadow:5px 5px 0 #ff1593; backdrop-filter:blur(10px); }
+        .training-room { --pink:#ff1593; --ink:#111; --cream:#f3efe7; --soft:#d8d2c7; min-height:100svh; padding:clamp(78px,9vh,108px) clamp(14px,4vw,64px) 80px; color:var(--ink); background:radial-gradient(circle at 92% 12%,rgba(255,21,147,.12) 0 8%,transparent 8.3%),linear-gradient(100deg,transparent 0 78%,rgba(17,17,17,.045) 78% 78.4%,transparent 78.5%),var(--cream); }
+        .training-room:before { inset:auto -7vw 6vh auto; width:clamp(170px,21vw,340px); height:clamp(170px,21vw,340px); z-index:0; opacity:.07; border:clamp(24px,3vw,48px) solid #111; border-radius:50%; background:transparent; box-shadow:inset 0 0 0 2px #111,0 0 0 3px #111; }
+        .training-room:after { left:-8vw; right:auto; bottom:5vh; width:clamp(220px,29vw,470px); height:clamp(95px,13vw,190px); z-index:0; transform:skewY(-8deg); background:repeating-linear-gradient(90deg,#111 0 8px,transparent 8px 28px); opacity:.045; box-shadow:none; }
+        .training-shell { position:relative; z-index:2; width:min(1580px,100%); }
+        .fitness-intro { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:clamp(20px,3vh,34px); }
+        .fitness-eyebrow { display:block; margin-bottom:9px; font:800 10px/1 Arial,sans-serif; letter-spacing:.22em; }
+        .fitness-title { margin:0; max-width:820px; font:900 italic clamp(38px,6.4vw,94px)/.82 Arial,'Noto Sans SC',sans-serif; letter-spacing:-.07em; text-transform:uppercase; }
+        .fitness-title em { color:var(--pink); font-style:inherit; }
+        .fitness-message { max-width:320px; margin:0; padding:13px 15px; border-left:6px solid var(--pink); font:700 13px/1.55 'Noto Sans SC',sans-serif; }
+        .fitness-stage { position:relative; overflow:hidden; padding:clamp(18px,2.5vw,32px); border:3px solid var(--ink); background:rgba(249,246,239,.88); box-shadow:10px 10px 0 var(--ink),17px 17px 0 var(--pink); }
+        .fitness-stage-top { position:relative; z-index:4; display:flex; align-items:center; justify-content:space-between; gap:18px; margin-bottom:18px; }
+        .fitness-stage-caption { font:900 clamp(17px,2vw,26px)/1 Arial,'Noto Sans SC',sans-serif; text-transform:uppercase; }
+        .fitness-stage-caption small { display:block; margin-top:5px; color:#746e65; font:500 9px/1.2 'Noto Sans SC',sans-serif; letter-spacing:.1em; }
+        .fitness-filters { display:flex; gap:9px; }
+        .fitness-filter { position:relative; min-width:118px; display:grid; grid-template-columns:52px 1fr; align-items:center; gap:4px; padding:8px 12px 8px 8px; border:2px solid var(--ink); color:var(--ink); background:var(--cream); box-shadow:4px 4px 0 var(--ink); cursor:pointer; transition:transform .22s ease,background .22s ease,color .22s ease,box-shadow .22s ease; }
+        .fitness-filter:hover,.fitness-filter:focus-visible,.fitness-filter.is-active { color:#fff; background:var(--pink); transform:translateY(-5px) rotate(-1deg); box-shadow:6px 8px 0 var(--ink); outline:none; }
+        .fitness-filter strong { display:block; font:900 italic 15px/1 Arial,sans-serif; }
+        .fitness-filter small { display:block; margin-top:3px; font:700 8px/1 'Noto Sans SC',sans-serif; letter-spacing:.12em; }
+        .fitness-tool-icon { position:relative; display:block; width:50px; height:39px; color:currentColor; }
+        .fitness-tool-icon i,.fitness-tool-icon b { position:absolute; display:block; background:currentColor; }
+        .tool-chest i { left:4px; top:9px; width:42px; height:4px; }
+        .tool-chest i:before,.tool-chest i:after { content:""; position:absolute; top:-5px; width:6px; height:14px; background:currentColor; }
+        .tool-chest i:before { left:2px; box-shadow:5px 2px 0 currentColor; }
+        .tool-chest i:after { right:2px; box-shadow:-5px 2px 0 currentColor; }
+        .tool-chest b { left:13px; bottom:7px; width:25px; height:5px; transform:skewX(-24deg); box-shadow:9px 7px 0 -1px currentColor; }
+        .tool-back i { left:4px; top:5px; width:42px; height:4px; }
+        .tool-back i:before,.tool-back i:after { content:""; position:absolute; top:0; width:4px; height:31px; background:currentColor; }
+        .tool-back i:before { left:3px; }.tool-back i:after { right:3px; }
+        .tool-back b { left:17px; top:14px; width:16px; height:4px; transform:rotate(18deg); box-shadow:0 7px 0 currentColor; }
+        .tool-leg i { left:6px; top:7px; width:7px; height:25px; box-shadow:11px -5px 0 currentColor,22px -10px 0 currentColor,33px -15px 0 currentColor; }
+        .tool-leg b { left:3px; bottom:3px; width:45px; height:4px; transform:skewX(-18deg); }
+        .fitness-trajectory-scroll { position:relative; z-index:2; overflow-x:auto; overflow-y:hidden; scrollbar-width:none; }
+        .fitness-trajectory-scroll::-webkit-scrollbar { display:none; }
+        .fitness-trajectory { position:relative; min-width:980px; height:clamp(330px,43vh,470px); border-top:1px solid rgba(17,17,17,.2); border-bottom:1px solid rgba(17,17,17,.22); background:repeating-linear-gradient(90deg,rgba(17,17,17,.09) 0 1px,transparent 1px 8.333%),repeating-linear-gradient(0deg,rgba(17,17,17,.055) 0 1px,transparent 1px 25%); }
+        .fitness-trajectory:before { content:""; position:absolute; left:-2%; bottom:24%; width:105%; height:5px; transform:rotate(-10deg); transform-origin:left center; background:var(--ink); box-shadow:0 -7px 0 rgba(255,21,147,.28); }
+        .fitness-trajectory:after { content:"KEEP GOING ↗"; position:absolute; right:20px; top:20px; color:var(--pink); font:900 italic 15px/1 Arial,sans-serif; letter-spacing:.04em; }
+        .fitness-date-dot { position:absolute; z-index:3; width:18px; height:18px; padding:0; transform:translate(-50%,50%); border:3px solid var(--ink); border-radius:50%; background:var(--cream); box-shadow:0 0 0 3px var(--cream); cursor:pointer; transition:opacity .2s ease,transform .2s ease,background .2s ease,box-shadow .2s ease; }
+        .fitness-date-dot[data-group="chest"] { background:var(--pink); }
+        .fitness-date-dot[data-group="back"] { background:var(--ink); }
+        .fitness-date-dot[data-group="leg"] { background:#fff; box-shadow:0 0 0 3px var(--cream),inset 0 0 0 3px var(--pink); }
+        .fitness-date-dot:hover,.fitness-date-dot:focus-visible,.fitness-date-dot.is-match { z-index:8; transform:translate(-50%,50%) scale(1.55); background:var(--pink); box-shadow:0 0 0 5px var(--cream),0 0 0 8px var(--ink),0 0 22px rgba(255,21,147,.55); outline:none; }
+        .fitness-date-dot.is-muted { opacity:.12; transform:translate(-50%,50%) scale(.72); }
+        .fitness-dot-date { position:absolute; left:50%; top:25px; width:50px; transform:translateX(-50%) rotate(-62deg); transform-origin:top center; color:#37332e; font:800 9px/1 Arial,sans-serif; white-space:nowrap; pointer-events:none; }
+        .fitness-dot-tip { position:absolute; left:50%; bottom:31px; width:max-content; max-width:190px; padding:8px 10px; transform:translate(-50%,8px); color:#fff; background:var(--ink); font:700 9px/1.35 'Noto Sans SC',sans-serif; opacity:0; visibility:hidden; pointer-events:none; transition:.18s; }
+        .fitness-date-dot:hover .fitness-dot-tip,.fitness-date-dot:focus-visible .fitness-dot-tip { opacity:1; visibility:visible; transform:translate(-50%,0); }
+        .fitness-rise-label { position:absolute; left:18px; top:20px; display:flex; align-items:center; gap:8px; font:800 9px/1 Arial,sans-serif; letter-spacing:.12em; }
+        .fitness-rise-label:before { content:""; width:31px; height:4px; background:var(--pink); transform:rotate(-10deg); }
+        .fitness-summary { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:34px 0 22px; }
+        .fitness-stat { position:relative; min-height:142px; padding:20px; border:3px solid var(--ink); background:#faf7f0; box-shadow:6px 6px 0 var(--ink); }
+        .fitness-stat:nth-child(1) { transform:translateY(15px); }.fitness-stat:nth-child(2) { transform:translateY(9px); }.fitness-stat:nth-child(3) { transform:translateY(3px); }.fitness-stat:nth-child(4) { transform:translateY(-3px); }
+        .fitness-stat span { font:800 9px/1.2 Arial,'Noto Sans SC',sans-serif; letter-spacing:.1em; }
+        .fitness-stat strong { display:block; margin-top:23px; font:900 italic clamp(31px,4vw,55px)/.8 Arial,sans-serif; letter-spacing:-.05em; }
+        .fitness-stat strong small { margin-left:4px; color:var(--pink); font:900 11px/1 Arial,sans-serif; }
+        .fitness-detail-grid { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(280px,.74fr); gap:14px; }
+        .fitness-card { border:3px solid var(--ink); background:#faf7f0; box-shadow:7px 7px 0 rgba(17,17,17,.92); }
+        .fitness-card-head { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; padding:17px 19px; border-bottom:3px solid var(--ink); }
+        .fitness-card-head strong { font:900 italic 18px/1 Arial,'Noto Sans SC',sans-serif; text-transform:uppercase; }
+        .fitness-card-head span { color:#777067; font:700 8px/1.3 Arial,sans-serif; letter-spacing:.1em; }
+        .fitness-chart-wrap { padding:16px 17px 10px; }
+        .training-chart { height:230px; }
+        .body-chart { height:145px; }
+        .fitness-side { display:grid; gap:14px; }
+        .fitness-body-number { display:flex; align-items:baseline; justify-content:space-between; gap:12px; padding:17px 19px 0; font:900 italic 36px/1 Arial,sans-serif; }
+        .fitness-body-number small { color:var(--pink); font:800 10px/1 'Noto Sans SC',sans-serif; }
+        .fitness-latest { grid-column:1/-1; margin-top:14px; }
+        .fitness-session-strip { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:0; }
+        .fitness-session { min-width:0; padding:15px; border-right:2px solid var(--ink); }
+        .fitness-session:last-child { border-right:0; }
+        .fitness-session time { color:var(--pink); font:900 9px/1 Arial,sans-serif; }
+        .fitness-session strong { display:block; min-height:34px; margin:10px 0; font:800 12px/1.35 'Noto Sans SC',sans-serif; }
+        .fitness-session span { color:#6f6961; font:700 8px/1.3 Arial,sans-serif; }
+        .training-empty { color:#111; }
+        .training-empty-dot { background:var(--pink); box-shadow:0 0 22px rgba(255,21,147,.72); }
+        @media (max-width:900px) {
+            .fitness-intro { align-items:flex-start; flex-direction:column; }
+            .fitness-message { max-width:520px; }
+            .fitness-stage-top { align-items:flex-start; flex-direction:column; }
+            .fitness-filters { width:100%; }
+            .fitness-filter { flex:1; min-width:0; }
+            .fitness-summary { grid-template-columns:repeat(2,minmax(0,1fr)); }
+            .fitness-stat:nth-child(n) { transform:none; }
+            .fitness-detail-grid { grid-template-columns:1fr; }
+            .fitness-session-strip { grid-template-columns:repeat(3,minmax(0,1fr)); }
+            .fitness-session:nth-child(3n) { border-right:0; }
+            .fitness-session:nth-child(n+4) { border-top:2px solid var(--ink); }
+        }
+        @media (max-width:640px) {
+            .more-home-card { height:176px!important; }
+            .more-home-card > .relative { display:none; }
+            .more-menu { grid-template-columns:repeat(3,minmax(0,1fr)); }
+            .more-home-card .more-menu { transform:none!important; }
+            .more-menu:before { content:"MORE OF ME · 个人兴趣"; display:block; grid-column:1/-1; padding:9px 10px 3px; color:rgba(255,255,255,.66); font:300 9px/1 'Noto Sans SC',sans-serif; letter-spacing:.13em; }
+            .more-menu > div { padding:6px 4px; }
+            .more-menu .en-main { font-size:12px!important; }
+            .training-room { padding:72px 10px 46px; background:radial-gradient(circle at 108% 5%,rgba(255,21,147,.15) 0 12%,transparent 12.3%),var(--cream); }
+            .training-room:before,.training-room:after { display:block; }
+            .fitness-eyebrow { font-size:8px; }
+            .fitness-title { font-size:42px; }
+            .fitness-message { padding:9px 11px; font-size:11px; }
+            .fitness-stage { padding:13px 10px; box-shadow:6px 6px 0 var(--ink),10px 10px 0 var(--pink); }
+            .fitness-stage-caption { font-size:16px; }
+            .fitness-filters { gap:6px; }
+            .fitness-filter { grid-template-columns:1fr; justify-items:center; padding:6px 4px 7px; box-shadow:3px 3px 0 var(--ink); }
+            .fitness-filter strong { font-size:12px; }.fitness-filter small { font-size:7px; }
+            .fitness-tool-icon { transform:scale(.8); margin:-3px 0; }
+            .fitness-trajectory { min-width:760px; height:330px; }
+            .fitness-summary { gap:7px; margin-top:24px; }
+            .fitness-stat { min-height:108px; padding:14px; box-shadow:4px 4px 0 var(--ink); }
+            .fitness-stat strong { margin-top:17px; font-size:31px; }
+            .fitness-card { box-shadow:4px 4px 0 rgba(17,17,17,.92); }
+            .fitness-session-strip { display:flex; overflow-x:auto; scrollbar-width:none; scroll-snap-type:x mandatory; }
+            .fitness-session-strip::-webkit-scrollbar { display:none; }
+            .fitness-session { flex:0 0 58%; border-top:0!important; border-right:2px solid var(--ink)!important; scroll-snap-align:start; }
+        }
         .works-project-cover { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
         .works-detail-main { max-height: 72vh; width: 100%; object-fit: contain; background: #000; }
         .works-thumb { width: 68px; height: 68px; object-fit: cover; border-radius: 8px; opacity: 0.45; border: 1px solid rgba(255,255,255,0.1); transition: opacity 0.2s ease; }
@@ -485,7 +608,7 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 mt-12 md:mt-24">
-                    <div class="glass p-6 relative overflow-hidden group h-[140px]">
+                    <div class="glass p-6 relative overflow-hidden group h-[140px] more-home-card">
                         <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0 flex items-center h-full">
                             <div>
                                 <span class="en-main text-2xl mb-1">What Can I Do</span><span class="zh-sub">核心业务</span>
@@ -503,17 +626,14 @@
                                 <span class="en-main text-2xl mb-1">More of Me</span><span class="zh-sub">个人兴趣</span>
                             </div>
                         </div>
-                        <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="absolute inset-0 glass border-none rounded-none z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 more-menu">
                             <div onclick="switchPage('cinema')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Cinema</span><span class="zh-sub">电影</span></div>
                             <div onclick="switchPage('reading')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Books & Music</span><span class="zh-sub">音乐与阅读</span></div>
                             <div onclick="switchPage('thoughts')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Reflect</span><span class="zh-sub">感悟</span></div>
                             <div onclick="switchPage('calligraphy')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Ink</span><span class="zh-sub">书法</span></div>
+                            <div onclick="switchPage('sports')" class="cursor-pointer text-center hover:scale-110 transition more-training-link"><span class="en-main text-base">Train</span><span class="zh-sub">运动记录</span></div>
                         </div>
                     </div>
-                    <button type="button" onclick="switchPage('sports')" class="glass md:col-span-2 p-6 h-[118px] text-left group overflow-hidden relative hover:bg-white/[.045] transition-colors">
-                        <span class="absolute right-6 top-1/2 -translate-y-1/2 text-3xl opacity-20 group-hover:opacity-70 group-hover:translate-x-1 transition-all">→</span>
-                        <span class="en-main text-2xl mb-1">Training Record</span><span class="zh-sub">运动记录 · 训记数据可视化</span>
-                    </button>
                 </div>`;
         }
 
@@ -885,7 +1005,7 @@
             loadCalligraphyGallery();
         }
 
-        const sportsState = { data: null, resizeBound: false, resizeTimer: 0 };
+        const sportsState = { data: null, resizeBound: false, resizeTimer: 0, filter: null, preview: null };
 
         function sportsNumber(value, maximumFractionDigits = 0) {
             const number = Number(value);
@@ -897,6 +1017,51 @@
             if (!value) return '—';
             const date = new Date(`${String(value).slice(0, 10)}T12:00:00`);
             return Number.isNaN(date.getTime()) ? String(value) : new Intl.DateTimeFormat('zh-CN', { month: '2-digit', day: '2-digit' }).format(date);
+        }
+
+        function sportsGroup(session = {}) {
+            const text = [session.title, ...(session.movements || []).map(move => move.name)].join(' ');
+            if (/胸|卧推|飞鸟|胸推|夹胸|俯卧撑|臂屈伸|bench|chest|pec/i.test(text)) return 'chest';
+            if (/背|引体|高位下拉|杠铃划船|器械划船|直臂下压|硬拉|pull.?up|lat.?pull|deadlift/i.test(text)) return 'back';
+            if (/腿|深蹲|腿举|腿弯举|髋|小腿|箭步|臀|squat|lunge/i.test(text)) return 'leg';
+            return 'other';
+        }
+
+        const sportsGroupNames = { chest: '胸', back: '背', leg: '腿' };
+
+        function applySportsGroup(group) {
+            const active = group || sportsState.filter;
+            document.querySelectorAll('.fitness-date-dot').forEach(dot => {
+                const match = !active || dot.dataset.group === active;
+                dot.classList.toggle('is-match', Boolean(active && match));
+                dot.classList.toggle('is-muted', Boolean(active && !match));
+            });
+            document.querySelectorAll('.fitness-filter').forEach(button => {
+                const selected = sportsState.filter === button.dataset.group;
+                button.classList.toggle('is-active', selected || Boolean(group && group === button.dataset.group));
+                button.setAttribute('aria-pressed', selected ? 'true' : 'false');
+            });
+            const status = document.getElementById('fitness-filter-status');
+            if (status) {
+                const count = active ? document.querySelectorAll(`.fitness-date-dot[data-group="${active}"]`).length : 0;
+                status.textContent = active ? `${sportsGroupNames[active]}部轨迹 · ${count} 个训练日期正在发光` : '悬停或点击胸、背、腿，查看三分化轨迹';
+            }
+        }
+
+        function previewSportsGroup(group) {
+            sportsState.preview = group;
+            applySportsGroup(group);
+        }
+
+        function clearSportsPreview() {
+            sportsState.preview = null;
+            applySportsGroup(null);
+        }
+
+        function toggleSportsGroup(group) {
+            sportsState.filter = sportsState.filter === group ? null : group;
+            sportsState.preview = null;
+            applySportsGroup(null);
         }
 
         function sportsWeeks(sessions, count = 12) {
@@ -937,14 +1102,14 @@
             const chartH = height - pad.top - pad.bottom;
             const numeric = values.map(value => Number(value) || 0);
             const max = Math.max(...numeric, 1);
-            ctx.strokeStyle = 'rgba(232,238,229,.08)';
+            ctx.strokeStyle = 'rgba(17,17,17,.12)';
             ctx.lineWidth = 1;
             for (let row = 0; row <= 3; row += 1) {
                 const y = pad.top + chartH * row / 3;
                 ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(width - pad.right, y); ctx.stroke();
             }
             if (!numeric.some(value => value > 0)) {
-                ctx.fillStyle = 'rgba(232,238,229,.34)';
+                ctx.fillStyle = 'rgba(17,17,17,.42)';
                 ctx.font = '10px "Noto Sans SC", sans-serif';
                 ctx.fillText('等待更多数据形成趋势', pad.left, pad.top + chartH / 2);
                 return;
@@ -956,8 +1121,8 @@
                     const x = pad.left + index * step + step * .18;
                     const y = pad.top + chartH - h;
                     const gradient = ctx.createLinearGradient(0, y, 0, pad.top + chartH);
-                    gradient.addColorStop(0, options.color || '#c9edb3');
-                    gradient.addColorStop(1, 'rgba(145,200,170,.08)');
+                    gradient.addColorStop(0, options.color || '#ff1593');
+                    gradient.addColorStop(1, 'rgba(255,21,147,.08)');
                     ctx.fillStyle = gradient;
                     ctx.fillRect(x, y, Math.max(2, step * .62), h);
                 });
@@ -967,14 +1132,14 @@
                     y: pad.top + chartH - value / max * chartH
                 }));
                 const fill = ctx.createLinearGradient(0, pad.top, 0, pad.top + chartH);
-                fill.addColorStop(0, 'rgba(201,237,179,.22)'); fill.addColorStop(1, 'rgba(201,237,179,0)');
+                fill.addColorStop(0, 'rgba(255,21,147,.22)'); fill.addColorStop(1, 'rgba(255,21,147,0)');
                 ctx.beginPath(); ctx.moveTo(points[0].x, pad.top + chartH); points.forEach(point => ctx.lineTo(point.x, point.y)); ctx.lineTo(points[points.length - 1].x, pad.top + chartH); ctx.closePath(); ctx.fillStyle = fill; ctx.fill();
                 ctx.beginPath(); points.forEach((point, index) => index ? ctx.lineTo(point.x, point.y) : ctx.moveTo(point.x, point.y));
-                ctx.strokeStyle = options.color || '#c9edb3'; ctx.lineWidth = 1.5; ctx.stroke();
-                points.forEach(point => { ctx.beginPath(); ctx.arc(point.x, point.y, 2.2, 0, Math.PI * 2); ctx.fillStyle = '#e9f3e3'; ctx.fill(); });
+                ctx.strokeStyle = options.color || '#ff1593'; ctx.lineWidth = 2; ctx.stroke();
+                points.forEach(point => { ctx.beginPath(); ctx.arc(point.x, point.y, 2.6, 0, Math.PI * 2); ctx.fillStyle = '#111'; ctx.fill(); });
             }
             const labels = options.labels || [];
-            ctx.fillStyle = 'rgba(232,238,229,.28)';
+            ctx.fillStyle = 'rgba(17,17,17,.46)';
             ctx.font = '8px "Noto Sans SC", sans-serif';
             const labelIndexes = [...new Set([0, Math.floor((labels.length - 1) / 2), labels.length - 1])].filter(index => index >= 0);
             labelIndexes.forEach(index => {
@@ -989,7 +1154,7 @@
             const weeks = sportsWeeks(sessions);
             drawSportsChart(document.getElementById('training-volume-chart'), weeks.map(week => week.volume), { bars: true, labels: weeks.map(week => week.label) });
             const weights = (sportsState.data.body?.records || []).filter(item => item.type === 'weight').slice(-28);
-            drawSportsChart(document.getElementById('training-body-chart'), weights.map(item => item.value), { labels: weights.map(item => sportsDate(item.date)), color: '#91c8aa' });
+            drawSportsChart(document.getElementById('training-body-chart'), weights.map(item => item.value), { labels: weights.map(item => sportsDate(item.date)), color: '#111' });
         }
 
         function renderSportsData(data) {
@@ -1005,53 +1170,79 @@
             const minutes = recent.reduce((sum, session) => sum + Number(session.durationMinutes || 0), 0);
             const latestWeight = records.filter(item => item.type === 'weight').slice(-1)[0];
             const latestBodyfat = records.filter(item => item.type === 'bodyfat').slice(-1)[0];
-            const movementCounts = new Map();
-            sessions.slice(0, 40).forEach(session => (session.movements || []).forEach(move => {
-                const name = String(move.name || '未命名动作');
-                movementCounts.set(name, (movementCounts.get(name) || 0) + Math.max(1, Number(move.setCount || 0)));
-            }));
-            const movements = [...movementCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 6);
-            const movementMax = Math.max(1, ...movements.map(item => item[1]));
+            const timelineSessions = sessions.map(session => ({ ...session, group: sportsGroup(session) })).filter(session => session.group !== 'other').slice(0, 30).reverse();
+            const timelineMaxVolume = Math.max(1, ...timelineSessions.map(session => Number(session.volumeKg || 0)));
+            const timelineWidth = Math.max(980, timelineSessions.length * 58);
+            const groupCounts = timelineSessions.reduce((counts, session) => {
+                counts[session.group] = (counts[session.group] || 0) + 1;
+                return counts;
+            }, { chest: 0, back: 0, leg: 0 });
             const updatedAt = data.updatedAt ? new Date(data.updatedAt) : null;
             const updatedLabel = updatedAt && !Number.isNaN(updatedAt.getTime()) ? new Intl.DateTimeFormat('zh-CN', { month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit' }).format(updatedAt) : '等待首次同步';
+            const timelineDots = timelineSessions.map((session, index) => {
+                const ratio = timelineSessions.length > 1 ? index / (timelineSessions.length - 1) : .5;
+                const x = 3.5 + ratio * 93;
+                const loadLift = Math.min(9, Number(session.volumeKg || 0) / timelineMaxVolume * 9);
+                const bottom = Math.min(84, 13 + ratio * 58 + loadLift);
+                const date = sportsDate(session.date);
+                const label = `${date} ${session.title || '训练'}，${sportsNumber(session.setCount)}组`;
+                return `<button type="button" class="fitness-date-dot" data-group="${session.group}" style="left:${x}%;bottom:${bottom}%" aria-label="${escapeHtml(label)}"><span class="fitness-dot-date">${escapeHtml(date)}</span><span class="fitness-dot-tip">${escapeHtml(session.title || '训练')} · ${sportsNumber(session.setCount)} SETS · ${sportsNumber(Number(session.volumeKg || 0) / 1000, 1)} T</span></button>`;
+            }).join('');
 
             app.innerHTML = `
                 <main class="training-room">
                     <div class="training-shell">
-                        <header class="training-intro">
-                            <h1 class="training-title">Training Record<small>运动记录 · SYNFIT ARCHIVE</small></h1>
-                            <p class="training-sync">数据更新 ${escapeHtml(updatedLabel)} · 页面仅展示训练摘要</p>
+                        <header class="fitness-intro">
+                            <div><span class="fitness-eyebrow">MORE OF ME / TRAINING ARCHIVE</span><h1 class="fitness-title">DATES THAT<br>MOVE <em>UP.</em></h1></div>
+                            <p class="fitness-message">每一个训练日期，都是身体向上生长的证据。不是等待状态变好，是一次次把自己推向更强。</p>
                         </header>
-                        <div class="training-grid">
-                            <section class="training-panel training-metrics" aria-label="最近三十天训练摘要">
-                                <div class="training-metric"><span class="training-metric-label">30 DAYS · 训练次数</span><strong class="training-metric-value">${sportsNumber(recent.length)}<small>次</small></strong></div>
-                                <div class="training-metric"><span class="training-metric-label">VOLUME · 总容量</span><strong class="training-metric-value">${sportsNumber(volume / 1000, 1)}<small>t</small></strong></div>
-                                <div class="training-metric"><span class="training-metric-label">TIME · 训练时长</span><strong class="training-metric-value">${sportsNumber(minutes / 60, 1)}<small>h</small></strong></div>
-                                <div class="training-metric"><span class="training-metric-label">BODY · 最近体重</span><strong class="training-metric-value">${latestWeight ? sportsNumber(latestWeight.value, 1) : '—'}<small>${latestWeight?.unit || 'kg'}</small></strong></div>
+                        <section class="fitness-stage" aria-label="三分化训练日期轨迹">
+                            <div class="fitness-stage-top">
+                                <div class="fitness-stage-caption">TRAINING DATES<small id="fitness-filter-status">悬停或点击胸、背、腿，查看三分化轨迹</small></div>
+                                <div class="fitness-filters" role="group" aria-label="按训练部位筛选">
+                                    <button type="button" class="fitness-filter" data-group="chest" aria-pressed="false" onmouseenter="previewSportsGroup('chest')" onmouseleave="clearSportsPreview()" onfocus="previewSportsGroup('chest')" onblur="clearSportsPreview()" onclick="toggleSportsGroup('chest')"><span class="fitness-tool-icon tool-chest"><i></i><b></b></span><span><strong>CHEST</strong><small>胸 · ${groupCounts.chest}</small></span></button>
+                                    <button type="button" class="fitness-filter" data-group="back" aria-pressed="false" onmouseenter="previewSportsGroup('back')" onmouseleave="clearSportsPreview()" onfocus="previewSportsGroup('back')" onblur="clearSportsPreview()" onclick="toggleSportsGroup('back')"><span class="fitness-tool-icon tool-back"><i></i><b></b></span><span><strong>BACK</strong><small>背 · ${groupCounts.back}</small></span></button>
+                                    <button type="button" class="fitness-filter" data-group="leg" aria-pressed="false" onmouseenter="previewSportsGroup('leg')" onmouseleave="clearSportsPreview()" onfocus="previewSportsGroup('leg')" onblur="clearSportsPreview()" onclick="toggleSportsGroup('leg')"><span class="fitness-tool-icon tool-leg"><i></i><b></b></span><span><strong>LEGS</strong><small>腿 · ${groupCounts.leg}</small></span></button>
+                                </div>
+                            </div>
+                            <div class="fitness-trajectory-scroll">
+                                <div class="fitness-trajectory" style="width:${timelineWidth}px;--points:${timelineSessions.length}">
+                                    <span class="fitness-rise-label">OLDER → NOW</span>
+                                    ${timelineDots || '<span class="fitness-rise-label">等待三分化训练记录</span>'}
+                                </div>
+                            </div>
+                        </section>
+                        <section class="fitness-summary" aria-label="最近三十天训练摘要">
+                            <article class="fitness-stat"><span>30 DAYS / 训练次数</span><strong>${sportsNumber(recent.length)}<small>次</small></strong></article>
+                            <article class="fitness-stat"><span>TOTAL VOLUME / 总容量</span><strong>${sportsNumber(volume / 1000, 1)}<small>T</small></strong></article>
+                            <article class="fitness-stat"><span>TIME UNDER WORK / 时长</span><strong>${sportsNumber(minutes / 60, 1)}<small>H</small></strong></article>
+                            <article class="fitness-stat"><span>BODY / 最近体重</span><strong>${latestWeight ? sportsNumber(latestWeight.value, 1) : '—'}<small>${latestWeight?.unit || 'KG'}</small></strong></article>
+                        </section>
+                        <div class="fitness-detail-grid">
+                            <section class="fitness-card">
+                                <div class="fitness-card-head"><strong>12 WEEK POWER</strong><span>每周训练容量 / KG</span></div>
+                                <div class="fitness-chart-wrap"><canvas id="training-volume-chart" class="training-chart" aria-label="近十二周训练容量图"></canvas></div>
                             </section>
-                            <section class="training-panel training-panel-pad">
-                                <div class="training-panel-head"><div><span class="training-kicker">12 week rhythm</span><span class="training-panel-title">训练容量</span></div><span class="training-period">WEEKLY / KG</span></div>
-                                <canvas id="training-volume-chart" class="training-chart" aria-label="近十二周训练容量图"></canvas>
-                            </section>
-                            <aside class="training-side">
-                                <section class="training-panel training-panel-pad">
-                                    <div class="training-panel-head"><div><span class="training-kicker">body trace</span><span class="training-panel-title">身体趋势</span></div><span class="training-period">WEIGHT</span></div>
-                                    <div class="training-body-latest"><span class="training-body-number">${latestWeight ? sportsNumber(latestWeight.value, 1) : '—'} <small>${latestWeight?.unit || 'kg'}</small></span><span class="training-body-fat">${latestBodyfat ? `体脂 ${sportsNumber(latestBodyfat.value, 1)}${latestBodyfat.unit || '%'}` : '体脂 —'}</span></div>
-                                    <canvas id="training-body-chart" class="training-chart body-chart" aria-label="体重变化趋势图"></canvas>
-                                </section>
-                                <section class="training-panel training-panel-pad">
-                                    <div class="training-panel-head"><div><span class="training-kicker">movement memory</span><span class="training-panel-title">近期动作</span></div><span class="training-period">TOP 06</span></div>
-                                    <div class="training-moves">${movements.length ? movements.map(([name, count]) => `<div class="training-move-row"><span class="training-move-name">${escapeHtml(name)}</span><span class="training-move-count">${count} SETS</span><div class="training-move-track"><div class="training-move-fill" style="width:${Math.max(4, count / movementMax * 100)}%"></div></div></div>`).join('') : '<span class="training-kicker">等待动作记录</span>'}</div>
+                            <aside class="fitness-side">
+                                <section class="fitness-card">
+                                    <div class="fitness-card-head"><strong>BODY TRACE</strong><span>身体趋势</span></div>
+                                    <div class="fitness-body-number">${latestWeight ? sportsNumber(latestWeight.value, 1) : '—'} <small>${latestWeight?.unit || 'kg'} · ${latestBodyfat ? `体脂 ${sportsNumber(latestBodyfat.value, 1)}${latestBodyfat.unit || '%'}` : '持续记录中'}</small></div>
+                                    <div class="fitness-chart-wrap"><canvas id="training-body-chart" class="training-chart body-chart" aria-label="体重变化趋势图"></canvas></div>
                                 </section>
                             </aside>
-                            <section class="training-panel training-panel-pad training-history">
-                                <div class="training-panel-head"><div><span class="training-kicker">recent sessions</span><span class="training-panel-title">最近训练</span></div><span class="training-period">LATEST 08</span></div>
-                                <div class="training-sessions">${sessions.length ? sessions.slice(0, 8).map(session => `<article class="training-session"><span class="training-session-date">${escapeHtml(sportsDate(session.date))}</span><h2 class="training-session-title">${escapeHtml(session.title || '训练')}</h2><div class="training-session-meta"><span>${sportsNumber(session.durationMinutes)} MIN</span><span>${sportsNumber(session.setCount)} SETS</span><span>${sportsNumber(Number(session.volumeKg || 0) / 1000, 1)} T</span></div></article>`).join('') : '<div class="training-session"><span class="training-session-title">等待首次训练同步</span></div>'}</div>
+                            <section class="fitness-card fitness-latest">
+                                <div class="fitness-card-head"><strong>LATEST REPS</strong><span>最近训练 · 数据更新 ${escapeHtml(updatedLabel)}</span></div>
+                                <div class="fitness-session-strip">${sessions.length ? sessions.slice(0, 6).map(session => `<article class="fitness-session"><time>${escapeHtml(sportsDate(session.date))}</time><strong>${escapeHtml(session.title || '训练')}</strong><span>${sportsNumber(session.durationMinutes)} MIN · ${sportsNumber(session.setCount)} SETS · ${sportsNumber(Number(session.volumeKg || 0) / 1000, 1)} T</span></article>`).join('') : '<article class="fitness-session"><strong>等待首次训练同步</strong></article>'}</div>
                             </section>
                         </div>
                     </div>
                 </main>`;
-            requestAnimationFrame(drawSportsCharts);
+            requestAnimationFrame(() => {
+                drawSportsCharts();
+                applySportsGroup(null);
+                const trajectory = document.querySelector('.fitness-trajectory-scroll');
+                if (trajectory) trajectory.scrollLeft = trajectory.scrollWidth - trajectory.clientWidth;
+            });
         }
 
         async function loadSportsData() {
