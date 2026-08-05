@@ -1,0 +1,11 @@
+{
+  "status": "pending",
+  "updatedAt": null,
+  "training": {
+    "sessions": []
+  },
+  "body": {
+    "records": [],
+    "latest": {}
+  }
+}
