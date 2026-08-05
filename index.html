@@ -223,10 +223,12 @@
             body.sports-page #back-btn { top:10px; left:10px; }
         }
 
-        .more-menu { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); align-items:stretch; }
+        .more-menu { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:stretch; }
         .more-menu:before { display:none; }
         .more-menu > div { min-width:0; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:10px 7px; }
-        .more-training-link { color:#ff3ca6; }
+        .more-practice-cell { display:grid!important; grid-template-columns:repeat(2,minmax(0,1fr)); padding:0!important; }
+        .more-practice-cell button { min-width:0; color:inherit; cursor:pointer; }
+        .more-practice-cell button + button { border-left:1px solid rgba(255,255,255,.09); }
 
         body.sports-page { background:#f3efe7!important; color:#111!important; }
         body.sports-page #back-btn,
@@ -236,8 +238,12 @@
         .training-room:after { left:-8vw; right:auto; bottom:5vh; width:clamp(220px,29vw,470px); height:clamp(95px,13vw,190px); z-index:0; transform:skewY(-8deg); background:repeating-linear-gradient(90deg,#111 0 8px,transparent 8px 28px); opacity:.045; box-shadow:none; }
         .training-shell { position:relative; z-index:2; width:min(1580px,100%); }
         .fitness-intro { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:clamp(20px,3vh,34px); }
+        .fitness-equipment-banner { position:relative; height:clamp(92px,12vw,172px); margin:clamp(-38px,-3vw,-18px) 0 clamp(-14px,-1vw,-4px); overflow:hidden; pointer-events:none; }
+        .fitness-equipment-banner img { width:100%; height:100%; object-fit:contain; filter:drop-shadow(5px 7px 0 rgba(17,17,17,.1)); animation:equipmentDrift 6s ease-in-out infinite; }
+        @keyframes equipmentDrift { 50% { transform:translateY(-6px); } }
         .fitness-eyebrow { display:block; margin-bottom:9px; font:800 10px/1 Arial,sans-serif; letter-spacing:.22em; }
         .fitness-title { margin:0; max-width:820px; font:900 italic clamp(38px,6.4vw,94px)/.82 Arial,'Noto Sans SC',sans-serif; letter-spacing:-.07em; text-transform:uppercase; }
+        .fitness-title,.fitness-stage-caption,.fitness-filter strong,.fitness-muscle-name strong,.fitness-muscle-feature strong,.fitness-stat strong,.fitness-card-head strong { font-weight:900!important; }
         .fitness-title em { color:var(--pink); font-style:inherit; }
         .fitness-message { max-width:320px; margin:0; padding:13px 15px; border-left:6px solid var(--pink); font:700 13px/1.55 'Noto Sans SC',sans-serif; }
         .fitness-stage { position:relative; overflow:hidden; padding:clamp(18px,2.5vw,32px); border:3px solid var(--ink); background:rgba(249,246,239,.88); box-shadow:10px 10px 0 var(--ink),17px 17px 0 var(--pink); }
@@ -268,9 +274,9 @@
         .fitness-trajectory:before { content:""; position:absolute; left:-2%; bottom:24%; width:105%; height:5px; transform:rotate(-10deg); transform-origin:left center; background:var(--ink); box-shadow:0 -7px 0 rgba(255,21,147,.28); }
         .fitness-trajectory:after { content:"KEEP GOING ↗"; position:absolute; right:20px; top:20px; color:var(--pink); font:900 italic 15px/1 Arial,sans-serif; letter-spacing:.04em; }
         .fitness-date-dot { position:absolute; z-index:3; width:18px; height:18px; padding:0; transform:translate(-50%,50%); border:3px solid var(--ink); border-radius:50%; background:var(--cream); box-shadow:0 0 0 3px var(--cream); cursor:pointer; transition:opacity .2s ease,transform .2s ease,background .2s ease,box-shadow .2s ease; }
-        .fitness-date-dot[data-group="chest"] { background:var(--pink); }
-        .fitness-date-dot[data-group="back"] { background:var(--ink); }
-        .fitness-date-dot[data-group="leg"] { background:#fff; box-shadow:0 0 0 3px var(--cream),inset 0 0 0 3px var(--pink); }
+        .fitness-date-dot[data-group~="chest"] { background:var(--pink); }
+        .fitness-date-dot[data-group~="back"] { background:var(--ink); }
+        .fitness-date-dot[data-group~="leg"] { background:#fff; box-shadow:0 0 0 3px var(--cream),inset 0 0 0 3px var(--pink); }
         .fitness-date-dot:hover,.fitness-date-dot:focus-visible,.fitness-date-dot.is-match { z-index:8; transform:translate(-50%,50%) scale(1.55); background:var(--pink); box-shadow:0 0 0 5px var(--cream),0 0 0 8px var(--ink),0 0 22px rgba(255,21,147,.55); outline:none; }
         .fitness-date-dot.is-muted { opacity:.12; transform:translate(-50%,50%) scale(.72); }
         .fitness-dot-date { position:absolute; left:50%; top:25px; width:50px; transform:translateX(-50%) rotate(-62deg); transform-origin:top center; color:#37332e; font:800 9px/1 Arial,sans-serif; white-space:nowrap; pointer-events:none; }
@@ -278,6 +284,34 @@
         .fitness-date-dot:hover .fitness-dot-tip,.fitness-date-dot:focus-visible .fitness-dot-tip { opacity:1; visibility:visible; transform:translate(-50%,0); }
         .fitness-rise-label { position:absolute; left:18px; top:20px; display:flex; align-items:center; gap:8px; font:800 9px/1 Arial,sans-serif; letter-spacing:.12em; }
         .fitness-rise-label:before { content:""; width:31px; height:4px; background:var(--pink); transform:rotate(-10deg); }
+        .fitness-muscle-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); align-items:start; gap:13px; margin:38px 0 12px; }
+        .fitness-muscle-card { position:relative; overflow:hidden; border:3px solid var(--ink); background:#faf7f0; box-shadow:7px 7px 0 var(--ink); transition:transform .28s ease,box-shadow .28s ease; }
+        .fitness-muscle-card:hover,.fitness-muscle-card:focus-within,.fitness-muscle-card.is-open { transform:translateY(-7px); box-shadow:10px 14px 0 var(--pink); }
+        .fitness-muscle-toggle { width:100%; display:grid; grid-template-columns:66px minmax(0,1fr) auto; align-items:center; gap:13px; padding:14px 16px; color:var(--ink); text-align:left; cursor:pointer; }
+        .fitness-muscle-toggle .fitness-tool-icon { transform:scale(1.15); transform-origin:center; }
+        .fitness-muscle-name strong { display:block; font:900 italic clamp(22px,2.6vw,38px)/.85 Arial,sans-serif; }
+        .fitness-muscle-name small { display:block; margin-top:8px; color:#706a62; font:700 9px/1.2 'Noto Sans SC',sans-serif; letter-spacing:.08em; }
+        .fitness-muscle-plus { color:var(--pink); font:900 30px/1 Arial,sans-serif; transition:transform .25s; }
+        .fitness-muscle-card:hover .fitness-muscle-plus,.fitness-muscle-card:focus-within .fitness-muscle-plus,.fitness-muscle-card.is-open .fitness-muscle-plus { transform:rotate(45deg); }
+        .fitness-muscle-content { max-height:0; overflow:hidden; opacity:0; border-top:0 solid var(--ink); transition:max-height .48s cubic-bezier(.2,.8,.2,1),opacity .22s ease,border-width .2s; }
+        .fitness-muscle-card:hover .fitness-muscle-content,.fitness-muscle-card:focus-within .fitness-muscle-content,.fitness-muscle-card.is-open .fitness-muscle-content { max-height:620px; opacity:1; border-top-width:3px; }
+        .fitness-muscle-feature { min-height:103px; display:grid; grid-template-columns:minmax(0,1fr) 92px; align-items:center; gap:12px; padding:14px 16px; background:linear-gradient(115deg,rgba(255,21,147,.13),transparent 65%); }
+        .fitness-muscle-feature span { display:block; font:800 8px/1 Arial,sans-serif; letter-spacing:.14em; }
+        .fitness-muscle-feature strong { display:block; margin-top:9px; font:900 17px/1.25 'Noto Sans SC',sans-serif; }
+        .fitness-move-sketch { height:72px; display:grid; place-items:center; border:2px solid var(--ink); background:var(--pink); box-shadow:4px 4px 0 var(--ink); }
+        .fitness-move-sketch .fitness-tool-icon { transform:scale(1.35); color:#111; }
+        .fitness-exercise-list { display:flex; flex-wrap:wrap; gap:7px; padding:0 16px 15px; }
+        .fitness-exercise-button { max-width:100%; padding:8px 10px; border:2px solid var(--ink); color:var(--ink); background:var(--cream); font:700 9px/1.2 'Noto Sans SC',sans-serif; cursor:pointer; transition:.18s; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+        .fitness-exercise-button:hover,.fitness-exercise-button:focus-visible,.fitness-exercise-button.is-active { color:#fff; background:var(--ink); box-shadow:3px 3px 0 var(--pink); outline:none; transform:translateY(-2px); }
+        .fitness-exercise-chart-shell { max-height:0; overflow:hidden; border-top:0 solid var(--ink); opacity:0; transition:max-height .38s ease,opacity .22s ease,border-width .2s; }
+        .fitness-exercise-chart-shell.has-chart { max-height:310px; opacity:1; border-top-width:2px; }
+        .fitness-exercise-summary { display:flex; align-items:baseline; justify-content:space-between; gap:10px; padding:12px 15px 2px; }
+        .fitness-exercise-summary strong { max-width:50%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font:900 13px/1.2 'Noto Sans SC',sans-serif; }
+        .fitness-exercise-summary span { color:#6f6961; font:700 8px/1.35 Arial,'Noto Sans SC',sans-serif; text-align:right; }
+        .fitness-exercise-chart { display:block; width:100%; height:190px; }
+        .fitness-exercise-legend { display:flex; justify-content:flex-end; gap:13px; padding:0 15px 12px; color:#6f6961; font:700 8px/1 Arial,'Noto Sans SC',sans-serif; }
+        .fitness-exercise-legend span:before { content:""; display:inline-block; width:11px; height:4px; margin-right:5px; vertical-align:middle; background:var(--pink); }
+        .fitness-exercise-legend span + span:before { height:2px; background:var(--ink); }
         .fitness-summary { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:34px 0 22px; }
         .fitness-stat { position:relative; min-height:142px; padding:20px; border:3px solid var(--ink); background:#faf7f0; box-shadow:6px 6px 0 var(--ink); }
         .fitness-stat:nth-child(1) { transform:translateY(15px); }.fitness-stat:nth-child(2) { transform:translateY(9px); }.fitness-stat:nth-child(3) { transform:translateY(3px); }.fitness-stat:nth-child(4) { transform:translateY(-3px); }
@@ -311,6 +345,7 @@
             .fitness-filters { width:100%; }
             .fitness-filter { flex:1; min-width:0; }
             .fitness-summary { grid-template-columns:repeat(2,minmax(0,1fr)); }
+            .fitness-muscle-grid { grid-template-columns:1fr; }
             .fitness-stat:nth-child(n) { transform:none; }
             .fitness-detail-grid { grid-template-columns:1fr; }
             .fitness-session-strip { grid-template-columns:repeat(3,minmax(0,1fr)); }
@@ -320,7 +355,7 @@
         @media (max-width:640px) {
             .more-home-card { height:176px!important; }
             .more-home-card > .relative { display:none; }
-            .more-menu { grid-template-columns:repeat(3,minmax(0,1fr)); }
+            .more-menu { grid-template-columns:repeat(2,minmax(0,1fr)); }
             .more-home-card .more-menu { transform:none!important; }
             .more-menu:before { content:"MORE OF ME · 个人兴趣"; display:block; grid-column:1/-1; padding:9px 10px 3px; color:rgba(255,255,255,.66); font:300 9px/1 'Noto Sans SC',sans-serif; letter-spacing:.13em; }
             .more-menu > div { padding:6px 4px; }
@@ -338,6 +373,11 @@
             .fitness-tool-icon { transform:scale(.8); margin:-3px 0; }
             .fitness-trajectory { min-width:760px; height:330px; }
             .fitness-summary { gap:7px; margin-top:24px; }
+            .fitness-muscle-grid { gap:9px; margin-top:28px; }
+            .fitness-muscle-card { box-shadow:4px 4px 0 var(--ink); }
+            .fitness-muscle-card:hover { transform:none; box-shadow:4px 4px 0 var(--ink); }
+            .fitness-muscle-card.is-open { transform:translateY(-3px); box-shadow:6px 8px 0 var(--pink); }
+            .fitness-muscle-card:hover:not(.is-open) .fitness-muscle-content { max-height:0; opacity:0; border-top-width:0; }
             .fitness-stat { min-height:108px; padding:14px; box-shadow:4px 4px 0 var(--ink); }
             .fitness-stat strong { margin-top:17px; font-size:31px; }
             .fitness-card { box-shadow:4px 4px 0 rgba(17,17,17,.92); }
@@ -630,8 +670,10 @@
                             <div onclick="switchPage('cinema')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Cinema</span><span class="zh-sub">电影</span></div>
                             <div onclick="switchPage('reading')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Books & Music</span><span class="zh-sub">音乐与阅读</span></div>
                             <div onclick="switchPage('thoughts')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Reflect</span><span class="zh-sub">感悟</span></div>
-                            <div onclick="switchPage('calligraphy')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Ink</span><span class="zh-sub">书法</span></div>
-                            <div onclick="switchPage('sports')" class="cursor-pointer text-center hover:scale-110 transition more-training-link"><span class="en-main text-base">Train</span><span class="zh-sub">运动记录</span></div>
+                            <div class="more-practice-cell">
+                                <button type="button" onclick="event.stopPropagation();switchPage('calligraphy')" class="text-center hover:scale-105 transition"><span class="en-main text-base">Ink</span><span class="zh-sub">书法</span></button>
+                                <button type="button" onclick="event.stopPropagation();switchPage('sports')" class="text-center hover:scale-105 transition"><span class="en-main text-base">Train</span><span class="zh-sub">运动记录</span></button>
+                            </div>
                         </div>
                     </div>
                 </div>`;
@@ -1005,7 +1047,7 @@
             loadCalligraphyGallery();
         }
 
-        const sportsState = { data: null, resizeBound: false, resizeTimer: 0, filter: null, preview: null };
+        const sportsState = { data: null, resizeBound: false, resizeTimer: 0, filter: null, preview: null, exerciseGroups: null, activeExercise: {}, timelineRange: '' };
 
         function sportsNumber(value, maximumFractionDigits = 0) {
             const number = Number(value);
@@ -1019,12 +1061,52 @@
             return Number.isNaN(date.getTime()) ? String(value) : new Intl.DateTimeFormat('zh-CN', { month: '2-digit', day: '2-digit' }).format(date);
         }
 
-        function sportsGroup(session = {}) {
-            const text = [session.title, ...(session.movements || []).map(move => move.name)].join(' ');
-            if (/胸|卧推|飞鸟|胸推|夹胸|俯卧撑|臂屈伸|bench|chest|pec/i.test(text)) return 'chest';
+        function sportsFullDate(value) {
+            if (!value) return '—';
+            const date = new Date(`${String(value).slice(0, 10)}T12:00:00`);
+            return Number.isNaN(date.getTime()) ? String(value) : new Intl.DateTimeFormat('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(date);
+        }
+
+        function sportsMovementGroup(value = '') {
+            const text = String(value || '');
+            if (/胸|卧推|飞鸟|胸推|夹胸|俯卧撑|bench|chest|pec/i.test(text)) return 'chest';
             if (/背|引体|高位下拉|杠铃划船|器械划船|直臂下压|硬拉|pull.?up|lat.?pull|deadlift/i.test(text)) return 'back';
             if (/腿|深蹲|腿举|腿弯举|髋|小腿|箭步|臀|squat|lunge/i.test(text)) return 'leg';
             return 'other';
+        }
+
+        function sportsGroup(session = {}) {
+            const titleGroup = sportsMovementGroup(session.title);
+            if (titleGroup !== 'other') return titleGroup;
+            for (const move of session.movements || []) {
+                const group = sportsMovementGroup(move.name);
+                if (group !== 'other') return group;
+            }
+            return 'other';
+        }
+
+        function sportsExerciseGroups(sessions) {
+            const maps = { chest: new Map(), back: new Map(), leg: new Map() };
+            sessions.forEach(session => (session.movements || []).forEach(move => {
+                const name = String(move.name || '未命名动作');
+                const group = sportsMovementGroup(name);
+                if (group === 'other') return;
+                const exercise = maps[group].get(name) || { name, totalSets: 0, totalReps: 0, totalVolume: 0, maxWeight: 0, points: [] };
+                const point = {
+                    date: String(session.date || '').slice(0, 10),
+                    sets: Number(move.setCount || 0),
+                    reps: Number(move.totalReps || 0),
+                    volume: Number(move.volumeKg || 0),
+                    maxWeight: Number(move.maxWeightKg || 0)
+                };
+                exercise.totalSets += point.sets;
+                exercise.totalReps += point.reps;
+                exercise.totalVolume += point.volume;
+                exercise.maxWeight = Math.max(exercise.maxWeight, point.maxWeight);
+                exercise.points.push(point);
+                maps[group].set(name, exercise);
+            }));
+            return Object.fromEntries(Object.entries(maps).map(([group, map]) => [group, [...map.values()].map(exercise => ({ ...exercise, points: exercise.points.sort((a, b) => a.date.localeCompare(b.date)) })).sort((a, b) => b.totalSets - a.totalSets || b.points.length - a.points.length)]));
         }
 
         const sportsGroupNames = { chest: '胸', back: '背', leg: '腿' };
@@ -1032,7 +1114,7 @@
         function applySportsGroup(group) {
             const active = group || sportsState.filter;
             document.querySelectorAll('.fitness-date-dot').forEach(dot => {
-                const match = !active || dot.dataset.group === active;
+                const match = !active || String(dot.dataset.group || '').split(' ').includes(active);
                 dot.classList.toggle('is-match', Boolean(active && match));
                 dot.classList.toggle('is-muted', Boolean(active && !match));
             });
@@ -1043,8 +1125,8 @@
             });
             const status = document.getElementById('fitness-filter-status');
             if (status) {
-                const count = active ? document.querySelectorAll(`.fitness-date-dot[data-group="${active}"]`).length : 0;
-                status.textContent = active ? `${sportsGroupNames[active]}部轨迹 · ${count} 个训练日期正在发光` : '悬停或点击胸、背、腿，查看三分化轨迹';
+                const count = active ? document.querySelectorAll(`.fitness-date-dot[data-group~="${active}"]`).length : 0;
+                status.textContent = active ? `${sportsGroupNames[active]}部轨迹 · ${count} 个训练日期正在发光` : (sportsState.timelineRange ? `${sportsState.timelineRange} · 悬停或点击胸、背、腿` : '悬停或点击胸、背、腿，查看三分化轨迹');
             }
         }
 
@@ -1062,6 +1144,30 @@
             sportsState.filter = sportsState.filter === group ? null : group;
             sportsState.preview = null;
             applySportsGroup(null);
+        }
+
+        function toggleSportsMuscleCard(group) {
+            const card = document.querySelector(`.fitness-muscle-card[data-group="${group}"]`);
+            if (!card) return;
+            const open = !card.classList.contains('is-open');
+            document.querySelectorAll('.fitness-muscle-card').forEach(item => item.classList.remove('is-open'));
+            if (open) card.classList.add('is-open');
+        }
+
+        function showSportsExercise(group, encodedName) {
+            const name = decodeURIComponent(encodedName);
+            const exercise = (sportsState.exerciseGroups?.[group] || []).find(item => item.name === name);
+            const card = document.querySelector(`.fitness-muscle-card[data-group="${group}"]`);
+            if (!exercise || !card) return;
+            sportsState.activeExercise[group] = name;
+            card.classList.add('is-open');
+            card.querySelectorAll('.fitness-exercise-button').forEach(button => button.classList.toggle('is-active', button.dataset.exercise === name));
+            const summary = card.querySelector('.fitness-exercise-summary');
+            if (summary) summary.innerHTML = `<strong>${escapeHtml(name)}</strong><span>${sportsNumber(exercise.points.length)} 次 · ${sportsNumber(exercise.totalSets)} 组 · ${sportsNumber(exercise.totalVolume / 1000, 1)} T · 最高 ${exercise.maxWeight ? `${sportsNumber(exercise.maxWeight, 1)} KG` : '—'}</span>`;
+            const chartShell = card.querySelector('.fitness-exercise-chart-shell');
+            if (chartShell) chartShell.classList.add('has-chart');
+            const canvas = card.querySelector('.fitness-exercise-chart');
+            requestAnimationFrame(() => requestAnimationFrame(() => drawSportsExerciseChart(canvas, exercise)));
         }
 
         function sportsWeeks(sessions, count = 12) {
@@ -1148,6 +1254,53 @@
             });
         }
 
+        function drawSportsExerciseChart(canvas, exercise) {
+            if (!canvas || !exercise?.points?.length) return;
+            const points = exercise.points;
+            const width = Math.max(280, canvas.clientWidth || 520);
+            const height = Math.max(170, canvas.clientHeight || 190);
+            const ratio = Math.min(window.devicePixelRatio || 1, 2);
+            canvas.width = Math.round(width * ratio);
+            canvas.height = Math.round(height * ratio);
+            const ctx = canvas.getContext('2d');
+            ctx.scale(ratio, ratio);
+            ctx.clearRect(0, 0, width, height);
+            const pad = { left: 12, right: 12, top: 18, bottom: 29 };
+            const chartW = width - pad.left - pad.right;
+            const chartH = height - pad.top - pad.bottom;
+            const maxVolume = Math.max(1, ...points.map(point => point.volume));
+            const maxSets = Math.max(1, ...points.map(point => point.sets));
+            const step = chartW / Math.max(points.length, 1);
+            ctx.strokeStyle = 'rgba(17,17,17,.12)';
+            ctx.lineWidth = 1;
+            for (let row = 0; row <= 3; row += 1) {
+                const y = pad.top + chartH * row / 3;
+                ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(width - pad.right, y); ctx.stroke();
+            }
+            points.forEach((point, index) => {
+                const barHeight = point.volume ? Math.max(3, point.volume / maxVolume * chartH) : 0;
+                const x = pad.left + index * step + step * .14;
+                const y = pad.top + chartH - barHeight;
+                ctx.fillStyle = 'rgba(255,21,147,.38)';
+                ctx.fillRect(x, y, Math.max(2, step * .68), barHeight);
+            });
+            const linePoints = points.map((point, index) => ({
+                x: points.length === 1 ? pad.left + chartW / 2 : pad.left + chartW * index / (points.length - 1),
+                y: pad.top + chartH - point.sets / maxSets * chartH
+            }));
+            ctx.beginPath();
+            linePoints.forEach((point, index) => index ? ctx.lineTo(point.x, point.y) : ctx.moveTo(point.x, point.y));
+            ctx.strokeStyle = '#111'; ctx.lineWidth = 2.2; ctx.stroke();
+            linePoints.forEach(point => { ctx.beginPath(); ctx.arc(point.x, point.y, 2.7, 0, Math.PI * 2); ctx.fillStyle = '#ff1593'; ctx.fill(); });
+            ctx.fillStyle = 'rgba(17,17,17,.52)';
+            ctx.font = '8px Arial, sans-serif';
+            const labelIndexes = [...new Set([0, Math.floor((points.length - 1) / 2), points.length - 1])];
+            labelIndexes.forEach(index => {
+                const x = points.length === 1 ? pad.left + chartW / 2 : pad.left + chartW * index / Math.max(points.length - 1, 1);
+                ctx.fillText(sportsDate(points[index]?.date), Math.min(x, width - 38), height - 8);
+            });
+        }
+
         function drawSportsCharts() {
             if (!document.body.classList.contains('sports-page') || !sportsState.data) return;
             const sessions = Array.isArray(sportsState.data.training?.sessions) ? sportsState.data.training.sessions : [];
@@ -1155,6 +1308,11 @@
             drawSportsChart(document.getElementById('training-volume-chart'), weeks.map(week => week.volume), { bars: true, labels: weeks.map(week => week.label) });
             const weights = (sportsState.data.body?.records || []).filter(item => item.type === 'weight').slice(-28);
             drawSportsChart(document.getElementById('training-body-chart'), weights.map(item => item.value), { labels: weights.map(item => sportsDate(item.date)), color: '#111' });
+            Object.entries(sportsState.activeExercise || {}).forEach(([group, name]) => {
+                const exercise = (sportsState.exerciseGroups?.[group] || []).find(item => item.name === name);
+                const canvas = document.querySelector(`.fitness-muscle-card[data-group="${group}"] .fitness-exercise-chart`);
+                if (exercise) drawSportsExerciseChart(canvas, exercise);
+            });
         }
 
         function renderSportsData(data) {
@@ -1170,13 +1328,60 @@
             const minutes = recent.reduce((sum, session) => sum + Number(session.durationMinutes || 0), 0);
             const latestWeight = records.filter(item => item.type === 'weight').slice(-1)[0];
             const latestBodyfat = records.filter(item => item.type === 'bodyfat').slice(-1)[0];
-            const timelineSessions = sessions.map(session => ({ ...session, group: sportsGroup(session) })).filter(session => session.group !== 'other').slice(0, 30).reverse();
+            const timelineMap = new Map();
+            sessions.forEach(session => {
+                const date = String(session.date || '').slice(0, 10);
+                if (!date) return;
+                const entry = timelineMap.get(date) || { date, title: [], setCount: 0, volumeKg: 0, groups: new Set() };
+                const group = sportsGroup(session);
+                entry.title.push(String(session.title || '训练'));
+                entry.setCount += Number(session.setCount || 0);
+                entry.volumeKg += Number(session.volumeKg || 0);
+                if (group !== 'other') entry.groups.add(group);
+                timelineMap.set(date, entry);
+            });
+            const timelineSessions = [...timelineMap.values()].map(entry => ({ ...entry, title: [...new Set(entry.title)].join(' / '), group: [...entry.groups].join(' ') || 'other' })).sort((a, b) => a.date.localeCompare(b.date));
             const timelineMaxVolume = Math.max(1, ...timelineSessions.map(session => Number(session.volumeKg || 0)));
-            const timelineWidth = Math.max(980, timelineSessions.length * 58);
+            const timelineWidth = Math.max(980, timelineSessions.length * 46);
             const groupCounts = timelineSessions.reduce((counts, session) => {
-                counts[session.group] = (counts[session.group] || 0) + 1;
+                String(session.group || '').split(' ').forEach(group => {
+                    if (group in counts) counts[group] += 1;
+                });
                 return counts;
             }, { chest: 0, back: 0, leg: 0 });
+            const exerciseGroups = sportsExerciseGroups(sessions);
+            sportsState.exerciseGroups = exerciseGroups;
+            sportsState.activeExercise = {};
+            sportsState.timelineRange = timelineSessions.length ? `${sportsFullDate(timelineSessions[0].date)} → ${sportsFullDate(timelineSessions[timelineSessions.length - 1].date)} · ${timelineSessions.length} 个日期全部显示` : '';
+            const groupMeta = {
+                chest: { en: 'CHEST', zh: '胸部', tool: 'tool-chest' },
+                back: { en: 'BACK', zh: '背部', tool: 'tool-back' },
+                leg: { en: 'LEGS', zh: '腿部', tool: 'tool-leg' }
+            };
+            const muscleCards = Object.entries(groupMeta).map(([group, meta]) => {
+                const exercises = (exerciseGroups[group] || []).slice(0, 6);
+                const top = exercises[0];
+                const exerciseButtons = exercises.map(exercise => {
+                    const encoded = encodeURIComponent(exercise.name);
+                    return `<button type="button" class="fitness-exercise-button" data-exercise="${escapeHtml(exercise.name)}" onmouseenter="showSportsExercise('${group}','${encoded}')" onfocus="showSportsExercise('${group}','${encoded}')" onclick="event.stopPropagation();showSportsExercise('${group}','${encoded}')">${escapeHtml(exercise.name)} · ${sportsNumber(exercise.totalSets)}组</button>`;
+                }).join('');
+                return `<article class="fitness-muscle-card" data-group="${group}" onmouseenter="previewSportsGroup('${group}')" onmouseleave="clearSportsPreview()">
+                    <button type="button" class="fitness-muscle-toggle" onclick="toggleSportsMuscleCard('${group}')" onfocus="previewSportsGroup('${group}')" onblur="clearSportsPreview()" aria-label="展开${meta.zh}动作档案">
+                        <span class="fitness-tool-icon ${meta.tool}"><i></i><b></b></span>
+                        <span class="fitness-muscle-name"><strong>${meta.en}</strong><small>${meta.zh} · ${groupCounts[group]} 个训练日期</small></span>
+                        <span class="fitness-muscle-plus">＋</span>
+                    </button>
+                    <div class="fitness-muscle-content">
+                        <div class="fitness-muscle-feature"><div><span>MOST PRACTICED / 最常练</span><strong>${top ? escapeHtml(top.name) : '等待动作记录'}</strong></div><span class="fitness-move-sketch"><span class="fitness-tool-icon ${meta.tool}"><i></i><b></b></span></span></div>
+                        <div class="fitness-exercise-list">${exerciseButtons || '<span class="fitness-stage-caption"><small>等待动作数据</small></span>'}</div>
+                        <div class="fitness-exercise-chart-shell">
+                            <div class="fitness-exercise-summary"><strong>动作历史</strong><span>悬停动作查看全部记录</span></div>
+                            <canvas class="fitness-exercise-chart" aria-label="${meta.zh}动作历史数据图"></canvas>
+                            <div class="fitness-exercise-legend"><span>训练容量</span><span>完成组数</span></div>
+                        </div>
+                    </div>
+                </article>`;
+            }).join('');
             const updatedAt = data.updatedAt ? new Date(data.updatedAt) : null;
             const updatedLabel = updatedAt && !Number.isNaN(updatedAt.getTime()) ? new Intl.DateTimeFormat('zh-CN', { month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit' }).format(updatedAt) : '等待首次同步';
             const timelineDots = timelineSessions.map((session, index) => {
@@ -1192,13 +1397,14 @@
             app.innerHTML = `
                 <main class="training-room">
                     <div class="training-shell">
+                        <div class="fitness-equipment-banner" aria-hidden="true"><img src="assets/fitness-equipment-strip.png" alt=""></div>
                         <header class="fitness-intro">
                             <div><span class="fitness-eyebrow">MORE OF ME / TRAINING ARCHIVE</span><h1 class="fitness-title">DATES THAT<br>MOVE <em>UP.</em></h1></div>
                             <p class="fitness-message">每一个训练日期，都是身体向上生长的证据。不是等待状态变好，是一次次把自己推向更强。</p>
                         </header>
                         <section class="fitness-stage" aria-label="三分化训练日期轨迹">
                             <div class="fitness-stage-top">
-                                <div class="fitness-stage-caption">TRAINING DATES<small id="fitness-filter-status">悬停或点击胸、背、腿，查看三分化轨迹</small></div>
+                                <div class="fitness-stage-caption">TRAINING DATES<small id="fitness-filter-status">${escapeHtml(sportsState.timelineRange || '等待训练日期')}</small></div>
                                 <div class="fitness-filters" role="group" aria-label="按训练部位筛选">
                                     <button type="button" class="fitness-filter" data-group="chest" aria-pressed="false" onmouseenter="previewSportsGroup('chest')" onmouseleave="clearSportsPreview()" onfocus="previewSportsGroup('chest')" onblur="clearSportsPreview()" onclick="toggleSportsGroup('chest')"><span class="fitness-tool-icon tool-chest"><i></i><b></b></span><span><strong>CHEST</strong><small>胸 · ${groupCounts.chest}</small></span></button>
                                     <button type="button" class="fitness-filter" data-group="back" aria-pressed="false" onmouseenter="previewSportsGroup('back')" onmouseleave="clearSportsPreview()" onfocus="previewSportsGroup('back')" onblur="clearSportsPreview()" onclick="toggleSportsGroup('back')"><span class="fitness-tool-icon tool-back"><i></i><b></b></span><span><strong>BACK</strong><small>背 · ${groupCounts.back}</small></span></button>
@@ -1212,6 +1418,7 @@
                                 </div>
                             </div>
                         </section>
+                        <section class="fitness-muscle-grid" aria-label="胸背腿动作档案">${muscleCards}</section>
                         <section class="fitness-summary" aria-label="最近三十天训练摘要">
                             <article class="fitness-stat"><span>30 DAYS / 训练次数</span><strong>${sportsNumber(recent.length)}<small>次</small></strong></article>
                             <article class="fitness-stat"><span>TOTAL VOLUME / 总容量</span><strong>${sportsNumber(volume / 1000, 1)}<small>T</small></strong></article>
