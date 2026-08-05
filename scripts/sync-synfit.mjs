@@ -41,7 +41,7 @@ function setStats(set = {}) {
   if (set.done === false || set.done === 0) return { sets: 0, volume: 0, seconds: 0 };
   let sets = 1;
   let volume = number(set.weight_kg ?? set.weight) * number(set.reps);
-  let seconds = number(set.duration_s ?? set.time ?? set.metrics?.workoutTime ?? set.metrics?.duration_s);
+  let seconds = number(set.duration_s ?? set.metrics?.workoutTime ?? set.metrics?.duration_s);
   for (const child of set.items || []) {
     const stats = setStats(child.set || child);
     sets += stats.sets;
