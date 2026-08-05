@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-05T14:31:47Z",
+  "updatedAt": "2026-08-05T19:53:51Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1504,6 +1504,22 @@
     ],
     "preferCategory": [
       {
+        "categoryId": 2100000,
+        "categoryTitle": "医学健康",
+        "parentCategoryId": 2100000,
+        "parentCategoryTitle": "医学健康",
+        "readingCount": 1,
+        "readingTime": 4312
+      },
+      {
+        "categoryId": 1600000,
+        "categoryTitle": "生活百科",
+        "parentCategoryId": 1600000,
+        "parentCategoryTitle": "生活百科",
+        "readingCount": 1,
+        "readingTime": 4312
+      },
+      {
         "categoryId": 300000,
         "categoryTitle": "文学",
         "parentCategoryId": 300000,
@@ -1518,22 +1534,6 @@
         "parentCategoryTitle": "精品小说",
         "readingCount": 2,
         "readingTime": 1961
-      },
-      {
-        "categoryId": 2100000,
-        "categoryTitle": "医学健康",
-        "parentCategoryId": 2100000,
-        "parentCategoryTitle": "医学健康",
-        "readingCount": 1,
-        "readingTime": 486
-      },
-      {
-        "categoryId": 1600000,
-        "categoryTitle": "生活百科",
-        "parentCategoryId": 1600000,
-        "parentCategoryTitle": "生活百科",
-        "readingCount": 1,
-        "readingTime": 486
       },
       {
         "categoryId": 1000000,
@@ -1568,7 +1568,7 @@
         "readingTime": 0
       }
     ],
-    "preferCategoryWord": "偏好阅读文学",
+    "preferCategoryWord": "偏好阅读医学健康",
     "readStat": [
       {
         "stat": "读过",
@@ -1588,8 +1588,8 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.001572133168928,
-    "dayAverageReadTime": 1256,
+    "compare": 1.5013101109741066,
+    "dayAverageReadTime": 1047,
     "baseTime": 1785513600,
     "totalReadTime": 6282,
     "readDistributionWord": "点评分布",
@@ -1670,41 +1670,39 @@
       },
       {
         "type": 6,
-        "title": "最爱社会小说",
+        "title": "最爱生活百科",
         "bookInfo": {
-          "bookId": "35523642",
-          "title": "丰饶之海（第一卷）：春雪",
-          "author": "三岛由纪夫",
-          "translator": "陈德文",
-          "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
-          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
-          "version": 1873098669,
+          "bookId": "30181899",
+          "title": "高级运动营养学",
+          "author": "丹·贝纳多特",
+          "translator": "安江红,刘勇,周帆扬,赵之光",
+          "intro": "世界各地的精英运动员都知道丹·贝纳多特（Dan Benardot）博士，并渴望得到他的指导，因为他们知道，他的真知灼见可能是运动员能否获得金牌的决定性因素。来自各个大洲的很多高等院校都邀请丹前去讲学，他们希望学生们能师从最好的专家。在佐治亚州立大学（Georgia State University），我们只知道他是丹——一位了不起的朋友，一位出色的同事，一位忠实的丈夫，以及世界上最棒的孩子的父亲。《高级运动营养学》的第1 版非常成功。它被广泛应用于各种教学场合，以及拥有不同身材、体型和技能的运动员。精英运动员和普通运动员都在使用这本书。它已经成为运动营养师和运动科学专业的学生学习人类运动表现相关营养知识的必读书。对那些需要指导运动员如何在比赛中取得优势的教练员而言，它同样是首选读物。但就像每一本成功的图书一样，它需要进行一些修订和更新。这正是《高级运动营养学（第2 版）》如此重要的原因。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/s_YueWen_30181899.jpg",
+          "version": 315626625,
           "format": "epub",
           "type": 0,
           "soldout": 0,
           "bookStatus": 1,
-          "payType": 4097,
+          "payType": 1048577,
           "finished": 1,
-          "maxFreeChapter": 7,
+          "maxFreeChapter": 17,
           "maxFreeInfo": {
-            "maxfreeChapterIdx": 7,
-            "maxfreeChapterUid": 64,
-            "maxfreeChapterRatio": 32
+            "maxfreeChapterIdx": 17,
+            "maxfreeChapterUid": 17,
+            "maxfreeChapterRatio": 8
           },
           "free": 0,
           "mcardDiscount": 0,
           "ispub": 1,
-          "extra_type": 1,
-          "cpid": -2571052,
-          "publishTime": "2018-10-15 00:00:00",
-          "lastChapterIdx": 58,
+          "extra_type": 5,
+          "cpid": 1765053,
+          "publishTime": "2019-01-08 00:00:00",
+          "lastChapterIdx": 95,
           "paperBook": {
             "skuId": ""
           },
-          "centPrice": 3000,
-          "copyrightChapterUids": [
-            59
-          ],
+          "centPrice": 8398,
+          "copyrightChapterUids": [],
           "inStoreBookId": "",
           "blockSaveImg": 0,
           "language": "zh",
@@ -2312,7 +2310,7 @@
     "preferCategoryWord": "偏好阅读文学",
     "preferTimeWord": "偏好夜晚阅读",
     "preferTime": [
-      703,
+      1386,
       2093,
       431,
       10,
@@ -2327,13 +2325,13 @@
       1868,
       13205,
       1984,
-      3979,
+      4989,
       3265,
       11217,
-      3712,
-      6813,
+      4994,
+      7058,
       4363,
-      3036,
+      3644,
       4936,
       3221
     ],
@@ -2809,7 +2807,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有4805人读过"
+        "reason": "仅有4810人读过"
       },
       {
         "type": 8,
@@ -3662,7 +3660,7 @@
           "parentCategoryId": 1100000,
           "parentCategoryTitle": "经济理财",
           "readingCount": 1,
-          "readingTime": 18026
+          "readingTime": 18028
         },
         {
           "categoryId": 1000000,
@@ -3686,7 +3684,7 @@
           "parentCategoryId": 1600000,
           "parentCategoryTitle": "生活百科",
           "readingCount": 1,
-          "readingTime": 486
+          "readingTime": 4312
         },
         {
           "categoryId": 2100000,
@@ -3694,7 +3692,7 @@
           "parentCategoryId": 2100000,
           "parentCategoryTitle": "医学健康",
           "readingCount": 1,
-          "readingTime": 486
+          "readingTime": 4312
         },
         {
           "categoryId": 200000,
@@ -3744,13 +3742,19 @@
           "readTime": "1小时12分钟"
         },
         {
+          "authorId": 778714,
+          "name": "丹·贝纳多特",
+          "count": 1,
+          "readTime": "1小时11分钟"
+        },
+        {
           "authorId": 183442,
           "name": "罗素",
           "count": 1,
           "readTime": "16分钟"
         }
       ],
-      "authorCount": 7,
+      "authorCount": 8,
       "preferPublisher": [
         {
           "name": "浙江科学技术出版社",
@@ -3770,6 +3774,10 @@
         },
         {
           "name": "山东文艺出版社",
+          "count": 1
+        },
+        {
+          "name": "北京科学技术出版社有限公司",
           "count": 1
         }
       ],
@@ -3792,7 +3800,7 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 338,
+      "dayAverageReadTime": 336,
       "baseTime": 1767196800,
       "totalReadTime": 73422,
       "readDistributionWord": "点评分布",
