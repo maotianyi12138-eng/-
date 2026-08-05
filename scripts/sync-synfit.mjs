@@ -3,6 +3,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 const trainingKey = process.env.SYNFIT_TRAINING_API_KEY;
 const bodyKey = process.env.SYNFIT_BODY_API_KEY;
 const outputPath = new URL('../data/synfit.json', import.meta.url);
+const normalizationVersion = 2;
 
 if (!trainingKey || !bodyKey) {
   throw new Error('SynFit repository secrets are not configured.');
@@ -84,13 +85,16 @@ function normalizeSession(train = {}, fallbackDate = '') {
   });
   const start = number(train.start);
   const end = number(train.end);
-  const elapsedSeconds = start && end && end > start ? (end - start) / (end > 1e12 ? 1000 : 1) : 0;
+  const rawElapsedSeconds = start && end && end > start ? (end - start) / (end > 1e12 ? 1000 : 1) : 0;
+  const elapsedSeconds = rawElapsedSeconds <= 4 * 60 * 60 ? rawElapsedSeconds : 0;
+  const durationSeconds = Math.max(elapsedSeconds, setSeconds);
+  const safeDurationSeconds = durationSeconds <= 4 * 60 * 60 ? durationSeconds : 0;
   const date = String(train.datestr || fallbackDate).slice(0, 10);
   return {
     date,
     title: String(train.title || train.name || '训练').slice(0, 100),
     start: start || 0,
-    durationMinutes: round(Math.max(elapsedSeconds, setSeconds) / 60, 0),
+    durationMinutes: round(safeDurationSeconds / 60, 0),
     setCount,
     volumeKg: round(volumeKg, 1),
     calories: round(calories, 0),
@@ -110,7 +114,9 @@ async function readExisting() {
 const existing = await readExisting();
 const today = new Date();
 today.setUTCHours(12, 0, 0, 0);
-const firstSync = existing.status !== 'ready' || !(existing.training?.sessions || []).length;
+const firstSync = existing.status !== 'ready'
+  || existing.normalizationVersion !== normalizationVersion
+  || !(existing.training?.sessions || []).length;
 const lookbackDays = firstSync ? 365 : 28;
 const dates = Array.from({ length: lookbackDays }, (_, index) => {
   const date = new Date(today);
@@ -161,6 +167,7 @@ for (const record of bodyRecords) latest[record.type] = record;
 
 const publicData = {
   status: 'ready',
+  normalizationVersion,
   updatedAt: new Date().toISOString(),
   privacy: 'Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.',
   training: {
