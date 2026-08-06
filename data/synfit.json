@@ -1,10 +1,43 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-08-05T16:15:06.016Z",
+  "updatedAt": "2026-08-06T05:29:42.379Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-08-05",
+        "title": "胸 重量",
+        "start": 1785954332388,
+        "durationMinutes": 8,
+        "setCount": 6,
+        "volumeKg": 4649,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "器械飞鸟",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 3504,
+            "maxWeightKg": 73
+          },
+          {
+            "name": "杠铃卧推",
+            "setCount": 1,
+            "totalReps": 5,
+            "volumeKg": 425,
+            "maxWeightKg": 85
+          },
+          {
+            "name": "上斜杠铃卧推",
+            "setCount": 1,
+            "totalReps": 12,
+            "volumeKg": 720,
+            "maxWeightKg": 60
+          }
+        ]
+      },
       {
         "date": "2026-08-05",
         "title": "划船",
