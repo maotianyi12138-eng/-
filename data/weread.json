@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-06T14:34:29Z",
+  "updatedAt": "2026-08-07T00:15:07Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -27,7 +27,7 @@
         "updateTime": 1722588817,
         "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/t6_YueWen_30181899.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1786011464,
+        "readUpdateTime": 1786035873,
         "secret": 0,
         "category": "生活百科-体育"
       },
@@ -42,6 +42,18 @@
         "readUpdateTime": 1779827104,
         "secret": 1,
         "category": "文学-外国文学"
+      },
+      {
+        "bookId": "25424211",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
+        "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
+        "author": "赫伯特·马尔库塞",
+        "updateTime": 1703130813,
+        "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
+        "finishReading": 0,
+        "readUpdateTime": 1786046054,
+        "secret": 0,
+        "category": "哲学宗教-西方哲学"
       },
       {
         "bookId": "3300199881",
@@ -154,6 +166,72 @@
   "history": {
     "books": [
       {
+        "bookId": "25424211",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
+        "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
+        "author": "赫伯特·马尔库塞",
+        "translator": "刘继",
+        "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
+        "version": 44968238,
+        "format": "epub",
+        "type": 0,
+        "price": 54.99,
+        "originalPrice": 0,
+        "soldout": 0,
+        "bookStatus": 1,
+        "payingStatus": 2,
+        "payType": 1048577,
+        "centPrice": 5499,
+        "categories": [
+          {
+            "categoryId": 600000,
+            "subCategoryId": 600007,
+            "categoryType": 0,
+            "title": "哲学宗教-西方哲学"
+          }
+        ],
+        "hasLecture": 1,
+        "finished": 1,
+        "maxFreeChapter": 6,
+        "maxFreeInfo": {
+          "maxFreeChapterIdx": 6,
+          "maxFreeChapterUid": 6,
+          "maxFreeChapterRatio": 89
+        },
+        "free": 0,
+        "mcardDiscount": 0,
+        "ispub": 1,
+        "extra_type": 5,
+        "cpid": 9030183,
+        "publishTime": "2014-03-01 00:00:00",
+        "lastChapterIdx": 18,
+        "paperBook": {
+          "skuId": ""
+        },
+        "copyrightChapterUids": [
+          2
+        ],
+        "inStoreBookId": "",
+        "blockSaveImg": 0,
+        "language": "zh",
+        "isTraditionalChinese": false,
+        "hideUpdateTime": false,
+        "isEPUBComics": 0,
+        "isVerticalLayout": 0,
+        "isShowTTS": 1,
+        "webBookControl": 0,
+        "selfProduceIncentive": false,
+        "isAutoDownload": 1,
+        "readingProgress": 0,
+        "markedStatus": 2,
+        "lastNoteSort": 1786045529,
+        "updateTime": 1703130813,
+        "finishReading": 0,
+        "readUpdateTime": 1786046054,
+        "secret": 0,
+        "category": "哲学宗教-西方哲学"
+      },
+      {
         "bookId": "30181899",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=7a332d8071cc8a0b7a31e96",
         "title": "高级运动营养学",
@@ -220,7 +298,7 @@
         "intro": "世界各地的精英运动员都知道丹·贝纳多特（Dan Benardot）博士，并渴望得到他的指导，因为他们知道，他的真知灼见可能是运动员能否获得金牌的决定性因素。来自各个大洲的很多高等院校都邀请丹前去讲学，他们希望学生们能师从最好的专家。在佐治亚州立大学（Georgia State University），我们只知道他是丹——一位了不起的朋友，一位出色的同事，一位忠实的丈夫，以及世界上最棒的孩子的父亲。《高级运动营养学》的第1 版非常成功。它被广泛应用于各种教学场合，以及拥有不同身材、体型和技能的运动员。精英运动员和普通运动员都在使用这本书。它已经成为运动营养师和运动科学专业的学生学习人类运动表现相关营养知识的必读书。对那些需要指导运动员如何在比赛中取得优势的教练员而言，它同样是首选读物。但就像每一本成功的图书一样，它需要进行一些修订和更新。这正是《高级运动营养学（第2 版）》如此重要的原因。",
         "updateTime": 1722588817,
         "finishReading": 0,
-        "readUpdateTime": 1786011464,
+        "readUpdateTime": 1786035873,
         "secret": 0,
         "category": "生活百科-体育"
       },
@@ -829,10 +907,77 @@
         "finishReading": 0
       }
     ],
-    "totalReadCount": 13
+    "totalReadCount": 14
   },
   "notebooks": {
     "books": [
+      {
+        "bookId": "25424211",
+        "book": {
+          "bookId": "25424211",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
+          "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
+          "author": "赫伯特·马尔库塞",
+          "translator": "刘继",
+          "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
+          "version": 44968238,
+          "format": "epub",
+          "type": 0,
+          "price": 54.99,
+          "originalPrice": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payingStatus": 2,
+          "payType": 1048577,
+          "centPrice": 5499,
+          "categories": [
+            {
+              "categoryId": 600000,
+              "subCategoryId": 600007,
+              "categoryType": 0,
+              "title": "哲学宗教-西方哲学"
+            }
+          ],
+          "hasLecture": 1,
+          "finished": 1,
+          "maxFreeChapter": 6,
+          "maxFreeInfo": {
+            "maxFreeChapterIdx": 6,
+            "maxFreeChapterUid": 6,
+            "maxFreeChapterRatio": 89
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 9030183,
+          "publishTime": "2014-03-01 00:00:00",
+          "lastChapterIdx": 18,
+          "paperBook": {
+            "skuId": ""
+          },
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "webBookControl": 0,
+          "selfProduceIncentive": false,
+          "isAutoDownload": 1
+        },
+        "reviewCount": 0,
+        "markedStatus": 2,
+        "readingProgress": 0,
+        "noteCount": 1,
+        "bookmarkCount": 0,
+        "sort": 1786045529
+      },
       {
         "bookId": "30181899",
         "book": {
@@ -1398,9 +1543,10 @@
       "1785686400": 742,
       "1785772800": 1823,
       "1785859200": 2005,
-      "1785945600": 875
+      "1785945600": 875,
+      "1786032000": 2349
     },
-    "readDays": 6,
+    "readDays": 7,
     "readLongest": [
       {
         "book": {
@@ -1447,7 +1593,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 5161,
+        "readTime": 6543,
         "tags": [
           "单日阅读最久"
         ]
@@ -1501,6 +1647,56 @@
         },
         "readTime": 1961,
         "tags": []
+      },
+      {
+        "book": {
+          "bookId": "25424211",
+          "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
+          "author": "赫伯特·马尔库塞",
+          "translator": "刘继",
+          "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/s_YueWen_25424211.jpg",
+          "version": 44968238,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 6,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 6,
+            "maxfreeChapterUid": 6,
+            "maxfreeChapterRatio": 89
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 9030183,
+          "publishTime": "2014-03-01 00:00:00",
+          "lastChapterIdx": 18,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 5499,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 967,
+        "tags": []
       }
     ],
     "preferCategory": [
@@ -1510,7 +1706,7 @@
         "parentCategoryId": 2100000,
         "parentCategoryTitle": "医学健康",
         "readingCount": 1,
-        "readingTime": 4312
+        "readingTime": 5161
       },
       {
         "categoryId": 1600000,
@@ -1518,7 +1714,7 @@
         "parentCategoryId": 1600000,
         "parentCategoryTitle": "生活百科",
         "readingCount": 1,
-        "readingTime": 4312
+        "readingTime": 5161
       },
       {
         "categoryId": 300000,
@@ -1526,7 +1722,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 2,
-        "readingTime": 1961
+        "readingTime": 1963
       },
       {
         "categoryId": 100001,
@@ -1534,7 +1730,15 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 2,
-        "readingTime": 1961
+        "readingTime": 1963
+      },
+      {
+        "categoryId": 600000,
+        "categoryTitle": "哲学宗教",
+        "parentCategoryId": 600000,
+        "parentCategoryTitle": "哲学宗教",
+        "readingCount": 1,
+        "readingTime": 0
       },
       {
         "categoryId": 1000000,
@@ -1559,21 +1763,13 @@
         "parentCategoryTitle": "经济理财",
         "readingCount": 0,
         "readingTime": 0
-      },
-      {
-        "categoryId": 900000,
-        "categoryTitle": "社会文化",
-        "parentCategoryId": 900000,
-        "parentCategoryTitle": "社会文化",
-        "readingCount": 0,
-        "readingTime": 0
       }
     ],
     "preferCategoryWord": "偏好阅读医学健康",
     "readStat": [
       {
         "stat": "读过",
-        "counts": "3本"
+        "counts": "4本"
       },
       {
         "stat": "读完",
@@ -1581,18 +1777,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "6天"
+        "counts": "7天"
       },
       {
         "stat": "笔记",
-        "counts": "2条"
+        "counts": "3条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 1.8497097205096589,
-    "dayAverageReadTime": 1192,
+    "compare": 2.244297163995068,
+    "dayAverageReadTime": 1358,
     "baseTime": 1785513600,
-    "totalReadTime": 7157,
+    "totalReadTime": 9506,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1747,9 +1943,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 74297
+      "1767196800": 76646
     },
-    "readDays": 50,
+    "readDays": 51,
     "readLongest": [
       {
         "book": {
@@ -1998,7 +2194,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 5161,
+        "readTime": 6543,
         "tags": []
       },
       {
@@ -2280,7 +2476,7 @@
         "categoryTitle": "哲学宗教",
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
-        "readingCount": 1,
+        "readingCount": 2,
         "readingTime": 7794
       },
       {
@@ -2289,7 +2485,7 @@
         "parentCategoryId": 1600000,
         "parentCategoryTitle": "生活百科",
         "readingCount": 1,
-        "readingTime": 5161
+        "readingTime": 6543
       },
       {
         "categoryId": 2100000,
@@ -2297,7 +2493,7 @@
         "parentCategoryId": 2100000,
         "parentCategoryTitle": "医学健康",
         "readingCount": 1,
-        "readingTime": 5161
+        "readingTime": 6543
       },
       {
         "categoryId": 200000,
@@ -2313,8 +2509,8 @@
     "preferTime": [
       1386,
       2093,
-      431,
-      10,
+      455,
+      317,
       7,
       0,
       0,
@@ -2323,7 +2519,7 @@
       67,
       1489,
       3195,
-      1868,
+      2412,
       13205,
       1984,
       4989,
@@ -2371,7 +2567,7 @@
         "authorId": 778714,
         "name": "丹·贝纳多特",
         "count": 1,
-        "readTime": "1小时26分钟"
+        "readTime": "1小时49分钟"
       },
       {
         "authorId": 394948,
@@ -2389,6 +2585,18 @@
     "authorCount": 8,
     "preferPublisher": [
       {
+        "name": "浙江人民出版社有限公司",
+        "count": 1
+      },
+      {
+        "name": "浙江科学技术出版社",
+        "count": 1
+      },
+      {
+        "name": "北京科学技术出版社有限公司",
+        "count": 1
+      },
+      {
         "name": "中信出版集团",
         "count": 1
       },
@@ -2397,26 +2605,14 @@
         "count": 1
       },
       {
-        "name": "北京科学技术出版社有限公司",
-        "count": 1
-      },
-      {
         "name": "山东文艺出版社",
-        "count": 1
-      },
-      {
-        "name": "浙江科学技术出版社",
-        "count": 1
-      },
-      {
-        "name": "浙江人民出版社有限公司",
         "count": 1
       }
     ],
     "readStat": [
       {
         "stat": "读过",
-        "counts": "13本"
+        "counts": "14本"
       },
       {
         "stat": "读完",
@@ -2424,17 +2620,17 @@
       },
       {
         "stat": "阅读",
-        "counts": "50天"
+        "counts": "51天"
       },
       {
         "stat": "笔记",
-        "counts": "107条"
+        "counts": "108条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 74310,
+    "totalReadTime": 76659,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2808,7 +3004,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有4872人读过"
+        "reason": "仅有4899人读过"
       },
       {
         "type": 8,
@@ -3138,13 +3334,13 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 7157,
+        "1785513600": 9506,
         "1788192000": 0,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 48,
+      "readDays": 49,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -3394,7 +3590,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 5161,
+          "readTime": 6543,
           "tags": []
         },
         {
@@ -3645,7 +3841,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 7,
-          "readingTime": 34575
+          "readingTime": 34577
         },
         {
           "categoryId": 100001,
@@ -3653,7 +3849,7 @@
           "parentCategoryId": 100000,
           "parentCategoryTitle": "精品小说",
           "readingCount": 4,
-          "readingTime": 21742
+          "readingTime": 21744
         },
         {
           "categoryId": 1100000,
@@ -3661,7 +3857,7 @@
           "parentCategoryId": 1100000,
           "parentCategoryTitle": "经济理财",
           "readingCount": 1,
-          "readingTime": 18028
+          "readingTime": 18052
         },
         {
           "categoryId": 1000000,
@@ -3676,16 +3872,8 @@
           "categoryTitle": "哲学宗教",
           "parentCategoryId": 600000,
           "parentCategoryTitle": "哲学宗教",
-          "readingCount": 1,
+          "readingCount": 2,
           "readingTime": 7794
-        },
-        {
-          "categoryId": 1600000,
-          "categoryTitle": "生活百科",
-          "parentCategoryId": 1600000,
-          "parentCategoryTitle": "生活百科",
-          "readingCount": 1,
-          "readingTime": 4312
         },
         {
           "categoryId": 2100000,
@@ -3693,7 +3881,15 @@
           "parentCategoryId": 2100000,
           "parentCategoryTitle": "医学健康",
           "readingCount": 1,
-          "readingTime": 4312
+          "readingTime": 5161
+        },
+        {
+          "categoryId": 1600000,
+          "categoryTitle": "生活百科",
+          "parentCategoryId": 1600000,
+          "parentCategoryTitle": "生活百科",
+          "readingCount": 1,
+          "readingTime": 5161
         },
         {
           "categoryId": 200000,
@@ -3737,16 +3933,16 @@
           "readTime": "2小时9分钟"
         },
         {
+          "authorId": 778714,
+          "name": "丹·贝纳多特",
+          "count": 1,
+          "readTime": "1小时26分钟"
+        },
+        {
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 1,
           "readTime": "1小时12分钟"
-        },
-        {
-          "authorId": 778714,
-          "name": "丹·贝纳多特",
-          "count": 1,
-          "readTime": "1小时11分钟"
         },
         {
           "authorId": 183442,
@@ -3774,18 +3970,18 @@
           "count": 1
         },
         {
-          "name": "山东文艺出版社",
+          "name": "北京科学技术出版社有限公司",
           "count": 1
         },
         {
-          "name": "北京科学技术出版社有限公司",
+          "name": "山东文艺出版社",
           "count": 1
         }
       ],
       "readStat": [
         {
           "stat": "读过",
-          "counts": "13本"
+          "counts": "14本"
         },
         {
           "stat": "读完",
@@ -3793,17 +3989,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "48天"
+          "counts": "49天"
         },
         {
           "stat": "笔记",
-          "counts": "107条"
+          "counts": "108条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 340,
+      "dayAverageReadTime": 349,
       "baseTime": 1767196800,
-      "totalReadTime": 74297,
+      "totalReadTime": 76646,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -3998,6 +4194,200 @@
     }
   ],
   "notesByBook": {
+    "25424211": {
+      "highlights": {
+        "synckey": 1786045529,
+        "updated": [
+          {
+            "bookId": "25424211",
+            "chapterIdx": 4,
+            "bookmarkId": "25424211_4_1865-1911",
+            "range": "1865-1911",
+            "markText": "这些资源怎样才能被用来最理想地发展和满足个人的需要和才能，并把辛劳和痛苦降低到最小的限度呢？",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 4,
+            "createTime": 1786045529
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "导言 批判的停顿：没有反对派的社会",
+            "chapterUid": 4,
+            "chapterIdx": 4
+          }
+        ],
+        "book": {
+          "bookId": "25424211",
+          "version": 44968238,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/s_YueWen_25424211.jpg",
+          "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
+          "author": "赫伯特·马尔库塞",
+          "coverBoxInfo": {
+            "blurhash": "K}L{h7j@j@16azfQa}aza}",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#311500"
+              },
+              {
+                "key": "1/6",
+                "hex": "#391100"
+              },
+              {
+                "key": "1/8",
+                "hex": "#400a00"
+              },
+              {
+                "key": "2/4",
+                "hex": "#442c0d"
+              },
+              {
+                "key": "2/6",
+                "hex": "#4a2900"
+              },
+              {
+                "key": "2/8",
+                "hex": "#4f2700"
+              },
+              {
+                "key": "3/4",
+                "hex": "#5d4322"
+              },
+              {
+                "key": "3/6",
+                "hex": "#634009"
+              },
+              {
+                "key": "3/8",
+                "hex": "#683f00"
+              },
+              {
+                "key": "3/12",
+                "hex": "#713a00"
+              },
+              {
+                "key": "4/6",
+                "hex": "#7f5921"
+              },
+              {
+                "key": "4/10",
+                "hex": "#885500"
+              },
+              {
+                "key": "4/4",
+                "hex": "#785b36"
+              },
+              {
+                "key": "5/10",
+                "hex": "#a66e00"
+              },
+              {
+                "key": "5/4",
+                "hex": "#92744f"
+              },
+              {
+                "key": "5/8",
+                "hex": "#a2701c"
+              },
+              {
+                "key": "6/4",
+                "hex": "#ac8f67"
+              },
+              {
+                "key": "6/6",
+                "hex": "#b68c50"
+              },
+              {
+                "key": "6/8",
+                "hex": "#be8a37"
+              },
+              {
+                "key": "6/12",
+                "hex": "#c88600"
+              },
+              {
+                "key": "7/8",
+                "hex": "#d9a450"
+              },
+              {
+                "key": "7/10",
+                "hex": "#e0a234"
+              },
+              {
+                "key": "7/12",
+                "hex": "#e6a000"
+              },
+              {
+                "key": "8/4",
+                "hex": "#e2c498"
+              },
+              {
+                "key": "8/6",
+                "hex": "#ecc181"
+              },
+              {
+                "key": "8/12",
+                "hex": "#ffbb2b"
+              },
+              {
+                "key": "9/2",
+                "hex": "#f2e1c8"
+              },
+              {
+                "key": "9/12",
+                "hex": "#ffd647"
+              },
+              {
+                "key": "1/100",
+                "hex": "#be8a37"
+              },
+              {
+                "key": "2/100",
+                "hex": "#d9a450"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#F3EDE5"
+              },
+              {
+                "key": "5/100",
+                "hex": "#F3EDE5"
+              },
+              {
+                "key": "6/100",
+                "hex": "#271300"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#efa801",
+              "hsv": [
+                42.27196608230341,
+                99.75861620993749,
+                93.61099053936329
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/211/25424211/s_25424211.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/211/25424211/s_25424211.jpg",
+            "colorsPure": [
+              "#c88600",
+              "#e6a000"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
     "30181899": {
       "highlights": {
         "synckey": 1785773787,
