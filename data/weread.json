@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-07T13:38:20Z",
+  "updatedAt": "2026-08-07T19:14:27Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -20,6 +20,75 @@
     "archive": [],
     "books": [
       {
+        "bookId": "3300197381",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=32732670813abb39ag011d6c",
+        "title": "为什么10倍增长比2倍更容易",
+        "author": "[美]丹·沙利文  [美]本杰明·哈迪",
+        "updateTime": 1772710347,
+        "cover": "https://cdn.weread.qq.com/weread/cover/49/cpplatform_8pe4n9gxbb22ofnsynyphg/t6_cpplatform_8pe4n9gxbb22ofnsynyphg1772705172.jpg",
+        "finishReading": 1,
+        "readUpdateTime": 1785977934,
+        "secret": 0,
+        "category": "经济理财-管理"
+      },
+      {
+        "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=55a42743643425f337961426d49305557414a5036715737314e306e664537763c4",
+        "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
+        "author": "",
+        "cover": "https://res.weread.qq.com/wrepub/CB_B3A5my5lA5d66xg6xFFBX9Z7_parsecover",
+        "updateTime": 1775241182,
+        "secret": 1,
+        "finishReading": 0,
+        "readUpdateTime": 1775487644
+      },
+      {
+        "bookId": "3300106416",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
+        "title": "箭术与禅心：一位西方哲学家的禅悟实录",
+        "author": "[德]奥根·赫立格尔",
+        "updateTime": 1782095492,
+        "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/t6_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
+        "finishReading": 1,
+        "readUpdateTime": 1784740409,
+        "secret": 0,
+        "category": "个人成长-人生哲学"
+      },
+      {
+        "bookId": "CB_Djp4Tt4V55Oi73w75h4jb9UW",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=92e42153643425f446a70345474345635354f69373377373568346a623955576f8",
+        "title": "伦敦国家美术馆（伟大的博物馆）",
+        "author": "达尼埃拉·塔拉布拉",
+        "cover": "https://res.weread.qq.com/wrepub/CB_2njAvTAwD2jO73m74sF4K934_parsecover",
+        "updateTime": 1779450701,
+        "secret": 1,
+        "finishReading": 0,
+        "readUpdateTime": 1781687045
+      },
+      {
+        "bookId": "CB_EsG6110ty9NN85W75S6DG7Cz",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=a84420a3643425f457347363131307479394e4e38355737355336444737437a57a",
+        "title": "规训与惩罚 - 监狱的诞生",
+        "author": "[法] 米歇尔·福柯",
+        "cover": "https://res.weread.qq.com/wrepub/CB_ELH2YR2ZZ0aw6eg6cREJU1VS_parsecover",
+        "updateTime": 1786121559,
+        "secret": 1,
+        "finishReading": 0,
+        "readUpdateTime": 1786121585
+      },
+      {
+        "bookId": "3300155373",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=80332260813aba331g013372",
+        "title": "在我身上有一个不可战胜的夏天",
+        "author": "[法]阿尔贝·加缪",
+        "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/t6_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
+        "category": "文学-外国文学",
+        "finishReading": 1,
+        "readUpdateTime": 1784135798,
+        "secret": 0,
+        "updateTime": 1753950608
+      },
+      {
         "bookId": "30181899",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=7a332d8071cc8a0b7a31e96",
         "title": "高级运动营养学",
@@ -27,7 +96,7 @@
         "updateTime": 1722588817,
         "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/t6_YueWen_30181899.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1786035873,
+        "readUpdateTime": 1786123215,
         "secret": 0,
         "category": "生活百科-体育"
       },
@@ -44,28 +113,16 @@
         "category": "文学-外国文学"
       },
       {
-        "bookId": "25424211",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
-        "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
-        "author": "赫伯特·马尔库塞",
-        "updateTime": 1703130813,
-        "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
-        "finishReading": 0,
-        "readUpdateTime": 1786046054,
+        "bookId": "3300140838",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
+        "title": "创意行为：存在即答案",
+        "author": "[美]里克·鲁宾",
+        "updateTime": 1744604811,
+        "cover": "https://cdn.weread.qq.com/weread/cover/46/cpplatform_bpydeflrt9d2xtkdsjzqqj/t6_cpplatform_bpydeflrt9d2xtkdsjzqqj1744601841.jpg",
+        "finishReading": 1,
+        "readUpdateTime": 1777735967,
         "secret": 0,
-        "category": "哲学宗教-西方哲学"
-      },
-      {
-        "bookId": "3300199881",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=870320d0813abb494g0113ca",
-        "title": "Claude Code橙皮书：从入门到精通（微信读书特别版）",
-        "author": "花叔",
-        "cover": "https://cdn.weread.qq.com/weread/cover/19/cpplatform_uxgat2cacw5ne8darcgwa2/t6_cpplatform_uxgat2cacw5ne8darcgwa21775208984.jpg",
-        "category": "计算机-人工智能",
-        "finishReading": 0,
-        "readUpdateTime": 1784392199,
-        "secret": 0,
-        "updateTime": 1780977452
+        "category": "个人成长-人生哲学"
       },
       {
         "bookId": "24981213",
@@ -92,79 +149,115 @@
         "category": "精品小说-社会小说"
       },
       {
-        "bookId": "3300140838",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
-        "title": "创意行为：存在即答案",
-        "author": "[美]里克·鲁宾",
-        "updateTime": 1744604811,
-        "cover": "https://cdn.weread.qq.com/weread/cover/46/cpplatform_bpydeflrt9d2xtkdsjzqqj/t6_cpplatform_bpydeflrt9d2xtkdsjzqqj1744601841.jpg",
-        "finishReading": 1,
-        "readUpdateTime": 1777735967,
-        "secret": 0,
-        "category": "个人成长-人生哲学"
-      },
-      {
-        "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=55a42743643425f337961426d49305557414a5036715737314e306e664537763c4",
-        "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
-        "author": "",
-        "cover": "https://res.weread.qq.com/wrepub/CB_B3A5my5lA5d66xg6xFFBX9Z7_parsecover",
-        "updateTime": 1775241182,
-        "secret": 1,
+        "bookId": "25424211",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
+        "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
+        "author": "赫伯特·马尔库塞",
+        "updateTime": 1703130813,
+        "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1775487644
-      },
-      {
-        "bookId": "3300197381",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=32732670813abb39ag011d6c",
-        "title": "为什么10倍增长比2倍更容易",
-        "author": "[美]丹·沙利文  [美]本杰明·哈迪",
-        "updateTime": 1772710347,
-        "cover": "https://cdn.weread.qq.com/weread/cover/49/cpplatform_8pe4n9gxbb22ofnsynyphg/t6_cpplatform_8pe4n9gxbb22ofnsynyphg1772705172.jpg",
-        "finishReading": 1,
-        "readUpdateTime": 1785977934,
+        "readUpdateTime": 1786046054,
         "secret": 0,
-        "category": "经济理财-管理"
+        "category": "哲学宗教-西方哲学"
       },
       {
-        "bookId": "3300155373",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=80332260813aba331g013372",
-        "title": "在我身上有一个不可战胜的夏天",
-        "author": "[法]阿尔贝·加缪",
-        "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/t6_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
-        "category": "文学-外国文学",
-        "finishReading": 1,
-        "readUpdateTime": 1784135798,
-        "secret": 0,
-        "updateTime": 1753950608
-      },
-      {
-        "bookId": "CB_Djp4Tt4V55Oi73w75h4jb9UW",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=92e42153643425f446a70345474345635354f69373377373568346a623955576f8",
-        "title": "伦敦国家美术馆（伟大的博物馆）",
-        "author": "达尼埃拉·塔拉布拉",
-        "cover": "https://res.weread.qq.com/wrepub/CB_2njAvTAwD2jO73m74sF4K934_parsecover",
-        "updateTime": 1779450701,
-        "secret": 1,
+        "bookId": "3300199881",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=870320d0813abb494g0113ca",
+        "title": "Claude Code橙皮书：从入门到精通（微信读书特别版）",
+        "author": "花叔",
+        "cover": "https://cdn.weread.qq.com/weread/cover/19/cpplatform_uxgat2cacw5ne8darcgwa2/t6_cpplatform_uxgat2cacw5ne8darcgwa21775208984.jpg",
+        "category": "计算机-人工智能",
         "finishReading": 0,
-        "readUpdateTime": 1781687045
-      },
-      {
-        "bookId": "3300106416",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
-        "title": "箭术与禅心：一位西方哲学家的禅悟实录",
-        "author": "[德]奥根·赫立格尔",
-        "updateTime": 1782095492,
-        "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/t6_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
-        "finishReading": 1,
-        "readUpdateTime": 1784740409,
+        "readUpdateTime": 1784392199,
         "secret": 0,
-        "category": "个人成长-人生哲学"
+        "updateTime": 1780977452
       }
     ]
   },
   "history": {
     "books": [
+      {
+        "bookId": "30181899",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=7a332d8071cc8a0b7a31e96",
+        "title": "高级运动营养学",
+        "author": "丹·贝纳多特",
+        "translator": "安江红,刘勇,周帆扬,赵之光",
+        "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/t6_YueWen_30181899.jpg",
+        "version": 315626625,
+        "format": "epub",
+        "type": 0,
+        "price": 83.98,
+        "originalPrice": 0,
+        "soldout": 0,
+        "bookStatus": 1,
+        "payingStatus": 2,
+        "payType": 1048577,
+        "centPrice": 8398,
+        "categories": [
+          {
+            "categoryId": 1600000,
+            "subCategoryId": 1600008,
+            "categoryType": 0,
+            "title": "生活百科-体育"
+          },
+          {
+            "categoryId": 2100000,
+            "subCategoryId": 2100001,
+            "categoryType": 0,
+            "title": "医学健康-健康"
+          }
+        ],
+        "hasLecture": 0,
+        "finished": 1,
+        "maxFreeChapter": 17,
+        "maxFreeInfo": {
+          "maxfreeChapterIdx": 17,
+          "maxfreeChapterUid": 17,
+          "maxfreeChapterRatio": 8
+        },
+        "free": 0,
+        "mcardDiscount": 0,
+        "ispub": 1,
+        "extra_type": 5,
+        "cpid": 1765053,
+        "publishTime": "2019-01-08 00:00:00",
+        "lastChapterIdx": 95,
+        "paperBook": {
+          "skuId": ""
+        },
+        "copyrightChapterUids": [],
+        "inStoreBookId": "",
+        "blockSaveImg": 0,
+        "language": "zh",
+        "isTraditionalChinese": false,
+        "hideUpdateTime": false,
+        "isEPUBComics": 0,
+        "isVerticalLayout": 0,
+        "isShowTTS": 1,
+        "webBookControl": 0,
+        "selfProduceIncentive": false,
+        "isAutoDownload": 1,
+        "readingProgress": 13,
+        "markedStatus": 2,
+        "lastNoteSort": 1786122794,
+        "intro": "世界各地的精英运动员都知道丹·贝纳多特（Dan Benardot）博士，并渴望得到他的指导，因为他们知道，他的真知灼见可能是运动员能否获得金牌的决定性因素。来自各个大洲的很多高等院校都邀请丹前去讲学，他们希望学生们能师从最好的专家。在佐治亚州立大学（Georgia State University），我们只知道他是丹——一位了不起的朋友，一位出色的同事，一位忠实的丈夫，以及世界上最棒的孩子的父亲。《高级运动营养学》的第1 版非常成功。它被广泛应用于各种教学场合，以及拥有不同身材、体型和技能的运动员。精英运动员和普通运动员都在使用这本书。它已经成为运动营养师和运动科学专业的学生学习人类运动表现相关营养知识的必读书。对那些需要指导运动员如何在比赛中取得优势的教练员而言，它同样是首选读物。但就像每一本成功的图书一样，它需要进行一些修订和更新。这正是《高级运动营养学（第2 版）》如此重要的原因。",
+        "updateTime": 1722588817,
+        "finishReading": 0,
+        "readUpdateTime": 1786123215,
+        "secret": 0,
+        "category": "生活百科-体育"
+      },
+      {
+        "bookId": "CB_EsG6110ty9NN85W75S6DG7Cz",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=a84420a3643425f457347363131307479394e4e38355737355336444737437a57a",
+        "title": "规训与惩罚 - 监狱的诞生",
+        "author": "[法] 米歇尔·福柯",
+        "cover": "https://res.weread.qq.com/wrepub/CB_ELH2YR2ZZ0aw6eg6cREJU1VS_parsecover",
+        "updateTime": 1786121559,
+        "secret": 1,
+        "finishReading": 0,
+        "readUpdateTime": 1786121585
+      },
       {
         "bookId": "25424211",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
@@ -230,77 +323,6 @@
         "readUpdateTime": 1786046054,
         "secret": 0,
         "category": "哲学宗教-西方哲学"
-      },
-      {
-        "bookId": "30181899",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=7a332d8071cc8a0b7a31e96",
-        "title": "高级运动营养学",
-        "author": "丹·贝纳多特",
-        "translator": "安江红,刘勇,周帆扬,赵之光",
-        "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/t6_YueWen_30181899.jpg",
-        "version": 315626625,
-        "format": "epub",
-        "type": 0,
-        "price": 83.98,
-        "originalPrice": 0,
-        "soldout": 0,
-        "bookStatus": 1,
-        "payingStatus": 2,
-        "payType": 1048577,
-        "centPrice": 8398,
-        "categories": [
-          {
-            "categoryId": 1600000,
-            "subCategoryId": 1600008,
-            "categoryType": 0,
-            "title": "生活百科-体育"
-          },
-          {
-            "categoryId": 2100000,
-            "subCategoryId": 2100001,
-            "categoryType": 0,
-            "title": "医学健康-健康"
-          }
-        ],
-        "hasLecture": 0,
-        "finished": 1,
-        "maxFreeChapter": 17,
-        "maxFreeInfo": {
-          "maxfreeChapterIdx": 17,
-          "maxfreeChapterUid": 17,
-          "maxfreeChapterRatio": 8
-        },
-        "free": 0,
-        "mcardDiscount": 0,
-        "ispub": 1,
-        "extra_type": 5,
-        "cpid": 1765053,
-        "publishTime": "2019-01-08 00:00:00",
-        "lastChapterIdx": 95,
-        "paperBook": {
-          "skuId": ""
-        },
-        "copyrightChapterUids": [],
-        "inStoreBookId": "",
-        "blockSaveImg": 0,
-        "language": "zh",
-        "isTraditionalChinese": false,
-        "hideUpdateTime": false,
-        "isEPUBComics": 0,
-        "isVerticalLayout": 0,
-        "isShowTTS": 1,
-        "webBookControl": 0,
-        "selfProduceIncentive": false,
-        "isAutoDownload": 1,
-        "readingProgress": 10,
-        "markedStatus": 2,
-        "lastNoteSort": 1785773787,
-        "intro": "世界各地的精英运动员都知道丹·贝纳多特（Dan Benardot）博士，并渴望得到他的指导，因为他们知道，他的真知灼见可能是运动员能否获得金牌的决定性因素。来自各个大洲的很多高等院校都邀请丹前去讲学，他们希望学生们能师从最好的专家。在佐治亚州立大学（Georgia State University），我们只知道他是丹——一位了不起的朋友，一位出色的同事，一位忠实的丈夫，以及世界上最棒的孩子的父亲。《高级运动营养学》的第1 版非常成功。它被广泛应用于各种教学场合，以及拥有不同身材、体型和技能的运动员。精英运动员和普通运动员都在使用这本书。它已经成为运动营养师和运动科学专业的学生学习人类运动表现相关营养知识的必读书。对那些需要指导运动员如何在比赛中取得优势的教练员而言，它同样是首选读物。但就像每一本成功的图书一样，它需要进行一些修订和更新。这正是《高级运动营养学（第2 版）》如此重要的原因。",
-        "updateTime": 1722588817,
-        "finishReading": 0,
-        "readUpdateTime": 1786035873,
-        "secret": 0,
-        "category": "生活百科-体育"
       },
       {
         "bookId": "35523642",
@@ -912,73 +934,6 @@
   "notebooks": {
     "books": [
       {
-        "bookId": "25424211",
-        "book": {
-          "bookId": "25424211",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
-          "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
-          "author": "赫伯特·马尔库塞",
-          "translator": "刘继",
-          "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
-          "version": 44968238,
-          "format": "epub",
-          "type": 0,
-          "price": 54.99,
-          "originalPrice": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payingStatus": 2,
-          "payType": 1048577,
-          "centPrice": 5499,
-          "categories": [
-            {
-              "categoryId": 600000,
-              "subCategoryId": 600007,
-              "categoryType": 0,
-              "title": "哲学宗教-西方哲学"
-            }
-          ],
-          "hasLecture": 1,
-          "finished": 1,
-          "maxFreeChapter": 6,
-          "maxFreeInfo": {
-            "maxFreeChapterIdx": 6,
-            "maxFreeChapterUid": 6,
-            "maxFreeChapterRatio": 89
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 9030183,
-          "publishTime": "2014-03-01 00:00:00",
-          "lastChapterIdx": 18,
-          "paperBook": {
-            "skuId": ""
-          },
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "webBookControl": 0,
-          "selfProduceIncentive": false,
-          "isAutoDownload": 1
-        },
-        "reviewCount": 0,
-        "markedStatus": 2,
-        "readingProgress": 0,
-        "noteCount": 1,
-        "bookmarkCount": 0,
-        "sort": 1786045529
-      },
-      {
         "bookId": "30181899",
         "book": {
           "bookId": "30181899",
@@ -1044,10 +999,77 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 10,
+        "readingProgress": 13,
+        "noteCount": 2,
+        "bookmarkCount": 0,
+        "sort": 1786122794
+      },
+      {
+        "bookId": "25424211",
+        "book": {
+          "bookId": "25424211",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
+          "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
+          "author": "赫伯特·马尔库塞",
+          "translator": "刘继",
+          "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
+          "version": 44968238,
+          "format": "epub",
+          "type": 0,
+          "price": 54.99,
+          "originalPrice": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payingStatus": 2,
+          "payType": 1048577,
+          "centPrice": 5499,
+          "categories": [
+            {
+              "categoryId": 600000,
+              "subCategoryId": 600007,
+              "categoryType": 0,
+              "title": "哲学宗教-西方哲学"
+            }
+          ],
+          "hasLecture": 1,
+          "finished": 1,
+          "maxFreeChapter": 6,
+          "maxFreeInfo": {
+            "maxFreeChapterIdx": 6,
+            "maxFreeChapterUid": 6,
+            "maxFreeChapterRatio": 89
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 9030183,
+          "publishTime": "2014-03-01 00:00:00",
+          "lastChapterIdx": 18,
+          "paperBook": {
+            "skuId": ""
+          },
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "webBookControl": 0,
+          "selfProduceIncentive": false,
+          "isAutoDownload": 1
+        },
+        "reviewCount": 0,
+        "markedStatus": 2,
+        "readingProgress": 0,
         "noteCount": 1,
         "bookmarkCount": 0,
-        "sort": 1785773787
+        "sort": 1786045529
       },
       {
         "bookId": "35523642",
@@ -1544,9 +1566,10 @@
       "1785772800": 1823,
       "1785859200": 2005,
       "1785945600": 875,
-      "1786032000": 2349
+      "1786032000": 2349,
+      "1786118400": 1079
     },
-    "readDays": 7,
+    "readDays": 8,
     "readLongest": [
       {
         "book": {
@@ -1593,7 +1616,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 6543,
+        "readTime": 7614,
         "tags": [
           "单日阅读最久"
         ]
@@ -1706,7 +1729,7 @@
         "parentCategoryId": 2100000,
         "parentCategoryTitle": "医学健康",
         "readingCount": 1,
-        "readingTime": 5161
+        "readingTime": 6543
       },
       {
         "categoryId": 1600000,
@@ -1714,7 +1737,7 @@
         "parentCategoryId": 1600000,
         "parentCategoryTitle": "生活百科",
         "readingCount": 1,
-        "readingTime": 5161
+        "readingTime": 6543
       },
       {
         "categoryId": 300000,
@@ -1738,7 +1761,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 1,
-        "readingTime": 0
+        "readingTime": 967
       },
       {
         "categoryId": 1000000,
@@ -1777,18 +1800,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "7天"
+        "counts": "8天"
       },
       {
         "stat": "笔记",
-        "counts": "3条"
+        "counts": "4条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.244297163995068,
-    "dayAverageReadTime": 1358,
+    "compare": 2.1609798859432804,
+    "dayAverageReadTime": 1323,
     "baseTime": 1785513600,
-    "totalReadTime": 9506,
+    "totalReadTime": 10585,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1912,7 +1935,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "阅读了1小时"
+        "reason": "阅读了2小时"
       },
       {
         "type": 2,
@@ -1943,9 +1966,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 76646
+      "1767196800": 77725
     },
-    "readDays": 51,
+    "readDays": 52,
     "readLongest": [
       {
         "book": {
@@ -2194,7 +2217,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 6543,
+        "readTime": 7614,
         "tags": []
       },
       {
@@ -2464,6 +2487,14 @@
         "readingTime": 18052
       },
       {
+        "categoryId": 600000,
+        "categoryTitle": "哲学宗教",
+        "parentCategoryId": 600000,
+        "parentCategoryTitle": "哲学宗教",
+        "readingCount": 2,
+        "readingTime": 8761
+      },
+      {
         "categoryId": 1000000,
         "categoryTitle": "个人成长",
         "parentCategoryId": 1000000,
@@ -2472,20 +2503,12 @@
         "readingTime": 8199
       },
       {
-        "categoryId": 600000,
-        "categoryTitle": "哲学宗教",
-        "parentCategoryId": 600000,
-        "parentCategoryTitle": "哲学宗教",
-        "readingCount": 2,
-        "readingTime": 7794
-      },
-      {
         "categoryId": 1600000,
         "categoryTitle": "生活百科",
         "parentCategoryId": 1600000,
         "parentCategoryTitle": "生活百科",
         "readingCount": 1,
-        "readingTime": 6543
+        "readingTime": 7614
       },
       {
         "categoryId": 2100000,
@@ -2493,7 +2516,7 @@
         "parentCategoryId": 2100000,
         "parentCategoryTitle": "医学健康",
         "readingCount": 1,
-        "readingTime": 6543
+        "readingTime": 7614
       },
       {
         "categoryId": 200000,
@@ -2505,7 +2528,7 @@
       }
     ],
     "preferCategoryWord": "偏好阅读文学",
-    "preferTimeWord": "偏好夜晚阅读",
+    "preferTimeWord": "偏好夜间阅读",
     "preferTime": [
       1386,
       2093,
@@ -2525,10 +2548,10 @@
       4989,
       3265,
       11217,
-      4994,
-      7058,
-      4363,
-      3644,
+      6106,
+      7328,
+      4430,
+      4544,
       4936,
       3221
     ],
@@ -2567,7 +2590,7 @@
         "authorId": 778714,
         "name": "丹·贝纳多特",
         "count": 1,
-        "readTime": "1小时49分钟"
+        "readTime": "2小时6分钟"
       },
       {
         "authorId": 394948,
@@ -2580,9 +2603,15 @@
         "name": "罗素",
         "count": 1,
         "readTime": "16分钟"
+      },
+      {
+        "authorId": 294931,
+        "name": "赫伯特·马尔库塞",
+        "count": 1,
+        "readTime": "16分钟"
       }
     ],
-    "authorCount": 8,
+    "authorCount": 9,
     "preferPublisher": [
       {
         "name": "浙江人民出版社有限公司",
@@ -2594,6 +2623,10 @@
       },
       {
         "name": "北京科学技术出版社有限公司",
+        "count": 1
+      },
+      {
+        "name": "上海译文出版社",
         "count": 1
       },
       {
@@ -2620,17 +2653,17 @@
       },
       {
         "stat": "阅读",
-        "counts": "51天"
+        "counts": "52天"
       },
       {
         "stat": "笔记",
-        "counts": "108条"
+        "counts": "109条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 76659,
+    "totalReadTime": 77738,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2894,7 +2927,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "阅读了1小时"
+        "reason": "阅读了2小时"
       },
       {
         "type": 2,
@@ -3000,7 +3033,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有4961人读过"
+        "reason": "仅有4997人读过"
       },
       {
         "type": 8,
@@ -3330,13 +3363,13 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 9506,
+        "1785513600": 10585,
         "1788192000": 0,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 49,
+      "readDays": 50,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -3586,7 +3619,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 6543,
+          "readTime": 7614,
           "tags": []
         },
         {
@@ -3856,6 +3889,14 @@
           "readingTime": 18052
         },
         {
+          "categoryId": 600000,
+          "categoryTitle": "哲学宗教",
+          "parentCategoryId": 600000,
+          "parentCategoryTitle": "哲学宗教",
+          "readingCount": 2,
+          "readingTime": 8761
+        },
+        {
           "categoryId": 1000000,
           "categoryTitle": "个人成长",
           "parentCategoryId": 1000000,
@@ -3864,20 +3905,12 @@
           "readingTime": 8199
         },
         {
-          "categoryId": 600000,
-          "categoryTitle": "哲学宗教",
-          "parentCategoryId": 600000,
-          "parentCategoryTitle": "哲学宗教",
-          "readingCount": 2,
-          "readingTime": 7794
-        },
-        {
           "categoryId": 2100000,
           "categoryTitle": "医学健康",
           "parentCategoryId": 2100000,
           "parentCategoryTitle": "医学健康",
           "readingCount": 1,
-          "readingTime": 5161
+          "readingTime": 6543
         },
         {
           "categoryId": 1600000,
@@ -3885,7 +3918,7 @@
           "parentCategoryId": 1600000,
           "parentCategoryTitle": "生活百科",
           "readingCount": 1,
-          "readingTime": 5161
+          "readingTime": 6543
         },
         {
           "categoryId": 200000,
@@ -3932,7 +3965,7 @@
           "authorId": 778714,
           "name": "丹·贝纳多特",
           "count": 1,
-          "readTime": "1小时26分钟"
+          "readTime": "1小时49分钟"
         },
         {
           "authorId": 394948,
@@ -3945,9 +3978,15 @@
           "name": "罗素",
           "count": 1,
           "readTime": "16分钟"
+        },
+        {
+          "authorId": 294931,
+          "name": "赫伯特·马尔库塞",
+          "count": 1,
+          "readTime": "16分钟"
         }
       ],
-      "authorCount": 8,
+      "authorCount": 9,
       "preferPublisher": [
         {
           "name": "浙江科学技术出版社",
@@ -3970,6 +4009,10 @@
           "count": 1
         },
         {
+          "name": "上海译文出版社",
+          "count": 1
+        },
+        {
           "name": "山东文艺出版社",
           "count": 1
         }
@@ -3985,17 +4028,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "49天"
+          "counts": "50天"
         },
         {
           "stat": "笔记",
-          "counts": "108条"
+          "counts": "109条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 349,
+      "dayAverageReadTime": 353,
       "baseTime": 1767196800,
-      "totalReadTime": 76646,
+      "totalReadTime": 77725,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -4190,6 +4233,243 @@
     }
   ],
   "notesByBook": {
+    "30181899": {
+      "highlights": {
+        "synckey": 1786122794,
+        "updated": [
+          {
+            "bookId": "30181899",
+            "chapterIdx": 17,
+            "bookmarkId": "30181899_17_13266-13407",
+            "range": "13266-13407",
+            "markText": "叶酸不足会导致正在合成的细胞发生突变。更新快的组织（包括红细胞、白细胞及胃肠道组织和子宫）对叶酸缺乏尤为敏感。怀孕前6～12个月和怀孕期间足量地摄入叶酸，会降低胎儿患神经管畸形（最常见的是脊柱裂）的风险。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 17,
+            "createTime": 1786122794
+          },
+          {
+            "bookId": "30181899",
+            "chapterIdx": 13,
+            "bookmarkId": "30181899_13_8228-8283",
+            "range": "8228-8283",
+            "markText": "当运动强度降低，并且运动员体内有足够的氧气来进行有氧代谢时，乳酸将重新转化成丙酮酸，然后通过有氧方式生成ATP",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 13,
+            "createTime": 1785773787
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "维生素",
+            "chapterUid": 17,
+            "chapterIdx": 17
+          },
+          {
+            "title": "碳水化合物",
+            "chapterUid": 13,
+            "chapterIdx": 13
+          }
+        ],
+        "book": {
+          "bookId": "30181899",
+          "version": 315626625,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/s_YueWen_30181899.jpg",
+          "title": "高级运动营养学",
+          "author": "丹·贝纳多特",
+          "coverBoxInfo": {
+            "blurhash": "K6BygQ4-9u~S=_D%JP^jZ~",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#341300"
+              },
+              {
+                "key": "1/6",
+                "hex": "#3a0e00"
+              },
+              {
+                "key": "1/8",
+                "hex": "#410500"
+              },
+              {
+                "key": "2/4",
+                "hex": "#472a11"
+              },
+              {
+                "key": "2/6",
+                "hex": "#4e2700"
+              },
+              {
+                "key": "2/8",
+                "hex": "#532400"
+              },
+              {
+                "key": "3/4",
+                "hex": "#604126"
+              },
+              {
+                "key": "3/6",
+                "hex": "#683e11"
+              },
+              {
+                "key": "3/8",
+                "hex": "#6d3b00"
+              },
+              {
+                "key": "3/12",
+                "hex": "#773500"
+              },
+              {
+                "key": "4/6",
+                "hex": "#845627"
+              },
+              {
+                "key": "4/10",
+                "hex": "#8f5100"
+              },
+              {
+                "key": "4/4",
+                "hex": "#7c593a"
+              },
+              {
+                "key": "5/10",
+                "hex": "#ae6a01"
+              },
+              {
+                "key": "5/4",
+                "hex": "#967353"
+              },
+              {
+                "key": "5/8",
+                "hex": "#a86c26"
+              },
+              {
+                "key": "6/4",
+                "hex": "#b08d6c"
+              },
+              {
+                "key": "6/6",
+                "hex": "#bb8957"
+              },
+              {
+                "key": "6/8",
+                "hex": "#c58640"
+              },
+              {
+                "key": "6/12",
+                "hex": "#d18100"
+              },
+              {
+                "key": "7/8",
+                "hex": "#e0a15a"
+              },
+              {
+                "key": "7/10",
+                "hex": "#e89e41"
+              },
+              {
+                "key": "7/12",
+                "hex": "#ef9b1d"
+              },
+              {
+                "key": "8/4",
+                "hex": "#e6c29d"
+              },
+              {
+                "key": "8/6",
+                "hex": "#f2be88"
+              },
+              {
+                "key": "8/12",
+                "hex": "#ffb53b"
+              },
+              {
+                "key": "9/2",
+                "hex": "#f3e0cc"
+              },
+              {
+                "key": "9/12",
+                "hex": "#ffd056"
+              },
+              {
+                "key": "1/100",
+                "hex": "#c58640"
+              },
+              {
+                "key": "2/100",
+                "hex": "#e0a15a"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#F3EDE5"
+              },
+              {
+                "key": "5/100",
+                "hex": "#F3EDE5"
+              },
+              {
+                "key": "6/100",
+                "hex": "#271300"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#c39363",
+              "hsv": [
+                29.67211213280211,
+                49.17817312798726,
+                76.57997875730217
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/899/30181899/s_30181899.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/899/30181899/s_30181899.jpg",
+            "colorsPure": [
+              "#d18100",
+              "#ef9b1d"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "CB_EsG6110ty9NN85W75S6DG7Cz": {
+      "highlights": {
+        "synckey": 0,
+        "updated": [],
+        "removed": [],
+        "chapters": [],
+        "book": {
+          "bookId": "CB_EsG6110ty9NN85W75S6DG7Cz",
+          "version": 1682344779,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://res.weread.qq.com/wrepub/CB_ELH2YR2ZZ0aw6eg6cREJU1VS_parsecover",
+          "title": "规训与惩罚 - 监狱的诞生",
+          "author": "[法] 米歇尔·福柯",
+          "coverBoxInfo": {
+            "colorsPure": [
+              "#93B0DA",
+              "#98B8DD"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
     "25424211": {
       "highlights": {
         "synckey": 1786045529,
@@ -4376,200 +4656,6 @@
             "colorsPure": [
               "#c88600",
               "#e6a000"
-            ]
-          }
-        }
-      },
-      "thoughts": {
-        "reviews": []
-      }
-    },
-    "30181899": {
-      "highlights": {
-        "synckey": 1785773787,
-        "updated": [
-          {
-            "bookId": "30181899",
-            "chapterIdx": 13,
-            "bookmarkId": "30181899_13_8228-8283",
-            "range": "8228-8283",
-            "markText": "当运动强度降低，并且运动员体内有足够的氧气来进行有氧代谢时，乳酸将重新转化成丙酮酸，然后通过有氧方式生成ATP",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 13,
-            "createTime": 1785773787
-          }
-        ],
-        "removed": [],
-        "chapters": [
-          {
-            "title": "碳水化合物",
-            "chapterUid": 13,
-            "chapterIdx": 13
-          }
-        ],
-        "book": {
-          "bookId": "30181899",
-          "version": 315626625,
-          "format": "epub",
-          "soldout": 0,
-          "bookStatus": 1,
-          "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/s_YueWen_30181899.jpg",
-          "title": "高级运动营养学",
-          "author": "丹·贝纳多特",
-          "coverBoxInfo": {
-            "blurhash": "K6BygQ4-9u~S=_D%JP^jZ~",
-            "colors": [
-              {
-                "key": "1/4",
-                "hex": "#341300"
-              },
-              {
-                "key": "1/6",
-                "hex": "#3a0e00"
-              },
-              {
-                "key": "1/8",
-                "hex": "#410500"
-              },
-              {
-                "key": "2/4",
-                "hex": "#472a11"
-              },
-              {
-                "key": "2/6",
-                "hex": "#4e2700"
-              },
-              {
-                "key": "2/8",
-                "hex": "#532400"
-              },
-              {
-                "key": "3/4",
-                "hex": "#604126"
-              },
-              {
-                "key": "3/6",
-                "hex": "#683e11"
-              },
-              {
-                "key": "3/8",
-                "hex": "#6d3b00"
-              },
-              {
-                "key": "3/12",
-                "hex": "#773500"
-              },
-              {
-                "key": "4/6",
-                "hex": "#845627"
-              },
-              {
-                "key": "4/10",
-                "hex": "#8f5100"
-              },
-              {
-                "key": "4/4",
-                "hex": "#7c593a"
-              },
-              {
-                "key": "5/10",
-                "hex": "#ae6a01"
-              },
-              {
-                "key": "5/4",
-                "hex": "#967353"
-              },
-              {
-                "key": "5/8",
-                "hex": "#a86c26"
-              },
-              {
-                "key": "6/4",
-                "hex": "#b08d6c"
-              },
-              {
-                "key": "6/6",
-                "hex": "#bb8957"
-              },
-              {
-                "key": "6/8",
-                "hex": "#c58640"
-              },
-              {
-                "key": "6/12",
-                "hex": "#d18100"
-              },
-              {
-                "key": "7/8",
-                "hex": "#e0a15a"
-              },
-              {
-                "key": "7/10",
-                "hex": "#e89e41"
-              },
-              {
-                "key": "7/12",
-                "hex": "#ef9b1d"
-              },
-              {
-                "key": "8/4",
-                "hex": "#e6c29d"
-              },
-              {
-                "key": "8/6",
-                "hex": "#f2be88"
-              },
-              {
-                "key": "8/12",
-                "hex": "#ffb53b"
-              },
-              {
-                "key": "9/2",
-                "hex": "#f3e0cc"
-              },
-              {
-                "key": "9/12",
-                "hex": "#ffd056"
-              },
-              {
-                "key": "1/100",
-                "hex": "#c58640"
-              },
-              {
-                "key": "2/100",
-                "hex": "#e0a15a"
-              },
-              {
-                "key": "3/100",
-                "hex": "#ffffff"
-              },
-              {
-                "key": "4/100",
-                "hex": "#F3EDE5"
-              },
-              {
-                "key": "5/100",
-                "hex": "#F3EDE5"
-              },
-              {
-                "key": "6/100",
-                "hex": "#271300"
-              }
-            ],
-            "dominate_color": {
-              "hex": "#c39363",
-              "hsv": [
-                29.67211213280211,
-                49.17817312798726,
-                76.57997875730217
-              ]
-            },
-            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/899/30181899/s_30181899.jpg",
-            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/899/30181899/s_30181899.jpg",
-            "colorsPure": [
-              "#d18100",
-              "#ef9b1d"
             ]
           }
         }
