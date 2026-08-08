@@ -95,6 +95,354 @@
         .book i { position:absolute; left:1px; right:1px; bottom:14px; overflow:hidden; font:normal 6px/1 Arial; text-align:center; text-overflow:ellipsis; white-space:nowrap; }
         .stack { transform:rotate(90deg) translateY(-12px); transform-origin:left bottom; }
 
+        .mind-orb { position:relative; z-index:8; flex:0 0 clamp(60px,5.4vw,78px); height:132px; align-self:flex-end; color:#edf7e8; text-decoration:none; transform:translateY(1px) rotate(-1.5deg); filter:drop-shadow(7px 9px 3px rgba(20,23,25,.23)); transition:transform .24s ease,filter .24s ease; }
+        .mind-orb:hover,.mind-orb:focus-visible { transform:translateY(-9px) rotate(0); filter:drop-shadow(8px 13px 5px rgba(20,23,25,.28)) brightness(1.08); outline:none; }
+        .orb-glass { position:absolute; left:50%; top:5px; width:clamp(55px,5vw,72px); aspect-ratio:1; border-radius:50%; transform:translateX(-50%); overflow:hidden; background:radial-gradient(circle at 31% 25%,rgba(255,255,255,.92) 0 4%,rgba(203,245,228,.5) 5% 12%,transparent 28%),radial-gradient(circle at 51% 57%,rgba(226,184,255,.78),rgba(82,80,151,.84) 33%,rgba(23,54,67,.96) 69%,#11191d 100%); border:3px solid rgba(231,239,219,.92); box-shadow:inset -8px -10px 14px rgba(5,13,21,.55),inset 8px 6px 15px rgba(232,240,218,.22),0 0 18px rgba(113,232,193,.38); }
+        .orb-glass:before,.orb-glass:after { content:""; position:absolute; inset:19%; border:1px solid rgba(208,255,230,.48); border-radius:45% 55% 54% 46%; transform:rotate(27deg); }
+        .orb-glass:after { inset:31% 16%; border-color:rgba(239,199,255,.6); transform:rotate(-34deg); }
+        .orb-star { position:absolute; left:var(--x); top:var(--y); width:var(--s); height:var(--s); border-radius:50%; background:#e9ffd8; box-shadow:0 0 7px 2px rgba(170,255,217,.85); animation:orbPulse 2.4s ease-in-out infinite alternate; animation-delay:var(--d); }
+        .orb-base { position:absolute; left:50%; top:70px; width:58%; height:42px; transform:translateX(-50%); background:linear-gradient(90deg,#191c1d,#6d4f37 48%,#1b1d1d); border:3px solid #151819; clip-path:polygon(20% 0,80% 0,100% 100%,0 100%); box-shadow:inset 0 6px rgba(226,191,105,.24); }
+        .orb-base:after { content:""; position:absolute; left:-22%; right:-22%; bottom:-7px; height:11px; background:#16191a; border-radius:50%; box-shadow:0 4px 0 rgba(255,255,255,.08); }
+        .mind-orb em { position:absolute; left:50%; bottom:1px; z-index:2; transform:translateX(-50%); color:#e7dfc9; font:normal 7px/1 Arial,sans-serif; letter-spacing:.14em; white-space:nowrap; opacity:0; transition:opacity .2s; }
+        .mind-orb:hover em,.mind-orb:focus-visible em { opacity:.9; }
+        @keyframes orbPulse { to { opacity:.32; transform:scale(.7); } }
+
+        .note-layer { position:fixed; inset:0; z-index:100; display:grid; place-items:center; padding:18px; background:rgba(15,17,18,.66); backdrop-filter:blur(9px); opacity:0; visibility:hidden; transition:.2s; }
+        .note-layer.open { opacity:1; visibility:visible; }
+        .notes { width:min(720px,100%); max-height:min(86svh,860px); display:flex; flex-direction:column; background:#eee9dc; border:7px solid #171a1b; box-shadow:18px 22px 0 rgba(0,0,0,.2); transform:translateY(16px); transition:.2s; }
+        .note-layer.open .notes { transform:translateY(0); }
+        .notes-head { display:grid; grid-template-columns:58px 1fr 42px; gap:14px; align-items:center; padding:18px 18px 15px; border-bottom:4px solid #171a1b; }
+        .notes-head img,.notes-cover { width:58px; height:80px; object-fit:cover; background:#416d59; }
+        .notes-head strong { display:block; font:500 clamp(18px,3vw,28px)/1.24 Georgia,"Songti SC",serif; }
+        .notes-head span { display:block; margin-top:6px; color:#6c706d; font-size:9px; }
+        .close-notes { align-self:start; width:38px; height:38px; border:2px solid #171a1b; background:transparent; font-size:24px; cursor:pointer; }
+        .notes-body { overflow:auto; padding:8px 20px 26px; }
+        .chapter { margin:22px 0 9px; color:#727673; font-size:9px; letter-spacing:.12em; }
+        .mark { position:relative; margin:0 0 9px; padding:15px 17px 13px 25px; background:#f8f4e8; border-left:7px solid var(--mark,#d0a732); }
+        .mark q { display:block; font:500 15px/1.75 Georgia,"Songti SC",serif; quotes:none; white-space:pre-wrap; }
+        .mark time { display:block; margin-top:8px; color:#91928c; font-size:8px; }
+        .thought { border-left-color:#3f7359; }
+        .thought .abstract { display:block; margin-bottom:8px; color:#7d817e; font-size:10px; line-height:1.55; }
+        .empty-notes { min-height:230px; display:grid; place-items:center; color:#777b78; font:500 16px Georgia,"Songti SC",serif; text-align:center; }
+        body.modal-open { overflow:hidden; }
+
+        @keyframes spin { to { transform:rotate(360deg); } }
+        @keyframes loadingPulse { to { opacity:.46; transform:scale(.97); } }
+        @media (min-width:761px) and (max-height:820px) {
+            .scene,.music-panel,.books-panel { min-height:0; height:100svh; }
+            .music-panel { padding:96px clamp(22px,2.6vw,38px) 16px; grid-template-rows:minmax(250px,.57fr) minmax(185px,.43fr); gap:16px; }
+            .album-rack { width:min(100%,460px); justify-self:center; padding:10px; }
+            .album-rail { gap:9px; }
+            .album { border-width:4px; box-shadow:5px 7px 0 rgba(20,23,25,.13),inset 0 0 0 1px rgba(255,255,255,.18); }
+            .listening-room { min-height:0; grid-template-columns:80px minmax(180px,1fr); gap:10px; }
+            .plant { height:min(24vw,238px); min-height:175px; }
+            .player-wrap { padding-bottom:6px; transform:translateY(-2px); }
+            .player { min-height:145px; max-height:210px; }
+            .books-panel { padding:20px 22px 15px 35px; }
+            .bookcase { grid-template-rows:repeat(var(--shelf-count,3),minmax(180px,1fr)); }
+            .shelf { padding-top:8px; padding-bottom:18px; }
+        }
+        @media (max-width:980px) {
+            .scene { grid-template-columns:minmax(360px,.83fr) minmax(500px,1.17fr); }
+            .music-panel { padding-inline:24px; }
+            .listening-room { grid-template-columns:96px 1fr; }
+            .bookcase { grid-template-rows:repeat(var(--shelf-count,3),minmax(220px,1fr)); }
+        }
+        @media (max-width:760px) {
+            .scene { display:grid; grid-template-columns:1fr; grid-template-areas:"books" "music"; overflow:visible; }
+            .scene:before { display:none; }
+            .books-panel { min-height:100svh; height:auto; width:100%; padding:8px 7px 0; overflow:visible; }
+            .books-panel:after { display:none; }
+            .bookcase { min-height:100svh; grid-template-rows:repeat(var(--shelf-count,3),minmax(235px,1fr)); border:0; transform:none; box-shadow:inset 0 0 0 1px rgba(20,23,25,.08); }
+            .shelf { gap:4px; padding-inline:7px; }
+            .mind-orb { flex-basis:58px; height:126px; }
+            .orb-glass { width:54px; }
+            .orb-base { top:59px; }
+            .book span { font-size:8px; }
+            .music-panel { min-height:100svh; width:100%; padding:24px 10px 28px; border:0; border-top:12px solid var(--ink); grid-template-rows:auto auto; grid-template-areas:"listen" "albums"; gap:14px; }
+            .music-panel:before,.books-panel:before { display:none; }
+            .listening-room { min-height:355px; grid-template-columns:98px minmax(190px,1fr); gap:6px; transform:none; }
+            .listening-room:before { left:-5%; right:-5%; bottom:-5%; height:43%; }
+            .listening-room:after { right:0; bottom:1%; width:70%; height:41%; }
+            .floor-lamp { display:none; }
+            .plant { height:300px; min-height:245px; }
+            .player-wrap { padding-bottom:16px; transform:translateY(-4px); }
+            .player { min-height:165px; }
+            .album-rack { margin-inline:-10px; padding:11px 12px 13px; border-width:3px 0 0; transform:none; box-shadow:0 -5px 0 rgba(20,23,25,.12); }
+            .album-rail { display:grid; grid-template-rows:repeat(3,minmax(0,1fr)); grid-template-columns:none; grid-auto-flow:column; grid-auto-columns:calc((100vw - 36px)/3); gap:6px; overflow-x:auto; scroll-snap-type:x mandatory; overscroll-behavior-x:contain; padding:3px 0 8px; scrollbar-width:none; }
+            .album-rail::-webkit-scrollbar { display:none; }
+            .album { border-width:3px; box-shadow:4px 5px 0 rgba(20,23,25,.13),inset 0 0 0 1px rgba(255,255,255,.18); }
+            .album:nth-child(3n+1) { scroll-snap-align:start; }
+            html.embedded .books-panel,html.embedded .bookcase,html.embedded .music-panel { min-height:50svh; }
+            .notes { max-height:92svh; border-width:5px; }
+            .notes-head { grid-template-columns:46px 1fr 38px; gap:10px; padding:13px; }
+            .notes-head img,.notes-cover { width:46px; height:64px; }
+            .notes-body { padding-inline:13px; }
+        }
+        @media (max-width:420px) {
+            .listening-room { grid-template-columns:84px minmax(184px,1fr); min-height:325px; }
+            .plant { height:270px; min-height:225px; }
+            .player { border-width:4px; min-height:150px; }
+            .player-copy { flex-direction:column; align-items:flex-start; }
+            .player-copy strong { max-width:100%; }
+        }
+        @media (prefers-reduced-motion:reduce) { *,*:before,*:after { animation-duration:.01ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; } }
+    </style>
+</head>
+<body>
+    <main class="scene">
+        <section class="books-panel" aria-label="我的微信读书书架">
+            <i class="sync-dot" id="sync" title="正在同步"></i>
+            <div class="bookcase" id="bookcase" aria-live="polite"></div>
+        </section>
+
+        <section class="music-panel" aria-label="黑胶唱片与音乐">
+            <div class="album-rack">
+                <div class="album-rail" id="album-rail" aria-label="十二张专辑封面">
+                    <button class="album filled active" type="button" aria-label="播放 Adele《21》" data-title="21" data-artist="Adele" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/1.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/1.flac" data-color="#667066"><img src="music/covers/01.jpg" alt="Adele《21》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 Queen《Absolute Greatest》" data-title="Absolute Greatest" data-artist="Queen" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/2.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/2.flac" data-color="#a33b2d"><img src="music/covers/02.jpg" alt="Queen《Absolute Greatest》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 马思唯《黑马王子》" data-title="黑马王子" data-artist="马思唯" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/3.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/3.flac" data-color="#a31e27"><img src="music/covers/03.jpg" alt="马思唯《黑马王子》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 XXXTENTACION《?》" data-title="?" data-artist="XXXTENTACION" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/4.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/4.flac" data-color="#202020"><img src="music/covers/04.jpg" alt="XXXTENTACION《?》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 AC/DC《Highway to Hell》" data-title="Highway to Hell" data-artist="AC/DC" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/5.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/5.flac" data-color="#9d3327"><img src="music/covers/05.jpg" alt="AC/DC《Highway to Hell》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 陶喆《陶喆》" data-title="陶喆" data-artist="陶喆" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/6.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/6.flac" data-color="#174f91"><img src="music/covers/06.jpg" alt="陶喆同名专辑封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 Justin Bieber《Changes》" data-title="Changes" data-artist="Justin Bieber" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/7.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/7.flac" data-color="#b74031"><img src="music/covers/07.jpg" alt="Justin Bieber《Changes》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 Michael Jackson《Off the Wall》" data-title="Off the Wall" data-artist="Michael Jackson" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/8.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/8.flac" data-color="#875544"><img src="music/covers/08.jpg" alt="Michael Jackson《Off the Wall》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 卢广仲《大人中》" data-title="大人中" data-artist="卢广仲" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/9.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/9.flac" data-color="#e0c318"><img src="music/covers/09.jpg" alt="卢广仲《大人中》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 高中正义《Brazilian Skies》" data-title="Brazilian Skies" data-artist="高中正义" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/10.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/10.flac" data-color="#376f9c"><img src="music/covers/10.jpg" alt="高中正义《Brazilian Skies》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 The Weeknd《Starboy》" data-title="Starboy" data-artist="The Weeknd" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/11.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/11.flac" data-color="#b92838"><img src="music/covers/11.jpg" alt="The Weeknd《Starboy》封面"></button>
+                    <button class="album filled" type="button" aria-label="播放 Bruno Mars《It's Better If You Don't Understand》" data-title="It's Better If You Don't Understand" data-artist="Bruno Mars" data-audio="https://github.com/maotianyi12138-eng/-/releases/download/music-web-v1/12.mp3" data-fallback="https://github.com/maotianyi12138-eng/-/releases/download/music-v1/12.flac" data-color="#bd3226"><img src="music/covers/12.jpg" alt="Bruno Mars《It's Better If You Don't Understand》封面"></button>
+                </div>
+            </div>
+            <div class="listening-room">
+                <i class="lamp-glow" aria-hidden="true"></i>
+                <i class="floor-lamp" aria-hidden="true"></i>
+                <div class="plant" aria-hidden="true">
+                    <i class="stem"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="leaf"></i><i class="pot"></i>
+                </div>
+                <div class="player-wrap">
+                    <div class="player" id="player" role="button" tabindex="0" aria-label="播放或暂停当前音乐">
+                        <div class="platter"><span class="record-label" id="record-label"></span></div><i class="tonearm"></i>
+                    </div>
+                    <div class="player-copy"><strong id="track-title"></strong><span id="track-artist"></span></div>
+                    <audio id="album-audio" preload="metadata"></audio>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="note-layer" id="note-layer" role="dialog" aria-modal="true" aria-labelledby="note-title">
+        <article class="notes" onclick="event.stopPropagation()">
+            <header class="notes-head">
+                <div id="note-cover"></div>
+                <div><strong id="note-title"></strong><span id="note-meta"></span></div>
+                <button class="close-notes" type="button" aria-label="关闭笔记">×</button>
+            </header>
+            <div class="notes-body" id="notes-body"></div>
+        </article>
+    </div>
+
+    <script>
+        document.documentElement.classList.toggle('embedded',window.parent!==window);
+        const colors=['#bd382e','#df772e','#dfbd36','#5f9a65','#188b7d','#317d9a','#304d79','#633f78','#ca6675','#222a2d','#e6e1d3','#876443'];
+        const state={books:[],notesByBook:{},capacity:0};
+        const esc=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
+        function hash(value){let result=2166136261;for(const char of String(value)){result^=char.charCodeAt(0);result=Math.imul(result,16777619)}return Math.abs(result>>>0)}
+        function styleFor(seed,real=true){const color=colors[seed%colors.length],accent=colors[(seed+5)%colors.length],text=['#dfbd36','#e6e1d3'].includes(color)?'#171a1b':'#f2ecdf';const width=(real?27:15)+(seed%(real?17:15));const height=(real?118:105)+(seed%(real?62:70));const lean=seed%11===0?(seed%2?-6:6):seed%7===0?2:0;return `--w:${width}px;--h:${height}px;--color:${color};--accent:${accent};--text:${text};--lean:${lean}deg;--band:${15+seed%63}%`}
+        function filler(index,row){const seed=hash(`painted-filler-${row}-${index}`);return `<i class="filler" aria-hidden="true" style="${styleFor(seed,false)}"></i>`}
+        function bookSpine(book,index){const seed=hash(`${book.bookId}-${book.title}`),finished=book.finishReading===1||book.markedStatus===1;return `<button class="book" type="button" data-book-id="${esc(book.bookId)}" title="${esc(book.title)} — ${esc(book.author||'')}" aria-label="打开《${esc(book.title)}》的微信读书笔记" style="${styleFor(seed,true)}"><span>${esc(book.title||'未命名书籍')}</span><i>${finished?'读完':esc((book.author||'').slice(0,4))}</i></button>`}
+        function mindOrb(){return `<a class="mind-orb" href="mindmap.html" title="进入我的阅读思维星图" aria-label="进入我的阅读思维星图"><span class="orb-glass"><i class="orb-star" style="--x:27%;--y:33%;--s:4px;--d:-.4s"></i><i class="orb-star" style="--x:63%;--y:27%;--s:3px;--d:-1.3s"></i><i class="orb-star" style="--x:50%;--y:61%;--s:5px;--d:-.8s"></i><i class="orb-star" style="--x:73%;--y:67%;--s:2px;--d:-1.8s"></i></span><span class="orb-base"></span><em>MIND MAP</em></a>`}
+        function renderShelf(){
+            const box=document.getElementById('bookcase');
+            const compact=innerWidth<=760,capacity=Math.max(6,Math.floor(((box.clientWidth||600)-(compact?18:42))/(compact?42:44)));
+            state.capacity=capacity;
+            if(!state.books.length){box.style.setProperty('--shelf-count',3);box.innerHTML=Array.from({length:3},(_,row)=>`<div class="shelf">${row===0?mindOrb():''}${Array.from({length:capacity-(row===0?2:0)},(_,i)=>filler(i,row)).join('')}</div>`).join('');return}
+            const rowCount=Math.max(3,Math.ceil((state.books.length+2)/capacity));
+            let cursor=0;
+            const rows=Array.from({length:rowCount},(_,row)=>{const rowCapacity=capacity-(row===0?2:0),books=state.books.slice(cursor,cursor+rowCapacity);cursor+=rowCapacity;return books});
+            box.style.setProperty('--shelf-count',rowCount);
+            box.setAttribute('aria-label',`阅读思维星图入口与 ${state.books.length} 本读过的书`);
+            box.innerHTML=rows.map((books,row)=>{
+                const available=capacity-(row===0?2:0),pieces=row===0?[mindOrb()]:[],positions=new Map(books.map((book,index)=>[Math.floor((index+1)*available/(books.length+1)),book]));
+                for(let i=0;i<available;i++){
+                    const book=positions.get(i);
+                    pieces.push(book?bookSpine(book,row*capacity+i):filler(i,row));
+                }
+                return `<div class="shelf">${pieces.join('')}</div>`;
+            }).join('');
+            box.querySelectorAll('.book').forEach(button=>button.addEventListener('click',()=>openNotes(button.dataset.bookId)));
+        }
+        function dateText(value){if(!value)return'';const date=new Date(Number(value)*1000);return Number.isNaN(date.getTime())?'':date.toLocaleDateString('zh-CN',{year:'numeric',month:'2-digit',day:'2-digit'}).replaceAll('/','-')}
+        function noteData(id){const raw=state.notesByBook[id]||{};const highlightData=raw.highlights||{};const thoughtsData=raw.thoughts||{};const chapters=new Map((highlightData.chapters||[]).map(item=>[String(item.chapterUid),item.title||'']));const highlights=(highlightData.updated||[]).map(item=>({...item,chapterTitle:chapters.get(String(item.chapterUid))||''}));const thoughts=(thoughtsData.reviews||[]).map(item=>item.review||item).filter(Boolean);return{highlights,thoughts,chapters}}
+        function openNotes(id){
+            const book=state.books.find(item=>String(item.bookId)===String(id));if(!book)return;
+            const {highlights,thoughts,chapters}=noteData(id),all=[];
+            highlights.forEach(item=>all.push({kind:'mark',chapter:item.chapterTitle||'未命名章节',text:item.markText||'',date:item.createTime,color:colors[(Number(item.colorStyle)||2)%colors.length]}));
+            thoughts.forEach(item=>all.push({kind:'thought',chapter:chapters.get(String(item.chapterUid))||item.chapterTitle||'阅读想法',text:item.content||'',abstract:item.abstract||'',date:item.createTime,color:'#3f7359'}));
+            all.sort((a,b)=>(Number(a.date)||0)-(Number(b.date)||0));
+            document.getElementById('note-title').textContent=book.title||'未命名书籍';
+            document.getElementById('note-meta').textContent=`${book.author||'未知作者'} · ${highlights.length} 条划线${thoughts.length?` · ${thoughts.length} 条想法`:''}`;
+            document.getElementById('note-cover').innerHTML=/^https:\/\//i.test(book.cover||'')?`<img src="${esc(book.cover)}" alt="">`:'<div class="notes-cover"></div>';
+            const body=document.getElementById('notes-body');
+            if(!all.length){body.innerHTML='<div class="empty-notes">这本书还没有可展示的划线</div>'}
+            else {let last='';body.innerHTML=all.map(item=>{const chapter=item.chapter!==last?`<div class="chapter">${esc(item.chapter)}</div>`:'';last=item.chapter;const abstract=item.abstract?`<span class="abstract">${esc(item.abstract)}</span>`:'';return `${chapter}<article class="mark ${item.kind==='thought'?'thought':''}" style="--mark:${item.color}">${abstract}<q>${esc(item.text||item.abstract||'')}</q>${item.date?`<time>${dateText(item.date)}</time>`:''}</article>`}).join('')}
+            const layer=document.getElementById('note-layer');layer.classList.add('open');document.body.classList.add('modal-open');document.querySelector('.close-notes').focus();
+        }
+        function closeNotes(){document.getElementById('note-layer').classList.remove('open');document.body.classList.remove('modal-open')}
+        async function load(){
+            renderShelf();
+            try{
+                const response=await fetch(`./data/weread.json?t=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error('等待同步');
+                const data=await response.json();if(data.status==='pending')throw new Error('等待同步');
+                state.books=data.history?.books?.length?data.history.books:(data.shelf?.books||[]);state.notesByBook=data.notesByBook||{};renderShelf();
+                const sync=document.getElementById('sync');sync.className='sync-dot ready';sync.title=`微信读书已同步${data.updatedAt?` · ${new Date(data.updatedAt).toLocaleString('zh-CN')}`:''}`;
+            }catch(error){const sync=document.getElementById('sync');sync.className='sync-dot error';sync.title=error.message}
+        }
+        const albumAudio=document.getElementById('album-audio');
+        const player=document.getElementById('player');
+        let selectedAlbum=null;
+        let fallbackTried=false;
+        let shouldBePlaying=false;
+        function setPlayerState(stateName=''){
+            player.classList.toggle('loading',stateName==='loading');
+            player.classList.toggle('error',stateName==='error');
+            player.setAttribute('aria-busy',stateName==='loading'?'true':'false');
+        }
+        async function playSelected(){
+            if(!selectedAlbum)return;
+            shouldBePlaying=true;setPlayerState('loading');
+            try{await albumAudio.play()}
+            catch(error){
+                const fallback=selectedAlbum.dataset.fallback;
+                if(!fallbackTried&&fallback){
+                    fallbackTried=true;albumAudio.src=fallback;albumAudio.load();
+                    try{await albumAudio.play()}catch(fallbackError){shouldBePlaying=false;setPlayerState('error');console.warn('暂时无法播放音频',fallbackError)}
+                }else{shouldBePlaying=false;setPlayerState('error');console.warn('暂时无法播放音频',error)}
+            }
+        }
+        async function selectAlbum(button,autoplay=true){
+            if(!button)return;
+            if(selectedAlbum===button&&autoplay&&!albumAudio.paused){shouldBePlaying=false;albumAudio.pause();setPlayerState();return}
+            document.querySelectorAll('.album').forEach(item=>item.classList.toggle('active',item===button));
+            selectedAlbum=button;
+            document.getElementById('track-title').textContent=button.dataset.title;document.getElementById('track-artist').textContent=button.dataset.artist;
+            document.getElementById('record-label').style.setProperty('--record-color',button.dataset.color);
+            if(albumAudio.getAttribute('src')!==button.dataset.audio){shouldBePlaying=false;albumAudio.pause();albumAudio.currentTime=0;fallbackTried=false;albumAudio.src=button.dataset.audio;albumAudio.load()}
+            if(autoplay)await playSelected();
+            if(innerWidth<=760)button.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+        }
+        document.querySelectorAll('.album').forEach(button=>button.addEventListener('click',()=>selectAlbum(button)));
+        function togglePlayback(){if(!selectedAlbum)return;if(albumAudio.paused)playSelected();else{shouldBePlaying=false;albumAudio.pause();setPlayerState()}}
+        player.addEventListener('click',togglePlayback);player.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();togglePlayback()}});
+        ['loadstart','waiting','stalled'].forEach(name=>albumAudio.addEventListener(name,()=>{if(shouldBePlaying)setPlayerState('loading')}));
+        albumAudio.addEventListener('playing',()=>setPlayerState());
+        albumAudio.addEventListener('play',()=>{player.classList.add('playing');if(window.parent!==window)window.parent.postMessage({type:'reading-album-playing'},window.location.origin)});
+        albumAudio.addEventListener('pause',()=>player.classList.remove('playing'));
+        albumAudio.addEventListener('ended',()=>{shouldBePlaying=false;player.classList.remove('playing');setPlayerState()});
+        document.getElementById('note-layer').addEventListener('click',closeNotes);document.querySelector('.close-notes').addEventListener('click',closeNotes);
+        document.addEventListener('keydown',event=>{if(event.key==='Escape')closeNotes()});
+        const shelfObserver=new ResizeObserver(entries=>{const width=entries[0]?.contentRect?.width||0;if(!width)return;const compact=innerWidth<=760,next=Math.max(6,Math.floor((width-(compact?18:42))/(compact?42:44)));if(next!==state.capacity)renderShelf()});
+        shelfObserver.observe(document.getElementById('bookcase'));
+        selectAlbum(document.querySelector('.album.active'),false);load();
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="毛天艺的音乐与微信读书书架">
+    <title>Books & Vinyl · Mao Tianyi</title>
+    <style>
+        :root {
+            --wall:#cdd2d2;
+            --wall-deep:#b9c0bf;
+            --ink:#141719;
+            --cream:#ece7d9;
+            --leaf:#245b43;
+            --leaf-light:#4c8261;
+            --red:#bd382e;
+            --yellow:#dfbd36;
+        }
+        * { box-sizing:border-box; }
+        html { background:var(--wall); scroll-behavior:smooth; }
+        body { margin:0; min-width:320px; color:var(--ink); background:var(--wall); font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif; }
+        button { color:inherit; font:inherit; }
+        .scene { position:relative; min-height:100svh; display:grid; grid-template-columns:minmax(420px,.84fr) minmax(560px,1.16fr); grid-template-areas:"music books"; overflow:hidden; perspective:1800px; background:radial-gradient(circle at 48% 12%,#e1e3dd 0,#cbd0cf 48%,#aeb5b4 100%); }
+        .scene:before { content:""; position:absolute; z-index:12; top:-1%; bottom:-1%; left:41.7%; width:10px; background:#242829; clip-path:polygon(5% 0,100% 2%,62% 100%,0 97%); box-shadow:10px 0 24px rgba(20,23,25,.2); pointer-events:none; }
+        .music-panel,.books-panel { position:relative; min-width:0; isolation:isolate; background-color:var(--wall); background-image:linear-gradient(106deg,rgba(255,255,255,.34),transparent 34%),linear-gradient(180deg,rgba(255,255,255,.12) 0 68%,rgba(45,53,53,.08) 68% 69%,transparent 69%),repeating-linear-gradient(1deg,rgba(20,23,25,.016) 0 1px,transparent 1px 7px); box-shadow:inset 0 18px 35px rgba(255,255,255,.13); }
+        .music-panel:before,.books-panel:before { content:""; position:absolute; z-index:0; left:0; right:0; bottom:28%; height:8px; background:#e6e3d8; border-block:2px solid rgba(20,23,25,.2); box-shadow:0 7px 12px rgba(20,23,25,.12); pointer-events:none; }
+        .music-panel:after,.books-panel:after { content:""; position:absolute; z-index:-1; left:0; right:0; bottom:0; height:30%; background:linear-gradient(165deg,#b3b9b8,#d4d7d3 52%,#aab1b0); pointer-events:none; }
+        .music-panel:after { clip-path:polygon(0 24%,100% 0,100% 100%,0 100%); }
+        .books-panel:after { clip-path:polygon(0 0,100% 22%,100% 100%,0 100%); }
+        .music-panel { grid-area:music; min-height:100svh; padding:clamp(116px,13vh,148px) clamp(26px,3.2vw,50px) clamp(25px,3vw,46px); display:grid; grid-template-rows:minmax(300px,.56fr) minmax(270px,.44fr); grid-template-areas:"albums" "listen"; gap:clamp(24px,2.6vw,38px); transform-origin:right center; }
+        .books-panel { grid-area:books; min-height:100svh; height:100svh; padding:clamp(24px,3.2vw,52px) clamp(16px,2.2vw,34px) clamp(18px,2vw,30px) clamp(28px,3.5vw,58px); display:flex; align-items:flex-start; overflow-y:auto; overscroll-behavior:contain; scrollbar-width:thin; scrollbar-color:rgba(20,23,25,.45) transparent; transform-origin:left center; }
+        .sync-dot { position:absolute; top:14px; right:14px; z-index:8; width:9px; height:9px; border-radius:50%; background:#bd7b32; box-shadow:0 0 0 5px rgba(255,255,255,.34); animation:pulse 1s infinite alternate; }
+        .sync-dot.ready { background:#2f7957; animation:none; }
+        .sync-dot.error { background:#b5362f; animation:none; }
+        @keyframes pulse { to { opacity:.35; } }
+
+        /* Flat painted shapes gain only a little perspective, like a handmade stage set. */
+        .listening-room { grid-area:listen; position:relative; z-index:2; isolation:isolate; min-height:270px; display:grid; grid-template-columns:minmax(95px,.58fr) minmax(225px,1.42fr); gap:clamp(10px,1.8vw,26px); align-items:end; transform:perspective(1000px) rotateY(3deg); transform-origin:right bottom; }
+        .listening-room:before { content:""; position:absolute; z-index:0; left:-9%; right:-12%; bottom:-17%; height:59%; background:repeating-linear-gradient(90deg,#7c4035 0 11%,#d5aa54 11% 22%,#315f58 22% 33%,#d8c584 33% 44%); opacity:.7; clip-path:polygon(8% 6%,92% 0,100% 78%,0 100%); box-shadow:0 -7px 0 rgba(20,23,25,.16); }
+        .listening-room:after { content:""; position:absolute; z-index:1; right:-4%; bottom:-3%; width:69%; height:47%; background:repeating-linear-gradient(90deg,#8b5336 0 31%,#6d402f 31% 33%,#a26842 33% 65%,#6d402f 65% 67%,#875034 67% 100%); border:5px solid #242829; box-shadow:11px 15px 0 rgba(20,23,25,.17); clip-path:polygon(2% 3%,98% 0,100% 93%,4% 100%); }
+        .lamp-glow { position:absolute; z-index:0; right:-24%; bottom:18%; width:min(38vw,430px); height:min(48vw,520px); border-radius:50%; background:radial-gradient(ellipse at 48% 45%,rgba(248,220,124,.42),rgba(232,197,92,.16) 42%,transparent 72%); filter:blur(12px); mix-blend-mode:screen; opacity:.78; pointer-events:none; }
+        .plant { z-index:3; height:min(29vw,330px); min-height:225px; position:relative; filter:drop-shadow(9px 14px 0 rgba(20,23,25,.08)); }
+        .pot { position:absolute; bottom:0; left:16%; width:68%; height:28%; background:#b94b34; clip-path:polygon(4% 0,96% 2%,82% 100%,18% 100%); border-top:9px solid #7e3326; }
+        .pot:after { content:""; position:absolute; inset:17% 13%; background:linear-gradient(112deg,#cf6c42 0 32%,#a83e2d 33% 68%,#d37a4a 69%); opacity:.62; }
+        .stem { position:absolute; left:48%; bottom:25%; width:8px; height:53%; background:#203f31; transform:rotate(-2deg); }
+        .leaf { position:absolute; width:52%; height:17%; background:var(--leaf); border:2px solid rgba(20,23,25,.25); border-radius:100% 0 100% 0; transform-origin:10% 80%; }
+        .leaf:nth-of-type(1) { left:45%; top:10%; transform:rotate(-26deg); background:#3f7655; }
+        .leaf:nth-of-type(2) { right:48%; top:21%; transform:scaleX(-1) rotate(-14deg); }
+        .leaf:nth-of-type(3) { left:47%; top:34%; transform:rotate(-9deg); background:#548663; }
+        .leaf:nth-of-type(4) { right:48%; top:45%; transform:scaleX(-1) rotate(3deg); background:#315f47; }
+        .leaf:nth-of-type(5) { left:48%; top:56%; transform:rotate(14deg); }
+        .leaf:nth-of-type(6) { right:48%; top:64%; transform:scaleX(-1) rotate(16deg); background:#477958; }
+        .floor-lamp { position:absolute; z-index:2; right:-2%; bottom:34%; width:7px; height:59%; background:#303636; transform:rotate(1.5deg); box-shadow:4px 5px 0 rgba(20,23,25,.08); }
+        .floor-lamp:before { content:""; position:absolute; left:50%; top:-3%; width:74px; height:57px; background:#d8c579; border:4px solid #272b2c; clip-path:polygon(19% 0,81% 3%,100% 100%,0 96%); transform:translateX(-50%); }
+        .floor-lamp:after { content:""; position:absolute; left:50%; bottom:-7px; width:72px; height:13px; border-radius:50%; background:#2a2f30; transform:translateX(-50%); }
+        .player-wrap { position:relative; z-index:4; align-self:end; min-width:0; padding-bottom:18px; transform:translateY(-6px); filter:drop-shadow(10px 17px 8px rgba(20,23,25,.14)); }
+        .player { position:relative; width:100%; aspect-ratio:1.62/1; min-height:190px; padding:8%; background:#a9673c; border:5px solid var(--ink); box-shadow:13px 17px 0 rgba(20,23,25,.16),inset 0 0 0 5px rgba(238,231,214,.16); transform:perspective(850px) rotateX(9deg) rotateZ(-1deg); transform-origin:center bottom; cursor:pointer; }
+        .player:before { content:""; position:absolute; left:-4%; right:-4%; bottom:-13%; height:14%; background:#151819; clip-path:polygon(2% 0,98% 0,100% 72%,0 100%); }
+        .platter { position:absolute; width:64%; aspect-ratio:1; left:5%; top:10%; border-radius:50%; background:repeating-radial-gradient(circle,#111416 0 3px,#25292a 4px 6px); box-shadow:0 0 0 5px #3c4444,0 7px 0 rgba(20,23,25,.18); }
+        .player.playing .platter { animation:spin 5.5s linear infinite; }
+        .player.loading .platter { animation:loadingPulse .8s ease-in-out infinite alternate; }
+        .player.loading:after,.player.error:after { content:"LOADING"; position:absolute; z-index:8; right:7%; bottom:8%; padding:5px 7px 4px; color:#eee7d2; background:#232728; border:2px solid #eee7d2; font:700 7px/1 Arial,sans-serif; letter-spacing:.14em; box-shadow:4px 5px 0 rgba(20,23,25,.14); }
+        .player.error:after { content:"RETRY"; color:#f2d0c6; border-color:#c35b49; }
+        .record-label { position:absolute; inset:36%; display:grid; place-items:center; border-radius:50%; background:var(--record-color,#c34b35); border:3px solid #e5d7a8; color:#f1eadb; font:bold 8px/1 Arial; text-align:center; overflow:hidden; }
+        .record-label:after { content:""; width:7px; height:7px; border-radius:50%; background:#151819; }
+        .tonearm { position:absolute; right:12%; top:18%; width:10px; height:63%; background:#ded8c9; border:3px solid #282d2f; transform:rotate(17deg); transform-origin:50% 9%; border-radius:7px; transition:transform .75s cubic-bezier(.2,.8,.2,1); }
+        .player.playing .tonearm { transform:rotate(30deg); }
+        .tonearm:before { content:""; position:absolute; width:30px; height:30px; left:-13px; top:-17px; border-radius:50%; background:#363d3d; border:5px solid #d1cab9; }
+        .tonearm:after { content:""; position:absolute; width:25px; height:14px; left:-8px; bottom:-4px; background:#242829; transform:rotate(-8deg); }
+        .player-copy { display:none; }
+
+        .album-rack { grid-area:albums; min-width:0; align-self:start; padding:clamp(13px,1.45vw,22px); background:rgba(229,228,219,.44); border:3px solid rgba(35,40,41,.7); box-shadow:12px 16px 0 rgba(20,23,25,.12),inset 0 0 0 3px rgba(255,255,255,.2); transform:perspective(1050px) rotateY(8deg) rotateZ(-.25deg); transform-origin:right center; }
+        .album-rail { display:grid; grid-template-columns:repeat(4,minmax(68px,1fr)); grid-template-rows:repeat(3,minmax(68px,1fr)); gap:clamp(12px,1.45vw,21px); }
+        .album { appearance:none; position:relative; width:100%; aspect-ratio:1; min-width:0; padding:0; border:5px solid var(--ink); background:#d9d9d1; cursor:pointer; box-shadow:8px 10px 0 rgba(20,23,25,.14),inset 0 0 0 2px rgba(255,255,255,.18); transition:transform .22s,filter .22s; }
+        .album:before { content:""; position:absolute; inset:8%; background:var(--slot,#c1c7c5); opacity:.72; }
+        .album:after { content:""; position:absolute; width:18%; height:7%; right:8%; bottom:8%; background:rgba(20,23,25,.18); }
+        .album img { display:block; width:100%; height:100%; object-fit:cover; }
+        .album.filled:before,.album.filled:after { display:none; }
+        .album:hover,.album:focus-visible,.album.active { z-index:3; transform:translateY(-5px) rotate(-.6deg); filter:brightness(1.05); outline:2px solid #f1e8c9; outline-offset:2px; }
+        .album:nth-child(3n+1) { --slot:#bfc7c2; transform:rotate(-.6deg); }
+        .album:nth-child(3n+2) { --slot:#d9d4c7; transform:rotate(.45deg); }
+        .album:nth-child(3n) { --slot:#abb8b5; transform:rotate(-.25deg); }
+        .album.active { box-shadow:8px 10px 0 rgba(20,23,25,.14),inset 0 0 0 3px rgba(187,58,45,.5); }
+        .cover-art,.album small { display:none; }
+
+        .bookcase { width:100%; min-height:calc(100svh - clamp(42px,5.2vw,82px)); align-self:stretch; display:grid; grid-template-rows:repeat(var(--shelf-count,3),minmax(230px,1fr)); background:linear-gradient(90deg,rgba(241,241,234,.46),rgba(179,187,185,.22)); border:7px solid rgba(20,23,25,.82); box-shadow:inset 0 0 0 3px rgba(255,255,255,.12),20px 24px 0 rgba(20,23,25,.1); transform:perspective(1400px) rotateY(-4.2deg) rotateZ(.35deg); transform-origin:left center; }
+        .shelf { position:relative; display:flex; align-items:flex-end; gap:clamp(3px,.5vw,7px); min-width:0; padding:12px clamp(8px,1.3vw,18px) 20px; overflow:hidden; }
+        .shelf:after { content:""; position:absolute; z-index:6; left:-18px; right:-32px; bottom:0; height:20px; background:#151819; box-shadow:0 11px 13px rgba(20,23,25,.28); clip-path:polygon(0 0,100% 18%,100% 100%,0 82%); }
+        .book,.filler { position:relative; flex:0 0 var(--w); height:var(--h); min-width:14px; border:0; padding:0; overflow:hidden; background:var(--color); color:var(--text,#eee8dc); box-shadow:inset 4px 0 rgba(255,255,255,.11),inset -4px 0 rgba(20,23,25,.12); transform:rotate(var(--lean,0deg)); transform-origin:center bottom; }
+        .book { cursor:pointer; border:1px solid rgba(20,23,25,.3); transition:transform .2s,filter .2s; }
+        .book:hover,.book:focus-visible { z-index:8; transform:translateY(-10px) rotate(0); filter:brightness(1.08); outline:2px solid #f3e9c8; outline-offset:2px; }
+        .book:before,.filler:before { content:""; position:absolute; left:0; right:0; top:var(--band,28%); height:11px; background:var(--accent); border-block:2px solid rgba(20,23,25,.16); }
+        .book:after,.filler:after { content:""; position:absolute; left:14%; right:14%; bottom:8px; height:4px; background:currentColor; opacity:.52; }
+        .book span { position:absolute; inset:12px 2px 23px; display:flex; justify-content:center; align-items:flex-start; writing-mode:vertical-rl; overflow:hidden; font:600 clamp(8px,.68vw,11px)/1.15 Georgia,"Songti SC",serif; letter-spacing:.06em; text-align:left; }
+        .book i { position:absolute; left:1px; right:1px; bottom:14px; overflow:hidden; font:normal 6px/1 Arial; text-align:center; text-overflow:ellipsis; white-space:nowrap; }
+        .stack { transform:rotate(90deg) translateY(-12px); transform-origin:left bottom; }
+
         .note-layer { position:fixed; inset:0; z-index:100; display:grid; place-items:center; padding:18px; background:rgba(15,17,18,.66); backdrop-filter:blur(9px); opacity:0; visibility:hidden; transition:.2s; }
         .note-layer.open { opacity:1; visibility:visible; }
         .notes { width:min(720px,100%); max-height:min(86svh,860px); display:flex; flex-direction:column; background:#eee9dc; border:7px solid #171a1b; box-shadow:18px 22px 0 rgba(0,0,0,.2); transform:translateY(16px); transition:.2s; }
