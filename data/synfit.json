@@ -1,24 +1,43 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-08-07T04:35:07.322Z",
+  "updatedAt": "2026-08-08T03:48:25.525Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
       {
+        "date": "2026-08-07",
+        "title": "腿 后侧",
+        "start": 1786110663739,
+        "durationMinutes": 0,
+        "setCount": 1,
+        "volumeKg": 384,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "坐姿腿弯举",
+            "setCount": 1,
+            "totalReps": 12,
+            "volumeKg": 384,
+            "maxWeightKg": 32
+          }
+        ]
+      },
+      {
         "date": "2026-08-06",
         "title": "背",
-        "start": 1786043163145,
-        "durationMinutes": 4,
-        "setCount": 8,
-        "volumeKg": 979.8,
+        "start": 1786043163819,
+        "durationMinutes": 0,
+        "setCount": 25,
+        "volumeKg": 12331.8,
         "calories": 0,
         "distance": 0,
         "movements": [
           {
             "name": "引体向上",
-            "setCount": 4,
-            "totalReps": 48,
+            "setCount": 5,
+            "totalReps": 60,
             "volumeKg": 0,
             "maxWeightKg": 0
           },
@@ -28,6 +47,34 @@
             "totalReps": 48,
             "volumeKg": 979.8,
             "maxWeightKg": 20.4
+          },
+          {
+            "name": "杠铃划船",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 3360,
+            "maxWeightKg": 70
+          },
+          {
+            "name": "宽距高位下拉",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2832,
+            "maxWeightKg": 59
+          },
+          {
+            "name": "器械划船2",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2160,
+            "maxWeightKg": 45
+          },
+          {
+            "name": "直杆绳索弯举",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 3000,
+            "maxWeightKg": 62.5
           }
         ]
       },
@@ -14783,7 +14830,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-08-06"
+      "to": "2026-08-07"
     }
   },
   "body": {
