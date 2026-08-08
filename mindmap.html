@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="毛天艺的微信读书笔记思维星图">
+    <meta name="theme-color" content="#101414">
+    <title>Reading Constellation · Mao Tianyi</title>
+    <style>
+        :root { --ink:#edf0e8; --muted:#949d98; --night:#0e1212; --panel:rgba(20,25,24,.91); --line:rgba(207,220,211,.2); --glow:#99d5bd; }
+        * { box-sizing:border-box; }
+        html,body { width:100%; height:100%; margin:0; overflow:hidden; background:var(--night); color:var(--ink); font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif; }
+        button,a { color:inherit; font:inherit; }
+        button { cursor:pointer; }
+        .space { position:fixed; inset:0; isolation:isolate; overflow:hidden; background:radial-gradient(circle at 52% 44%,#1a2422 0,#111817 38%,#0b0f0f 78%); }
+        .space:before { content:""; position:absolute; z-index:-2; inset:-18%; background:radial-gradient(ellipse at 18% 16%,rgba(81,126,110,.18),transparent 30%),radial-gradient(ellipse at 82% 18%,rgba(110,78,137,.15),transparent 31%),radial-gradient(ellipse at 70% 88%,rgba(139,94,58,.12),transparent 36%),repeating-linear-gradient(101deg,rgba(255,255,255,.012) 0 1px,transparent 1px 8px); transform:rotate(-2deg); }
+        .space:after { content:""; position:absolute; z-index:-1; inset:0; pointer-events:none; background:linear-gradient(90deg,rgba(0,0,0,.34),transparent 16% 79%,rgba(0,0,0,.4)),linear-gradient(180deg,rgba(255,255,255,.035),transparent 25% 75%,rgba(0,0,0,.45)); box-shadow:inset 0 0 120px rgba(0,0,0,.72); }
+        canvas { position:absolute; inset:0; width:100%; height:100%; touch-action:none; }
+
+        .topbar { position:fixed; z-index:12; top:max(14px,env(safe-area-inset-top)); left:max(14px,env(safe-area-inset-left)); right:max(14px,env(safe-area-inset-right)); display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:13px; align-items:start; pointer-events:none; }
+        .back,.zoom button,.filter { pointer-events:auto; border:1px solid rgba(226,237,229,.34); background:rgba(17,22,21,.72); backdrop-filter:blur(12px); box-shadow:5px 7px 0 rgba(0,0,0,.2); }
+        .back { width:44px; height:44px; display:grid; place-items:center; text-decoration:none; font-size:22px; transition:.2s; }
+        .back:hover,.back:focus-visible,.zoom button:hover,.filter:hover,.filter.active { color:#0e1412; background:#d9e8de; border-color:#d9e8de; outline:none; }
+        .identity { min-width:0; padding-top:4px; }
+        .identity strong { display:block; font:500 clamp(11px,1.2vw,14px)/1 Arial,sans-serif; letter-spacing:.23em; }
+        .identity span { display:block; margin-top:7px; color:var(--muted); font:9px/1.4 Arial,sans-serif; letter-spacing:.08em; }
+        .zoom { display:flex; gap:7px; pointer-events:auto; }
+        .zoom button { width:38px; height:38px; padding:0; font-size:18px; }
+
+        .filters { position:fixed; z-index:12; top:max(76px,calc(env(safe-area-inset-top) + 76px)); left:max(15px,env(safe-area-inset-left)); right:330px; display:flex; gap:7px; overflow-x:auto; scrollbar-width:none; pointer-events:none; }
+        .filters::-webkit-scrollbar { display:none; }
+        .filter { flex:0 0 auto; min-height:30px; padding:7px 10px 6px; color:#c4cbc7; font-size:8px; letter-spacing:.12em; text-transform:uppercase; }
+
+        .status { position:fixed; z-index:10; left:50%; bottom:max(22px,env(safe-area-inset-bottom)); transform:translateX(-50%); padding:9px 12px 8px; color:#aeb8b2; background:rgba(12,16,15,.74); border:1px solid rgba(225,235,228,.2); font:9px/1 Arial,sans-serif; letter-spacing:.08em; white-space:nowrap; transition:.25s; pointer-events:none; }
+        .status.ready { opacity:0; transform:translate(-50%,8px); }
+
+        .detail { position:fixed; z-index:14; top:0; right:0; width:min(390px,36vw); height:100%; padding:max(76px,calc(env(safe-area-inset-top) + 76px)) clamp(22px,2.2vw,34px) max(28px,env(safe-area-inset-bottom)); overflow:auto; background:linear-gradient(180deg,rgba(24,30,29,.97),rgba(12,16,15,.96)); border-left:1px solid rgba(222,234,226,.18); box-shadow:-24px 0 50px rgba(0,0,0,.3); transform:translateX(105%); transition:transform .32s cubic-bezier(.2,.8,.2,1); }
+        .detail.open { transform:translateX(0); }
+        .detail-close { position:absolute; top:max(17px,env(safe-area-inset-top)); right:max(17px,env(safe-area-inset-right)); width:38px; height:38px; padding:0; color:#d5ddd8; border:1px solid rgba(226,237,229,.28); background:transparent; font-size:22px; }
+        .detail-kicker { margin:0 0 10px; color:var(--accent,#9dd3bd); font:9px/1 Arial,sans-serif; letter-spacing:.2em; text-transform:uppercase; }
+        .detail h1 { margin:0; font:500 clamp(28px,3vw,46px)/1.02 Georgia,"Songti SC",serif; letter-spacing:-.04em; }
+        .detail .question { margin:17px 0 0; color:#dde5df; font:500 16px/1.72 Georgia,"Songti SC",serif; }
+        .detail .summary { margin:15px 0 0; color:#aeb8b2; font-size:12px; line-height:1.85; }
+        .metric { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin:24px 0 0; }
+        .metric div { padding:11px 8px; border:1px solid rgba(220,232,224,.16); background:rgba(255,255,255,.025); }
+        .metric b { display:block; font:500 19px/1 Georgia,serif; }
+        .metric span { display:block; margin-top:6px; color:#7f8a84; font-size:7px; letter-spacing:.1em; }
+        .detail h2 { margin:27px 0 10px; color:#7f8a84; font-size:8px; font-weight:400; letter-spacing:.18em; }
+        .book-list { display:grid; gap:7px; }
+        .book-chip { width:100%; padding:10px 11px; display:grid; grid-template-columns:34px 1fr auto; gap:10px; align-items:center; color:#e0e6e2; text-align:left; border:1px solid rgba(222,234,226,.13); background:rgba(255,255,255,.025); }
+        .book-chip:hover { border-color:var(--accent,#9dd3bd); }
+        .book-chip img,.cover-fallback { width:34px; height:46px; object-fit:cover; background:#3e6355; }
+        .book-chip strong { display:block; overflow:hidden; font:500 11px/1.4 Georgia,"Songti SC",serif; text-overflow:ellipsis; white-space:nowrap; }
+        .book-chip small { display:block; margin-top:3px; color:#77827c; font-size:7px; }
+        .book-chip i { color:#77827c; font:normal 9px/1 Arial; }
+        .terms { display:flex; flex-wrap:wrap; gap:6px; }
+        .terms span { padding:6px 8px; color:#aeb8b2; border:1px solid rgba(220,232,224,.15); font-size:8px; }
+        .inference { margin-top:24px; padding:14px 15px; border-left:3px solid var(--accent,#9dd3bd); background:rgba(255,255,255,.03); color:#c6cfca; font:500 12px/1.8 Georgia,"Songti SC",serif; }
+        .hint { position:fixed; z-index:8; left:18px; bottom:max(18px,env(safe-area-inset-bottom)); color:rgba(211,221,214,.5); font-size:8px; letter-spacing:.08em; pointer-events:none; }
+
+        @media (max-width:900px) {
+            .filters { right:15px; }
+            .detail { top:auto; bottom:0; width:100%; height:min(64svh,620px); padding:55px 20px max(24px,env(safe-area-inset-bottom)); border-left:0; border-top:1px solid rgba(222,234,226,.18); transform:translateY(105%); border-radius:18px 18px 0 0; }
+            .detail.open { transform:translateY(0); }
+            .detail:before { content:""; position:absolute; top:10px; left:50%; width:42px; height:3px; border-radius:3px; background:rgba(231,239,234,.28); transform:translateX(-50%); }
+            .detail-close { top:15px; }
+            .detail h1 { font-size:32px; }
+            .hint { display:none; }
+        }
+        @media (max-width:560px) {
+            .topbar { grid-template-columns:auto 1fr auto; gap:9px; }
+            .identity strong { font-size:9px; letter-spacing:.14em; }
+            .identity span { font-size:7px; }
+            .zoom button { width:34px; height:34px; }
+            .zoom button:first-child { display:none; }
+            .filters { top:max(69px,calc(env(safe-area-inset-top) + 69px)); }
+            .filter { min-height:27px; padding:6px 8px 5px; font-size:7px; }
+            .detail { height:68svh; }
+        }
+        @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition-duration:.01ms!important; animation-duration:.01ms!important; } }
+    </style>
+</head>
+<body>
+    <main class="space" aria-label="阅读思维星图">
+        <canvas id="graph" aria-label="由微信读书笔记生成的交互式思维网络"></canvas>
+        <header class="topbar">
+            <a class="back" href="reading.html" aria-label="返回书架">←</a>
+            <div class="identity"><strong>READING CONSTELLATION</strong><span id="sync-copy">正在读取你的笔记脉络</span></div>
+            <div class="zoom" aria-label="星图控制"><button type="button" id="fit" aria-label="适合屏幕">◎</button><button type="button" id="zoom-in" aria-label="放大">＋</button><button type="button" id="zoom-out" aria-label="缩小">−</button></div>
+        </header>
+        <nav class="filters" id="filters" aria-label="按探索方向筛选"></nav>
+        <div class="status" id="status">正在从划线与分类中寻找重复出现的问题…</div>
+        <div class="hint">拖动探索 · 滚轮缩放 · 点击节点展开</div>
+    </main>
+
+    <aside class="detail" id="detail" aria-live="polite">
+        <button class="detail-close" id="detail-close" type="button" aria-label="关闭详情">×</button>
+        <div id="detail-content"></div>
+    </aside>
+
+    <script>
+        const canvas=document.getElementById('graph'),ctx=canvas.getContext('2d');
+        const detail=document.getElementById('detail'),detailContent=document.getElementById('detail-content');
+        const esc=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
+        const THEMES=[
+            {id:'freedom',label:'自由与规训',color:'#8fd4bd',question:'谁在塑造我的欲望、行为与选择？',summary:'从制度、意识形态与日常习惯反看“自由”：不仅摆脱外部控制，也要辨认已经被内化的尺度。',theory:'你正在把社会批判转向主体问题：先识别规训，再重建属于自己的判断。',keywords:['规训','惩罚','权力','操控','意识形态','工业社会','自由','控制','标准','主体','服从','占有','制度','安全','证明自己','选择'],concepts:[['discipline','规训','规训|惩罚|控制|服从|标准'],['power','权力','权力|操控|制度|工业社会'],['subject','主体性','主体|自己|自由|选择|真实']]},
+            {id:'time',label:'时间与存在',color:'#e0bd67',question:'有限的生命，怎样才算真正属于自己？',summary:'笔记反复把时间看作生命本身：警惕拖延、忙碌与对未来的空许，回到当下、清醒和主动安排。',theory:'这里连接了斯多葛主义、存在主义与行动哲学：接受有限性，同时为当下负责。',keywords:['时间','生命','人生','短暂','当下','今日','明天','拖延','期待','忙碌','清醒','命运','苦难','习惯','焦虑','现在','心灵','生活'],concepts:[['finitude','有限性','短暂|有限|死亡|生命'],['present','当下','当下|今日|现在|清醒'],['fate','命运与适应','命运|苦难|习惯|适应']]},
+            {id:'creation',label:'创作与成为',color:'#d694c1',question:'怎样把感受变成作品，并成为更真实的自己？',summary:'创作并非等待灵感，而是开放感知、保持纪律、设定标准并完成作品；作品记录的是不断变化的自己。',theory:'你关心的不是“如何更高产”，而是如何让直觉、纪律和高标准共同服务于真实表达。',keywords:['创作','艺术','作品','创意','灵感','才华','能量','直觉','纪律','完成','发布','新颖','独特','创造力','标准','奉献','感知','开放'],concepts:[['inspiration','灵感','灵感|直觉|启示|能量'],['practice','纪律与实践','纪律|习惯|日程|工作|完成'],['standard','作品标准','标准|伟大|质量|独特|新颖']]},
+            {id:'desire',label:'欲望、价值与丰饶',color:'#e17863',question:'我真正想要什么，又愿意用什么交换？',summary:'从“需要”转向“想要”，从匮乏转向创造价值；但同时保留对消费尺度、占有和自我证明的警惕。',theory:'增长在你的笔记里不是单纯的数字，而是价值、身份与选择空间的重新组织。',keywords:['欲望','想要','需要','匮乏','丰饶','财富','金钱','价值','目标','增长','选择','标准','交换','追求','拥有','资源','能力','才能'],concepts:[['abundance','匮乏与丰饶','匮乏|丰饶|资源|需要|想要'],['value','价值创造','价值|财富|创造|才能|能力'],['desire','欲望尺度','欲望|目标|追求|标准|拥有']]},
+            {id:'perception',label:'感知、自然与清醒',color:'#78af80',question:'如果换一个尺度观看，世界会显露什么？',summary:'自然、艺术与旅行共同训练注意力：放慢、留心、敬畏微小生命，并在简单之中恢复清醒。',theory:'你的自然书写不是逃离社会，而是在练习一种非占有、非工具化的观看方式。',keywords:['自然','植物','苔藓','森林','大海','天空','太阳','留心','看见','感知','敬畏','生命','简单','清醒','世界','宇宙','风景','观看'],concepts:[['attention','注意力','留心|看见|感知|观看'],['nature','自然尺度','自然|植物|苔藓|森林|大海|天空'],['clarity','清醒','清醒|简单|世界|生命']]},
+            {id:'body',label:'身体与实践',color:'#6ea7d1',question:'思想怎样在身体、训练和恢复中落地？',summary:'训练科学、营养、恢复与重复练习构成了一条实践线：用身体反馈检验方法，而不是停留在抽象意愿。',theory:'身体成为你的第二种认识工具：进步来自可观察、可调整、可持续的实践。',keywords:['训练','运动','营养','身体','恢复','睡眠','脂肪','维生素','乳酸','有氧','ATP','细胞','表现','练习','竞技','健康','力量','速度'],concepts:[['training','训练方法','训练|练习|速度|力量|表现'],['nutrition','营养与能量','营养|维生素|脂肪|乳酸|ATP'],['recovery','恢复与适应','恢复|睡眠|适应|健康']]},
+            {id:'relation',label:'爱、失去与关系',color:'#a697d8',question:'爱是占有、承诺，还是允许事物保持自身？',summary:'关于爱与失去的笔记同时出现：一边害怕获得后的丧失，一边追问非占有的爱、友谊与独处。',theory:'你正在区分亲密与占有：真正的关系既容纳脆弱，也不取消彼此的主权。',keywords:['爱','爱情','友谊','亲密','关系','失去','丧失','孤独','陪伴','占有','拥有','女人','朋友','欢乐','幸福','信任'],concepts:[['loss','得到与失去','失去|丧失|害怕|恐惧'],['love','爱与占有','爱|爱情|占有|拥有'],['friendship','友谊与独处','友谊|朋友|陪伴|孤独|亲密']]}
+        ];
+        const state={nodes:[],links:[],books:[],themes:[],selected:null,filter:'all',hover:null,width:0,height:0,dpr:1,camera:{x:0,y:0,zoom:1},drag:null,pointer:null,frame:0};
+
+        function occurrences(text,term){if(!term)return 0;let count=0,from=0;while((from=text.indexOf(term,from))!==-1){count++;from+=term.length}return count}
+        function noteBundle(raw={}){const highlights=raw.highlights?.updated||[];const thoughts=(raw.thoughts?.reviews||[]).map(x=>x.review||x).filter(Boolean);return{highlights,thoughts,text:[...highlights.map(x=>x.markText||''),...thoughts.flatMap(x=>[x.content||'',x.abstract||''])].join(' ')}}
+        function latestFor(book,bundle){return Math.max(Number(book.readUpdateTime)||0,Number(book.lastNoteSort)||0,...bundle.highlights.map(x=>Number(x.createTime)||0),...bundle.thoughts.map(x=>Number(x.createTime)||0))}
+        function buildGraph(data){
+            const rawBooks=data.history?.books?.length?data.history.books:(data.shelf?.books||[]);
+            const now=Date.now()/1000;
+            state.books=rawBooks.map(book=>{const id=String(book.bookId),bundle=noteBundle(data.notesByBook?.[id]),titleText=`${book.title||''} ${book.author||''} ${book.category||''}`,fullText=`${titleText} ${bundle.text}`,latest=latestFor(book,bundle),scores={};THEMES.forEach(theme=>{let score=0;theme.keywords.forEach(term=>{score+=occurrences(bundle.text,term)*1.25+occurrences(titleText,term)*4});const days=latest?(now-latest)/86400:999;score*=1+Math.max(0,1-days/180)*.38;scores[theme.id]=score});return{...book,id,bundle,latest,scores,noteCount:bundle.highlights.length+bundle.thoughts.length}});
+            state.themes=THEMES.map(theme=>{const related=state.books.map(book=>({book,score:book.scores[theme.id]})).filter(x=>x.score>.1).sort((a,b)=>b.score-a.score);return{...theme,score:related.reduce((sum,x)=>sum+x.score,0),related}}).filter(x=>x.score>.1).sort((a,b)=>b.score-a.score);
+            const nodes=[{id:'self',type:'center',label:'最近在探索什么',size:34,color:'#e9eee8',x:0,y:0,vx:0,vy:0,data:null}],links=[];
+            const count=state.themes.length;
+            state.themes.forEach((theme,index)=>{const angle=-Math.PI/2+index*Math.PI*2/count,r=205;nodes.push({id:`theme:${theme.id}`,type:'theme',label:theme.label,size:18+Math.min(12,Math.sqrt(theme.score)),color:theme.color,x:Math.cos(angle)*r,y:Math.sin(angle)*r,vx:0,vy:0,data:theme});links.push({a:'self',b:`theme:${theme.id}`,weight:2+Math.min(5,Math.sqrt(theme.score)/2),theme:theme.id});theme.concepts.forEach((concept,cIndex)=>{const [id,label,pattern]=concept,terms=pattern.split('|'),conceptScore=theme.related.reduce((sum,{book})=>sum+terms.reduce((n,term)=>n+occurrences(`${book.title||''} ${book.bundle.text}`,term),0),0);if(!conceptScore)return;const spread=(cIndex-(theme.concepts.length-1)/2)*.25,cAngle=angle+spread,cR=365;nodes.push({id:`concept:${id}`,type:'concept',label,size:10+Math.min(5,conceptScore*.6),color:theme.color,x:Math.cos(cAngle)*cR,y:Math.sin(cAngle)*cR,vx:0,vy:0,data:{theme,terms,score:conceptScore}});links.push({a:`theme:${theme.id}`,b:`concept:${id}`,weight:1.2,theme:theme.id})})});
+            state.books.forEach((book,index)=>{const ranked=state.themes.map(t=>({theme:t,score:book.scores[t.id]})).sort((a,b)=>b.score-a.score),primary=ranked[0]?.score>0?ranked[0].theme:state.themes[index%state.themes.length],themeIndex=state.themes.findIndex(t=>t.id===primary?.id),angle=-Math.PI/2+(themeIndex+.22+(index%3-.9)*.07)*Math.PI*2/count,r=510+(index%4)*27,color=primary?.color||'#92a39b';nodes.push({id:`book:${book.id}`,type:'book',label:book.title||'未命名',size:8+Math.min(7,Math.sqrt(book.noteCount+1)*2),color,x:Math.cos(angle)*r,y:Math.sin(angle)*r,vx:0,vy:0,data:book});ranked.filter(x=>x.score>.1).slice(0,2).forEach(({theme,score})=>links.push({a:`theme:${theme.id}`,b:`book:${book.id}`,weight:.55+Math.min(1.8,score/8),theme:theme.id}))});
+            state.nodes=nodes;state.links=links;state.nodeMap=new Map(nodes.map(node=>[node.id,node]));state.links.forEach(link=>{link.na=state.nodeMap.get(link.a);link.nb=state.nodeMap.get(link.b)});state.selected=state.nodeMap.get('self');renderFilters();showDetail(state.selected);if(innerWidth<=900)closeDetail();fitGraph();
+        }
+
+        function renderFilters(){const nav=document.getElementById('filters');nav.innerHTML=`<button class="filter active" data-filter="all">全部脉络</button>${state.themes.map(t=>`<button class="filter" data-filter="${t.id}" style="--topic:${t.color}">${esc(t.label)}</button>`).join('')}`;nav.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{state.filter=button.dataset.filter;nav.querySelectorAll('button').forEach(item=>item.classList.toggle('active',item===button));const target=state.nodeMap.get(state.filter==='all'?'self':`theme:${state.filter}`);if(target){state.selected=target;showDetail(target);focusNode(target)}}))}
+        function relatedBooks(theme,limit=8){return theme.related.slice(0,limit).map(x=>x.book)}
+        function imageFor(book){return /^https:\/\//i.test(book.cover||'')?`<img src="${esc(book.cover)}" alt="" loading="lazy">`:'<span class="cover-fallback"></span>'}
+        function bookButtons(books){return `<div class="book-list">${books.map(book=>`<button class="book-chip" type="button" data-book-node="book:${esc(book.id)}">${imageFor(book)}<span><strong>${esc(book.title||'未命名')}</strong><small>${esc(book.author||book.category||'微信读书')}</small></span><i>${book.noteCount||0}</i></button>`).join('')}</div>`}
+        function centralSummary(){const top=state.themes.slice(0,3),noted=state.books.filter(b=>b.noteCount).length,notes=state.books.reduce((n,b)=>n+b.noteCount,0),recent=[...state.books].filter(b=>b.latest).sort((a,b)=>b.latest-a.latest).slice(0,4);return `<p class="detail-kicker">Live synthesis</p><h1>最近在探索什么</h1><p class="question">${top.length?`笔记最密集地落在“${top.map(t=>t.label).join('”“')}”之间。`:''}</p><p class="summary">你最近像是在把两个问题放到一起：哪些力量正在塑造个体，又怎样把有限的时间重新变成自己的选择。社会批判、生命哲学、创作与身体实践并不是分开的兴趣，而是在共同回答——如何活得更自由、更清醒，也更有行动力。</p><div class="metric"><div><b>${state.books.length}</b><span>BOOKS</span></div><div><b>${notes}</b><span>NOTES</span></div><div><b>${noted}</b><span>CONNECTED</span></div></div><div class="inference">这不是人格测试，而是依据书籍分类、阅读时间与划线中重复出现的概念所做的阶段性推断。每次微信读书数据同步后，星图会重新计算。</div><h2>最近经过的书</h2>${bookButtons(recent)}`}
+        function themeDetail(theme){const books=relatedBooks(theme),terms=theme.keywords.map(term=>({term,count:theme.related.reduce((n,{book})=>n+occurrences(book.bundle.text,term)+occurrences(book.title||'',term),0)})).filter(x=>x.count).sort((a,b)=>b.count-a.count).slice(0,9);const notes=books.reduce((n,b)=>n+b.noteCount,0);return `<p class="detail-kicker" style="--accent:${theme.color}">Exploration direction</p><h1>${esc(theme.label)}</h1><p class="question">${esc(theme.question)}</p><p class="summary">${esc(theme.summary)}</p><div class="metric"><div><b>${books.length}</b><span>BOOKS</span></div><div><b>${notes}</b><span>NOTES</span></div><div><b>${terms.length}</b><span>SIGNALS</span></div></div><div class="inference" style="--accent:${theme.color}">${esc(theme.theory)}</div><h2>反复出现的概念</h2><div class="terms">${terms.map(x=>`<span>${esc(x.term)} · ${x.count}</span>`).join('')}</div><h2>连接到这些书</h2>${bookButtons(books)}`}
+        function bookDetail(book){const ranked=state.themes.map(t=>({theme:t,score:book.scores[t.id]})).filter(x=>x.score>.1).sort((a,b)=>b.score-a.score);const date=book.latest?new Date(book.latest*1000).toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric'}):'尚无阅读时间';return `<p class="detail-kicker">Book node</p><h1>${esc(book.title||'未命名')}</h1><p class="question">${esc(book.author||book.category||'微信读书')}</p><p class="summary">${esc(book.category||'未分类')} · ${date}</p><div class="metric"><div><b>${book.bundle.highlights.length}</b><span>划线</span></div><div><b>${book.bundle.thoughts.length}</b><span>想法</span></div><div><b>${book.readingProgress??'—'}</b><span>进度%</span></div></div><h2>在星图中的方向</h2><div class="terms">${ranked.map(x=>`<button class="filter" type="button" data-theme-node="theme:${x.theme.id}" style="border-color:${x.theme.color};color:${x.theme.color}">${esc(x.theme.label)}</button>`).join('')||'<span>等待更多笔记形成连接</span>'}</div><div class="inference" style="--accent:${ranked[0]?.theme.color||'#9dd3bd'}">${ranked[0]?`这本书目前主要连接到“${esc(ranked[0].theme.label)}”。这一判断来自书名、分类和你划线中反复出现的词。`:'它仍位于星图边缘；继续阅读或划线后，它会自动靠近新的主题。'}</div>`}
+        function conceptDetail(node){const {theme,terms,score}=node.data,books=theme.related.filter(({book})=>terms.some(term=>`${book.title||''} ${book.bundle.text}`.includes(term))).map(x=>x.book).slice(0,8);return `<p class="detail-kicker" style="--accent:${theme.color}">Concept node</p><h1>${esc(node.label)}</h1><p class="question">它是“${esc(theme.label)}”方向里重复出现的一个概念。</p><p class="summary">当前共识别到 ${score} 次相关文字信号。点击相连的书，能看到它如何进入你的阅读脉络。</p><h2>识别词</h2><div class="terms">${terms.map(t=>`<span>${esc(t)}</span>`).join('')}</div><h2>相关书籍</h2>${bookButtons(books)}`}
+        function showDetail(node){if(!node)return;state.selected=node;detail.style.setProperty('--accent',node.color);detailContent.innerHTML=node.type==='center'?centralSummary():node.type==='theme'?themeDetail(node.data):node.type==='book'?bookDetail(node.data):conceptDetail(node);detail.classList.add('open');detailContent.querySelectorAll('[data-book-node],[data-theme-node]').forEach(button=>button.addEventListener('click',()=>{const target=state.nodeMap.get(button.dataset.bookNode||button.dataset.themeNode);if(target){showDetail(target);focusNode(target)}}))}
+        function closeDetail(){detail.classList.remove('open')}
+
+        function visibleNode(node){if(state.filter==='all')return true;if(node.type==='center'||node.id===`theme:${state.filter}`)return true;return state.links.some(link=>link.theme===state.filter&&(link.a===node.id||link.b===node.id))}
+        function connected(a,b){return state.links.some(link=>(link.a===a.id&&link.b===b.id)||(link.a===b.id&&link.b===a.id))}
+        function simulate(){const nodes=state.nodes,links=state.links;for(const node of nodes){if(node===state.drag?.node||node.type==='center')continue;node.vx*=.88;node.vy*=.88;node.vx+=-node.x*.00045;node.vy+=-node.y*.00045}for(let i=0;i<nodes.length;i++){for(let j=i+1;j<nodes.length;j++){const a=nodes[i],b=nodes[j],dx=b.x-a.x,dy=b.y-a.y,d2=Math.max(90,dx*dx+dy*dy),force=(a.type==='center'||b.type==='center'?880:410)/d2,fx=dx*force,fy=dy*force;if(a.type!=='center'&&a!==state.drag?.node){a.vx-=fx;a.vy-=fy}if(b.type!=='center'&&b!==state.drag?.node){b.vx+=fx;b.vy+=fy}}}for(const link of links){const a=link.na,b=link.nb;if(!a||!b)continue;const dx=b.x-a.x,dy=b.y-a.y,d=Math.max(1,Math.hypot(dx,dy)),wanted=a.type==='center'?205:a.type==='theme'&&b.type==='concept'?175:220,force=(d-wanted)*.00085*link.weight,fx=dx/d*force,fy=dy/d*force;if(a.type!=='center'&&a!==state.drag?.node){a.vx+=fx;a.vy+=fy}if(b.type!=='center'&&b!==state.drag?.node){b.vx-=fx;b.vy-=fy}}for(const node of nodes){if(node.type==='center'||node===state.drag?.node)continue;node.x+=Math.max(-4,Math.min(4,node.vx));node.y+=Math.max(-4,Math.min(4,node.vy))}}
+        function worldToScreen(node){return{x:state.width/2+(node.x+state.camera.x)*state.camera.zoom,y:state.height/2+(node.y+state.camera.y)*state.camera.zoom}}
+        function screenToWorld(x,y){return{x:(x-state.width/2)/state.camera.zoom-state.camera.x,y:(y-state.height/2)/state.camera.zoom-state.camera.y}}
+        function drawLabel(node,x,y,alpha){const max=node.type==='book'?88:node.type==='center'?150:118,words=[...node.label],lines=[],fontSize=node.type==='center'?13:node.type==='theme'?11:node.type==='concept'?9:8;let line='';ctx.font=`${node.type==='theme'||node.type==='center'?600:400} ${fontSize}px Arial,"PingFang SC",sans-serif`;for(const char of words){if(ctx.measureText(line+char).width>max&&line){lines.push(line);line=char}else line+=char}if(line)lines.push(line);const shown=lines.slice(0,node.type==='book'?2:3);ctx.textAlign='center';ctx.textBaseline='top';ctx.fillStyle=`rgba(228,235,230,${alpha*.86})`;shown.forEach((text,index)=>ctx.fillText(text,x,y+node.size*state.camera.zoom+7+index*(fontSize+3)))}
+        function draw(){ctx.clearRect(0,0,state.width,state.height);const focus=state.hover||state.selected;for(const link of state.links){if(!visibleNode(link.na)||!visibleNode(link.nb))continue;const a=worldToScreen(link.na),b=worldToScreen(link.nb),active=focus&&(link.a===focus.id||link.b===focus.id),dim=focus&&!active&&focus.type!=='center';ctx.beginPath();ctx.moveTo(a.x,a.y);const mx=(a.x+b.x)/2,my=(a.y+b.y)/2,curve=(link.na.x*link.nb.y-link.na.y*link.nb.x>0?1:-1)*18*state.camera.zoom;ctx.quadraticCurveTo(mx+curve,my-curve,b.x,b.y);ctx.strokeStyle=active?`${link.na.color}cc`:dim?'rgba(180,197,187,.035)':'rgba(184,202,191,.13)';ctx.lineWidth=(active?1.45:.55)*Math.max(.7,state.camera.zoom);ctx.stroke()}for(const node of state.nodes){if(!visibleNode(node))continue;const p=worldToScreen(node),linked=!focus||node===focus||connected(node,focus)||focus.type==='center',alpha=linked?1:.15,r=node.size*state.camera.zoom;if(p.x<-100||p.x>state.width+100||p.y<-100||p.y>state.height+100)continue;ctx.save();ctx.globalAlpha=alpha;const glow=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,r*2.8);glow.addColorStop(0,node.color+'55');glow.addColorStop(1,node.color+'00');ctx.fillStyle=glow;ctx.beginPath();ctx.arc(p.x,p.y,r*2.8,0,Math.PI*2);ctx.fill();ctx.fillStyle=node.type==='book'?'#111716':node.color;ctx.strokeStyle=node.color;ctx.lineWidth=(node===focus?2.2:1)*Math.max(.75,state.camera.zoom);ctx.beginPath();ctx.arc(p.x,p.y,Math.max(3,r),0,Math.PI*2);ctx.fill();ctx.stroke();if(node.type==='center'){ctx.fillStyle='#10201a';ctx.beginPath();ctx.arc(p.x,p.y,r*.38,0,Math.PI*2);ctx.fill()}drawLabel(node,p.x,p.y,alpha);ctx.restore()}requestAnimationFrame(loop)}
+        function loop(){if(state.frame<900||state.drag){simulate();state.frame++}draw()}
+        function resize(){state.dpr=Math.min(2,devicePixelRatio||1);state.width=innerWidth;state.height=innerHeight;canvas.width=Math.round(state.width*state.dpr);canvas.height=Math.round(state.height*state.dpr);ctx.setTransform(state.dpr,0,0,state.dpr,0,0)}
+        function hitNode(x,y){let best=null,dist=Infinity;for(const node of state.nodes){if(!visibleNode(node))continue;const p=worldToScreen(node),d=Math.hypot(x-p.x,y-p.y),radius=Math.max(13,node.size*state.camera.zoom+7);if(d<radius&&d<dist){best=node;dist=d}}return best}
+        function focusNode(node){state.camera.x=-node.x;state.camera.y=-node.y;state.camera.zoom=Math.max(.75,Math.min(1.25,state.camera.zoom));state.frame=0}
+        function fitGraph(){const compact=innerWidth<700;state.camera={x:compact?0:-80,y:compact?-12:0,zoom:Math.min(compact ? .62 : .82,Math.max(.45,Math.min(state.width/1120,state.height/850)))};state.frame=0}
+        function zoomAt(factor,x=state.width/2,y=state.height/2){const before=screenToWorld(x,y);state.camera.zoom=Math.max(.32,Math.min(2.2,state.camera.zoom*factor));const after=screenToWorld(x,y);state.camera.x+=after.x-before.x;state.camera.y+=after.y-before.y}
+        canvas.addEventListener('pointerdown',event=>{canvas.setPointerCapture(event.pointerId);const node=hitNode(event.clientX,event.clientY);state.pointer={id:event.pointerId,x:event.clientX,y:event.clientY,startX:event.clientX,startY:event.clientY,moved:false};state.drag=node?{node}:{pan:true}});
+        canvas.addEventListener('pointermove',event=>{if(!state.pointer){state.hover=hitNode(event.clientX,event.clientY);canvas.style.cursor=state.hover?'pointer':'grab';return}const dx=event.clientX-state.pointer.x,dy=event.clientY-state.pointer.y;if(Math.hypot(event.clientX-state.pointer.startX,event.clientY-state.pointer.startY)>4)state.pointer.moved=true;if(state.drag?.node){const w=screenToWorld(event.clientX,event.clientY);state.drag.node.x=w.x;state.drag.node.y=w.y;state.drag.node.vx=state.drag.node.vy=0}else{state.camera.x+=dx/state.camera.zoom;state.camera.y+=dy/state.camera.zoom}state.pointer.x=event.clientX;state.pointer.y=event.clientY});
+        canvas.addEventListener('pointerup',event=>{if(state.pointer&&!state.pointer.moved){const node=hitNode(event.clientX,event.clientY);if(node)showDetail(node)}state.pointer=null;state.drag=null;state.frame=0});
+        canvas.addEventListener('pointercancel',()=>{state.pointer=null;state.drag=null});
+        canvas.addEventListener('wheel',event=>{event.preventDefault();zoomAt(event.deltaY<0?1.1:.9,event.clientX,event.clientY)},{passive:false});
+        document.getElementById('zoom-in').addEventListener('click',()=>zoomAt(1.18));document.getElementById('zoom-out').addEventListener('click',()=>zoomAt(.84));document.getElementById('fit').addEventListener('click',fitGraph);document.getElementById('detail-close').addEventListener('click',closeDetail);document.addEventListener('keydown',event=>{if(event.key==='Escape')closeDetail()});window.addEventListener('resize',()=>{resize();fitGraph()});
+
+        async function load(){resize();try{const response=await fetch(`./data/weread.json?t=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error('同步数据暂时不可用');const data=await response.json();if(data.status!=='ready')throw new Error('微信读书正在同步');buildGraph(data);document.getElementById('sync-copy').textContent=`${state.books.length} 本书 · ${state.books.reduce((n,b)=>n+b.noteCount,0)} 条笔记 · ${data.updatedAt?new Date(data.updatedAt).toLocaleDateString('zh-CN'):'刚刚更新'}`;document.getElementById('status').classList.add('ready');requestAnimationFrame(loop)}catch(error){document.getElementById('status').textContent=`${error.message}，请稍后再来`;document.getElementById('sync-copy').textContent='等待微信读书同步'}}
+        load();
+    </script>
+    <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"bd29032e37994008b8c591d932cf24f3"}'></script>
+</body>
+</html>
