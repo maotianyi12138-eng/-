@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-07T19:14:27Z",
+  "updatedAt": "2026-08-08T02:21:13Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -2614,11 +2614,11 @@
     "authorCount": 9,
     "preferPublisher": [
       {
-        "name": "浙江人民出版社有限公司",
+        "name": "浙江科学技术出版社",
         "count": 1
       },
       {
-        "name": "浙江科学技术出版社",
+        "name": "浙江人民出版社有限公司",
         "count": 1
       },
       {
@@ -3033,7 +3033,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有4997人读过"
+        "reason": "仅有5022人读过"
       },
       {
         "type": 8,
