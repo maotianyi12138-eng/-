@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-08T18:57:48Z",
+  "updatedAt": "2026-08-09T02:27:59Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -96,7 +96,7 @@
         "updateTime": 1722588817,
         "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/t6_YueWen_30181899.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1786206054,
+        "readUpdateTime": 1786217259,
         "secret": 0,
         "category": "生活百科-体育"
       },
@@ -237,13 +237,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 15,
+        "readingProgress": 18,
         "markedStatus": 2,
         "lastNoteSort": 1786197859,
         "intro": "世界各地的精英运动员都知道丹·贝纳多特（Dan Benardot）博士，并渴望得到他的指导，因为他们知道，他的真知灼见可能是运动员能否获得金牌的决定性因素。来自各个大洲的很多高等院校都邀请丹前去讲学，他们希望学生们能师从最好的专家。在佐治亚州立大学（Georgia State University），我们只知道他是丹——一位了不起的朋友，一位出色的同事，一位忠实的丈夫，以及世界上最棒的孩子的父亲。《高级运动营养学》的第1 版非常成功。它被广泛应用于各种教学场合，以及拥有不同身材、体型和技能的运动员。精英运动员和普通运动员都在使用这本书。它已经成为运动营养师和运动科学专业的学生学习人类运动表现相关营养知识的必读书。对那些需要指导运动员如何在比赛中取得优势的教练员而言，它同样是首选读物。但就像每一本成功的图书一样，它需要进行一些修订和更新。这正是《高级运动营养学（第2 版）》如此重要的原因。",
         "updateTime": 1722588817,
         "finishReading": 0,
-        "readUpdateTime": 1786206054,
+        "readUpdateTime": 1786217259,
         "secret": 0,
         "category": "生活百科-体育"
       },
@@ -999,7 +999,7 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 15,
+        "readingProgress": 18,
         "noteCount": 3,
         "bookmarkCount": 0,
         "sort": 1786197859
@@ -1568,7 +1568,7 @@
       "1785945600": 875,
       "1786032000": 2349,
       "1786118400": 2101,
-      "1786204800": 348
+      "1786204800": 2015
     },
     "readDays": 9,
     "readLongest": [
@@ -1617,7 +1617,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 8984,
+        "readTime": 10651,
         "tags": [
           "单日阅读最久"
         ]
@@ -1730,7 +1730,7 @@
         "parentCategoryId": 2100000,
         "parentCategoryTitle": "医学健康",
         "readingCount": 1,
-        "readingTime": 6543
+        "readingTime": 8636
       },
       {
         "categoryId": 1600000,
@@ -1738,7 +1738,7 @@
         "parentCategoryId": 1600000,
         "parentCategoryTitle": "生活百科",
         "readingCount": 1,
-        "readingTime": 6543
+        "readingTime": 8636
       },
       {
         "categoryId": 300000,
@@ -1809,10 +1809,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.1734227291409784,
-    "dayAverageReadTime": 1328,
+    "compare": 2.6159234141663245,
+    "dayAverageReadTime": 1513,
     "baseTime": 1785513600,
-    "totalReadTime": 11955,
+    "totalReadTime": 13622,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1967,7 +1967,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 79095
+      "1767196800": 80762
     },
     "readDays": 53,
     "readLongest": [
@@ -2118,7 +2118,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 8984,
+        "readTime": 10651,
         "tags": []
       },
       {
@@ -2493,7 +2493,15 @@
         "parentCategoryId": 1600000,
         "parentCategoryTitle": "生活百科",
         "readingCount": 1,
-        "readingTime": 8984
+        "readingTime": 10651
+      },
+      {
+        "categoryId": 2100000,
+        "categoryTitle": "医学健康",
+        "parentCategoryId": 2100000,
+        "parentCategoryTitle": "医学健康",
+        "readingCount": 1,
+        "readingTime": 10651
       },
       {
         "categoryId": 600000,
@@ -2502,14 +2510,6 @@
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 2,
         "readingTime": 8761
-      },
-      {
-        "categoryId": 2100000,
-        "categoryTitle": "医学健康",
-        "parentCategoryId": 2100000,
-        "parentCategoryTitle": "医学健康",
-        "readingCount": 1,
-        "readingTime": 8984
       },
       {
         "categoryId": 1000000,
@@ -2546,11 +2546,11 @@
       2412,
       13205,
       1984,
-      4989,
-      3265,
+      5637,
+      3639,
       11217,
-      6106,
-      7328,
+      6231,
+      8282,
       4430,
       4544,
       4936,
@@ -2579,7 +2579,7 @@
         "authorId": 778714,
         "name": "丹·贝纳多特",
         "count": 1,
-        "readTime": "2小时29分钟"
+        "readTime": "2小时57分钟"
       },
       {
         "authorId": 2426523,
@@ -2664,7 +2664,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 79108,
+    "totalReadTime": 80775,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2718,7 +2718,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "最近阅读1小时"
+        "reason": "最近阅读2小时"
       },
       {
         "type": 0,
@@ -3034,7 +3034,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有5120人读过"
+        "reason": "仅有5146人读过"
       },
       {
         "type": 8,
@@ -3364,7 +3364,7 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 11955,
+        "1785513600": 13622,
         "1788192000": 0,
         "1790784000": 0,
         "1793462400": 0,
@@ -3520,7 +3520,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 8984,
+          "readTime": 10651,
           "tags": []
         },
         {
@@ -3898,20 +3898,12 @@
           "readingTime": 8761
         },
         {
-          "categoryId": 1000000,
-          "categoryTitle": "个人成长",
-          "parentCategoryId": 1000000,
-          "parentCategoryTitle": "个人成长",
-          "readingCount": 2,
-          "readingTime": 8199
-        },
-        {
           "categoryId": 2100000,
           "categoryTitle": "医学健康",
           "parentCategoryId": 2100000,
           "parentCategoryTitle": "医学健康",
           "readingCount": 1,
-          "readingTime": 6543
+          "readingTime": 8636
         },
         {
           "categoryId": 1600000,
@@ -3919,7 +3911,15 @@
           "parentCategoryId": 1600000,
           "parentCategoryTitle": "生活百科",
           "readingCount": 1,
-          "readingTime": 6543
+          "readingTime": 8636
+        },
+        {
+          "categoryId": 1000000,
+          "categoryTitle": "个人成长",
+          "parentCategoryId": 1000000,
+          "parentCategoryTitle": "个人成长",
+          "readingCount": 2,
+          "readingTime": 8199
         },
         {
           "categoryId": 200000,
@@ -3951,6 +3951,12 @@
           "readTime": "3小时18分钟"
         },
         {
+          "authorId": 778714,
+          "name": "丹·贝纳多特",
+          "count": 1,
+          "readTime": "2小时23分钟"
+        },
+        {
           "authorId": 2426523,
           "name": "里克·鲁宾",
           "count": 1,
@@ -3961,12 +3967,6 @@
           "name": "塞涅卡",
           "count": 1,
           "readTime": "2小时9分钟"
-        },
-        {
-          "authorId": 778714,
-          "name": "丹·贝纳多特",
-          "count": 1,
-          "readTime": "1小时49分钟"
         },
         {
           "authorId": 394948,
@@ -4037,9 +4037,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 357,
+      "dayAverageReadTime": 365,
       "baseTime": 1767196800,
-      "totalReadTime": 79095,
+      "totalReadTime": 80762,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
