@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-09T19:00:16Z",
+  "updatedAt": "2026-08-10T02:34:07Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1731,7 +1731,7 @@
         "parentCategoryId": 2100000,
         "parentCategoryTitle": "医学健康",
         "readingCount": 1,
-        "readingTime": 8636
+        "readingTime": 10732
       },
       {
         "categoryId": 1600000,
@@ -1739,7 +1739,15 @@
         "parentCategoryId": 1600000,
         "parentCategoryTitle": "生活百科",
         "readingCount": 1,
-        "readingTime": 8636
+        "readingTime": 10732
+      },
+      {
+        "categoryId": 600000,
+        "categoryTitle": "哲学宗教",
+        "parentCategoryId": 600000,
+        "parentCategoryTitle": "哲学宗教",
+        "readingCount": 1,
+        "readingTime": 2064
       },
       {
         "categoryId": 300000,
@@ -1756,14 +1764,6 @@
         "parentCategoryTitle": "精品小说",
         "readingCount": 2,
         "readingTime": 1963
-      },
-      {
-        "categoryId": 600000,
-        "categoryTitle": "哲学宗教",
-        "parentCategoryId": 600000,
-        "parentCategoryTitle": "哲学宗教",
-        "readingCount": 1,
-        "readingTime": 967
       },
       {
         "categoryId": 1000000,
@@ -2510,7 +2510,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 2,
-        "readingTime": 8761
+        "readingTime": 9858
       },
       {
         "categoryId": 1000000,
@@ -2546,14 +2546,14 @@
       3195,
       2412,
       13205,
-      1984,
+      2995,
       5637,
       3639,
-      11217,
-      6231,
+      11384,
+      6579,
       8282,
-      4430,
-      4544,
+      4438,
+      6203,
       4936,
       3221
     ],
@@ -2601,14 +2601,14 @@
         "readTime": "1小时12分钟"
       },
       {
-        "authorId": 183442,
-        "name": "罗素",
-        "count": 1,
-        "readTime": "16分钟"
-      },
-      {
         "authorId": 294931,
         "name": "赫伯特·马尔库塞",
+        "count": 1,
+        "readTime": "34分钟"
+      },
+      {
+        "authorId": 183442,
+        "name": "罗素",
         "count": 1,
         "readTime": "16分钟"
       }
@@ -3035,7 +3035,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有5247人读过"
+        "reason": "仅有5262人读过"
       },
       {
         "type": 8,
@@ -3891,20 +3891,12 @@
           "readingTime": 18052
         },
         {
-          "categoryId": 600000,
-          "categoryTitle": "哲学宗教",
-          "parentCategoryId": 600000,
-          "parentCategoryTitle": "哲学宗教",
-          "readingCount": 2,
-          "readingTime": 8761
-        },
-        {
           "categoryId": 2100000,
           "categoryTitle": "医学健康",
           "parentCategoryId": 2100000,
           "parentCategoryTitle": "医学健康",
           "readingCount": 1,
-          "readingTime": 8636
+          "readingTime": 10732
         },
         {
           "categoryId": 1600000,
@@ -3912,7 +3904,15 @@
           "parentCategoryId": 1600000,
           "parentCategoryTitle": "生活百科",
           "readingCount": 1,
-          "readingTime": 8636
+          "readingTime": 10732
+        },
+        {
+          "categoryId": 600000,
+          "categoryTitle": "哲学宗教",
+          "parentCategoryId": 600000,
+          "parentCategoryTitle": "哲学宗教",
+          "readingCount": 2,
+          "readingTime": 9858
         },
         {
           "categoryId": 1000000,
@@ -3955,7 +3955,7 @@
           "authorId": 778714,
           "name": "丹·贝纳多特",
           "count": 1,
-          "readTime": "2小时23分钟"
+          "readTime": "2小时58分钟"
         },
         {
           "authorId": 2426523,
@@ -3976,20 +3976,28 @@
           "readTime": "1小时12分钟"
         },
         {
-          "authorId": 183442,
-          "name": "罗素",
-          "count": 1,
-          "readTime": "16分钟"
-        },
-        {
           "authorId": 294931,
           "name": "赫伯特·马尔库塞",
+          "count": 1,
+          "readTime": "34分钟"
+        },
+        {
+          "authorId": 183442,
+          "name": "罗素",
           "count": 1,
           "readTime": "16分钟"
         }
       ],
       "authorCount": 9,
       "preferPublisher": [
+        {
+          "name": "浙江科学技术出版社",
+          "count": 1
+        },
+        {
+          "name": "浙江人民出版社有限公司",
+          "count": 1
+        },
         {
           "name": "中信出版集团",
           "count": 1
@@ -4000,14 +4008,6 @@
         },
         {
           "name": "北京科学技术出版社有限公司",
-          "count": 1
-        },
-        {
-          "name": "浙江人民出版社有限公司",
-          "count": 1
-        },
-        {
-          "name": "浙江科学技术出版社",
           "count": 1
         },
         {
