@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-10T13:43:24Z",
+  "updatedAt": "2026-08-10T19:16:16Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1717,7 +1717,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 1,
-        "readingTime": 2064
+        "readingTime": 2942
       },
       {
         "categoryId": 300000,
@@ -1780,8 +1780,8 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.745514796547473,
-    "dayAverageReadTime": 1567,
+    "compare": 2.405013451406793,
+    "dayAverageReadTime": 1425,
     "baseTime": 1785513600,
     "totalReadTime": 15678,
     "readDistributionWord": "点评分布",
@@ -2525,13 +2525,13 @@
       3195,
       2412,
       13205,
-      2995,
+      3690,
       5637,
       3639,
       11384,
       6579,
       8282,
-      4438,
+      4621,
       6203,
       4936,
       3221
@@ -3014,7 +3014,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有5330人读过"
+        "reason": "仅有5357人读过"
       },
       {
         "type": 8,
@@ -3900,7 +3900,7 @@
           "parentCategoryId": 600000,
           "parentCategoryTitle": "哲学宗教",
           "readingCount": 2,
-          "readingTime": 9858
+          "readingTime": 10736
         },
         {
           "categoryId": 1000000,
@@ -3967,7 +3967,7 @@
           "authorId": 294931,
           "name": "赫伯特·马尔库塞",
           "count": 1,
-          "readTime": "34分钟"
+          "readTime": "49分钟"
         },
         {
           "authorId": 183442,
@@ -3979,6 +3979,14 @@
       "authorCount": 9,
       "preferPublisher": [
         {
+          "name": "浙江科学技术出版社",
+          "count": 1
+        },
+        {
+          "name": "浙江人民出版社有限公司",
+          "count": 1
+        },
+        {
           "name": "中信出版集团",
           "count": 1
         },
@@ -3988,14 +3996,6 @@
         },
         {
           "name": "北京科学技术出版社有限公司",
-          "count": 1
-        },
-        {
-          "name": "浙江人民出版社有限公司",
-          "count": 1
-        },
-        {
-          "name": "浙江科学技术出版社",
           "count": 1
         },
         {
@@ -4026,7 +4026,7 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 373,
+      "dayAverageReadTime": 371,
       "baseTime": 1767196800,
       "totalReadTime": 82818,
       "readDistributionWord": "点评分布",
