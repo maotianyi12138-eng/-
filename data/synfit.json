@@ -1,17 +1,50 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-08-11T03:58:00.708Z",
+  "updatedAt": "2026-08-12T04:20:18.748Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
       {
+        "date": "2026-08-11",
+        "title": "背",
+        "start": 1786474626561,
+        "durationMinutes": 22,
+        "setCount": 13,
+        "volumeKg": 4819.8,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "引体向上",
+            "setCount": 5,
+            "totalReps": 60,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          },
+          {
+            "name": "绳索直臂下压",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 979.8,
+            "maxWeightKg": 20.4
+          },
+          {
+            "name": "杠铃划船",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 3840,
+            "maxWeightKg": 80
+          }
+        ]
+      },
+      {
         "date": "2026-08-10",
         "title": "胸 容量",
-        "start": 1786389717548,
-        "durationMinutes": 19,
-        "setCount": 9,
-        "volumeKg": 7404,
+        "start": 1786389718243,
+        "durationMinutes": 0,
+        "setCount": 21,
+        "volumeKg": 9945,
         "calories": 0,
         "distance": 0,
         "movements": [
@@ -28,6 +61,27 @@
             "totalReps": 60,
             "volumeKg": 3900,
             "maxWeightKg": 65
+          },
+          {
+            "name": "上斜史密斯机卧推",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1440,
+            "maxWeightKg": 30
+          },
+          {
+            "name": "绳索臂屈伸（单）",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 381,
+            "maxWeightKg": 7.9
+          },
+          {
+            "name": "史密斯机推举",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 720,
+            "maxWeightKg": 15
           }
         ]
       },
@@ -53,19 +107,40 @@
       {
         "date": "2026-08-07",
         "title": "腿 后侧",
-        "start": 1786110663739,
+        "start": 1786444724574,
         "durationMinutes": 0,
-        "setCount": 1,
-        "volumeKg": 384,
+        "setCount": 17,
+        "volumeKg": 9984,
         "calories": 0,
         "distance": 0,
         "movements": [
           {
+            "name": "腿弯举",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1296,
+            "maxWeightKg": 27
+          },
+          {
             "name": "坐姿腿弯举",
-            "setCount": 1,
-            "totalReps": 12,
-            "volumeKg": 384,
-            "maxWeightKg": 32
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1632,
+            "maxWeightKg": 36
+          },
+          {
+            "name": "坐姿髋外展",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2496,
+            "maxWeightKg": 52
+          },
+          {
+            "name": "深蹲",
+            "setCount": 5,
+            "totalReps": 60,
+            "volumeKg": 4560,
+            "maxWeightKg": 90
           }
         ]
       },
@@ -14875,7 +14950,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-08-10"
+      "to": "2026-08-11"
     }
   },
   "body": {
