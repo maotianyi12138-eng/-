@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-12T13:45:44Z",
+  "updatedAt": "2026-08-12T19:19:42Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -156,7 +156,7 @@
         "updateTime": 1703130813,
         "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1786513703,
+        "readUpdateTime": 1786550360,
         "secret": 0,
         "category": "哲学宗教-西方哲学"
       },
@@ -239,7 +239,7 @@
         "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
         "updateTime": 1703130813,
         "finishReading": 0,
-        "readUpdateTime": 1786513703,
+        "readUpdateTime": 1786550360,
         "secret": 0,
         "category": "哲学宗教-西方哲学"
       },
@@ -1541,7 +1541,7 @@
       "1786204800": 3193,
       "1786291200": 878,
       "1786377600": 0,
-      "1786464000": 485
+      "1786464000": 977
     },
     "readDays": 11,
     "readLongest": [
@@ -1642,7 +1642,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 3427,
+        "readTime": 3919,
         "tags": [
           "笔记最多"
         ]
@@ -1721,7 +1721,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 1,
-        "readingTime": 2942
+        "readingTime": 3919
       },
       {
         "categoryId": 300000,
@@ -1784,10 +1784,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.217818793670366,
-    "dayAverageReadTime": 1346,
+    "compare": 2.060709712605521,
+    "dayAverageReadTime": 1281,
     "baseTime": 1785513600,
-    "totalReadTime": 16163,
+    "totalReadTime": 16655,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1989,7 +1989,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 83303
+      "1767196800": 83795
     },
     "readDays": 55,
     "readLongest": [
@@ -2489,7 +2489,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 3427,
+        "readTime": 3919,
         "tags": []
       }
     ],
@@ -2524,7 +2524,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 2,
-        "readingTime": 11221
+        "readingTime": 11713
       },
       {
         "categoryId": 1600000,
@@ -2569,7 +2569,7 @@
       7,
       0,
       0,
-      0,
+      485,
       0,
       67,
       1489,
@@ -2579,7 +2579,7 @@
       3690,
       5637,
       3639,
-      11384,
+      11876,
       6579,
       8282,
       4621,
@@ -2634,7 +2634,7 @@
         "authorId": 294931,
         "name": "赫伯特·马尔库塞",
         "count": 1,
-        "readTime": "57分钟"
+        "readTime": "1小时5分钟"
       },
       {
         "authorId": 183442,
@@ -2695,7 +2695,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 83316,
+    "totalReadTime": 83808,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3065,7 +3065,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有5515人读过"
+        "reason": "仅有5534人读过"
       },
       {
         "type": 8,
@@ -3395,7 +3395,7 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 16163,
+        "1785513600": 16655,
         "1788192000": 0,
         "1790784000": 0,
         "1793462400": 0,
@@ -3900,7 +3900,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 3427,
+          "readTime": 3919,
           "tags": []
         }
       ],
@@ -3930,6 +3930,14 @@
           "readingTime": 18052
         },
         {
+          "categoryId": 600000,
+          "categoryTitle": "哲学宗教",
+          "parentCategoryId": 600000,
+          "parentCategoryTitle": "哲学宗教",
+          "readingCount": 2,
+          "readingTime": 11713
+        },
+        {
           "categoryId": 2100000,
           "categoryTitle": "医学健康",
           "parentCategoryId": 2100000,
@@ -3944,14 +3952,6 @@
           "parentCategoryTitle": "生活百科",
           "readingCount": 1,
           "readingTime": 10732
-        },
-        {
-          "categoryId": 600000,
-          "categoryTitle": "哲学宗教",
-          "parentCategoryId": 600000,
-          "parentCategoryTitle": "哲学宗教",
-          "readingCount": 2,
-          "readingTime": 10736
         },
         {
           "categoryId": 1000000,
@@ -4018,7 +4018,7 @@
           "authorId": 294931,
           "name": "赫伯特·马尔库塞",
           "count": 1,
-          "readTime": "49分钟"
+          "readTime": "1小时5分钟"
         },
         {
           "authorId": 183442,
@@ -4030,6 +4030,14 @@
       "authorCount": 9,
       "preferPublisher": [
         {
+          "name": "浙江科学技术出版社",
+          "count": 1
+        },
+        {
+          "name": "浙江人民出版社有限公司",
+          "count": 1
+        },
+        {
           "name": "中信出版集团",
           "count": 1
         },
@@ -4039,14 +4047,6 @@
         },
         {
           "name": "北京科学技术出版社有限公司",
-          "count": 1
-        },
-        {
-          "name": "浙江人民出版社有限公司",
-          "count": 1
-        },
-        {
-          "name": "浙江科学技术出版社",
           "count": 1
         },
         {
@@ -4077,9 +4077,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 371,
+      "dayAverageReadTime": 372,
       "baseTime": 1767196800,
-      "totalReadTime": 83303,
+      "totalReadTime": 83795,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
