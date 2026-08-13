@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-13T13:46:35Z",
+  "updatedAt": "2026-08-13T19:19:40Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -156,7 +156,7 @@
         "updateTime": 1703130813,
         "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1786550360,
+        "readUpdateTime": 1786641687,
         "secret": 0,
         "category": "哲学宗教-西方哲学"
       },
@@ -233,13 +233,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 11,
+        "readingProgress": 13,
         "markedStatus": 2,
         "lastNoteSort": 1786513656,
         "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
         "updateTime": 1703130813,
         "finishReading": 0,
-        "readUpdateTime": 1786550360,
+        "readUpdateTime": 1786641687,
         "secret": 0,
         "category": "哲学宗教-西方哲学"
       },
@@ -965,7 +965,7 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 11,
+        "readingProgress": 13,
         "noteCount": 6,
         "bookmarkCount": 0,
         "sort": 1786513656
@@ -1541,9 +1541,11 @@
       "1786204800": 3193,
       "1786291200": 878,
       "1786377600": 0,
-      "1786464000": 977
+      "1786464000": 977,
+      "1786550400": 0,
+      "1786636800": 1257
     },
-    "readDays": 11,
+    "readDays": 12,
     "readLongest": [
       {
         "book": {
@@ -1642,7 +1644,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 3919,
+        "readTime": 5176,
         "tags": [
           "笔记最多"
         ]
@@ -1776,7 +1778,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "11天"
+        "counts": "12天"
       },
       {
         "stat": "笔记",
@@ -1784,10 +1786,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.060709712605521,
-    "dayAverageReadTime": 1281,
+    "compare": 2.0565879866126477,
+    "dayAverageReadTime": 1279,
     "baseTime": 1785513600,
-    "totalReadTime": 16655,
+    "totalReadTime": 17912,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1989,9 +1991,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 83795
+      "1767196800": 85052
     },
-    "readDays": 55,
+    "readDays": 56,
     "readLongest": [
       {
         "book": {
@@ -2245,6 +2247,56 @@
       },
       {
         "book": {
+          "bookId": "25424211",
+          "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
+          "author": "赫伯特·马尔库塞",
+          "translator": "刘继",
+          "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/s_YueWen_25424211.jpg",
+          "version": 44968238,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 6,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 6,
+            "maxfreeChapterUid": 6,
+            "maxfreeChapterRatio": 89
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 9030183,
+          "publishTime": "2014-03-01 00:00:00",
+          "lastChapterIdx": 18,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 5499,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 5176,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
           "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
           "author": "",
@@ -2441,56 +2493,6 @@
         },
         "readTime": 4029,
         "tags": []
-      },
-      {
-        "book": {
-          "bookId": "25424211",
-          "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
-          "author": "赫伯特·马尔库塞",
-          "translator": "刘继",
-          "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/s_YueWen_25424211.jpg",
-          "version": 44968238,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 1048577,
-          "finished": 1,
-          "maxFreeChapter": 6,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 6,
-            "maxfreeChapterUid": 6,
-            "maxfreeChapterRatio": 89
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 9030183,
-          "publishTime": "2014-03-01 00:00:00",
-          "lastChapterIdx": 18,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 5499,
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 3919,
-        "tags": []
       }
     ],
     "preferCategory": [
@@ -2524,7 +2526,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 2,
-        "readingTime": 11713
+        "readingTime": 12970
       },
       {
         "categoryId": 1600000,
@@ -2625,16 +2627,16 @@
         "readTime": "2小时9分钟"
       },
       {
+        "authorId": 294931,
+        "name": "赫伯特·马尔库塞",
+        "count": 1,
+        "readTime": "1小时26分钟"
+      },
+      {
         "authorId": 394948,
         "name": "三岛由纪夫",
         "count": 1,
         "readTime": "1小时12分钟"
-      },
-      {
-        "authorId": 294931,
-        "name": "赫伯特·马尔库塞",
-        "count": 1,
-        "readTime": "1小时5分钟"
       },
       {
         "authorId": 183442,
@@ -2685,7 +2687,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "55天"
+        "counts": "56天"
       },
       {
         "stat": "笔记",
@@ -2695,7 +2697,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 83808,
+    "totalReadTime": 85065,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3065,7 +3067,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有5608人读过"
+        "reason": "仅有5623人读过"
       },
       {
         "type": 8,
@@ -3395,13 +3397,13 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 16655,
+        "1785513600": 17912,
         "1788192000": 0,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 53,
+      "readDays": 54,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -3656,6 +3658,56 @@
         },
         {
           "book": {
+            "bookId": "25424211",
+            "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
+            "author": "赫伯特·马尔库塞",
+            "translator": "刘继",
+            "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
+            "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/s_YueWen_25424211.jpg",
+            "version": 44968238,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 1048577,
+            "finished": 1,
+            "maxFreeChapter": 6,
+            "maxFreeInfo": {
+              "maxfreeChapterIdx": 6,
+              "maxfreeChapterUid": 6,
+              "maxfreeChapterRatio": 89
+            },
+            "free": 0,
+            "mcardDiscount": 0,
+            "ispub": 1,
+            "extra_type": 5,
+            "cpid": 9030183,
+            "publishTime": "2014-03-01 00:00:00",
+            "lastChapterIdx": 18,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 5499,
+            "copyrightChapterUids": [
+              2
+            ],
+            "inStoreBookId": "",
+            "blockSaveImg": 0,
+            "language": "zh",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 5176,
+          "tags": []
+        },
+        {
+          "book": {
             "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
             "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
             "author": "",
@@ -3852,56 +3904,6 @@
           },
           "readTime": 4029,
           "tags": []
-        },
-        {
-          "book": {
-            "bookId": "25424211",
-            "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
-            "author": "赫伯特·马尔库塞",
-            "translator": "刘继",
-            "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
-            "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/s_YueWen_25424211.jpg",
-            "version": 44968238,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 1048577,
-            "finished": 1,
-            "maxFreeChapter": 6,
-            "maxFreeInfo": {
-              "maxfreeChapterIdx": 6,
-              "maxfreeChapterUid": 6,
-              "maxfreeChapterRatio": 89
-            },
-            "free": 0,
-            "mcardDiscount": 0,
-            "ispub": 1,
-            "extra_type": 5,
-            "cpid": 9030183,
-            "publishTime": "2014-03-01 00:00:00",
-            "lastChapterIdx": 18,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 5499,
-            "copyrightChapterUids": [
-              2
-            ],
-            "inStoreBookId": "",
-            "blockSaveImg": 0,
-            "language": "zh",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 3919,
-          "tags": []
         }
       ],
       "preferCategory": [
@@ -4069,7 +4071,7 @@
         },
         {
           "stat": "阅读",
-          "counts": "53天"
+          "counts": "54天"
         },
         {
           "stat": "笔记",
@@ -4077,9 +4079,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 372,
+      "dayAverageReadTime": 376,
       "baseTime": 1767196800,
-      "totalReadTime": 83795,
+      "totalReadTime": 85052,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
