@@ -1,10 +1,83 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-08-14T04:21:06.201Z",
+  "updatedAt": "2026-08-15T03:09:38.695Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-08-14",
+        "title": "胸 重量",
+        "start": 1786711186494,
+        "durationMinutes": 0,
+        "setCount": 24,
+        "volumeKg": 7889.5,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "器械飞鸟",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 3504,
+            "maxWeightKg": 73
+          },
+          {
+            "name": "杠铃卧推",
+            "setCount": 4,
+            "totalReps": 20,
+            "volumeKg": 1700,
+            "maxWeightKg": 85
+          },
+          {
+            "name": "上斜史密斯机卧推",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1440,
+            "maxWeightKg": 30
+          },
+          {
+            "name": "双杠臂屈伸（辅助）",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 24.5,
+            "maxWeightKg": 2
+          },
+          {
+            "name": "绳索臂屈伸（单）",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 381,
+            "maxWeightKg": 7.9
+          },
+          {
+            "name": "史密斯机推举",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 840,
+            "maxWeightKg": 17.5
+          }
+        ]
+      },
+      {
+        "date": "2026-08-13",
+        "title": "高强度间歇训练",
+        "start": 1786648453340,
+        "durationMinutes": 118,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 1043,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "HighIntensityIntervalTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-08-12",
         "title": "腿 后侧",
@@ -15042,7 +15115,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-08-12"
+      "to": "2026-08-14"
     }
   },
   "body": {
@@ -15076,11 +15149,17 @@
         "type": "weight",
         "value": 87,
         "unit": "kg"
+      },
+      {
+        "date": "2026-08-14",
+        "type": "weight",
+        "value": 87,
+        "unit": "kg"
       }
     ],
     "latest": {
       "weight": {
-        "date": "2026-07-22",
+        "date": "2026-08-14",
         "type": "weight",
         "value": 87,
         "unit": "kg"
