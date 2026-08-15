@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-15T12:58:41Z",
+  "updatedAt": "2026-08-15T18:47:00Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -156,7 +156,7 @@
         "updateTime": 1703130813,
         "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1786641687,
+        "readUpdateTime": 1786819040,
         "secret": 0,
         "category": "哲学宗教-西方哲学"
       },
@@ -233,13 +233,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 13,
+        "readingProgress": 21,
         "markedStatus": 2,
-        "lastNoteSort": 1786513656,
+        "lastNoteSort": 1786818236,
         "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
         "updateTime": 1703130813,
         "finishReading": 0,
-        "readUpdateTime": 1786641687,
+        "readUpdateTime": 1786819040,
         "secret": 0,
         "category": "哲学宗教-西方哲学"
       },
@@ -965,10 +965,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 13,
-        "noteCount": 6,
+        "readingProgress": 21,
+        "noteCount": 7,
         "bookmarkCount": 0,
-        "sort": 1786513656
+        "sort": 1786818236
       },
       {
         "bookId": "30181899",
@@ -1543,9 +1543,11 @@
       "1786377600": 0,
       "1786464000": 977,
       "1786550400": 0,
-      "1786636800": 1257
+      "1786636800": 1257,
+      "1786723200": 1213,
+      "1786809600": 1182
     },
-    "readDays": 12,
+    "readDays": 14,
     "readLongest": [
       {
         "book": {
@@ -1644,7 +1646,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 5176,
+        "readTime": 7572,
         "tags": [
           "笔记最多"
         ]
@@ -1778,18 +1780,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "12天"
+        "counts": "14天"
       },
       {
         "stat": "笔记",
-        "counts": "10条"
+        "counts": "11条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 1.852815454171805,
-    "dayAverageReadTime": 1194,
+    "compare": 2.032121801787917,
+    "dayAverageReadTime": 1269,
     "baseTime": 1785513600,
-    "totalReadTime": 17912,
+    "totalReadTime": 20307,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1991,9 +1993,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 85052
+      "1767196800": 87447
     },
-    "readDays": 56,
+    "readDays": 58,
     "readLongest": [
       {
         "book": {
@@ -2292,7 +2294,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 5176,
+        "readTime": 7572,
         "tags": []
       },
       {
@@ -2526,7 +2528,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 2,
-        "readingTime": 12970
+        "readingTime": 15366
       },
       {
         "categoryId": 1600000,
@@ -2630,7 +2632,7 @@
         "authorId": 294931,
         "name": "赫伯特·马尔库塞",
         "count": 1,
-        "readTime": "1小时26分钟"
+        "readTime": "2小时6分钟"
       },
       {
         "authorId": 394948,
@@ -2687,17 +2689,17 @@
       },
       {
         "stat": "阅读",
-        "counts": "56天"
+        "counts": "58天"
       },
       {
         "stat": "笔记",
-        "counts": "115条"
+        "counts": "116条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 85065,
+    "totalReadTime": 87460,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3067,7 +3069,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有5696人读过"
+        "reason": "仅有5715人读过"
       },
       {
         "type": 8,
@@ -3397,13 +3399,13 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 17912,
+        "1785513600": 20307,
         "1788192000": 0,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 54,
+      "readDays": 56,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -3703,7 +3705,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 5176,
+          "readTime": 7572,
           "tags": []
         },
         {
@@ -4071,17 +4073,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "54天"
+          "counts": "56天"
         },
         {
           "stat": "笔记",
-          "counts": "115条"
+          "counts": "116条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 374,
+      "dayAverageReadTime": 383,
       "baseTime": 1767196800,
-      "totalReadTime": 85052,
+      "totalReadTime": 87447,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -4278,8 +4280,19 @@
   "notesByBook": {
     "25424211": {
       "highlights": {
-        "synckey": 1786513656,
+        "synckey": 1786818236,
         "updated": [
+          {
+            "bookId": "25424211",
+            "chapterIdx": 7,
+            "bookmarkId": "25424211_7_19027-19049",
+            "range": "19027-19049",
+            "markText": "谁教育了教育者？何以证明教育者拥有“美德”？",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7,
+            "createTime": 1786818236
+          },
           {
             "bookId": "25424211",
             "chapterIdx": 6,
@@ -4349,6 +4362,11 @@
         ],
         "removed": [],
         "chapters": [
+          {
+            "title": "第二章 政治领域的封闭",
+            "chapterUid": 7,
+            "chapterIdx": 7
+          },
           {
             "title": "第一章控制的新形式",
             "chapterUid": 6,
