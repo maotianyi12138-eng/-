@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-14T19:13:18Z",
+  "updatedAt": "2026-08-15T01:49:28Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1723,7 +1723,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 1,
-        "readingTime": 3919
+        "readingTime": 5176
       },
       {
         "categoryId": 300000,
@@ -2582,8 +2582,8 @@
       5637,
       3639,
       11876,
-      6579,
-      8282,
+      7612,
+      8506,
       4621,
       6203,
       4936,
@@ -3067,7 +3067,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有5667人读过"
+        "reason": "仅有5675人读过"
       },
       {
         "type": 8,
@@ -3937,7 +3937,7 @@
           "parentCategoryId": 600000,
           "parentCategoryTitle": "哲学宗教",
           "readingCount": 2,
-          "readingTime": 11713
+          "readingTime": 12970
         },
         {
           "categoryId": 2100000,
@@ -4011,16 +4011,16 @@
           "readTime": "2小时9分钟"
         },
         {
+          "authorId": 294931,
+          "name": "赫伯特·马尔库塞",
+          "count": 1,
+          "readTime": "1小时26分钟"
+        },
+        {
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 1,
           "readTime": "1小时12分钟"
-        },
-        {
-          "authorId": 294931,
-          "name": "赫伯特·马尔库塞",
-          "count": 1,
-          "readTime": "1小时5分钟"
         },
         {
           "authorId": 183442,
