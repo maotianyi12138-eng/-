@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-16T13:00:15Z",
+  "updatedAt": "2026-08-16T18:46:25Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -156,7 +156,7 @@
         "updateTime": 1703130813,
         "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1786819040,
+        "readUpdateTime": 1786905936,
         "secret": 0,
         "category": "哲学宗教-西方哲学"
       },
@@ -233,13 +233,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 21,
+        "readingProgress": 26,
         "markedStatus": 2,
-        "lastNoteSort": 1786818236,
+        "lastNoteSort": 1786891807,
         "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
         "updateTime": 1703130813,
         "finishReading": 0,
-        "readUpdateTime": 1786819040,
+        "readUpdateTime": 1786905936,
         "secret": 0,
         "category": "哲学宗教-西方哲学"
       },
@@ -965,10 +965,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 21,
-        "noteCount": 7,
+        "readingProgress": 26,
+        "noteCount": 9,
         "bookmarkCount": 0,
-        "sort": 1786818236
+        "sort": 1786891807
       },
       {
         "bookId": "30181899",
@@ -1540,12 +1540,11 @@
       "1786118400": 2101,
       "1786204800": 3193,
       "1786291200": 878,
-      "1786377600": 0,
       "1786464000": 977,
-      "1786550400": 0,
       "1786636800": 1257,
       "1786723200": 1213,
-      "1786809600": 1182
+      "1786809600": 2716,
+      "1786896000": 49
     },
     "readDays": 14,
     "readLongest": [
@@ -1595,9 +1594,7 @@
           "isAutoDownload": 1
         },
         "readTime": 10732,
-        "tags": [
-          "单日阅读最久"
-        ]
+        "tags": []
       },
       {
         "book": {
@@ -1646,9 +1643,10 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 7572,
+        "readTime": 9155,
         "tags": [
-          "笔记最多"
+          "笔记最多",
+          "单日阅读最久"
         ]
       },
       {
@@ -1784,14 +1782,14 @@
       },
       {
         "stat": "笔记",
-        "counts": "11条"
+        "counts": "13条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.032121801787917,
-    "dayAverageReadTime": 1269,
+    "compare": 2.0762221658083708,
+    "dayAverageReadTime": 1287,
     "baseTime": 1785513600,
-    "totalReadTime": 20307,
+    "totalReadTime": 21890,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1993,7 +1991,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 87447
+      "1767196800": 89030
     },
     "readDays": 58,
     "readLongest": [
@@ -2149,6 +2147,56 @@
       },
       {
         "book": {
+          "bookId": "25424211",
+          "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
+          "author": "赫伯特·马尔库塞",
+          "translator": "刘继",
+          "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/s_YueWen_25424211.jpg",
+          "version": 44968238,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 6,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 6,
+            "maxfreeChapterUid": 6,
+            "maxfreeChapterRatio": 89
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 9030183,
+          "publishTime": "2014-03-01 00:00:00",
+          "lastChapterIdx": 18,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 5499,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 9155,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "3300140838",
           "title": "创意行为：存在即答案",
           "author": "[美]里克·鲁宾",
@@ -2245,56 +2293,6 @@
           "isAutoDownload": 1
         },
         "readTime": 7794,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "25424211",
-          "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
-          "author": "赫伯特·马尔库塞",
-          "translator": "刘继",
-          "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/s_YueWen_25424211.jpg",
-          "version": 44968238,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 1048577,
-          "finished": 1,
-          "maxFreeChapter": 6,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 6,
-            "maxfreeChapterUid": 6,
-            "maxfreeChapterRatio": 89
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 9030183,
-          "publishTime": "2014-03-01 00:00:00",
-          "lastChapterIdx": 18,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 5499,
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 7572,
         "tags": []
       },
       {
@@ -2528,7 +2526,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 2,
-        "readingTime": 15366
+        "readingTime": 16949
       },
       {
         "categoryId": 1600000,
@@ -2617,6 +2615,12 @@
         "readTime": "2小时58分钟"
       },
       {
+        "authorId": 294931,
+        "name": "赫伯特·马尔库塞",
+        "count": 1,
+        "readTime": "2小时32分钟"
+      },
+      {
         "authorId": 2426523,
         "name": "里克·鲁宾",
         "count": 1,
@@ -2627,12 +2631,6 @@
         "name": "塞涅卡",
         "count": 1,
         "readTime": "2小时9分钟"
-      },
-      {
-        "authorId": 294931,
-        "name": "赫伯特·马尔库塞",
-        "count": 1,
-        "readTime": "2小时6分钟"
       },
       {
         "authorId": 394948,
@@ -2693,13 +2691,13 @@
       },
       {
         "stat": "笔记",
-        "counts": "116条"
+        "counts": "118条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 87460,
+    "totalReadTime": 89043,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3069,7 +3067,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有5745人读过"
+        "reason": "仅有5758人读过"
       },
       {
         "type": 8,
@@ -3399,7 +3397,7 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 20307,
+        "1785513600": 21890,
         "1788192000": 0,
         "1790784000": 0,
         "1793462400": 0,
@@ -3560,6 +3558,56 @@
         },
         {
           "book": {
+            "bookId": "25424211",
+            "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
+            "author": "赫伯特·马尔库塞",
+            "translator": "刘继",
+            "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
+            "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/s_YueWen_25424211.jpg",
+            "version": 44968238,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 1048577,
+            "finished": 1,
+            "maxFreeChapter": 6,
+            "maxFreeInfo": {
+              "maxfreeChapterIdx": 6,
+              "maxfreeChapterUid": 6,
+              "maxfreeChapterRatio": 89
+            },
+            "free": 0,
+            "mcardDiscount": 0,
+            "ispub": 1,
+            "extra_type": 5,
+            "cpid": 9030183,
+            "publishTime": "2014-03-01 00:00:00",
+            "lastChapterIdx": 18,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 5499,
+            "copyrightChapterUids": [
+              2
+            ],
+            "inStoreBookId": "",
+            "blockSaveImg": 0,
+            "language": "zh",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 9155,
+          "tags": []
+        },
+        {
+          "book": {
             "bookId": "3300140838",
             "title": "创意行为：存在即答案",
             "author": "[美]里克·鲁宾",
@@ -3656,56 +3704,6 @@
             "isAutoDownload": 1
           },
           "readTime": 7794,
-          "tags": []
-        },
-        {
-          "book": {
-            "bookId": "25424211",
-            "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
-            "author": "赫伯特·马尔库塞",
-            "translator": "刘继",
-            "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
-            "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/s_YueWen_25424211.jpg",
-            "version": 44968238,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 1048577,
-            "finished": 1,
-            "maxFreeChapter": 6,
-            "maxFreeInfo": {
-              "maxfreeChapterIdx": 6,
-              "maxfreeChapterUid": 6,
-              "maxfreeChapterRatio": 89
-            },
-            "free": 0,
-            "mcardDiscount": 0,
-            "ispub": 1,
-            "extra_type": 5,
-            "cpid": 9030183,
-            "publishTime": "2014-03-01 00:00:00",
-            "lastChapterIdx": 18,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 5499,
-            "copyrightChapterUids": [
-              2
-            ],
-            "inStoreBookId": "",
-            "blockSaveImg": 0,
-            "language": "zh",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 7572,
           "tags": []
         },
         {
@@ -4077,13 +4075,13 @@
         },
         {
           "stat": "笔记",
-          "counts": "116条"
+          "counts": "118条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 383,
+      "dayAverageReadTime": 388,
       "baseTime": 1767196800,
-      "totalReadTime": 87447,
+      "totalReadTime": 89030,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -4280,8 +4278,30 @@
   "notesByBook": {
     "25424211": {
       "highlights": {
-        "synckey": 1786818236,
+        "synckey": 1786891807,
         "updated": [
+          {
+            "bookId": "25424211",
+            "chapterIdx": 8,
+            "bookmarkId": "25424211_8_1598-2085",
+            "range": "1598-2085",
+            "markText": "正像人们知道或觉察到广告和政治演讲未必是真的或正确的，但还是要去听、去读甚至让自己受其指导一样，人们接受传统价值观念并使之成为自己的精神武器。如果大众传播媒介能把艺术、政治、宗教、哲学同商业和谐地乃至天衣无缝地融合在一起的话，它们就将使这些文化领域具备一个共同特征——商品形式。发自心灵的音乐也是推销术的音乐。起作用的是交换价值，而不是真实的价值。现状的合理性就是以此为中心的，一切异己的合理性也都服从于此。\n当竞选领袖和政治家在电视、电台和舞台上说出自由、完善这些伟大的字眼时，这些字眼就变成了毫无意义的声音，它们只有在宣传、商业、训练和消遣的语境中才能获得意义。理想与现实同化到这种程度，说明理想已被超越。它被从心灵、精神或内心世界的高尚领域里拽了出来，并被转换为操作性术语和问题。这里也有大众文化的进步因素存在。这一倒错表明了如下事实：发达工业社会面临各种理想物质化的可能。该社会的各种能力正在逐渐缩小对人的条件加以描绘、理想化和说明的高尚领域。高层文化变成物质文化的组成部分。在此过程中，它丧失了更大部分真理。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 8,
+            "createTime": 1786891807
+          },
+          {
+            "bookId": "25424211",
+            "chapterIdx": 7,
+            "bookmarkId": "25424211_7_28648-28669",
+            "range": "28648-28669",
+            "markText": "无知和无意识状态正是民族主义不断扶持的东西",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7,
+            "createTime": 1786891806
+          },
           {
             "bookId": "25424211",
             "chapterIdx": 7,
@@ -4362,6 +4382,11 @@
         ],
         "removed": [],
         "chapters": [
+          {
+            "title": "第三章 不幸意识的征服：压抑性的俗化趋势",
+            "chapterUid": 8,
+            "chapterIdx": 8
+          },
           {
             "title": "第二章 政治领域的封闭",
             "chapterUid": 7,
