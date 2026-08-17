@@ -1,10 +1,43 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-08-16T03:23:44.218Z",
+  "updatedAt": "2026-08-17T03:24:37.614Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-08-16",
+        "title": "背",
+        "start": 1786883106714,
+        "durationMinutes": 27,
+        "setCount": 12,
+        "volumeKg": 3019.8,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "引体向上",
+            "setCount": 5,
+            "totalReps": 60,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          },
+          {
+            "name": "绳索直臂下压",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 979.8,
+            "maxWeightKg": 20.4
+          },
+          {
+            "name": "杠铃划船",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 2040,
+            "maxWeightKg": 60
+          }
+        ]
+      },
       {
         "date": "2026-08-14",
         "title": "胸 重量",
@@ -15115,7 +15148,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-08-14"
+      "to": "2026-08-16"
     }
   },
   "body": {
