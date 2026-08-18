@@ -1,17 +1,95 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-08-17T03:24:37.614Z",
+  "updatedAt": "2026-08-18T03:13:15.916Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-08-17",
+        "title": "腿 后侧",
+        "start": 1786981092941,
+        "durationMinutes": 153,
+        "setCount": 16,
+        "volumeKg": 9648,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "腿弯举",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1296,
+            "maxWeightKg": 27
+          },
+          {
+            "name": "坐姿髋外展",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2496,
+            "maxWeightKg": 52
+          },
+          {
+            "name": "坐姿髋内收",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2496,
+            "maxWeightKg": 52
+          },
+          {
+            "name": "深蹲",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 3360,
+            "maxWeightKg": 80
+          }
+        ]
+      },
+      {
+        "date": "2026-08-16",
+        "title": "游泳",
+        "start": 1786893437656,
+        "durationMinutes": 93,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 713,
+        "distance": 1.6,
+        "movements": [
+          {
+            "name": "Swimming",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-16",
+        "title": "自行车",
+        "start": 1786886605342,
+        "durationMinutes": 84,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 243,
+        "distance": 6.15,
+        "movements": [
+          {
+            "name": "Cycling",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-08-16",
         "title": "背",
         "start": 1786883106714,
         "durationMinutes": 27,
-        "setCount": 12,
-        "volumeKg": 3019.8,
+        "setCount": 15,
+        "volumeKg": 5155.8,
         "calories": 0,
         "distance": 0,
         "movements": [
@@ -31,10 +109,17 @@
           },
           {
             "name": "杠铃划船",
-            "setCount": 3,
-            "totalReps": 36,
-            "volumeKg": 2040,
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2760,
             "maxWeightKg": 60
+          },
+          {
+            "name": "宽距高位下拉",
+            "setCount": 2,
+            "totalReps": 24,
+            "volumeKg": 1416,
+            "maxWeightKg": 59
           }
         ]
       },
@@ -15148,7 +15233,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-08-16"
+      "to": "2026-08-17"
     }
   },
   "body": {
