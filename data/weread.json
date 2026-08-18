@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-18T01:50:08Z",
+  "updatedAt": "2026-08-18T07:03:38Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -156,7 +156,7 @@
         "updateTime": 1703130813,
         "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1786908471,
+        "readUpdateTime": 1787033030,
         "secret": 0,
         "category": "哲学宗教-西方哲学"
       },
@@ -233,13 +233,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 31,
+        "readingProgress": 36,
         "markedStatus": 2,
         "lastNoteSort": 1786891807,
         "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
         "updateTime": 1703130813,
         "finishReading": 0,
-        "readUpdateTime": 1786908471,
+        "readUpdateTime": 1787033030,
         "secret": 0,
         "category": "哲学宗教-西方哲学"
       },
@@ -965,7 +965,7 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 31,
+        "readingProgress": 36,
         "noteCount": 9,
         "bookmarkCount": 0,
         "sort": 1786891807
@@ -1544,58 +1544,11 @@
       "1786636800": 1257,
       "1786723200": 1213,
       "1786809600": 2716,
-      "1786896000": 989
+      "1786896000": 989,
+      "1786982400": 741
     },
-    "readDays": 15,
+    "readDays": 16,
     "readLongest": [
-      {
-        "book": {
-          "bookId": "30181899",
-          "title": "高级运动营养学",
-          "author": "丹·贝纳多特",
-          "translator": "安江红,刘勇,周帆扬,赵之光",
-          "intro": "世界各地的精英运动员都知道丹·贝纳多特（Dan Benardot）博士，并渴望得到他的指导，因为他们知道，他的真知灼见可能是运动员能否获得金牌的决定性因素。来自各个大洲的很多高等院校都邀请丹前去讲学，他们希望学生们能师从最好的专家。在佐治亚州立大学（Georgia State University），我们只知道他是丹——一位了不起的朋友，一位出色的同事，一位忠实的丈夫，以及世界上最棒的孩子的父亲。《高级运动营养学》的第1 版非常成功。它被广泛应用于各种教学场合，以及拥有不同身材、体型和技能的运动员。精英运动员和普通运动员都在使用这本书。它已经成为运动营养师和运动科学专业的学生学习人类运动表现相关营养知识的必读书。对那些需要指导运动员如何在比赛中取得优势的教练员而言，它同样是首选读物。但就像每一本成功的图书一样，它需要进行一些修订和更新。这正是《高级运动营养学（第2 版）》如此重要的原因。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/s_YueWen_30181899.jpg",
-          "version": 315626625,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 1048577,
-          "finished": 1,
-          "maxFreeChapter": 17,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 17,
-            "maxfreeChapterUid": 17,
-            "maxfreeChapterRatio": 8
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1765053,
-          "publishTime": "2019-01-08 00:00:00",
-          "lastChapterIdx": 95,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 8398,
-          "copyrightChapterUids": [],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 10732,
-        "tags": []
-      },
       {
         "book": {
           "bookId": "25424211",
@@ -1643,11 +1596,59 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 10095,
+        "readTime": 10836,
         "tags": [
           "笔记最多",
           "单日阅读最久"
         ]
+      },
+      {
+        "book": {
+          "bookId": "30181899",
+          "title": "高级运动营养学",
+          "author": "丹·贝纳多特",
+          "translator": "安江红,刘勇,周帆扬,赵之光",
+          "intro": "世界各地的精英运动员都知道丹·贝纳多特（Dan Benardot）博士，并渴望得到他的指导，因为他们知道，他的真知灼见可能是运动员能否获得金牌的决定性因素。来自各个大洲的很多高等院校都邀请丹前去讲学，他们希望学生们能师从最好的专家。在佐治亚州立大学（Georgia State University），我们只知道他是丹——一位了不起的朋友，一位出色的同事，一位忠实的丈夫，以及世界上最棒的孩子的父亲。《高级运动营养学》的第1 版非常成功。它被广泛应用于各种教学场合，以及拥有不同身材、体型和技能的运动员。精英运动员和普通运动员都在使用这本书。它已经成为运动营养师和运动科学专业的学生学习人类运动表现相关营养知识的必读书。对那些需要指导运动员如何在比赛中取得优势的教练员而言，它同样是首选读物。但就像每一本成功的图书一样，它需要进行一些修订和更新。这正是《高级运动营养学（第2 版）》如此重要的原因。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/s_YueWen_30181899.jpg",
+          "version": 315626625,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 17,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 17,
+            "maxfreeChapterUid": 17,
+            "maxfreeChapterRatio": 8
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1765053,
+          "publishTime": "2019-01-08 00:00:00",
+          "lastChapterIdx": 95,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 8398,
+          "copyrightChapterUids": [],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 10732,
+        "tags": []
       },
       {
         "book": {
@@ -1778,7 +1779,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "15天"
+        "counts": "16天"
       },
       {
         "stat": "笔记",
@@ -1786,10 +1787,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.030081175503494,
-    "dayAverageReadTime": 1268,
+    "compare": 2.128429408138101,
+    "dayAverageReadTime": 1309,
     "baseTime": 1785513600,
-    "totalReadTime": 22830,
+    "totalReadTime": 23571,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1991,9 +1992,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 89970
+      "1767196800": 90711
     },
-    "readDays": 59,
+    "readDays": 60,
     "readLongest": [
       {
         "book": {
@@ -2099,54 +2100,6 @@
       },
       {
         "book": {
-          "bookId": "30181899",
-          "title": "高级运动营养学",
-          "author": "丹·贝纳多特",
-          "translator": "安江红,刘勇,周帆扬,赵之光",
-          "intro": "世界各地的精英运动员都知道丹·贝纳多特（Dan Benardot）博士，并渴望得到他的指导，因为他们知道，他的真知灼见可能是运动员能否获得金牌的决定性因素。来自各个大洲的很多高等院校都邀请丹前去讲学，他们希望学生们能师从最好的专家。在佐治亚州立大学（Georgia State University），我们只知道他是丹——一位了不起的朋友，一位出色的同事，一位忠实的丈夫，以及世界上最棒的孩子的父亲。《高级运动营养学》的第1 版非常成功。它被广泛应用于各种教学场合，以及拥有不同身材、体型和技能的运动员。精英运动员和普通运动员都在使用这本书。它已经成为运动营养师和运动科学专业的学生学习人类运动表现相关营养知识的必读书。对那些需要指导运动员如何在比赛中取得优势的教练员而言，它同样是首选读物。但就像每一本成功的图书一样，它需要进行一些修订和更新。这正是《高级运动营养学（第2 版）》如此重要的原因。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/s_YueWen_30181899.jpg",
-          "version": 315626625,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 1048577,
-          "finished": 1,
-          "maxFreeChapter": 17,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 17,
-            "maxfreeChapterUid": 17,
-            "maxfreeChapterRatio": 8
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1765053,
-          "publishTime": "2019-01-08 00:00:00",
-          "lastChapterIdx": 95,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 8398,
-          "copyrightChapterUids": [],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 10732,
-        "tags": []
-      },
-      {
-        "book": {
           "bookId": "25424211",
           "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
           "author": "赫伯特·马尔库塞",
@@ -2192,7 +2145,55 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 10095,
+        "readTime": 10836,
+        "tags": []
+      },
+      {
+        "book": {
+          "bookId": "30181899",
+          "title": "高级运动营养学",
+          "author": "丹·贝纳多特",
+          "translator": "安江红,刘勇,周帆扬,赵之光",
+          "intro": "世界各地的精英运动员都知道丹·贝纳多特（Dan Benardot）博士，并渴望得到他的指导，因为他们知道，他的真知灼见可能是运动员能否获得金牌的决定性因素。来自各个大洲的很多高等院校都邀请丹前去讲学，他们希望学生们能师从最好的专家。在佐治亚州立大学（Georgia State University），我们只知道他是丹——一位了不起的朋友，一位出色的同事，一位忠实的丈夫，以及世界上最棒的孩子的父亲。《高级运动营养学》的第1 版非常成功。它被广泛应用于各种教学场合，以及拥有不同身材、体型和技能的运动员。精英运动员和普通运动员都在使用这本书。它已经成为运动营养师和运动科学专业的学生学习人类运动表现相关营养知识的必读书。对那些需要指导运动员如何在比赛中取得优势的教练员而言，它同样是首选读物。但就像每一本成功的图书一样，它需要进行一些修订和更新。这正是《高级运动营养学（第2 版）》如此重要的原因。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/s_YueWen_30181899.jpg",
+          "version": 315626625,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 17,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 17,
+            "maxfreeChapterUid": 17,
+            "maxfreeChapterRatio": 8
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1765053,
+          "publishTime": "2019-01-08 00:00:00",
+          "lastChapterIdx": 95,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 8398,
+          "copyrightChapterUids": [],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 10732,
         "tags": []
       },
       {
@@ -2513,20 +2514,20 @@
         "readingTime": 21744
       },
       {
+        "categoryId": 600000,
+        "categoryTitle": "哲学宗教",
+        "parentCategoryId": 600000,
+        "parentCategoryTitle": "哲学宗教",
+        "readingCount": 2,
+        "readingTime": 18630
+      },
+      {
         "categoryId": 1100000,
         "categoryTitle": "经济理财",
         "parentCategoryId": 1100000,
         "parentCategoryTitle": "经济理财",
         "readingCount": 1,
         "readingTime": 18052
-      },
-      {
-        "categoryId": 600000,
-        "categoryTitle": "哲学宗教",
-        "parentCategoryId": 600000,
-        "parentCategoryTitle": "哲学宗教",
-        "readingCount": 2,
-        "readingTime": 17889
       },
       {
         "categoryId": 1600000,
@@ -2609,16 +2610,16 @@
         "readTime": "3小时18分钟"
       },
       {
+        "authorId": 294931,
+        "name": "赫伯特·马尔库塞",
+        "count": 1,
+        "readTime": "3小时"
+      },
+      {
         "authorId": 778714,
         "name": "丹·贝纳多特",
         "count": 1,
         "readTime": "2小时58分钟"
-      },
-      {
-        "authorId": 294931,
-        "name": "赫伯特·马尔库塞",
-        "count": 1,
-        "readTime": "2小时48分钟"
       },
       {
         "authorId": 2426523,
@@ -2687,7 +2688,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "59天"
+        "counts": "60天"
       },
       {
         "stat": "笔记",
@@ -2697,7 +2698,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 89983,
+    "totalReadTime": 90724,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2965,7 +2966,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "阅读了2小时"
+        "reason": "阅读了3小时"
       },
       {
         "type": 2,
@@ -3071,7 +3072,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有5802人读过"
+        "reason": "仅有5816人读过"
       },
       {
         "type": 8,
@@ -3401,13 +3402,13 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 22830,
+        "1785513600": 23571,
         "1788192000": 0,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 57,
+      "readDays": 58,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -3514,54 +3515,6 @@
         },
         {
           "book": {
-            "bookId": "30181899",
-            "title": "高级运动营养学",
-            "author": "丹·贝纳多特",
-            "translator": "安江红,刘勇,周帆扬,赵之光",
-            "intro": "世界各地的精英运动员都知道丹·贝纳多特（Dan Benardot）博士，并渴望得到他的指导，因为他们知道，他的真知灼见可能是运动员能否获得金牌的决定性因素。来自各个大洲的很多高等院校都邀请丹前去讲学，他们希望学生们能师从最好的专家。在佐治亚州立大学（Georgia State University），我们只知道他是丹——一位了不起的朋友，一位出色的同事，一位忠实的丈夫，以及世界上最棒的孩子的父亲。《高级运动营养学》的第1 版非常成功。它被广泛应用于各种教学场合，以及拥有不同身材、体型和技能的运动员。精英运动员和普通运动员都在使用这本书。它已经成为运动营养师和运动科学专业的学生学习人类运动表现相关营养知识的必读书。对那些需要指导运动员如何在比赛中取得优势的教练员而言，它同样是首选读物。但就像每一本成功的图书一样，它需要进行一些修订和更新。这正是《高级运动营养学（第2 版）》如此重要的原因。",
-            "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/s_YueWen_30181899.jpg",
-            "version": 315626625,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 1048577,
-            "finished": 1,
-            "maxFreeChapter": 17,
-            "maxFreeInfo": {
-              "maxfreeChapterIdx": 17,
-              "maxfreeChapterUid": 17,
-              "maxfreeChapterRatio": 8
-            },
-            "free": 0,
-            "mcardDiscount": 0,
-            "ispub": 1,
-            "extra_type": 5,
-            "cpid": 1765053,
-            "publishTime": "2019-01-08 00:00:00",
-            "lastChapterIdx": 95,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 8398,
-            "copyrightChapterUids": [],
-            "inStoreBookId": "",
-            "blockSaveImg": 0,
-            "language": "zh",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 10732,
-          "tags": []
-        },
-        {
-          "book": {
             "bookId": "25424211",
             "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
             "author": "赫伯特·马尔库塞",
@@ -3607,7 +3560,55 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 10095,
+          "readTime": 10836,
+          "tags": []
+        },
+        {
+          "book": {
+            "bookId": "30181899",
+            "title": "高级运动营养学",
+            "author": "丹·贝纳多特",
+            "translator": "安江红,刘勇,周帆扬,赵之光",
+            "intro": "世界各地的精英运动员都知道丹·贝纳多特（Dan Benardot）博士，并渴望得到他的指导，因为他们知道，他的真知灼见可能是运动员能否获得金牌的决定性因素。来自各个大洲的很多高等院校都邀请丹前去讲学，他们希望学生们能师从最好的专家。在佐治亚州立大学（Georgia State University），我们只知道他是丹——一位了不起的朋友，一位出色的同事，一位忠实的丈夫，以及世界上最棒的孩子的父亲。《高级运动营养学》的第1 版非常成功。它被广泛应用于各种教学场合，以及拥有不同身材、体型和技能的运动员。精英运动员和普通运动员都在使用这本书。它已经成为运动营养师和运动科学专业的学生学习人类运动表现相关营养知识的必读书。对那些需要指导运动员如何在比赛中取得优势的教练员而言，它同样是首选读物。但就像每一本成功的图书一样，它需要进行一些修订和更新。这正是《高级运动营养学（第2 版）》如此重要的原因。",
+            "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/s_YueWen_30181899.jpg",
+            "version": 315626625,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 1048577,
+            "finished": 1,
+            "maxFreeChapter": 17,
+            "maxFreeInfo": {
+              "maxfreeChapterIdx": 17,
+              "maxfreeChapterUid": 17,
+              "maxfreeChapterRatio": 8
+            },
+            "free": 0,
+            "mcardDiscount": 0,
+            "ispub": 1,
+            "extra_type": 5,
+            "cpid": 1765053,
+            "publishTime": "2019-01-08 00:00:00",
+            "lastChapterIdx": 95,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 8398,
+            "copyrightChapterUids": [],
+            "inStoreBookId": "",
+            "blockSaveImg": 0,
+            "language": "zh",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 10732,
           "tags": []
         },
         {
@@ -4036,6 +4037,14 @@
       "authorCount": 9,
       "preferPublisher": [
         {
+          "name": "浙江科学技术出版社",
+          "count": 1
+        },
+        {
+          "name": "浙江人民出版社有限公司",
+          "count": 1
+        },
+        {
           "name": "中信出版集团",
           "count": 1
         },
@@ -4045,14 +4054,6 @@
         },
         {
           "name": "北京科学技术出版社有限公司",
-          "count": 1
-        },
-        {
-          "name": "浙江人民出版社有限公司",
-          "count": 1
-        },
-        {
-          "name": "浙江科学技术出版社",
           "count": 1
         },
         {
@@ -4075,7 +4076,7 @@
         },
         {
           "stat": "阅读",
-          "counts": "57天"
+          "counts": "58天"
         },
         {
           "stat": "笔记",
@@ -4083,9 +4084,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 391,
+      "dayAverageReadTime": 394,
       "baseTime": 1767196800,
-      "totalReadTime": 89970,
+      "totalReadTime": 90711,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
