@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-19T13:08:03Z",
+  "updatedAt": "2026-08-19T18:52:36Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -50,7 +50,7 @@
         "updateTime": 1782095492,
         "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/t6_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1787144770,
+        "readUpdateTime": 1787146478,
         "secret": 0,
         "category": "个人成长-人生哲学"
       },
@@ -235,11 +235,11 @@
         "isAutoDownload": 1,
         "readingProgress": 99,
         "markedStatus": 2,
-        "lastNoteSort": 1787144796,
+        "lastNoteSort": 1787145930,
         "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
         "updateTime": 1782095492,
         "finishReading": 0,
-        "readUpdateTime": 1787144770,
+        "readUpdateTime": 1787146478,
         "secret": 0,
         "category": "个人成长-人生哲学"
       },
@@ -1021,9 +1021,9 @@
         "reviewCount": 0,
         "markedStatus": 2,
         "readingProgress": 99,
-        "noteCount": 10,
+        "noteCount": 12,
         "bookmarkCount": 0,
-        "sort": 1787144796
+        "sort": 1787145930
       },
       {
         "bookId": "25424211",
@@ -1668,7 +1668,7 @@
       "1786809600": 2716,
       "1786896000": 989,
       "1786982400": 741,
-      "1787068800": 5835
+      "1787068800": 7507
     },
     "readDays": 17,
     "readLongest": [
@@ -1720,9 +1720,7 @@
           "isAutoDownload": 1
         },
         "readTime": 12495,
-        "tags": [
-          "笔记最多"
-        ]
+        "tags": []
       },
       {
         "book": {
@@ -1819,8 +1817,9 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 4176,
+        "readTime": 5848,
         "tags": [
+          "笔记最多",
           "单日阅读最久"
         ]
       },
@@ -1957,14 +1956,14 @@
       },
       {
         "stat": "笔记",
-        "counts": "22条"
+        "counts": "25条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.697457654617432,
-    "dayAverageReadTime": 1547,
+    "compare": 2.712307336621455,
+    "dayAverageReadTime": 1553,
     "baseTime": 1785513600,
-    "totalReadTime": 29406,
+    "totalReadTime": 31078,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1983,42 +1982,42 @@
         "type": 5,
         "title": "思考最多",
         "bookInfo": {
-          "bookId": "25424211",
-          "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
-          "author": "赫伯特·马尔库塞",
-          "translator": "刘继",
-          "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/s_YueWen_25424211.jpg",
-          "version": 44968238,
+          "bookId": "3300106416",
+          "title": "箭术与禅心：一位西方哲学家的禅悟实录",
+          "author": "[德]奥根·赫立格尔",
+          "translator": "靳婷婷",
+          "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/s_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
+          "version": 1037611980,
           "format": "epub",
           "type": 0,
           "soldout": 0,
           "bookStatus": 1,
-          "payType": 1048577,
+          "payType": 4097,
           "finished": 1,
-          "maxFreeChapter": 6,
+          "maxFreeChapter": 5,
           "maxFreeInfo": {
-            "maxfreeChapterIdx": 6,
-            "maxfreeChapterUid": 6,
-            "maxfreeChapterRatio": 89
+            "maxfreeChapterIdx": 5,
+            "maxfreeChapterUid": 5,
+            "maxfreeChapterRatio": 69
           },
           "free": 0,
           "mcardDiscount": 0,
           "ispub": 1,
           "extra_type": 5,
-          "cpid": 9030183,
-          "publishTime": "2014-03-01 00:00:00",
-          "lastChapterIdx": 18,
+          "cpid": 1000000190,
+          "publishTime": "2024-07-16 00:00:00",
+          "lastChapterIdx": 16,
           "paperBook": {
             "skuId": ""
           },
-          "centPrice": 5499,
+          "centPrice": 1620,
           "copyrightChapterUids": [
             2
           ],
           "inStoreBookId": "",
           "blockSaveImg": 0,
-          "language": "zh",
+          "language": "zh-wr",
           "isTraditionalChinese": false,
           "hideUpdateTime": false,
           "isEPUBComics": 0,
@@ -2168,7 +2167,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 96546
+      "1767196800": 98218
     },
     "readDays": 61,
     "readLongest": [
@@ -2221,8 +2220,7 @@
         },
         "readTime": 18052,
         "tags": [
-          "笔记最多",
-          "单日阅读最久"
+          "笔记最多"
         ]
       },
       {
@@ -2474,6 +2472,58 @@
       },
       {
         "book": {
+          "bookId": "3300106416",
+          "title": "箭术与禅心：一位西方哲学家的禅悟实录",
+          "author": "[德]奥根·赫立格尔",
+          "translator": "靳婷婷",
+          "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/s_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
+          "version": 1037611980,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 5,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 5,
+            "maxfreeChapterUid": 5,
+            "maxfreeChapterRatio": 69
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000190,
+          "publishTime": "2024-07-16 00:00:00",
+          "lastChapterIdx": 16,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 1620,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 5877,
+        "tags": [
+          "单日阅读最久"
+        ]
+      },
+      {
+        "book": {
           "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
           "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
           "author": "",
@@ -2620,56 +2670,6 @@
         },
         "readTime": 4375,
         "tags": []
-      },
-      {
-        "book": {
-          "bookId": "3300106416",
-          "title": "箭术与禅心：一位西方哲学家的禅悟实录",
-          "author": "[德]奥根·赫立格尔",
-          "translator": "靳婷婷",
-          "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/s_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
-          "version": 1037611980,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 5,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 5,
-            "maxfreeChapterUid": 5,
-            "maxfreeChapterRatio": 69
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1000000190,
-          "publishTime": "2024-07-16 00:00:00",
-          "lastChapterIdx": 16,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 1620,
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 4205,
-        "tags": []
       }
     ],
     "preferCategory": [
@@ -2711,7 +2711,7 @@
         "parentCategoryId": 1000000,
         "parentCategoryTitle": "个人成长",
         "readingCount": 2,
-        "readingTime": 12375
+        "readingTime": 14047
       },
       {
         "categoryId": 1600000,
@@ -2810,16 +2810,16 @@
         "readTime": "2小时9分钟"
       },
       {
+        "authorId": 420398,
+        "name": "奥根·赫立格尔",
+        "count": 1,
+        "readTime": "1小时37分钟"
+      },
+      {
         "authorId": 394948,
         "name": "三岛由纪夫",
         "count": 1,
         "readTime": "1小时12分钟"
-      },
-      {
-        "authorId": 420398,
-        "name": "奥根·赫立格尔",
-        "count": 1,
-        "readTime": "1小时10分钟"
       },
       {
         "authorId": 183442,
@@ -2966,13 +2966,13 @@
       },
       {
         "stat": "笔记",
-        "counts": "128条"
+        "counts": "130条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 96559,
+    "totalReadTime": 98231,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3346,7 +3346,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有5876人读过"
+        "reason": "仅有5892人读过"
       },
       {
         "type": 8,
@@ -3676,7 +3676,7 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 29406,
+        "1785513600": 31078,
         "1788192000": 0,
         "1790784000": 0,
         "1793462400": 0,
@@ -3734,8 +3734,7 @@
           },
           "readTime": 18052,
           "tags": [
-            "笔记最多",
-            "单日阅读最久"
+            "笔记最多"
           ]
         },
         {
@@ -3987,6 +3986,58 @@
         },
         {
           "book": {
+            "bookId": "3300106416",
+            "title": "箭术与禅心：一位西方哲学家的禅悟实录",
+            "author": "[德]奥根·赫立格尔",
+            "translator": "靳婷婷",
+            "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
+            "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/s_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
+            "version": 1037611980,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 4097,
+            "finished": 1,
+            "maxFreeChapter": 5,
+            "maxFreeInfo": {
+              "maxfreeChapterIdx": 5,
+              "maxfreeChapterUid": 5,
+              "maxfreeChapterRatio": 69
+            },
+            "free": 0,
+            "mcardDiscount": 0,
+            "ispub": 1,
+            "extra_type": 5,
+            "cpid": 1000000190,
+            "publishTime": "2024-07-16 00:00:00",
+            "lastChapterIdx": 16,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 1620,
+            "copyrightChapterUids": [
+              2
+            ],
+            "inStoreBookId": "",
+            "blockSaveImg": 0,
+            "language": "zh-wr",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 5877,
+          "tags": [
+            "单日阅读最久"
+          ]
+        },
+        {
+          "book": {
             "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
             "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
             "author": "",
@@ -4132,56 +4183,6 @@
             "isAutoDownload": 1
           },
           "readTime": 4375,
-          "tags": []
-        },
-        {
-          "book": {
-            "bookId": "3300106416",
-            "title": "箭术与禅心：一位西方哲学家的禅悟实录",
-            "author": "[德]奥根·赫立格尔",
-            "translator": "靳婷婷",
-            "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
-            "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/s_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
-            "version": 1037611980,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 4097,
-            "finished": 1,
-            "maxFreeChapter": 5,
-            "maxFreeInfo": {
-              "maxfreeChapterIdx": 5,
-              "maxfreeChapterUid": 5,
-              "maxfreeChapterRatio": 69
-            },
-            "free": 0,
-            "mcardDiscount": 0,
-            "ispub": 1,
-            "extra_type": 5,
-            "cpid": 1000000190,
-            "publishTime": "2024-07-16 00:00:00",
-            "lastChapterIdx": 16,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 1620,
-            "copyrightChapterUids": [
-              2
-            ],
-            "inStoreBookId": "",
-            "blockSaveImg": 0,
-            "language": "zh-wr",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 4205,
           "tags": []
         }
       ],
@@ -4354,13 +4355,13 @@
         },
         {
           "stat": "笔记",
-          "counts": "127条"
+          "counts": "130条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 417,
+      "dayAverageReadTime": 423,
       "baseTime": 1767196800,
-      "totalReadTime": 96546,
+      "totalReadTime": 98218,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -4557,8 +4558,41 @@
   "notesByBook": {
     "3300106416": {
       "highlights": {
-        "synckey": 1787144796,
+        "synckey": 1787145930,
         "updated": [
+          {
+            "bookId": "3300106416",
+            "chapterIdx": 10,
+            "bookmarkId": "3300106416_10_3188-3263",
+            "range": "3188-3263",
+            "markText": "想要平息这一干扰，唯一有用的方法就是继续平静而泰然地呼吸，与当下出现的任何事物建立起友善的关系，让自己熟悉它们，平静地看着它们，最终对这种凝看产生倦怠",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 10,
+            "createTime": 1787145930
+          },
+          {
+            "bookId": "3300106416",
+            "chapterIdx": 10,
+            "bookmarkId": "3300106416_10_2551-3001",
+            "range": "2551-3001",
+            "markText": "想要达到关闭感官之门的要求，靠的不是心急气躁地远离感官世界，而是一种不加抵抗而水到渠成的放手。想要通过直觉完成这一无为之举，灵魂就必须要由内而定，而这种定力，则是通过专注呼吸达到的。这种呼吸要刻意练习，其一丝不苟几乎达到了谨小慎微的程度。吸气和吐气都要分别开来，以精益求精的态度一再练习。无须很久，效果就会凸显。越发专注于呼吸，外界的干扰就越发隐匿在身后。刚开始的时候，这些干扰如掩去半只耳朵听到的模糊呼啸一般渐渐消退，最后就像远处大海的咆哮一般，不会惹人心神不宁，而一旦习惯了这呼啸声，便会不加察觉了。到了一定时机，更大的干扰也不再让人分心，与此同时，从这些干扰中超脱出来也变得越发容易和迅速。只需注意身体在行坐卧时都要保持放松，如此一来，一旦专注于呼吸，便能很快发觉自己被一层不可渗透的宁谧包裹其中。所能意识和感觉的，只有自己的呼吸。而且，想要超脱这种感觉和知悉的状态，并不需下新的决心，因为呼吸会自行减慢，对于每口气变得更加物尽其用，最后，呼吸一步步化为一种模糊而单一的重复，从心念中全然脱离。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 10,
+            "createTime": 1787145830
+          },
+          {
+            "bookId": "3300106416",
+            "chapterIdx": 9,
+            "bookmarkId": "3300106416_9_5053-5143",
+            "range": "5053-5143",
+            "markText": "射手以弓之上端刺破苍穹，弓之下端仿佛以线悬吊大地。放箭时若是晃动，这根丝线便有绷断的危险。对于那些执着于目的和激情涌动之人，这种断裂不可避免，而他们便会迷失在天地之间的恐怖之境。”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 9,
+            "createTime": 1787144868
+          },
           {
             "bookId": "3300106416",
             "chapterIdx": 9,
@@ -4662,19 +4696,14 @@
         "removed": [],
         "chapters": [
           {
-            "title": "第四章 无靶之箭",
-            "chapterUid": 9,
-            "chapterIdx": 9
+            "title": "第五章 当下的正念",
+            "chapterUid": 10,
+            "chapterIdx": 10
           },
           {
-            "title": "第三章 灵魂拉弓",
-            "chapterUid": 8,
-            "chapterIdx": 8
-          },
-          {
-            "title": "译者序",
-            "chapterUid": 5,
-            "chapterIdx": 5
+            "title": "序",
+            "chapterUid": 3,
+            "chapterIdx": 3
           },
           {
             "title": "第一章 射箭的艺术",
@@ -4682,9 +4711,19 @@
             "chapterIdx": 6
           },
           {
-            "title": "序",
-            "chapterUid": 3,
-            "chapterIdx": 3
+            "title": "第四章 无靶之箭",
+            "chapterUid": 9,
+            "chapterIdx": 9
+          },
+          {
+            "title": "译者序",
+            "chapterUid": 5,
+            "chapterIdx": 5
+          },
+          {
+            "title": "第三章 灵魂拉弓",
+            "chapterUid": 8,
+            "chapterIdx": 8
           }
         ],
         "book": {
