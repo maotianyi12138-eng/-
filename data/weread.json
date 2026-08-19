@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-19T07:05:10Z",
+  "updatedAt": "2026-08-19T13:08:03Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -49,8 +49,8 @@
         "author": "[德]奥根·赫立格尔",
         "updateTime": 1782095492,
         "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/t6_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
-        "finishReading": 1,
-        "readUpdateTime": 1784740409,
+        "finishReading": 0,
+        "readUpdateTime": 1787144770,
         "secret": 0,
         "category": "个人成长-人生哲学"
       },
@@ -156,7 +156,7 @@
         "updateTime": 1703130813,
         "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1787033030,
+        "readUpdateTime": 1787138393,
         "secret": 0,
         "category": "哲学宗教-西方哲学"
       },
@@ -176,6 +176,73 @@
   },
   "history": {
     "books": [
+      {
+        "bookId": "3300106416",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
+        "title": "箭术与禅心：一位西方哲学家的禅悟实录",
+        "author": "[德]奥根·赫立格尔",
+        "translator": "靳婷婷",
+        "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/t6_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
+        "version": 1037611980,
+        "format": "epub",
+        "type": 0,
+        "price": 16.2,
+        "originalPrice": 0,
+        "soldout": 0,
+        "bookStatus": 1,
+        "payingStatus": 1,
+        "payType": 4097,
+        "centPrice": 1620,
+        "categories": [
+          {
+            "categoryId": 1000000,
+            "subCategoryId": 1000004,
+            "categoryType": 0,
+            "title": "个人成长-人生哲学"
+          }
+        ],
+        "hasLecture": 0,
+        "finished": 1,
+        "maxFreeChapter": 5,
+        "maxFreeInfo": {
+          "maxfreeChapterIdx": 5,
+          "maxfreeChapterUid": 5,
+          "maxfreeChapterRatio": 69
+        },
+        "free": 0,
+        "mcardDiscount": 0,
+        "ispub": 1,
+        "extra_type": 5,
+        "cpid": 1000000190,
+        "publishTime": "2024-07-16 00:00:00",
+        "lastChapterIdx": 16,
+        "paperBook": {
+          "skuId": ""
+        },
+        "copyrightChapterUids": [
+          2
+        ],
+        "inStoreBookId": "",
+        "blockSaveImg": 0,
+        "language": "zh-wr",
+        "isTraditionalChinese": false,
+        "hideUpdateTime": false,
+        "isEPUBComics": 0,
+        "isVerticalLayout": 0,
+        "isShowTTS": 1,
+        "webBookControl": 0,
+        "selfProduceIncentive": false,
+        "isAutoDownload": 1,
+        "readingProgress": 99,
+        "markedStatus": 2,
+        "lastNoteSort": 1787144796,
+        "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
+        "updateTime": 1782095492,
+        "finishReading": 0,
+        "readUpdateTime": 1787144770,
+        "secret": 0,
+        "category": "个人成长-人生哲学"
+      },
       {
         "bookId": "25424211",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
@@ -233,13 +300,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 36,
+        "readingProgress": 49,
         "markedStatus": 2,
         "lastNoteSort": 1786891807,
         "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
         "updateTime": 1703130813,
         "finishReading": 0,
-        "readUpdateTime": 1787033030,
+        "readUpdateTime": 1787138393,
         "secret": 0,
         "category": "哲学宗教-西方哲学"
       },
@@ -545,18 +612,6 @@
         "lastNoteSort": 1784917932,
         "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
         "finishReading": 0
-      },
-      {
-        "bookId": "3300106416",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
-        "title": "箭术与禅心：一位西方哲学家的禅悟实录",
-        "author": "[德]奥根·赫立格尔",
-        "updateTime": 1782095492,
-        "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/t6_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
-        "finishReading": 1,
-        "readUpdateTime": 1784740409,
-        "secret": 0,
-        "category": "个人成长-人生哲学"
       },
       {
         "bookId": "3300199881",
@@ -904,6 +959,73 @@
   "notebooks": {
     "books": [
       {
+        "bookId": "3300106416",
+        "book": {
+          "bookId": "3300106416",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
+          "title": "箭术与禅心：一位西方哲学家的禅悟实录",
+          "author": "[德]奥根·赫立格尔",
+          "translator": "靳婷婷",
+          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/t6_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
+          "version": 1037611980,
+          "format": "epub",
+          "type": 0,
+          "price": 16.2,
+          "originalPrice": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payingStatus": 1,
+          "payType": 4097,
+          "centPrice": 1620,
+          "categories": [
+            {
+              "categoryId": 1000000,
+              "subCategoryId": 1000004,
+              "categoryType": 0,
+              "title": "个人成长-人生哲学"
+            }
+          ],
+          "hasLecture": 0,
+          "finished": 1,
+          "maxFreeChapter": 5,
+          "maxFreeInfo": {
+            "maxFreeChapterIdx": 5,
+            "maxFreeChapterUid": 5,
+            "maxFreeChapterRatio": 69
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000190,
+          "publishTime": "2024-07-16 00:00:00",
+          "lastChapterIdx": 16,
+          "paperBook": {
+            "skuId": ""
+          },
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "webBookControl": 0,
+          "selfProduceIncentive": false,
+          "isAutoDownload": 1
+        },
+        "reviewCount": 0,
+        "markedStatus": 2,
+        "readingProgress": 99,
+        "noteCount": 10,
+        "bookmarkCount": 0,
+        "sort": 1787144796
+      },
+      {
         "bookId": "25424211",
         "book": {
           "bookId": "25424211",
@@ -965,7 +1087,7 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 36,
+        "readingProgress": 49,
         "noteCount": 9,
         "bookmarkCount": 0,
         "sort": 1786891807
@@ -1545,9 +1667,10 @@
       "1786723200": 1213,
       "1786809600": 2716,
       "1786896000": 989,
-      "1786982400": 741
+      "1786982400": 741,
+      "1787068800": 5835
     },
-    "readDays": 16,
+    "readDays": 17,
     "readLongest": [
       {
         "book": {
@@ -1596,10 +1719,9 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 10836,
+        "readTime": 12495,
         "tags": [
-          "笔记最多",
-          "单日阅读最久"
+          "笔记最多"
         ]
       },
       {
@@ -1649,6 +1771,58 @@
         },
         "readTime": 10732,
         "tags": []
+      },
+      {
+        "book": {
+          "bookId": "3300106416",
+          "title": "箭术与禅心：一位西方哲学家的禅悟实录",
+          "author": "[德]奥根·赫立格尔",
+          "translator": "靳婷婷",
+          "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/s_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
+          "version": 1037611980,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 5,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 5,
+            "maxfreeChapterUid": 5,
+            "maxfreeChapterRatio": 69
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000190,
+          "publishTime": "2024-07-16 00:00:00",
+          "lastChapterIdx": 16,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 1620,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 4176,
+        "tags": [
+          "单日阅读最久"
+        ]
       },
       {
         "book": {
@@ -1779,18 +1953,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "16天"
+        "counts": "17天"
       },
       {
         "stat": "笔记",
-        "counts": "13条"
+        "counts": "22条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 1.9637752287624116,
-    "dayAverageReadTime": 1240,
+    "compare": 2.697457654617432,
+    "dayAverageReadTime": 1547,
     "baseTime": 1785513600,
-    "totalReadTime": 23571,
+    "totalReadTime": 29406,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1994,9 +2168,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 90711
+      "1767196800": 96546
     },
-    "readDays": 60,
+    "readDays": 61,
     "readLongest": [
       {
         "book": {
@@ -2053,55 +2227,6 @@
       },
       {
         "book": {
-          "bookId": "3300155373",
-          "title": "在我身上有一个不可战胜的夏天",
-          "author": "[法]阿尔贝·加缪",
-          "intro": "在我身上有一个不可战胜的夏天",
-          "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/s_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
-          "version": 76757252,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 6,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 6,
-            "maxfreeChapterUid": 6,
-            "maxfreeChapterRatio": 19
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": -60041,
-          "publishTime": "2025-07-15 00:00:00",
-          "lastChapterIdx": 25,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 5800,
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 11886,
-        "tags": []
-      },
-      {
-        "book": {
           "bookId": "25424211",
           "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
           "author": "赫伯特·马尔库塞",
@@ -2147,7 +2272,56 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 10836,
+        "readTime": 12495,
+        "tags": []
+      },
+      {
+        "book": {
+          "bookId": "3300155373",
+          "title": "在我身上有一个不可战胜的夏天",
+          "author": "[法]阿尔贝·加缪",
+          "intro": "在我身上有一个不可战胜的夏天",
+          "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/s_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
+          "version": 76757252,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 6,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 6,
+            "maxfreeChapterUid": 6,
+            "maxfreeChapterRatio": 19
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": -60041,
+          "publishTime": "2025-07-15 00:00:00",
+          "lastChapterIdx": 25,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 5800,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 11886,
         "tags": []
       },
       {
@@ -2449,36 +2623,36 @@
       },
       {
         "book": {
-          "bookId": "3300194532",
-          "title": "罐头厂街",
-          "author": "[美]约翰·斯坦贝克",
-          "translator": "周坤",
-          "intro": "加州海岸的小街上，罐头厂的机器声与海浪声交织。这里没有光鲜的生活，却藏着最鲜活的人间百态——流浪汉组成“罐头厂街协会”，在破旧棚屋自得其乐；生物学家在实验室与海星为伴，守着孤独的热爱。\n人们靠打零工过活，偶尔为一顿饱饭奔波，却从不缺对彼此的善意。有人为朋友的梦想奔走，有人在深夜分享仅有的温暖，粗粝的日子里，始终透着生活最本真的热望。\n这里没有跌宕的剧情，却用细碎的日常，勾勒出一群“边缘人”的温柔与坚韧，让平凡街巷成为治愈人心的港湾。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/7/cpplatform_kjkxbrfzhx96iqs1qhrzgm/s_cpplatform_kjkxbrfzhx96iqs1qhrzgm1770118858.jpg",
-          "version": 1273470875,
+          "bookId": "3300106416",
+          "title": "箭术与禅心：一位西方哲学家的禅悟实录",
+          "author": "[德]奥根·赫立格尔",
+          "translator": "靳婷婷",
+          "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/s_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
+          "version": 1037611980,
           "format": "epub",
           "type": 0,
           "soldout": 0,
           "bookStatus": 1,
           "payType": 4097,
           "finished": 1,
-          "maxFreeChapter": 8,
+          "maxFreeChapter": 5,
           "maxFreeInfo": {
-            "maxfreeChapterIdx": 8,
-            "maxfreeChapterUid": 8,
-            "maxfreeChapterRatio": 77
+            "maxfreeChapterIdx": 5,
+            "maxfreeChapterUid": 5,
+            "maxfreeChapterRatio": 69
           },
           "free": 0,
           "mcardDiscount": 0,
           "ispub": 1,
           "extra_type": 5,
           "cpid": 1000000190,
-          "publishTime": "2026-03-02 00:00:00",
-          "lastChapterIdx": 37,
+          "publishTime": "2024-07-16 00:00:00",
+          "lastChapterIdx": 16,
           "paperBook": {
             "skuId": ""
           },
-          "centPrice": 3700,
+          "centPrice": 1620,
           "copyrightChapterUids": [
             2
           ],
@@ -2494,7 +2668,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 4029,
+        "readTime": 4205,
         "tags": []
       }
     ],
@@ -2521,7 +2695,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 2,
-        "readingTime": 18630
+        "readingTime": 20289
       },
       {
         "categoryId": 1100000,
@@ -2530,6 +2704,14 @@
         "parentCategoryTitle": "经济理财",
         "readingCount": 1,
         "readingTime": 18052
+      },
+      {
+        "categoryId": 1000000,
+        "categoryTitle": "个人成长",
+        "parentCategoryId": 1000000,
+        "parentCategoryTitle": "个人成长",
+        "readingCount": 2,
+        "readingTime": 12375
       },
       {
         "categoryId": 1600000,
@@ -2546,14 +2728,6 @@
         "parentCategoryTitle": "医学健康",
         "readingCount": 1,
         "readingTime": 10732
-      },
-      {
-        "categoryId": 1000000,
-        "categoryTitle": "个人成长",
-        "parentCategoryId": 1000000,
-        "parentCategoryTitle": "个人成长",
-        "readingCount": 2,
-        "readingTime": 8199
       },
       {
         "categoryId": 200000,
@@ -2606,16 +2780,16 @@
         "readTime": "5小时"
       },
       {
+        "authorId": 294931,
+        "name": "赫伯特·马尔库塞",
+        "count": 1,
+        "readTime": "3小时28分钟"
+      },
+      {
         "authorId": 24128,
         "name": "阿尔贝·加缪",
         "count": 1,
         "readTime": "3小时18分钟"
-      },
-      {
-        "authorId": 294931,
-        "name": "赫伯特·马尔库塞",
-        "count": 1,
-        "readTime": "3小时"
       },
       {
         "authorId": 778714,
@@ -2642,13 +2816,111 @@
         "readTime": "1小时12分钟"
       },
       {
+        "authorId": 420398,
+        "name": "奥根·赫立格尔",
+        "count": 1,
+        "readTime": "1小时10分钟"
+      },
+      {
         "authorId": 183442,
         "name": "罗素",
         "count": 1,
         "readTime": "16分钟"
       }
     ],
-    "authorCount": 9,
+    "authorCount": 10,
+    "preferCp": [
+      {
+        "count": 3,
+        "copyrightInfo": {
+          "name": "微信读书出品",
+          "userVid": 438541605,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0021-Lwot73JgkLO_EghtiM3Cyd9/0",
+          "cpType": 1
+        }
+      },
+      {
+        "count": 1,
+        "copyrightInfo": {
+          "name": "果麦文化",
+          "userVid": 290625916,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0002-ewckDJVkN2UQIDFW8MxCdf1/0",
+          "cpType": 0
+        }
+      },
+      {
+        "count": 1,
+        "copyrightInfo": {
+          "name": "人民文学出版社有限公司",
+          "userVid": 136179393,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
+          "cpType": 0
+        }
+      },
+      {
+        "count": 1,
+        "copyrightInfo": {
+          "name": "磨铁数盟",
+          "userVid": 351681843,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
+          "cpType": 0
+        }
+      },
+      {
+        "count": 1,
+        "copyrightInfo": {
+          "name": "东西时代",
+          "userVid": 519906148,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
+          "cpType": 0
+        }
+      },
+      {
+        "count": 1,
+        "copyrightInfo": {
+          "name": "中信出版集团",
+          "userVid": 168010251,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
+          "cpType": 0
+        }
+      },
+      {
+        "count": 1,
+        "copyrightInfo": {
+          "name": "湛庐CHEERS",
+          "userVid": 341281594,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0011-ZlyTRc7hpfLYxdG7URz2m10/0",
+          "cpType": 0
+        }
+      },
+      {
+        "count": 1,
+        "copyrightInfo": {
+          "name": "北京科技出版社",
+          "userVid": 526108011,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0009-LEe1nFnveyDEZ3gb_nErxd2/0",
+          "cpType": 0
+        }
+      },
+      {
+        "count": 1,
+        "copyrightInfo": {
+          "name": "上海译文出版社",
+          "userVid": 331381138,
+          "role": 2,
+          "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
+          "cpType": 0
+        }
+      }
+    ],
     "preferPublisher": [
       {
         "name": "浙江科学技术出版社",
@@ -2686,21 +2958,21 @@
       },
       {
         "stat": "读完",
-        "counts": "7本"
+        "counts": "6本"
       },
       {
         "stat": "阅读",
-        "counts": "60天"
+        "counts": "61天"
       },
       {
         "stat": "笔记",
-        "counts": "118条"
+        "counts": "128条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 90724,
+    "totalReadTime": 96559,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3074,7 +3346,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有5864人读过"
+        "reason": "仅有5876人读过"
       },
       {
         "type": 8,
@@ -3404,13 +3676,13 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 23571,
+        "1785513600": 29406,
         "1788192000": 0,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 58,
+      "readDays": 59,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -3468,55 +3740,6 @@
         },
         {
           "book": {
-            "bookId": "3300155373",
-            "title": "在我身上有一个不可战胜的夏天",
-            "author": "[法]阿尔贝·加缪",
-            "intro": "在我身上有一个不可战胜的夏天",
-            "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/s_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
-            "version": 76757252,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 4097,
-            "finished": 1,
-            "maxFreeChapter": 6,
-            "maxFreeInfo": {
-              "maxfreeChapterIdx": 6,
-              "maxfreeChapterUid": 6,
-              "maxfreeChapterRatio": 19
-            },
-            "free": 0,
-            "mcardDiscount": 0,
-            "ispub": 1,
-            "extra_type": 5,
-            "cpid": -60041,
-            "publishTime": "2025-07-15 00:00:00",
-            "lastChapterIdx": 25,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 5800,
-            "copyrightChapterUids": [
-              2
-            ],
-            "inStoreBookId": "",
-            "blockSaveImg": 0,
-            "language": "zh-wr",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 11886,
-          "tags": []
-        },
-        {
-          "book": {
             "bookId": "25424211",
             "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
             "author": "赫伯特·马尔库塞",
@@ -3562,7 +3785,56 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 10836,
+          "readTime": 12495,
+          "tags": []
+        },
+        {
+          "book": {
+            "bookId": "3300155373",
+            "title": "在我身上有一个不可战胜的夏天",
+            "author": "[法]阿尔贝·加缪",
+            "intro": "在我身上有一个不可战胜的夏天",
+            "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/s_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
+            "version": 76757252,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 4097,
+            "finished": 1,
+            "maxFreeChapter": 6,
+            "maxFreeInfo": {
+              "maxfreeChapterIdx": 6,
+              "maxfreeChapterUid": 6,
+              "maxfreeChapterRatio": 19
+            },
+            "free": 0,
+            "mcardDiscount": 0,
+            "ispub": 1,
+            "extra_type": 5,
+            "cpid": -60041,
+            "publishTime": "2025-07-15 00:00:00",
+            "lastChapterIdx": 25,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 5800,
+            "copyrightChapterUids": [
+              2
+            ],
+            "inStoreBookId": "",
+            "blockSaveImg": 0,
+            "language": "zh-wr",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 11886,
           "tags": []
         },
         {
@@ -3864,36 +4136,36 @@
         },
         {
           "book": {
-            "bookId": "3300194532",
-            "title": "罐头厂街",
-            "author": "[美]约翰·斯坦贝克",
-            "translator": "周坤",
-            "intro": "加州海岸的小街上，罐头厂的机器声与海浪声交织。这里没有光鲜的生活，却藏着最鲜活的人间百态——流浪汉组成“罐头厂街协会”，在破旧棚屋自得其乐；生物学家在实验室与海星为伴，守着孤独的热爱。\n人们靠打零工过活，偶尔为一顿饱饭奔波，却从不缺对彼此的善意。有人为朋友的梦想奔走，有人在深夜分享仅有的温暖，粗粝的日子里，始终透着生活最本真的热望。\n这里没有跌宕的剧情，却用细碎的日常，勾勒出一群“边缘人”的温柔与坚韧，让平凡街巷成为治愈人心的港湾。",
-            "cover": "https://cdn.weread.qq.com/weread/cover/7/cpplatform_kjkxbrfzhx96iqs1qhrzgm/s_cpplatform_kjkxbrfzhx96iqs1qhrzgm1770118858.jpg",
-            "version": 1273470875,
+            "bookId": "3300106416",
+            "title": "箭术与禅心：一位西方哲学家的禅悟实录",
+            "author": "[德]奥根·赫立格尔",
+            "translator": "靳婷婷",
+            "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
+            "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/s_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
+            "version": 1037611980,
             "format": "epub",
             "type": 0,
             "soldout": 0,
             "bookStatus": 1,
             "payType": 4097,
             "finished": 1,
-            "maxFreeChapter": 8,
+            "maxFreeChapter": 5,
             "maxFreeInfo": {
-              "maxfreeChapterIdx": 8,
-              "maxfreeChapterUid": 8,
-              "maxfreeChapterRatio": 77
+              "maxfreeChapterIdx": 5,
+              "maxfreeChapterUid": 5,
+              "maxfreeChapterRatio": 69
             },
             "free": 0,
             "mcardDiscount": 0,
             "ispub": 1,
             "extra_type": 5,
             "cpid": 1000000190,
-            "publishTime": "2026-03-02 00:00:00",
-            "lastChapterIdx": 37,
+            "publishTime": "2024-07-16 00:00:00",
+            "lastChapterIdx": 16,
             "paperBook": {
               "skuId": ""
             },
-            "centPrice": 3700,
+            "centPrice": 1620,
             "copyrightChapterUids": [
               2
             ],
@@ -3909,7 +4181,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 4029,
+          "readTime": 4205,
           "tags": []
         }
       ],
@@ -3947,18 +4219,18 @@
           "readingTime": 18052
         },
         {
-          "categoryId": 2100000,
-          "categoryTitle": "医学健康",
-          "parentCategoryId": 2100000,
-          "parentCategoryTitle": "医学健康",
-          "readingCount": 1,
-          "readingTime": 10732
-        },
-        {
           "categoryId": 1600000,
           "categoryTitle": "生活百科",
           "parentCategoryId": 1600000,
           "parentCategoryTitle": "生活百科",
+          "readingCount": 1,
+          "readingTime": 10732
+        },
+        {
+          "categoryId": 2100000,
+          "categoryTitle": "医学健康",
+          "parentCategoryId": 2100000,
+          "parentCategoryTitle": "医学健康",
           "readingCount": 1,
           "readingTime": 10732
         },
@@ -4039,6 +4311,10 @@
       "authorCount": 9,
       "preferPublisher": [
         {
+          "name": "上海译文出版社",
+          "count": 1
+        },
+        {
           "name": "浙江科学技术出版社",
           "count": 1
         },
@@ -4059,10 +4335,6 @@
           "count": 1
         },
         {
-          "name": "上海译文出版社",
-          "count": 1
-        },
-        {
           "name": "山东文艺出版社",
           "count": 1
         }
@@ -4074,21 +4346,21 @@
         },
         {
           "stat": "读完",
-          "counts": "7本"
+          "counts": "6本"
         },
         {
           "stat": "阅读",
-          "counts": "58天"
+          "counts": "59天"
         },
         {
           "stat": "笔记",
-          "counts": "118条"
+          "counts": "127条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 392,
+      "dayAverageReadTime": 417,
       "baseTime": 1767196800,
-      "totalReadTime": 90711,
+      "totalReadTime": 96546,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -4283,6 +4555,308 @@
     }
   ],
   "notesByBook": {
+    "3300106416": {
+      "highlights": {
+        "synckey": 1787144796,
+        "updated": [
+          {
+            "bookId": "3300106416",
+            "chapterIdx": 9,
+            "bookmarkId": "3300106416_9_4691-4793",
+            "range": "4691-4793",
+            "markText": "“真正的艺术，”师父高声道，“是无目的、无方向的！你越是为了射中目标而执拗地想要学会射箭，不但越发学不会射箭，目标也将离你越来越远。挡在你面前的，是你用心太切。你觉得，若不自己主动去做，事情就不会发生。”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 9,
+            "createTime": 1787144796
+          },
+          {
+            "bookId": "3300106416",
+            "chapterIdx": 9,
+            "bookmarkId": "3300106416_9_4339-4523",
+            "range": "4339-4523",
+            "markText": "你知道你为什么无法再等待放箭时机的到来，又为何会在这之前就气喘吁吁吗？之所以无法在合适的时机正确放箭，是因为你没有放下自己。你并未等待圆满，而是做好了迎接失败的准备。只要这种情况继续下去，你就别无选择，只能有意争取一些本应不受你支配而自然发生的事，而只要你继续主动争取，你的手就无法如婴儿的手一样正确地放开：也就是说，你的手无法像一枚熟透了的水果的果皮那般自然绽开。”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 9,
+            "createTime": 1787144048
+          },
+          {
+            "bookId": "3300106416",
+            "chapterIdx": 9,
+            "bookmarkId": "3300106416_9_3948-4131",
+            "range": "3948-4131",
+            "markText": "你握住拉开的弓弦时，”师父回答道，“必须像婴儿握住一根伸出的手指一般。婴儿紧紧握住手指，让人不禁对这只小拳头的力量啧啧称奇。但当婴儿放手时，却丝毫也不会晃动。你知道这是为什么吗？因为婴儿不会思考：‘我现在要放开手指去抓别的东西了。’毫无自觉也毫无目的地，婴儿便从一件东西转向另一件东西去了。我们会说，婴儿是在玩东西，而同样地，我们难道不能说，是那东西在同婴儿玩吗？”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 9,
+            "createTime": 1787143970
+          },
+          {
+            "bookId": "3300106416",
+            "chapterIdx": 9,
+            "bookmarkId": "3300106416_9_3363-3445",
+            "range": "3363-3445",
+            "markText": "“不要去想你必须做什么，也别考虑如何做到！”他大声说，“只有当射手本人都始料未及时，箭才能射得平顺。弓弦必须像猛然切穿握住它的大拇指一样。你切不可刻意地放开右手。”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 9,
+            "createTime": 1787143810
+          },
+          {
+            "bookId": "3300106416",
+            "chapterIdx": 8,
+            "bookmarkId": "3300106416_8_4655-4839",
+            "range": "4655-4839",
+            "markText": "位伟大的大师，也必须是一位高明的老师。对于我们来说，这二者是不可分割的。如果他从一开始就教你呼吸练习，那就永远无法让你信服这些呼吸练习能对你起到决定性的作用。你必须要先自己亲身经受沉船的遭遇，才能愿意攥紧他扔给你的救生圈。相信我，师父对你和每位学生的了解，远比我们对自己的了解要更透彻，这是我从自己的亲身经验中得出的。学生们或许羞于承认，但老师的确能看透他们的灵魂。”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 8,
+            "createTime": 1787143330
+          },
+          {
+            "bookId": "3300106416",
+            "chapterIdx": 8,
+            "bookmarkId": "3300106416_8_4014-4061",
+            "range": "4014-4061",
+            "markText": "“问题就出在这儿，你是在努力思考这件事。全然专注于你的呼吸，就好像除此之外什么也不用做一样！”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 8,
+            "createTime": 1787141213
+          },
+          {
+            "bookId": "3300106416",
+            "chapterIdx": 6,
+            "bookmarkId": "3300106416_6_1745-1876",
+            "range": "1745-1876",
+            "markText": "提起弓道，他们并不将之理解成一项运动，而是看作一种宗教仪式。因此，提到射箭之“艺术”，日本人说的并不是或多或少可通过身体训练来控制的射手能力，而是一种根源深埋于灵魂历练、目的在于射中灵魂之靶心的能力，因此从本质上来说，射手是在瞄准自己，甚至有可能会成功射中自己。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1787139363
+          },
+          {
+            "bookId": "3300106416",
+            "chapterIdx": 5,
+            "bookmarkId": "3300106416_5_2335-2386",
+            "range": "2335-2386",
+            "markText": "应该就是鲁迅先生在《〈野草〉题辞》中所说的那句“当我沉默着的时候，我觉得充实；我将开口，同时感到空虚”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 5,
+            "createTime": 1787139170
+          },
+          {
+            "bookId": "3300106416",
+            "chapterIdx": 3,
+            "bookmarkId": "3300106416_3_1412-1707",
+            "range": "1412-1707",
+            "markText": "人虽弱如一根能思考的芦草￼，但在不算计也不思虑时，却能成就伟业。只有经年累月地修炼“忘我”这门艺术，才能够恢复“童真”状态。达到这种状态之后，人便能在不思考的状态下进行思考。其思就如从天而降的雨水，就如海上翻卷的波涛，如点亮夜空的繁星，如在春风轻拂下抽出的绿叶。没错，他本身就是雨水、海洋、繁星、绿叶。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 3,
+            "createTime": 1787138544
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "第四章 无靶之箭",
+            "chapterUid": 9,
+            "chapterIdx": 9
+          },
+          {
+            "title": "第三章 灵魂拉弓",
+            "chapterUid": 8,
+            "chapterIdx": 8
+          },
+          {
+            "title": "译者序",
+            "chapterUid": 5,
+            "chapterIdx": 5
+          },
+          {
+            "title": "第一章 射箭的艺术",
+            "chapterUid": 6,
+            "chapterIdx": 6
+          },
+          {
+            "title": "序",
+            "chapterUid": 3,
+            "chapterIdx": 3
+          }
+        ],
+        "book": {
+          "bookId": "3300106416",
+          "version": 1037611980,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/s_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
+          "title": "箭术与禅心：一位西方哲学家的禅悟实录",
+          "author": "[德]奥根·赫立格尔",
+          "coverBoxInfo": {
+            "blurhash": "K1S6Plxu~q?bofD%9FRjt7",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#201b1b"
+              },
+              {
+                "key": "1/6",
+                "hex": "#201b1b"
+              },
+              {
+                "key": "1/8",
+                "hex": "#201b1b"
+              },
+              {
+                "key": "2/4",
+                "hex": "#343030"
+              },
+              {
+                "key": "2/6",
+                "hex": "#343030"
+              },
+              {
+                "key": "2/8",
+                "hex": "#343030"
+              },
+              {
+                "key": "3/4",
+                "hex": "#4b4746"
+              },
+              {
+                "key": "3/6",
+                "hex": "#4b4746"
+              },
+              {
+                "key": "3/8",
+                "hex": "#4b4746"
+              },
+              {
+                "key": "3/12",
+                "hex": "#4b4746"
+              },
+              {
+                "key": "4/6",
+                "hex": "#645f5e"
+              },
+              {
+                "key": "4/10",
+                "hex": "#645f5e"
+              },
+              {
+                "key": "4/4",
+                "hex": "#645f5e"
+              },
+              {
+                "key": "5/10",
+                "hex": "#7d7978"
+              },
+              {
+                "key": "5/4",
+                "hex": "#7d7978"
+              },
+              {
+                "key": "5/8",
+                "hex": "#7d7978"
+              },
+              {
+                "key": "6/4",
+                "hex": "#979291"
+              },
+              {
+                "key": "6/6",
+                "hex": "#979291"
+              },
+              {
+                "key": "6/8",
+                "hex": "#979291"
+              },
+              {
+                "key": "6/12",
+                "hex": "#979291"
+              },
+              {
+                "key": "7/8",
+                "hex": "#b1adac"
+              },
+              {
+                "key": "7/10",
+                "hex": "#b1adac"
+              },
+              {
+                "key": "7/12",
+                "hex": "#b1adac"
+              },
+              {
+                "key": "8/4",
+                "hex": "#cbc7c6"
+              },
+              {
+                "key": "8/6",
+                "hex": "#cbc7c6"
+              },
+              {
+                "key": "8/12",
+                "hex": "#cbc7c6"
+              },
+              {
+                "key": "9/2",
+                "hex": "#e6e2e1"
+              },
+              {
+                "key": "9/12",
+                "hex": "#e6e2e1"
+              },
+              {
+                "key": "1/100",
+                "hex": "#979291"
+              },
+              {
+                "key": "2/100",
+                "hex": "#b1adac"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#EEEEEE"
+              },
+              {
+                "key": "5/100",
+                "hex": "#EEEEEE"
+              },
+              {
+                "key": "6/100",
+                "hex": "#000000"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#b0acab",
+              "hsv": [
+                9.45589578007366,
+                2.874086332919598,
+                68.97241759757275
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/416/3300106416/s_3300106416.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/416/3300106416/s_3300106416.jpg",
+            "colorsPure": [
+              "#979291",
+              "#b1adac"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
     "25424211": {
       "highlights": {
         "synckey": 1786891807,
@@ -6321,182 +6895,6 @@
             "colorsPure": [
               "#949489",
               "#aeaea3"
-            ]
-          }
-        }
-      },
-      "thoughts": {
-        "reviews": []
-      }
-    },
-    "3300106416": {
-      "highlights": {
-        "synckey": 0,
-        "updated": [],
-        "removed": [],
-        "chapters": [],
-        "book": {
-          "bookId": "3300106416",
-          "version": 1037611980,
-          "format": "epub",
-          "soldout": 0,
-          "bookStatus": 1,
-          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/s_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
-          "title": "箭术与禅心：一位西方哲学家的禅悟实录",
-          "author": "[德]奥根·赫立格尔",
-          "coverBoxInfo": {
-            "blurhash": "K1S6Plxu~q?bofD%9FRjt7",
-            "colors": [
-              {
-                "key": "1/4",
-                "hex": "#201b1b"
-              },
-              {
-                "key": "1/6",
-                "hex": "#201b1b"
-              },
-              {
-                "key": "1/8",
-                "hex": "#201b1b"
-              },
-              {
-                "key": "2/4",
-                "hex": "#343030"
-              },
-              {
-                "key": "2/6",
-                "hex": "#343030"
-              },
-              {
-                "key": "2/8",
-                "hex": "#343030"
-              },
-              {
-                "key": "3/4",
-                "hex": "#4b4746"
-              },
-              {
-                "key": "3/6",
-                "hex": "#4b4746"
-              },
-              {
-                "key": "3/8",
-                "hex": "#4b4746"
-              },
-              {
-                "key": "3/12",
-                "hex": "#4b4746"
-              },
-              {
-                "key": "4/6",
-                "hex": "#645f5e"
-              },
-              {
-                "key": "4/10",
-                "hex": "#645f5e"
-              },
-              {
-                "key": "4/4",
-                "hex": "#645f5e"
-              },
-              {
-                "key": "5/10",
-                "hex": "#7d7978"
-              },
-              {
-                "key": "5/4",
-                "hex": "#7d7978"
-              },
-              {
-                "key": "5/8",
-                "hex": "#7d7978"
-              },
-              {
-                "key": "6/4",
-                "hex": "#979291"
-              },
-              {
-                "key": "6/6",
-                "hex": "#979291"
-              },
-              {
-                "key": "6/8",
-                "hex": "#979291"
-              },
-              {
-                "key": "6/12",
-                "hex": "#979291"
-              },
-              {
-                "key": "7/8",
-                "hex": "#b1adac"
-              },
-              {
-                "key": "7/10",
-                "hex": "#b1adac"
-              },
-              {
-                "key": "7/12",
-                "hex": "#b1adac"
-              },
-              {
-                "key": "8/4",
-                "hex": "#cbc7c6"
-              },
-              {
-                "key": "8/6",
-                "hex": "#cbc7c6"
-              },
-              {
-                "key": "8/12",
-                "hex": "#cbc7c6"
-              },
-              {
-                "key": "9/2",
-                "hex": "#e6e2e1"
-              },
-              {
-                "key": "9/12",
-                "hex": "#e6e2e1"
-              },
-              {
-                "key": "1/100",
-                "hex": "#979291"
-              },
-              {
-                "key": "2/100",
-                "hex": "#b1adac"
-              },
-              {
-                "key": "3/100",
-                "hex": "#ffffff"
-              },
-              {
-                "key": "4/100",
-                "hex": "#EEEEEE"
-              },
-              {
-                "key": "5/100",
-                "hex": "#EEEEEE"
-              },
-              {
-                "key": "6/100",
-                "hex": "#000000"
-              }
-            ],
-            "dominate_color": {
-              "hex": "#b0acab",
-              "hsv": [
-                9.45589578007366,
-                2.874086332919598,
-                68.97241759757275
-              ]
-            },
-            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/416/3300106416/s_3300106416.jpg",
-            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/416/3300106416/s_3300106416.jpg",
-            "colorsPure": [
-              "#979291",
-              "#b1adac"
             ]
           }
         }
