@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-19T18:52:36Z",
+  "updatedAt": "2026-08-20T01:51:09Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1881,7 +1881,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "readingCount": 1,
-        "readingTime": 10836
+        "readingTime": 12495
       },
       {
         "categoryId": 2100000,
@@ -1900,6 +1900,14 @@
         "readingTime": 10732
       },
       {
+        "categoryId": 1000000,
+        "categoryTitle": "个人成长",
+        "parentCategoryId": 1000000,
+        "parentCategoryTitle": "个人成长",
+        "readingCount": 1,
+        "readingTime": 5848
+      },
+      {
         "categoryId": 300000,
         "categoryTitle": "文学",
         "parentCategoryId": 300000,
@@ -1914,14 +1922,6 @@
         "parentCategoryTitle": "精品小说",
         "readingCount": 2,
         "readingTime": 1963
-      },
-      {
-        "categoryId": 1000000,
-        "categoryTitle": "个人成长",
-        "parentCategoryId": 1000000,
-        "parentCategoryTitle": "个人成长",
-        "readingCount": 0,
-        "readingTime": 0
       },
       {
         "categoryId": 200000,
@@ -1944,7 +1944,7 @@
     "readStat": [
       {
         "stat": "读过",
-        "counts": "4本"
+        "counts": "5本"
       },
       {
         "stat": "读完",
@@ -2739,7 +2739,7 @@
       }
     ],
     "preferCategoryWord": "偏好阅读文学",
-    "preferTimeWord": "偏好夜间阅读",
+    "preferTimeWord": "偏好夜晚阅读",
     "preferTime": [
       1386,
       2093,
@@ -2753,10 +2753,10 @@
       67,
       1489,
       3195,
-      2412,
-      13205,
-      3690,
-      6810,
+      3477,
+      16316,
+      5225,
+      8606,
       5045,
       11996,
       7836,
@@ -3346,7 +3346,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有5892人读过"
+        "reason": "仅有5904人读过"
       },
       {
         "type": 8,
@@ -4209,7 +4209,7 @@
           "parentCategoryId": 600000,
           "parentCategoryTitle": "哲学宗教",
           "readingCount": 2,
-          "readingTime": 18630
+          "readingTime": 20289
         },
         {
           "categoryId": 1100000,
@@ -4218,6 +4218,14 @@
           "parentCategoryTitle": "经济理财",
           "readingCount": 1,
           "readingTime": 18052
+        },
+        {
+          "categoryId": 1000000,
+          "categoryTitle": "个人成长",
+          "parentCategoryId": 1000000,
+          "parentCategoryTitle": "个人成长",
+          "readingCount": 2,
+          "readingTime": 14047
         },
         {
           "categoryId": 1600000,
@@ -4234,14 +4242,6 @@
           "parentCategoryTitle": "医学健康",
           "readingCount": 1,
           "readingTime": 10732
-        },
-        {
-          "categoryId": 1000000,
-          "categoryTitle": "个人成长",
-          "parentCategoryId": 1000000,
-          "parentCategoryTitle": "个人成长",
-          "readingCount": 2,
-          "readingTime": 8199
         },
         {
           "categoryId": 200000,
@@ -4267,16 +4267,16 @@
           "readTime": "5小时"
         },
         {
+          "authorId": 294931,
+          "name": "赫伯特·马尔库塞",
+          "count": 1,
+          "readTime": "3小时28分钟"
+        },
+        {
           "authorId": 24128,
           "name": "阿尔贝·加缪",
           "count": 1,
           "readTime": "3小时18分钟"
-        },
-        {
-          "authorId": 294931,
-          "name": "赫伯特·马尔库塞",
-          "count": 1,
-          "readTime": "3小时"
         },
         {
           "authorId": 778714,
@@ -4297,6 +4297,12 @@
           "readTime": "2小时9分钟"
         },
         {
+          "authorId": 420398,
+          "name": "奥根·赫立格尔",
+          "count": 1,
+          "readTime": "1小时37分钟"
+        },
+        {
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 1,
@@ -4309,7 +4315,99 @@
           "readTime": "16分钟"
         }
       ],
-      "authorCount": 9,
+      "authorCount": 10,
+      "preferCp": [
+        {
+          "count": 3,
+          "copyrightInfo": {
+            "name": "微信读书出品",
+            "userVid": 438541605,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0021-Lwot73JgkLO_EghtiM3Cyd9/0",
+            "cpType": 1
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "东西时代",
+            "userVid": 519906148,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "湛庐CHEERS",
+            "userVid": 341281594,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0011-ZlyTRc7hpfLYxdG7URz2m10/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "中信出版集团",
+            "userVid": 168010251,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "人民文学出版社有限公司",
+            "userVid": 136179393,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "磨铁数盟",
+            "userVid": 351681843,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "果麦文化",
+            "userVid": 290625916,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0002-ewckDJVkN2UQIDFW8MxCdf1/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "北京科技出版社",
+            "userVid": 526108011,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0009-LEe1nFnveyDEZ3gb_nErxd2/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "上海译文出版社",
+            "userVid": 331381138,
+            "role": 2,
+            "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
+            "cpType": 0
+          }
+        }
+      ],
       "preferPublisher": [
         {
           "name": "上海译文出版社",
