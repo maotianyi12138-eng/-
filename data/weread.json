@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-21T07:06:59Z",
+  "updatedAt": "2026-08-21T13:09:58Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -3346,7 +3346,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有5963人读过"
+        "reason": "仅有5974人读过"
       },
       {
         "type": 8,
@@ -4330,6 +4330,16 @@
         {
           "count": 1,
           "copyrightInfo": {
+            "name": "东西时代",
+            "userVid": 519906148,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
             "name": "湛庐CHEERS",
             "userVid": 341281594,
             "role": 2,
@@ -4350,10 +4360,10 @@
         {
           "count": 1,
           "copyrightInfo": {
-            "name": "东西时代",
-            "userVid": 519906148,
+            "name": "人民文学出版社有限公司",
+            "userVid": 136179393,
             "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
+            "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
             "cpType": 0
           }
         },
@@ -4364,16 +4374,6 @@
             "userVid": 351681843,
             "role": 2,
             "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
-            "name": "人民文学出版社有限公司",
-            "userVid": 136179393,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
             "cpType": 0
           }
         },
@@ -4414,6 +4414,14 @@
           "count": 1
         },
         {
+          "name": "浙江科学技术出版社",
+          "count": 1
+        },
+        {
+          "name": "浙江人民出版社有限公司",
+          "count": 1
+        },
+        {
           "name": "中信出版集团",
           "count": 1
         },
@@ -4423,14 +4431,6 @@
         },
         {
           "name": "北京科学技术出版社有限公司",
-          "count": 1
-        },
-        {
-          "name": "浙江人民出版社有限公司",
-          "count": 1
-        },
-        {
-          "name": "浙江科学技术出版社",
           "count": 1
         },
         {
