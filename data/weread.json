@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-22T13:00:07Z",
+  "updatedAt": "2026-08-22T18:48:24Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -50,7 +50,7 @@
         "updateTime": 1782095492,
         "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/t6_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1787353397,
+        "readUpdateTime": 1787414452,
         "secret": 0,
         "category": "个人成长-人生哲学"
       },
@@ -239,7 +239,7 @@
         "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
         "updateTime": 1782095492,
         "finishReading": 0,
-        "readUpdateTime": 1787353397,
+        "readUpdateTime": 1787414452,
         "secret": 0,
         "category": "个人成长-人生哲学"
       },
@@ -1671,7 +1671,8 @@
       "1787068800": 7507,
       "1787155200": 0,
       "1787241600": 0,
-      "1787328000": 5209
+      "1787328000": 5209,
+      "1787414400": 7
     },
     "readDays": 18,
     "readLongest": [
@@ -1963,10 +1964,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.9404810279116697,
-    "dayAverageReadTime": 1649,
+    "compare": 2.7698828606658449,
+    "dayAverageReadTime": 1578,
     "baseTime": 1785513600,
-    "totalReadTime": 36287,
+    "totalReadTime": 36294,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2170,7 +2171,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 103427
+      "1767196800": 103434
     },
     "readDays": 62,
     "readLongest": [
@@ -2372,7 +2373,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 11074,
+        "readTime": 11081,
         "tags": [
           "单日阅读最久"
         ]
@@ -2706,7 +2707,7 @@
         "parentCategoryId": 1000000,
         "parentCategoryTitle": "个人成长",
         "readingCount": 2,
-        "readingTime": 19244
+        "readingTime": 19251
       },
       {
         "categoryId": 1100000,
@@ -2975,7 +2976,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 103440,
+    "totalReadTime": 103447,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3349,7 +3350,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6001人读过"
+        "reason": "仅有6013人读过"
       },
       {
         "type": 8,
@@ -3679,7 +3680,7 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 36287,
+        "1785513600": 36294,
         "1788192000": 0,
         "1790784000": 0,
         "1793462400": 0,
@@ -3886,7 +3887,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 11074,
+          "readTime": 11081,
           "tags": [
             "单日阅读最久"
           ]
@@ -4460,9 +4461,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 441,
+      "dayAverageReadTime": 440,
       "baseTime": 1767196800,
-      "totalReadTime": 103427,
+      "totalReadTime": 103434,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
