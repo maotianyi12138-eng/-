@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-22T18:48:24Z",
+  "updatedAt": "2026-08-23T01:59:05Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1888,6 +1888,14 @@
         "readingTime": 12495
       },
       {
+        "categoryId": 1000000,
+        "categoryTitle": "个人成长",
+        "parentCategoryId": 1000000,
+        "parentCategoryTitle": "个人成长",
+        "readingCount": 1,
+        "readingTime": 11045
+      },
+      {
         "categoryId": 2100000,
         "categoryTitle": "医学健康",
         "parentCategoryId": 2100000,
@@ -1904,20 +1912,12 @@
         "readingTime": 10732
       },
       {
-        "categoryId": 1000000,
-        "categoryTitle": "个人成长",
-        "parentCategoryId": 1000000,
-        "parentCategoryTitle": "个人成长",
-        "readingCount": 1,
-        "readingTime": 5848
-      },
-      {
         "categoryId": 300000,
         "categoryTitle": "文学",
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 2,
-        "readingTime": 1963
+        "readingTime": 1975
       },
       {
         "categoryId": 100001,
@@ -1925,7 +1925,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 2,
-        "readingTime": 1963
+        "readingTime": 1975
       },
       {
         "categoryId": 200000,
@@ -2743,10 +2743,10 @@
       }
     ],
     "preferCategoryWord": "偏好阅读文学",
-    "preferTimeWord": "偏好夜晚阅读",
+    "preferTimeWord": "偏好夜间阅读",
     "preferTime": [
-      1386,
-      2093,
+      3189,
+      2248,
       455,
       317,
       7,
@@ -2767,8 +2767,8 @@
       8506,
       6251,
       6569,
-      4936,
-      3221
+      5698,
+      5710
     ],
     "preferAuthor": [
       {
@@ -3350,7 +3350,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6013人读过"
+        "reason": "仅有6019人读过"
       },
       {
         "type": 8,
@@ -4197,7 +4197,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 7,
-          "readingTime": 34577
+          "readingTime": 34589
         },
         {
           "categoryId": 100001,
@@ -4205,7 +4205,7 @@
           "parentCategoryId": 100000,
           "parentCategoryTitle": "精品小说",
           "readingCount": 4,
-          "readingTime": 21744
+          "readingTime": 21756
         },
         {
           "categoryId": 600000,
@@ -4216,20 +4216,20 @@
           "readingTime": 20289
         },
         {
+          "categoryId": 1000000,
+          "categoryTitle": "个人成长",
+          "parentCategoryId": 1000000,
+          "parentCategoryTitle": "个人成长",
+          "readingCount": 2,
+          "readingTime": 19244
+        },
+        {
           "categoryId": 1100000,
           "categoryTitle": "经济理财",
           "parentCategoryId": 1100000,
           "parentCategoryTitle": "经济理财",
           "readingCount": 1,
           "readingTime": 18052
-        },
-        {
-          "categoryId": 1000000,
-          "categoryTitle": "个人成长",
-          "parentCategoryId": 1000000,
-          "parentCategoryTitle": "个人成长",
-          "readingCount": 2,
-          "readingTime": 14047
         },
         {
           "categoryId": 1600000,
@@ -4283,6 +4283,12 @@
           "readTime": "3小时18分钟"
         },
         {
+          "authorId": 420398,
+          "name": "奥根·赫立格尔",
+          "count": 1,
+          "readTime": "3小时4分钟"
+        },
+        {
           "authorId": 778714,
           "name": "丹·贝纳多特",
           "count": 1,
@@ -4301,16 +4307,10 @@
           "readTime": "2小时9分钟"
         },
         {
-          "authorId": 420398,
-          "name": "奥根·赫立格尔",
-          "count": 1,
-          "readTime": "1小时37分钟"
-        },
-        {
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 1,
-          "readTime": "1小时12分钟"
+          "readTime": "1小时13分钟"
         },
         {
           "authorId": 183442,
