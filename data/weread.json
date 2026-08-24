@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-23T18:48:02Z",
+  "updatedAt": "2026-08-24T01:57:09Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -50,7 +50,7 @@
         "updateTime": 1782095492,
         "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/t6_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
         "finishReading": 1,
-        "readUpdateTime": 1787501081,
+        "readUpdateTime": 1787524212,
         "secret": 0,
         "category": "个人成长-人生哲学"
       },
@@ -177,6 +177,73 @@
   "history": {
     "books": [
       {
+        "bookId": "3300106416",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
+        "title": "箭术与禅心：一位西方哲学家的禅悟实录",
+        "author": "[德]奥根·赫立格尔",
+        "translator": "靳婷婷",
+        "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/t6_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
+        "version": 1037611980,
+        "format": "epub",
+        "type": 0,
+        "price": 16.2,
+        "originalPrice": 0,
+        "soldout": 0,
+        "bookStatus": 1,
+        "payingStatus": 1,
+        "payType": 4097,
+        "centPrice": 1620,
+        "categories": [
+          {
+            "categoryId": 1000000,
+            "subCategoryId": 1000004,
+            "categoryType": 0,
+            "title": "个人成长-人生哲学"
+          }
+        ],
+        "hasLecture": 0,
+        "finished": 1,
+        "maxFreeChapter": 5,
+        "maxFreeInfo": {
+          "maxfreeChapterIdx": 5,
+          "maxfreeChapterUid": 5,
+          "maxfreeChapterRatio": 69
+        },
+        "free": 0,
+        "mcardDiscount": 0,
+        "ispub": 1,
+        "extra_type": 5,
+        "cpid": 1000000190,
+        "publishTime": "2024-07-16 00:00:00",
+        "lastChapterIdx": 16,
+        "paperBook": {
+          "skuId": ""
+        },
+        "copyrightChapterUids": [
+          2
+        ],
+        "inStoreBookId": "",
+        "blockSaveImg": 0,
+        "language": "zh-wr",
+        "isTraditionalChinese": false,
+        "hideUpdateTime": false,
+        "isEPUBComics": 0,
+        "isVerticalLayout": 0,
+        "isShowTTS": 1,
+        "webBookControl": 0,
+        "selfProduceIncentive": false,
+        "isAutoDownload": 1,
+        "readingProgress": 99,
+        "markedStatus": 4,
+        "lastNoteSort": 1787352927,
+        "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
+        "updateTime": 1782095492,
+        "finishReading": 1,
+        "readUpdateTime": 1787524212,
+        "secret": 0,
+        "category": "个人成长-人生哲学"
+      },
+      {
         "bookId": "35523642",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=c3b32bb0721e0c3ac3bc5f6",
         "title": "丰饶之海（第一卷）：春雪",
@@ -248,73 +315,6 @@
         "readUpdateTime": 1787510778,
         "secret": 0,
         "category": "精品小说-社会小说"
-      },
-      {
-        "bookId": "3300106416",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
-        "title": "箭术与禅心：一位西方哲学家的禅悟实录",
-        "author": "[德]奥根·赫立格尔",
-        "translator": "靳婷婷",
-        "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/t6_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
-        "version": 1037611980,
-        "format": "epub",
-        "type": 0,
-        "price": 16.2,
-        "originalPrice": 0,
-        "soldout": 0,
-        "bookStatus": 1,
-        "payingStatus": 1,
-        "payType": 4097,
-        "centPrice": 1620,
-        "categories": [
-          {
-            "categoryId": 1000000,
-            "subCategoryId": 1000004,
-            "categoryType": 0,
-            "title": "个人成长-人生哲学"
-          }
-        ],
-        "hasLecture": 0,
-        "finished": 1,
-        "maxFreeChapter": 5,
-        "maxFreeInfo": {
-          "maxfreeChapterIdx": 5,
-          "maxfreeChapterUid": 5,
-          "maxfreeChapterRatio": 69
-        },
-        "free": 0,
-        "mcardDiscount": 0,
-        "ispub": 1,
-        "extra_type": 5,
-        "cpid": 1000000190,
-        "publishTime": "2024-07-16 00:00:00",
-        "lastChapterIdx": 16,
-        "paperBook": {
-          "skuId": ""
-        },
-        "copyrightChapterUids": [
-          2
-        ],
-        "inStoreBookId": "",
-        "blockSaveImg": 0,
-        "language": "zh-wr",
-        "isTraditionalChinese": false,
-        "hideUpdateTime": false,
-        "isEPUBComics": 0,
-        "isVerticalLayout": 0,
-        "isShowTTS": 1,
-        "webBookControl": 0,
-        "selfProduceIncentive": false,
-        "isAutoDownload": 1,
-        "readingProgress": 99,
-        "markedStatus": 4,
-        "lastNoteSort": 1787352927,
-        "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
-        "updateTime": 1782095492,
-        "finishReading": 1,
-        "readUpdateTime": 1787501081,
-        "secret": 0,
-        "category": "个人成长-人生哲学"
       },
       {
         "bookId": "25424211",
@@ -1671,7 +1671,7 @@
       "1787068800": 7507,
       "1787328000": 5209,
       "1787414400": 7,
-      "1787500800": 1647
+      "1787500800": 1679
     },
     "readDays": 19,
     "readLongest": [
@@ -1892,7 +1892,7 @@
         "parentCategoryId": 1000000,
         "parentCategoryTitle": "个人成长",
         "readingCount": 1,
-        "readingTime": 11045
+        "readingTime": 11052
       },
       {
         "categoryId": 1600000,
@@ -1963,10 +1963,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.776751310110974,
-    "dayAverageReadTime": 1580,
+    "compare": 2.7799366779695848,
+    "dayAverageReadTime": 1582,
     "baseTime": 1785513600,
-    "totalReadTime": 37941,
+    "totalReadTime": 37973,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2170,7 +2170,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 105081
+      "1767196800": 105113
     },
     "readDays": 63,
     "readLongest": [
@@ -2372,7 +2372,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 11094,
+        "readTime": 11126,
         "tags": [
           "单日阅读最久"
         ]
@@ -2706,7 +2706,7 @@
         "parentCategoryId": 1000000,
         "parentCategoryTitle": "个人成长",
         "readingCount": 2,
-        "readingTime": 19264
+        "readingTime": 19296
       },
       {
         "categoryId": 1100000,
@@ -2762,7 +2762,7 @@
       8606,
       5045,
       11996,
-      7836,
+      7843,
       8506,
       6251,
       6569,
@@ -2798,7 +2798,7 @@
         "authorId": 420398,
         "name": "奥根·赫立格尔",
         "count": 1,
-        "readTime": "3小时4分钟"
+        "readTime": "3小时5分钟"
       },
       {
         "authorId": 778714,
@@ -2975,7 +2975,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 105094,
+    "totalReadTime": 105126,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3349,7 +3349,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6057人读过"
+        "reason": "仅有6060人读过"
       },
       {
         "type": 8,
@@ -3679,7 +3679,7 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 37941,
+        "1785513600": 37973,
         "1788192000": 0,
         "1790784000": 0,
         "1793462400": 0,
@@ -3886,7 +3886,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 11094,
+          "readTime": 11126,
           "tags": [
             "单日阅读最久"
           ]
@@ -4220,7 +4220,7 @@
           "parentCategoryId": 1000000,
           "parentCategoryTitle": "个人成长",
           "readingCount": 2,
-          "readingTime": 19244
+          "readingTime": 19251
         },
         {
           "categoryId": 1100000,
@@ -4462,7 +4462,7 @@
       "registTime": 1645667800,
       "dayAverageReadTime": 445,
       "baseTime": 1767196800,
-      "totalReadTime": 105081,
+      "totalReadTime": 105113,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -4657,216 +4657,6 @@
     }
   ],
   "notesByBook": {
-    "35523642": {
-      "highlights": {
-        "synckey": 1787503077,
-        "updated": [
-          {
-            "bookId": "35523642",
-            "chapterIdx": 10,
-            "bookmarkId": "35523642_67_1625-1671",
-            "range": "1625-1671",
-            "markText": "王子的眼眸这一两天已经浸染了青黛色的乡愁，这给性格开朗而略显浮躁的库利沙达王子别添一种风情。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 67,
-            "createTime": 1787503077
-          },
-          {
-            "bookId": "35523642",
-            "chapterIdx": 7,
-            "bookmarkId": "35523642_64_1659-1743",
-            "range": "1659-1743",
-            "markText": "十五岁的他，却及早地害怕丧失。一旦得到又害怕丧失，这种心情成为这位少年性格的特征。既然获得月亮，今后如果住在没有月亮的世界，那是多么令人恐怖的事情。尽管他憎恨那月亮……",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 64,
-            "createTime": 1785607340
-          }
-        ],
-        "removed": [],
-        "chapters": [
-          {
-            "title": "八",
-            "chapterUid": 67,
-            "chapterIdx": 10
-          },
-          {
-            "title": "五",
-            "chapterUid": 64,
-            "chapterIdx": 7
-          }
-        ],
-        "book": {
-          "bookId": "35523642",
-          "version": 1873098669,
-          "format": "epub",
-          "soldout": 0,
-          "bookStatus": 1,
-          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
-          "title": "丰饶之海（第一卷）：春雪",
-          "author": "三岛由纪夫",
-          "coverBoxInfo": {
-            "blurhash": "KLQmCqxu~q%M%Mt7tRjZIU",
-            "colors": [
-              {
-                "key": "1/4",
-                "hex": "#241a17"
-              },
-              {
-                "key": "1/6",
-                "hex": "#241a17"
-              },
-              {
-                "key": "1/8",
-                "hex": "#241a17"
-              },
-              {
-                "key": "2/4",
-                "hex": "#382f2b"
-              },
-              {
-                "key": "2/6",
-                "hex": "#382f2b"
-              },
-              {
-                "key": "2/8",
-                "hex": "#382f2b"
-              },
-              {
-                "key": "3/4",
-                "hex": "#504641"
-              },
-              {
-                "key": "3/6",
-                "hex": "#504641"
-              },
-              {
-                "key": "3/8",
-                "hex": "#504641"
-              },
-              {
-                "key": "3/12",
-                "hex": "#504641"
-              },
-              {
-                "key": "4/6",
-                "hex": "#695e58"
-              },
-              {
-                "key": "4/10",
-                "hex": "#695e58"
-              },
-              {
-                "key": "4/4",
-                "hex": "#695e58"
-              },
-              {
-                "key": "5/10",
-                "hex": "#827872"
-              },
-              {
-                "key": "5/4",
-                "hex": "#827872"
-              },
-              {
-                "key": "5/8",
-                "hex": "#827872"
-              },
-              {
-                "key": "6/4",
-                "hex": "#9c918b"
-              },
-              {
-                "key": "6/6",
-                "hex": "#9c918b"
-              },
-              {
-                "key": "6/8",
-                "hex": "#9c918b"
-              },
-              {
-                "key": "6/12",
-                "hex": "#9c918b"
-              },
-              {
-                "key": "7/8",
-                "hex": "#b6aca5"
-              },
-              {
-                "key": "7/10",
-                "hex": "#b6aca5"
-              },
-              {
-                "key": "7/12",
-                "hex": "#b6aca5"
-              },
-              {
-                "key": "8/4",
-                "hex": "#d0c6c0"
-              },
-              {
-                "key": "8/6",
-                "hex": "#d0c6c0"
-              },
-              {
-                "key": "8/12",
-                "hex": "#d0c6c0"
-              },
-              {
-                "key": "9/2",
-                "hex": "#ebe1da"
-              },
-              {
-                "key": "9/12",
-                "hex": "#ebe1da"
-              },
-              {
-                "key": "1/100",
-                "hex": "#9c918b"
-              },
-              {
-                "key": "2/100",
-                "hex": "#b6aca5"
-              },
-              {
-                "key": "3/100",
-                "hex": "#ffffff"
-              },
-              {
-                "key": "4/100",
-                "hex": "#F3E8E5"
-              },
-              {
-                "key": "5/100",
-                "hex": "#F3E8E5"
-              },
-              {
-                "key": "6/100",
-                "hex": "#270500"
-              }
-            ],
-            "dominate_color": {
-              "hex": "#221815",
-              "hsv": [
-                11.98399342050412,
-                36.67262442914435,
-                13.139138094906924
-              ]
-            },
-            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/642/35523642/s_35523642.jpg",
-            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/642/35523642/s_35523642.jpg",
-            "colorsPure": [
-              "#9c918b",
-              "#b6aca5"
-            ]
-          }
-        }
-      },
-      "thoughts": {
-        "reviews": []
-      }
-    },
     "3300106416": {
       "highlights": {
         "synckey": 1787352927,
@@ -5335,6 +5125,216 @@
             "colorsPure": [
               "#979291",
               "#b1adac"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "35523642": {
+      "highlights": {
+        "synckey": 1787503077,
+        "updated": [
+          {
+            "bookId": "35523642",
+            "chapterIdx": 10,
+            "bookmarkId": "35523642_67_1625-1671",
+            "range": "1625-1671",
+            "markText": "王子的眼眸这一两天已经浸染了青黛色的乡愁，这给性格开朗而略显浮躁的库利沙达王子别添一种风情。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 67,
+            "createTime": 1787503077
+          },
+          {
+            "bookId": "35523642",
+            "chapterIdx": 7,
+            "bookmarkId": "35523642_64_1659-1743",
+            "range": "1659-1743",
+            "markText": "十五岁的他，却及早地害怕丧失。一旦得到又害怕丧失，这种心情成为这位少年性格的特征。既然获得月亮，今后如果住在没有月亮的世界，那是多么令人恐怖的事情。尽管他憎恨那月亮……",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 64,
+            "createTime": 1785607340
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "八",
+            "chapterUid": 67,
+            "chapterIdx": 10
+          },
+          {
+            "title": "五",
+            "chapterUid": 64,
+            "chapterIdx": 7
+          }
+        ],
+        "book": {
+          "bookId": "35523642",
+          "version": 1873098669,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
+          "title": "丰饶之海（第一卷）：春雪",
+          "author": "三岛由纪夫",
+          "coverBoxInfo": {
+            "blurhash": "KLQmCqxu~q%M%Mt7tRjZIU",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#241a17"
+              },
+              {
+                "key": "1/6",
+                "hex": "#241a17"
+              },
+              {
+                "key": "1/8",
+                "hex": "#241a17"
+              },
+              {
+                "key": "2/4",
+                "hex": "#382f2b"
+              },
+              {
+                "key": "2/6",
+                "hex": "#382f2b"
+              },
+              {
+                "key": "2/8",
+                "hex": "#382f2b"
+              },
+              {
+                "key": "3/4",
+                "hex": "#504641"
+              },
+              {
+                "key": "3/6",
+                "hex": "#504641"
+              },
+              {
+                "key": "3/8",
+                "hex": "#504641"
+              },
+              {
+                "key": "3/12",
+                "hex": "#504641"
+              },
+              {
+                "key": "4/6",
+                "hex": "#695e58"
+              },
+              {
+                "key": "4/10",
+                "hex": "#695e58"
+              },
+              {
+                "key": "4/4",
+                "hex": "#695e58"
+              },
+              {
+                "key": "5/10",
+                "hex": "#827872"
+              },
+              {
+                "key": "5/4",
+                "hex": "#827872"
+              },
+              {
+                "key": "5/8",
+                "hex": "#827872"
+              },
+              {
+                "key": "6/4",
+                "hex": "#9c918b"
+              },
+              {
+                "key": "6/6",
+                "hex": "#9c918b"
+              },
+              {
+                "key": "6/8",
+                "hex": "#9c918b"
+              },
+              {
+                "key": "6/12",
+                "hex": "#9c918b"
+              },
+              {
+                "key": "7/8",
+                "hex": "#b6aca5"
+              },
+              {
+                "key": "7/10",
+                "hex": "#b6aca5"
+              },
+              {
+                "key": "7/12",
+                "hex": "#b6aca5"
+              },
+              {
+                "key": "8/4",
+                "hex": "#d0c6c0"
+              },
+              {
+                "key": "8/6",
+                "hex": "#d0c6c0"
+              },
+              {
+                "key": "8/12",
+                "hex": "#d0c6c0"
+              },
+              {
+                "key": "9/2",
+                "hex": "#ebe1da"
+              },
+              {
+                "key": "9/12",
+                "hex": "#ebe1da"
+              },
+              {
+                "key": "1/100",
+                "hex": "#9c918b"
+              },
+              {
+                "key": "2/100",
+                "hex": "#b6aca5"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#F3E8E5"
+              },
+              {
+                "key": "5/100",
+                "hex": "#F3E8E5"
+              },
+              {
+                "key": "6/100",
+                "hex": "#270500"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#221815",
+              "hsv": [
+                11.98399342050412,
+                36.67262442914435,
+                13.139138094906924
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/642/35523642/s_35523642.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/642/35523642/s_35523642.jpg",
+            "colorsPure": [
+              "#9c918b",
+              "#b6aca5"
             ]
           }
         }
