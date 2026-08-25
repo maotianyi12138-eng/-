@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-25T01:52:02Z",
+  "updatedAt": "2026-08-25T07:07:35Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -50,7 +50,7 @@
         "updateTime": 1782095492,
         "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/t6_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
         "finishReading": 1,
-        "readUpdateTime": 1787580578,
+        "readUpdateTime": 1787634970,
         "secret": 0,
         "category": "个人成长-人生哲学"
       },
@@ -144,7 +144,7 @@
         "updateTime": 1689693337,
         "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/t6_35523642.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1787581112,
+        "readUpdateTime": 1787635446,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -239,13 +239,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 20,
+        "readingProgress": 22,
         "markedStatus": 2,
-        "lastNoteSort": 1787503077,
+        "lastNoteSort": 1787635361,
         "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
         "updateTime": 1689693337,
         "finishReading": 0,
-        "readUpdateTime": 1787581112,
+        "readUpdateTime": 1787635446,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -312,7 +312,7 @@
         "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
         "updateTime": 1782095492,
         "finishReading": 1,
-        "readUpdateTime": 1787580578,
+        "readUpdateTime": 1787634970,
         "secret": 0,
         "category": "个人成长-人生哲学"
       },
@@ -1026,10 +1026,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 20,
-        "noteCount": 2,
+        "readingProgress": 22,
+        "noteCount": 3,
         "bookmarkCount": 0,
-        "sort": 1787503077
+        "sort": 1787635361
       },
       {
         "bookId": "3300106416",
@@ -1671,9 +1671,10 @@
       "1787068800": 7507,
       "1787328000": 5209,
       "1787414400": 7,
-      "1787500800": 2215
+      "1787500800": 2215,
+      "1787587200": 496
     },
-    "readDays": 19,
+    "readDays": 20,
     "readLongest": [
       {
         "book": {
@@ -1873,7 +1874,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 4129,
+        "readTime": 4623,
         "tags": []
       }
     ],
@@ -1955,18 +1956,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "19天"
+        "counts": "20天"
       },
       {
         "stat": "笔记",
-        "counts": "37条"
+        "counts": "38条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.6799599260172628,
-    "dayAverageReadTime": 1540,
+    "compare": 2.727358199753391,
+    "dayAverageReadTime": 1560,
     "baseTime": 1785513600,
-    "totalReadTime": 38509,
+    "totalReadTime": 39005,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2170,9 +2171,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 105649
+      "1767196800": 106145
     },
-    "readDays": 63,
+    "readDays": 64,
     "readLongest": [
       {
         "book": {
@@ -2372,7 +2373,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 11128,
+        "readTime": 11130,
         "tags": [
           "单日阅读最久"
         ]
@@ -2572,7 +2573,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 6555,
+        "readTime": 7049,
         "tags": []
       },
       {
@@ -2682,7 +2683,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 7,
-        "readingTime": 36757
+        "readingTime": 37251
       },
       {
         "categoryId": 100001,
@@ -2690,7 +2691,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 4,
-        "readingTime": 23924
+        "readingTime": 24418
       },
       {
         "categoryId": 600000,
@@ -2706,7 +2707,7 @@
         "parentCategoryId": 1000000,
         "parentCategoryTitle": "个人成长",
         "readingCount": 2,
-        "readingTime": 19298
+        "readingTime": 19300
       },
       {
         "categoryId": 1100000,
@@ -2822,7 +2823,7 @@
         "authorId": 394948,
         "name": "三岛由纪夫",
         "count": 1,
-        "readTime": "1小时49分钟"
+        "readTime": "1小时57分钟"
       },
       {
         "authorId": 183442,
@@ -2965,17 +2966,17 @@
       },
       {
         "stat": "阅读",
-        "counts": "63天"
+        "counts": "64天"
       },
       {
         "stat": "笔记",
-        "counts": "142条"
+        "counts": "143条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 105662,
+    "totalReadTime": 106158,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3349,7 +3350,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6100人读过"
+        "reason": "仅有6111人读过"
       },
       {
         "type": 8,
@@ -3679,13 +3680,13 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 38509,
+        "1785513600": 39005,
         "1788192000": 0,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 61,
+      "readDays": 62,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -3886,7 +3887,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 11128,
+          "readTime": 11130,
           "tags": [
             "单日阅读最久"
           ]
@@ -4086,7 +4087,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 6555,
+          "readTime": 7049,
           "tags": []
         },
         {
@@ -4452,17 +4453,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "61天"
+          "counts": "62天"
         },
         {
           "stat": "笔记",
-          "counts": "142条"
+          "counts": "143条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 445,
+      "dayAverageReadTime": 447,
       "baseTime": 1767196800,
-      "totalReadTime": 105649,
+      "totalReadTime": 106145,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -4659,8 +4660,19 @@
   "notesByBook": {
     "35523642": {
       "highlights": {
-        "synckey": 1787503077,
+        "synckey": 1787635361,
         "updated": [
+          {
+            "bookId": "35523642",
+            "chapterIdx": 12,
+            "bookmarkId": "35523642_69_4407-4493",
+            "range": "4407-4493",
+            "markText": "饭沼事后时时在思忖，瞬间的踌躇，有时可以完全改变一个人的后半生。这一瞬间，大体好比一张白纸锐利的折痕，踌躇将人永远包裹起来，原来纸的正面变成了反面，再也不能回到正面上去了。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 69,
+            "createTime": 1787635361
+          },
           {
             "bookId": "35523642",
             "chapterIdx": 10,
@@ -4686,6 +4698,11 @@
         ],
         "removed": [],
         "chapters": [
+          {
+            "title": "十",
+            "chapterUid": 69,
+            "chapterIdx": 12
+          },
           {
             "title": "八",
             "chapterUid": 67,
