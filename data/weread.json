@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-24T18:58:25Z",
+  "updatedAt": "2026-08-25T01:52:02Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1892,7 +1892,7 @@
         "parentCategoryId": 1000000,
         "parentCategoryTitle": "个人成长",
         "readingCount": 1,
-        "readingTime": 11052
+        "readingTime": 11099
       },
       {
         "categoryId": 1600000,
@@ -1916,7 +1916,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 2,
-        "readingTime": 1975
+        "readingTime": 4143
       },
       {
         "categoryId": 100001,
@@ -1924,7 +1924,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 2,
-        "readingTime": 1975
+        "readingTime": 4143
       },
       {
         "categoryId": 200000,
@@ -2744,7 +2744,7 @@
     "preferCategoryWord": "偏好阅读文学",
     "preferTimeWord": "偏好夜间阅读",
     "preferTime": [
-      3189,
+      3221,
       2248,
       455,
       317,
@@ -2760,11 +2760,11 @@
       16316,
       5225,
       8606,
-      5045,
+      5581,
       11996,
-      7843,
+      9192,
       8506,
-      6251,
+      6549,
       6569,
       5698,
       5710
@@ -3349,7 +3349,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6093人读过"
+        "reason": "仅有6100人读过"
       },
       {
         "type": 8,
@@ -4196,7 +4196,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 7,
-          "readingTime": 34589
+          "readingTime": 36757
         },
         {
           "categoryId": 100001,
@@ -4204,7 +4204,7 @@
           "parentCategoryId": 100000,
           "parentCategoryTitle": "精品小说",
           "readingCount": 4,
-          "readingTime": 21756
+          "readingTime": 23924
         },
         {
           "categoryId": 600000,
@@ -4220,7 +4220,7 @@
           "parentCategoryId": 1000000,
           "parentCategoryTitle": "个人成长",
           "readingCount": 2,
-          "readingTime": 19251
+          "readingTime": 19298
         },
         {
           "categoryId": 1100000,
@@ -4285,7 +4285,7 @@
           "authorId": 420398,
           "name": "奥根·赫立格尔",
           "count": 1,
-          "readTime": "3小时4分钟"
+          "readTime": "3小时5分钟"
         },
         {
           "authorId": 778714,
@@ -4309,7 +4309,7 @@
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 1,
-          "readTime": "1小时13分钟"
+          "readTime": "1小时49分钟"
         },
         {
           "authorId": 183442,
