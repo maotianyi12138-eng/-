@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-25T18:56:18Z",
+  "updatedAt": "2026-08-26T01:58:02Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1893,7 +1893,7 @@
         "parentCategoryId": 1000000,
         "parentCategoryTitle": "个人成长",
         "readingCount": 1,
-        "readingTime": 11099
+        "readingTime": 11101
       },
       {
         "categoryId": 1600000,
@@ -1917,7 +1917,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 2,
-        "readingTime": 4143
+        "readingTime": 4637
       },
       {
         "categoryId": 100001,
@@ -1925,7 +1925,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 2,
-        "readingTime": 4143
+        "readingTime": 4637
       },
       {
         "categoryId": 200000,
@@ -2752,7 +2752,7 @@
       7,
       0,
       0,
-      1023,
+      1519,
       203,
       67,
       1489,
@@ -3350,7 +3350,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6147人读过"
+        "reason": "仅有6160人读过"
       },
       {
         "type": 8,
@@ -4197,7 +4197,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 7,
-          "readingTime": 36757
+          "readingTime": 37251
         },
         {
           "categoryId": 100001,
@@ -4205,7 +4205,7 @@
           "parentCategoryId": 100000,
           "parentCategoryTitle": "精品小说",
           "readingCount": 4,
-          "readingTime": 23924
+          "readingTime": 24418
         },
         {
           "categoryId": 600000,
@@ -4221,7 +4221,7 @@
           "parentCategoryId": 1000000,
           "parentCategoryTitle": "个人成长",
           "readingCount": 2,
-          "readingTime": 19298
+          "readingTime": 19300
         },
         {
           "categoryId": 1100000,
@@ -4310,7 +4310,7 @@
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 1,
-          "readTime": "1小时49分钟"
+          "readTime": "1小时57分钟"
         },
         {
           "authorId": 183442,
