@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-30T11:53:55Z",
+  "updatedAt": "2026-08-30T16:40:06Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1966,8 +1966,8 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.126279284833539,
-    "dayAverageReadTime": 1308,
+    "compare": 2.025431565967941,
+    "dayAverageReadTime": 1266,
     "baseTime": 1785513600,
     "totalReadTime": 39258,
     "readDistributionWord": "点评分布",
@@ -3352,7 +3352,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6339人读过"
+        "reason": "仅有6349人读过"
       },
       {
         "type": 8,
@@ -4463,7 +4463,7 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 439,
+      "dayAverageReadTime": 437,
       "baseTime": 1767196800,
       "totalReadTime": 106398,
       "readDistributionWord": "点评分布",
