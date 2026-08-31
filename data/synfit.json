@@ -1,10 +1,48 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-08-30T08:24:10.310Z",
+  "updatedAt": "2026-08-31T08:44:17.304Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-08-27",
+        "title": "高强度间歇训练",
+        "start": 1787811651139,
+        "durationMinutes": 201,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 2000,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "HighIntensityIntervalTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-26",
+        "title": "跑步",
+        "start": 1787735952784,
+        "durationMinutes": 42,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 177,
+        "distance": 2.67,
+        "movements": [
+          {
+            "name": "Running",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-08-17",
         "title": "腿 后侧",
@@ -15233,7 +15271,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-08-17"
+      "to": "2026-08-27"
     }
   },
   "body": {
