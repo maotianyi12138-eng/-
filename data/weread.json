@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-08-31T13:46:54Z",
+  "updatedAt": "2026-08-31T22:49:47Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -144,7 +144,7 @@
         "updateTime": 1689693337,
         "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/t6_35523642.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1788178191,
+        "readUpdateTime": 1788188103,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -239,13 +239,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 24,
+        "readingProgress": 25,
         "markedStatus": 2,
-        "lastNoteSort": 1787635361,
+        "lastNoteSort": 1788187043,
         "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
         "updateTime": 1689693337,
         "finishReading": 0,
-        "readUpdateTime": 1788178191,
+        "readUpdateTime": 1788188103,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -1026,10 +1026,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 24,
-        "noteCount": 3,
+        "readingProgress": 25,
+        "noteCount": 4,
         "bookmarkCount": 0,
-        "sort": 1787635361
+        "sort": 1788187043
       },
       {
         "bookId": "3300106416",
@@ -1651,325 +1651,13 @@
     ]
   },
   "monthly": {
-    "readTimes": {
-      "1785513600": 716,
-      "1785600000": 996,
-      "1785686400": 742,
-      "1785772800": 1823,
-      "1785859200": 2005,
-      "1785945600": 875,
-      "1786032000": 2349,
-      "1786118400": 2101,
-      "1786204800": 3193,
-      "1786291200": 878,
-      "1786464000": 977,
-      "1786636800": 1257,
-      "1786723200": 1213,
-      "1786809600": 2716,
-      "1786896000": 989,
-      "1786982400": 741,
-      "1787068800": 7507,
-      "1787328000": 5209,
-      "1787414400": 7,
-      "1787500800": 2215,
-      "1787587200": 496,
-      "1787760000": 253,
-      "1788105600": 390
-    },
-    "readDays": 22,
-    "readLongest": [
-      {
-        "book": {
-          "bookId": "25424211",
-          "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
-          "author": "赫伯特·马尔库塞",
-          "translator": "刘继",
-          "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/s_YueWen_25424211.jpg",
-          "version": 44968238,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 1048577,
-          "finished": 1,
-          "maxFreeChapter": 6,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 6,
-            "maxfreeChapterUid": 6,
-            "maxfreeChapterRatio": 89
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 9030183,
-          "publishTime": "2014-03-01 00:00:00",
-          "lastChapterIdx": 18,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 5499,
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 12495,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "3300106416",
-          "title": "箭术与禅心：一位西方哲学家的禅悟实录",
-          "author": "[德]奥根·赫立格尔",
-          "translator": "靳婷婷",
-          "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/s_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
-          "version": 1037611980,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 5,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 5,
-            "maxfreeChapterUid": 5,
-            "maxfreeChapterRatio": 69
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1000000190,
-          "publishTime": "2024-07-16 00:00:00",
-          "lastChapterIdx": 16,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 1620,
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 11045,
-        "tags": [
-          "笔记最多",
-          "单日阅读最久"
-        ]
-      },
-      {
-        "book": {
-          "bookId": "30181899",
-          "title": "高级运动营养学",
-          "author": "丹·贝纳多特",
-          "translator": "安江红,刘勇,周帆扬,赵之光",
-          "intro": "世界各地的精英运动员都知道丹·贝纳多特（Dan Benardot）博士，并渴望得到他的指导，因为他们知道，他的真知灼见可能是运动员能否获得金牌的决定性因素。来自各个大洲的很多高等院校都邀请丹前去讲学，他们希望学生们能师从最好的专家。在佐治亚州立大学（Georgia State University），我们只知道他是丹——一位了不起的朋友，一位出色的同事，一位忠实的丈夫，以及世界上最棒的孩子的父亲。《高级运动营养学》的第1 版非常成功。它被广泛应用于各种教学场合，以及拥有不同身材、体型和技能的运动员。精英运动员和普通运动员都在使用这本书。它已经成为运动营养师和运动科学专业的学生学习人类运动表现相关营养知识的必读书。对那些需要指导运动员如何在比赛中取得优势的教练员而言，它同样是首选读物。但就像每一本成功的图书一样，它需要进行一些修订和更新。这正是《高级运动营养学（第2 版）》如此重要的原因。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/s_YueWen_30181899.jpg",
-          "version": 315626625,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 1048577,
-          "finished": 1,
-          "maxFreeChapter": 17,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 17,
-            "maxfreeChapterUid": 17,
-            "maxfreeChapterRatio": 8
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1765053,
-          "publishTime": "2019-01-08 00:00:00",
-          "lastChapterIdx": 95,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 8398,
-          "copyrightChapterUids": [],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 10732,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "35523642",
-          "title": "丰饶之海（第一卷）：春雪",
-          "author": "三岛由纪夫",
-          "translator": "陈德文",
-          "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
-          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
-          "version": 1873098669,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 7,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 7,
-            "maxfreeChapterUid": 64,
-            "maxfreeChapterRatio": 32
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 1,
-          "cpid": -2571052,
-          "publishTime": "2018-10-15 00:00:00",
-          "lastChapterIdx": 58,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 3000,
-          "copyrightChapterUids": [
-            59
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 5266,
-        "tags": []
-      }
-    ],
-    "preferCategory": [
-      {
-        "categoryId": 600000,
-        "categoryTitle": "哲学宗教",
-        "parentCategoryId": 600000,
-        "parentCategoryTitle": "哲学宗教",
-        "readingCount": 1,
-        "readingTime": 12495
-      },
-      {
-        "categoryId": 1000000,
-        "categoryTitle": "个人成长",
-        "parentCategoryId": 1000000,
-        "parentCategoryTitle": "个人成长",
-        "readingCount": 1,
-        "readingTime": 11101
-      },
-      {
-        "categoryId": 1600000,
-        "categoryTitle": "生活百科",
-        "parentCategoryId": 1600000,
-        "parentCategoryTitle": "生活百科",
-        "readingCount": 1,
-        "readingTime": 10732
-      },
-      {
-        "categoryId": 2100000,
-        "categoryTitle": "医学健康",
-        "parentCategoryId": 2100000,
-        "parentCategoryTitle": "医学健康",
-        "readingCount": 1,
-        "readingTime": 10732
-      },
-      {
-        "categoryId": 300000,
-        "categoryTitle": "文学",
-        "parentCategoryId": 300000,
-        "parentCategoryTitle": "文学",
-        "readingCount": 2,
-        "readingTime": 4890
-      },
-      {
-        "categoryId": 100001,
-        "categoryTitle": "社会小说",
-        "parentCategoryId": 100000,
-        "parentCategoryTitle": "精品小说",
-        "readingCount": 2,
-        "readingTime": 4890
-      },
-      {
-        "categoryId": 200000,
-        "categoryTitle": "历史",
-        "parentCategoryId": 200000,
-        "parentCategoryTitle": "历史",
-        "readingCount": 0,
-        "readingTime": 0
-      },
-      {
-        "categoryId": 1100000,
-        "categoryTitle": "经济理财",
-        "parentCategoryId": 1100000,
-        "parentCategoryTitle": "经济理财",
-        "readingCount": 0,
-        "readingTime": 0
-      }
-    ],
-    "preferCategoryWord": "偏好阅读哲学宗教",
-    "readStat": [
-      {
-        "stat": "读过",
-        "counts": "5本"
-      },
-      {
-        "stat": "读完",
-        "counts": "2本"
-      },
-      {
-        "stat": "阅读",
-        "counts": "22天"
-      },
-      {
-        "stat": "笔记",
-        "counts": "38条"
-      }
-    ],
+    "readTimes": {},
+    "readDays": 0,
     "registTime": 1645667800,
-    "compare": 2.055487053020962,
-    "dayAverageReadTime": 1278,
-    "baseTime": 1785513600,
-    "totalReadTime": 39648,
+    "compare": -1.0,
+    "dayAverageReadTime": 0,
+    "baseTime": 1788192000,
+    "totalReadTime": 0,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1986,54 +1674,7 @@
       },
       {
         "type": 5,
-        "title": "思考最多",
-        "bookInfo": {
-          "bookId": "3300106416",
-          "title": "箭术与禅心：一位西方哲学家的禅悟实录",
-          "author": "[德]奥根·赫立格尔",
-          "translator": "靳婷婷",
-          "intro": "禅是如何影响我们日常生活的？\n饮茶、打坐、插花、冥想、射箭……\n生活中的任何技艺到达一定境界，都可以接近道，进入禅的境界。\n德国哲学教授奥根·赫立格尔，为了追求在哲学中无法得到的生命意义，远渡重洋去日本学禅。\n屡屡碰壁后，他跟随弓道大师阿波研造，通过箭术悟出了禅的真意：\n禅是平常心，饿了就吃，困了就睡。\n不带贪求，不带憎恶。\n任何技术，都有待于心灵的寂美。\n让箭矢发自无念之中，达到忘我的境界。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_89qdbx6k6ixakqm41mlsqk/s_cpplatform_89qdbx6k6ixakqm41mlsqk1721119725.jpg",
-          "version": 1037611980,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 5,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 5,
-            "maxfreeChapterUid": 5,
-            "maxfreeChapterRatio": 69
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1000000190,
-          "publishTime": "2024-07-16 00:00:00",
-          "lastChapterIdx": 16,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 1620,
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "reason": "笔记最多"
+        "title": "思考最多"
       },
       {
         "type": 3,
@@ -2045,104 +1686,11 @@
       },
       {
         "type": 7,
-        "title": "第一本阅读",
-        "bookInfo": {
-          "bookId": "3300155373",
-          "title": "在我身上有一个不可战胜的夏天",
-          "author": "[法]阿尔贝·加缪",
-          "intro": "在我身上有一个不可战胜的夏天",
-          "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/s_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
-          "version": 76757252,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 6,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 6,
-            "maxfreeChapterUid": 6,
-            "maxfreeChapterRatio": 19
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": -60041,
-          "publishTime": "2025-07-15 00:00:00",
-          "lastChapterIdx": 25,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 5800,
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "reason": "2026/05/10/阅读"
+        "title": "第一本阅读"
       },
       {
         "type": 6,
-        "title": "最爱哲学宗教",
-        "bookInfo": {
-          "bookId": "25424211",
-          "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
-          "author": "赫伯特·马尔库塞",
-          "translator": "刘继",
-          "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/s_YueWen_25424211.jpg",
-          "version": 44968238,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 1048577,
-          "finished": 1,
-          "maxFreeChapter": 6,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 6,
-            "maxfreeChapterUid": 6,
-            "maxfreeChapterRatio": 89
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 9030183,
-          "publishTime": "2014-03-01 00:00:00",
-          "lastChapterIdx": 18,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 5499,
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "reason": "阅读了3小时"
+        "title": "最爱品类"
       },
       {
         "type": 2,
@@ -2173,7 +1721,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 106788
+      "1767196800": 107158
     },
     "readDays": 66,
     "readLongest": [
@@ -2480,6 +2028,56 @@
       },
       {
         "book": {
+          "bookId": "35523642",
+          "title": "丰饶之海（第一卷）：春雪",
+          "author": "三岛由纪夫",
+          "translator": "陈德文",
+          "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
+          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
+          "version": 1873098669,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 7,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 7,
+            "maxfreeChapterUid": 64,
+            "maxfreeChapterRatio": 32
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 1,
+          "cpid": -2571052,
+          "publishTime": "2018-10-15 00:00:00",
+          "lastChapterIdx": 58,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 3000,
+          "copyrightChapterUids": [
+            59
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 8062,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "3300190668",
           "title": "论人生短暂",
           "author": "[古罗马]塞涅卡",
@@ -2526,56 +2124,6 @@
           "isAutoDownload": 1
         },
         "readTime": 7794,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "35523642",
-          "title": "丰饶之海（第一卷）：春雪",
-          "author": "三岛由纪夫",
-          "translator": "陈德文",
-          "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
-          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
-          "version": 1873098669,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 7,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 7,
-            "maxfreeChapterUid": 64,
-            "maxfreeChapterRatio": 32
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 1,
-          "cpid": -2571052,
-          "publishTime": "2018-10-15 00:00:00",
-          "lastChapterIdx": 58,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 3000,
-          "copyrightChapterUids": [
-            59
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 7692,
         "tags": []
       },
       {
@@ -2685,7 +2233,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 7,
-        "readingTime": 37894
+        "readingTime": 38264
       },
       {
         "categoryId": 100001,
@@ -2693,7 +2241,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 4,
-        "readingTime": 25061
+        "readingTime": 25431
       },
       {
         "categoryId": 600000,
@@ -2761,9 +2309,9 @@
       3195,
       3477,
       16316,
-      5225,
+      5615,
       8606,
-      5581,
+      5951,
       11996,
       9192,
       8506,
@@ -2816,16 +2364,16 @@
         "readTime": "2小时16分钟"
       },
       {
+        "authorId": 394948,
+        "name": "三岛由纪夫",
+        "count": 1,
+        "readTime": "2小时14分钟"
+      },
+      {
         "authorId": 315670,
         "name": "塞涅卡",
         "count": 1,
         "readTime": "2小时9分钟"
-      },
-      {
-        "authorId": 394948,
-        "name": "三岛由纪夫",
-        "count": 1,
-        "readTime": "2小时8分钟"
       },
       {
         "authorId": 183442,
@@ -2972,13 +2520,13 @@
       },
       {
         "stat": "笔记",
-        "counts": "143条"
+        "counts": "144条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 106801,
+    "totalReadTime": 107171,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3352,7 +2900,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6387人读过"
+        "reason": "仅有6398人读过"
       },
       {
         "type": 8,
@@ -3682,7 +3230,7 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 39648,
+        "1785513600": 40018,
         "1788192000": 0,
         "1790784000": 0,
         "1793462400": 0,
@@ -3994,6 +3542,56 @@
         },
         {
           "book": {
+            "bookId": "35523642",
+            "title": "丰饶之海（第一卷）：春雪",
+            "author": "三岛由纪夫",
+            "translator": "陈德文",
+            "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
+            "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
+            "version": 1873098669,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 4097,
+            "finished": 1,
+            "maxFreeChapter": 7,
+            "maxFreeInfo": {
+              "maxfreeChapterIdx": 7,
+              "maxfreeChapterUid": 64,
+              "maxfreeChapterRatio": 32
+            },
+            "free": 0,
+            "mcardDiscount": 0,
+            "ispub": 1,
+            "extra_type": 1,
+            "cpid": -2571052,
+            "publishTime": "2018-10-15 00:00:00",
+            "lastChapterIdx": 58,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 3000,
+            "copyrightChapterUids": [
+              59
+            ],
+            "inStoreBookId": "",
+            "blockSaveImg": 0,
+            "language": "zh",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 8062,
+          "tags": []
+        },
+        {
+          "book": {
             "bookId": "3300190668",
             "title": "论人生短暂",
             "author": "[古罗马]塞涅卡",
@@ -4040,56 +3638,6 @@
             "isAutoDownload": 1
           },
           "readTime": 7794,
-          "tags": []
-        },
-        {
-          "book": {
-            "bookId": "35523642",
-            "title": "丰饶之海（第一卷）：春雪",
-            "author": "三岛由纪夫",
-            "translator": "陈德文",
-            "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
-            "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
-            "version": 1873098669,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 4097,
-            "finished": 1,
-            "maxFreeChapter": 7,
-            "maxFreeInfo": {
-              "maxfreeChapterIdx": 7,
-              "maxfreeChapterUid": 64,
-              "maxfreeChapterRatio": 32
-            },
-            "free": 0,
-            "mcardDiscount": 0,
-            "ispub": 1,
-            "extra_type": 1,
-            "cpid": -2571052,
-            "publishTime": "2018-10-15 00:00:00",
-            "lastChapterIdx": 58,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 3000,
-            "copyrightChapterUids": [
-              59
-            ],
-            "inStoreBookId": "",
-            "blockSaveImg": 0,
-            "language": "zh",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 7692,
           "tags": []
         },
         {
@@ -4199,7 +3747,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 7,
-          "readingTime": 37504
+          "readingTime": 38264
         },
         {
           "categoryId": 100001,
@@ -4207,7 +3755,7 @@
           "parentCategoryId": 100000,
           "parentCategoryTitle": "精品小说",
           "readingCount": 4,
-          "readingTime": 24671
+          "readingTime": 25431
         },
         {
           "categoryId": 600000,
@@ -4303,16 +3851,16 @@
           "readTime": "2小时16分钟"
         },
         {
+          "authorId": 394948,
+          "name": "三岛由纪夫",
+          "count": 1,
+          "readTime": "2小时14分钟"
+        },
+        {
           "authorId": 315670,
           "name": "塞涅卡",
           "count": 1,
           "readTime": "2小时9分钟"
-        },
-        {
-          "authorId": 394948,
-          "name": "三岛由纪夫",
-          "count": 1,
-          "readTime": "2小时1分钟"
         },
         {
           "authorId": 183442,
@@ -4459,13 +4007,13 @@
         },
         {
           "stat": "笔记",
-          "counts": "143条"
+          "counts": "144条"
         }
       ],
       "registTime": 1645667800,
       "dayAverageReadTime": 439,
       "baseTime": 1767196800,
-      "totalReadTime": 106788,
+      "totalReadTime": 107158,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -4662,8 +4210,19 @@
   "notesByBook": {
     "35523642": {
       "highlights": {
-        "synckey": 1787635361,
+        "synckey": 1788187043,
         "updated": [
+          {
+            "bookId": "35523642",
+            "chapterIdx": 14,
+            "bookmarkId": "35523642_71_3172-3224",
+            "range": "3172-3224",
+            "markText": "清显感到自己两颊灼热，他像孩子似的伸手摸摸聪子的面颊，发现和自己一样灼热，他满足了。只在那个地方有夏天。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 71,
+            "createTime": 1788187043
+          },
           {
             "bookId": "35523642",
             "chapterIdx": 12,
@@ -4700,6 +4259,11 @@
         ],
         "removed": [],
         "chapters": [
+          {
+            "title": "十二",
+            "chapterUid": 71,
+            "chapterIdx": 14
+          },
           {
             "title": "十",
             "chapterUid": 69,
