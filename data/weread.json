@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-01T16:38:47Z",
+  "updatedAt": "2026-09-01T21:01:33Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1709,10 +1709,77 @@
         ]
       }
     ],
+    "preferCategory": [
+      {
+        "categoryId": 300000,
+        "categoryTitle": "文学",
+        "parentCategoryId": 300000,
+        "parentCategoryTitle": "文学",
+        "readingCount": 1,
+        "readingTime": 1124
+      },
+      {
+        "categoryId": 100001,
+        "categoryTitle": "社会小说",
+        "parentCategoryId": 100000,
+        "parentCategoryTitle": "精品小说",
+        "readingCount": 1,
+        "readingTime": 1124
+      },
+      {
+        "categoryId": 1000000,
+        "categoryTitle": "个人成长",
+        "parentCategoryId": 1000000,
+        "parentCategoryTitle": "个人成长",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 200000,
+        "categoryTitle": "历史",
+        "parentCategoryId": 200000,
+        "parentCategoryTitle": "历史",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 1100000,
+        "categoryTitle": "经济理财",
+        "parentCategoryId": 1100000,
+        "parentCategoryTitle": "经济理财",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 900000,
+        "categoryTitle": "社会文化",
+        "parentCategoryId": 900000,
+        "parentCategoryTitle": "社会文化",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 600000,
+        "categoryTitle": "哲学宗教",
+        "parentCategoryId": 600000,
+        "parentCategoryTitle": "哲学宗教",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 800000,
+        "categoryTitle": "心理",
+        "parentCategoryId": 800000,
+        "parentCategoryTitle": "心理",
+        "readingCount": 0,
+        "readingTime": 0
+      }
+    ],
+    "preferCategoryWord": "偏好阅读文学",
     "readStat": [
       {
         "stat": "读过",
-        "counts": "0本"
+        "counts": "1本"
       },
       {
         "stat": "读完",
@@ -1764,7 +1831,54 @@
       },
       {
         "type": 6,
-        "title": "最爱品类"
+        "title": "最爱社会小说",
+        "bookInfo": {
+          "bookId": "35523642",
+          "title": "丰饶之海（第一卷）：春雪",
+          "author": "三岛由纪夫",
+          "translator": "陈德文",
+          "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
+          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
+          "version": 1873098669,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 7,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 7,
+            "maxfreeChapterUid": 64,
+            "maxfreeChapterRatio": 32
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 1,
+          "cpid": -2571052,
+          "publishTime": "2018-10-15 00:00:00",
+          "lastChapterIdx": 58,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 3000,
+          "copyrightChapterUids": [
+            59
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "阅读了2小时"
       },
       {
         "type": 2,
@@ -2367,7 +2481,7 @@
       }
     ],
     "preferCategoryWord": "偏好阅读文学",
-    "preferTimeWord": "偏好夜间阅读",
+    "preferTimeWord": "偏好夜晚阅读",
     "preferTime": [
       3221,
       2248,
@@ -2376,7 +2490,7 @@
       7,
       0,
       0,
-      1772,
+      2525,
       203,
       67,
       1489,
@@ -2386,7 +2500,7 @@
       5615,
       8606,
       5951,
-      11996,
+      12367,
       9192,
       8506,
       6549,
@@ -2974,7 +3088,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6431人读过"
+        "reason": "仅有6435人读过"
       },
       {
         "type": 8,
@@ -3821,7 +3935,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 7,
-          "readingTime": 38264
+          "readingTime": 39388
         },
         {
           "categoryId": 100001,
@@ -3829,7 +3943,7 @@
           "parentCategoryId": 100000,
           "parentCategoryTitle": "精品小说",
           "readingCount": 4,
-          "readingTime": 25431
+          "readingTime": 26555
         },
         {
           "categoryId": 600000,
@@ -3919,16 +4033,16 @@
           "readTime": "2小时58分钟"
         },
         {
+          "authorId": 394948,
+          "name": "三岛由纪夫",
+          "count": 1,
+          "readTime": "2小时33分钟"
+        },
+        {
           "authorId": 2426523,
           "name": "里克·鲁宾",
           "count": 1,
           "readTime": "2小时16分钟"
-        },
-        {
-          "authorId": 394948,
-          "name": "三岛由纪夫",
-          "count": 1,
-          "readTime": "2小时14分钟"
         },
         {
           "authorId": 315670,
@@ -3978,6 +4092,16 @@
         {
           "count": 1,
           "copyrightInfo": {
+            "name": "东西时代",
+            "userVid": 519906148,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
             "name": "湛庐CHEERS",
             "userVid": 341281594,
             "role": 2,
@@ -3998,10 +4122,10 @@
         {
           "count": 1,
           "copyrightInfo": {
-            "name": "东西时代",
-            "userVid": 519906148,
+            "name": "人民文学出版社有限公司",
+            "userVid": 136179393,
             "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
+            "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
             "cpType": 0
           }
         },
@@ -4018,16 +4142,6 @@
         {
           "count": 1,
           "copyrightInfo": {
-            "name": "人民文学出版社有限公司",
-            "userVid": 136179393,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
             "name": "果麦文化",
             "userVid": 290625916,
             "role": 2,
@@ -4038,6 +4152,14 @@
       ],
       "preferPublisher": [
         {
+          "name": "浙江科学技术出版社",
+          "count": 1
+        },
+        {
+          "name": "浙江人民出版社有限公司",
+          "count": 1
+        },
+        {
           "name": "中信出版集团",
           "count": 1
         },
@@ -4047,14 +4169,6 @@
         },
         {
           "name": "北京科学技术出版社有限公司",
-          "count": 1
-        },
-        {
-          "name": "浙江人民出版社有限公司",
-          "count": 1
-        },
-        {
-          "name": "浙江科学技术出版社",
           "count": 1
         },
         {
