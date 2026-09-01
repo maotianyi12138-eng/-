@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-01T05:06:19Z",
+  "updatedAt": "2026-09-01T11:38:28Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -144,7 +144,7 @@
         "updateTime": 1689693337,
         "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/t6_35523642.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1788188103,
+        "readUpdateTime": 1788241770,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -239,13 +239,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 25,
+        "readingProgress": 27,
         "markedStatus": 2,
-        "lastNoteSort": 1788187043,
+        "lastNoteSort": 1788241723,
         "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
         "updateTime": 1689693337,
         "finishReading": 0,
-        "readUpdateTime": 1788188103,
+        "readUpdateTime": 1788241770,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -1026,10 +1026,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 25,
-        "noteCount": 4,
+        "readingProgress": 27,
+        "noteCount": 5,
         "bookmarkCount": 0,
-        "sort": 1788187043
+        "sort": 1788241723
       },
       {
         "bookId": "3300106416",
@@ -1651,13 +1651,87 @@
     ]
   },
   "monthly": {
-    "readTimes": {},
-    "readDays": 0,
+    "readTimes": {
+      "1788192000": 611
+    },
+    "readDays": 1,
+    "readLongest": [
+      {
+        "book": {
+          "bookId": "35523642",
+          "title": "丰饶之海（第一卷）：春雪",
+          "author": "三岛由纪夫",
+          "translator": "陈德文",
+          "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
+          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
+          "version": 1873098669,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 7,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 7,
+            "maxfreeChapterUid": 64,
+            "maxfreeChapterRatio": 32
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 1,
+          "cpid": -2571052,
+          "publishTime": "2018-10-15 00:00:00",
+          "lastChapterIdx": 58,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 3000,
+          "copyrightChapterUids": [
+            59
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 611,
+        "tags": [
+          "单日阅读最久"
+        ]
+      }
+    ],
+    "readStat": [
+      {
+        "stat": "读过",
+        "counts": "0本"
+      },
+      {
+        "stat": "读完",
+        "counts": "0本"
+      },
+      {
+        "stat": "阅读",
+        "counts": "1天"
+      },
+      {
+        "stat": "笔记",
+        "counts": "1条"
+      }
+    ],
     "registTime": 1645667800,
-    "compare": -1.0,
-    "dayAverageReadTime": 0,
+    "compare": -0.5283615537848606,
+    "dayAverageReadTime": 611,
     "baseTime": 1788192000,
-    "totalReadTime": 0,
+    "totalReadTime": 611,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1721,9 +1795,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 107158
+      "1767196800": 107911
     },
-    "readDays": 66,
+    "readDays": 67,
     "readLongest": [
       {
         "book": {
@@ -1978,6 +2052,56 @@
       },
       {
         "book": {
+          "bookId": "35523642",
+          "title": "丰饶之海（第一卷）：春雪",
+          "author": "三岛由纪夫",
+          "translator": "陈德文",
+          "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
+          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
+          "version": 1873098669,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 7,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 7,
+            "maxfreeChapterUid": 64,
+            "maxfreeChapterRatio": 32
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 1,
+          "cpid": -2571052,
+          "publishTime": "2018-10-15 00:00:00",
+          "lastChapterIdx": 58,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 3000,
+          "copyrightChapterUids": [
+            59
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 8815,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "3300140838",
           "title": "创意行为：存在即答案",
           "author": "[美]里克·鲁宾",
@@ -2024,56 +2148,6 @@
           "isAutoDownload": 1
         },
         "readTime": 8170,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "35523642",
-          "title": "丰饶之海（第一卷）：春雪",
-          "author": "三岛由纪夫",
-          "translator": "陈德文",
-          "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
-          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
-          "version": 1873098669,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 7,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 7,
-            "maxfreeChapterUid": 64,
-            "maxfreeChapterRatio": 32
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 1,
-          "cpid": -2571052,
-          "publishTime": "2018-10-15 00:00:00",
-          "lastChapterIdx": 58,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 3000,
-          "copyrightChapterUids": [
-            59
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 8062,
         "tags": []
       },
       {
@@ -2233,7 +2307,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 7,
-        "readingTime": 38264
+        "readingTime": 39017
       },
       {
         "categoryId": 100001,
@@ -2241,7 +2315,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 4,
-        "readingTime": 25431
+        "readingTime": 26184
       },
       {
         "categoryId": 600000,
@@ -2358,16 +2432,16 @@
         "readTime": "2小时58分钟"
       },
       {
+        "authorId": 394948,
+        "name": "三岛由纪夫",
+        "count": 1,
+        "readTime": "2小时26分钟"
+      },
+      {
         "authorId": 2426523,
         "name": "里克·鲁宾",
         "count": 1,
         "readTime": "2小时16分钟"
-      },
-      {
-        "authorId": 394948,
-        "name": "三岛由纪夫",
-        "count": 1,
-        "readTime": "2小时14分钟"
       },
       {
         "authorId": 315670,
@@ -2516,17 +2590,17 @@
       },
       {
         "stat": "阅读",
-        "counts": "66天"
+        "counts": "67天"
       },
       {
         "stat": "笔记",
-        "counts": "144条"
+        "counts": "145条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 107171,
+    "totalReadTime": 107924,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2900,7 +2974,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6407人读过"
+        "reason": "仅有6418人读过"
       },
       {
         "type": 8,
@@ -3230,13 +3304,13 @@
         "1777564800": 22566,
         "1780243200": 10898,
         "1782835200": 12976,
-        "1785513600": 40018,
-        "1788192000": 0,
+        "1785513600": 40160,
+        "1788192000": 611,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 64,
+      "readDays": 65,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -3492,6 +3566,56 @@
         },
         {
           "book": {
+            "bookId": "35523642",
+            "title": "丰饶之海（第一卷）：春雪",
+            "author": "三岛由纪夫",
+            "translator": "陈德文",
+            "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
+            "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
+            "version": 1873098669,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 4097,
+            "finished": 1,
+            "maxFreeChapter": 7,
+            "maxFreeInfo": {
+              "maxfreeChapterIdx": 7,
+              "maxfreeChapterUid": 64,
+              "maxfreeChapterRatio": 32
+            },
+            "free": 0,
+            "mcardDiscount": 0,
+            "ispub": 1,
+            "extra_type": 1,
+            "cpid": -2571052,
+            "publishTime": "2018-10-15 00:00:00",
+            "lastChapterIdx": 58,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 3000,
+            "copyrightChapterUids": [
+              59
+            ],
+            "inStoreBookId": "",
+            "blockSaveImg": 0,
+            "language": "zh",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 8815,
+          "tags": []
+        },
+        {
+          "book": {
             "bookId": "3300140838",
             "title": "创意行为：存在即答案",
             "author": "[美]里克·鲁宾",
@@ -3538,56 +3662,6 @@
             "isAutoDownload": 1
           },
           "readTime": 8170,
-          "tags": []
-        },
-        {
-          "book": {
-            "bookId": "35523642",
-            "title": "丰饶之海（第一卷）：春雪",
-            "author": "三岛由纪夫",
-            "translator": "陈德文",
-            "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
-            "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
-            "version": 1873098669,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 4097,
-            "finished": 1,
-            "maxFreeChapter": 7,
-            "maxFreeInfo": {
-              "maxfreeChapterIdx": 7,
-              "maxfreeChapterUid": 64,
-              "maxfreeChapterRatio": 32
-            },
-            "free": 0,
-            "mcardDiscount": 0,
-            "ispub": 1,
-            "extra_type": 1,
-            "cpid": -2571052,
-            "publishTime": "2018-10-15 00:00:00",
-            "lastChapterIdx": 58,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 3000,
-            "copyrightChapterUids": [
-              59
-            ],
-            "inStoreBookId": "",
-            "blockSaveImg": 0,
-            "language": "zh",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 8062,
           "tags": []
         },
         {
@@ -3904,6 +3978,16 @@
         {
           "count": 1,
           "copyrightInfo": {
+            "name": "东西时代",
+            "userVid": 519906148,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
             "name": "湛庐CHEERS",
             "userVid": 341281594,
             "role": 2,
@@ -3924,10 +4008,10 @@
         {
           "count": 1,
           "copyrightInfo": {
-            "name": "东西时代",
-            "userVid": 519906148,
+            "name": "人民文学出版社有限公司",
+            "userVid": 136179393,
             "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
+            "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
             "cpType": 0
           }
         },
@@ -3944,16 +4028,6 @@
         {
           "count": 1,
           "copyrightInfo": {
-            "name": "人民文学出版社有限公司",
-            "userVid": 136179393,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
             "name": "果麦文化",
             "userVid": 290625916,
             "role": 2,
@@ -3964,6 +4038,14 @@
       ],
       "preferPublisher": [
         {
+          "name": "浙江科学技术出版社",
+          "count": 1
+        },
+        {
+          "name": "浙江人民出版社有限公司",
+          "count": 1
+        },
+        {
           "name": "中信出版集团",
           "count": 1
         },
@@ -3973,14 +4055,6 @@
         },
         {
           "name": "北京科学技术出版社有限公司",
-          "count": 1
-        },
-        {
-          "name": "浙江人民出版社有限公司",
-          "count": 1
-        },
-        {
-          "name": "浙江科学技术出版社",
           "count": 1
         },
         {
@@ -4003,17 +4077,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "64天"
+          "counts": "65天"
         },
         {
           "stat": "笔记",
-          "counts": "144条"
+          "counts": "145条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 439,
+      "dayAverageReadTime": 442,
       "baseTime": 1767196800,
-      "totalReadTime": 107158,
+      "totalReadTime": 107911,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -4210,8 +4284,19 @@
   "notesByBook": {
     "35523642": {
       "highlights": {
-        "synckey": 1788187043,
+        "synckey": 1788241723,
         "updated": [
+          {
+            "bookId": "35523642",
+            "chapterIdx": 16,
+            "bookmarkId": "35523642_73_876-912",
+            "range": "876-912",
+            "markText": "那钥匙宛若被揪掉翅膀的一只蜻蜓，黑黝黝地停息在他的素朴而厚实的掌心里……",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 73,
+            "createTime": 1788241723
+          },
           {
             "bookId": "35523642",
             "chapterIdx": 14,
@@ -4259,6 +4344,11 @@
         ],
         "removed": [],
         "chapters": [
+          {
+            "title": "十四",
+            "chapterUid": 73,
+            "chapterIdx": 16
+          },
           {
             "title": "十二",
             "chapterUid": 71,
