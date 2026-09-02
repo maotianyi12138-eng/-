@@ -7,6 +7,9 @@ const myThoughts = [
         zh: `
         但更多时候 很多时候都觉得
         用这种状态把你逼走也挺好的
+
+        你看起来似乎很开心
+        thats all i need
 `
     },
    
