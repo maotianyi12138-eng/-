@@ -287,13 +287,13 @@
             else {let last='';body.innerHTML=all.map(item=>{const chapter=item.chapter!==last?`<div class="chapter">${esc(item.chapter)}</div>`:'';last=item.chapter;const abstract=item.abstract?`<span class="abstract">${esc(item.abstract)}</span>`:'';return `${chapter}<article class="mark ${item.kind==='thought'?'thought':''}" style="--mark:${item.color}">${abstract}<q>${esc(item.text||item.abstract||'')}</q>${item.date?`<time>${dateText(item.date)}</time>`:''}</article>`}).join('')}
             const layer=document.getElementById('note-layer');layer.classList.add('open');document.body.classList.add('modal-open');document.querySelector('.close-notes').focus();
         }
-        function closeNotes(){document.getElementById('note-layer').classList.remove('open');document.body.classList.remove('modal-open')}
+        function closeNotes(){document.getElementById('note-layer').classList.remove('open');document.body.classList.remove('modal-open');const url=new URL(location.href);if(url.searchParams.has('book')){url.searchParams.delete('book');history.replaceState(null,'',url)}}
         async function load(){
             renderShelf();
             try{
                 const response=await fetch(`./data/weread.json?t=${Date.now()}`,{cache:'no-store'});if(!response.ok)throw new Error('等待同步');
                 const data=await response.json();if(data.status==='pending')throw new Error('等待同步');
-                state.books=data.history?.books?.length?data.history.books:(data.shelf?.books||[]);state.notesByBook=data.notesByBook||{};renderShelf();
+                state.books=data.history?.books?.length?data.history.books:(data.shelf?.books||[]);state.notesByBook=data.notesByBook||{};renderShelf();const requestedBook=new URLSearchParams(location.search).get('book');if(requestedBook)openNotes(requestedBook);
                 const sync=document.getElementById('sync');sync.className='sync-dot ready';sync.title=`微信读书已同步${data.updatedAt?` · ${new Date(data.updatedAt).toLocaleString('zh-CN')}`:''}`;
             }catch(error){const sync=document.getElementById('sync');sync.className='sync-dot error';sync.title=error.message}
         }
