@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-04T11:16:32Z",
+  "updatedAt": "2026-09-04T16:20:40Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -144,7 +144,7 @@
         "updateTime": 1689693337,
         "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/t6_35523642.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1788475671,
+        "readUpdateTime": 1788528462,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -239,13 +239,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 40,
+        "readingProgress": 42,
         "markedStatus": 2,
         "lastNoteSort": 1788454499,
         "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
         "updateTime": 1689693337,
         "finishReading": 0,
-        "readUpdateTime": 1788475671,
+        "readUpdateTime": 1788528462,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -1026,7 +1026,7 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 40,
+        "readingProgress": 42,
         "noteCount": 9,
         "bookmarkCount": 0,
         "sort": 1788454499
@@ -1655,7 +1655,7 @@
       "1788192000": 982,
       "1788278400": 385,
       "1788364800": 292,
-      "1788451200": 2127
+      "1788451200": 2328
     },
     "readDays": 4,
     "readLongest": [
@@ -1706,7 +1706,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 3928,
+        "readTime": 4129,
         "tags": [
           "单日阅读最久"
         ]
@@ -1798,10 +1798,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.2693849601593626,
-    "dayAverageReadTime": 946,
+    "compare": -0.38447709163346618,
+    "dayAverageReadTime": 797,
     "baseTime": 1788192000,
-    "totalReadTime": 3786,
+    "totalReadTime": 3987,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1912,7 +1912,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 111086
+      "1767196800": 111287
     },
     "readDays": 70,
     "readLongest": [
@@ -2065,7 +2065,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 11990,
+        "readTime": 12191,
         "tags": []
       },
       {
@@ -2424,7 +2424,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 7,
-        "readingTime": 42192
+        "readingTime": 42393
       },
       {
         "categoryId": 100001,
@@ -2432,7 +2432,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 4,
-        "readingTime": 29359
+        "readingTime": 29560
       },
       {
         "categoryId": 600000,
@@ -2534,7 +2534,7 @@
         "authorId": 394948,
         "name": "三岛由纪夫",
         "count": 1,
-        "readTime": "3小时19分钟"
+        "readTime": "3小时23分钟"
       },
       {
         "authorId": 24128,
@@ -2717,7 +2717,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 111099,
+    "totalReadTime": 111300,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3091,7 +3091,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6526人读过"
+        "reason": "仅有6535人读过"
       },
       {
         "type": 8,
@@ -3422,7 +3422,7 @@
         "1780243200": 10898,
         "1782835200": 12976,
         "1785513600": 40160,
-        "1788192000": 3786,
+        "1788192000": 3987,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
@@ -3579,7 +3579,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 11990,
+          "readTime": 12191,
           "tags": []
         },
         {
@@ -4095,16 +4095,6 @@
         {
           "count": 1,
           "copyrightInfo": {
-            "name": "东西时代",
-            "userVid": 519906148,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
             "name": "湛庐CHEERS",
             "userVid": 341281594,
             "role": 2,
@@ -4125,10 +4115,10 @@
         {
           "count": 1,
           "copyrightInfo": {
-            "name": "人民文学出版社有限公司",
-            "userVid": 136179393,
+            "name": "东西时代",
+            "userVid": 519906148,
             "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
+            "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
             "cpType": 0
           }
         },
@@ -4145,6 +4135,16 @@
         {
           "count": 1,
           "copyrightInfo": {
+            "name": "人民文学出版社有限公司",
+            "userVid": 136179393,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
             "name": "果麦文化",
             "userVid": 290625916,
             "role": 2,
@@ -4155,14 +4155,6 @@
       ],
       "preferPublisher": [
         {
-          "name": "浙江科学技术出版社",
-          "count": 1
-        },
-        {
-          "name": "浙江人民出版社有限公司",
-          "count": 1
-        },
-        {
           "name": "中信出版集团",
           "count": 1
         },
@@ -4172,6 +4164,14 @@
         },
         {
           "name": "北京科学技术出版社有限公司",
+          "count": 1
+        },
+        {
+          "name": "浙江人民出版社有限公司",
+          "count": 1
+        },
+        {
+          "name": "浙江科学技术出版社",
           "count": 1
         },
         {
@@ -4202,9 +4202,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 449,
+      "dayAverageReadTime": 448,
       "baseTime": 1767196800,
-      "totalReadTime": 111086,
+      "totalReadTime": 111287,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
