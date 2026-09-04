@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-03T21:01:40Z",
+  "updatedAt": "2026-09-04T04:31:16Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -144,7 +144,7 @@
         "updateTime": 1689693337,
         "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/t6_35523642.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1788454808,
+        "readUpdateTime": 1788475671,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -245,7 +245,7 @@
         "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
         "updateTime": 1689693337,
         "finishReading": 0,
-        "readUpdateTime": 1788454808,
+        "readUpdateTime": 1788475671,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -1706,7 +1706,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 3770,
+        "readTime": 3928,
         "tags": [
           "单日阅读最久"
         ]
@@ -3091,7 +3091,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6505人读过"
+        "reason": "仅有6516人读过"
       },
       {
         "type": 8,
