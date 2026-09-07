@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-07T12:30:36Z",
+  "updatedAt": "2026-09-07T21:30:26Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1720,7 +1720,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 1,
-        "readingTime": 4129
+        "readingTime": 4373
       },
       {
         "categoryId": 100001,
@@ -1728,7 +1728,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 1,
-        "readingTime": 4129
+        "readingTime": 4373
       },
       {
         "categoryId": 1000000,
@@ -1799,8 +1799,8 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.5334341206602163,
-    "dayAverageReadTime": 604,
+    "compare": -0.5917548555776893,
+    "dayAverageReadTime": 528,
     "baseTime": 1788192000,
     "totalReadTime": 4231,
     "readDistributionWord": "点评分布",
@@ -2505,12 +2505,12 @@
       8807,
       6178,
       12794,
-      11312,
-      8536,
+      11339,
+      8611,
       6549,
       6569,
       5698,
-      5710
+      5852
     ],
     "preferAuthor": [
       {
@@ -3092,7 +3092,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6618人读过"
+        "reason": "仅有6632人读过"
       },
       {
         "type": 8,
@@ -3939,7 +3939,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 7,
-          "readingTime": 42393
+          "readingTime": 42637
         },
         {
           "categoryId": 100001,
@@ -3947,7 +3947,7 @@
           "parentCategoryId": 100000,
           "parentCategoryTitle": "精品小说",
           "readingCount": 4,
-          "readingTime": 29560
+          "readingTime": 29804
         },
         {
           "categoryId": 600000,
@@ -4022,7 +4022,7 @@
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 1,
-          "readTime": "3小时23分钟"
+          "readTime": "3小时27分钟"
         },
         {
           "authorId": 24128,
@@ -4203,7 +4203,7 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 446,
+      "dayAverageReadTime": 444,
       "baseTime": 1767196800,
       "totalReadTime": 111531,
       "readDistributionWord": "点评分布",
