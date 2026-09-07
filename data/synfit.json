@@ -1,10 +1,107 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-09-06T07:11:58.599Z",
+  "updatedAt": "2026-09-07T07:24:36.742Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-09-06",
+        "title": "下肢A",
+        "start": 1788708874835,
+        "durationMinutes": 230,
+        "setCount": 14,
+        "volumeKg": 4984,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "深蹲",
+            "setCount": 7,
+            "totalReps": 38,
+            "volumeKg": 2700,
+            "maxWeightKg": 110
+          },
+          {
+            "name": "哑铃保加利亚蹲",
+            "setCount": 3,
+            "totalReps": 24,
+            "volumeKg": 184,
+            "maxWeightKg": 9
+          },
+          {
+            "name": "坐姿腿屈伸",
+            "setCount": 1,
+            "totalReps": 15,
+            "volumeKg": 480,
+            "maxWeightKg": 32
+          },
+          {
+            "name": "坐姿髋内收",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 1620,
+            "maxWeightKg": 45
+          }
+        ]
+      },
+      {
+        "date": "2026-09-04",
+        "title": "爬楼梯",
+        "start": 1788537577218,
+        "durationMinutes": 55,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 569,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "AppleHealthWorkout",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-01",
+        "title": "高强度间歇训练",
+        "start": 1788244384927,
+        "durationMinutes": 168,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 1895,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "HighIntensityIntervalTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-08-31",
+        "title": "跑步",
+        "start": 1788168184090,
+        "durationMinutes": 24,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 247,
+        "distance": 3.33,
+        "movements": [
+          {
+            "name": "Running",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-08-30",
         "title": "腿 后侧",
@@ -15290,7 +15387,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-08-30"
+      "to": "2026-09-06"
     }
   },
   "body": {
