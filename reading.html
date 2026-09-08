@@ -89,8 +89,8 @@
         .book,.filler { position:relative; flex:0 0 var(--w); height:var(--h); min-width:14px; border:0; padding:0; overflow:hidden; background:var(--color); color:var(--text,#eee8dc); box-shadow:inset 4px 0 rgba(255,255,255,.11),inset -4px 0 rgba(20,23,25,.12); transform:rotate(var(--lean,0deg)); transform-origin:center bottom; }
         .book { cursor:pointer; border:1px solid rgba(20,23,25,.3); transition:transform .2s,filter .2s; }
         .book:hover,.book:focus-visible { z-index:8; transform:translateY(-10px) rotate(0); filter:brightness(1.08); outline:2px solid #f3e9c8; outline-offset:2px; }
-        .book:before,.filler:before { content:""; position:absolute; left:0; right:0; top:var(--band,28%); height:11px; background:var(--accent); border-block:2px solid rgba(20,23,25,.16); }
-        .book:after,.filler:after { content:""; position:absolute; left:14%; right:14%; bottom:8px; height:4px; background:currentColor; opacity:.52; }
+        .book-face:before,.filler:before { content:""; position:absolute; left:0; right:0; top:var(--band,28%); height:11px; background:var(--accent); border-block:2px solid rgba(20,23,25,.16); }
+        .book-face:after,.filler:after { content:""; position:absolute; left:14%; right:14%; bottom:8px; height:4px; background:currentColor; opacity:.52; }
         .book span { position:absolute; inset:12px 2px 23px; display:flex; justify-content:center; align-items:flex-start; writing-mode:vertical-rl; overflow:hidden; font:600 clamp(8px,.68vw,11px)/1.15 Georgia,"Songti SC",serif; letter-spacing:.06em; text-align:left; }
         .book i { position:absolute; left:1px; right:1px; bottom:14px; overflow:hidden; font:normal 6px/1 Arial; text-align:center; text-overflow:ellipsis; white-space:nowrap; }
         .stack { transform:rotate(90deg) translateY(-12px); transform-origin:left bottom; }
@@ -188,6 +188,7 @@
         }
         @media (prefers-reduced-motion:reduce) { *,*:before,*:after { animation-duration:.01ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; } }
     </style>
+    <link rel="stylesheet" href="reading-depth.css?v=20260908-room">
 </head>
 <body>
     <main class="scene">
@@ -249,7 +250,7 @@
         function hash(value){let result=2166136261;for(const char of String(value)){result^=char.charCodeAt(0);result=Math.imul(result,16777619)}return Math.abs(result>>>0)}
         function styleFor(seed,real=true){const color=colors[seed%colors.length],accent=colors[(seed+5)%colors.length],text=['#dfbd36','#e6e1d3'].includes(color)?'#171a1b':'#f2ecdf';const width=(real?27:15)+(seed%(real?17:15));const height=(real?118:105)+(seed%(real?62:70));const lean=seed%11===0?(seed%2?-6:6):seed%7===0?2:0;return `--w:${width}px;--h:${height}px;--color:${color};--accent:${accent};--text:${text};--lean:${lean}deg;--band:${15+seed%63}%`}
         function filler(index,row){const seed=hash(`painted-filler-${row}-${index}`);return `<i class="filler" aria-hidden="true" style="${styleFor(seed,false)}"></i>`}
-        function bookSpine(book,index){const seed=hash(`${book.bookId}-${book.title}`),finished=book.finishReading===1||book.markedStatus===1;return `<button class="book" type="button" data-book-id="${esc(book.bookId)}" title="${esc(book.title)} — ${esc(book.author||'')}" aria-label="打开《${esc(book.title)}》的微信读书笔记" style="${styleFor(seed,true)}"><span>${esc(book.title||'未命名书籍')}</span><i>${finished?'读完':esc((book.author||'').slice(0,4))}</i></button>`}
+        function bookSpine(book,index){const seed=hash(`${book.bookId}-${book.title}`),finished=book.finishReading===1||book.markedStatus===1;return `<button class="book" type="button" data-book-id="${esc(book.bookId)}" title="${esc(book.title)} — ${esc(book.author||'')}" aria-label="打开《${esc(book.title)}》的微信读书笔记" style="${styleFor(seed,true)}"><span class="book-face"><span>${esc(book.title||'未命名书籍')}</span><i>${finished?'读完':esc((book.author||'').slice(0,4))}</i></span><b class="book-pages" aria-hidden="true"></b><b class="book-top" aria-hidden="true"></b></button>`}
         function mindOrb(){return `<a class="mind-orb" href="mindmap.html" title="进入我的阅读思维星图" aria-label="进入我的阅读思维星图"><span class="orb-glass"><i class="orb-star" style="--x:27%;--y:33%;--s:4px;--d:-.4s"></i><i class="orb-star" style="--x:63%;--y:27%;--s:3px;--d:-1.3s"></i><i class="orb-star" style="--x:50%;--y:61%;--s:5px;--d:-.8s"></i><i class="orb-star" style="--x:73%;--y:67%;--s:2px;--d:-1.8s"></i></span><span class="orb-base"></span><em>MIND MAP</em></a>`}
         function renderShelf(){
             const box=document.getElementById('bookcase');
@@ -344,5 +345,6 @@
         shelfObserver.observe(document.getElementById('bookcase'));
         selectAlbum(document.querySelector('.album.active'),false);load();
     </script>
+    <script src="reading-depth.js?v=20260908-room" defer></script>
 </body>
 </html>
