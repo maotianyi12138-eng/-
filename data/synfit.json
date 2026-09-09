@@ -1,17 +1,144 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-09-08T07:19:00.636Z",
+  "updatedAt": "2026-09-09T07:27:36.014Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
       {
+        "date": "2026-09-08",
+        "title": "肩 手臂",
+        "start": 1788885132945,
+        "durationMinutes": 48,
+        "setCount": 26,
+        "volumeKg": 10439,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "器械坐姿反向飞鸟",
+            "setCount": 4,
+            "totalReps": 60,
+            "volumeKg": 2700,
+            "maxWeightKg": 45
+          },
+          {
+            "name": "Y字绳索侧平举",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 720,
+            "maxWeightKg": 15
+          },
+          {
+            "name": "站姿杠铃推举",
+            "setCount": 4,
+            "totalReps": 32,
+            "volumeKg": 1280,
+            "maxWeightKg": 40
+          },
+          {
+            "name": "侧平举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 432,
+            "maxWeightKg": 12
+          },
+          {
+            "name": "上斜哑铃弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 432,
+            "maxWeightKg": 12
+          },
+          {
+            "name": "牧师凳弯举",
+            "setCount": 4,
+            "totalReps": 180,
+            "volumeKg": 4275,
+            "maxWeightKg": 25
+          },
+          {
+            "name": "绳索低位过头臂屈伸",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 600,
+            "maxWeightKg": 12.5
+          }
+        ]
+      },
+      {
+        "date": "2026-09-07",
+        "title": "背",
+        "start": 1788799776821,
+        "durationMinutes": 0,
+        "setCount": 20,
+        "volumeKg": 8680.3,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "引体向上",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          },
+          {
+            "name": "绳索直臂下压",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 544.3,
+            "maxWeightKg": 11.3
+          },
+          {
+            "name": "杠铃划船",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 3480,
+            "maxWeightKg": 80
+          },
+          {
+            "name": "宽距高位下拉",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2496,
+            "maxWeightKg": 52
+          },
+          {
+            "name": "器械划船2",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2160,
+            "maxWeightKg": 45
+          }
+        ]
+      },
+      {
+        "date": "2026-09-07",
+        "title": "跑步",
+        "start": 1788773802553,
+        "durationMinutes": 56,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 413,
+        "distance": 5.76,
+        "movements": [
+          {
+            "name": "Running",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
         "date": "2026-09-06",
         "title": "下肢A",
-        "start": 1788708874835,
+        "start": 1788851517549,
         "durationMinutes": 230,
-        "setCount": 14,
-        "volumeKg": 4984,
+        "setCount": 26,
+        "volumeKg": 10600,
         "calories": 0,
         "distance": 0,
         "movements": [
@@ -30,11 +157,32 @@
             "maxWeightKg": 9
           },
           {
+            "name": "腿弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 936,
+            "maxWeightKg": 26
+          },
+          {
             "name": "坐姿腿屈伸",
-            "setCount": 1,
-            "totalReps": 15,
-            "volumeKg": 480,
+            "setCount": 3,
+            "totalReps": 45,
+            "volumeKg": 1440,
             "maxWeightKg": 32
+          },
+          {
+            "name": "杠铃站姿提踵",
+            "setCount": 4,
+            "totalReps": 60,
+            "volumeKg": 2100,
+            "maxWeightKg": 35
+          },
+          {
+            "name": "坐姿髋外展",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 1620,
+            "maxWeightKg": 45
           },
           {
             "name": "坐姿髋内收",
@@ -15387,7 +15535,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-09-06"
+      "to": "2026-09-08"
     }
   },
   "body": {
