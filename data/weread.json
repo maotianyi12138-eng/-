@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-09T16:37:32Z",
+  "updatedAt": "2026-09-09T20:55:20Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1724,7 +1724,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 1,
-        "readingTime": 4373
+        "readingTime": 4661
       },
       {
         "categoryId": 100001,
@@ -1732,7 +1732,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 1,
-        "readingTime": 4373
+        "readingTime": 4661
       },
       {
         "categoryId": 1000000,
@@ -2519,7 +2519,7 @@
       5615,
       8807,
       6178,
-      12794,
+      13082,
       11339,
       8611,
       6549,
@@ -3114,7 +3114,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6687人读过"
+        "reason": "仅有6688人读过"
       },
       {
         "type": 8,
@@ -3971,7 +3971,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 7,
-          "readingTime": 42637
+          "readingTime": 42925
         },
         {
           "categoryId": 100001,
@@ -3979,7 +3979,7 @@
           "parentCategoryId": 100000,
           "parentCategoryTitle": "精品小说",
           "readingCount": 4,
-          "readingTime": 29804
+          "readingTime": 30092
         },
         {
           "categoryId": 600000,
@@ -4045,16 +4045,16 @@
           "readTime": "5小时"
         },
         {
+          "authorId": 394948,
+          "name": "三岛由纪夫",
+          "count": 1,
+          "readTime": "3小时32分钟"
+        },
+        {
           "authorId": 294931,
           "name": "赫伯特·马尔库塞",
           "count": 1,
           "readTime": "3小时28分钟"
-        },
-        {
-          "authorId": 394948,
-          "name": "三岛由纪夫",
-          "count": 1,
-          "readTime": "3小时27分钟"
         },
         {
           "authorId": 24128,
