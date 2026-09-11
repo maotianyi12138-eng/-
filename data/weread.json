@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-10T20:51:49Z",
+  "updatedAt": "2026-09-11T04:38:47Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -144,7 +144,7 @@
         "updateTime": 1689693337,
         "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/t6_35523642.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1788966085,
+        "readUpdateTime": 1789086931,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -239,13 +239,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 44,
+        "readingProgress": 51,
         "markedStatus": 2,
-        "lastNoteSort": 1788454499,
+        "lastNoteSort": 1789078237,
         "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
         "updateTime": 1689693337,
         "finishReading": 0,
-        "readUpdateTime": 1788966085,
+        "readUpdateTime": 1789086931,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -1027,10 +1027,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 44,
-        "noteCount": 9,
+        "readingProgress": 51,
+        "noteCount": 11,
         "bookmarkCount": 0,
-        "sort": 1788454499
+        "sort": 1789078237
       },
       {
         "bookId": "3300106416",
@@ -1659,9 +1659,11 @@
       "1788451200": 2328,
       "1788710400": 244,
       "1788796800": 0,
-      "1788883200": 288
+      "1788883200": 288,
+      "1788969600": 0,
+      "1789056000": 2146
     },
-    "readDays": 6,
+    "readDays": 7,
     "readLongest": [
       {
         "book": {
@@ -1711,8 +1713,9 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 4661,
+        "readTime": 6807,
         "tags": [
+          "笔记最多",
           "单日阅读最久"
         ]
       }
@@ -1795,18 +1798,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "6天"
+        "counts": "7天"
       },
       {
         "stat": "笔记",
-        "counts": "5条"
+        "counts": "7条"
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.6828843716044912,
-    "dayAverageReadTime": 410,
+    "compare": -0.532291289387903,
+    "dayAverageReadTime": 605,
     "baseTime": 1788192000,
-    "totalReadTime": 4519,
+    "totalReadTime": 6665,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1823,7 +1826,55 @@
       },
       {
         "type": 5,
-        "title": "思考最多"
+        "title": "思考最多",
+        "bookInfo": {
+          "bookId": "35523642",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=c3b32bb0721e0c3ac3bc5f6",
+          "title": "丰饶之海（第一卷）：春雪",
+          "author": "三岛由纪夫",
+          "translator": "陈德文",
+          "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
+          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
+          "version": 1873098669,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 7,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 7,
+            "maxfreeChapterUid": 64,
+            "maxfreeChapterRatio": 32
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 1,
+          "cpid": -2571052,
+          "publishTime": "2018-10-15 00:00:00",
+          "lastChapterIdx": 58,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 3000,
+          "copyrightChapterUids": [
+            59
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "笔记最多"
       },
       {
         "type": 3,
@@ -1887,7 +1938,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "阅读了3小时"
+        "reason": "阅读了4小时"
       },
       {
         "type": 2,
@@ -1918,9 +1969,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 111819
+      "1767196800": 113965
     },
-    "readDays": 72,
+    "readDays": 73,
     "readLongest": [
       {
         "book": {
@@ -2023,7 +2074,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 12723,
+        "readTime": 14869,
         "tags": []
       },
       {
@@ -2440,7 +2491,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 7,
-        "readingTime": 42925
+        "readingTime": 45071
       },
       {
         "categoryId": 100001,
@@ -2448,7 +2499,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 4,
-        "readingTime": 30092
+        "readingTime": 32238
       },
       {
         "categoryId": 600000,
@@ -2544,7 +2595,7 @@
         "authorId": 394948,
         "name": "三岛由纪夫",
         "count": 1,
-        "readTime": "3小时32分钟"
+        "readTime": "4小时7分钟"
       },
       {
         "authorId": 294931,
@@ -2723,17 +2774,17 @@
       },
       {
         "stat": "阅读",
-        "counts": "72天"
+        "counts": "73天"
       },
       {
         "stat": "笔记",
-        "counts": "149条"
+        "counts": "151条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 111832,
+    "totalReadTime": 113978,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3006,7 +3057,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "阅读了3小时"
+        "reason": "阅读了4小时"
       },
       {
         "type": 2,
@@ -3114,7 +3165,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6722人读过"
+        "reason": "仅有6734人读过"
       },
       {
         "type": 8,
@@ -3445,12 +3496,12 @@
         "1780243200": 10898,
         "1782835200": 12976,
         "1785513600": 40160,
-        "1788192000": 4519,
+        "1788192000": 6665,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 70,
+      "readDays": 71,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -3554,7 +3605,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 12723,
+          "readTime": 14869,
           "tags": []
         },
         {
@@ -4227,17 +4278,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "70天"
+          "counts": "71天"
         },
         {
           "stat": "笔记",
-          "counts": "149条"
+          "counts": "151条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 440,
+      "dayAverageReadTime": 448,
       "baseTime": 1767196800,
-      "totalReadTime": 111819,
+      "totalReadTime": 113965,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -4414,7 +4465,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "reason": "阅读了3小时"
+          "reason": "阅读了4小时"
         },
         {
           "type": 2,
@@ -4438,8 +4489,30 @@
   "notesByBook": {
     "35523642": {
       "highlights": {
-        "synckey": 1788454499,
+        "synckey": 1789078237,
         "updated": [
+          {
+            "bookId": "35523642",
+            "chapterIdx": 27,
+            "bookmarkId": "35523642_84_563-619",
+            "range": "563-619",
+            "markText": "“现在，我正爱着聪子。”\n为了验证这种感情的正确与真实，只要坚持“绝对不可能”就足够了。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 84,
+            "createTime": 1789078237
+          },
+          {
+            "bookId": "35523642",
+            "chapterUid": 83,
+            "chapterIdx": 26,
+            "colorStyle": 0,
+            "type": 1,
+            "bookmarkId": "35523642_83_4421-4504",
+            "range": "4421-4504",
+            "markText": "即使可爱的人儿就在眼前，也不一定恋着她的实体，而且，她的美丽的倩影又是实体不可或缺的形式，这样一来，一旦隔断时间和空间，就会产生双重的迷惘，同时也会加倍地接近实体……",
+            "createTime": 1789077081
+          },
           {
             "bookId": "35523642",
             "chapterUid": 81,
@@ -4543,34 +4616,9 @@
         "removed": [],
         "chapters": [
           {
-            "title": "二十一",
-            "chapterUid": 80,
-            "chapterIdx": 23
-          },
-          {
-            "title": "二十二",
-            "chapterUid": 81,
-            "chapterIdx": 24
-          },
-          {
-            "title": "十九",
-            "chapterUid": 78,
-            "chapterIdx": 21
-          },
-          {
-            "title": "十四",
-            "chapterUid": 73,
-            "chapterIdx": 16
-          },
-          {
-            "title": "十二",
-            "chapterUid": 71,
-            "chapterIdx": 14
-          },
-          {
-            "title": "十",
-            "chapterUid": 69,
-            "chapterIdx": 12
+            "title": "二十五",
+            "chapterUid": 84,
+            "chapterIdx": 27
           },
           {
             "title": "八",
@@ -4578,9 +4626,44 @@
             "chapterIdx": 10
           },
           {
+            "title": "十九",
+            "chapterUid": 78,
+            "chapterIdx": 21
+          },
+          {
+            "title": "十",
+            "chapterUid": 69,
+            "chapterIdx": 12
+          },
+          {
+            "title": "十二",
+            "chapterUid": 71,
+            "chapterIdx": 14
+          },
+          {
+            "title": "十四",
+            "chapterUid": 73,
+            "chapterIdx": 16
+          },
+          {
+            "title": "二十二",
+            "chapterUid": 81,
+            "chapterIdx": 24
+          },
+          {
+            "title": "二十一",
+            "chapterUid": 80,
+            "chapterIdx": 23
+          },
+          {
             "title": "五",
             "chapterUid": 64,
             "chapterIdx": 7
+          },
+          {
+            "title": "二十四",
+            "chapterUid": 83,
+            "chapterIdx": 26
           }
         ],
         "book": {
