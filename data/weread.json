@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-11T04:38:47Z",
+  "updatedAt": "2026-09-11T11:19:21Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -502,7 +502,7 @@
         "mcardDiscount": 0,
         "ispub": 1,
         "extra_type": 5,
-        "cpid": 4789723,
+        "cpid": 17831528,
         "publishTime": "2025-10-23 00:00:00",
         "lastChapterIdx": 57,
         "paperBook": {
@@ -1421,7 +1421,7 @@
           "mcardDiscount": 0,
           "ispub": 1,
           "extra_type": 5,
-          "cpid": 4789723,
+          "cpid": 17831528,
           "publishTime": "2025-10-23 00:00:00",
           "lastChapterIdx": 57,
           "paperBook": {
@@ -1999,7 +1999,7 @@
           "mcardDiscount": 0,
           "ispub": 1,
           "extra_type": 5,
-          "cpid": 4789723,
+          "cpid": 17831528,
           "publishTime": "2025-10-23 00:00:00",
           "lastChapterIdx": 57,
           "paperBook": {
@@ -2665,6 +2665,26 @@
       {
         "count": 1,
         "copyrightInfo": {
+          "name": "湛庐CHEERS",
+          "userVid": 341281594,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0011-ZlyTRc7hpfLYxdG7URz2m10/0",
+          "cpType": 0
+        }
+      },
+      {
+        "count": 1,
+        "copyrightInfo": {
+          "name": "中信出版集团",
+          "userVid": 168010251,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
+          "cpType": 0
+        }
+      },
+      {
+        "count": 1,
+        "copyrightInfo": {
           "name": "人民文学出版社有限公司",
           "userVid": 136179393,
           "role": 2,
@@ -2689,26 +2709,6 @@
           "userVid": 519906148,
           "role": 2,
           "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
-          "cpType": 0
-        }
-      },
-      {
-        "count": 1,
-        "copyrightInfo": {
-          "name": "中信出版集团",
-          "userVid": 168010251,
-          "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
-          "cpType": 0
-        }
-      },
-      {
-        "count": 1,
-        "copyrightInfo": {
-          "name": "湛庐CHEERS",
-          "userVid": 341281594,
-          "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0011-ZlyTRc7hpfLYxdG7URz2m10/0",
           "cpType": 0
         }
       },
@@ -2875,7 +2875,7 @@
           "mcardDiscount": 0,
           "ispub": 1,
           "extra_type": 5,
-          "cpid": 4789723,
+          "cpid": 17831528,
           "publishTime": "2025-10-23 00:00:00",
           "lastChapterIdx": 57,
           "paperBook": {
@@ -2931,7 +2931,7 @@
           "mcardDiscount": 0,
           "ispub": 1,
           "extra_type": 5,
-          "cpid": 4789723,
+          "cpid": 17831528,
           "publishTime": "2025-10-23 00:00:00",
           "lastChapterIdx": 57,
           "paperBook": {
@@ -3165,7 +3165,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6734人读过"
+        "reason": "仅有6742人读过"
       },
       {
         "type": 8,
@@ -3530,7 +3530,7 @@
             "mcardDiscount": 0,
             "ispub": 1,
             "extra_type": 5,
-            "cpid": 4789723,
+            "cpid": 17831528,
             "publishTime": "2025-10-23 00:00:00",
             "lastChapterIdx": 57,
             "paperBook": {
@@ -4331,7 +4331,7 @@
             "mcardDiscount": 0,
             "ispub": 1,
             "extra_type": 5,
-            "cpid": 4789723,
+            "cpid": 17831528,
             "publishTime": "2025-10-23 00:00:00",
             "lastChapterIdx": 57,
             "paperBook": {
@@ -5859,7 +5859,7 @@
     },
     "3300197381": {
       "highlights": {
-        "synckey": 1778362529,
+        "synckey": 1789116567,
         "updated": [
           {
             "bookId": "3300197381",
@@ -5876,7 +5876,7 @@
             "bookId": "3300197381",
             "chapterIdx": 53,
             "bookmarkId": "3300197381_53_4717-4784",
-            "range": "4717-4784",
+            "range": "4717-4777",
             "markText": "“知道在哪里画叉，就是你的核心竞争力。”你的核心竞争力是你发挥独特才能的能量集合。",
             "colorStyle": 5,
             "type": 1,
@@ -5887,7 +5887,7 @@
             "bookId": "3300197381",
             "chapterIdx": 24,
             "bookmarkId": "3300197381_24_3288-3374",
-            "range": "3288-3374",
+            "range": "3288-3351",
             "markText": "4C公式”：承诺（Commitment）、勇气（courage）、能力（capability）、信心（confidence）。\n",
             "colorStyle": 5,
             "type": 1,
@@ -5964,7 +5964,7 @@
             "bookId": "3300197381",
             "chapterIdx": 42,
             "bookmarkId": "3300197381_42_2104-2153",
-            "range": "2104-2153",
+            "range": "2104-2146",
             "markText": "当你进展困难时，时间对你来说会加速流逝；但当你取得巨大进展时，你的时间会膨胀并放慢。",
             "colorStyle": 5,
             "type": 1,
@@ -6305,7 +6305,7 @@
             "bookId": "3300197381",
             "chapterIdx": 12,
             "bookmarkId": "3300197381_12_5389-5454",
-            "range": "5389-5454",
+            "range": "5389-5431",
             "markText": "心理灵活性的一个核心特质是将自己视为一个更广阔的背景而存在，而不是情感和经历的集合。",
             "colorStyle": 5,
             "type": 1,
@@ -6321,6 +6321,16 @@
             "chapterIdx": 53
           },
           {
+            "title": "3大时间类型：自由日、专注日与缓冲日",
+            "chapterUid": 42,
+            "chapterIdx": 42
+          },
+          {
+            "title": "颠覆认知：更大的目标反而更容易实现",
+            "chapterUid": 12,
+            "chapterIdx": 12
+          },
+          {
             "title": "“每日3个重点”原则",
             "chapterUid": 46,
             "chapterIdx": 46
@@ -6329,11 +6339,6 @@
             "title": "自由日：恢复与创新",
             "chapterUid": 43,
             "chapterIdx": 43
-          },
-          {
-            "title": "3大时间类型：自由日、专注日与缓冲日",
-            "chapterUid": 42,
-            "chapterIdx": 42
           },
           {
             "title": "时间膨胀原理：质量优于数量",
@@ -6356,14 +6361,14 @@
             "chapterIdx": 35
           },
           {
+            "title": "聚焦带来最大回报的领域",
+            "chapterUid": 26,
+            "chapterIdx": 26
+          },
+          {
             "title": "自由的本质：10倍增长带来的4大自由",
             "chapterUid": 14,
             "chapterIdx": 14
-          },
-          {
-            "title": "颠覆认知：更大的目标反而更容易实现",
-            "chapterUid": 12,
-            "chapterIdx": 12
           },
           {
             "title": "2倍增长的陷阱：越努力越受限",
@@ -6394,11 +6399,6 @@
             "title": "打造不可替代的竞争优势",
             "chapterUid": 27,
             "chapterIdx": 27
-          },
-          {
-            "title": "聚焦带来最大回报的领域",
-            "chapterUid": 26,
-            "chapterIdx": 26
           },
           {
             "title": "丰盈心态vs.匮乏心态",
