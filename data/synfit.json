@@ -1,17 +1,109 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-09-10T07:23:31.584Z",
+  "updatedAt": "2026-09-11T07:21:24.978Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-09-10",
+        "title": "下肢B",
+        "start": 1789056861037,
+        "durationMinutes": 69,
+        "setCount": 18,
+        "volumeKg": 3660,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "箱跳",
+            "setCount": 3,
+            "totalReps": 9,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          },
+          {
+            "name": "单腿支撑跳",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          },
+          {
+            "name": "硬拉",
+            "setCount": 4,
+            "totalReps": 16,
+            "volumeKg": 1680,
+            "maxWeightKg": 110
+          },
+          {
+            "name": "器械臀冲",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 660,
+            "maxWeightKg": 20
+          },
+          {
+            "name": "前蹲",
+            "setCount": 3,
+            "totalReps": 24,
+            "volumeKg": 1200,
+            "maxWeightKg": 50
+          },
+          {
+            "name": "单腿罗马尼亚硬拉",
+            "setCount": 2,
+            "totalReps": 24,
+            "volumeKg": 120,
+            "maxWeightKg": 5
+          }
+        ]
+      },
+      {
+        "date": "2026-09-10",
+        "title": "跑步",
+        "start": 1789030590972,
+        "durationMinutes": 38,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 405,
+        "distance": 5.42,
+        "movements": [
+          {
+            "name": "Running",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "title": "高强度间歇训练",
+        "start": 1788936188271,
+        "durationMinutes": 187,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 2024,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "HighIntensityIntervalTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-09-08",
         "title": "肩 手臂",
         "start": 1788885132945,
         "durationMinutes": 48,
-        "setCount": 26,
-        "volumeKg": 10439,
+        "setCount": 27,
+        "volumeKg": 10761.5,
         "calories": 0,
         "distance": 0,
         "movements": [
@@ -63,6 +155,13 @@
             "totalReps": 48,
             "volumeKg": 600,
             "maxWeightKg": 12.5
+          },
+          {
+            "name": "绳索直臂下压",
+            "setCount": 1,
+            "totalReps": 15,
+            "volumeKg": 322.5,
+            "maxWeightKg": 21.5
           }
         ]
       },
@@ -15535,7 +15634,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-09-08"
+      "to": "2026-09-10"
     }
   },
   "body": {
