@@ -1,10 +1,90 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-09-11T07:21:24.978Z",
+  "updatedAt": "2026-09-12T07:13:57.621Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-09-11",
+        "title": "肩 胸 双杠 手臂",
+        "start": 1789142739616,
+        "durationMinutes": 11,
+        "setCount": 23,
+        "volumeKg": 7296.2,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "器械飞鸟",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 2376,
+            "maxWeightKg": 66
+          },
+          {
+            "name": "双杠臂屈伸（辅助）",
+            "setCount": 6,
+            "totalReps": 72,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          },
+          {
+            "name": "上斜史密斯机卧推",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 1560,
+            "maxWeightKg": 50
+          },
+          {
+            "name": "杠铃卧推",
+            "setCount": 2,
+            "totalReps": 24,
+            "volumeKg": 1440,
+            "maxWeightKg": 60
+          },
+          {
+            "name": "哑铃推肩",
+            "setCount": 3,
+            "totalReps": 30,
+            "volumeKg": 600,
+            "maxWeightKg": 20
+          },
+          {
+            "name": "Y字绳索侧平举",
+            "setCount": 1,
+            "totalReps": 12,
+            "volumeKg": 384,
+            "maxWeightKg": 32
+          },
+          {
+            "name": "绳索直臂下压",
+            "setCount": 5,
+            "totalReps": 60,
+            "volumeKg": 936.2,
+            "maxWeightKg": 16.3
+          }
+        ]
+      },
+      {
+        "date": "2026-09-11",
+        "title": "跑步",
+        "start": 1789119692836,
+        "durationMinutes": 64,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 332,
+        "distance": 4.26,
+        "movements": [
+          {
+            "name": "Running",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-09-10",
         "title": "下肢B",
@@ -15634,7 +15714,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-09-10"
+      "to": "2026-09-11"
     }
   },
   "body": {
