@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-13T16:15:56Z",
+  "updatedAt": "2026-09-13T20:48:54Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1729,7 +1729,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 1,
-        "readingTime": 7893
+        "readingTime": 11492
       },
       {
         "categoryId": 100001,
@@ -1737,7 +1737,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 1,
-        "readingTime": 7893
+        "readingTime": 11492
       },
       {
         "categoryId": 1000000,
@@ -2555,7 +2555,7 @@
     "preferCategoryWord": "偏好阅读文学",
     "preferTimeWord": "偏好夜间阅读",
     "preferTime": [
-      3403,
+      3610,
       2248,
       1645,
       317,
@@ -2572,13 +2572,13 @@
       6198,
       8807,
       6178,
-      13438,
-      11339,
+      13636,
+      11649,
       8758,
       6549,
-      6569,
-      5698,
-      6626
+      6890,
+      5908,
+      8979
     ],
     "preferAuthor": [
       {
@@ -3167,7 +3167,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6804人读过"
+        "reason": "仅有6805人读过"
       },
       {
         "type": 8,
@@ -4024,7 +4024,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 7,
-          "readingTime": 46157
+          "readingTime": 49756
         },
         {
           "categoryId": 100001,
@@ -4032,7 +4032,7 @@
           "parentCategoryId": 100000,
           "parentCategoryTitle": "精品小说",
           "readingCount": 4,
-          "readingTime": 33324
+          "readingTime": 36923
         },
         {
           "categoryId": 600000,
@@ -4092,16 +4092,16 @@
           "readTime": "2小时29分钟"
         },
         {
+          "authorId": 394948,
+          "name": "三岛由纪夫",
+          "count": 1,
+          "readTime": "5小时25分钟"
+        },
+        {
           "authorId": 522347,
           "name": "丹·沙利文",
           "count": 1,
           "readTime": "5小时"
-        },
-        {
-          "authorId": 394948,
-          "name": "三岛由纪夫",
-          "count": 1,
-          "readTime": "4小时25分钟"
         },
         {
           "authorId": 294931,
