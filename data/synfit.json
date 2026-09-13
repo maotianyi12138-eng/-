@@ -1,7 +1,7 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-09-12T07:13:57.621Z",
+  "updatedAt": "2026-09-13T07:31:56.037Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
@@ -11,7 +11,7 @@
         "start": 1789142739616,
         "durationMinutes": 11,
         "setCount": 23,
-        "volumeKg": 7296.2,
+        "volumeKg": 7020.2,
         "calories": 0,
         "distance": 0,
         "movements": [
@@ -54,8 +54,8 @@
             "name": "Y字绳索侧平举",
             "setCount": 1,
             "totalReps": 12,
-            "volumeKg": 384,
-            "maxWeightKg": 32
+            "volumeKg": 108,
+            "maxWeightKg": 9
           },
           {
             "name": "绳索直臂下压",
