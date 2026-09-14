@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-14T12:43:59Z",
+  "updatedAt": "2026-09-14T21:48:56Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -144,7 +144,7 @@
         "updateTime": 1689693337,
         "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/t6_35523642.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1789388503,
+        "readUpdateTime": 1789403082,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -239,13 +239,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 69,
+        "readingProgress": 71,
         "markedStatus": 2,
-        "lastNoteSort": 1789249582,
+        "lastNoteSort": 1789402660,
         "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
         "updateTime": 1689693337,
         "finishReading": 0,
-        "readUpdateTime": 1789388503,
+        "readUpdateTime": 1789403082,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -1027,10 +1027,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 69,
-        "noteCount": 18,
+        "readingProgress": 71,
+        "noteCount": 19,
         "bookmarkCount": 0,
-        "sort": 1789249582
+        "sort": 1789402660
       },
       {
         "bookId": "3300106416",
@@ -1662,9 +1662,10 @@
       "1789056000": 2146,
       "1789142400": 1086,
       "1789228800": 3599,
-      "1789315200": 342
+      "1789315200": 342,
+      "1789401600": 623
     },
-    "readDays": 10,
+    "readDays": 11,
     "readLongest": [
       {
         "book": {
@@ -1714,7 +1715,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 11834,
+        "readTime": 12457,
         "tags": [
           "笔记最多",
           "单日阅读最久"
@@ -1728,7 +1729,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 1,
-        "readingTime": 11492
+        "readingTime": 11834
       },
       {
         "categoryId": 100001,
@@ -1736,7 +1737,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 1,
-        "readingTime": 11492
+        "readingTime": 11834
       },
       {
         "categoryId": 1000000,
@@ -1799,18 +1800,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "10天"
+        "counts": "11天"
       },
       {
         "stat": "笔记",
-        "counts": "14条"
+        "counts": "15条"
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.3553429140580535,
-    "dayAverageReadTime": 835,
+    "compare": -0.3662599601593626,
+    "dayAverageReadTime": 821,
     "baseTime": 1788192000,
-    "totalReadTime": 11692,
+    "totalReadTime": 12315,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1970,9 +1971,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 118992
+      "1767196800": 119615
     },
-    "readDays": 76,
+    "readDays": 77,
     "readLongest": [
       {
         "book": {
@@ -2022,7 +2023,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 19896,
+        "readTime": 20519,
         "tags": []
       },
       {
@@ -2492,7 +2493,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 7,
-        "readingTime": 50098
+        "readingTime": 50721
       },
       {
         "categoryId": 100001,
@@ -2500,7 +2501,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 4,
-        "readingTime": 37265
+        "readingTime": 37888
       },
       {
         "categoryId": 600000,
@@ -2568,7 +2569,7 @@
       3195,
       3477,
       16316,
-      6198,
+      6540,
       8807,
       6178,
       13636,
@@ -2590,7 +2591,7 @@
         "authorId": 394948,
         "name": "三岛由纪夫",
         "count": 1,
-        "readTime": "5小时31分钟"
+        "readTime": "5小时41分钟"
       },
       {
         "authorId": 522347,
@@ -2775,17 +2776,17 @@
       },
       {
         "stat": "阅读",
-        "counts": "76天"
+        "counts": "77天"
       },
       {
         "stat": "笔记",
-        "counts": "158条"
+        "counts": "159条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 119005,
+    "totalReadTime": 119628,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3166,7 +3167,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6824人读过"
+        "reason": "仅有6831人读过"
       },
       {
         "type": 8,
@@ -3497,12 +3498,12 @@
         "1780243200": 10898,
         "1782835200": 12976,
         "1785513600": 40160,
-        "1788192000": 11692,
+        "1788192000": 12315,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 74,
+      "readDays": 75,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -3553,7 +3554,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 19896,
+          "readTime": 20519,
           "tags": []
         },
         {
@@ -4023,7 +4024,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 7,
-          "readingTime": 49756
+          "readingTime": 50098
         },
         {
           "categoryId": 100001,
@@ -4031,7 +4032,7 @@
           "parentCategoryId": 100000,
           "parentCategoryTitle": "精品小说",
           "readingCount": 4,
-          "readingTime": 36923
+          "readingTime": 37265
         },
         {
           "categoryId": 600000,
@@ -4094,7 +4095,7 @@
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 1,
-          "readTime": "5小时25分钟"
+          "readTime": "5小时31分钟"
         },
         {
           "authorId": 522347,
@@ -4279,17 +4280,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "74天"
+          "counts": "75天"
         },
         {
           "stat": "笔记",
-          "counts": "158条"
+          "counts": "159条"
         }
       ],
       "registTime": 1645667800,
       "dayAverageReadTime": 463,
       "baseTime": 1767196800,
-      "totalReadTime": 118992,
+      "totalReadTime": 119615,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -4490,8 +4491,19 @@
   "notesByBook": {
     "35523642": {
       "highlights": {
-        "synckey": 1789249582,
+        "synckey": 1789402660,
         "updated": [
+          {
+            "bookId": "35523642",
+            "chapterIdx": 40,
+            "bookmarkId": "35523642_97_2569-2599",
+            "range": "2569-2599",
+            "markText": "滚烫的紫色豆馅，如春泥一般从涂漆的碗盖下溢出来，慢慢地干了。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 97,
+            "createTime": 1789402660
+          },
           {
             "bookId": "35523642",
             "chapterUid": 95,
@@ -4732,6 +4744,11 @@
             "title": "十二",
             "chapterUid": 71,
             "chapterIdx": 14
+          },
+          {
+            "title": "三十八",
+            "chapterUid": 97,
+            "chapterIdx": 40
           },
           {
             "title": "二十九",
