@@ -1,68 +1,156 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-09-13T07:31:56.037Z",
+  "updatedAt": "2026-09-14T07:58:35.678Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
       {
-        "date": "2026-09-11",
-        "title": "肩 胸 双杠 手臂",
-        "start": 1789142739616,
-        "durationMinutes": 11,
-        "setCount": 23,
-        "volumeKg": 7020.2,
+        "date": "2026-09-13",
+        "title": "下肢A",
+        "start": 1789328310751,
+        "durationMinutes": 25,
+        "setCount": 24,
+        "volumeKg": 11241,
         "calories": 0,
         "distance": 0,
         "movements": [
           {
-            "name": "器械飞鸟",
+            "name": "深蹲",
+            "setCount": 7,
+            "totalReps": 39,
+            "volumeKg": 2910,
+            "maxWeightKg": 120
+          },
+          {
+            "name": "哑铃保加利亚蹲",
             "setCount": 3,
-            "totalReps": 36,
-            "volumeKg": 2376,
-            "maxWeightKg": 66
-          },
-          {
-            "name": "双杠臂屈伸（辅助）",
-            "setCount": 6,
-            "totalReps": 72,
-            "volumeKg": 0,
-            "maxWeightKg": 0
-          },
-          {
-            "name": "上斜史密斯机卧推",
-            "setCount": 3,
-            "totalReps": 36,
-            "volumeKg": 1560,
-            "maxWeightKg": 50
-          },
-          {
-            "name": "杠铃卧推",
-            "setCount": 2,
             "totalReps": 24,
-            "volumeKg": 1440,
-            "maxWeightKg": 60
-          },
-          {
-            "name": "哑铃推肩",
-            "setCount": 3,
-            "totalReps": 30,
-            "volumeKg": 600,
-            "maxWeightKg": 20
-          },
-          {
-            "name": "Y字绳索侧平举",
-            "setCount": 1,
-            "totalReps": 12,
-            "volumeKg": 108,
+            "volumeKg": 216,
             "maxWeightKg": 9
           },
           {
-            "name": "绳索直臂下压",
-            "setCount": 5,
-            "totalReps": 60,
-            "volumeKg": 936.2,
-            "maxWeightKg": 16.3
+            "name": "坐姿腿屈伸",
+            "setCount": 3,
+            "totalReps": 45,
+            "volumeKg": 1545,
+            "maxWeightKg": 39
+          },
+          {
+            "name": "杠铃站姿提踵",
+            "setCount": 3,
+            "totalReps": 45,
+            "volumeKg": 2250,
+            "maxWeightKg": 50
+          },
+          {
+            "name": "坐姿髋外展",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2160,
+            "maxWeightKg": 45
+          },
+          {
+            "name": "坐姿髋内收",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2160,
+            "maxWeightKg": 45
+          }
+        ]
+      },
+      {
+        "date": "2026-09-13",
+        "title": "跑步",
+        "start": 1789287960282,
+        "durationMinutes": 28,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 289,
+        "distance": 3.91,
+        "movements": [
+          {
+            "name": "Running",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-13",
+        "title": "步行",
+        "start": 1789287154000,
+        "durationMinutes": 42,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 263,
+        "distance": 4.33,
+        "movements": [
+          {
+            "name": "Walking",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-12",
+        "title": "楼梯",
+        "start": 1789216610690,
+        "durationMinutes": 1,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 10,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "AppleHealthWorkout",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-12",
+        "title": "跑步",
+        "start": 1789202027091,
+        "durationMinutes": 32,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 324,
+        "distance": 4.3,
+        "movements": [
+          {
+            "name": "Running",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-11",
+        "title": "步行",
+        "start": 1789122651000,
+        "durationMinutes": 39,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 183,
+        "distance": 2.73,
+        "movements": [
+          {
+            "name": "Walking",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
           }
         ]
       },
@@ -86,56 +174,97 @@
         ]
       },
       {
+        "date": "2026-09-11",
+        "title": "步行",
+        "start": 1789118445000,
+        "durationMinutes": 40,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 215,
+        "distance": 3.37,
+        "movements": [
+          {
+            "name": "Walking",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-11",
+        "title": "步行",
+        "start": 1789118445000,
+        "durationMinutes": 40,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 215,
+        "distance": 3.37,
+        "movements": [
+          {
+            "name": "Walking",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
         "date": "2026-09-10",
-        "title": "下肢B",
-        "start": 1789056861037,
-        "durationMinutes": 69,
-        "setCount": 18,
-        "volumeKg": 3660,
-        "calories": 0,
+        "title": "楼梯",
+        "start": 1789047769356,
+        "durationMinutes": 2,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 25,
         "distance": 0,
         "movements": [
           {
-            "name": "箱跳",
-            "setCount": 3,
-            "totalReps": 9,
+            "name": "AppleHealthWorkout",
+            "setCount": 1,
+            "totalReps": 0,
             "volumeKg": 0,
             "maxWeightKg": 0
-          },
+          }
+        ]
+      },
+      {
+        "date": "2026-09-10",
+        "title": "楼梯",
+        "start": 1789047766340,
+        "durationMinutes": 2,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 18,
+        "distance": 0,
+        "movements": [
           {
-            "name": "单腿支撑跳",
-            "setCount": 3,
-            "totalReps": 36,
+            "name": "AppleHealthWorkout",
+            "setCount": 1,
+            "totalReps": 0,
             "volumeKg": 0,
             "maxWeightKg": 0
-          },
+          }
+        ]
+      },
+      {
+        "date": "2026-09-10",
+        "title": "步行",
+        "start": 1789035712000,
+        "durationMinutes": 26,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 93,
+        "distance": 1.18,
+        "movements": [
           {
-            "name": "硬拉",
-            "setCount": 4,
-            "totalReps": 16,
-            "volumeKg": 1680,
-            "maxWeightKg": 110
-          },
-          {
-            "name": "器械臀冲",
-            "setCount": 3,
-            "totalReps": 36,
-            "volumeKg": 660,
-            "maxWeightKg": 20
-          },
-          {
-            "name": "前蹲",
-            "setCount": 3,
-            "totalReps": 24,
-            "volumeKg": 1200,
-            "maxWeightKg": 50
-          },
-          {
-            "name": "单腿罗马尼亚硬拉",
-            "setCount": 2,
-            "totalReps": 24,
-            "volumeKg": 120,
-            "maxWeightKg": 5
+            "name": "Walking",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
           }
         ]
       },
@@ -151,6 +280,63 @@
         "movements": [
           {
             "name": "Running",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "title": "楼梯",
+        "start": 1788968503384,
+        "durationMinutes": 7,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 10,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "AppleHealthWorkout",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "title": "楼梯",
+        "start": 1788967231632,
+        "durationMinutes": 0,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 10,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "AppleHealthWorkout",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "title": "楼梯",
+        "start": 1788966544353,
+        "durationMinutes": 9,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 39,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "AppleHealthWorkout",
             "setCount": 1,
             "totalReps": 0,
             "volumeKg": 0,
@@ -294,6 +480,44 @@
       },
       {
         "date": "2026-09-07",
+        "title": "步行",
+        "start": 1788797046000,
+        "durationMinutes": 98,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 269,
+        "distance": 2.79,
+        "movements": [
+          {
+            "name": "Walking",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-07",
+        "title": "步行",
+        "start": 1788793871000,
+        "durationMinutes": 21,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 78,
+        "distance": 1.03,
+        "movements": [
+          {
+            "name": "Walking",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-07",
         "title": "跑步",
         "start": 1788773802553,
         "durationMinutes": 56,
@@ -369,6 +593,25 @@
             "totalReps": 36,
             "volumeKg": 1620,
             "maxWeightKg": 45
+          }
+        ]
+      },
+      {
+        "date": "2026-09-06",
+        "title": "步行",
+        "start": 1788729093000,
+        "durationMinutes": 28,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 78,
+        "distance": 0.8,
+        "movements": [
+          {
+            "name": "Walking",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
           }
         ]
       },
@@ -15714,7 +15957,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-09-11"
+      "to": "2026-09-13"
     }
   },
   "body": {
