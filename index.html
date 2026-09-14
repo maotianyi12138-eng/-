@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAO TIANYI | ARCHIVE</title>
+    <title>Tianyi Mao — Graphic, Brand & Photography</title>
+    <meta name="description" content="毛天艺的平面设计、品牌设计与摄影作品集，以及电影、阅读音乐、反思、书法和训练记录。">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;700&display=swap');
@@ -386,15 +387,32 @@
         .works-thumb { width: 68px; height: 68px; object-fit: cover; border-radius: 8px; opacity: 0.45; border: 1px solid rgba(255,255,255,0.1); transition: opacity 0.2s ease; }
         .works-thumb:hover, .works-thumb.active { opacity: 1; }
     </style>
+    <link rel="stylesheet" href="portfolio.css?v=20260914-scroll">
 </head>
 <body>
-    <audio id="main-audio" loop><source src="bgm.mp3" type="audio/mpeg"></audio>
+    <audio id="main-audio" loop preload="metadata"><source src="Macy%20Gray%20-%20Let%20You%20Win.mp3" type="audio/mpeg"></audio>
+    <header class="folio-nav">
+        <a class="folio-wordmark" href="?section=home" data-section="home">TIANYI MAO<small>DESIGN &amp; PHOTOGRAPHY</small></a>
+        <nav class="folio-nav-links" aria-label="主页导航">
+            <a href="?section=home#graphic" data-jump="graphic">Graphic</a>
+            <a href="?section=home#brand" data-jump="brand">Brand</a>
+            <a href="?section=home#photography" data-jump="photography">Photography</a>
+            <details id="folio-more"><summary>More of Me <span aria-hidden="true">＋</span></summary>
+                <div class="folio-more-panel">
+                    <a href="?section=cinema" data-section="cinema">Cinema<small>电影</small></a>
+                    <a href="?section=reading" data-section="reading">Books &amp; Music<small>音乐与阅读</small></a>
+                    <a href="?section=thoughts" data-section="thoughts">Reflect<small>反思</small></a>
+                    <div class="folio-more-split"><a href="?section=calligraphy" data-section="calligraphy">Ink<small>书法</small></a><a href="?section=sports" data-section="sports">Train<small>运动记录</small></a></div>
+                </div>
+            </details>
+        </nav>
+    </header>
 
     <div id="nav-ui">
         <div id="back-btn" class="fixed top-4 left-4 md:top-8 md:left-8 z-[500] cursor-pointer opacity-50 hover:opacity-100 transition hidden" onclick="switchPage('home')">
             <span class="en-main text-[10px]">Return</span><span class="zh-sub">返回</span>
         </div>
-        <div id="music-toggle" class="fixed top-4 right-4 md:top-8 md:right-8 z-[500] cursor-pointer opacity-40 hover:opacity-100 transition p-3 glass" onclick="toggleMusic()">
+        <div id="music-toggle" role="button" tabindex="0" aria-label="播放或暂停 Macy Gray — Let You Win" class="fixed top-4 right-4 md:top-8 md:right-8 z-[500] cursor-pointer opacity-40 hover:opacity-100 transition p-3 glass" onclick="toggleMusic()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();toggleMusic()}">
             <div id="music-on" class="w-4 h-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
             <div id="music-off" class="w-4 h-4 hidden"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></div>
         </div>
@@ -426,6 +444,7 @@
 
     <script src="movies.js"></script>
     <script src="thoughts.js"></script>
+    <script src="portfolio.js?v=20260914-scroll"></script>
     <script>
         const audio = document.getElementById('main-audio');
         const app = document.getElementById('app-content');
@@ -571,6 +590,12 @@
             const category = getWorksCategoryById(categoryId);
             if (!category) return [];
 
+            try {
+                const portfolio = await Portfolio.load();
+                const files = portfolio.works[categoryId];
+                if (files?.length) return worksState.filesByCategory[categoryId] = files;
+            } catch (_) {}
+
             const autoFiles = await fetchWorksFilesFromDirectory(category.path);
             const files = autoFiles.length > 0 ? autoFiles : (worksFallbackManifest[categoryId] || []);
             worksState.filesByCategory[categoryId] = files;
@@ -608,7 +633,10 @@
         function updateMusicIcon() {
             document.getElementById('music-on').classList.toggle('hidden', audio.paused);
             document.getElementById('music-off').classList.toggle('hidden', !audio.paused);
+            document.getElementById('music-toggle').setAttribute('aria-pressed', String(!audio.paused));
         }
+        audio.addEventListener('play', updateMusicIcon);
+        audio.addEventListener('pause', updateMusicIcon);
 
         window.addEventListener('message', event => {
             if (event.origin !== window.location.origin || event.data?.type !== 'reading-album-playing') return;
@@ -631,45 +659,7 @@
             updateMusicIcon();
         }
 
-        function renderHome() {
-            app.innerHTML = `
-                <div class="h-[35vh] md:h-[45vh] flex flex-col justify-end pb-8 px-4">
-                    <div class="flex flex-col md:flex-row items-baseline gap-2">
-                        <span class="zh-sub opacity-100 order-2 md:order-1" style="font-size: 10vw;">毛天艺</span>
-                        <span class="en-main text-[4vw] md:text-[2.5vw] order-1 md:order-2">Tianyi Mao</span>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 mt-12 md:mt-24">
-                    <div class="glass p-6 relative overflow-hidden group h-[140px] more-home-card">
-                        <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0 flex items-center h-full">
-                            <div>
-                                <span class="en-main text-2xl mb-1">What Can I Do</span><span class="zh-sub">核心业务</span>
-                            </div>
-                        </div>
-                        <div class="absolute inset-0 glass border-none rounded-none flex items-center justify-around z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <div onclick="switchPage('works')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-lg">Design</span><span class="zh-sub">平面设计</span></div>
-                            <div onclick="switchPage('photo')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-lg">Photo</span><span class="zh-sub">摄影作品</span></div>
-                            <div onclick="switchPage('coach')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-lg">Coach</span><span class="zh-sub">运动教学</span></div>
-                        </div>
-                    </div>
-                    <div class="glass p-6 relative overflow-hidden group h-[140px]">
-                        <div class="relative z-10 transition-opacity duration-500 group-hover:opacity-0 flex items-center h-full">
-                            <div>
-                                <span class="en-main text-2xl mb-1">More of Me</span><span class="zh-sub">个人兴趣</span>
-                            </div>
-                        </div>
-                        <div class="absolute inset-0 glass border-none rounded-none z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 more-menu">
-                            <div onclick="switchPage('cinema')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Cinema</span><span class="zh-sub">电影</span></div>
-                            <div onclick="switchPage('reading')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Books & Music</span><span class="zh-sub">音乐与阅读</span></div>
-                            <div onclick="switchPage('thoughts')" class="cursor-pointer text-center hover:scale-110 transition"><span class="en-main text-base">Reflect</span><span class="zh-sub">感悟</span></div>
-                            <div class="more-practice-cell">
-                                <button type="button" onclick="event.stopPropagation();switchPage('calligraphy')" class="text-center hover:scale-105 transition"><span class="en-main text-base">Ink</span><span class="zh-sub">书法</span></button>
-                                <button type="button" onclick="event.stopPropagation();switchPage('sports')" class="text-center hover:scale-105 transition"><span class="en-main text-base">Train</span><span class="zh-sub">运动记录</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
+        function renderHome() { Portfolio.renderHome(); }
 
         function renderWorks() {
             app.innerHTML = `
@@ -686,7 +676,11 @@
                         <div id="works-content-area" class="min-h-[300px]"></div>
                     </div>
                 </div>`;
-            handleWorksNav('工作实践', document.querySelector('.works-nav-item'));
+            const initialWork = Portfolio.takeWorksCategory();
+            const initialNav = [...document.querySelectorAll('.works-nav-item')].find(el=>el.textContent.includes(initialWork.category));
+            handleWorksNav(initialWork.category, initialNav).then(()=>{
+                if (initialWork.project && sectionFromUrl()==='works') openWorksProject(initialWork.category, encodeURIComponent(initialWork.project));
+            });
         }
 
         async function handleWorksNav(categoryId, el) {
@@ -701,6 +695,7 @@
             area.innerHTML = `<div class="h-48 flex items-center justify-center"><span class="en-main text-xs opacity-40">LOADING PROJECTS...</span></div>`;
 
             const files = await getWorksFilesByCategory(categoryId);
+            if (!area.isConnected) return;
             worksState.projectsByCategory[categoryId] = groupWorksProjects(files);
             renderWorksProjectList(categoryId);
         }
@@ -892,29 +887,6 @@
             if (hint) hint.textContent = expanded ? '收起 / CLOSE' : '展开 / OPEN';
         }
 
-        function renderCoach() {
-            app.innerHTML = `
-                <div class="mb-12 px-4 flex flex-col"><span class="en-main text-6xl">Coach</span><span class="zh-sub text-sm mt-2">运动教学</span></div>
-                <div class="px-4 max-w-4xl mx-auto">
-                    <div class="glass p-8 md:p-12">
-                        <span class="en-main text-2xl mb-6">Training Focus</span>
-                        <div class="space-y-4">
-                            <div class="border-l border-white/20 pl-4">
-                                <span class="en-main text-sm">Strength Foundations</span>
-                                <span class="zh-sub">基础力量与动作模式</span>
-                            </div>
-                            <div class="border-l border-white/20 pl-4">
-                                <span class="en-main text-sm">Fat Loss & Conditioning</span>
-                                <span class="zh-sub">减脂与体能提升</span>
-                            </div>
-                            <div class="border-l border-white/20 pl-4">
-                                <span class="en-main text-sm">Lifestyle Programming</span>
-                                <span class="zh-sub">按生活节奏定制计划</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
 
         const CALLIGRAPHY_ENDPOINT = 'https://api.github.com/repos/maotianyi12138-eng/-/contents/%E4%B9%A6%E6%B3%95?ref=main';
         const CALLIGRAPHY_CACHE_KEY = 'maotianyi-calligraphy-auto-index-v1';
@@ -1499,47 +1471,22 @@
                     </div>
                     <div class="flex-1 glass p-4 overflow-y-auto max-h-[85vh] no-scrollbar"><div id="photo-content-area"></div></div>
                 </div>`;
-            handlePhotoNav('商业摄影', document.querySelector('.photo-nav-item'));
+            const initialCategory = Portfolio.takePhotoCategory();
+            handlePhotoNav(initialCategory, document.querySelectorAll('.photo-nav-item')[Math.max(0,cats.findIndex(c => c.id === initialCategory))]);
         }
 
-        function handlePhotoNav(id, el) {
+        async function handlePhotoNav(id, el) {
             document.querySelectorAll('.photo-nav-item').forEach(i => i.classList.remove('nav-active'));
-            el.classList.add('nav-active');
+            el?.classList.add('nav-active');
             const area = document.getElementById('photo-content-area');
-            
-            const photoCfg = { 
-                '商业摄影': { path: '摄影/商业摄影', ext: '.jpg' }, 
-                '模特': { path: '模特/模特', ext: '.JPG' }, 
-                '情绪摄影': { path: '摄影/情绪摄影', ext: '.jpg' }, 
-                '自媒体摄影': { path: '摄影/自媒体摄影', ext: '.jpg' } 
-            };
-            
-            if(id === 'video') {
-                const links = ["https://sns-video-zl.xhscdn.com/stream/79/110/115/01e805fb570d7ef74f03700196576619b1_115.mp4", "https://sns-video-zl.xhscdn.com/stream/110/4/01e6cd6d950f58330103700391927eff1a_4.mp4", "https://www.chali.com/material/brand/ys/video1.mp4", "https://sns-video-zl.xhscdn.com/stream/1/110/115/01e92c5c4c1b1c6c010370019ad553c5f4_115.mp4"];
-                area.className = "grid md:grid-cols-2 gap-4 animate-in fade-in duration-700";
-                area.innerHTML = links.map(l => `<div class="video-card-mini glass p-1"><video loop muted playsinline autoplay preload="metadata" class="w-full h-full object-cover rounded-xl"><source src="${l}"></video></div>`).join('');
-            } else {
-                area.className = "tight-photo-grid animate-in fade-in duration-700";
-                area.innerHTML = '';
-                const cfg = photoCfg[id];
-                for(let i=1; i<=50; i++) {
-                    const div = document.createElement('div'); 
-                    div.className = 'photo-item';
-                    const img = document.createElement('img');
-                    img.src = `${cfg.path}${i}${cfg.ext}`;
-                    img.className = 'w-full h-auto cursor-zoom-in';
-                    img.loading = 'lazy';
-                    img.decoding = 'async';
-                    img.alt = `${id}-${i}`;
-                    img.onclick = () => openViewerSingle(img.src);
-                    img.onerror = function() { this.parentElement.remove(); };
-                    div.appendChild(img);
-                    area.appendChild(div);
-                }
-            }
+            if (!area) return;
+            area.dataset.category = id;
+            area.innerHTML = '<p class="p-6 opacity-60">正在加载作品…</p>';
+            try { await Portfolio.renderPhotoFiles(id, area); }
+            catch (_) { if (area.isConnected && area.dataset.category === id) area.innerHTML = '<p class="p-6">暂时无法加载作品，请重新选择分类重试。</p>'; }
         }
 
-        const siteSections = new Set(['home', 'photo', 'coach', 'cinema', 'works', 'reading', 'thoughts', 'calligraphy', 'sports']);
+        const siteSections = new Set(['home', 'photo', 'cinema', 'works', 'brand', 'project', 'reading', 'thoughts', 'calligraphy', 'sports']);
 
         function sectionFromUrl() {
             const section = new URL(window.location.href).searchParams.get('section') || 'home';
@@ -1550,6 +1497,8 @@
             const url = new URL(window.location.href);
             if (page === 'home') url.searchParams.delete('section');
             else url.searchParams.set('section', page);
+            if (page !== 'project') url.searchParams.delete('project');
+            if (page !== 'home') url.hash = '';
             const method = replace ? 'replaceState' : 'pushState';
             history[method]({ page }, '', `${url.pathname}${url.search}${url.hash}`);
         }
@@ -1568,9 +1517,10 @@
                 document.body.classList.toggle('reading-page', page === 'reading');
                 document.body.classList.toggle('calligraphy-page', page === 'calligraphy');
                 document.body.classList.toggle('sports-page', page === 'sports');
+                document.body.classList.toggle('portfolio-page', ['home','brand','project'].includes(page));
                 
                 const isMobile = window.innerWidth < 768;
-                if (page === 'calligraphy' || page === 'sports') {
+                if (['home','brand','project','calligraphy','sports'].includes(page)) {
                     document.body.style.backgroundImage = 'none';
                 } else if (page === 'thoughts') {
                     document.body.style.backgroundImage = isMobile ? "url('反思竖屏.jpg')" : "url('反思横屏.jpg')";
@@ -1580,7 +1530,8 @@
 
                 if(page === 'home') renderHome();
                 else if(page === 'photo') renderPhoto();
-                else if(page === 'coach') renderCoach();
+                else if(page === 'brand') Portfolio.renderBrands();
+                else if(page === 'project') Portfolio.renderProject();
                 else if(page === 'cinema') renderCinema();
                 else if(page === 'works') renderWorks();
                 else if(page === 'reading') renderReading();
@@ -1588,7 +1539,7 @@
                 else if(page === 'calligraphy') renderCalligraphy();
                 else if(page === 'sports') renderSports();
                 
-                app.style.opacity = '1'; window.scrollTo(0,0);
+                app.style.opacity = '1'; window.scrollTo({top:0,behavior:'instant'});
             }, 400);
         }
 
@@ -1643,6 +1594,7 @@
 
         window.addEventListener('popstate', () => switchPage(sectionFromUrl(), { updateHistory: false }));
         window.onload = () => {
+            updateMusicIcon();
             const initialSection = sectionFromUrl();
             updateSectionRoute(initialSection, true);
             if (initialSection === 'home') {

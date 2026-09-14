@@ -1,0 +1,902 @@
+{
+  "source": "https://mikemao66.com/",
+  "importedAt": "2026-09-14",
+  "brands": [
+    {
+      "id": "lysa",
+      "title": "LYSA®",
+      "category": "Brand, Packaging",
+      "year": "2023",
+      "description": "A minimal cosmetic brand.",
+      "images": [
+        "assets/portfolio/brand/lysa-1.webp",
+        "assets/portfolio/brand/lysa-2.webp",
+        "assets/portfolio/brand/lysa-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/cCZfrdq66H2IEdlg15VLq6RRM4.webp?lossless=1&width=3840&height=2160",
+        "https://framerusercontent.com/images/07BISsaXNxl36CQ7MGc7833YOuQ.webp?lossless=1&width=3840&height=2160",
+        "https://framerusercontent.com/images/ZRoJ7XOyMeFg7f5ol5wbGBDP3Ns.webp?lossless=1&width=3840&height=2160"
+      ]
+    },
+    {
+      "id": "wander",
+      "title": "Wander©",
+      "category": "Brand, Creative Direction",
+      "year": "2025",
+      "description": "Modern stays for teams.",
+      "images": [
+        "assets/portfolio/brand/wander-1.webp",
+        "assets/portfolio/brand/wander-2.webp",
+        "assets/portfolio/brand/wander-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/LR3c33JTMajXYdn2n9d92xrY3AA.png?scale-down-to=2048&lossless=1&width=8125&height=4570",
+        "https://framerusercontent.com/images/9t19RCJIiujh2BFQJy61VGyrxfU.webp?scale-down-to=2048&lossless=1&width=3840&height=2055",
+        "https://framerusercontent.com/images/aap1eXjpu58pVJYpazy82z8fMs.webp?scale-down-to=2048&lossless=1&width=3840&height=2160"
+      ]
+    },
+    {
+      "id": "monevo",
+      "title": "Monevo®",
+      "category": "Brand",
+      "year": "2025",
+      "description": "Savings while aura farming.",
+      "images": [
+        "assets/portfolio/brand/monevo-1.webp",
+        "assets/portfolio/brand/monevo-2.webp",
+        "assets/portfolio/brand/monevo-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/0oogcRXgd71W8spzSbIZ06Yc.webp?scale-down-to=2048&lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/jSxyKqbp3Nbz6qbdY015Ppcqmj4.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/aYtie59kIRqeSRrIeurmhFzvK5I.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "creativecue-24",
+      "title": "CREATIVECUE '24",
+      "category": "Web",
+      "year": "2024",
+      "description": "Redesign of CREATIVECUE Web",
+      "images": [
+        "assets/portfolio/brand/creativecue-24-1.webp",
+        "assets/portfolio/brand/creativecue-24-2.webp",
+        "assets/portfolio/brand/creativecue-24-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/GyohkyfdepM92pT7ofzahJgzs.jpg?lossless=1&width=4096&height=2295",
+        "https://framerusercontent.com/images/EDzRSs0vpuDJ2IJ6kCL8wZ4bqa8.jpg?lossless=1&width=4096&height=2295",
+        "https://framerusercontent.com/images/c3OK6faVk2ZbEcR4H9aX5inumc.jpg?lossless=1&width=4096&height=2295"
+      ]
+    },
+    {
+      "id": "straydog",
+      "title": "STRAYDOG©",
+      "category": "Brand",
+      "year": "2024",
+      "description": "A fast food brand.",
+      "images": [
+        "assets/portfolio/brand/straydog-1.webp",
+        "assets/portfolio/brand/straydog-2.webp",
+        "assets/portfolio/brand/straydog-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/avExoQRWsuJI9JK8oPIXACeGcI.webp?lossless=1&width=3840&height=2160",
+        "https://framerusercontent.com/images/eufJIcJHa0kGbsMsSwebcFJBP0Q.webp?lossless=1&width=3840&height=2160",
+        "https://framerusercontent.com/images/t0TUpKSp6vXh1irXf0S3AGPTo.webp?lossless=1&width=3840&height=2160"
+      ]
+    },
+    {
+      "id": "slaace",
+      "title": "Slaace®",
+      "category": "Brand",
+      "year": "2024",
+      "description": "A clothing brand.",
+      "images": [
+        "assets/portfolio/brand/slaace-1.webp",
+        "assets/portfolio/brand/slaace-2.webp",
+        "assets/portfolio/brand/slaace-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/LQf3JtWo7m9dB80McXB7n31RzLk.webp?lossless=1&width=3840&height=2160",
+        "https://framerusercontent.com/images/jdmoxGzFNY6CCY4Mqs3DlP9VPEA.webp?lossless=1&width=3840&height=2160",
+        "https://framerusercontent.com/images/ABQP9D7yxkSAW13oH6g4WXxvgY.webp?lossless=1&width=3840&height=2160"
+      ]
+    },
+    {
+      "id": "best-of-the-bone",
+      "title": "BEST OF THE BONE©",
+      "category": "Website, UI/UX",
+      "year": "2025",
+      "description": "A supplement brand.",
+      "images": [
+        "assets/portfolio/brand/best-of-the-bone-1.webp",
+        "assets/portfolio/brand/best-of-the-bone-2.webp",
+        "assets/portfolio/brand/best-of-the-bone-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/IQzGfoDeQarviORqyKIHf3LNXyk.png?lossless=1&width=6167&height=3356",
+        "https://framerusercontent.com/images/zTlCL5omZJJqcYA4Bo831c8p0.webp?lossless=1&width=3840&height=2115",
+        "https://framerusercontent.com/images/8gwuM63QRN8Dgy9HkVDRjBTwc.webp?lossless=1&width=3840&height=2135"
+      ]
+    },
+    {
+      "id": "nike-x-alpinestars",
+      "title": "Nike x Alpinestars",
+      "category": "Brand",
+      "year": "2025",
+      "description": "Visual Exploration",
+      "images": [
+        "assets/portfolio/brand/nike-x-alpinestars-1.webp",
+        "assets/portfolio/brand/nike-x-alpinestars-2.webp",
+        "assets/portfolio/brand/nike-x-alpinestars-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/O3wKlfFmaRMX839Q2OLUYgjKnk.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/I4K57VgiaczbYbZgDtHpmfcosQ.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/inmPC9AsHgfaR74cgjKurT94.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "gatelace",
+      "title": "Gatelace®",
+      "category": "Brand",
+      "year": "2026",
+      "description": "Luxury Sportwear Marketplace",
+      "images": [
+        "assets/portfolio/brand/gatelace-1.webp",
+        "assets/portfolio/brand/gatelace-2.webp",
+        "assets/portfolio/brand/gatelace-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/TWJuYK9dtXqLLyewJ7vrTWGyDE.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/fQZP3NU3zkOxTKYyr7brh5DGoI.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/jZIkKSKlKHJeHsHb3d6DoPl8Dg.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "kindred",
+      "title": "Kindred®",
+      "category": "Brand",
+      "year": "2026",
+      "description": "",
+      "images": [
+        "assets/portfolio/brand/kindred-1.webp",
+        "assets/portfolio/brand/kindred-2.webp",
+        "assets/portfolio/brand/kindred-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/iVUjh43RVWJ3S5SFFOAL6Fzy5eI.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/EO3ajAXtm9RM2YiHzol4YNDISaE.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/HSe9z8jkdOak58iIcdqB11mEOk.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "kleepay-ai",
+      "title": "Kleepay AI",
+      "category": "Brand",
+      "year": "2026",
+      "description": "Financial Systems for AI Agents.",
+      "images": [
+        "assets/portfolio/brand/kleepay-ai-1.webp",
+        "assets/portfolio/brand/kleepay-ai-2.webp",
+        "assets/portfolio/brand/kleepay-ai-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/zEAL41vKVXl0FMHAID1nXbhc8M.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/WbQZ5HHFLNcDepcUcXF1U38N910.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/VTAC2T78Ela1ybvMG9z3JN4WQk.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "moneta",
+      "title": "MONETA®",
+      "category": "Brand",
+      "year": "2025",
+      "description": "A Crypto Exchange",
+      "images": [
+        "assets/portfolio/brand/moneta-1.webp",
+        "assets/portfolio/brand/moneta-2.webp",
+        "assets/portfolio/brand/moneta-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/dk8XzVsqSiOTueWb24j6t7rxDw.png?lossless=1&width=8230&height=4610",
+        "https://framerusercontent.com/images/AvrlJiJyZEuSqvkEn9co92S6Wck.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/3QgjEkDa2Irb53KhPoreo2GsUaE.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "tailfed",
+      "title": "Tailfed",
+      "category": "Brand, Packaging",
+      "year": "2026",
+      "description": "Nutrition first dogfood.",
+      "images": [
+        "assets/portfolio/brand/tailfed-1.webp",
+        "assets/portfolio/brand/tailfed-2.webp",
+        "assets/portfolio/brand/tailfed-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/Q7FYXYJFwuzNzizjlNO79dnjM.png?lossless=1&width=6173&height=3458",
+        "https://framerusercontent.com/images/Y70dBZjwaFbvihSKsL4aZqonfw.png?lossless=1&width=6173&height=3458",
+        "https://framerusercontent.com/images/PfQL9FhIhGbo5XtdoAbPyKCLBc.png?lossless=1&width=6155&height=3458"
+      ]
+    },
+    {
+      "id": "bitwoo",
+      "title": "bitwoo®",
+      "category": "Brand, Packaging, Website",
+      "year": "2023",
+      "description": "high-quality sea-salt dark chocolates.",
+      "images": [
+        "assets/portfolio/brand/bitwoo-1.webp",
+        "assets/portfolio/brand/bitwoo-2.webp",
+        "assets/portfolio/brand/bitwoo-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/igVdQRRgyOUJ1Y2SK7s4yG9Rk.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/hxCoYxpDSGJRSYRVKeKWYF0yYg.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/nvIGIRm1oQn10C0IcBFWLAlk.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "redeploy-ing",
+      "title": "REDEPLOY.ING",
+      "category": "Brand, Stategy",
+      "year": "2026",
+      "description": "A premier development agency.",
+      "images": [
+        "assets/portfolio/brand/redeploy-ing-1.webp",
+        "assets/portfolio/brand/redeploy-ing-2.webp",
+        "assets/portfolio/brand/redeploy-ing-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/Vr38AxcI9Q2wKOzVpAqx2ViCkI.jpg?lossless=1&width=4096&height=2294",
+        "https://framerusercontent.com/images/RpEipnIqdVoJflszWYcnDiSnU.jpg?lossless=1&width=4096&height=2294",
+        "https://framerusercontent.com/images/STbqSyIiBm9oBY0tkpDKGrfhiM.jpg?lossless=1&width=4096&height=2294"
+      ]
+    },
+    {
+      "id": "driftwell",
+      "title": "Driftwell©",
+      "category": "Brand",
+      "year": "2026",
+      "description": "",
+      "images": [
+        "assets/portfolio/brand/driftwell-1.webp",
+        "assets/portfolio/brand/driftwell-2.webp",
+        "assets/portfolio/brand/driftwell-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/cmblyunfxrDpvaMGZzPiWhsRKk.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/mGoYTvfVmp5xgydJsNo7msmkvSU.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/NH9ZC3DveMwg93xAbeQPaezw4aI.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "gulp",
+      "title": "GULP®",
+      "category": "Brand",
+      "year": "2025",
+      "description": "DRINK & RACING — visual exploration",
+      "images": [
+        "assets/portfolio/brand/gulp-1.webp",
+        "assets/portfolio/brand/gulp-2.webp",
+        "assets/portfolio/brand/gulp-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/Ts8pvYxYoAS1aPxN7MKk4B0pAbo.jpg?lossless=1&width=4096&height=2294",
+        "https://framerusercontent.com/images/7uMorOeJQk5icvCopRaGucUtpqQ.jpg?lossless=1&width=4096&height=2294",
+        "https://framerusercontent.com/images/PRkqYXJWqgtVHyoJwRCZ2uBzYs.jpg?lossless=1&width=4096&height=2294"
+      ]
+    },
+    {
+      "id": "afletica",
+      "title": "Afletica",
+      "category": "Brand",
+      "year": "2026",
+      "description": "Brand & Social Visual Exploration for VC's",
+      "images": [
+        "assets/portfolio/brand/afletica-1.webp",
+        "assets/portfolio/brand/afletica-2.webp",
+        "assets/portfolio/brand/afletica-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/LRkFH4cg53mxPqPKwYaJfyeA.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/Stp4q49DbTtZr68E1NkyvccJn1g.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/a26bCeere3BiNKFtEgGaMv6bSYE.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "pawlitos",
+      "title": "Pawlitos™",
+      "category": "Brand, Packaging",
+      "year": "2025",
+      "description": "food for dogs that's exciting",
+      "images": [
+        "assets/portfolio/brand/pawlitos-1.webp",
+        "assets/portfolio/brand/pawlitos-2.webp",
+        "assets/portfolio/brand/pawlitos-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/nEsDLJJ5HoR5jZihTyMpUAeY.jpg?lossless=1&width=4096&height=2294",
+        "https://framerusercontent.com/images/6nPK0GTgaQi1QCbTphy4Cf4on8.jpg?lossless=1&width=4096&height=2294",
+        "https://framerusercontent.com/images/8wztemDat3LQUTEc9sDukCtXM.jpg?lossless=1&width=4096&height=2294"
+      ]
+    },
+    {
+      "id": "orbit-milk",
+      "title": "Orbit Milk®",
+      "category": "Brand",
+      "year": "2025",
+      "description": "The future milk.",
+      "images": [
+        "assets/portfolio/brand/orbit-milk-1.webp",
+        "assets/portfolio/brand/orbit-milk-2.webp",
+        "assets/portfolio/brand/orbit-milk-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/5KvioGiuGSKdMLUf1TT77uLuqU.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/DE7fDErpWvNqwKWnVb2FacJoKE.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/xcP2MroyM7MuJlCZdH9L87wU5QY.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "pacer",
+      "title": "pacer®",
+      "category": "Brand",
+      "year": "2025",
+      "description": "tracks everything.",
+      "images": [
+        "assets/portfolio/brand/pacer-1.webp",
+        "assets/portfolio/brand/pacer-2.webp",
+        "assets/portfolio/brand/pacer-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/CjdU80dqSpwZsV155cH3Eykxvnc.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/7N33sFC8ymPAdU6pWHqJx8rsHI.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/D448IdEVLGbEXHlNcXuC5uTBLQ.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "baseplate",
+      "title": "Baseplate",
+      "category": "Brand",
+      "year": "2026",
+      "description": "Deep tech body tracking.",
+      "images": [
+        "assets/portfolio/brand/baseplate-1.webp",
+        "assets/portfolio/brand/baseplate-2.webp",
+        "assets/portfolio/brand/baseplate-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/LqCcAITxF5uWC4cPWLrmVBnUdQ.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/19eqW4kGT3dLDXOhZQJW8Z292cc.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/OTjDYMWnY6Uh1YI5XuLVJE1d2Hc.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "bluehour",
+      "title": "bluehour®",
+      "category": "Brand",
+      "year": "2025",
+      "description": "name every feeling.",
+      "images": [
+        "assets/portfolio/brand/bluehour-1.webp",
+        "assets/portfolio/brand/bluehour-2.webp",
+        "assets/portfolio/brand/bluehour-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/GkgL9wbro7hmHAtgWbYtCpwI.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/QCmNTnueFBDzBZ4PXIHedytknY.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/IpwF9St5CP00bxkwTfzFMVF4Q.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "moonshine-ai",
+      "title": "Moonshine AI",
+      "category": "Brand",
+      "year": "2026",
+      "description": "Brand & Social Visual Exploration",
+      "images": [
+        "assets/portfolio/brand/moonshine-ai-1.webp",
+        "assets/portfolio/brand/moonshine-ai-2.webp",
+        "assets/portfolio/brand/moonshine-ai-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/kAGqRj4drZwW3RoXHfr05Thxn4.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/oDQ2Ua5Du46cknNFXkJdJlndLwI.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/xcAq1eEytXQgF3QZnBodDNcRU.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "splitway",
+      "title": "Splitway®",
+      "category": "Brand",
+      "year": "2024",
+      "description": "Splitting cheques made easy",
+      "images": [
+        "assets/portfolio/brand/splitway-1.webp",
+        "assets/portfolio/brand/splitway-2.webp",
+        "assets/portfolio/brand/splitway-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/6VXsaKpVc7EHs9xY6iT9x3PFJcU.jpg?lossless=1&width=6173&height=3458",
+        "https://framerusercontent.com/images/bUGgfDaMslKq1R43fDMkJVTq1q0.jpg?lossless=1&width=6173&height=3458",
+        "https://framerusercontent.com/images/jSZdOdk5DLDnpoOV7IT4gYPBnQ.jpg?lossless=1&width=6173&height=3458"
+      ]
+    },
+    {
+      "id": "elemental",
+      "title": "Elemental",
+      "category": "Brand",
+      "year": "2025",
+      "description": "Morning Brand Experiment.",
+      "images": [
+        "assets/portfolio/brand/elemental-1.webp",
+        "assets/portfolio/brand/elemental-2.webp",
+        "assets/portfolio/brand/elemental-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/JlWpRsEx2fufRBzRh0NbjqEwk.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/nZCjbVjiqkFdb7Joy3RGqkXMwWs.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/do8RbJ2LHYV99W9k8cn6ZD5gaHE.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "solxar",
+      "title": "Solxar®",
+      "category": "Brand",
+      "year": "2025",
+      "description": "AR-audio systems.",
+      "images": [
+        "assets/portfolio/brand/solxar-1.webp",
+        "assets/portfolio/brand/solxar-2.webp",
+        "assets/portfolio/brand/solxar-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/ycUpMMjewocj7LkzcX05RCOo.webp?lossless=1&width=3840&height=2152",
+        "https://framerusercontent.com/images/ykrEbTrDicplbEDSsJPbsahmTg.webp?lossless=1&width=3840&height=2152",
+        "https://framerusercontent.com/images/4qugnZaKjJdjH46OC2F4t8pIc.webp?lossless=1&width=3840&height=2152"
+      ]
+    },
+    {
+      "id": "crau",
+      "title": "CRAU",
+      "category": "Brand",
+      "year": "2026",
+      "description": "Underground Music Collective.",
+      "images": [
+        "assets/portfolio/brand/crau-1.webp",
+        "assets/portfolio/brand/crau-2.webp",
+        "assets/portfolio/brand/crau-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/zsJQuO75qwmJI9KJjceX19mPeg.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/prJykDGnxfPbUyPLaMDwiA7Ls.webp?lossless=1&width=3840&height=2157",
+        "https://framerusercontent.com/images/xK37o76Fj5pwZlR3rtNWsgFvU8.webp?lossless=1&width=3840&height=2157"
+      ]
+    },
+    {
+      "id": "lumea",
+      "title": "Lumea®",
+      "category": "Brand",
+      "year": "2026",
+      "description": "",
+      "images": [
+        "assets/portfolio/brand/lumea-1.webp",
+        "assets/portfolio/brand/lumea-2.webp",
+        "assets/portfolio/brand/lumea-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/KCmAgFKM7VCFBYJrV4B52Doz8A.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/LWXZOkbGB1MFWWRxiHYQQ0NC4s.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/JSbMlUNhCbLKPIwBeRNg2fb0.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "vectra-ai",
+      "title": "Vectra AI",
+      "category": "Brand",
+      "year": "2026",
+      "description": "Data but with intent.",
+      "images": [
+        "assets/portfolio/brand/vectra-ai-1.webp",
+        "assets/portfolio/brand/vectra-ai-2.webp",
+        "assets/portfolio/brand/vectra-ai-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/DXhnMGg1P8QXNRKv2TmH5cPuwM.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/RcCWBKBvPjtqvizKf8obKxLPqwI.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/hsF3U5nKRqeOXo036Uo36C5QGU.webp?lossless=1&width=3840&height=2157"
+      ]
+    },
+    {
+      "id": "gegaila",
+      "title": "Gegaila",
+      "category": "Brand",
+      "year": "2026",
+      "description": "Sound search, Made simple.",
+      "images": [
+        "assets/portfolio/brand/gegaila-1.webp",
+        "assets/portfolio/brand/gegaila-2.webp",
+        "assets/portfolio/brand/gegaila-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/GBbFbix9NqEbNGbx3DwcgOYswE.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/hZWnYt5kU4ACcaQLziHp5betKZU.webp?lossless=1&width=3840&height=2157",
+        "https://framerusercontent.com/images/62TSiW6b9hY5zAXwayhJSiyIdP4.webp?lossless=1&width=3840&height=2157"
+      ]
+    },
+    {
+      "id": "afterglow-ai",
+      "title": "Afterglow AI",
+      "category": "Brand",
+      "year": "2026",
+      "description": "Makes sure you sleep well.",
+      "images": [
+        "assets/portfolio/brand/afterglow-ai-1.webp",
+        "assets/portfolio/brand/afterglow-ai-2.webp",
+        "assets/portfolio/brand/afterglow-ai-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/8xfqWdd7XoBvS0Bi3OEgNIN0278.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/dTM8FQvDya3gLfV68zqPyjhKuw.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/NdGAI41ep6LAiZ4f4sfkYfXgIqo.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "feral-standard",
+      "title": "Feral Standard™",
+      "category": "Brand",
+      "year": "2026",
+      "description": "Skincare for Men.",
+      "images": [
+        "assets/portfolio/brand/feral-standard-1.webp",
+        "assets/portfolio/brand/feral-standard-2.webp",
+        "assets/portfolio/brand/feral-standard-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/8gytSGxE2QpzCUac8ncV8txOGxk.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/wvhWRrCpImd2146Ud1f9JTCZxD0.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/BvjbadG7JlYDYM8XbOwoqiMWmSA.webp?lossless=1&width=3840&height=2157"
+      ]
+    },
+    {
+      "id": "morrow",
+      "title": "Morrow",
+      "category": "Brand",
+      "year": "2026",
+      "description": "The future of privacy.",
+      "images": [
+        "assets/portfolio/brand/morrow-1.webp",
+        "assets/portfolio/brand/morrow-2.webp",
+        "assets/portfolio/brand/morrow-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/RJXSLfZHu8WjJJlT3RvOhpCOkxA.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/ZczrxJIunTpHJ484MOidij9gQ.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/nhJ7EFQjCE2etCWkIMZZCeIJTl0.webp?lossless=1&width=3840&height=2157"
+      ]
+    },
+    {
+      "id": "analog-sound-co",
+      "title": "Analog Sound Co®",
+      "category": "Brand",
+      "year": "2026",
+      "description": "",
+      "images": [
+        "assets/portfolio/brand/analog-sound-co-1.webp",
+        "assets/portfolio/brand/analog-sound-co-2.webp",
+        "assets/portfolio/brand/analog-sound-co-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/a4MZEJVfE6yTI7Fd6uYnCR6nOk.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/tlUh2Tp1f16frb4JzFO2TXog.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/lOw9uhxNXYifLK505yDx0SuzAs.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "studio-deadzolt",
+      "title": "STUDIO DEADZOLT",
+      "category": "Brand, Mix Media",
+      "year": "2026",
+      "description": "Brand Identity & Mix Media Exploration",
+      "images": [
+        "assets/portfolio/brand/studio-deadzolt-1.webp",
+        "assets/portfolio/brand/studio-deadzolt-2.webp",
+        "assets/portfolio/brand/studio-deadzolt-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/pYobNDS4KRCR7czs97IJQLcTqQ.png?lossless=1&width=4115&height=2305",
+        "https://framerusercontent.com/images/yLnDGrjGDwJnlxjPARIyGvW6oTM.png?lossless=1&width=4115&height=2305",
+        "https://framerusercontent.com/images/oKm9y861GgpRqN6Bwr9bFBWk5Q.png?lossless=1&width=4115&height=2305"
+      ]
+    },
+    {
+      "id": "ffront",
+      "title": "FFRONT",
+      "category": "Brand",
+      "year": "2026",
+      "description": "A Storage Company.",
+      "images": [
+        "assets/portfolio/brand/ffront-1.webp",
+        "assets/portfolio/brand/ffront-2.webp",
+        "assets/portfolio/brand/ffront-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/KG3UfvJQkTKZPvKNX77rs5qrYBI.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/zv1kGrfxKKn2ghwV3Rsp83QWYM.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/0KbrWbzqCdCXytoV7rZipKZtmY.webp?lossless=1&width=3840&height=2157"
+      ]
+    },
+    {
+      "id": "emberlane",
+      "title": "Emberlane™",
+      "category": "Brand",
+      "year": "2026",
+      "description": "For homes with feeling.",
+      "images": [
+        "assets/portfolio/brand/emberlane-1.webp",
+        "assets/portfolio/brand/emberlane-2.webp",
+        "assets/portfolio/brand/emberlane-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/S4i1nWvU1Ag1rM29CyQ7R4NOA.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/YgY1nVslrUfbDsn3RFtz0A5Zw.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/20HabWJxivFu6rHVmrimDfrUVI.webp?lossless=1&width=3840&height=2151"
+      ]
+    },
+    {
+      "id": "tsentaai",
+      "title": "TsentaAi",
+      "category": "Brand",
+      "year": "2025",
+      "description": "Brand & App Concept",
+      "images": [
+        "assets/portfolio/brand/tsentaai-1.webp",
+        "assets/portfolio/brand/tsentaai-2.webp",
+        "assets/portfolio/brand/tsentaai-3.webp"
+      ],
+      "source": "https://mikemao66.com/",
+      "originalImages": [
+        "https://framerusercontent.com/images/9ddIoG6VMkU19e1fkl8hifQeO4o.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/NqXCFfy9scvhZFPhQWqmlvS6bU.webp?lossless=1&width=3840&height=2151",
+        "https://framerusercontent.com/images/mqeStwj0cidUEqa2UaDoa3Z5L4E.webp?lossless=1&width=3840&height=2151"
+      ]
+    }
+  ],
+  "photos": {
+    "商业摄影": [
+      "摄影/商业摄影1.jpg",
+      "摄影/商业摄影2.jpg",
+      "摄影/商业摄影3.jpg",
+      "摄影/商业摄影4.jpg",
+      "摄影/商业摄影5.jpg",
+      "摄影/商业摄影6.jpg",
+      "摄影/商业摄影7.jpg",
+      "摄影/商业摄影8.jpg",
+      "摄影/商业摄影9.jpg",
+      "摄影/商业摄影10.jpg",
+      "摄影/商业摄影11.jpg",
+      "摄影/商业摄影12.jpg",
+      "摄影/商业摄影13.jpg",
+      "摄影/商业摄影14.jpg",
+      "摄影/商业摄影15.jpg",
+      "摄影/商业摄影16.jpg",
+      "摄影/商业摄影17.jpg",
+      "摄影/商业摄影18.JPG",
+      "摄影/商业摄影19.JPG",
+      "摄影/商业摄影20.JPG",
+      "摄影/商业摄影21.JPG"
+    ],
+    "模特": [
+      "模特/模特1.JPG",
+      "模特/模特2.jpg",
+      "模特/模特3.JPG",
+      "模特/模特4.JPG",
+      "模特/模特5.JPG",
+      "模特/模特6.JPG",
+      "模特/模特7.JPG",
+      "模特/模特8.JPG",
+      "模特/模特9.JPG",
+      "模特/模特10.JPG",
+      "模特/模特11.JPG",
+      "模特/模特12.JPG",
+      "模特/模特13.JPG"
+    ],
+    "情绪摄影": [
+      "摄影/情绪摄影1.jpg",
+      "摄影/情绪摄影2.jpg",
+      "摄影/情绪摄影3.jpg",
+      "摄影/情绪摄影4.jpg",
+      "摄影/情绪摄影5.jpg",
+      "摄影/情绪摄影6.jpg",
+      "摄影/情绪摄影7.jpg",
+      "摄影/情绪摄影8.jpg",
+      "摄影/情绪摄影9.jpg",
+      "摄影/情绪摄影10.jpg",
+      "摄影/情绪摄影11.jpg",
+      "摄影/情绪摄影12.jpg",
+      "摄影/情绪摄影13.jpg",
+      "摄影/情绪摄影14.jpg",
+      "摄影/情绪摄影15.jpg",
+      "摄影/情绪摄影16.jpg",
+      "摄影/情绪摄影17.jpg",
+      "摄影/情绪摄影18.jpg",
+      "摄影/情绪摄影19.jpg",
+      "摄影/情绪摄影20.jpg",
+      "摄影/情绪摄影21.jpg",
+      "摄影/情绪摄影22.jpg",
+      "摄影/情绪摄影23.jpg",
+      "摄影/情绪摄影24.jpg",
+      "摄影/情绪摄影25.jpg",
+      "摄影/情绪摄影26.jpg",
+      "摄影/情绪摄影27.jpg",
+      "摄影/情绪摄影28.jpg",
+      "摄影/情绪摄影29.jpg",
+      "摄影/情绪摄影30.jpg",
+      "摄影/情绪摄影31.jpg",
+      "摄影/情绪摄影32.jpg",
+      "摄影/情绪摄影33.jpg",
+      "摄影/情绪摄影34.jpg",
+      "摄影/情绪摄影35.jpg",
+      "摄影/情绪摄影36.jpg",
+      "摄影/情绪摄影37.jpg",
+      "摄影/情绪摄影38.jpg",
+      "摄影/情绪摄影39.jpg",
+      "摄影/情绪摄影40.jpg",
+      "摄影/情绪摄影41.jpg",
+      "摄影/情绪摄影42.jpg",
+      "摄影/情绪摄影43.jpg",
+      "摄影/情绪摄影44.jpg",
+      "摄影/情绪摄影45.jpg",
+      "摄影/情绪摄影46.jpg",
+      "摄影/情绪摄影47.jpg",
+      "摄影/情绪摄影48.jpg",
+      "摄影/情绪摄影49.jpg",
+      "摄影/情绪摄影50.jpg",
+      "摄影/情绪摄影51.jpg",
+      "摄影/情绪摄影52.jpg"
+    ],
+    "自媒体摄影": [
+      "摄影/自媒体摄影1.jpg",
+      "摄影/自媒体摄影2.jpg",
+      "摄影/自媒体摄影3.jpg",
+      "摄影/自媒体摄影4.jpg",
+      "摄影/自媒体摄影5.jpg",
+      "摄影/自媒体摄影6.jpg",
+      "摄影/自媒体摄影7.jpg",
+      "摄影/自媒体摄影8.jpg",
+      "摄影/自媒体摄影9.jpg",
+      "摄影/自媒体摄影10.jpg",
+      "摄影/自媒体摄影11.jpg",
+      "摄影/自媒体摄影12.jpg",
+      "摄影/自媒体摄影13.jpg",
+      "摄影/自媒体摄影14.jpg",
+      "摄影/自媒体摄影15.jpg",
+      "摄影/自媒体摄影16.jpg",
+      "摄影/自媒体摄影17.jpg",
+      "摄影/自媒体摄影18.jpg",
+      "摄影/自媒体摄影19.jpg",
+      "摄影/自媒体摄影20.jpg",
+      "摄影/自媒体摄影21.jpg",
+      "摄影/自媒体摄影22.jpg",
+      "摄影/自媒体摄影23.jpg",
+      "摄影/自媒体摄影24.jpg",
+      "摄影/自媒体摄影25.jpg",
+      "摄影/自媒体摄影26.jpg",
+      "摄影/自媒体摄影27.jpg",
+      "摄影/自媒体摄影28.jpg"
+    ]
+  },
+  "works": {
+    "个人创意": [
+      "平面设计/个人创意/mobile_bg.jpg"
+    ],
+    "批判设计": [
+      "平面设计/批判设计/健身工厂1.png",
+      "平面设计/批判设计/健身工厂2.png",
+      "平面设计/批判设计/健身工厂3.png",
+      "平面设计/批判设计/健身工厂4.png",
+      "平面设计/批判设计/健身工厂5.png",
+      "平面设计/批判设计/新保龄运动1.png",
+      "平面设计/批判设计/新保龄运动2.png",
+      "平面设计/批判设计/新保龄运动3.png",
+      "平面设计/批判设计/新保龄运动4.png",
+      "平面设计/批判设计/新保龄运动5.png",
+      "平面设计/批判设计/新保龄运动6.png",
+      "平面设计/批判设计/离不了1.png",
+      "平面设计/批判设计/离不了2.png",
+      "平面设计/批判设计/离不了3.png",
+      "平面设计/批判设计/离不了4.png",
+      "平面设计/批判设计/血液涅槃1.png",
+      "平面设计/批判设计/血液涅槃2.png",
+      "平面设计/批判设计/血液涅槃3.png",
+      "平面设计/批判设计/血液涅槃4.png"
+    ],
+    "工作实践": [
+      "平面设计/工作实践/56851639451479_.pic.jpg",
+      "平面设计/工作实践/56951639451522_.pic.jpg",
+      "平面设计/工作实践/57031639451560_.pic.jpg",
+      "平面设计/工作实践/57051639451575_.pic.jpg"
+    ]
+  },
+  "videos": [
+    {
+      "src": "https://mikemao66.com/videos/01-the-green-knight.mp4",
+      "title": "The Green Knight / Summer 26"
+    },
+    {
+      "src": "https://sns-video-zl.xhscdn.com/stream/79/110/115/01e805fb570d7ef74f03700196576619b1_115.mp4",
+      "title": "Moving Image 02"
+    },
+    {
+      "src": "https://mikemao66.com/videos/02-this-wild-land.mp4",
+      "title": "This Wild Land / Spring 26"
+    },
+    {
+      "src": "https://sns-video-zl.xhscdn.com/stream/1/110/115/01e92c5c4c1b1c6c010370019ad553c5f4_115.mp4",
+      "title": "Moving Image 04"
+    },
+    {
+      "src": "https://mikemao66.com/videos/04-cloud-orchard.mp4",
+      "title": "Cloud Orchard / Autumn 25"
+    },
+    {
+      "src": "https://sns-video-zl.xhscdn.com/stream/110/4/01e6cd6d950f58330103700391927eff1a_4.mp4",
+      "title": "Moving Image 06"
+    },
+    {
+      "src": "https://mikemao66.com/videos/05-pink-sky-at-night.mp4",
+      "title": "Pink Sky At Night / Summer 25"
+    },
+    {
+      "src": "https://www.chali.com/material/brand/ys/video1.mp4",
+      "title": "Moving Image 08"
+    },
+    {
+      "src": "https://mikemao66.com/videos/06-summer-reviews.mp4",
+      "title": "Summer 25 Reviews"
+    }
+  ]
+}
