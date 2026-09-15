@@ -15,7 +15,7 @@ window.Portfolio = (() => {
     let graphicScrollY = 0;
     let previousScrollRestoration = 'auto';
     const e = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-    const load = () => dataPromise ||= Promise.all(['portfolio','graphic-projects','photo-assets'].map(name => fetch(`data/${name}.json?v=20260915-opera`).then(response => {
+    const load = () => dataPromise ||= Promise.all(['portfolio','graphic-projects','photo-assets'].map(name => fetch(`data/${name}.json?v=20260915-playback`).then(response => {
         if (!response.ok) throw new Error('作品暂时未能加载');
         return response.json();
     }))).then(([value,graphics,photos]) => {
@@ -258,10 +258,9 @@ window.Portfolio = (() => {
         if(!area.isConnected || area.dataset.category!==category) return;
         if(category==='video') {
             area.className='folio-video-grid';
-            area.innerHTML=d.videos.map(v=>`<figure><video controls playsinline preload="metadata" aria-label="${e(v.title)}"><source src="${e(v.src)}" type="video/mp4"></video><figcaption>${e(v.title)}</figcaption><a href="${e(v.src)}" target="_blank" rel="noopener">单独打开 ↗</a></figure>`).join('');
+            area.innerHTML=d.videos.map(v=>`<figure><video controls playsinline preload="none" poster="${e(v.poster||'')}" aria-label="${e(v.title)}"><source src="${e(v.src)}" type="video/mp4"></video><figcaption>${e(v.title)}</figcaption><a href="${e(v.src)}" target="_blank" rel="noopener">单独打开 ↗</a></figure>`).join('');
             area.querySelectorAll('video').forEach(video=>video.addEventListener('play',()=>{
                 area.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause();});
-                audio.pause();updateMusicIcon();
             }));
         } else {
             area.className='tight-photo-grid';

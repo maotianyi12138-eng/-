@@ -387,8 +387,8 @@
         .works-thumb { width: 68px; height: 68px; object-fit: cover; border-radius: 8px; opacity: 0.45; border: 1px solid rgba(255,255,255,0.1); transition: opacity 0.2s ease; }
         .works-thumb:hover, .works-thumb.active { opacity: 1; }
     </style>
-    <link rel="stylesheet" href="portfolio.css?v=20260915-opera">
-    <link rel="stylesheet" href="cinema-stage.css?v=20260915-opera">
+    <link rel="stylesheet" href="portfolio.css?v=20260915-playback">
+    <link rel="stylesheet" href="cinema-stage.css?v=20260915-playback">
 </head>
 <body>
     <audio id="main-audio" loop preload="metadata"><source src="Macy%20Gray%20-%20Let%20You%20Win.mp3" type="audio/mpeg"></audio>
@@ -445,8 +445,8 @@
 
     <script src="movies.js"></script>
     <script src="thoughts.js"></script>
-    <script src="cinema-stage.js?v=20260915-opera"></script>
-    <script src="portfolio.js?v=20260915-opera"></script>
+    <script src="cinema-stage.js?v=20260915-playback"></script>
+    <script src="portfolio.js?v=20260915-playback"></script>
     <script>
         const audio = document.getElementById('main-audio');
         const app = document.getElementById('app-content');
@@ -614,7 +614,6 @@
 
         let hasInteracted = false;
         const startAudio = () => {
-            if (CinemaStage.ownsAudio() || [...document.querySelectorAll('#photo-content-area video')].some(v => !v.paused)) return;
             if(!hasInteracted) {
                 const playPromise = audio.play();
                 if (playPromise && typeof playPromise.catch === 'function') playPromise.catch(() => {});
@@ -625,7 +624,7 @@
         ['click', 'touchstart', 'scroll', 'wheel'].forEach(e => window.addEventListener(e, startAudio, {once:true}));
 
         function toggleMusic() {
-            CinemaStage.releaseToMusic();
+            hasInteracted = true;
             if (audio.paused) {
                 const playPromise = audio.play();
                 if (playPromise && typeof playPromise.catch === 'function') playPromise.catch(() => {});

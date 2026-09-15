@@ -845,39 +845,48 @@
   },
   "videos": [
     {
-      "src": "https://mikemao66.com/videos/01-the-green-knight.mp4",
+      "src": "assets/portfolio/video/01-the-green-knight.mp4",
+      "poster": "assets/portfolio/video/poster-01.jpg",
       "title": "The Green Knight / Summer 26"
     },
     {
       "src": "https://sns-video-zl.xhscdn.com/stream/79/110/115/01e805fb570d7ef74f03700196576619b1_115.mp4",
+      "poster": "assets/portfolio/video/poster-02.jpg",
       "title": "Moving Image 02"
     },
     {
-      "src": "https://mikemao66.com/videos/02-this-wild-land.mp4",
+      "src": "assets/portfolio/video/02-this-wild-land.mp4",
+      "poster": "assets/portfolio/video/poster-03.jpg",
       "title": "This Wild Land / Spring 26"
     },
     {
       "src": "https://sns-video-zl.xhscdn.com/stream/1/110/115/01e92c5c4c1b1c6c010370019ad553c5f4_115.mp4",
+      "poster": "assets/portfolio/video/poster-04.jpg",
       "title": "Moving Image 04"
     },
     {
-      "src": "https://mikemao66.com/videos/04-cloud-orchard.mp4",
+      "src": "assets/portfolio/video/04-cloud-orchard.mp4",
+      "poster": "assets/portfolio/video/poster-05.jpg",
       "title": "Cloud Orchard / Autumn 25"
     },
     {
       "src": "https://sns-video-zl.xhscdn.com/stream/110/4/01e6cd6d950f58330103700391927eff1a_4.mp4",
+      "poster": "assets/portfolio/video/poster-06.jpg",
       "title": "Moving Image 06"
     },
     {
-      "src": "https://mikemao66.com/videos/05-pink-sky-at-night.mp4",
+      "src": "assets/portfolio/video/05-pink-sky-at-night.mp4",
+      "poster": "assets/portfolio/video/poster-07.jpg",
       "title": "Pink Sky At Night / Summer 25"
     },
     {
       "src": "https://www.chali.com/material/brand/ys/video1.mp4",
+      "poster": "assets/portfolio/video/poster-08.jpg",
       "title": "Moving Image 08"
     },
     {
-      "src": "https://mikemao66.com/videos/06-summer-reviews.mp4",
+      "src": "assets/portfolio/video/06-summer-reviews.mp4",
+      "poster": "assets/portfolio/video/poster-09.jpg",
       "title": "Summer 25 Reviews"
     }
   ]
