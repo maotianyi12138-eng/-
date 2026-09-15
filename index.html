@@ -387,7 +387,8 @@
         .works-thumb { width: 68px; height: 68px; object-fit: cover; border-radius: 8px; opacity: 0.45; border: 1px solid rgba(255,255,255,0.1); transition: opacity 0.2s ease; }
         .works-thumb:hover, .works-thumb.active { opacity: 1; }
     </style>
-    <link rel="stylesheet" href="portfolio.css?v=20260915-projects">
+    <link rel="stylesheet" href="portfolio.css?v=20260915-cinema">
+    <link rel="stylesheet" href="cinema-stage.css?v=20260915-cinema">
 </head>
 <body>
     <audio id="main-audio" loop preload="metadata"><source src="Macy%20Gray%20-%20Let%20You%20Win.mp3" type="audio/mpeg"></audio>
@@ -395,6 +396,7 @@
         <a class="folio-wordmark" href="?section=home" data-section="home">tianyimao</a>
         <nav class="folio-nav-links" aria-label="主页导航">
             <a href="?section=home#brand" data-jump="brand">Brand</a>
+            <a href="?section=home#video" data-jump="video">Video</a>
             <a href="?section=home#photography" data-jump="photography">Photography</a>
             <a href="?section=home#graphic" data-jump="graphic">Graphic</a>
             <details id="folio-more"><summary>More of Me</summary>
@@ -443,7 +445,8 @@
 
     <script src="movies.js"></script>
     <script src="thoughts.js"></script>
-    <script src="portfolio.js?v=20260915-projects"></script>
+    <script src="cinema-stage.js?v=20260915-cinema"></script>
+    <script src="portfolio.js?v=20260915-cinema"></script>
     <script>
         const audio = document.getElementById('main-audio');
         const app = document.getElementById('app-content');
@@ -611,6 +614,7 @@
 
         let hasInteracted = false;
         const startAudio = () => {
+            if (CinemaStage.ownsAudio() || [...document.querySelectorAll('#photo-content-area video')].some(v => !v.paused)) return;
             if(!hasInteracted) {
                 const playPromise = audio.play();
                 if (playPromise && typeof playPromise.catch === 'function') playPromise.catch(() => {});
@@ -621,6 +625,7 @@
         ['click', 'touchstart', 'scroll', 'wheel'].forEach(e => window.addEventListener(e, startAudio, {once:true}));
 
         function toggleMusic() {
+            CinemaStage.releaseToMusic();
             if (audio.paused) {
                 const playPromise = audio.play();
                 if (playPromise && typeof playPromise.catch === 'function') playPromise.catch(() => {});
@@ -1465,25 +1470,29 @@
         function renderPhoto() {
             const cats = [{id:'商业摄影', en:'Commercial', zh:'商业摄影'}, {id:'模特', en:'Model', zh:'模特'}, {id:'情绪摄影', en:'Mood', zh:'情绪摄影'}, {id:'自媒体摄影', en:'Social', zh:'自媒体摄影'}, {id:'video', en:'Visuals', zh:'视听影像'}];
             app.innerHTML = `
-                <div class="flex flex-col md:flex-row gap-8 px-4 min-h-[70vh]">
-                    <div class="md:w-1/4 flex flex-col gap-3">
-                        <div class="mb-4"><span class="en-main text-5xl">Photography</span><span class="zh-sub text-xs mt-1">摄影</span></div>
-                        ${cats.map(c => `<div onclick="handlePhotoNav('${c.id}', this)" class="photo-nav-item glass p-5 cursor-pointer hover:bg-white/10 transition-all border-transparent">
+                <div class="photo-archive-layout">
+                    <div class="photo-archive-nav">
+                        <div class="photo-archive-title"><span class="en-main">Photography</span><span class="zh-sub text-xs mt-1">摄影</span></div>
+                        ${cats.map(c => `<button type="button" onclick="handlePhotoNav('${c.id}', this)" class="photo-nav-item glass p-5 cursor-pointer hover:bg-white/10 transition-all border-transparent">
                             <span class="en-main text-lg">${c.en}</span><span class="zh-sub text-[9px]">${c.zh}</span>
-                        </div>`).join('')}
+                        </button>`).join('')}
                     </div>
-                    <div class="flex-1 glass p-4 overflow-y-auto max-h-[85vh] no-scrollbar"><div id="photo-content-area"></div></div>
+                    <div class="photo-gallery-panel glass"><div id="photo-content-area"></div></div>
                 </div>`;
             const initialCategory = Portfolio.takePhotoCategory();
             handlePhotoNav(initialCategory, document.querySelectorAll('.photo-nav-item')[Math.max(0,cats.findIndex(c => c.id === initialCategory))]);
         }
 
         async function handlePhotoNav(id, el) {
+            if (!['商业摄影','模特','情绪摄影','自媒体摄影','video'].includes(id)) id='商业摄影';
             document.querySelectorAll('.photo-nav-item').forEach(i => i.classList.remove('nav-active'));
             el?.classList.add('nav-active');
             const area = document.getElementById('photo-content-area');
             if (!area) return;
             area.dataset.category = id;
+            const photoUrl = new URL(location.href);
+            photoUrl.searchParams.set('category',id);
+            history.replaceState(history.state,'',photoUrl);
             area.innerHTML = '<p class="p-6 opacity-60">正在加载作品…</p>';
             try { await Portfolio.renderPhotoFiles(id, area); }
             catch (_) { if (area.isConnected && area.dataset.category === id) area.innerHTML = '<p class="p-6">暂时无法加载作品，请重新选择分类重试。</p>'; }
@@ -1501,6 +1510,7 @@
             if (page === 'home') url.searchParams.delete('section');
             else url.searchParams.set('section', page);
             if (page !== 'project') url.searchParams.delete('project');
+            if (page !== 'photo') url.searchParams.delete('category');
             if (!replace) url.searchParams.delete('graphic');
             if (page !== 'home') url.hash = '';
             const method = replace ? 'replaceState' : 'pushState';
@@ -1508,6 +1518,7 @@
         }
 
         function switchPage(page, { updateHistory = true } = {}) {
+            CinemaStage.destroy();
             Portfolio.dismissGraphic();
             if (!siteSections.has(page)) page = 'home';
             if (updateHistory && sectionFromUrl() !== page) updateSectionRoute(page);

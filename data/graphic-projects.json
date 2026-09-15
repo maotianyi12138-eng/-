@@ -25,6 +25,7 @@
   },
   {
     "id": "new-bowling",
+    "thanks": {"en": "With thanks to designer rui for their help.", "zh": "感谢设计师 rui 的帮助。"},
     "name": "新保龄运动",
     "title": "New Bowling Campaign",
     "format": "Visual identity & poster series",

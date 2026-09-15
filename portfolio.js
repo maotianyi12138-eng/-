@@ -15,15 +15,31 @@ window.Portfolio = (() => {
     let graphicScrollY = 0;
     let previousScrollRestoration = 'auto';
     const e = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-    const load = () => dataPromise ||= Promise.all(['portfolio','graphic-projects'].map(name => fetch(`data/${name}.json?v=20260915-projects`).then(response => {
+    const load = () => dataPromise ||= Promise.all(['portfolio','graphic-projects','photo-assets'].map(name => fetch(`data/${name}.json?v=20260915-cinema`).then(response => {
         if (!response.ok) throw new Error('作品暂时未能加载');
         return response.json();
-    }))).then(([value,graphics]) => {
+    }))).then(([value,graphics,photos]) => {
+        value.photoAssets=photos;
         value.graphics = graphics.map(p => ({...p, images:value.works['批判设计'].filter(src=>src.split('/').pop().startsWith(p.name)).sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}))}));
         return data = value;
     }).catch(error => { dataPromise = null; throw error; });
     const routeLink = (section, label, extra = '') => `<a href="?section=${section}" data-section="${section}" ${extra}>${label}</a>`;
     const image = (src, alt, eager = false) => `<img src="${e(src)}" alt="${e(alt)}" loading="${eager?'eager':'lazy'}" decoding="async" ${eager?'fetchpriority="high"':''}>`;
+    const photoImage = (src,alt,eager=false) => {
+        const p=data.photoAssets[src];
+        return `<img src="${e(p?.thumb||src)}" data-original="${e(src)}" alt="${e(alt)}" width="${p?.width||900}" height="${p?.height||1200}" loading="${eager?'eager':'lazy'}" decoding="async">`;
+    };
+    function wirePhotoFallback(scope) {
+        scope.querySelectorAll('img[data-original]').forEach(img=>img.addEventListener('error',()=>{
+            if(!img.dataset.retried) {img.dataset.retried='true';img.src=img.dataset.original;}
+            else {img.classList.add('photo-unavailable');img.alt='图片加载失败，点击重试';}
+        }));
+    }
+    function photoStream(d) {
+        const categories=Object.keys(d.photos);
+        const selected=Array.from({length:24},(_,i)=>{const category=categories[i%4];return {category,src:d.photos[category][Math.floor(i/4)*2]};});
+        return `<div class="photo-stream" aria-label="摄影作品预览">${[0,1,2,3,4,5].map(col=>`<div class="photo-stream-column">${selected.filter((_,i)=>i%6===col).map(p=>`<a href="?section=photo&category=${encodeURIComponent(p.category)}" data-photo="${e(p.category)}" aria-label="查看${e(p.category)}">${photoImage(p.src,p.category)}${arrow}</a>`).join('')}</div>`).join('')}</div>`;
+    }
     const arrow = '<span class="folio-arrow" aria-hidden="true">↗</span>';
     const sectionHead = (number,title,zh,link) => `<div class="folio-section-head"><h2><span class="folio-number">${number}</span>${title}<small>${zh}</small></h2>${link}</div>`;
     const footer = () => `<footer class="folio-footer"><span>Tianyi Mao <small>毛天艺</small></span><a href="#top" data-jump="top">Back to top ↑</a><small>© ${new Date().getFullYear()}</small></footer>`;
@@ -69,30 +85,34 @@ window.Portfolio = (() => {
             const d = await load();
             if (id !== renderId || sectionFromUrl() !== 'home') return;
             const graphicNames = ['健身工厂','离不了','新保龄运动','血液涅槃'];
-            const featured = ['lysa','wander','monevo','straydog','slaace','gatelace','tailfed','kindred'].map(id => d.brands.find(p=>p.id===id)).filter(Boolean);
-            const photoCategories = ['商业摄影','模特','情绪摄影','自媒体摄影'];
+            const featured = ['lysa','wander','monevo','straydog','slaace','gatelace','tailfed','kindred','bitwoo'].map(id => d.brands.find(p=>p.id===id)).filter(Boolean);
             app.innerHTML = `<div class="folio-shell" id="top">
                 <section class="folio-hero" aria-labelledby="folio-title">
                     <h1 id="folio-title">Brand &amp; photography.<br>Graphic design<span class="folio-period">.</span></h1>
                 </section>
                 <section class="folio-section" id="brand" aria-label="品牌设计">
                     ${sectionHead('01','Brand design','品牌设计',routeLink('brand',`全部 ${d.brands.length} 个项目 ↗`))}
-                    <div class="folio-grid">${featured.map((p,i)=>card(p,i<2)).join('')}</div>
+                    <div class="folio-grid folio-brand-preview">${featured.map((p,i)=>card(p,i<3)).join('')}</div>
                     <div class="folio-section-end">${routeLink('brand','Explore all brand projects <span aria-hidden="true">↗</span>','class="folio-outline"')}</div>
                 </section>
+                <section class="folio-section cinema-section" id="video" aria-label="视频作品">
+                    ${sectionHead('02','Moving image','视频作品','<a href="?section=photo&category=video" data-photo="video">全部影像 ↗</a>')}
+                    ${CinemaStage.markup(d.videos)}
+                </section>
                 <section class="folio-section" id="photography" aria-label="摄影作品">
-                    ${sectionHead('02','Photography','摄影作品',routeLink('photo','完整摄影档案 ↗'))}
-                    <div class="folio-grid folio-photo-grid">${photoCategories.map((name,i)=>`<a class="folio-card" href="?section=photo" data-photo="${e(name)}"><div class="folio-card-image">${image(d.photos[name][0],name)}${arrow}</div><div class="folio-card-caption"><h3>${['Commercial','Portrait','Mood','Social'][i]}</h3><span>${e(name)} · ${d.photos[name].length} 张</span></div></a>`).join('')}</div>
-                    <div class="folio-film-link"><span>Moving image <small>视听影像</small></span><a href="?section=photo" data-photo="video">浏览全部 ${d.videos.length} 段影像 ↗</a></div>
+                    ${sectionHead('03','Photography','摄影作品',routeLink('photo','完整摄影档案 ↗'))}
+                    ${photoStream(d)}
                 </section>
                 <section class="folio-section" id="graphic" aria-label="平面设计">
-                    ${sectionHead('03','Graphic design','平面设计',routeLink('works','全部平面作品 ↗'))}
+                    ${sectionHead('04','Graphic design','平面设计',routeLink('works','全部平面作品 ↗'))}
                     <div class="folio-grid">${graphicNames.map((name,i)=>graphicCard(name,`平面设计/批判设计/${name}1.png`,i)).join('')}</div>
                     <div class="folio-archive-links"><a href="?section=works" data-works-category="工作实践">工作实践 / Work practice</a><a href="?section=works" data-works-category="批判设计">批判设计 / Critical design</a><a href="?section=works" data-works-category="个人创意">个人创意 / Personal creation</a></div>
                 </section>
                 ${footer()}
             </div>`;
             reveal();
+            wirePhotoFallback(app);
+            CinemaStage.init(d.videos);
             const graphicId = new URL(location.href).searchParams.get('graphic');
             const target = pendingAnchor || decodeURIComponent(location.hash.slice(1)) || (graphicId ? 'graphic' : '');
             pendingAnchor = '';
@@ -143,7 +163,7 @@ window.Portfolio = (() => {
     }
     function graphicCopy(p) {
         const zh=graphicLanguage==='zh';
-        return `<h1 id="graphic-title">${e(zh?p.name:p.title)}</h1><p class="graphic-subtitle">${e(zh?p.title:p.name)}</p><p class="graphic-summary">${e(p.summary)}</p><dl class="graphic-meta"><div><dt>Discipline</dt><dd>Graphic / Critical design</dd></div><div><dt>Format</dt><dd>${e(p.format)}</dd></div></dl>${p.sections.map(s=>`<section><h2>${e(zh?s.zhTitle:s.title)}</h2><p>${e(zh?s.zh:s.text)}</p></section>`).join('')}`;
+        return `<h1 id="graphic-title">${e(zh?p.name:p.title)}</h1><p class="graphic-subtitle">${e(zh?p.title:p.name)}</p><p class="graphic-summary">${e(p.summary)}</p><dl class="graphic-meta"><div><dt>Discipline</dt><dd>Graphic / Critical design</dd></div><div><dt>Format</dt><dd>${e(p.format)}</dd></div></dl>${p.sections.map(s=>`<section><h2>${e(zh?s.zhTitle:s.title)}</h2><p>${e(zh?s.zh:s.text)}</p></section>`).join('')}${p.thanks?`<section class="graphic-thanks"><h2>${zh?'致谢':'Acknowledgements'}</h2><p>${e(p.thanks[graphicLanguage])}</p></section>`:''}`;
     }
     function openGraphic(idOrName, push = true) {
         const p=data?.graphics.find(p=>p.id===idOrName || p.name===idOrName);
@@ -236,7 +256,8 @@ window.Portfolio = (() => {
             }));
         } else {
             area.className='tight-photo-grid';
-            area.innerHTML=(d.photos[category]||[]).map(src=>`<button class="photo-item" type="button" data-photo-image="${e(src)}" aria-label="放大${e(category)}作品">${image(src,category)}</button>`).join('');
+            area.innerHTML=(d.photos[category]||[]).map((src,i)=>`<button class="photo-item" type="button" data-photo-image="${e(src)}" aria-label="放大${e(category)}作品">${photoImage(src,category,i<12)}</button>`).join('');
+            wirePhotoFallback(area);
         }
     }
     document.addEventListener('click',event=>{
@@ -257,7 +278,11 @@ window.Portfolio = (() => {
             else if(link.hasAttribute('data-works-category')) {pendingWorks={category:link.dataset.worksCategory};go('works');}
             else if(link.hasAttribute('data-photo')) {pendingPhoto=link.dataset.photo;go('photo');}
             else if(link.hasAttribute('data-project-image')) viewImages(link.dataset.imageProject,Number(link.dataset.projectImage));
-            else if(link.hasAttribute('data-photo-image')) openViewerSingle(link.dataset.photoImage);
+            else if(link.hasAttribute('data-photo-image')) {
+                const img=link.querySelector('img');
+                if(img?.classList.contains('photo-unavailable')) {img.classList.remove('photo-unavailable');img.src=img.dataset.original+'?retry='+Date.now();}
+                else {currentImgList=data.photos[link.closest('[data-category]').dataset.category];currentIndex=currentImgList.indexOf(link.dataset.photoImage);updateViewer();document.getElementById('viewer').style.display='flex';}
+            }
             else if(link.hasAttribute('data-retry')) switchPage(link.dataset.retry,{updateHistory:false});
         }
         if(!event.target.closest('#folio-more')) document.getElementById('folio-more')?.removeAttribute('open');
@@ -270,5 +295,5 @@ window.Portfolio = (() => {
             if(event.key==='ArrowLeft') prevImg();
         }
     });
-    return {load,renderHome,renderBrands,renderProject,renderPhotoFiles,go,jump,openGraphicByName:openGraphic,dismissGraphic,syncGraphicHistory,takePhotoCategory(){const category=pendingPhoto||'商业摄影';pendingPhoto='';return category;},takeWorksCategory(){const target=pendingWorks||{category:'工作实践'};pendingWorks=null;return target;}};
+    return {load,renderHome,renderBrands,renderProject,renderPhotoFiles,go,jump,openGraphicByName:openGraphic,dismissGraphic,syncGraphicHistory,takePhotoCategory(){const category=pendingPhoto||new URL(location.href).searchParams.get('category')||'商业摄影';pendingPhoto='';return category;},takeWorksCategory(){const target=pendingWorks||{category:'工作实践'};pendingWorks=null;return target;}};
 })();
