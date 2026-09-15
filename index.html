@@ -387,13 +387,13 @@
         .works-thumb { width: 68px; height: 68px; object-fit: cover; border-radius: 8px; opacity: 0.45; border: 1px solid rgba(255,255,255,0.1); transition: opacity 0.2s ease; }
         .works-thumb:hover, .works-thumb.active { opacity: 1; }
     </style>
-    <link rel="stylesheet" href="portfolio.css?v=20260915-cinema">
-    <link rel="stylesheet" href="cinema-stage.css?v=20260915-cinema">
+    <link rel="stylesheet" href="portfolio.css?v=20260915-opera">
+    <link rel="stylesheet" href="cinema-stage.css?v=20260915-opera">
 </head>
 <body>
     <audio id="main-audio" loop preload="metadata"><source src="Macy%20Gray%20-%20Let%20You%20Win.mp3" type="audio/mpeg"></audio>
     <header class="folio-nav">
-        <a class="folio-wordmark" href="?section=home" data-section="home">tianyimao</a>
+        <a class="folio-wordmark" href="?section=home" data-section="home">Tianyi Mao</a>
         <nav class="folio-nav-links" aria-label="主页导航">
             <a href="?section=home#brand" data-jump="brand">Brand</a>
             <a href="?section=home#video" data-jump="video">Video</a>
@@ -415,7 +415,7 @@
             <span class="en-main text-[10px]">Return</span><span class="zh-sub">返回</span>
         </div>
         <div id="music-toggle" role="button" tabindex="0" aria-label="播放或暂停 Macy Gray — Let You Win" class="fixed top-4 right-4 md:top-8 md:right-8 z-[500] cursor-pointer opacity-40 hover:opacity-100 transition p-3 glass" onclick="toggleMusic()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();toggleMusic()}">
-            <svg class="radio-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 10 23 4"/><rect x="4" y="10" width="24" height="18" rx="4"/><circle class="radio-speaker" cx="11" cy="19" r="4"/><path d="M19 15h5M19 18h3"/><circle cx="23" cy="23" r="1"/><g class="radio-waves"><path d="M16 17v4M19 21v3M16 24v1"/></g></svg>
+            <svg class="music-note-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 24V8l15-4v16M11 13l15-4"/><ellipse cx="7.5" cy="24.5" rx="3.5" ry="2.8" fill="currentColor" stroke="none" transform="rotate(-20 7.5 24.5)"/><ellipse cx="22.5" cy="20.5" rx="3.5" ry="2.8" fill="currentColor" stroke="none" transform="rotate(-20 22.5 20.5)"/></svg>
         </div>
     </div>
 
@@ -445,8 +445,8 @@
 
     <script src="movies.js"></script>
     <script src="thoughts.js"></script>
-    <script src="cinema-stage.js?v=20260915-cinema"></script>
-    <script src="portfolio.js?v=20260915-cinema"></script>
+    <script src="cinema-stage.js?v=20260915-opera"></script>
+    <script src="portfolio.js?v=20260915-opera"></script>
     <script>
         const audio = document.getElementById('main-audio');
         const app = document.getElementById('app-content');

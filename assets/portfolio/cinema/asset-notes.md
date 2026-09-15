@@ -1,0 +1,7 @@
+# Opera curtain
+
+Generated with imagegen on 2026-09-15; delivered as opera-curtain.webp. Original output is retained in the local generated_images archive. WebP encoding only; no retouching. Two CSS panels share the complete texture at 200% background width, preserving the center seam while opening independently.
+
+## Exact generation prompt
+
+Create a production website texture asset: fully CLOSED vintage opera theatre curtains, straight-on frontal view, wide landscape 1536x1024. Inspired by grand Paris opera velvet draperies: pale sage green / muted celadon monochrome palette, tangible woven silk velvet texture, long softly irregular vertical folds covering all of the lower field, elaborate overlapping scalloped swags across the TOP QUARTER with concentric curved folds, ornate subtle matching sage embroidery and several hanging tassels. Bilaterally balanced with a central vertical seam at exactly x=50%, as two halves will be animated sliding apart. At center seam leave no single swag or ornament crossing seam: two matching swags meet at seam, keeping both halves visually self-contained. Fabric fills image EDGE TO EDGE, no room, no floor, no frame, no seats, no screen, no text, no lettering, no button, no logo, no watermark. Elegant understated antique photographic fabric, with real depth and soft theatrical lighting, fine irregular fiber detail. Not smooth plastic, not metallic, not simple regular stripes. Curtains completely closed with no gap.

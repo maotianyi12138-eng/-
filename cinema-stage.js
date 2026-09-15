@@ -7,7 +7,7 @@ window.CinemaStage = (() => {
         return `<div class="cinema-track"><div class="cinema-sticky"><div class="cinema-arch" style="--curtain-open:0">
             <div class="cinema-lights" aria-hidden="true"></div><div class="cinema-floor" aria-hidden="true"></div>
             <div class="cinema-screen"><video id="stage-player" muted playsinline controls preload="none" aria-label="视频舞台"></video><div class="cinema-feedback" role="status">向下滚动，幕布开启</div><button class="cinema-start" type="button" hidden>播放影片</button></div>
-            <div class="curtain curtain-left" aria-hidden="true"><i></i></div><div class="curtain curtain-right" aria-hidden="true"><i></i></div><div class="curtain-valance" aria-hidden="true"></div>
+            <div class="curtain curtain-left" aria-hidden="true"></div><div class="curtain curtain-right" aria-hidden="true"></div>
             <button type="button" class="curtain-invite">Enter cinema <span>↓</span></button>
             </div><div class="cinema-caption"><div><small>NOW SHOWING</small><span id="stage-title">${esc(videos[0].title)}</span></div><button type="button" class="cinema-sound" aria-pressed="false">开启声音</button></div>
             <div class="cinema-reels" aria-label="选择视频">${videos.map((v,i)=>`<button type="button" class="cinema-reel" data-reel="${i}" aria-pressed="${i===0}" aria-label="播放 ${esc(v.title)}"><span class="cinema-reel-window"><video muted playsinline preload="none" data-src="${esc(v.src)}#t=0.1" aria-hidden="true" tabindex="-1"></video><b>${String(i+1).padStart(2,'0')}</b></span><span>${esc(v.title)}</span></button>`).join('')}</div>

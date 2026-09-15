@@ -15,7 +15,7 @@ window.Portfolio = (() => {
     let graphicScrollY = 0;
     let previousScrollRestoration = 'auto';
     const e = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-    const load = () => dataPromise ||= Promise.all(['portfolio','graphic-projects','photo-assets'].map(name => fetch(`data/${name}.json?v=20260915-cinema`).then(response => {
+    const load = () => dataPromise ||= Promise.all(['portfolio','graphic-projects','photo-assets'].map(name => fetch(`data/${name}.json?v=20260915-opera`).then(response => {
         if (!response.ok) throw new Error('作品暂时未能加载');
         return response.json();
     }))).then(([value,graphics,photos]) => {
@@ -36,8 +36,16 @@ window.Portfolio = (() => {
         }));
     }
     function photoStream(d) {
-        const categories=Object.keys(d.photos);
-        const selected=Array.from({length:24},(_,i)=>{const category=categories[i%4];return {category,src:d.photos[category][Math.floor(i/4)*2]};});
+        // Homepage selection only; the full archive still includes every category.
+        const pattern=['商业摄影','自媒体摄影','情绪摄影','自媒体摄影','商业摄影','商业摄影','自媒体摄影','商业摄影','自媒体摄影','商业摄影','情绪摄影','自媒体摄影'];
+        const categories=[...pattern,...pattern];
+        const counts={};
+        const selected=categories.map(category=>{
+            const index=counts[category]||0;
+            counts[category]=index+1;
+            const total=categories.filter(c=>c===category).length;
+            return {category,src:d.photos[category][Math.floor(index*d.photos[category].length/total)]};
+        });
         return `<div class="photo-stream" aria-label="摄影作品预览">${[0,1,2,3,4,5].map(col=>`<div class="photo-stream-column">${selected.filter((_,i)=>i%6===col).map(p=>`<a href="?section=photo&category=${encodeURIComponent(p.category)}" data-photo="${e(p.category)}" aria-label="查看${e(p.category)}">${photoImage(p.src,p.category)}${arrow}</a>`).join('')}</div>`).join('')}</div>`;
     }
     const arrow = '<span class="folio-arrow" aria-hidden="true">↗</span>';
@@ -102,6 +110,7 @@ window.Portfolio = (() => {
                 <section class="folio-section" id="photography" aria-label="摄影作品">
                     ${sectionHead('03','Photography','摄影作品',routeLink('photo','完整摄影档案 ↗'))}
                     ${photoStream(d)}
+                    <div class="folio-section-end">${routeLink('photo','点击访问完整摄影案例 <span aria-hidden="true">↗</span>','class="folio-outline"')}</div>
                 </section>
                 <section class="folio-section" id="graphic" aria-label="平面设计">
                     ${sectionHead('04','Graphic design','平面设计',routeLink('works','全部平面作品 ↗'))}

@@ -1,13 +1,14 @@
 /* A scrolling, image-led front door to the original archive. */
+@font-face { font-family:'Bunch'; src:url('assets/fonts/Bunch-Bold.otf') format('opentype'); font-style:normal; font-weight:700; font-display:swap; }
 html { scroll-behavior:smooth; }
 body.portfolio-page { --folio-bg:#171715; --folio-text:#f3f2ec; --folio-muted:#a2a39a; --folio-line:#ffffff1c; background:var(--folio-bg)!important; color:var(--folio-text); font-family:Arial,'Noto Sans SC',sans-serif; }
 body.portfolio-page #app-content { padding:0!important; min-height:100svh; }
 body.portfolio-page #back-btn { display:none!important; }
-body.portfolio-page #music-toggle { z-index:650; top:18px; right:clamp(16px,3.6vw,64px); opacity:1; border-radius:50%; background:#ffffff0c; border-color:#ffffff18; padding:12px; }
+body.portfolio-page #music-toggle { z-index:650; top:18px; right:calc(clamp(16px,3.6vw,64px) - 8px); opacity:1; border-radius:50%; background:#ffffff0c; border-color:#ffffff18; padding:12px; }
 .folio-nav { display:none; }
 .portfolio-page .folio-nav { position:sticky; top:0; z-index:600; display:flex; align-items:center; justify-content:space-between; height:78px; padding:0 clamp(20px,3.6vw,64px); padding-right:clamp(80px,8vw,134px); background:#171715ed; backdrop-filter:blur(18px); border-bottom:1px solid var(--folio-line); font:14px/1.2 Arial,'Noto Sans SC',sans-serif; }
 .folio-nav a { color:inherit; text-decoration:none; }
-.folio-wordmark { font-family:'Trebuchet MS','Arial Rounded MT Bold',sans-serif; font-size:26px; font-style:italic; letter-spacing:-.06em; white-space:nowrap; }
+.folio-wordmark { font-family:'Bunch',Arial,sans-serif; font-size:26px; font-weight:700; font-style:normal; letter-spacing:-.04em; white-space:nowrap; }
 .folio-wordmark small { display:block; margin-top:4px; color:#9d9e94; font-size:10px; letter-spacing:.13em; }
 .folio-nav-links { display:flex; align-items:center; gap:28px; }
 .folio-nav-links > a { color:#bcbdb3; }
@@ -32,7 +33,7 @@ body.portfolio-page #music-toggle { z-index:650; top:18px; right:clamp(16px,3.6v
 .folio-hero { padding:52px 0 40px; }
 .folio-eyebrow { display:flex; gap:24px; margin-bottom:24px; font-size:12px; letter-spacing:.15em; color:#b3b4a8; }
 .folio-eyebrow span { letter-spacing:.08em; }
-.folio-hero h1 { max-width:1280px; font-size:clamp(45px,6.6vw,108px); letter-spacing:-.065em; line-height:1.04; }
+.folio-hero h1 { max-width:1280px; font-family:'Bunch',Arial,sans-serif; font-weight:700; font-size:clamp(45px,6.6vw,108px); letter-spacing:-.05em; line-height:1; }
 .folio-period { color:#a5b6ff; }
 .folio-hero-bottom { display:flex; align-items:center; justify-content:space-between; gap:32px; margin-top:24px; }
 .folio-hero-bottom p { font-size:16px; color:var(--folio-muted); }
@@ -149,7 +150,7 @@ button.photo-item { margin-bottom:8px; break-inside:avoid; background:#ffffff0c;
 }
 @media (max-width:600px) {
     .portfolio-page .folio-nav { height:70px; padding-left:20px; padding-right:78px; }
-    body.portfolio-page #music-toggle { top:14px; right:15px; }
+    body.portfolio-page #music-toggle { top:14px; right:11px; }
     .folio-wordmark { font-size:23px; }
     .folio-wordmark small { font-size:9px; }
     .folio-nav-links { gap:0; }
@@ -195,15 +196,12 @@ button.photo-item { margin-bottom:8px; break-inside:avoid; background:#ffffff0c;
     .folio-card:hover img { transform:none; }
 }
 
-/* The radio keeps the same playback control, with motion only while playing. */
+/* The note keeps the same playback control, with motion only while playing. */
 #music-toggle { display:grid; place-items:center; }
-.radio-icon { display:block; width:25px; height:25px; overflow:visible; }
-.radio-speaker { transform-box:fill-box; transform-origin:center; }
-.radio-waves { opacity:.25; }
-.is-playing .radio-speaker { animation:radio-pulse 1.25s ease-in-out infinite; }
-.is-playing .radio-waves { animation:radio-signal 1.05s ease-in-out infinite alternate; }
-@keyframes radio-pulse { 50% { transform:scale(.82); } }
-@keyframes radio-signal { to { opacity:1; } }
+.music-note-icon { display:block; width:25px; height:25px; overflow:visible; transform-origin:50% 70%; }
+.is-playing .music-note-icon { animation:note-sway 1.8s ease-in-out infinite; }
+@keyframes note-sway { 25% { transform:rotate(-7deg) translateY(-1px); } 75% { transform:rotate(7deg); } }
+@media (prefers-reduced-motion:reduce) { .is-playing .music-note-icon { animation:none; } }
 
 /* Project sheet: retain the archive behind it and restore its scroll on close. */
 html:has(.graphic-open) { overflow:hidden; scrollbar-gutter:stable; }
