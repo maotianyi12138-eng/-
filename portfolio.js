@@ -7,11 +7,21 @@ window.Portfolio = (() => {
     let pendingAnchor = '';
     let pendingPhoto = '';
     let pendingWorks = null;
+    let graphicDialog;
+    let graphicTrigger;
+    let graphicLanguage = 'en';
+    let activeGraphic;
+    let graphicCloseTimer;
+    let graphicScrollY = 0;
+    let previousScrollRestoration = 'auto';
     const e = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-    const load = () => dataPromise ||= fetch('data/portfolio.json?v=20260914').then(response => {
+    const load = () => dataPromise ||= Promise.all(['portfolio','graphic-projects'].map(name => fetch(`data/${name}.json?v=20260915-projects`).then(response => {
         if (!response.ok) throw new Error('作品暂时未能加载');
         return response.json();
-    }).then(value => data = value).catch(error => { dataPromise = null; throw error; });
+    }))).then(([value,graphics]) => {
+        value.graphics = graphics.map(p => ({...p, images:value.works['批判设计'].filter(src=>src.split('/').pop().startsWith(p.name)).sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}))}));
+        return data = value;
+    }).catch(error => { dataPromise = null; throw error; });
     const routeLink = (section, label, extra = '') => `<a href="?section=${section}" data-section="${section}" ${extra}>${label}</a>`;
     const image = (src, alt, eager = false) => `<img src="${e(src)}" alt="${e(alt)}" loading="${eager?'eager':'lazy'}" decoding="async" ${eager?'fetchpriority="high"':''}>`;
     const arrow = '<span class="folio-arrow" aria-hidden="true">↗</span>';
@@ -21,7 +31,8 @@ window.Portfolio = (() => {
         return `<a class="folio-card" href="?section=project&project=${encodeURIComponent(project.id)}" data-project="${e(project.id)}"><div class="folio-card-image">${image(project.images[0],project.title,eager)}${arrow}</div><div class="folio-card-caption"><h3>${e(project.title)}</h3><span>${e(project.category)} · ${e(project.year)}</span></div></a>`;
     }
     function graphicCard(name,src,index) {
-        return `<a class="folio-card folio-graphic" href="?section=works" data-graphic="${e(name)}"><div class="folio-card-image">${image(src,name,index===0)}${arrow}</div><div class="folio-card-caption"><h3>${e(name)}</h3><span>Graphic / 批判设计</span></div></a>`;
+        const project=data.graphics.find(p=>p.name===name);
+        return `<a class="folio-card folio-graphic" href="?graphic=${encodeURIComponent(project.id)}#graphic" data-graphic="${e(name)}"><div class="folio-card-image">${image(src,name)}${arrow}</div><div class="folio-card-caption"><h3>${e(name)}</h3><span>Graphic / 批判设计</span></div></a>`;
     }
     function reveal() {
         revealObserver?.disconnect();
@@ -58,36 +69,37 @@ window.Portfolio = (() => {
             const d = await load();
             if (id !== renderId || sectionFromUrl() !== 'home') return;
             const graphicNames = ['健身工厂','离不了','新保龄运动','血液涅槃'];
-            const featured = ['lysa','wander','monevo','straydog','nike-x-alpinestars','slaace','gatelace','tailfed'].map(id => d.brands.find(p=>p.id===id)).filter(Boolean);
+            const featured = ['lysa','wander','monevo','straydog','slaace','gatelace','tailfed','kindred'].map(id => d.brands.find(p=>p.id===id)).filter(Boolean);
             const photoCategories = ['商业摄影','模特','情绪摄影','自媒体摄影'];
             app.innerHTML = `<div class="folio-shell" id="top">
                 <section class="folio-hero" aria-labelledby="folio-title">
-                    <div class="folio-eyebrow">TIANYI MAO <span>毛天艺 · 作品集</span></div>
-                    <h1 id="folio-title">Graphic design.<br>Brand &amp; photography<span class="folio-period">.</span></h1>
-                    <div class="folio-hero-bottom"><p>平面设计、品牌视觉与摄影作品。</p><a class="folio-primary" href="#graphic" data-jump="graphic">View work <span aria-hidden="true">↓</span></a></div>
-                </section>
-                <nav class="folio-index" aria-label="作品类别"><a href="#graphic" data-jump="graphic"><span>01</span> Graphic design</a><a href="#brand" data-jump="brand"><span>02</span> Brand design</a><a href="#photography" data-jump="photography"><span>03</span> Photography</a></nav>
-                <section class="folio-section" id="graphic" aria-label="平面设计">
-                    ${sectionHead('01','Graphic design','平面设计',routeLink('works','全部平面作品 ↗'))}
-                    <div class="folio-grid">${graphicNames.map((name,i)=>graphicCard(name,`平面设计/批判设计/${name}1.png`,i)).join('')}</div>
-                    <div class="folio-archive-links"><a href="?section=works" data-works-category="工作实践">工作实践 / Work practice</a><a href="?section=works" data-works-category="批判设计">批判设计 / Critical design</a><a href="?section=works" data-works-category="个人创意">个人创意 / Personal creation</a></div>
+                    <h1 id="folio-title">Brand &amp; photography.<br>Graphic design<span class="folio-period">.</span></h1>
                 </section>
                 <section class="folio-section" id="brand" aria-label="品牌设计">
-                    ${sectionHead('02','Brand design','品牌设计',routeLink('brand',`全部 ${d.brands.length} 个项目 ↗`))}
-                    <div class="folio-grid">${featured.map(p=>card(p)).join('')}</div>
+                    ${sectionHead('01','Brand design','品牌设计',routeLink('brand',`全部 ${d.brands.length} 个项目 ↗`))}
+                    <div class="folio-grid">${featured.map((p,i)=>card(p,i<2)).join('')}</div>
                     <div class="folio-section-end">${routeLink('brand','Explore all brand projects <span aria-hidden="true">↗</span>','class="folio-outline"')}</div>
                 </section>
                 <section class="folio-section" id="photography" aria-label="摄影作品">
-                    ${sectionHead('03','Photography','摄影作品',routeLink('photo','完整摄影档案 ↗'))}
+                    ${sectionHead('02','Photography','摄影作品',routeLink('photo','完整摄影档案 ↗'))}
                     <div class="folio-grid folio-photo-grid">${photoCategories.map((name,i)=>`<a class="folio-card" href="?section=photo" data-photo="${e(name)}"><div class="folio-card-image">${image(d.photos[name][0],name)}${arrow}</div><div class="folio-card-caption"><h3>${['Commercial','Portrait','Mood','Social'][i]}</h3><span>${e(name)} · ${d.photos[name].length} 张</span></div></a>`).join('')}</div>
                     <div class="folio-film-link"><span>Moving image <small>视听影像</small></span><a href="?section=photo" data-photo="video">浏览全部 ${d.videos.length} 段影像 ↗</a></div>
+                </section>
+                <section class="folio-section" id="graphic" aria-label="平面设计">
+                    ${sectionHead('03','Graphic design','平面设计',routeLink('works','全部平面作品 ↗'))}
+                    <div class="folio-grid">${graphicNames.map((name,i)=>graphicCard(name,`平面设计/批判设计/${name}1.png`,i)).join('')}</div>
+                    <div class="folio-archive-links"><a href="?section=works" data-works-category="工作实践">工作实践 / Work practice</a><a href="?section=works" data-works-category="批判设计">批判设计 / Critical design</a><a href="?section=works" data-works-category="个人创意">个人创意 / Personal creation</a></div>
                 </section>
                 ${footer()}
             </div>`;
             reveal();
-            const target = pendingAnchor || decodeURIComponent(location.hash.slice(1));
+            const graphicId = new URL(location.href).searchParams.get('graphic');
+            const target = pendingAnchor || decodeURIComponent(location.hash.slice(1)) || (graphicId ? 'graphic' : '');
             pendingAnchor = '';
-            if (target) requestAnimationFrame(()=>document.getElementById(target)?.scrollIntoView({behavior:'instant',block:'start'}));
+            if (target) requestAnimationFrame(()=>{
+                document.getElementById(target)?.scrollIntoView({behavior:'instant',block:'start'});
+                if (graphicId) openGraphic(graphicId, false);
+            });
         } catch(error) { errorState(error,'home'); }
     }
     async function renderBrands() {
@@ -129,9 +141,82 @@ window.Portfolio = (() => {
         history.pushState({page:'project'},'',url);
         switchPage('project',{updateHistory:false});
     }
-    function openGraphic(name) {
-        pendingWorks = {category:'批判设计',project:name};
-        go('works');
+    function graphicCopy(p) {
+        const zh=graphicLanguage==='zh';
+        return `<h1 id="graphic-title">${e(zh?p.name:p.title)}</h1><p class="graphic-subtitle">${e(zh?p.title:p.name)}</p><p class="graphic-summary">${e(p.summary)}</p><dl class="graphic-meta"><div><dt>Discipline</dt><dd>Graphic / Critical design</dd></div><div><dt>Format</dt><dd>${e(p.format)}</dd></div></dl>${p.sections.map(s=>`<section><h2>${e(zh?s.zhTitle:s.title)}</h2><p>${e(zh?s.zh:s.text)}</p></section>`).join('')}`;
+    }
+    function openGraphic(idOrName, push = true) {
+        const p=data?.graphics.find(p=>p.id===idOrName || p.name===idOrName);
+        if (!p) return false;
+        clearTimeout(graphicCloseTimer);
+        if (!graphicDialog?.open) {
+            graphicTrigger=document.activeElement;
+            graphicScrollY=window.scrollY;
+            previousScrollRestoration=history.scrollRestoration;
+            history.scrollRestoration='manual';
+        }
+        activeGraphic=p;
+        if (!graphicDialog) {
+            graphicDialog=document.createElement('dialog');
+            graphicDialog.id='graphic-dialog';
+            graphicDialog.className='graphic-dialog';
+            graphicDialog.setAttribute('aria-labelledby','graphic-title');
+            document.body.append(graphicDialog);
+            graphicDialog.addEventListener('cancel',event=>{event.preventDefault();closeGraphic();});
+            graphicDialog.addEventListener('click',event=>{if(event.target===graphicDialog)closeGraphic();});
+        }
+        graphicDialog.classList.remove('is-closing');
+        graphicDialog.innerHTML=`<div class="graphic-sheet"><button type="button" class="graphic-close" data-close-graphic aria-label="关闭项目">×</button><div class="graphic-layout"><div class="graphic-images">${p.images.map((src,i)=>`<button type="button" data-graphic-image="${i}" aria-label="放大 ${e(p.name)} 第 ${i+1} 张">${image(src,`${p.name} — ${i+1}`,i===0)}</button>`).join('')}</div><aside class="graphic-info"><div class="graphic-language" aria-label="简介语言"><button type="button" data-graphic-language="en" aria-pressed="${graphicLanguage==='en'}">EN</button><button type="button" data-graphic-language="zh" aria-pressed="${graphicLanguage==='zh'}">中文</button></div><div id="graphic-copy">${graphicCopy(p)}</div></aside></div><a class="graphic-next" data-graphic="${e(data.graphics[(data.graphics.indexOf(p)+1)%data.graphics.length].name)}" href="?graphic=${e(data.graphics[(data.graphics.indexOf(p)+1)%data.graphics.length].id)}">Next project <span>${e(data.graphics[(data.graphics.indexOf(p)+1)%data.graphics.length].name)} ↗</span></a></div>`;
+        if(push) {
+            const url=new URL(location.href);url.searchParams.set('graphic',p.id);
+            // Next project replaces the current panel so Close always returns to the archive.
+            history[graphicDialog.open?'replaceState':'pushState']({page:sectionFromUrl(),graphicPanel:true},'',url);
+        }
+        document.body.classList.add('graphic-open');
+        if (!graphicDialog.open) graphicDialog.showModal();
+        graphicDialog.scrollTop=0;
+        graphicDialog.querySelector('.graphic-close').focus({preventScroll:true});
+        return true;
+    }
+    function dismissGraphic(immediate = true) {
+        if (!graphicDialog?.open) return;
+        const finish=()=>{
+            graphicDialog.close();graphicDialog.classList.remove('is-closing');
+            document.body.classList.remove('graphic-open');
+            if(graphicTrigger?.isConnected)graphicTrigger.focus({preventScroll:true});
+            window.scrollTo({top:graphicScrollY,behavior:'instant'});
+            history.scrollRestoration=previousScrollRestoration;
+        };
+        clearTimeout(graphicCloseTimer);
+        if(immediate || matchMedia('(prefers-reduced-motion: reduce)').matches) finish();
+        else {graphicDialog.classList.add('is-closing');graphicCloseTimer=setTimeout(finish,280);}
+    }
+    function closeGraphic() {
+        if(history.state?.graphicPanel) history.back();
+        else {
+            const url=new URL(location.href);url.searchParams.delete('graphic');history.replaceState({page:sectionFromUrl()},'',url);
+            dismissGraphic(false);
+        }
+    }
+    function syncGraphicHistory() {
+        if (document.body.dataset.section!==sectionFromUrl()) return false;
+        const id=new URL(location.href).searchParams.get('graphic');
+        if(id) return openGraphic(id,false);
+        if(graphicDialog?.open) {dismissGraphic(false);return true;}
+        return false;
+    }
+    function graphicZoom(index) {
+        const zoom=document.createElement('dialog');zoom.className='graphic-zoom';zoom.setAttribute('aria-label','放大作品');
+        let current=index;
+        const render=()=>{zoom.querySelector('img').src=activeGraphic.images[current];zoom.querySelector('img').alt=`${activeGraphic.name} — ${current+1}`;zoom.querySelector('output').textContent=`${current+1} / ${activeGraphic.images.length}`;};
+        zoom.innerHTML='<button type="button" class="zoom-close" aria-label="关闭大图">×</button><button type="button" class="zoom-prev" aria-label="上一张">‹</button><img alt=""><button type="button" class="zoom-next" aria-label="下一张">›</button><output></output>';
+        zoom.querySelector('.zoom-close').onclick=()=>zoom.close();
+        const change=delta=>{current=(current+delta+activeGraphic.images.length)%activeGraphic.images.length;render();};
+        zoom.querySelector('.zoom-prev').onclick=()=>change(-1);zoom.querySelector('.zoom-next').onclick=()=>change(1);
+        zoom.addEventListener('keydown',event=>{event.stopPropagation();if(event.key==='ArrowRight')change(1);if(event.key==='ArrowLeft')change(-1);});
+        zoom.addEventListener('close',()=>zoom.remove());
+        let start=0;zoom.addEventListener('touchstart',ev=>{start=ev.changedTouches[0].screenX;},{passive:true});zoom.addEventListener('touchend',ev=>{const delta=ev.changedTouches[0].screenX-start;if(Math.abs(delta)>50)change(delta<0?1:-1);},{passive:true});
+        document.body.append(zoom);render();zoom.showModal();
     }
     function viewImages(projectId,index) {
         const p=data?.brands.find(p=>p.id===projectId);if(!p)return;
@@ -155,13 +240,20 @@ window.Portfolio = (() => {
         }
     }
     document.addEventListener('click',event=>{
-        const link=event.target.closest('[data-section],[data-jump],[data-project],[data-graphic],[data-works-category],[data-photo],[data-project-image],[data-photo-image],[data-retry]');
+        const link=event.target.closest('a[data-section],[data-jump],[data-project],[data-graphic],[data-works-category],[data-photo],[data-project-image],[data-photo-image],[data-retry],[data-close-graphic],[data-graphic-language],[data-graphic-image]');
         if(link && !event.metaKey && !event.ctrlKey && !event.shiftKey && event.button===0) {
             event.preventDefault();
             if(link.hasAttribute('data-section')) go(link.dataset.section);
             else if(link.hasAttribute('data-jump')) jump(link.dataset.jump);
             else if(link.hasAttribute('data-project')) openProject(link.dataset.project);
             else if(link.hasAttribute('data-graphic')) openGraphic(link.dataset.graphic);
+            else if(link.hasAttribute('data-close-graphic')) closeGraphic();
+            else if(link.hasAttribute('data-graphic-language')) {
+                graphicLanguage=link.dataset.graphicLanguage;
+                graphicDialog.querySelector('#graphic-copy').innerHTML=graphicCopy(activeGraphic);
+                graphicDialog.querySelectorAll('[data-graphic-language]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.graphicLanguage===graphicLanguage)));
+            }
+            else if(link.hasAttribute('data-graphic-image')) graphicZoom(Number(link.dataset.graphicImage));
             else if(link.hasAttribute('data-works-category')) {pendingWorks={category:link.dataset.worksCategory};go('works');}
             else if(link.hasAttribute('data-photo')) {pendingPhoto=link.dataset.photo;go('photo');}
             else if(link.hasAttribute('data-project-image')) viewImages(link.dataset.imageProject,Number(link.dataset.projectImage));
@@ -171,11 +263,12 @@ window.Portfolio = (() => {
         if(!event.target.closest('#folio-more')) document.getElementById('folio-more')?.removeAttribute('open');
     });
     document.addEventListener('keydown',event=>{
+        if(graphicDialog?.open) return;
         if(event.key==='Escape') {document.getElementById('folio-more')?.removeAttribute('open');closeViewer();}
         if(document.getElementById('viewer')?.style.display==='flex') {
             if(event.key==='ArrowRight') nextImg();
             if(event.key==='ArrowLeft') prevImg();
         }
     });
-    return {load,renderHome,renderBrands,renderProject,renderPhotoFiles,go,jump,takePhotoCategory(){const category=pendingPhoto||'商业摄影';pendingPhoto='';return category;},takeWorksCategory(){const target=pendingWorks||{category:'工作实践'};pendingWorks=null;return target;}};
+    return {load,renderHome,renderBrands,renderProject,renderPhotoFiles,go,jump,openGraphicByName:openGraphic,dismissGraphic,syncGraphicHistory,takePhotoCategory(){const category=pendingPhoto||'商业摄影';pendingPhoto='';return category;},takeWorksCategory(){const target=pendingWorks||{category:'工作实践'};pendingWorks=null;return target;}};
 })();

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tianyi Mao — Graphic, Brand & Photography</title>
+    <title>tianyimao — Brand, Photography & Graphic</title>
     <meta name="description" content="毛天艺的平面设计、品牌设计与摄影作品集，以及电影、阅读音乐、反思、书法和训练记录。">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -387,17 +387,17 @@
         .works-thumb { width: 68px; height: 68px; object-fit: cover; border-radius: 8px; opacity: 0.45; border: 1px solid rgba(255,255,255,0.1); transition: opacity 0.2s ease; }
         .works-thumb:hover, .works-thumb.active { opacity: 1; }
     </style>
-    <link rel="stylesheet" href="portfolio.css?v=20260914-scroll">
+    <link rel="stylesheet" href="portfolio.css?v=20260915-projects">
 </head>
 <body>
     <audio id="main-audio" loop preload="metadata"><source src="Macy%20Gray%20-%20Let%20You%20Win.mp3" type="audio/mpeg"></audio>
     <header class="folio-nav">
-        <a class="folio-wordmark" href="?section=home" data-section="home">TIANYI MAO<small>DESIGN &amp; PHOTOGRAPHY</small></a>
+        <a class="folio-wordmark" href="?section=home" data-section="home">tianyimao</a>
         <nav class="folio-nav-links" aria-label="主页导航">
-            <a href="?section=home#graphic" data-jump="graphic">Graphic</a>
             <a href="?section=home#brand" data-jump="brand">Brand</a>
             <a href="?section=home#photography" data-jump="photography">Photography</a>
-            <details id="folio-more"><summary>More of Me <span aria-hidden="true">＋</span></summary>
+            <a href="?section=home#graphic" data-jump="graphic">Graphic</a>
+            <details id="folio-more"><summary>More of Me</summary>
                 <div class="folio-more-panel">
                     <a href="?section=cinema" data-section="cinema">Cinema<small>电影</small></a>
                     <a href="?section=reading" data-section="reading">Books &amp; Music<small>音乐与阅读</small></a>
@@ -413,8 +413,7 @@
             <span class="en-main text-[10px]">Return</span><span class="zh-sub">返回</span>
         </div>
         <div id="music-toggle" role="button" tabindex="0" aria-label="播放或暂停 Macy Gray — Let You Win" class="fixed top-4 right-4 md:top-8 md:right-8 z-[500] cursor-pointer opacity-40 hover:opacity-100 transition p-3 glass" onclick="toggleMusic()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();toggleMusic()}">
-            <div id="music-on" class="w-4 h-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
-            <div id="music-off" class="w-4 h-4 hidden"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></div>
+            <svg class="radio-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 10 23 4"/><rect x="4" y="10" width="24" height="18" rx="4"/><circle class="radio-speaker" cx="11" cy="19" r="4"/><path d="M19 15h5M19 18h3"/><circle cx="23" cy="23" r="1"/><g class="radio-waves"><path d="M16 17v4M19 21v3M16 24v1"/></g></svg>
         </div>
     </div>
 
@@ -444,7 +443,7 @@
 
     <script src="movies.js"></script>
     <script src="thoughts.js"></script>
-    <script src="portfolio.js?v=20260914-scroll"></script>
+    <script src="portfolio.js?v=20260915-projects"></script>
     <script>
         const audio = document.getElementById('main-audio');
         const app = document.getElementById('app-content');
@@ -631,9 +630,11 @@
             updateMusicIcon();
         }
         function updateMusicIcon() {
-            document.getElementById('music-on').classList.toggle('hidden', audio.paused);
-            document.getElementById('music-off').classList.toggle('hidden', !audio.paused);
-            document.getElementById('music-toggle').setAttribute('aria-pressed', String(!audio.paused));
+            const toggle = document.getElementById('music-toggle');
+            toggle.setAttribute('aria-pressed', String(!audio.paused));
+            toggle.classList.toggle('is-playing', !audio.paused);
+            toggle.setAttribute('aria-label', `${audio.paused ? '播放' : '暂停'} Macy Gray — Let You Win`);
+            toggle.title = `${audio.paused ? '播放' : '暂停'} · Let You Win`;
         }
         audio.addEventListener('play', updateMusicIcon);
         audio.addEventListener('pause', updateMusicIcon);
@@ -680,6 +681,7 @@
             const initialNav = [...document.querySelectorAll('.works-nav-item')].find(el=>el.textContent.includes(initialWork.category));
             handleWorksNav(initialWork.category, initialNav).then(()=>{
                 if (initialWork.project && sectionFromUrl()==='works') openWorksProject(initialWork.category, encodeURIComponent(initialWork.project));
+                else Portfolio.syncGraphicHistory();
             });
         }
 
@@ -727,6 +729,7 @@
 
         function openWorksProject(categoryId, encodedProjectName) {
             const projectName = decodeURIComponent(encodedProjectName);
+            if (Portfolio.openGraphicByName(projectName)) return;
             const projects = worksState.projectsByCategory[categoryId] || [];
             const project = projects.find(item => item.name === projectName);
             if (!project) return;
@@ -1498,12 +1501,14 @@
             if (page === 'home') url.searchParams.delete('section');
             else url.searchParams.set('section', page);
             if (page !== 'project') url.searchParams.delete('project');
+            if (!replace) url.searchParams.delete('graphic');
             if (page !== 'home') url.hash = '';
             const method = replace ? 'replaceState' : 'pushState';
             history[method]({ page }, '', `${url.pathname}${url.search}${url.hash}`);
         }
 
         function switchPage(page, { updateHistory = true } = {}) {
+            Portfolio.dismissGraphic();
             if (!siteSections.has(page)) page = 'home';
             if (updateHistory && sectionFromUrl() !== page) updateSectionRoute(page);
             if (page === 'home') restoreMainAudioFromReading();
@@ -1513,6 +1518,7 @@
             }
             app.style.opacity = '0';
             setTimeout(() => {
+                document.body.dataset.section = page;
                 backBtn.classList.toggle('hidden', page === 'home');
                 document.body.classList.toggle('reading-page', page === 'reading');
                 document.body.classList.toggle('calligraphy-page', page === 'calligraphy');
@@ -1592,10 +1598,11 @@
         function updateViewer() { document.getElementById('viewer-img').src = currentImgList[currentIndex]; }
         function closeAd() { document.getElementById('ad-pop').style.display = 'none'; }
 
-        window.addEventListener('popstate', () => switchPage(sectionFromUrl(), { updateHistory: false }));
+        window.addEventListener('popstate', () => { if (!Portfolio.syncGraphicHistory()) switchPage(sectionFromUrl(), { updateHistory: false }); });
         window.onload = () => {
             updateMusicIcon();
             const initialSection = sectionFromUrl();
+            document.body.dataset.section = initialSection;
             updateSectionRoute(initialSection, true);
             if (initialSection === 'home') {
                 renderHome();
