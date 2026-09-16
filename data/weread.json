@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-16T16:53:58Z",
+  "updatedAt": "2026-09-16T21:17:15Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1730,7 +1730,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 1,
-        "readingTime": 15312
+        "readingTime": 18794
       },
       {
         "categoryId": 100001,
@@ -1738,7 +1738,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 1,
-        "readingTime": 15312
+        "readingTime": 18794
       },
       {
         "categoryId": 1000000,
@@ -2556,8 +2556,8 @@
     "preferCategoryWord": "偏好阅读文学",
     "preferTimeWord": "偏好夜间阅读",
     "preferTime": [
-      5193,
-      3177,
+      7329,
+      3269,
       1645,
       317,
       7,
@@ -2566,10 +2566,10 @@
       2525,
       203,
       67,
-      1489,
+      2653,
       3195,
       3477,
-      16509,
+      16599,
       6540,
       8807,
       6178,
@@ -3168,7 +3168,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6874人读过"
+        "reason": "仅有6875人读过"
       },
       {
         "type": 8,
@@ -4025,7 +4025,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 7,
-          "readingTime": 53576
+          "readingTime": 57058
         },
         {
           "categoryId": 100001,
@@ -4033,7 +4033,7 @@
           "parentCategoryId": 100000,
           "parentCategoryTitle": "精品小说",
           "readingCount": 4,
-          "readingTime": 40743
+          "readingTime": 44225
         },
         {
           "categoryId": 600000,
@@ -4096,7 +4096,7 @@
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 1,
-          "readTime": "6小时29分钟"
+          "readTime": "7小时27分钟"
         },
         {
           "authorId": 522347,
