@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-16T04:47:59Z",
+  "updatedAt": "2026-09-16T11:31:07Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -144,7 +144,7 @@
         "updateTime": 1689693337,
         "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/t6_35523642.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1789513302,
+        "readUpdateTime": 1789547792,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -239,13 +239,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 87,
+        "readingProgress": 91,
         "markedStatus": 2,
-        "lastNoteSort": 1789511926,
+        "lastNoteSort": 1789546925,
         "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
         "updateTime": 1689693337,
         "finishReading": 0,
-        "readUpdateTime": 1789513302,
+        "readUpdateTime": 1789547792,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -1027,10 +1027,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 87,
-        "noteCount": 22,
+        "readingProgress": 91,
+        "noteCount": 24,
         "bookmarkCount": 0,
-        "sort": 1789511926
+        "sort": 1789546925
       },
       {
         "bookId": "3300106416",
@@ -1664,7 +1664,7 @@
       "1789228800": 3599,
       "1789315200": 342,
       "1789401600": 3478,
-      "1789488000": 2228
+      "1789488000": 3392
     },
     "readDays": 12,
     "readLongest": [
@@ -1716,7 +1716,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 17540,
+        "readTime": 18704,
         "tags": [
           "笔记最多",
           "单日阅读最久"
@@ -1805,14 +1805,14 @@
       },
       {
         "stat": "笔记",
-        "counts": "18条"
+        "counts": "20条"
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.1606418077689243,
-    "dayAverageReadTime": 1087,
+    "compare": -0.10448518426294822,
+    "dayAverageReadTime": 1160,
     "baseTime": 1788192000,
-    "totalReadTime": 17398,
+    "totalReadTime": 18562,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1972,7 +1972,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 124698
+      "1767196800": 125862
     },
     "readDays": 78,
     "readLongest": [
@@ -2024,7 +2024,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 25602,
+        "readTime": 26766,
         "tags": []
       },
       {
@@ -2494,7 +2494,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 7,
-        "readingTime": 55804
+        "readingTime": 56968
       },
       {
         "categoryId": 100001,
@@ -2502,7 +2502,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 4,
-        "readingTime": 42971
+        "readingTime": 44135
       },
       {
         "categoryId": 600000,
@@ -2592,7 +2592,7 @@
         "authorId": 394948,
         "name": "三岛由纪夫",
         "count": 1,
-        "readTime": "7小时6分钟"
+        "readTime": "7小时26分钟"
       },
       {
         "authorId": 522347,
@@ -2781,13 +2781,13 @@
       },
       {
         "stat": "笔记",
-        "counts": "162条"
+        "counts": "164条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 124711,
+    "totalReadTime": 125875,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3168,7 +3168,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6860人读过"
+        "reason": "仅有6867人读过"
       },
       {
         "type": 8,
@@ -3499,7 +3499,7 @@
         "1780243200": 10898,
         "1782835200": 12976,
         "1785513600": 40160,
-        "1788192000": 17398,
+        "1788192000": 18562,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
@@ -3555,7 +3555,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 25602,
+          "readTime": 26766,
           "tags": []
         },
         {
@@ -4285,13 +4285,13 @@
         },
         {
           "stat": "笔记",
-          "counts": "162条"
+          "counts": "164条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 481,
+      "dayAverageReadTime": 485,
       "baseTime": 1767196800,
-      "totalReadTime": 124698,
+      "totalReadTime": 125862,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -4492,8 +4492,30 @@
   "notesByBook": {
     "35523642": {
       "highlights": {
-        "synckey": 1789511926,
+        "synckey": 1789546925,
         "updated": [
+          {
+            "bookId": "35523642",
+            "chapterIdx": 51,
+            "bookmarkId": "35523642_108_1695-1732",
+            "range": "1695-1732",
+            "markText": "世上有这样一种人，他们精心培育鲜花的目的，就是为了盛开之后将花瓣撕得粉碎。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 108,
+            "createTime": 1789546925
+          },
+          {
+            "bookId": "35523642",
+            "chapterIdx": 50,
+            "bookmarkId": "35523642_107_3424-3489",
+            "range": "3424-3489",
+            "markText": "附近的靶场上传来箭镞离弦的响声，令人记起冬天里风的尖叫，与此相比，报告中靶的是迟滞的鼓音。清显感到，自己的心失掉了锐利箭矢的白羽。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 107,
+            "createTime": 1789546691
+          },
           {
             "bookId": "35523642",
             "chapterUid": 103,
@@ -4740,74 +4762,14 @@
         "removed": [],
         "chapters": [
           {
-            "title": "三十八",
-            "chapterUid": 97,
-            "chapterIdx": 40
+            "title": "四十八",
+            "chapterUid": 107,
+            "chapterIdx": 50
           },
           {
-            "title": "三十六",
-            "chapterUid": 95,
-            "chapterIdx": 38
-          },
-          {
-            "title": "三十四",
-            "chapterUid": 93,
-            "chapterIdx": 36
-          },
-          {
-            "title": "四十四",
-            "chapterUid": 103,
-            "chapterIdx": 46
-          },
-          {
-            "title": "三十一",
-            "chapterUid": 90,
-            "chapterIdx": 33
-          },
-          {
-            "title": "二十五",
-            "chapterUid": 84,
-            "chapterIdx": 27
-          },
-          {
-            "title": "八",
-            "chapterUid": 67,
-            "chapterIdx": 10
-          },
-          {
-            "title": "十九",
-            "chapterUid": 78,
-            "chapterIdx": 21
-          },
-          {
-            "title": "十",
-            "chapterUid": 69,
-            "chapterIdx": 12
-          },
-          {
-            "title": "十二",
-            "chapterUid": 71,
-            "chapterIdx": 14
-          },
-          {
-            "title": "四十三",
-            "chapterUid": 102,
-            "chapterIdx": 45
-          },
-          {
-            "title": "二十九",
-            "chapterUid": 88,
-            "chapterIdx": 31
-          },
-          {
-            "title": "十四",
-            "chapterUid": 73,
-            "chapterIdx": 16
-          },
-          {
-            "title": "二十二",
-            "chapterUid": 81,
-            "chapterIdx": 24
+            "title": "二十四",
+            "chapterUid": 83,
+            "chapterIdx": 26
           },
           {
             "title": "二十一",
@@ -4815,14 +4777,84 @@
             "chapterIdx": 23
           },
           {
+            "title": "二十二",
+            "chapterUid": 81,
+            "chapterIdx": 24
+          },
+          {
+            "title": "三十六",
+            "chapterUid": 95,
+            "chapterIdx": 38
+          },
+          {
+            "title": "十九",
+            "chapterUid": 78,
+            "chapterIdx": 21
+          },
+          {
+            "title": "四十九",
+            "chapterUid": 108,
+            "chapterIdx": 51
+          },
+          {
+            "title": "十四",
+            "chapterUid": 73,
+            "chapterIdx": 16
+          },
+          {
+            "title": "三十八",
+            "chapterUid": 97,
+            "chapterIdx": 40
+          },
+          {
+            "title": "四十三",
+            "chapterUid": 102,
+            "chapterIdx": 45
+          },
+          {
+            "title": "十",
+            "chapterUid": 69,
+            "chapterIdx": 12
+          },
+          {
+            "title": "八",
+            "chapterUid": 67,
+            "chapterIdx": 10
+          },
+          {
+            "title": "二十五",
+            "chapterUid": 84,
+            "chapterIdx": 27
+          },
+          {
             "title": "五",
             "chapterUid": 64,
             "chapterIdx": 7
           },
           {
-            "title": "二十四",
-            "chapterUid": 83,
-            "chapterIdx": 26
+            "title": "十二",
+            "chapterUid": 71,
+            "chapterIdx": 14
+          },
+          {
+            "title": "三十一",
+            "chapterUid": 90,
+            "chapterIdx": 33
+          },
+          {
+            "title": "三十四",
+            "chapterUid": 93,
+            "chapterIdx": 36
+          },
+          {
+            "title": "二十九",
+            "chapterUid": 88,
+            "chapterIdx": 31
+          },
+          {
+            "title": "四十四",
+            "chapterUid": 103,
+            "chapterIdx": 46
           }
         ],
         "book": {
