@@ -1,10 +1,29 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-09-16T07:46:48.293Z",
+  "updatedAt": "2026-09-17T07:49:44.387Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-09-16",
+        "title": "跑步",
+        "start": 1789551618765,
+        "durationMinutes": 54,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 292,
+        "distance": 4.51,
+        "movements": [
+          {
+            "name": "Running",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-09-15",
         "title": "肩 手臂",
@@ -161,10 +180,10 @@
       {
         "date": "2026-09-13",
         "title": "下肢A",
-        "start": 1789328310751,
+        "start": 1789586912953,
         "durationMinutes": 25,
-        "setCount": 24,
-        "volumeKg": 11241,
+        "setCount": 27,
+        "volumeKg": 12177,
         "calories": 0,
         "distance": 0,
         "movements": [
@@ -181,6 +200,13 @@
             "totalReps": 24,
             "volumeKg": 216,
             "maxWeightKg": 9
+          },
+          {
+            "name": "腿弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 936,
+            "maxWeightKg": 26
           },
           {
             "name": "坐姿腿屈伸",
@@ -16166,7 +16192,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-09-15"
+      "to": "2026-09-16"
     }
   },
   "body": {
