@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-17T16:59:24Z",
+  "updatedAt": "2026-09-17T21:21:26Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1665,7 +1665,8 @@
       "1789315200": 342,
       "1789401600": 3478,
       "1789488000": 3482,
-      "1789574400": 2470
+      "1789574400": 2470,
+      "1789660800": 41
     },
     "readDays": 13,
     "readLongest": [
@@ -1731,7 +1732,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 1,
-        "readingTime": 18794
+        "readingTime": 21264
       },
       {
         "categoryId": 100001,
@@ -1739,7 +1740,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "readingCount": 1,
-        "readingTime": 18794
+        "readingTime": 21264
       },
       {
         "categoryId": 1000000,
@@ -1810,10 +1811,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.09420374059318292,
-    "dayAverageReadTime": 1173,
+    "compare": -0.09244549579459945,
+    "dayAverageReadTime": 1175,
     "baseTime": 1788192000,
-    "totalReadTime": 21122,
+    "totalReadTime": 21163,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2021,7 +2022,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 128422
+      "1767196800": 128463
     },
     "readDays": 79,
     "readLongest": [
@@ -2614,8 +2615,8 @@
       0,
       2525,
       203,
-      67,
-      2653,
+      573,
+      4617,
       3195,
       3477,
       16599,
@@ -2836,7 +2837,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 128435,
+    "totalReadTime": 128476,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3548,7 +3549,7 @@
         "1780243200": 10898,
         "1782835200": 12976,
         "1785513600": 40160,
-        "1788192000": 21122,
+        "1788192000": 21163,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
@@ -4074,7 +4075,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 7,
-          "readingTime": 57058
+          "readingTime": 59528
         },
         {
           "categoryId": 100001,
@@ -4082,7 +4083,7 @@
           "parentCategoryId": 100000,
           "parentCategoryTitle": "精品小说",
           "readingCount": 4,
-          "readingTime": 44225
+          "readingTime": 46695
         },
         {
           "categoryId": 600000,
@@ -4145,7 +4146,7 @@
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 1,
-          "readTime": "7小时27分钟"
+          "readTime": "8小时8分钟"
         },
         {
           "authorId": 522347,
@@ -4340,7 +4341,7 @@
       "registTime": 1645667800,
       "dayAverageReadTime": 492,
       "baseTime": 1767196800,
-      "totalReadTime": 128422,
+      "totalReadTime": 128463,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
