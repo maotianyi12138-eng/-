@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-17T21:21:26Z",
+  "updatedAt": "2026-09-18T04:42:02Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -2894,7 +2894,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "最近阅读7小时"
+        "reason": "最近阅读8小时"
       },
       {
         "type": 0,
@@ -3218,7 +3218,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6907人读过"
+        "reason": "仅有6914人读过"
       },
       {
         "type": 8,
