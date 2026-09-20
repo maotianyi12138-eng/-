@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-20T16:04:40Z",
+  "updatedAt": "2026-09-20T20:48:16Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -27,7 +27,7 @@
         "updateTime": 1701228684,
         "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/t6_YueWen_35523636.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1789920096,
+        "readUpdateTime": 1789924465,
         "secret": 0,
         "category": "文学-经典作品"
       },
@@ -193,10 +193,64 @@
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
         "title": "丰饶之海（第二卷）：奔马",
         "author": "三岛由纪夫",
-        "updateTime": 1701228684,
+        "translator": "陈德文",
         "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/t6_YueWen_35523636.jpg",
+        "version": 1839042795,
+        "format": "epub",
+        "type": 0,
+        "price": 30.0,
+        "originalPrice": 0,
+        "soldout": 0,
+        "bookStatus": 1,
+        "payingStatus": 2,
+        "payType": 1048577,
+        "centPrice": 3000,
+        "categories": [
+          {
+            "categoryId": 300000,
+            "subCategoryId": 300004,
+            "categoryType": 0,
+            "title": "文学-经典作品"
+          }
+        ],
+        "hasLecture": 0,
+        "finished": 1,
+        "maxFreeChapter": 8,
+        "maxFreeInfo": {
+          "maxFreeChapterIdx": 8,
+          "maxFreeChapterUid": 50,
+          "maxFreeChapterRatio": 20
+        },
+        "free": 0,
+        "mcardDiscount": 0,
+        "ispub": 1,
+        "extra_type": 5,
+        "cpid": -2571052,
+        "publishTime": "2018-09-18 00:00:00",
+        "lastChapterIdx": 43,
+        "paperBook": {
+          "skuId": ""
+        },
+        "copyrightChapterUids": [
+          44
+        ],
+        "inStoreBookId": "",
+        "blockSaveImg": 0,
+        "language": "zh",
+        "isTraditionalChinese": false,
+        "hideUpdateTime": false,
+        "isEPUBComics": 0,
+        "isVerticalLayout": 0,
+        "isShowTTS": 1,
+        "webBookControl": 0,
+        "selfProduceIncentive": false,
+        "isAutoDownload": 1,
+        "readingProgress": 5,
+        "markedStatus": 2,
+        "lastNoteSort": 1789920598,
+        "updateTime": 1701228684,
         "finishReading": 0,
-        "readUpdateTime": 1789920096,
+        "readUpdateTime": 1789924465,
         "secret": 0,
         "category": "文学-经典作品"
       },
@@ -984,6 +1038,73 @@
   "notebooks": {
     "books": [
       {
+        "bookId": "35523636",
+        "book": {
+          "bookId": "35523636",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
+          "title": "丰饶之海（第二卷）：奔马",
+          "author": "三岛由纪夫",
+          "translator": "陈德文",
+          "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/t6_YueWen_35523636.jpg",
+          "version": 1839042795,
+          "format": "epub",
+          "type": 0,
+          "price": 30.0,
+          "originalPrice": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payingStatus": 2,
+          "payType": 1048577,
+          "centPrice": 3000,
+          "categories": [
+            {
+              "categoryId": 300000,
+              "subCategoryId": 300004,
+              "categoryType": 0,
+              "title": "文学-经典作品"
+            }
+          ],
+          "hasLecture": 0,
+          "finished": 1,
+          "maxFreeChapter": 8,
+          "maxFreeInfo": {
+            "maxFreeChapterIdx": 8,
+            "maxFreeChapterUid": 50,
+            "maxFreeChapterRatio": 20
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": -2571052,
+          "publishTime": "2018-09-18 00:00:00",
+          "lastChapterIdx": 43,
+          "paperBook": {
+            "skuId": ""
+          },
+          "copyrightChapterUids": [
+            44
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "webBookControl": 0,
+          "selfProduceIncentive": false,
+          "isAutoDownload": 1
+        },
+        "reviewCount": 0,
+        "markedStatus": 2,
+        "readingProgress": 5,
+        "noteCount": 2,
+        "bookmarkCount": 0,
+        "sort": 1789920598
+      },
+      {
         "bookId": "35523642",
         "book": {
           "bookId": "35523642",
@@ -1692,7 +1813,7 @@
       "1789574400": 2470,
       "1789660800": 41,
       "1789833600": 1363,
-      "1789920000": 96
+      "1789920000": 2005
     },
     "readDays": 15,
     "readLongest": [
@@ -1798,7 +1919,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 1501,
+        "readTime": 3410,
         "tags": []
       }
     ],
@@ -1809,7 +1930,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 2,
-        "readingTime": 21305
+        "readingTime": 22581
       },
       {
         "categoryId": 100001,
@@ -1884,14 +2005,14 @@
       },
       {
         "stat": "笔记",
-        "counts": "20条"
+        "counts": "22条"
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.16846660975147038,
-    "dayAverageReadTime": 1077,
+    "compare": -0.09829610130904956,
+    "dayAverageReadTime": 1168,
     "baseTime": 1788192000,
-    "totalReadTime": 22622,
+    "totalReadTime": 24531,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2099,7 +2220,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 129922
+      "1767196800": 131831
     },
     "readDays": 81,
     "readLongest": [
@@ -2621,7 +2742,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 8,
-        "readingTime": 59569
+        "readingTime": 60845
       },
       {
         "categoryId": 100001,
@@ -2648,6 +2769,14 @@
         "readingTime": 19300
       },
       {
+        "categoryId": 1100000,
+        "categoryTitle": "经济理财",
+        "parentCategoryId": 1100000,
+        "parentCategoryTitle": "经济理财",
+        "readingCount": 1,
+        "readingTime": 18052
+      },
+      {
         "categoryId": 1600000,
         "categoryTitle": "生活百科",
         "parentCategoryId": 1600000,
@@ -2670,14 +2799,6 @@
         "parentCategoryTitle": "历史",
         "readingCount": 0,
         "readingTime": 0
-      },
-      {
-        "categoryId": 1100000,
-        "categoryTitle": "经济理财",
-        "parentCategoryId": 1100000,
-        "parentCategoryTitle": "经济理财",
-        "readingCount": 0,
-        "readingTime": 0
       }
     ],
     "preferCategoryWord": "偏好阅读文学",
@@ -2695,8 +2816,8 @@
       573,
       4617,
       3195,
-      3477,
-      16599,
+      3828,
+      17524,
       6540,
       8807,
       6178,
@@ -2710,16 +2831,22 @@
     ],
     "preferAuthor": [
       {
+        "authorId": 394948,
+        "name": "三岛由纪夫",
+        "count": 2,
+        "readTime": "8小时30分钟"
+      },
+      {
         "authorId": 222757,
         "name": "约翰·斯坦贝克",
         "count": 2,
         "readTime": "2小时29分钟"
       },
       {
-        "authorId": 394948,
-        "name": "三岛由纪夫",
+        "authorId": 522347,
+        "name": "丹·沙利文",
         "count": 1,
-        "readTime": "8小时8分钟"
+        "readTime": "5小时"
       },
       {
         "authorId": 294931,
@@ -2764,7 +2891,7 @@
         "readTime": "16分钟"
       }
     ],
-    "authorCount": 9,
+    "authorCount": 10,
     "preferCp": [
       {
         "count": 3,
@@ -2774,6 +2901,16 @@
           "role": 2,
           "avatar": "https://res.weread.qq.com/wravatar/WV0021-Lwot73JgkLO_EghtiM3Cyd9/0",
           "cpType": 1
+        }
+      },
+      {
+        "count": 2,
+        "copyrightInfo": {
+          "name": "人民文学出版社有限公司",
+          "userVid": 136179393,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
+          "cpType": 0
         }
       },
       {
@@ -2789,10 +2926,10 @@
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "森绮梵川",
-          "userVid": 0,
-          "role": 0,
-          "avatar": "",
+          "name": "湛庐CHEERS",
+          "userVid": 341281594,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0011-ZlyTRc7hpfLYxdG7URz2m10/0",
           "cpType": 0
         }
       },
@@ -2803,16 +2940,6 @@
           "userVid": 168010251,
           "role": 2,
           "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
-          "cpType": 0
-        }
-      },
-      {
-        "count": 1,
-        "copyrightInfo": {
-          "name": "人民文学出版社有限公司",
-          "userVid": 136179393,
-          "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
           "cpType": 0
         }
       },
@@ -2859,6 +2986,10 @@
     ],
     "preferPublisher": [
       {
+        "name": "人民文学出版社",
+        "count": 2
+      },
+      {
         "name": "上海译文出版社",
         "count": 1
       },
@@ -2871,11 +3002,11 @@
         "count": 1
       },
       {
-        "name": "中信出版集团",
+        "name": "浙江科学技术出版社",
         "count": 1
       },
       {
-        "name": "人民文学出版社",
+        "name": "中信出版集团",
         "count": 1
       },
       {
@@ -2898,13 +3029,13 @@
       },
       {
         "stat": "笔记",
-        "counts": "164条"
+        "counts": "166条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 129935,
+    "totalReadTime": 131844,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3285,7 +3416,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6976人读过"
+        "reason": "仅有6980人读过"
       },
       {
         "type": 8,
@@ -3616,7 +3747,7 @@
         "1780243200": 10898,
         "1782835200": 12976,
         "1785513600": 40160,
-        "1788192000": 22622,
+        "1788192000": 24531,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
@@ -4142,7 +4273,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 8,
-          "readingTime": 59569
+          "readingTime": 60845
         },
         {
           "categoryId": 100001,
@@ -4169,6 +4300,14 @@
           "readingTime": 19300
         },
         {
+          "categoryId": 1100000,
+          "categoryTitle": "经济理财",
+          "parentCategoryId": 1100000,
+          "parentCategoryTitle": "经济理财",
+          "readingCount": 1,
+          "readingTime": 18052
+        },
+        {
           "categoryId": 1600000,
           "categoryTitle": "生活百科",
           "parentCategoryId": 1600000,
@@ -4191,18 +4330,16 @@
           "parentCategoryTitle": "历史",
           "readingCount": 0,
           "readingTime": 0
-        },
-        {
-          "categoryId": 1100000,
-          "categoryTitle": "经济理财",
-          "parentCategoryId": 1100000,
-          "parentCategoryTitle": "经济理财",
-          "readingCount": 0,
-          "readingTime": 0
         }
       ],
       "preferCategoryWord": "偏好阅读文学",
       "preferAuthor": [
+        {
+          "authorId": 394948,
+          "name": "三岛由纪夫",
+          "count": 2,
+          "readTime": "8小时30分钟"
+        },
         {
           "authorId": 222757,
           "name": "约翰·斯坦贝克",
@@ -4210,10 +4347,10 @@
           "readTime": "2小时29分钟"
         },
         {
-          "authorId": 394948,
-          "name": "三岛由纪夫",
+          "authorId": 522347,
+          "name": "丹·沙利文",
           "count": 1,
-          "readTime": "8小时8分钟"
+          "readTime": "5小时"
         },
         {
           "authorId": 294931,
@@ -4258,7 +4395,7 @@
           "readTime": "16分钟"
         }
       ],
-      "authorCount": 9,
+      "authorCount": 10,
       "preferCp": [
         {
           "count": 3,
@@ -4271,32 +4408,22 @@
           }
         },
         {
+          "count": 2,
+          "copyrightInfo": {
+            "name": "人民文学出版社有限公司",
+            "userVid": 136179393,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
+            "cpType": 0
+          }
+        },
+        {
           "count": 1,
           "copyrightInfo": {
             "name": "果麦文化",
             "userVid": 290625916,
             "role": 2,
             "avatar": "https://res.weread.qq.com/wravatar/WV0002-ewckDJVkN2UQIDFW8MxCdf1/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
-            "name": "中信出版集团",
-            "userVid": 168010251,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
-            "name": "森绮梵川",
-            "userVid": 0,
-            "role": 0,
-            "avatar": "",
             "cpType": 0
           }
         },
@@ -4313,10 +4440,20 @@
         {
           "count": 1,
           "copyrightInfo": {
-            "name": "人民文学出版社有限公司",
-            "userVid": 136179393,
+            "name": "湛庐CHEERS",
+            "userVid": 341281594,
             "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
+            "avatar": "https://res.weread.qq.com/wravatar/WV0011-ZlyTRc7hpfLYxdG7URz2m10/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "中信出版集团",
+            "userVid": 168010251,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
             "cpType": 0
           }
         },
@@ -4353,15 +4490,19 @@
       ],
       "preferPublisher": [
         {
+          "name": "人民文学出版社",
+          "count": 2
+        },
+        {
           "name": "北京科学技术出版社有限公司",
           "count": 1
         },
         {
-          "name": "人民文学出版社",
+          "name": "中信出版集团",
           "count": 1
         },
         {
-          "name": "中信出版集团",
+          "name": "浙江科学技术出版社",
           "count": 1
         },
         {
@@ -4392,13 +4533,13 @@
         },
         {
           "stat": "笔记",
-          "counts": "164条"
+          "counts": "166条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 492,
+      "dayAverageReadTime": 499,
       "baseTime": 1767196800,
-      "totalReadTime": 129922,
+      "totalReadTime": 131831,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -4599,10 +4740,39 @@
   "notesByBook": {
     "35523636": {
       "highlights": {
-        "synckey": 1789902084,
-        "updated": [],
+        "synckey": 1789920598,
+        "updated": [
+          {
+            "bookId": "35523636",
+            "chapterIdx": 5,
+            "bookmarkId": "35523636_47_2208-2233",
+            "range": "2208-2233",
+            "markText": "今天因为下雨，运动场犹如死光了鸡的鸡舍，悄无声息。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 47,
+            "createTime": 1789920598
+          },
+          {
+            "bookId": "35523636",
+            "chapterIdx": 5,
+            "bookmarkId": "35523636_47_700-759",
+            "range": "700-759",
+            "markText": "对那些从浩瀚的恶劣的大海上奔涌而来的波涛，沙滩一次次将它们屏退，押回原来的死亡和悔恨的领域。\n",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 47,
+            "createTime": 1789920290
+          }
+        ],
         "removed": [],
-        "chapters": [],
+        "chapters": [
+          {
+            "title": "三",
+            "chapterUid": 47,
+            "chapterIdx": 5
+          }
+        ],
         "book": {
           "bookId": "35523636",
           "version": 1839042795,
