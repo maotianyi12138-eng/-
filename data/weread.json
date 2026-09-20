@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-20T11:21:51Z",
+  "updatedAt": "2026-09-20T16:04:40Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -27,7 +27,7 @@
         "updateTime": 1701228684,
         "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/t6_YueWen_35523636.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1789902995,
+        "readUpdateTime": 1789920096,
         "secret": 0,
         "category": "文学-经典作品"
       },
@@ -196,7 +196,7 @@
         "updateTime": 1701228684,
         "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/t6_YueWen_35523636.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1789902995,
+        "readUpdateTime": 1789920096,
         "secret": 0,
         "category": "文学-经典作品"
       },
@@ -1691,10 +1691,10 @@
       "1789488000": 3482,
       "1789574400": 2470,
       "1789660800": 41,
-      "1789747200": 0,
-      "1789833600": 1276
+      "1789833600": 1363,
+      "1789920000": 96
     },
-    "readDays": 14,
+    "readDays": 15,
     "readLongest": [
       {
         "book": {
@@ -1798,7 +1798,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 1317,
+        "readTime": 1501,
         "tags": []
       }
     ],
@@ -1880,7 +1880,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "14天"
+        "counts": "15天"
       },
       {
         "stat": "笔记",
@@ -1888,10 +1888,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.13395293824701194,
-    "dayAverageReadTime": 1121,
+    "compare": -0.16846660975147038,
+    "dayAverageReadTime": 1077,
     "baseTime": 1788192000,
-    "totalReadTime": 22439,
+    "totalReadTime": 22622,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2099,9 +2099,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 129739
+      "1767196800": 129922
     },
-    "readDays": 80,
+    "readDays": 81,
     "readLongest": [
       {
         "book": {
@@ -2894,7 +2894,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "80天"
+        "counts": "81天"
       },
       {
         "stat": "笔记",
@@ -2904,7 +2904,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 129752,
+    "totalReadTime": 129935,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3285,7 +3285,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6967人读过"
+        "reason": "仅有6976人读过"
       },
       {
         "type": 8,
@@ -3616,12 +3616,12 @@
         "1780243200": 10898,
         "1782835200": 12976,
         "1785513600": 40160,
-        "1788192000": 22439,
+        "1788192000": 22622,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 78,
+      "readDays": 79,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -4388,7 +4388,7 @@
         },
         {
           "stat": "阅读",
-          "counts": "78天"
+          "counts": "79天"
         },
         {
           "stat": "笔记",
@@ -4396,9 +4396,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 493,
+      "dayAverageReadTime": 492,
       "baseTime": 1767196800,
-      "totalReadTime": 129739,
+      "totalReadTime": 129922,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
