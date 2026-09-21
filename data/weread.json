@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-21T12:46:19Z",
+  "updatedAt": "2026-09-21T21:58:17Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -27,7 +27,7 @@
         "updateTime": 1701228684,
         "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/t6_YueWen_35523636.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1789924465,
+        "readUpdateTime": 1790004992,
         "secret": 0,
         "category": "文学-经典作品"
       },
@@ -245,12 +245,12 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 5,
+        "readingProgress": 7,
         "markedStatus": 2,
         "lastNoteSort": 1789920598,
         "updateTime": 1701228684,
         "finishReading": 0,
-        "readUpdateTime": 1789924465,
+        "readUpdateTime": 1790004992,
         "secret": 0,
         "category": "文学-经典作品"
       },
@@ -1099,7 +1099,7 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 5,
+        "readingProgress": 7,
         "noteCount": 2,
         "bookmarkCount": 0,
         "sort": 1789920598
@@ -1813,7 +1813,7 @@
       "1789574400": 2470,
       "1789660800": 41,
       "1789833600": 1363,
-      "1789920000": 2005
+      "1789920000": 2835
     },
     "readDays": 15,
     "readLongest": [
@@ -1919,7 +1919,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 3410,
+        "readTime": 4240,
         "tags": []
       }
     ],
@@ -1930,7 +1930,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 2,
-        "readingTime": 22581
+        "readingTime": 25504
       },
       {
         "categoryId": 100001,
@@ -2009,10 +2009,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.09829610130904956,
-    "dayAverageReadTime": 1168,
+    "compare": -0.11016049438609202,
+    "dayAverageReadTime": 1152,
     "baseTime": 1788192000,
-    "totalReadTime": 24531,
+    "totalReadTime": 25361,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2220,7 +2220,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 131831
+      "1767196800": 132661
     },
     "readDays": 81,
     "readLongest": [
@@ -2742,7 +2742,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 8,
-        "readingTime": 60845
+        "readingTime": 63768
       },
       {
         "categoryId": 100001,
@@ -2819,11 +2819,11 @@
       3828,
       17524,
       6540,
-      8807,
-      6178,
-      13636,
-      12272,
-      8758,
+      9332,
+      6382,
+      13737,
+      14349,
+      8774,
       6549,
       6931,
       5908,
@@ -2834,7 +2834,7 @@
         "authorId": 394948,
         "name": "三岛由纪夫",
         "count": 2,
-        "readTime": "8小时30分钟"
+        "readTime": "9小时19分钟"
       },
       {
         "authorId": 222757,
@@ -3035,7 +3035,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 131844,
+    "totalReadTime": 132674,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3416,7 +3416,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有6996人读过"
+        "reason": "仅有7002人读过"
       },
       {
         "type": 8,
@@ -3747,7 +3747,7 @@
         "1780243200": 10898,
         "1782835200": 12976,
         "1785513600": 40160,
-        "1788192000": 24531,
+        "1788192000": 25361,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
@@ -4273,7 +4273,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 8,
-          "readingTime": 60845
+          "readingTime": 63768
         },
         {
           "categoryId": 100001,
@@ -4338,7 +4338,7 @@
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 2,
-          "readTime": "8小时30分钟"
+          "readTime": "9小时19分钟"
         },
         {
           "authorId": 222757,
@@ -4537,9 +4537,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 499,
+      "dayAverageReadTime": 500,
       "baseTime": 1767196800,
-      "totalReadTime": 131831,
+      "totalReadTime": 132661,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
