@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-23T11:34:19Z",
+  "updatedAt": "2026-09-23T16:57:02Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -27,7 +27,7 @@
         "updateTime": 1701228684,
         "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/t6_YueWen_35523636.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1790004992,
+        "readUpdateTime": 1790181941,
         "secret": 0,
         "category": "文学-经典作品"
       },
@@ -217,9 +217,9 @@
         "finished": 1,
         "maxFreeChapter": 8,
         "maxFreeInfo": {
-          "maxFreeChapterIdx": 8,
-          "maxFreeChapterUid": 50,
-          "maxFreeChapterRatio": 20
+          "maxfreeChapterIdx": 8,
+          "maxfreeChapterUid": 50,
+          "maxfreeChapterRatio": 20
         },
         "free": 0,
         "mcardDiscount": 0,
@@ -245,12 +245,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 7,
+        "readingProgress": 14,
         "markedStatus": 2,
         "lastNoteSort": 1789920598,
+        "intro": "《丰饶之海》四部曲的第二部。在清显去世的十八年后，昭和七年本多繁邦满年满三十八岁，已经当上大阪控诉院法官。他在三轮山的三光瀑布遇到了由清显转生的饭沼勋，这时的阿勋深受《神风连史话》的影响，义无反顾地效忠已趋衰落的皇室，准备谋刺杀当时财经界的领袖，本多曾写了一封长信给勋，告诉他“《神风连史话》是一个已经结束的悲剧。”",
         "updateTime": 1701228684,
         "finishReading": 0,
-        "readUpdateTime": 1790004992,
+        "readUpdateTime": 1790181941,
         "secret": 0,
         "category": "文学-经典作品"
       },
@@ -1099,7 +1100,7 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 7,
+        "readingProgress": 14,
         "noteCount": 2,
         "bookmarkCount": 0,
         "sort": 1789920598
@@ -1813,9 +1814,12 @@
       "1789574400": 2470,
       "1789660800": 41,
       "1789833600": 1363,
-      "1789920000": 2835
+      "1789920000": 2835,
+      "1790006400": 163,
+      "1790092800": 307,
+      "1790179200": 946
     },
-    "readDays": 15,
+    "readDays": 18,
     "readLongest": [
       {
         "book": {
@@ -1919,7 +1923,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 4240,
+        "readTime": 5656,
         "tags": []
       }
     ],
@@ -2001,7 +2005,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "15天"
+        "counts": "18天"
       },
       {
         "stat": "笔记",
@@ -2009,10 +2013,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.14884916854321846,
-    "dayAverageReadTime": 1102,
+    "compare": -0.13877095783532546,
+    "dayAverageReadTime": 1115,
     "baseTime": 1788192000,
-    "totalReadTime": 25361,
+    "totalReadTime": 26777,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2220,9 +2224,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 132661
+      "1767196800": 134077
     },
-    "readDays": 81,
+    "readDays": 84,
     "readLongest": [
       {
         "book": {
@@ -2635,6 +2639,57 @@
       },
       {
         "book": {
+          "bookId": "35523636",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
+          "title": "丰饶之海（第二卷）：奔马",
+          "author": "三岛由纪夫",
+          "translator": "陈德文",
+          "intro": "《丰饶之海》四部曲的第二部。在清显去世的十八年后，昭和七年本多繁邦满年满三十八岁，已经当上大阪控诉院法官。他在三轮山的三光瀑布遇到了由清显转生的饭沼勋，这时的阿勋深受《神风连史话》的影响，义无反顾地效忠已趋衰落的皇室，准备谋刺杀当时财经界的领袖，本多曾写了一封长信给勋，告诉他“《神风连史话》是一个已经结束的悲剧。”",
+          "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/s_YueWen_35523636.jpg",
+          "version": 1839042795,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 8,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 8,
+            "maxfreeChapterUid": 50,
+            "maxfreeChapterRatio": 20
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": -2571052,
+          "publishTime": "2018-09-18 00:00:00",
+          "lastChapterIdx": 43,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 3000,
+          "copyrightChapterUids": [
+            44
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 5656,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=55a42743643425f337961426d49305557414a5036715737314e306e664537763c4",
           "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
@@ -2682,57 +2737,6 @@
         },
         "readTime": 5038,
         "tags": []
-      },
-      {
-        "book": {
-          "bookId": "3300043405",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=3c632e90813ab7774g015d62",
-          "title": "罐头厂街",
-          "author": "约翰·斯坦贝克",
-          "translator": "李家珅 钱凯娜 魏艳艳",
-          "intro": "《罐头厂街》（Cannery Row）首次出版于1945年。本书描写了大萧条时期美国加利福尼亚州蒙特雷市一条被称为“罐头厂街”的海边街道上的故事。这里因当时建有多家沙丁鱼罐头加工厂而得名。书中所写的实际地点是蒙特雷市的海景大道，这里后来被重新命名为“罐头厂街”以纪念此书。约翰·斯坦贝克在本书中的创作取材于他对加州蒙特雷真实居民的记忆，他将一众小人物们在这个残酷世界中生活的故事编织在一起，创造了这部含着幽默与辛酸的作品。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/89/cpPlatform_k1Eud7zDEcjzyUHn7KPLzy/s_cpPlatform_k1Eud7zDEcjzyUHn7KPLzy.jpg",
-          "version": 1086045397,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 7,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 7,
-            "maxfreeChapterUid": 42,
-            "maxfreeChapterRatio": 36
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 2684482,
-          "publishTime": "2022-12-18 00:00:00",
-          "lastChapterIdx": 36,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 899,
-          "copyrightChapterUids": [
-            37
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 4916,
-        "tags": []
       }
     ],
     "preferCategory": [
@@ -2742,7 +2746,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 8,
-        "readingTime": 63768
+        "readingTime": 65184
       },
       {
         "categoryId": 100001,
@@ -2834,7 +2838,7 @@
         "authorId": 394948,
         "name": "三岛由纪夫",
         "count": 2,
-        "readTime": "9小时19分钟"
+        "readTime": "9小时43分钟"
       },
       {
         "authorId": 222757,
@@ -3025,7 +3029,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "81天"
+        "counts": "84天"
       },
       {
         "stat": "笔记",
@@ -3035,7 +3039,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 132674,
+    "totalReadTime": 134090,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3416,7 +3420,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7052人读过"
+        "reason": "仅有7056人读过"
       },
       {
         "type": 8,
@@ -3747,12 +3751,12 @@
         "1780243200": 10898,
         "1782835200": 12976,
         "1785513600": 40160,
-        "1788192000": 25361,
+        "1788192000": 26777,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 79,
+      "readDays": 82,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -4166,6 +4170,57 @@
         },
         {
           "book": {
+            "bookId": "35523636",
+            "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
+            "title": "丰饶之海（第二卷）：奔马",
+            "author": "三岛由纪夫",
+            "translator": "陈德文",
+            "intro": "《丰饶之海》四部曲的第二部。在清显去世的十八年后，昭和七年本多繁邦满年满三十八岁，已经当上大阪控诉院法官。他在三轮山的三光瀑布遇到了由清显转生的饭沼勋，这时的阿勋深受《神风连史话》的影响，义无反顾地效忠已趋衰落的皇室，准备谋刺杀当时财经界的领袖，本多曾写了一封长信给勋，告诉他“《神风连史话》是一个已经结束的悲剧。”",
+            "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/s_YueWen_35523636.jpg",
+            "version": 1839042795,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 1048577,
+            "finished": 1,
+            "maxFreeChapter": 8,
+            "maxFreeInfo": {
+              "maxfreeChapterIdx": 8,
+              "maxfreeChapterUid": 50,
+              "maxfreeChapterRatio": 20
+            },
+            "free": 0,
+            "mcardDiscount": 0,
+            "ispub": 1,
+            "extra_type": 5,
+            "cpid": -2571052,
+            "publishTime": "2018-09-18 00:00:00",
+            "lastChapterIdx": 43,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 3000,
+            "copyrightChapterUids": [
+              44
+            ],
+            "inStoreBookId": "",
+            "blockSaveImg": 0,
+            "language": "zh",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 5656,
+          "tags": []
+        },
+        {
+          "book": {
             "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=55a42743643425f337961426d49305557414a5036715737314e306e664537763c4",
             "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
@@ -4212,57 +4267,6 @@
             "isAutoDownload": 1
           },
           "readTime": 5038,
-          "tags": []
-        },
-        {
-          "book": {
-            "bookId": "3300043405",
-            "deepLink": "https://weread.qq.com/book-detail?type=1&v=3c632e90813ab7774g015d62",
-            "title": "罐头厂街",
-            "author": "约翰·斯坦贝克",
-            "translator": "李家珅 钱凯娜 魏艳艳",
-            "intro": "《罐头厂街》（Cannery Row）首次出版于1945年。本书描写了大萧条时期美国加利福尼亚州蒙特雷市一条被称为“罐头厂街”的海边街道上的故事。这里因当时建有多家沙丁鱼罐头加工厂而得名。书中所写的实际地点是蒙特雷市的海景大道，这里后来被重新命名为“罐头厂街”以纪念此书。约翰·斯坦贝克在本书中的创作取材于他对加州蒙特雷真实居民的记忆，他将一众小人物们在这个残酷世界中生活的故事编织在一起，创造了这部含着幽默与辛酸的作品。",
-            "cover": "https://cdn.weread.qq.com/weread/cover/89/cpPlatform_k1Eud7zDEcjzyUHn7KPLzy/s_cpPlatform_k1Eud7zDEcjzyUHn7KPLzy.jpg",
-            "version": 1086045397,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 4097,
-            "finished": 1,
-            "maxFreeChapter": 7,
-            "maxFreeInfo": {
-              "maxfreeChapterIdx": 7,
-              "maxfreeChapterUid": 42,
-              "maxfreeChapterRatio": 36
-            },
-            "free": 0,
-            "mcardDiscount": 0,
-            "ispub": 1,
-            "extra_type": 5,
-            "cpid": 2684482,
-            "publishTime": "2022-12-18 00:00:00",
-            "lastChapterIdx": 36,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 899,
-            "copyrightChapterUids": [
-              37
-            ],
-            "inStoreBookId": "",
-            "blockSaveImg": 0,
-            "language": "zh-wr",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 4916,
           "tags": []
         }
       ],
@@ -4529,7 +4533,7 @@
         },
         {
           "stat": "阅读",
-          "counts": "79天"
+          "counts": "82天"
         },
         {
           "stat": "笔记",
@@ -4537,9 +4541,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 498,
+      "dayAverageReadTime": 502,
       "baseTime": 1767196800,
-      "totalReadTime": 132661,
+      "totalReadTime": 134077,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
