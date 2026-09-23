@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-23T16:57:02Z",
+  "updatedAt": "2026-09-23T21:29:43Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1934,7 +1934,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 2,
-        "readingTime": 25504
+        "readingTime": 25974
       },
       {
         "categoryId": 100001,
@@ -2822,7 +2822,7 @@
       3195,
       3828,
       17524,
-      6540,
+      7010,
       9332,
       6382,
       13737,
@@ -3420,7 +3420,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7056人读过"
+        "reason": "仅有7058人读过"
       },
       {
         "type": 8,
@@ -4277,7 +4277,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 8,
-          "readingTime": 63768
+          "readingTime": 64238
         },
         {
           "categoryId": 100001,
@@ -4342,7 +4342,7 @@
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 2,
-          "readTime": "9小时19分钟"
+          "readTime": "9小时27分钟"
         },
         {
           "authorId": 222757,
