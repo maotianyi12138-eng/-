@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-24T04:48:47Z",
+  "updatedAt": "2026-09-24T11:44:14Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -27,7 +27,7 @@
         "updateTime": 1701228684,
         "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/t6_YueWen_35523636.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1790181941,
+        "readUpdateTime": 1790238628,
         "secret": 0,
         "category": "文学-经典作品"
       },
@@ -245,13 +245,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 14,
+        "readingProgress": 27,
         "markedStatus": 2,
-        "lastNoteSort": 1789920598,
+        "lastNoteSort": 1790237544,
         "intro": "《丰饶之海》四部曲的第二部。在清显去世的十八年后，昭和七年本多繁邦满年满三十八岁，已经当上大阪控诉院法官。他在三轮山的三光瀑布遇到了由清显转生的饭沼勋，这时的阿勋深受《神风连史话》的影响，义无反顾地效忠已趋衰落的皇室，准备谋刺杀当时财经界的领袖，本多曾写了一封长信给勋，告诉他“《神风连史话》是一个已经结束的悲剧。”",
         "updateTime": 1701228684,
         "finishReading": 0,
-        "readUpdateTime": 1790181941,
+        "readUpdateTime": 1790238628,
         "secret": 0,
         "category": "文学-经典作品"
       },
@@ -1100,10 +1100,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 14,
-        "noteCount": 2,
+        "readingProgress": 27,
+        "noteCount": 6,
         "bookmarkCount": 0,
-        "sort": 1789920598
+        "sort": 1790237544
       },
       {
         "bookId": "35523642",
@@ -1817,7 +1817,7 @@
       "1789920000": 2835,
       "1790006400": 163,
       "1790092800": 307,
-      "1790179200": 946
+      "1790179200": 2174
     },
     "readDays": 18,
     "readLongest": [
@@ -1923,7 +1923,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 5656,
+        "readTime": 6884,
         "tags": []
       }
     ],
@@ -2009,14 +2009,14 @@
       },
       {
         "stat": "笔记",
-        "counts": "22条"
+        "counts": "26条"
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.13877095783532546,
-    "dayAverageReadTime": 1115,
+    "compare": -0.09927477589641436,
+    "dayAverageReadTime": 1166,
     "baseTime": 1788192000,
-    "totalReadTime": 26777,
+    "totalReadTime": 28005,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2224,7 +2224,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 134077
+      "1767196800": 135305
     },
     "readDays": 84,
     "readLongest": [
@@ -2685,7 +2685,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 5656,
+        "readTime": 6884,
         "tags": []
       },
       {
@@ -2746,7 +2746,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 8,
-        "readingTime": 65184
+        "readingTime": 66412
       },
       {
         "categoryId": 100001,
@@ -2838,7 +2838,7 @@
         "authorId": 394948,
         "name": "三岛由纪夫",
         "count": 2,
-        "readTime": "9小时43分钟"
+        "readTime": "10小时3分钟"
       },
       {
         "authorId": 222757,
@@ -3033,13 +3033,13 @@
       },
       {
         "stat": "笔记",
-        "counts": "166条"
+        "counts": "170条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 134090,
+    "totalReadTime": 135318,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3420,7 +3420,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7072人读过"
+        "reason": "仅有7080人读过"
       },
       {
         "type": 8,
@@ -3751,7 +3751,7 @@
         "1780243200": 10898,
         "1782835200": 12976,
         "1785513600": 40160,
-        "1788192000": 26777,
+        "1788192000": 28005,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
@@ -4216,7 +4216,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 5656,
+          "readTime": 6884,
           "tags": []
         },
         {
@@ -4537,13 +4537,13 @@
         },
         {
           "stat": "笔记",
-          "counts": "166条"
+          "counts": "170条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 502,
+      "dayAverageReadTime": 506,
       "baseTime": 1767196800,
-      "totalReadTime": 134077,
+      "totalReadTime": 135305,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -4744,8 +4744,52 @@
   "notesByBook": {
     "35523636": {
       "highlights": {
-        "synckey": 1789920598,
+        "synckey": 1790237544,
         "updated": [
+          {
+            "bookId": "35523636",
+            "chapterIdx": 12,
+            "bookmarkId": "35523636_54_1266-1358",
+            "range": "1266-1358",
+            "markText": "如果用心寻找，“不协调”的东西随处可见。而且，我的嘲笑未必充满恶意，可以说，嘲笑本身包含着一种厚意和肯定。为什么呢？因为我已经开始认识到，所谓热情就是对这种不协调缺乏自我认识才产生的。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 54,
+            "createTime": 1790237544
+          },
+          {
+            "bookId": "35523636",
+            "chapterIdx": 12,
+            "bookmarkId": "35523636_54_1199-1256",
+            "range": "1199-1256",
+            "markText": "因而，每当看到他人的热情，就能尽早发现那种热情多么不协调，以及同自身之间微妙的龃龉，从而泛起保护自身的轻轻的嘲笑。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 54,
+            "createTime": 1790237488
+          },
+          {
+            "bookId": "35523636",
+            "chapterIdx": 11,
+            "bookmarkId": "35523636_53_11564-11617",
+            "range": "11564-11617",
+            "markText": "他的手掌犹如砍削的带有凹陷的杉木板，握住一团清净的空气，再加以压挤，粉碎，于瞬间里令人感知一种爆炸的神气。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 53,
+            "createTime": 1790236962
+          },
+          {
+            "bookId": "35523636",
+            "chapterIdx": 10,
+            "bookmarkId": "35523636_52_3478-3569",
+            "range": "3478-3569",
+            "markText": "本多从勋有力的语调里，觉察出这个年龄的少年所具有的特征，亦即区分不清自己和他人所受感动的质的区别，正如纹理粗疏的蓝印花布，不论到哪里都是同一种花型。本多看到这样的精神世界，很是羡慕。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 52,
+            "createTime": 1790236813
+          },
           {
             "bookId": "35523636",
             "chapterIdx": 5,
@@ -4771,6 +4815,21 @@
         ],
         "removed": [],
         "chapters": [
+          {
+            "title": "十",
+            "chapterUid": 54,
+            "chapterIdx": 12
+          },
+          {
+            "title": "九",
+            "chapterUid": 53,
+            "chapterIdx": 11
+          },
+          {
+            "title": "八",
+            "chapterUid": 52,
+            "chapterIdx": 10
+          },
           {
             "title": "三",
             "chapterUid": 47,
