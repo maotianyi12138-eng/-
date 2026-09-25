@@ -1,10 +1,57 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-09-24T07:41:06.745Z",
+  "updatedAt": "2026-09-25T07:59:05.153Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-09-22",
+        "title": "胸",
+        "start": 1790165909575,
+        "durationMinutes": 1,
+        "setCount": 15,
+        "volumeKg": 5055.7,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "上斜杠铃卧推",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 2160,
+            "maxWeightKg": 60
+          },
+          {
+            "name": "器械推胸",
+            "setCount": 3,
+            "totalReps": 30,
+            "volumeKg": 1290,
+            "maxWeightKg": 43
+          },
+          {
+            "name": "蝴蝶机飞鸟",
+            "setCount": 3,
+            "totalReps": 30,
+            "volumeKg": 585.1,
+            "maxWeightKg": 19.5
+          },
+          {
+            "name": "直杆绳索下压",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 734.8,
+            "maxWeightKg": 20.4
+          },
+          {
+            "name": "绳索臂屈伸（单）",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 285.8,
+            "maxWeightKg": 7.9
+          }
+        ]
+      },
       {
         "date": "2026-09-18",
         "title": "下肢B",
@@ -16205,7 +16252,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-09-18"
+      "to": "2026-09-22"
     }
   },
   "body": {
