@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-09-26T11:23:39Z",
+  "updatedAt": "2026-09-26T16:23:05Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -27,7 +27,7 @@
         "updateTime": 1701228684,
         "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/t6_YueWen_35523636.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1790419911,
+        "readUpdateTime": 1790432374,
         "secret": 0,
         "category": "文学-经典作品"
       },
@@ -251,7 +251,7 @@
         "intro": "《丰饶之海》四部曲的第二部。在清显去世的十八年后，昭和七年本多繁邦满年满三十八岁，已经当上大阪控诉院法官。他在三轮山的三光瀑布遇到了由清显转生的饭沼勋，这时的阿勋深受《神风连史话》的影响，义无反顾地效忠已趋衰落的皇室，准备谋刺杀当时财经界的领袖，本多曾写了一封长信给勋，告诉他“《神风连史话》是一个已经结束的悲剧。”",
         "updateTime": 1701228684,
         "finishReading": 0,
-        "readUpdateTime": 1790419911,
+        "readUpdateTime": 1790432374,
         "secret": 0,
         "category": "文学-经典作品"
       },
@@ -1819,7 +1819,7 @@
       "1790092800": 307,
       "1790179200": 2174,
       "1790265600": 0,
-      "1790352000": 625
+      "1790352000": 634
     },
     "readDays": 19,
     "readLongest": [
@@ -1925,7 +1925,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 7509,
+        "readTime": 7518,
         "tags": []
       }
     ],
@@ -2015,10 +2015,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.15000574624578609,
-    "dayAverageReadTime": 1101,
+    "compare": -0.1812297107864837,
+    "dayAverageReadTime": 1060,
     "baseTime": 1788192000,
-    "totalReadTime": 28630,
+    "totalReadTime": 28639,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2226,7 +2226,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 135930
+      "1767196800": 135939
     },
     "readDays": 85,
     "readLongest": [
@@ -2687,7 +2687,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 7509,
+        "readTime": 7518,
         "tags": []
       },
       {
@@ -2748,7 +2748,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 8,
-        "readingTime": 67037
+        "readingTime": 67046
       },
       {
         "categoryId": 100001,
@@ -2840,7 +2840,7 @@
         "authorId": 394948,
         "name": "三岛由纪夫",
         "count": 2,
-        "readTime": "10小时13分钟"
+        "readTime": "10小时14分钟"
       },
       {
         "authorId": 222757,
@@ -3041,7 +3041,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 135943,
+    "totalReadTime": 135952,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3422,7 +3422,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7116人读过"
+        "reason": "仅有7125人读过"
       },
       {
         "type": 8,
@@ -3753,7 +3753,7 @@
         "1780243200": 10898,
         "1782835200": 12976,
         "1785513600": 40160,
-        "1788192000": 28630,
+        "1788192000": 28639,
         "1790784000": 0,
         "1793462400": 0,
         "1796054400": 0
@@ -4218,7 +4218,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 7509,
+          "readTime": 7518,
           "tags": []
         },
         {
@@ -4543,9 +4543,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 505,
+      "dayAverageReadTime": 503,
       "baseTime": 1767196800,
-      "totalReadTime": 135930,
+      "totalReadTime": 135939,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
