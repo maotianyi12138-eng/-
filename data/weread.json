@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-10-01T13:11:38Z",
+  "updatedAt": "2026-10-01T22:40:30Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1857,10 +1857,77 @@
         ]
       }
     ],
+    "preferCategory": [
+      {
+        "categoryId": 300000,
+        "categoryTitle": "文学",
+        "parentCategoryId": 300000,
+        "parentCategoryTitle": "文学",
+        "readingCount": 1,
+        "readingTime": 398
+      },
+      {
+        "categoryId": 1000000,
+        "categoryTitle": "个人成长",
+        "parentCategoryId": 1000000,
+        "parentCategoryTitle": "个人成长",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 200000,
+        "categoryTitle": "历史",
+        "parentCategoryId": 200000,
+        "parentCategoryTitle": "历史",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 1100000,
+        "categoryTitle": "经济理财",
+        "parentCategoryId": 1100000,
+        "parentCategoryTitle": "经济理财",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 900000,
+        "categoryTitle": "社会文化",
+        "parentCategoryId": 900000,
+        "parentCategoryTitle": "社会文化",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 600000,
+        "categoryTitle": "哲学宗教",
+        "parentCategoryId": 600000,
+        "parentCategoryTitle": "哲学宗教",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 800000,
+        "categoryTitle": "心理",
+        "parentCategoryId": 800000,
+        "parentCategoryTitle": "心理",
+        "readingCount": 0,
+        "readingTime": 0
+      },
+      {
+        "categoryId": 1200000,
+        "categoryTitle": "政治军事",
+        "parentCategoryId": 1200000,
+        "parentCategoryTitle": "政治军事",
+        "readingCount": 0,
+        "readingTime": 0
+      }
+    ],
+    "preferCategoryWord": "偏好阅读文学",
     "readStat": [
       {
         "stat": "读过",
-        "counts": "0本"
+        "counts": "1本"
       },
       {
         "stat": "读完",
@@ -1876,8 +1943,8 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.5876075018132837,
-    "dayAverageReadTime": 398,
+    "compare": -0.7938037509066418,
+    "dayAverageReadTime": 199,
     "baseTime": 1790784000,
     "totalReadTime": 398,
     "readDistributionWord": "点评分布",
@@ -1912,7 +1979,55 @@
       },
       {
         "type": 6,
-        "title": "最爱品类"
+        "title": "最爱文学",
+        "bookInfo": {
+          "bookId": "35523636",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
+          "title": "丰饶之海（第二卷）：奔马",
+          "author": "三岛由纪夫",
+          "translator": "陈德文",
+          "intro": "《丰饶之海》四部曲的第二部。在清显去世的十八年后，昭和七年本多繁邦满年满三十八岁，已经当上大阪控诉院法官。他在三轮山的三光瀑布遇到了由清显转生的饭沼勋，这时的阿勋深受《神风连史话》的影响，义无反顾地效忠已趋衰落的皇室，准备谋刺杀当时财经界的领袖，本多曾写了一封长信给勋，告诉他“《神风连史话》是一个已经结束的悲剧。”",
+          "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/s_YueWen_35523636.jpg",
+          "version": 1839042795,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 8,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 8,
+            "maxfreeChapterUid": 50,
+            "maxfreeChapterRatio": 20
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": -2571052,
+          "publishTime": "2018-09-18 00:00:00",
+          "lastChapterIdx": 43,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 3000,
+          "copyrightChapterUids": [
+            44
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "阅读了2小时"
       },
       {
         "type": 2,
@@ -2541,7 +2656,7 @@
       3195,
       4453,
       17524,
-      7010,
+      7408,
       9332,
       6391,
       13737,
@@ -3139,7 +3254,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7214人读过"
+        "reason": "仅有7221人读过"
       },
       {
         "type": 8,
@@ -3996,7 +4111,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 8,
-          "readingTime": 67360
+          "readingTime": 67758
         },
         {
           "categoryId": 100001,
@@ -4061,7 +4176,7 @@
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 2,
-          "readTime": "10小时19分钟"
+          "readTime": "10小时25分钟"
         },
         {
           "authorId": 222757,
@@ -4260,7 +4375,7 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 498,
+      "dayAverageReadTime": 496,
       "baseTime": 1767196800,
       "totalReadTime": 136651,
       "readDistributionWord": "点评分布",
