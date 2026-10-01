@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-10-01T05:50:45Z",
+  "updatedAt": "2026-10-01T13:11:38Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -27,7 +27,7 @@
         "updateTime": 1701228684,
         "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/t6_YueWen_35523636.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1790441259,
+        "readUpdateTime": 1790857554,
         "secret": 0,
         "category": "文学-经典作品"
       },
@@ -245,13 +245,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 30,
+        "readingProgress": 33,
         "markedStatus": 2,
         "lastNoteSort": 1790237544,
         "intro": "《丰饶之海》四部曲的第二部。在清显去世的十八年后，昭和七年本多繁邦满年满三十八岁，已经当上大阪控诉院法官。他在三轮山的三光瀑布遇到了由清显转生的饭沼勋，这时的阿勋深受《神风连史话》的影响，义无反顾地效忠已趋衰落的皇室，准备谋刺杀当时财经界的领袖，本多曾写了一封长信给勋，告诉他“《神风连史话》是一个已经结束的悲剧。”",
         "updateTime": 1701228684,
         "finishReading": 0,
-        "readUpdateTime": 1790441259,
+        "readUpdateTime": 1790857554,
         "secret": 0,
         "category": "文学-经典作品"
       },
@@ -1100,7 +1100,7 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 30,
+        "readingProgress": 33,
         "noteCount": 6,
         "bookmarkCount": 0,
         "sort": 1790237544
@@ -1798,13 +1798,88 @@
     ]
   },
   "monthly": {
-    "readTimes": {},
-    "readDays": 0,
+    "readTimes": {
+      "1790784000": 398
+    },
+    "readDays": 1,
+    "readLongest": [
+      {
+        "book": {
+          "bookId": "35523636",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
+          "title": "丰饶之海（第二卷）：奔马",
+          "author": "三岛由纪夫",
+          "translator": "陈德文",
+          "intro": "《丰饶之海》四部曲的第二部。在清显去世的十八年后，昭和七年本多繁邦满年满三十八岁，已经当上大阪控诉院法官。他在三轮山的三光瀑布遇到了由清显转生的饭沼勋，这时的阿勋深受《神风连史话》的影响，义无反顾地效忠已趋衰落的皇室，准备谋刺杀当时财经界的领袖，本多曾写了一封长信给勋，告诉他“《神风连史话》是一个已经结束的悲剧。”",
+          "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/s_YueWen_35523636.jpg",
+          "version": 1839042795,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 8,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 8,
+            "maxfreeChapterUid": 50,
+            "maxfreeChapterRatio": 20
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": -2571052,
+          "publishTime": "2018-09-18 00:00:00",
+          "lastChapterIdx": 43,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 3000,
+          "copyrightChapterUids": [
+            44
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 398,
+        "tags": [
+          "单日阅读最久"
+        ]
+      }
+    ],
+    "readStat": [
+      {
+        "stat": "读过",
+        "counts": "0本"
+      },
+      {
+        "stat": "读完",
+        "counts": "0本"
+      },
+      {
+        "stat": "阅读",
+        "counts": "1天"
+      },
+      {
+        "stat": "笔记",
+        "counts": "0条"
+      }
+    ],
     "registTime": 1645667800,
-    "compare": -1.0,
-    "dayAverageReadTime": 0,
+    "compare": -0.5876075018132837,
+    "dayAverageReadTime": 398,
     "baseTime": 1790784000,
-    "totalReadTime": 0,
+    "totalReadTime": 398,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1868,9 +1943,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 136253
+      "1767196800": 136651
     },
-    "readDays": 86,
+    "readDays": 87,
     "readLongest": [
       {
         "book": {
@@ -2181,6 +2256,57 @@
       },
       {
         "book": {
+          "bookId": "35523636",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
+          "title": "丰饶之海（第二卷）：奔马",
+          "author": "三岛由纪夫",
+          "translator": "陈德文",
+          "intro": "《丰饶之海》四部曲的第二部。在清显去世的十八年后，昭和七年本多繁邦满年满三十八岁，已经当上大阪控诉院法官。他在三轮山的三光瀑布遇到了由清显转生的饭沼勋，这时的阿勋深受《神风连史话》的影响，义无反顾地效忠已趋衰落的皇室，准备谋刺杀当时财经界的领袖，本多曾写了一封长信给勋，告诉他“《神风连史话》是一个已经结束的悲剧。”",
+          "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/s_YueWen_35523636.jpg",
+          "version": 1839042795,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 8,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 8,
+            "maxfreeChapterUid": 50,
+            "maxfreeChapterRatio": 20
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": -2571052,
+          "publishTime": "2018-09-18 00:00:00",
+          "lastChapterIdx": 43,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 3000,
+          "copyrightChapterUids": [
+            44
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 8230,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "3300140838",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
           "title": "创意行为：存在即答案",
@@ -2228,57 +2354,6 @@
           "isAutoDownload": 1
         },
         "readTime": 8170,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "35523636",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
-          "title": "丰饶之海（第二卷）：奔马",
-          "author": "三岛由纪夫",
-          "translator": "陈德文",
-          "intro": "《丰饶之海》四部曲的第二部。在清显去世的十八年后，昭和七年本多繁邦满年满三十八岁，已经当上大阪控诉院法官。他在三轮山的三光瀑布遇到了由清显转生的饭沼勋，这时的阿勋深受《神风连史话》的影响，义无反顾地效忠已趋衰落的皇室，准备谋刺杀当时财经界的领袖，本多曾写了一封长信给勋，告诉他“《神风连史话》是一个已经结束的悲剧。”",
-          "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/s_YueWen_35523636.jpg",
-          "version": 1839042795,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 1048577,
-          "finished": 1,
-          "maxFreeChapter": 8,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 8,
-            "maxfreeChapterUid": 50,
-            "maxfreeChapterRatio": 20
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": -2571052,
-          "publishTime": "2018-09-18 00:00:00",
-          "lastChapterIdx": 43,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 3000,
-          "copyrightChapterUids": [
-            44
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 7832,
         "tags": []
       },
       {
@@ -2390,7 +2465,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 8,
-        "readingTime": 67360
+        "readingTime": 67758
       },
       {
         "categoryId": 100001,
@@ -2482,7 +2557,7 @@
         "authorId": 394948,
         "name": "三岛由纪夫",
         "count": 2,
-        "readTime": "10小时19分钟"
+        "readTime": "10小时25分钟"
       },
       {
         "authorId": 222757,
@@ -2673,7 +2748,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "86天"
+        "counts": "87天"
       },
       {
         "stat": "笔记",
@@ -2683,7 +2758,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 136266,
+    "totalReadTime": 136664,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3064,7 +3139,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7207人读过"
+        "reason": "仅有7214人读过"
       },
       {
         "type": 8,
@@ -3396,11 +3471,11 @@
         "1782835200": 12976,
         "1785513600": 40160,
         "1788192000": 28953,
-        "1790784000": 0,
+        "1790784000": 398,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 84,
+      "readDays": 85,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -3712,6 +3787,57 @@
         },
         {
           "book": {
+            "bookId": "35523636",
+            "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
+            "title": "丰饶之海（第二卷）：奔马",
+            "author": "三岛由纪夫",
+            "translator": "陈德文",
+            "intro": "《丰饶之海》四部曲的第二部。在清显去世的十八年后，昭和七年本多繁邦满年满三十八岁，已经当上大阪控诉院法官。他在三轮山的三光瀑布遇到了由清显转生的饭沼勋，这时的阿勋深受《神风连史话》的影响，义无反顾地效忠已趋衰落的皇室，准备谋刺杀当时财经界的领袖，本多曾写了一封长信给勋，告诉他“《神风连史话》是一个已经结束的悲剧。”",
+            "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/s_YueWen_35523636.jpg",
+            "version": 1839042795,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 1048577,
+            "finished": 1,
+            "maxFreeChapter": 8,
+            "maxFreeInfo": {
+              "maxfreeChapterIdx": 8,
+              "maxfreeChapterUid": 50,
+              "maxfreeChapterRatio": 20
+            },
+            "free": 0,
+            "mcardDiscount": 0,
+            "ispub": 1,
+            "extra_type": 5,
+            "cpid": -2571052,
+            "publishTime": "2018-09-18 00:00:00",
+            "lastChapterIdx": 43,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 3000,
+            "copyrightChapterUids": [
+              44
+            ],
+            "inStoreBookId": "",
+            "blockSaveImg": 0,
+            "language": "zh",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 8230,
+          "tags": []
+        },
+        {
+          "book": {
             "bookId": "3300140838",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
             "title": "创意行为：存在即答案",
@@ -3759,57 +3885,6 @@
             "isAutoDownload": 1
           },
           "readTime": 8170,
-          "tags": []
-        },
-        {
-          "book": {
-            "bookId": "35523636",
-            "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
-            "title": "丰饶之海（第二卷）：奔马",
-            "author": "三岛由纪夫",
-            "translator": "陈德文",
-            "intro": "《丰饶之海》四部曲的第二部。在清显去世的十八年后，昭和七年本多繁邦满年满三十八岁，已经当上大阪控诉院法官。他在三轮山的三光瀑布遇到了由清显转生的饭沼勋，这时的阿勋深受《神风连史话》的影响，义无反顾地效忠已趋衰落的皇室，准备谋刺杀当时财经界的领袖，本多曾写了一封长信给勋，告诉他“《神风连史话》是一个已经结束的悲剧。”",
-            "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/s_YueWen_35523636.jpg",
-            "version": 1839042795,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 1048577,
-            "finished": 1,
-            "maxFreeChapter": 8,
-            "maxFreeInfo": {
-              "maxfreeChapterIdx": 8,
-              "maxfreeChapterUid": 50,
-              "maxfreeChapterRatio": 20
-            },
-            "free": 0,
-            "mcardDiscount": 0,
-            "ispub": 1,
-            "extra_type": 5,
-            "cpid": -2571052,
-            "publishTime": "2018-09-18 00:00:00",
-            "lastChapterIdx": 43,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 3000,
-            "copyrightChapterUids": [
-              44
-            ],
-            "inStoreBookId": "",
-            "blockSaveImg": 0,
-            "language": "zh",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 7832,
           "tags": []
         },
         {
@@ -4177,7 +4252,7 @@
         },
         {
           "stat": "阅读",
-          "counts": "84天"
+          "counts": "85天"
         },
         {
           "stat": "笔记",
@@ -4185,9 +4260,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 497,
+      "dayAverageReadTime": 498,
       "baseTime": 1767196800,
-      "totalReadTime": 136253,
+      "totalReadTime": 136651,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
