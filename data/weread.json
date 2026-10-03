@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-10-03T05:17:21Z",
+  "updatedAt": "2026-10-03T11:38:25Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -2804,20 +2804,20 @@
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "北京科技出版社",
-          "userVid": 526108011,
+          "name": "上海译文出版社",
+          "userVid": 331381138,
           "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0009-LEe1nFnveyDEZ3gb_nErxd2/0",
+          "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
           "cpType": 0
         }
       },
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "上海译文出版社",
-          "userVid": 331381138,
+          "name": "北京科技出版社",
+          "userVid": 526108011,
           "role": 2,
-          "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
+          "avatar": "https://res.weread.qq.com/wravatar/WV0009-LEe1nFnveyDEZ3gb_nErxd2/0",
           "cpType": 0
         }
       }
@@ -2828,11 +2828,11 @@
         "count": 2
       },
       {
-        "name": "浙江科学技术出版社",
+        "name": "北京科学技术出版社有限公司",
         "count": 1
       },
       {
-        "name": "浙江人民出版社有限公司",
+        "name": "中信出版集团",
         "count": 1
       },
       {
@@ -2840,11 +2840,11 @@
         "count": 1
       },
       {
-        "name": "北京科学技术出版社有限公司",
+        "name": "浙江人民出版社有限公司",
         "count": 1
       },
       {
-        "name": "中信出版集团",
+        "name": "浙江科学技术出版社",
         "count": 1
       },
       {
@@ -3254,7 +3254,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7246人读过"
+        "reason": "仅有7253人读过"
       },
       {
         "type": 8,
