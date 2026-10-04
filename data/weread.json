@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-10-04T12:20:15Z",
+  "updatedAt": "2026-10-04T21:23:17Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -1867,7 +1867,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 1,
-        "readingTime": 398
+        "readingTime": 416
       },
       {
         "categoryId": 1000000,
@@ -1946,8 +1946,8 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.8922391462024661,
-    "dayAverageReadTime": 104,
+    "compare": -0.9137913169619728,
+    "dayAverageReadTime": 83,
     "baseTime": 1790784000,
     "totalReadTime": 416,
     "readDistributionWord": "点评分布",
@@ -2666,7 +2666,7 @@
       15609,
       8774,
       6549,
-      6931,
+      6949,
       5908,
       9129
     ],
@@ -3257,7 +3257,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7301人读过"
+        "reason": "仅有7319人读过"
       },
       {
         "type": 8,
@@ -4114,7 +4114,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 8,
-          "readingTime": 67758
+          "readingTime": 67776
         },
         {
           "categoryId": 100001,
@@ -4179,7 +4179,7 @@
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 2,
-          "readTime": "10小时25分钟"
+          "readTime": "10小时26分钟"
         },
         {
           "authorId": 222757,
@@ -4378,7 +4378,7 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 493,
+      "dayAverageReadTime": 491,
       "baseTime": 1767196800,
       "totalReadTime": 136669,
       "readDistributionWord": "点评分布",
