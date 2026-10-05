@@ -1,10 +1,151 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-04T08:34:29.670Z",
+  "updatedAt": "2026-10-05T09:15:30.968Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-10-04",
+        "title": "训练",
+        "start": 1791146729711,
+        "durationMinutes": 34,
+        "setCount": 23,
+        "volumeKg": 8165.5,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "杠铃卧推",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 3240,
+            "maxWeightKg": 70
+          },
+          {
+            "name": "把手式蝴蝶机飞鸟",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1360.8,
+            "maxWeightKg": 29.9
+          },
+          {
+            "name": "上斜史密斯机卧推",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2340,
+            "maxWeightKg": 50
+          },
+          {
+            "name": "双杠臂屈伸（辅助）",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          },
+          {
+            "name": "绳索臂屈伸（单）",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 244.9,
+            "maxWeightKg": 6.8
+          },
+          {
+            "name": "绳索臂屈伸",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 979.8,
+            "maxWeightKg": 20.4
+          }
+        ]
+      },
+      {
+        "date": "2026-10-03",
+        "title": "训练",
+        "start": 1791122795569,
+        "durationMinutes": 2,
+        "setCount": 16,
+        "volumeKg": 2971,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "坐姿绳索铁杆弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 594,
+            "maxWeightKg": 17.5
+          },
+          {
+            "name": "绳索弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 571.5,
+            "maxWeightKg": 15.9
+          },
+          {
+            "name": "直杆绳索下压",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 979.8,
+            "maxWeightKg": 20.4
+          },
+          {
+            "name": "绳索臂屈伸（单）",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 285.8,
+            "maxWeightKg": 7.9
+          },
+          {
+            "name": "站姿单臂绳索肱三头肌伸展",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 540,
+            "maxWeightKg": 15
+          }
+        ]
+      },
+      {
+        "date": "2026-10-02",
+        "title": "训练",
+        "start": 1791123287710,
+        "durationMinutes": 2,
+        "setCount": 15,
+        "volumeKg": 2383.2,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "绳索交叉后束飞鸟",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 163.2,
+            "maxWeightKg": 3.4
+          },
+          {
+            "name": "Y字绳索侧平举",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 720,
+            "maxWeightKg": 15
+          },
+          {
+            "name": "史密斯机推举",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 960,
+            "maxWeightKg": 20
+          },
+          {
+            "name": "杠铃提拉",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 540,
+            "maxWeightKg": 15
+          }
+        ]
+      },
       {
         "date": "2026-10-01",
         "title": "高强度间歇训练",
@@ -25,6 +166,234 @@
         ]
       },
       {
+        "date": "2026-10-01",
+        "title": "训练",
+        "start": 0,
+        "durationMinutes": 0,
+        "setCount": 19,
+        "volumeKg": 9222,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "宽距高位下拉",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2832,
+            "maxWeightKg": 59
+          },
+          {
+            "name": "绳索直臂下压",
+            "setCount": 4,
+            "totalReps": 60,
+            "volumeKg": 1350,
+            "maxWeightKg": 22.5
+          },
+          {
+            "name": "器械划船2",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2160,
+            "maxWeightKg": 45
+          },
+          {
+            "name": "杠铃划船",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2880,
+            "maxWeightKg": 60
+          },
+          {
+            "name": "引体向上",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-30",
+        "title": "训练",
+        "start": 1790789068278,
+        "durationMinutes": 2,
+        "setCount": 23,
+        "volumeKg": 8697,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "杠铃箭步蹲",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 360,
+            "maxWeightKg": 10
+          },
+          {
+            "name": "哑铃箭步蹲",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 576,
+            "maxWeightKg": 12
+          },
+          {
+            "name": "史密斯机深蹲",
+            "setCount": 6,
+            "totalReps": 72,
+            "volumeKg": 4320,
+            "maxWeightKg": 60
+          },
+          {
+            "name": "史密斯机箭步蹲",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 960,
+            "maxWeightKg": 20
+          },
+          {
+            "name": "腿弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 936,
+            "maxWeightKg": 26
+          },
+          {
+            "name": "坐姿腿屈伸",
+            "setCount": 3,
+            "totalReps": 45,
+            "volumeKg": 1545,
+            "maxWeightKg": 39
+          }
+        ]
+      },
+      {
+        "date": "2026-09-29",
+        "title": "训练",
+        "start": 0,
+        "durationMinutes": 0,
+        "setCount": 15,
+        "volumeKg": 4900.2,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "器械推胸",
+            "setCount": 4,
+            "totalReps": 40,
+            "volumeKg": 1720,
+            "maxWeightKg": 43
+          },
+          {
+            "name": "蝴蝶机飞鸟",
+            "setCount": 4,
+            "totalReps": 40,
+            "volumeKg": 780.2,
+            "maxWeightKg": 19.5
+          },
+          {
+            "name": "上斜史密斯机卧推",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2400,
+            "maxWeightKg": 50
+          },
+          {
+            "name": "双杠臂屈伸（辅助）",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-28",
+        "title": "训练",
+        "start": 0,
+        "durationMinutes": 0,
+        "setCount": 16,
+        "volumeKg": 2971,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "坐姿绳索铁杆弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 594,
+            "maxWeightKg": 17.5
+          },
+          {
+            "name": "绳索弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 571.5,
+            "maxWeightKg": 15.9
+          },
+          {
+            "name": "直杆绳索下压",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 979.8,
+            "maxWeightKg": 20.4
+          },
+          {
+            "name": "绳索臂屈伸（单）",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 285.8,
+            "maxWeightKg": 7.9
+          },
+          {
+            "name": "站姿单臂绳索肱三头肌伸展",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 540,
+            "maxWeightKg": 15
+          }
+        ]
+      },
+      {
+        "date": "2026-09-27",
+        "title": "训练",
+        "start": 0,
+        "durationMinutes": 0,
+        "setCount": 15,
+        "volumeKg": 2383.2,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "绳索交叉后束飞鸟",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 163.2,
+            "maxWeightKg": 3.4
+          },
+          {
+            "name": "Y字绳索侧平举",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 720,
+            "maxWeightKg": 15
+          },
+          {
+            "name": "史密斯机推举",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 960,
+            "maxWeightKg": 20
+          },
+          {
+            "name": "杠铃提拉",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 540,
+            "maxWeightKg": 15
+          }
+        ]
+      },
+      {
         "date": "2026-09-23",
         "title": "自行车",
         "start": 1790158935464,
@@ -38,6 +407,53 @@
             "name": "Cycling",
             "setCount": 1,
             "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-23",
+        "title": "训练",
+        "start": 0,
+        "durationMinutes": 0,
+        "setCount": 19,
+        "volumeKg": 9222,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "宽距高位下拉",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2832,
+            "maxWeightKg": 59
+          },
+          {
+            "name": "绳索直臂下压",
+            "setCount": 4,
+            "totalReps": 60,
+            "volumeKg": 1350,
+            "maxWeightKg": 22.5
+          },
+          {
+            "name": "器械划船2",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2160,
+            "maxWeightKg": 45
+          },
+          {
+            "name": "杠铃划船",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2880,
+            "maxWeightKg": 60
+          },
+          {
+            "name": "引体向上",
+            "setCount": 3,
+            "totalReps": 36,
             "volumeKg": 0,
             "maxWeightKg": 0
           }
@@ -16290,7 +16706,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-01"
+      "to": "2026-10-04"
     }
   },
   "body": {
