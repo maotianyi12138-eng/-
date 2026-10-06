@@ -1,10 +1,71 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-05T09:15:30.968Z",
+  "updatedAt": "2026-10-06T09:08:04.565Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-10-05",
+        "title": "背 二头",
+        "start": 1791196009113,
+        "durationMinutes": 83,
+        "setCount": 26,
+        "volumeKg": 10663.5,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "引体向上",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          },
+          {
+            "name": "杠铃划船",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 3120,
+            "maxWeightKg": 80
+          },
+          {
+            "name": "宽距高位下拉",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2832,
+            "maxWeightKg": 59
+          },
+          {
+            "name": "器械划船2",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2160,
+            "maxWeightKg": 45
+          },
+          {
+            "name": "绳索直臂下压",
+            "setCount": 4,
+            "totalReps": 60,
+            "volumeKg": 1350,
+            "maxWeightKg": 22.5
+          },
+          {
+            "name": "坐姿绳索铁杆弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 630,
+            "maxWeightKg": 17.5
+          },
+          {
+            "name": "绳索弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 571.5,
+            "maxWeightKg": 15.9
+          }
+        ]
+      },
       {
         "date": "2026-10-04",
         "title": "训练",
@@ -16706,7 +16767,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-04"
+      "to": "2026-10-05"
     }
   },
   "body": {
