@@ -1,10 +1,69 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-07T08:55:10.109Z",
+  "updatedAt": "2026-10-08T09:10:31.485Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-10-07",
+        "title": "训练",
+        "start": 1791402875353,
+        "durationMinutes": 124,
+        "setCount": 14,
+        "volumeKg": 2263.2,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "绳索交叉后束飞鸟",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 163.2,
+            "maxWeightKg": 3.4
+          },
+          {
+            "name": "Y字绳索侧平举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 540,
+            "maxWeightKg": 15
+          },
+          {
+            "name": "史密斯机推举",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1020,
+            "maxWeightKg": 22.5
+          },
+          {
+            "name": "杠铃提拉",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 540,
+            "maxWeightKg": 15
+          }
+        ]
+      },
+      {
+        "date": "2026-10-05",
+        "title": "有氧舞蹈",
+        "start": 1791217527368,
+        "durationMinutes": 100,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 769,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "AppleHealthWorkout",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-10-05",
         "title": "背 二头",
@@ -270,60 +329,6 @@
             "totalReps": 36,
             "volumeKg": 0,
             "maxWeightKg": 0
-          }
-        ]
-      },
-      {
-        "date": "2026-09-30",
-        "title": "训练",
-        "start": 1790789068278,
-        "durationMinutes": 2,
-        "setCount": 23,
-        "volumeKg": 8697,
-        "calories": 0,
-        "distance": 0,
-        "movements": [
-          {
-            "name": "杠铃箭步蹲",
-            "setCount": 3,
-            "totalReps": 36,
-            "volumeKg": 360,
-            "maxWeightKg": 10
-          },
-          {
-            "name": "哑铃箭步蹲",
-            "setCount": 4,
-            "totalReps": 48,
-            "volumeKg": 576,
-            "maxWeightKg": 12
-          },
-          {
-            "name": "史密斯机深蹲",
-            "setCount": 6,
-            "totalReps": 72,
-            "volumeKg": 4320,
-            "maxWeightKg": 60
-          },
-          {
-            "name": "史密斯机箭步蹲",
-            "setCount": 4,
-            "totalReps": 48,
-            "volumeKg": 960,
-            "maxWeightKg": 20
-          },
-          {
-            "name": "腿弯举",
-            "setCount": 3,
-            "totalReps": 36,
-            "volumeKg": 936,
-            "maxWeightKg": 26
-          },
-          {
-            "name": "坐姿腿屈伸",
-            "setCount": 3,
-            "totalReps": 45,
-            "volumeKg": 1545,
-            "maxWeightKg": 39
           }
         ]
       },
@@ -16767,7 +16772,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-05"
+      "to": "2026-10-07"
     }
   },
   "body": {
