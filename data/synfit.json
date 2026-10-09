@@ -1,10 +1,71 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-08T09:10:31.485Z",
+  "updatedAt": "2026-10-09T09:19:11.678Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-10-08",
+        "title": "训练",
+        "start": 1791483368765,
+        "durationMinutes": 58,
+        "setCount": 27,
+        "volumeKg": 13490,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "深蹲",
+            "setCount": 6,
+            "totalReps": 72,
+            "volumeKg": 5040,
+            "maxWeightKg": 80
+          },
+          {
+            "name": "哑铃保加利亚蹲",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 360,
+            "maxWeightKg": 10
+          },
+          {
+            "name": "硬拉",
+            "setCount": 4,
+            "totalReps": 20,
+            "volumeKg": 1850,
+            "maxWeightKg": 100
+          },
+          {
+            "name": "坐姿髋外展",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2160,
+            "maxWeightKg": 45
+          },
+          {
+            "name": "坐姿髋内收",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2160,
+            "maxWeightKg": 45
+          },
+          {
+            "name": "腿弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 936,
+            "maxWeightKg": 26
+          },
+          {
+            "name": "杠杆坐姿腿屈伸",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 984,
+            "maxWeightKg": 32
+          }
+        ]
+      },
       {
         "date": "2026-10-07",
         "title": "训练",
@@ -16772,7 +16833,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-07"
+      "to": "2026-10-08"
     }
   },
   "body": {
