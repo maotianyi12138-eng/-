@@ -1,10 +1,76 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-10T08:40:40.008Z",
+  "updatedAt": "2026-10-11T09:04:54.008Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-10-10",
+        "title": "训练",
+        "start": 1791698723285,
+        "durationMinutes": 24,
+        "setCount": 18,
+        "volumeKg": 7338.6,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "杠铃卧推",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 3240,
+            "maxWeightKg": 70
+          },
+          {
+            "name": "把手式蝴蝶机飞鸟",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1398.9,
+            "maxWeightKg": 29.9
+          },
+          {
+            "name": "上斜史密斯机卧推",
+            "setCount": 4,
+            "totalReps": 44,
+            "volumeKg": 1720,
+            "maxWeightKg": 50
+          },
+          {
+            "name": "绳索臂屈伸（单）",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 244.9,
+            "maxWeightKg": 6.8
+          },
+          {
+            "name": "绳索臂屈伸",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 734.8,
+            "maxWeightKg": 20.4
+          }
+        ]
+      },
+      {
+        "date": "2026-10-09",
+        "title": "自行车",
+        "start": 1791551838258,
+        "durationMinutes": 38,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 227,
+        "distance": 9.75,
+        "movements": [
+          {
+            "name": "Cycling",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-10-08",
         "title": "训练",
@@ -16833,7 +16899,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-08"
+      "to": "2026-10-10"
     }
   },
   "body": {
