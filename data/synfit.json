@@ -1,10 +1,109 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-12T09:26:46.881Z",
+  "updatedAt": "2026-10-13T09:34:16.435Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-10-12",
+        "title": "肩腿",
+        "start": 1791834766920,
+        "durationMinutes": 36,
+        "setCount": 25,
+        "volumeKg": 9294.4,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "绳索交叉后束飞鸟",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 122.4,
+            "maxWeightKg": 3.4
+          },
+          {
+            "name": "Y字绳索侧平举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 540,
+            "maxWeightKg": 15
+          },
+          {
+            "name": "史密斯机推举",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1140,
+            "maxWeightKg": 25
+          },
+          {
+            "name": "硬拉",
+            "setCount": 4,
+            "totalReps": 20,
+            "volumeKg": 1900,
+            "maxWeightKg": 100
+          },
+          {
+            "name": "腿弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 936,
+            "maxWeightKg": 26
+          },
+          {
+            "name": "坐姿髋外展",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2496,
+            "maxWeightKg": 52
+          },
+          {
+            "name": "坐姿髋内收",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2160,
+            "maxWeightKg": 45
+          }
+        ]
+      },
+      {
+        "date": "2026-10-11",
+        "title": "自行车",
+        "start": 1791729189492,
+        "durationMinutes": 219,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 426,
+        "distance": 15.26,
+        "movements": [
+          {
+            "name": "Cycling",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-10-11",
+        "title": "高强度间歇训练",
+        "start": 1791703314669,
+        "durationMinutes": 197,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 2015,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "HighIntensityIntervalTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-10-10",
         "title": "训练",
@@ -16899,7 +16998,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-10"
+      "to": "2026-10-12"
     }
   },
   "body": {
