@@ -1,10 +1,29 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-15T07:34:57.232Z",
+  "updatedAt": "2026-10-16T07:21:21.383Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-10-14",
+        "title": "跑步",
+        "start": 1791972536865,
+        "durationMinutes": 91,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 339,
+        "distance": 6.53,
+        "movements": [
+          {
+            "name": "Running",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-10-13",
         "title": "背 二头",
@@ -17059,7 +17078,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-13"
+      "to": "2026-10-14"
     }
   },
   "body": {
