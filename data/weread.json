@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-10-18T15:51:15Z",
+  "updatedAt": "2026-10-18T20:41:10Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -2415,7 +2415,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 4,
-        "readingTime": 5926
+        "readingTime": 6737
       },
       {
         "categoryId": 1000000,
@@ -2494,8 +2494,8 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.6051071276436524,
-    "dayAverageReadTime": 381,
+    "compare": -0.6258909630308285,
+    "dayAverageReadTime": 361,
     "baseTime": 1790784000,
     "totalReadTime": 6860,
     "readDistributionWord": "点评分布",
@@ -3179,7 +3179,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "readingCount": 11,
-        "readingTime": 73286
+        "readingTime": 74097
       },
       {
         "categoryId": 100001,
@@ -3253,20 +3253,26 @@
       705,
       5713,
       4834,
-      4987,
+      4990,
       17667,
       7810,
       9332,
       6925,
       14216,
-      16380,
-      8774,
+      16601,
+      9370,
       7234,
       6949,
       6049,
       9129
     ],
     "preferAuthor": [
+      {
+        "authorId": 208765,
+        "name": "村上春树",
+        "count": 3,
+        "readTime": "1小时26分钟"
+      },
       {
         "authorId": 394948,
         "name": "三岛由纪夫",
@@ -3278,12 +3284,6 @@
         "name": "约翰·斯坦贝克",
         "count": 2,
         "readTime": "2小时29分钟"
-      },
-      {
-        "authorId": 208765,
-        "name": "村上春树",
-        "count": 2,
-        "readTime": "1小时3分钟"
       },
       {
         "authorId": 522347,
@@ -3341,22 +3341,22 @@
         }
       },
       {
-        "count": 2,
+        "count": 3,
         "copyrightInfo": {
-          "name": "人民文学出版社有限公司",
-          "userVid": 136179393,
+          "name": "轻故事",
+          "userVid": 916162764,
           "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
+          "avatar": "https://res.weread.qq.com/wravatar/WV0018-Ya1JHZWCjRaiDjhfPh67cf2/0",
           "cpType": 0
         }
       },
       {
         "count": 2,
         "copyrightInfo": {
-          "name": "轻故事",
-          "userVid": 916162764,
+          "name": "人民文学出版社有限公司",
+          "userVid": 136179393,
           "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0018-Ya1JHZWCjRaiDjhfPh67cf2/0",
+          "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
           "cpType": 0
         }
       },
@@ -3403,6 +3403,16 @@
       {
         "count": 1,
         "copyrightInfo": {
+          "name": "磨铁数盟",
+          "userVid": 351681843,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
+          "cpType": 0
+        }
+      },
+      {
+        "count": 1,
+        "copyrightInfo": {
           "name": "北京科技出版社",
           "userVid": 526108011,
           "role": 2,
@@ -3417,16 +3427,6 @@
           "userVid": 331381138,
           "role": 2,
           "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
-          "cpType": 0
-        }
-      },
-      {
-        "count": 1,
-        "copyrightInfo": {
-          "name": "磨铁数盟",
-          "userVid": 351681843,
-          "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
           "cpType": 0
         }
       }
@@ -3863,7 +3863,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7705人读过"
+        "reason": "仅有7707人读过"
       },
       {
         "type": 8,
@@ -4720,7 +4720,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 11,
-          "readingTime": 73286
+          "readingTime": 74097
         },
         {
           "categoryId": 100001,
@@ -4782,6 +4782,12 @@
       "preferCategoryWord": "偏好阅读文学",
       "preferAuthor": [
         {
+          "authorId": 208765,
+          "name": "村上春树",
+          "count": 3,
+          "readTime": "1小时26分钟"
+        },
+        {
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 2,
@@ -4792,12 +4798,6 @@
           "name": "约翰·斯坦贝克",
           "count": 2,
           "readTime": "2小时29分钟"
-        },
-        {
-          "authorId": 208765,
-          "name": "村上春树",
-          "count": 2,
-          "readTime": "1小时3分钟"
         },
         {
           "authorId": 522347,
@@ -4855,22 +4855,22 @@
           }
         },
         {
-          "count": 2,
+          "count": 3,
           "copyrightInfo": {
-            "name": "人民文学出版社有限公司",
-            "userVid": 136179393,
+            "name": "轻故事",
+            "userVid": 916162764,
             "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
+            "avatar": "https://res.weread.qq.com/wravatar/WV0018-Ya1JHZWCjRaiDjhfPh67cf2/0",
             "cpType": 0
           }
         },
         {
           "count": 2,
           "copyrightInfo": {
-            "name": "轻故事",
-            "userVid": 916162764,
+            "name": "人民文学出版社有限公司",
+            "userVid": 136179393,
             "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0018-Ya1JHZWCjRaiDjhfPh67cf2/0",
+            "avatar": "https://res.weread.qq.com/wravatar/WV0022-gEHgWLbrU04n1d2CYWnjua9/0",
             "cpType": 0
           }
         },
@@ -4994,7 +4994,7 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 491,
+      "dayAverageReadTime": 490,
       "baseTime": 1767196800,
       "totalReadTime": 143113,
       "readDistributionWord": "点评分布",
