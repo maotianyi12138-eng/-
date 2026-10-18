@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-10-10T05:50:54Z",
+  "updatedAt": "2026-10-18T10:51:46Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -20,8 +20,48 @@
     "archive": [],
     "books": [
       {
+        "bookId": "3300200141",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=e3c322f0813abb4aeg011f8e",
+        "readerLink": "https://weread.qq.com/web/reader/e3c322f0813abb4aeg011f8e",
+        "title": "托尼瀑谷：电影《东尼涉谷》原著（轻经典）",
+        "author": "[日]村上春树",
+        "updateTime": 1775528646,
+        "cover": "https://cdn.weread.qq.com/weread/cover/77/cpplatform_3g9lw7p58a7tm8szmx7qr7/t6_cpplatform_3g9lw7p58a7tm8szmx7qr71775183407.jpg",
+        "finishReading": 1,
+        "readUpdateTime": 1792257274,
+        "secret": 0,
+        "category": "文学-外国文学"
+      },
+      {
+        "bookId": "3300200121",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=d0232380813abb4acg011ea6",
+        "readerLink": "https://weread.qq.com/web/reader/d0232380813abb4acg011ea6",
+        "title": "萤：《挪威的森林》原型短篇（轻经典）",
+        "author": "[日]村上春树",
+        "updateTime": 1775214468,
+        "cover": "https://cdn.weread.qq.com/weread/cover/71/cpplatform_hdvwxbx7srs53wdhgbljrb/t6_cpplatform_hdvwxbx7srs53wdhgbljrb1775127798.jpg",
+        "finishReading": 1,
+        "readUpdateTime": 1792239709,
+        "secret": 0,
+        "category": "文学-外国文学"
+      },
+      {
+        "bookId": "3300200122",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=faf32a10813abb4acg012daa",
+        "readerLink": "https://weread.qq.com/web/reader/faf32a10813abb4acg012daa",
+        "title": "烧仓房：李沧东电影《燃烧》原著（轻经典）",
+        "author": "[日]村上春树",
+        "updateTime": 1779327792,
+        "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_6oqhaccekqjwkzctq7rjwo/t6_cpplatform_6oqhaccekqjwkzctq7rjwo1775128022.jpg",
+        "finishReading": 1,
+        "readUpdateTime": 1791887213,
+        "secret": 0,
+        "category": "文学-外国文学"
+      },
+      {
         "bookId": "35523636",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
+        "readerLink": "https://weread.qq.com/web/reader/ffa32310721e0c34ffaa68b",
         "title": "丰饶之海（第二卷）：奔马",
         "author": "三岛由纪夫",
         "updateTime": 1701228684,
@@ -34,6 +74,7 @@
       {
         "bookId": "3300197381",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=32732670813abb39ag011d6c",
+        "readerLink": "https://weread.qq.com/web/reader/32732670813abb39ag011d6c",
         "title": "为什么10倍增长比2倍更容易",
         "author": "[美]丹·沙利文  [美]本杰明·哈迪",
         "updateTime": 1772710347,
@@ -46,6 +87,7 @@
       {
         "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=55a42743643425f337961426d49305557414a5036715737314e306e664537763c4",
+        "readerLink": "https://weread.qq.com/web/reader/55a42743643425f337961426d49305557414a5036715737314e306e664537763c4",
         "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
         "author": "",
         "cover": "https://res.weread.qq.com/wrepub/CB_B3A5my5lA5d66xg6xFFBX9Z7_parsecover",
@@ -57,6 +99,7 @@
       {
         "bookId": "3300106416",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
+        "readerLink": "https://weread.qq.com/web/reader/aa232350813ab9011g016d99",
         "title": "箭术与禅心：一位西方哲学家的禅悟实录",
         "author": "[德]奥根·赫立格尔",
         "updateTime": 1782095492,
@@ -69,6 +112,7 @@
       {
         "bookId": "CB_Djp4Tt4V55Oi73w75h4jb9UW",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=92e42153643425f446a70345474345635354f69373377373568346a623955576f8",
+        "readerLink": "https://weread.qq.com/web/reader/92e42153643425f446a70345474345635354f69373377373568346a623955576f8",
         "title": "伦敦国家美术馆（伟大的博物馆）",
         "author": "达尼埃拉·塔拉布拉",
         "cover": "https://res.weread.qq.com/wrepub/CB_2njAvTAwD2jO73m74sF4K934_parsecover",
@@ -80,6 +124,7 @@
       {
         "bookId": "CB_EsG6110ty9NN85W75S6DG7Cz",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=a84420a3643425f457347363131307479394e4e38355737355336444737437a57a",
+        "readerLink": "https://weread.qq.com/web/reader/a84420a3643425f457347363131307479394e4e38355737355336444737437a57a",
         "title": "规训与惩罚 - 监狱的诞生",
         "author": "[法] 米歇尔·福柯",
         "cover": "https://res.weread.qq.com/wrepub/CB_ELH2YR2ZZ0aw6eg6cREJU1VS_parsecover",
@@ -91,6 +136,7 @@
       {
         "bookId": "3300155373",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=80332260813aba331g013372",
+        "readerLink": "https://weread.qq.com/web/reader/80332260813aba331g013372",
         "title": "在我身上有一个不可战胜的夏天",
         "author": "[法]阿尔贝·加缪",
         "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/t6_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
@@ -103,6 +149,7 @@
       {
         "bookId": "30181899",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=7a332d8071cc8a0b7a31e96",
+        "readerLink": "https://weread.qq.com/web/reader/7a332d8071cc8a0b7a31e96",
         "title": "高级运动营养学",
         "author": "丹·贝纳多特",
         "updateTime": 1722588817,
@@ -115,6 +162,7 @@
       {
         "bookId": "3300043405",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=3c632e90813ab7774g015d62",
+        "readerLink": "https://weread.qq.com/web/reader/3c632e90813ab7774g015d62",
         "title": "罐头厂街",
         "author": "约翰·斯坦贝克",
         "updateTime": 1779182927,
@@ -127,6 +175,7 @@
       {
         "bookId": "3300140838",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
+        "readerLink": "https://weread.qq.com/web/reader/5a332100813ab9d83g018139",
         "title": "创意行为：存在即答案",
         "author": "[美]里克·鲁宾",
         "updateTime": 1744604811,
@@ -139,6 +188,7 @@
       {
         "bookId": "24981213",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=36d32af0717d2edd36d228e",
+        "readerLink": "https://weread.qq.com/web/reader/36d32af0717d2edd36d228e",
         "title": "速度训练：理论要点、动作练习与运动专项训练计划",
         "author": "美国国家体能协会 伊恩·杰弗里斯",
         "cover": "https://cdn.weread.qq.com/weread/cover/0/YueWen_24981213/t6_YueWen_24981213.jpg",
@@ -151,6 +201,7 @@
       {
         "bookId": "35523642",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=c3b32bb0721e0c3ac3bc5f6",
+        "readerLink": "https://weread.qq.com/web/reader/c3b32bb0721e0c3ac3bc5f6",
         "title": "丰饶之海（第一卷）：春雪",
         "author": "三岛由纪夫",
         "updateTime": 1689693337,
@@ -161,8 +212,22 @@
         "category": "精品小说-社会小说"
       },
       {
+        "bookId": "3300200116",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=a28320b0813abb4abg01623d",
+        "readerLink": "https://weread.qq.com/web/reader/a28320b0813abb4abg01623d",
+        "title": "UFO飞落钏路：大地震之后被颠覆的日常生活（轻经典）",
+        "author": "[日]村上春树",
+        "updateTime": 1775529535,
+        "cover": "https://cdn.weread.qq.com/weread/cover/44/cpplatform_pej5m8wv1dt9ewnemfjmnh/t6_cpplatform_pej5m8wv1dt9ewnemfjmnh1775127717.jpg",
+        "finishReading": 0,
+        "readUpdateTime": 1792320402,
+        "secret": 0,
+        "category": "文学-外国文学"
+      },
+      {
         "bookId": "25424211",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
+        "readerLink": "https://weread.qq.com/web/reader/875329907183f1538754eac",
         "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
         "author": "赫伯特·马尔库塞",
         "updateTime": 1703130813,
@@ -175,6 +240,7 @@
       {
         "bookId": "3300199881",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=870320d0813abb494g0113ca",
+        "readerLink": "https://weread.qq.com/web/reader/870320d0813abb494g0113ca",
         "title": "Claude Code橙皮书：从入门到精通（微信读书特别版）",
         "author": "花叔",
         "cover": "https://cdn.weread.qq.com/weread/cover/19/cpplatform_uxgat2cacw5ne8darcgwa2/t6_cpplatform_uxgat2cacw5ne8darcgwa21775208984.jpg",
@@ -189,8 +255,169 @@
   "history": {
     "books": [
       {
+        "bookId": "3300200116",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=a28320b0813abb4abg01623d",
+        "readerLink": "https://weread.qq.com/web/reader/a28320b0813abb4abg01623d",
+        "title": "UFO飞落钏路：大地震之后被颠覆的日常生活（轻经典）",
+        "author": "[日]村上春树",
+        "updateTime": 1775529535,
+        "cover": "https://cdn.weread.qq.com/weread/cover/44/cpplatform_pej5m8wv1dt9ewnemfjmnh/t6_cpplatform_pej5m8wv1dt9ewnemfjmnh1775127717.jpg",
+        "finishReading": 0,
+        "readUpdateTime": 1792320402,
+        "secret": 0,
+        "category": "文学-外国文学"
+      },
+      {
+        "bookId": "3300200141",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=e3c322f0813abb4aeg011f8e",
+        "readerLink": "https://weread.qq.com/web/reader/e3c322f0813abb4aeg011f8e",
+        "title": "托尼瀑谷：电影《东尼涉谷》原著（轻经典）",
+        "author": "[日]村上春树",
+        "translator": "林少华",
+        "cover": "https://cdn.weread.qq.com/weread/cover/77/cpplatform_3g9lw7p58a7tm8szmx7qr7/t6_cpplatform_3g9lw7p58a7tm8szmx7qr71775183407.jpg",
+        "version": 357273830,
+        "format": "epub",
+        "type": 0,
+        "price": 9.9,
+        "originalPrice": 0,
+        "soldout": 0,
+        "bookStatus": 1,
+        "payingStatus": 1,
+        "payType": 4097,
+        "centPrice": 990,
+        "categories": [
+          {
+            "categoryId": 300000,
+            "subCategoryId": 300013,
+            "categoryType": 0,
+            "title": "文学-外国文学"
+          }
+        ],
+        "hasLecture": 0,
+        "finished": 1,
+        "maxFreeChapter": 3,
+        "maxFreeInfo": {
+          "maxFreeChapterIdx": 3,
+          "maxFreeChapterUid": 4,
+          "maxFreeChapterRatio": 6
+        },
+        "free": 0,
+        "mcardDiscount": 0,
+        "ispub": 1,
+        "extra_type": 5,
+        "cpid": 1000000121,
+        "publishTime": "2026-05-11 00:00:00",
+        "lastChapterIdx": 3,
+        "paperBook": {
+          "skuId": ""
+        },
+        "copyrightChapterUids": [
+          2
+        ],
+        "inStoreBookId": "",
+        "blockSaveImg": 0,
+        "language": "zh-wr",
+        "isTraditionalChinese": false,
+        "hideUpdateTime": false,
+        "isEPUBComics": 0,
+        "isVerticalLayout": 0,
+        "isShowTTS": 1,
+        "webBookControl": 0,
+        "selfProduceIncentive": false,
+        "isAutoDownload": 1,
+        "readingProgress": 99,
+        "markedStatus": 4,
+        "lastNoteSort": 1792256365,
+        "updateTime": 1775528646,
+        "finishReading": 1,
+        "readUpdateTime": 1792257274,
+        "secret": 0,
+        "category": "文学-外国文学"
+      },
+      {
+        "bookId": "3300200121",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=d0232380813abb4acg011ea6",
+        "readerLink": "https://weread.qq.com/web/reader/d0232380813abb4acg011ea6",
+        "title": "萤：《挪威的森林》原型短篇（轻经典）",
+        "author": "[日]村上春树",
+        "updateTime": 1775214468,
+        "cover": "https://cdn.weread.qq.com/weread/cover/71/cpplatform_hdvwxbx7srs53wdhgbljrb/t6_cpplatform_hdvwxbx7srs53wdhgbljrb1775127798.jpg",
+        "finishReading": 1,
+        "readUpdateTime": 1792239709,
+        "secret": 0,
+        "category": "文学-外国文学"
+      },
+      {
+        "bookId": "3300200122",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=faf32a10813abb4acg012daa",
+        "readerLink": "https://weread.qq.com/web/reader/faf32a10813abb4acg012daa",
+        "title": "烧仓房：李沧东电影《燃烧》原著（轻经典）",
+        "author": "[日]村上春树",
+        "translator": "林少华",
+        "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_6oqhaccekqjwkzctq7rjwo/t6_cpplatform_6oqhaccekqjwkzctq7rjwo1775128022.jpg",
+        "version": 1766605504,
+        "format": "epub",
+        "type": 0,
+        "price": 9.9,
+        "originalPrice": 0,
+        "soldout": 0,
+        "bookStatus": 1,
+        "payingStatus": 1,
+        "payType": 4097,
+        "centPrice": 990,
+        "categories": [
+          {
+            "categoryId": 300000,
+            "subCategoryId": 300013,
+            "categoryType": 0,
+            "title": "文学-外国文学"
+          }
+        ],
+        "hasLecture": 0,
+        "finished": 1,
+        "maxFreeChapter": 3,
+        "maxFreeInfo": {
+          "maxFreeChapterIdx": 3,
+          "maxFreeChapterUid": 4,
+          "maxFreeChapterRatio": 6
+        },
+        "free": 0,
+        "mcardDiscount": 0,
+        "ispub": 1,
+        "extra_type": 5,
+        "cpid": 1000000121,
+        "publishTime": "2026-04-27 00:00:00",
+        "lastChapterIdx": 3,
+        "paperBook": {
+          "skuId": ""
+        },
+        "copyrightChapterUids": [
+          2
+        ],
+        "inStoreBookId": "",
+        "blockSaveImg": 0,
+        "language": "zh-wr",
+        "isTraditionalChinese": false,
+        "hideUpdateTime": false,
+        "isEPUBComics": 0,
+        "isVerticalLayout": 0,
+        "isShowTTS": 1,
+        "webBookControl": 0,
+        "selfProduceIncentive": false,
+        "isAutoDownload": 1,
+        "readingProgress": 97,
+        "markedStatus": 4,
+        "lastNoteSort": 1791887062,
+        "updateTime": 1779327792,
+        "finishReading": 1,
+        "readUpdateTime": 1791887213,
+        "secret": 0,
+        "category": "文学-外国文学"
+      },
+      {
         "bookId": "35523636",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
+        "readerLink": "https://weread.qq.com/web/reader/ffa32310721e0c34ffaa68b",
         "title": "丰饶之海（第二卷）：奔马",
         "author": "三岛由纪夫",
         "translator": "陈德文",
@@ -258,6 +485,7 @@
       {
         "bookId": "35523642",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=c3b32bb0721e0c3ac3bc5f6",
+        "readerLink": "https://weread.qq.com/web/reader/c3b32bb0721e0c3ac3bc5f6",
         "title": "丰饶之海（第一卷）：春雪",
         "author": "三岛由纪夫",
         "translator": "陈德文",
@@ -331,6 +559,7 @@
       {
         "bookId": "3300106416",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
+        "readerLink": "https://weread.qq.com/web/reader/aa232350813ab9011g016d99",
         "title": "箭术与禅心：一位西方哲学家的禅悟实录",
         "author": "[德]奥根·赫立格尔",
         "translator": "靳婷婷",
@@ -398,6 +627,7 @@
       {
         "bookId": "25424211",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
+        "readerLink": "https://weread.qq.com/web/reader/875329907183f1538754eac",
         "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
         "author": "赫伯特·马尔库塞",
         "translator": "刘继",
@@ -465,6 +695,7 @@
       {
         "bookId": "30181899",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=7a332d8071cc8a0b7a31e96",
+        "readerLink": "https://weread.qq.com/web/reader/7a332d8071cc8a0b7a31e96",
         "title": "高级运动营养学",
         "author": "丹·贝纳多特",
         "translator": "安江红,刘勇,周帆扬,赵之光",
@@ -536,6 +767,7 @@
       {
         "bookId": "CB_EsG6110ty9NN85W75S6DG7Cz",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=a84420a3643425f457347363131307479394e4e38355737355336444737437a57a",
+        "readerLink": "https://weread.qq.com/web/reader/a84420a3643425f457347363131307479394e4e38355737355336444737437a57a",
         "title": "规训与惩罚 - 监狱的诞生",
         "author": "[法] 米歇尔·福柯",
         "cover": "https://res.weread.qq.com/wrepub/CB_ELH2YR2ZZ0aw6eg6cREJU1VS_parsecover",
@@ -547,6 +779,7 @@
       {
         "bookId": "3300197381",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=32732670813abb39ag011d6c",
+        "readerLink": "https://weread.qq.com/web/reader/32732670813abb39ag011d6c",
         "title": "为什么10倍增长比2倍更容易",
         "author": "[美]丹·沙利文  [美]本杰明·哈迪",
         "translator": "白瑞霞",
@@ -614,6 +847,7 @@
       {
         "bookId": "24981213",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=36d32af0717d2edd36d228e",
+        "readerLink": "https://weread.qq.com/web/reader/36d32af0717d2edd36d228e",
         "title": "速度训练：理论要点、动作练习与运动专项训练计划",
         "author": "美国国家体能协会 伊恩·杰弗里斯",
         "cover": "https://cdn.weread.qq.com/weread/cover/0/YueWen_24981213/t6_YueWen_24981213.jpg",
@@ -626,6 +860,7 @@
       {
         "bookId": "3300190668",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=18b32200813abb0fag01892b",
+        "readerLink": "https://weread.qq.com/web/reader/18b32200813abb0fag01892b",
         "title": "论人生短暂",
         "author": "[古罗马]塞涅卡",
         "translator": "刘漪",
@@ -695,6 +930,7 @@
       {
         "bookId": "3300199881",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=870320d0813abb494g0113ca",
+        "readerLink": "https://weread.qq.com/web/reader/870320d0813abb494g0113ca",
         "title": "Claude Code橙皮书：从入门到精通（微信读书特别版）",
         "author": "花叔",
         "cover": "https://cdn.weread.qq.com/weread/cover/19/cpplatform_uxgat2cacw5ne8darcgwa2/t6_cpplatform_uxgat2cacw5ne8darcgwa21775208984.jpg",
@@ -707,6 +943,7 @@
       {
         "bookId": "3300155373",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=80332260813aba331g013372",
+        "readerLink": "https://weread.qq.com/web/reader/80332260813aba331g013372",
         "title": "在我身上有一个不可战胜的夏天",
         "author": "[法]阿尔贝·加缪",
         "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/t6_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
@@ -779,6 +1016,7 @@
       {
         "bookId": "CB_Djp4Tt4V55Oi73w75h4jb9UW",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=92e42153643425f446a70345474345635354f69373377373568346a623955576f8",
+        "readerLink": "https://weread.qq.com/web/reader/92e42153643425f446a70345474345635354f69373377373568346a623955576f8",
         "title": "伦敦国家美术馆（伟大的博物馆）",
         "author": "达尼埃拉·塔拉布拉",
         "cover": "https://res.weread.qq.com/wrepub/CB_2njAvTAwD2jO73m74sF4K934_parsecover",
@@ -790,6 +1028,7 @@
       {
         "bookId": "3300043405",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=3c632e90813ab7774g015d62",
+        "readerLink": "https://weread.qq.com/web/reader/3c632e90813ab7774g015d62",
         "title": "罐头厂街",
         "author": "约翰·斯坦贝克",
         "translator": "李家珅 钱凯娜 魏艳艳",
@@ -863,6 +1102,7 @@
       {
         "bookId": "3300140838",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
+        "readerLink": "https://weread.qq.com/web/reader/5a332100813ab9d83g018139",
         "title": "创意行为：存在即答案",
         "author": "[美]里克·鲁宾",
         "translator": "重轻",
@@ -930,6 +1170,7 @@
       {
         "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=55a42743643425f337961426d49305557414a5036715737314e306e664537763c4",
+        "readerLink": "https://weread.qq.com/web/reader/55a42743643425f337961426d49305557414a5036715737314e306e664537763c4",
         "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
         "author": "",
         "cover": "https://res.weread.qq.com/wrepub/CB_B3A5my5lA5d66xg6xFFBX9Z7_parsecover",
@@ -1034,15 +1275,152 @@
         "finishReading": 0
       }
     ],
-    "totalReadCount": 15
+    "totalReadCount": 18
   },
   "notebooks": {
     "books": [
+      {
+        "bookId": "3300200141",
+        "book": {
+          "bookId": "3300200141",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=e3c322f0813abb4aeg011f8e",
+          "readerLink": "https://weread.qq.com/web/reader/e3c322f0813abb4aeg011f8e",
+          "title": "托尼瀑谷：电影《东尼涉谷》原著（轻经典）",
+          "author": "[日]村上春树",
+          "translator": "林少华",
+          "cover": "https://cdn.weread.qq.com/weread/cover/77/cpplatform_3g9lw7p58a7tm8szmx7qr7/t6_cpplatform_3g9lw7p58a7tm8szmx7qr71775183407.jpg",
+          "version": 357273830,
+          "format": "epub",
+          "type": 0,
+          "price": 9.9,
+          "originalPrice": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payingStatus": 1,
+          "payType": 4097,
+          "centPrice": 990,
+          "categories": [
+            {
+              "categoryId": 300000,
+              "subCategoryId": 300013,
+              "categoryType": 0,
+              "title": "文学-外国文学"
+            }
+          ],
+          "hasLecture": 0,
+          "finished": 1,
+          "maxFreeChapter": 3,
+          "maxFreeInfo": {
+            "maxFreeChapterIdx": 3,
+            "maxFreeChapterUid": 4,
+            "maxFreeChapterRatio": 6
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000121,
+          "publishTime": "2026-05-11 00:00:00",
+          "lastChapterIdx": 3,
+          "paperBook": {
+            "skuId": ""
+          },
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "webBookControl": 0,
+          "selfProduceIncentive": false,
+          "isAutoDownload": 1
+        },
+        "reviewCount": 0,
+        "markedStatus": 4,
+        "readingProgress": 99,
+        "noteCount": 1,
+        "bookmarkCount": 0,
+        "sort": 1792256365
+      },
+      {
+        "bookId": "3300200122",
+        "book": {
+          "bookId": "3300200122",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=faf32a10813abb4acg012daa",
+          "readerLink": "https://weread.qq.com/web/reader/faf32a10813abb4acg012daa",
+          "title": "烧仓房：李沧东电影《燃烧》原著（轻经典）",
+          "author": "[日]村上春树",
+          "translator": "林少华",
+          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_6oqhaccekqjwkzctq7rjwo/t6_cpplatform_6oqhaccekqjwkzctq7rjwo1775128022.jpg",
+          "version": 1766605504,
+          "format": "epub",
+          "type": 0,
+          "price": 9.9,
+          "originalPrice": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payingStatus": 1,
+          "payType": 4097,
+          "centPrice": 990,
+          "categories": [
+            {
+              "categoryId": 300000,
+              "subCategoryId": 300013,
+              "categoryType": 0,
+              "title": "文学-外国文学"
+            }
+          ],
+          "hasLecture": 0,
+          "finished": 1,
+          "maxFreeChapter": 3,
+          "maxFreeInfo": {
+            "maxFreeChapterIdx": 3,
+            "maxFreeChapterUid": 4,
+            "maxFreeChapterRatio": 6
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000121,
+          "publishTime": "2026-04-27 00:00:00",
+          "lastChapterIdx": 3,
+          "paperBook": {
+            "skuId": ""
+          },
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "webBookControl": 0,
+          "selfProduceIncentive": false,
+          "isAutoDownload": 1
+        },
+        "reviewCount": 0,
+        "markedStatus": 4,
+        "readingProgress": 97,
+        "noteCount": 5,
+        "bookmarkCount": 0,
+        "sort": 1791887062
+      },
       {
         "bookId": "35523636",
         "book": {
           "bookId": "35523636",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
+          "readerLink": "https://weread.qq.com/web/reader/ffa32310721e0c34ffaa68b",
           "title": "丰饶之海（第二卷）：奔马",
           "author": "三岛由纪夫",
           "translator": "陈德文",
@@ -1110,6 +1488,7 @@
         "book": {
           "bookId": "35523642",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=c3b32bb0721e0c3ac3bc5f6",
+          "readerLink": "https://weread.qq.com/web/reader/c3b32bb0721e0c3ac3bc5f6",
           "title": "丰饶之海（第一卷）：春雪",
           "author": "三岛由纪夫",
           "translator": "陈德文",
@@ -1183,6 +1562,7 @@
         "book": {
           "bookId": "3300106416",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
+          "readerLink": "https://weread.qq.com/web/reader/aa232350813ab9011g016d99",
           "title": "箭术与禅心：一位西方哲学家的禅悟实录",
           "author": "[德]奥根·赫立格尔",
           "translator": "靳婷婷",
@@ -1250,6 +1630,7 @@
         "book": {
           "bookId": "25424211",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
+          "readerLink": "https://weread.qq.com/web/reader/875329907183f1538754eac",
           "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
           "author": "赫伯特·马尔库塞",
           "translator": "刘继",
@@ -1317,6 +1698,7 @@
         "book": {
           "bookId": "30181899",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=7a332d8071cc8a0b7a31e96",
+          "readerLink": "https://weread.qq.com/web/reader/7a332d8071cc8a0b7a31e96",
           "title": "高级运动营养学",
           "author": "丹·贝纳多特",
           "translator": "安江红,刘勇,周帆扬,赵之光",
@@ -1388,6 +1770,7 @@
         "book": {
           "bookId": "3300190668",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=18b32200813abb0fag01892b",
+          "readerLink": "https://weread.qq.com/web/reader/18b32200813abb0fag01892b",
           "title": "论人生短暂",
           "author": "[古罗马]塞涅卡",
           "translator": "刘漪",
@@ -1461,6 +1844,7 @@
         "book": {
           "bookId": "3300155373",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=80332260813aba331g013372",
+          "readerLink": "https://weread.qq.com/web/reader/80332260813aba331g013372",
           "title": "在我身上有一个不可战胜的夏天",
           "author": "[法]阿尔贝·加缪",
           "cover": "https://cdn.weread.qq.com/weread/cover/28/cpplatform_f4jupb1akunkfy57tpm4xs/t6_cpplatform_f4jupb1akunkfy57tpm4xs1753949526.jpg",
@@ -1533,6 +1917,7 @@
         "book": {
           "bookId": "3300197381",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=32732670813abb39ag011d6c",
+          "readerLink": "https://weread.qq.com/web/reader/32732670813abb39ag011d6c",
           "title": "为什么10倍增长比2倍更容易",
           "author": "[美]丹·沙利文  [美]本杰明·哈迪",
           "translator": "白瑞霞",
@@ -1600,6 +1985,7 @@
         "book": {
           "bookId": "3300140838",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
+          "readerLink": "https://weread.qq.com/web/reader/5a332100813ab9d83g018139",
           "title": "创意行为：存在即答案",
           "author": "[美]里克·鲁宾",
           "translator": "重轻",
@@ -1667,6 +2053,7 @@
         "book": {
           "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=55a42743643425f337961426d49305557414a5036715737314e306e664537763c4",
+          "readerLink": "https://weread.qq.com/web/reader/55a42743643425f337961426d49305557414a5036715737314e306e664537763c4",
           "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
           "author": "",
           "cover": "https://res.weread.qq.com/wrepub/CB_B3A5my5lA5d66xg6xFFBX9Z7_parsecover",
@@ -1727,6 +2114,7 @@
         "book": {
           "bookId": "3300043405",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=3c632e90813ab7774g015d62",
+          "readerLink": "https://weread.qq.com/web/reader/3c632e90813ab7774g015d62",
           "title": "罐头厂街",
           "author": "约翰·斯坦贝克",
           "translator": "李家珅 钱凯娜 魏艳艳",
@@ -1801,15 +2189,122 @@
     "readTimes": {
       "1790784000": 398,
       "1791043200": 18,
-      "1791129600": 0,
-      "1791216000": 0,
-      "1791302400": 0,
-      "1791388800": 0,
       "1791475200": 368,
-      "1791561600": 771
+      "1791561600": 771,
+      "1791734400": 0,
+      "1791820800": 2060,
+      "1791907200": 571,
+      "1791993600": 622,
+      "1792080000": 296,
+      "1792166400": 936,
+      "1792252800": 820
     },
-    "readDays": 3,
+    "readDays": 9,
     "readLongest": [
+      {
+        "book": {
+          "bookId": "3300200122",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=faf32a10813abb4acg012daa",
+          "title": "烧仓房：李沧东电影《燃烧》原著（轻经典）",
+          "author": "[日]村上春树",
+          "translator": "林少华",
+          "intro": "本文选自《萤》。一个写小说的\"我\"，一个神秘的有钱男人，和一个爱跳哑剧的女孩——三人之间弥漫着说不清的暧昧与不安。男人在酒醉后轻描淡写地说：\"我的爱好是烧仓房。\"\r\n从那以后，\"我\"开始四处寻找被烧毁的仓房，却一无所获。与此同时，女孩毫无征兆地人间蒸发了。烧掉的到底是什么？消失的人去了哪里？真相始终藏在日常的微笑之下。\r\n这是村上最具悬疑气质的短篇之一，故事不给答案，却让不安像野火一样蔓延至读完后的每一个深夜。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_6oqhaccekqjwkzctq7rjwo/s_cpplatform_6oqhaccekqjwkzctq7rjwo1775128022.jpg",
+          "version": 1766605504,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 3,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 3,
+            "maxfreeChapterUid": 4,
+            "maxfreeChapterRatio": 6
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000121,
+          "publishTime": "2026-04-27 00:00:00",
+          "lastChapterIdx": 3,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 990,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 1946,
+        "tags": [
+          "单日阅读最久"
+        ]
+      },
+      {
+        "book": {
+          "bookId": "3300200121",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=d0232380813abb4acg011ea6",
+          "title": "萤：《挪威的森林》原型短篇（轻经典）",
+          "author": "[日]村上春树",
+          "translator": "林少华",
+          "intro": "本文选自《萤》。一座右翼经营的学生寄宿院，一段无法说出口的三角往事。十八岁的\"我\"住进东京的宿舍，与口吃的室友相安无事，却被一个女孩牵引进无法挣脱的漩涡——她是已故挚友的恋人。\r\n两个被同一场死亡灼伤的人，在沉默中相互靠近，却始终无法真正抵达彼此。夜晚的宿舍、雨中的电车、黑暗里飞舞的萤火虫，都成了青春创痛的隐喻。\r\n村上以极度克制的笔调写出了丧失与眷恋的暗涌。那只萤火虫最终消融于黑暗，一如年少时我们以为永远握得住的光。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/71/cpplatform_hdvwxbx7srs53wdhgbljrb/s_cpplatform_hdvwxbx7srs53wdhgbljrb1775127798.jpg",
+          "version": 688142997,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 3,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 3,
+            "maxfreeChapterUid": 3,
+            "maxfreeChapterRatio": 6
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000121,
+          "publishTime": "2026-04-03 00:00:00",
+          "lastChapterIdx": 3,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 990,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 1891,
+        "tags": []
+      },
       {
         "book": {
           "bookId": "35523636",
@@ -1859,9 +2354,58 @@
           "isAutoDownload": 1
         },
         "readTime": 1537,
-        "tags": [
-          "单日阅读最久"
-        ]
+        "tags": []
+      },
+      {
+        "book": {
+          "bookId": "3300200141",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=e3c322f0813abb4aeg011f8e",
+          "title": "托尼瀑谷：电影《东尼涉谷》原著（轻经典）",
+          "author": "[日]村上春树",
+          "translator": "林少华",
+          "intro": "本文选自《列克星敦的幽灵》。托尼瀑谷生来就是一个人。父亲是吹长号的爵士乐手，母亲在他出世三天后死了。一个美国少校给他取了名，这个不像日本人的名字让他从小被孤立，却也让他习惯了独处。\r\n三十五岁时他疯狂爱上一个女孩——准确说来，是被她穿衣服时那种如小鸟裹着风的姿态击中了。婚后他终于不再孤独，却发现妻子对衣服有近乎病态的执念。满满一房间的衣服，是她无法填满的内心空洞。\r\n妻子意外身亡后，留下数百件7号衣服。他雇了一个同尺码的女孩来穿，又很快意识到一切都已结束了。孤独如墨汁般再次将他淹没。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/77/cpplatform_3g9lw7p58a7tm8szmx7qr7/s_cpplatform_3g9lw7p58a7tm8szmx7qr71775183407.jpg",
+          "version": 357273830,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 3,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 3,
+            "maxfreeChapterUid": 4,
+            "maxfreeChapterRatio": 6
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000121,
+          "publishTime": "2026-05-11 00:00:00",
+          "lastChapterIdx": 3,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 990,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 1345,
+        "tags": []
       }
     ],
     "preferCategory": [
@@ -1870,8 +2414,8 @@
         "categoryTitle": "文学",
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
-        "readingCount": 1,
-        "readingTime": 784
+        "readingCount": 4,
+        "readingTime": 5926
       },
       {
         "categoryId": 1000000,
@@ -1934,26 +2478,26 @@
     "readStat": [
       {
         "stat": "读过",
-        "counts": "1本"
+        "counts": "4本"
       },
       {
         "stat": "读完",
-        "counts": "0本"
+        "counts": "3本"
       },
       {
         "stat": "阅读",
-        "counts": "3天"
+        "counts": "9天"
       },
       {
         "stat": "笔记",
-        "counts": "0条"
+        "counts": "6条"
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.8388768003315719,
-    "dayAverageReadTime": 155,
+    "compare": -0.6051071276436524,
+    "dayAverageReadTime": 381,
     "baseTime": 1790784000,
-    "totalReadTime": 1555,
+    "totalReadTime": 6860,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -1982,49 +2526,45 @@
       },
       {
         "type": 7,
-        "title": "第一本阅读"
-      },
-      {
-        "type": 6,
-        "title": "最爱文学",
+        "title": "第一本阅读",
         "bookInfo": {
-          "bookId": "35523636",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
-          "title": "丰饶之海（第二卷）：奔马",
-          "author": "三岛由纪夫",
-          "translator": "陈德文",
-          "intro": "《丰饶之海》四部曲的第二部。在清显去世的十八年后，昭和七年本多繁邦满年满三十八岁，已经当上大阪控诉院法官。他在三轮山的三光瀑布遇到了由清显转生的饭沼勋，这时的阿勋深受《神风连史话》的影响，义无反顾地效忠已趋衰落的皇室，准备谋刺杀当时财经界的领袖，本多曾写了一封长信给勋，告诉他“《神风连史话》是一个已经结束的悲剧。”",
-          "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/s_YueWen_35523636.jpg",
-          "version": 1839042795,
+          "bookId": "3300200122",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=faf32a10813abb4acg012daa",
+          "title": "烧仓房：李沧东电影《燃烧》原著（轻经典）",
+          "author": "[日]村上春树",
+          "translator": "林少华",
+          "intro": "本文选自《萤》。一个写小说的\"我\"，一个神秘的有钱男人，和一个爱跳哑剧的女孩——三人之间弥漫着说不清的暧昧与不安。男人在酒醉后轻描淡写地说：\"我的爱好是烧仓房。\"\r\n从那以后，\"我\"开始四处寻找被烧毁的仓房，却一无所获。与此同时，女孩毫无征兆地人间蒸发了。烧掉的到底是什么？消失的人去了哪里？真相始终藏在日常的微笑之下。\r\n这是村上最具悬疑气质的短篇之一，故事不给答案，却让不安像野火一样蔓延至读完后的每一个深夜。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_6oqhaccekqjwkzctq7rjwo/s_cpplatform_6oqhaccekqjwkzctq7rjwo1775128022.jpg",
+          "version": 1766605504,
           "format": "epub",
           "type": 0,
           "soldout": 0,
           "bookStatus": 1,
-          "payType": 1048577,
+          "payType": 4097,
           "finished": 1,
-          "maxFreeChapter": 8,
+          "maxFreeChapter": 3,
           "maxFreeInfo": {
-            "maxfreeChapterIdx": 8,
-            "maxfreeChapterUid": 50,
-            "maxfreeChapterRatio": 20
+            "maxfreeChapterIdx": 3,
+            "maxfreeChapterUid": 4,
+            "maxfreeChapterRatio": 6
           },
           "free": 0,
           "mcardDiscount": 0,
           "ispub": 1,
           "extra_type": 5,
-          "cpid": -2571052,
-          "publishTime": "2018-09-18 00:00:00",
-          "lastChapterIdx": 43,
+          "cpid": 1000000121,
+          "publishTime": "2026-04-27 00:00:00",
+          "lastChapterIdx": 3,
           "paperBook": {
             "skuId": ""
           },
-          "centPrice": 3000,
+          "centPrice": 990,
           "copyrightChapterUids": [
-            44
+            2
           ],
           "inStoreBookId": "",
           "blockSaveImg": 0,
-          "language": "zh",
+          "language": "zh-wr",
           "isTraditionalChinese": false,
           "hideUpdateTime": false,
           "isEPUBComics": 0,
@@ -2034,7 +2574,59 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "阅读了2小时"
+        "reason": "2026/10/13/阅读"
+      },
+      {
+        "type": 6,
+        "title": "最爱文学",
+        "bookInfo": {
+          "bookId": "3300200122",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=faf32a10813abb4acg012daa",
+          "title": "烧仓房：李沧东电影《燃烧》原著（轻经典）",
+          "author": "[日]村上春树",
+          "translator": "林少华",
+          "intro": "本文选自《萤》。一个写小说的\"我\"，一个神秘的有钱男人，和一个爱跳哑剧的女孩——三人之间弥漫着说不清的暧昧与不安。男人在酒醉后轻描淡写地说：\"我的爱好是烧仓房。\"\r\n从那以后，\"我\"开始四处寻找被烧毁的仓房，却一无所获。与此同时，女孩毫无征兆地人间蒸发了。烧掉的到底是什么？消失的人去了哪里？真相始终藏在日常的微笑之下。\r\n这是村上最具悬疑气质的短篇之一，故事不给答案，却让不安像野火一样蔓延至读完后的每一个深夜。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_6oqhaccekqjwkzctq7rjwo/s_cpplatform_6oqhaccekqjwkzctq7rjwo1775128022.jpg",
+          "version": 1766605504,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 3,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 3,
+            "maxfreeChapterUid": 4,
+            "maxfreeChapterRatio": 6
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000121,
+          "publishTime": "2026-04-27 00:00:00",
+          "lastChapterIdx": 3,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 990,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "最爱分类"
       },
       {
         "type": 2,
@@ -2065,9 +2657,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 137808
+      "1767196800": 143113
     },
-    "readDays": 89,
+    "readDays": 95,
     "readLongest": [
       {
         "book": {
@@ -2586,8 +3178,8 @@
         "categoryTitle": "文学",
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
-        "readingCount": 8,
-        "readingTime": 68915
+        "readingCount": 11,
+        "readingTime": 73286
       },
       {
         "categoryId": 100001,
@@ -2650,7 +3242,7 @@
     "preferTimeWord": "偏好夜间阅读",
     "preferTime": [
       7329,
-      3269,
+      3565,
       1645,
       317,
       7,
@@ -2660,18 +3252,18 @@
       203,
       705,
       5713,
-      3563,
-      4453,
-      17524,
-      7408,
+      4834,
+      4987,
+      17667,
+      7810,
       9332,
-      6391,
-      13737,
-      15609,
+      6925,
+      14216,
+      16380,
       8774,
-      6549,
+      7234,
       6949,
-      5908,
+      6049,
       9129
     ],
     "preferAuthor": [
@@ -2686,6 +3278,12 @@
         "name": "约翰·斯坦贝克",
         "count": 2,
         "readTime": "2小时29分钟"
+      },
+      {
+        "authorId": 208765,
+        "name": "村上春树",
+        "count": 2,
+        "readTime": "1小时3分钟"
       },
       {
         "authorId": 522347,
@@ -2728,15 +3326,9 @@
         "name": "塞涅卡",
         "count": 1,
         "readTime": "2小时9分钟"
-      },
-      {
-        "authorId": 183442,
-        "name": "罗素",
-        "count": 1,
-        "readTime": "16分钟"
       }
     ],
-    "authorCount": 10,
+    "authorCount": 11,
     "preferCp": [
       {
         "count": 3,
@@ -2759,22 +3351,22 @@
         }
       },
       {
-        "count": 1,
+        "count": 2,
         "copyrightInfo": {
-          "name": "果麦文化",
-          "userVid": 290625916,
+          "name": "轻故事",
+          "userVid": 916162764,
           "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0002-ewckDJVkN2UQIDFW8MxCdf1/0",
+          "avatar": "https://res.weread.qq.com/wravatar/WV0018-Ya1JHZWCjRaiDjhfPh67cf2/0",
           "cpType": 0
         }
       },
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "湛庐CHEERS",
-          "userVid": 341281594,
+          "name": "果麦文化",
+          "userVid": 290625916,
           "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0011-ZlyTRc7hpfLYxdG7URz2m10/0",
+          "avatar": "https://res.weread.qq.com/wravatar/WV0002-ewckDJVkN2UQIDFW8MxCdf1/0",
           "cpType": 0
         }
       },
@@ -2791,10 +3383,10 @@
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "磨铁数盟",
-          "userVid": 351681843,
+          "name": "湛庐CHEERS",
+          "userVid": 341281594,
           "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
+          "avatar": "https://res.weread.qq.com/wravatar/WV0011-ZlyTRc7hpfLYxdG7URz2m10/0",
           "cpType": 0
         }
       },
@@ -2827,12 +3419,34 @@
           "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
           "cpType": 0
         }
+      },
+      {
+        "count": 1,
+        "copyrightInfo": {
+          "name": "磨铁数盟",
+          "userVid": 351681843,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
+          "cpType": 0
+        }
       }
     ],
     "preferPublisher": [
       {
         "name": "人民文学出版社",
         "count": 2
+      },
+      {
+        "name": "上海译文出版社",
+        "count": 1
+      },
+      {
+        "name": "中信出版集团",
+        "count": 1
+      },
+      {
+        "name": "北京科学技术出版社有限公司",
+        "count": 1
       },
       {
         "name": "浙江科学技术出版社",
@@ -2843,18 +3457,6 @@
         "count": 1
       },
       {
-        "name": "上海译文出版社",
-        "count": 1
-      },
-      {
-        "name": "北京科学技术出版社有限公司",
-        "count": 1
-      },
-      {
-        "name": "中信出版集团",
-        "count": 1
-      },
-      {
         "name": "山东文艺出版社",
         "count": 1
       }
@@ -2862,25 +3464,25 @@
     "readStat": [
       {
         "stat": "读过",
-        "counts": "15本"
+        "counts": "18本"
       },
       {
         "stat": "读完",
-        "counts": "8本"
+        "counts": "11本"
       },
       {
         "stat": "阅读",
-        "counts": "89天"
+        "counts": "95天"
       },
       {
         "stat": "笔记",
-        "counts": "170条"
+        "counts": "176条"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 137821,
+    "totalReadTime": 143126,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3261,7 +3863,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7498人读过"
+        "reason": "仅有7695人读过"
       },
       {
         "type": 8,
@@ -3593,11 +4195,11 @@
         "1782835200": 12976,
         "1785513600": 40160,
         "1788192000": 28953,
-        "1790784000": 1555,
+        "1790784000": 6860,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 87,
+      "readDays": 93,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -4117,8 +4719,8 @@
           "categoryTitle": "文学",
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
-          "readingCount": 8,
-          "readingTime": 68144
+          "readingCount": 11,
+          "readingTime": 73286
         },
         {
           "categoryId": 100001,
@@ -4153,18 +4755,18 @@
           "readingTime": 18052
         },
         {
-          "categoryId": 1600000,
-          "categoryTitle": "生活百科",
-          "parentCategoryId": 1600000,
-          "parentCategoryTitle": "生活百科",
-          "readingCount": 1,
-          "readingTime": 10732
-        },
-        {
           "categoryId": 2100000,
           "categoryTitle": "医学健康",
           "parentCategoryId": 2100000,
           "parentCategoryTitle": "医学健康",
+          "readingCount": 1,
+          "readingTime": 10732
+        },
+        {
+          "categoryId": 1600000,
+          "categoryTitle": "生活百科",
+          "parentCategoryId": 1600000,
+          "parentCategoryTitle": "生活百科",
           "readingCount": 1,
           "readingTime": 10732
         },
@@ -4183,13 +4785,19 @@
           "authorId": 394948,
           "name": "三岛由纪夫",
           "count": 2,
-          "readTime": "10小时32分钟"
+          "readTime": "10小时45分钟"
         },
         {
           "authorId": 222757,
           "name": "约翰·斯坦贝克",
           "count": 2,
           "readTime": "2小时29分钟"
+        },
+        {
+          "authorId": 208765,
+          "name": "村上春树",
+          "count": 2,
+          "readTime": "1小时3分钟"
         },
         {
           "authorId": 522347,
@@ -4232,15 +4840,9 @@
           "name": "塞涅卡",
           "count": 1,
           "readTime": "2小时9分钟"
-        },
-        {
-          "authorId": 183442,
-          "name": "罗素",
-          "count": 1,
-          "readTime": "16分钟"
         }
       ],
-      "authorCount": 10,
+      "authorCount": 11,
       "preferCp": [
         {
           "count": 3,
@@ -4263,42 +4865,22 @@
           }
         },
         {
+          "count": 2,
+          "copyrightInfo": {
+            "name": "轻故事",
+            "userVid": 916162764,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0018-Ya1JHZWCjRaiDjhfPh67cf2/0",
+            "cpType": 0
+          }
+        },
+        {
           "count": 1,
           "copyrightInfo": {
             "name": "果麦文化",
             "userVid": 290625916,
             "role": 2,
             "avatar": "https://res.weread.qq.com/wravatar/WV0002-ewckDJVkN2UQIDFW8MxCdf1/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
-            "name": "磨铁数盟",
-            "userVid": 351681843,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
-            "name": "湛庐CHEERS",
-            "userVid": 341281594,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0011-ZlyTRc7hpfLYxdG7URz2m10/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
-            "name": "中信出版集团",
-            "userVid": 168010251,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
             "cpType": 0
           }
         },
@@ -4331,16 +4913,42 @@
             "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
             "cpType": 0
           }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "磨铁数盟",
+            "userVid": 351681843,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "湛庐CHEERS",
+            "userVid": 341281594,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0011-ZlyTRc7hpfLYxdG7URz2m10/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "中信出版集团",
+            "userVid": 168010251,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
+            "cpType": 0
+          }
         }
       ],
       "preferPublisher": [
         {
           "name": "人民文学出版社",
           "count": 2
-        },
-        {
-          "name": "北京科学技术出版社有限公司",
-          "count": 1
         },
         {
           "name": "中信出版集团",
@@ -4355,6 +4963,10 @@
           "count": 1
         },
         {
+          "name": "北京科学技术出版社有限公司",
+          "count": 1
+        },
+        {
           "name": "上海译文出版社",
           "count": 1
         },
@@ -4366,25 +4978,25 @@
       "readStat": [
         {
           "stat": "读过",
-          "counts": "15本"
+          "counts": "18本"
         },
         {
           "stat": "读完",
-          "counts": "8本"
+          "counts": "11本"
         },
         {
           "stat": "阅读",
-          "counts": "87天"
+          "counts": "93天"
         },
         {
           "stat": "笔记",
-          "counts": "170条"
+          "counts": "176条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 486,
+      "dayAverageReadTime": 491,
       "baseTime": 1767196800,
-      "totalReadTime": 137808,
+      "totalReadTime": 143113,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -4583,6 +5195,790 @@
     }
   ],
   "notesByBook": {
+    "3300200116": {
+      "highlights": {
+        "synckey": 0,
+        "updated": [],
+        "removed": [],
+        "chapters": [],
+        "book": {
+          "bookId": "3300200116",
+          "version": 1003491567,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/44/cpplatform_pej5m8wv1dt9ewnemfjmnh/s_cpplatform_pej5m8wv1dt9ewnemfjmnh1775127717.jpg",
+          "title": "UFO飞落钏路：大地震之后被颠覆的日常生活（轻经典）",
+          "author": "[日]村上春树",
+          "coverBoxInfo": {
+            "blurhash": "K2R.iU?H*L9ua}%10PRjDh",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#371004"
+              },
+              {
+                "key": "1/6",
+                "hex": "#3e0700"
+              },
+              {
+                "key": "1/8",
+                "hex": "#450000"
+              },
+              {
+                "key": "2/4",
+                "hex": "#4b2719"
+              },
+              {
+                "key": "2/6",
+                "hex": "#542209"
+              },
+              {
+                "key": "2/8",
+                "hex": "#5c1b00"
+              },
+              {
+                "key": "3/4",
+                "hex": "#643e2c"
+              },
+              {
+                "key": "3/6",
+                "hex": "#6e391b"
+              },
+              {
+                "key": "3/8",
+                "hex": "#763504"
+              },
+              {
+                "key": "3/12",
+                "hex": "#822b00"
+              },
+              {
+                "key": "4/6",
+                "hex": "#8a5232"
+              },
+              {
+                "key": "4/10",
+                "hex": "#9a4a01"
+              },
+              {
+                "key": "4/4",
+                "hex": "#805741"
+              },
+              {
+                "key": "5/10",
+                "hex": "#b96320"
+              },
+              {
+                "key": "5/4",
+                "hex": "#99715a"
+              },
+              {
+                "key": "5/8",
+                "hex": "#b06736"
+              },
+              {
+                "key": "6/4",
+                "hex": "#b48b73"
+              },
+              {
+                "key": "6/6",
+                "hex": "#c18661"
+              },
+              {
+                "key": "6/8",
+                "hex": "#cc814f"
+              },
+              {
+                "key": "6/12",
+                "hex": "#de7921"
+              },
+              {
+                "key": "7/8",
+                "hex": "#e89c68"
+              },
+              {
+                "key": "7/10",
+                "hex": "#f39755"
+              },
+              {
+                "key": "7/12",
+                "hex": "#fd933c"
+              },
+              {
+                "key": "8/4",
+                "hex": "#eabfa4"
+              },
+              {
+                "key": "8/6",
+                "hex": "#f9bb92"
+              },
+              {
+                "key": "8/12",
+                "hex": "#ffad53"
+              },
+              {
+                "key": "9/2",
+                "hex": "#f4dfd2"
+              },
+              {
+                "key": "9/12",
+                "hex": "#ffc86e"
+              },
+              {
+                "key": "1/100",
+                "hex": "#cc814f"
+              },
+              {
+                "key": "2/100",
+                "hex": "#e89c68"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#F3E8E5"
+              },
+              {
+                "key": "5/100",
+                "hex": "#F3E8E5"
+              },
+              {
+                "key": "6/100",
+                "hex": "#270500"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#fee8da",
+              "hsv": [
+                23.24686466405133,
+                14.141162082936577,
+                99.5118887581919
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/116/3300200116/s_3300200116.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/116/3300200116/s_3300200116.jpg",
+            "colorsPure": [
+              "#de7921",
+              "#fd933c"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "3300200141": {
+      "highlights": {
+        "synckey": 1792256365,
+        "updated": [
+          {
+            "bookId": "3300200141",
+            "chapterIdx": 3,
+            "bookmarkId": "3300200141_4_5598-5706",
+            "range": "5598-5706",
+            "markText": "单单衣着得体的女人自然为数不少，自我炫耀似地穿红戴绿的女人数量就更多，但是她同那类女人有天壤之别。她穿得十分自然十分优美，宛如一只即将展翅飞向遥远世界的小鸟裹带着一身特殊的风，衣服也仿佛由于裹在她身上而获得新的生命。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 4,
+            "createTime": 1792256365
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "正文",
+            "chapterUid": 4,
+            "chapterIdx": 3
+          }
+        ],
+        "book": {
+          "bookId": "3300200141",
+          "version": 357273830,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/77/cpplatform_3g9lw7p58a7tm8szmx7qr7/s_cpplatform_3g9lw7p58a7tm8szmx7qr71775183407.jpg",
+          "title": "托尼瀑谷：电影《东尼涉谷》原著（轻经典）",
+          "author": "[日]村上春树",
+          "coverBoxInfo": {
+            "blurhash": "K4N^e?-;}bxGV@OB}vM{4m",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#151d23"
+              },
+              {
+                "key": "1/6",
+                "hex": "#151d23"
+              },
+              {
+                "key": "1/8",
+                "hex": "#151d23"
+              },
+              {
+                "key": "2/4",
+                "hex": "#2a3237"
+              },
+              {
+                "key": "2/6",
+                "hex": "#2a3237"
+              },
+              {
+                "key": "2/8",
+                "hex": "#2a3237"
+              },
+              {
+                "key": "3/4",
+                "hex": "#3f494f"
+              },
+              {
+                "key": "3/6",
+                "hex": "#3f494f"
+              },
+              {
+                "key": "3/8",
+                "hex": "#3f494f"
+              },
+              {
+                "key": "3/12",
+                "hex": "#3f494f"
+              },
+              {
+                "key": "4/6",
+                "hex": "#586267"
+              },
+              {
+                "key": "4/10",
+                "hex": "#586267"
+              },
+              {
+                "key": "4/4",
+                "hex": "#586267"
+              },
+              {
+                "key": "5/10",
+                "hex": "#717b80"
+              },
+              {
+                "key": "5/4",
+                "hex": "#717b80"
+              },
+              {
+                "key": "5/8",
+                "hex": "#717b80"
+              },
+              {
+                "key": "6/4",
+                "hex": "#8b959a"
+              },
+              {
+                "key": "6/6",
+                "hex": "#8b959a"
+              },
+              {
+                "key": "6/8",
+                "hex": "#8b959a"
+              },
+              {
+                "key": "6/12",
+                "hex": "#8b959a"
+              },
+              {
+                "key": "7/8",
+                "hex": "#a5afb3"
+              },
+              {
+                "key": "7/10",
+                "hex": "#a5afb3"
+              },
+              {
+                "key": "7/12",
+                "hex": "#a5afb3"
+              },
+              {
+                "key": "8/4",
+                "hex": "#c0c9ce"
+              },
+              {
+                "key": "8/6",
+                "hex": "#c0c9ce"
+              },
+              {
+                "key": "8/12",
+                "hex": "#c0c9ce"
+              },
+              {
+                "key": "9/2",
+                "hex": "#dbe5e9"
+              },
+              {
+                "key": "9/12",
+                "hex": "#dbe5e9"
+              },
+              {
+                "key": "1/100",
+                "hex": "#8b959a"
+              },
+              {
+                "key": "2/100",
+                "hex": "#a5afb3"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#E5ECF3"
+              },
+              {
+                "key": "5/100",
+                "hex": "#E5ECF3"
+              },
+              {
+                "key": "6/100",
+                "hex": "#001927"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#d4dee2",
+              "hsv": [
+                197.87940942053144,
+                5.991292865890999,
+                88.5558883190447
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/141/3300200141/s_3300200141.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/141/3300200141/s_3300200141.jpg",
+            "colorsPure": [
+              "#8b959a",
+              "#a5afb3"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "3300200121": {
+      "highlights": {
+        "synckey": 0,
+        "updated": [],
+        "removed": [],
+        "chapters": [],
+        "book": {
+          "bookId": "3300200121",
+          "version": 688142997,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/71/cpplatform_hdvwxbx7srs53wdhgbljrb/s_cpplatform_hdvwxbx7srs53wdhgbljrb1775127798.jpg",
+          "title": "萤：《挪威的森林》原型短篇（轻经典）",
+          "author": "[日]村上春树",
+          "coverBoxInfo": {
+            "blurhash": "K2ONB_xul=wNaeXlQVoJvd",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#161d23"
+              },
+              {
+                "key": "1/6",
+                "hex": "#161d23"
+              },
+              {
+                "key": "1/8",
+                "hex": "#161d23"
+              },
+              {
+                "key": "2/4",
+                "hex": "#2a3237"
+              },
+              {
+                "key": "2/6",
+                "hex": "#2a3237"
+              },
+              {
+                "key": "2/8",
+                "hex": "#2a3237"
+              },
+              {
+                "key": "3/4",
+                "hex": "#40494f"
+              },
+              {
+                "key": "3/6",
+                "hex": "#40494f"
+              },
+              {
+                "key": "3/8",
+                "hex": "#40494f"
+              },
+              {
+                "key": "3/12",
+                "hex": "#40494f"
+              },
+              {
+                "key": "4/6",
+                "hex": "#596167"
+              },
+              {
+                "key": "4/10",
+                "hex": "#596167"
+              },
+              {
+                "key": "4/4",
+                "hex": "#596167"
+              },
+              {
+                "key": "5/10",
+                "hex": "#727b80"
+              },
+              {
+                "key": "5/4",
+                "hex": "#727b80"
+              },
+              {
+                "key": "5/8",
+                "hex": "#727b80"
+              },
+              {
+                "key": "6/4",
+                "hex": "#8c9599"
+              },
+              {
+                "key": "6/6",
+                "hex": "#8c9599"
+              },
+              {
+                "key": "6/8",
+                "hex": "#8c9599"
+              },
+              {
+                "key": "6/12",
+                "hex": "#8c9599"
+              },
+              {
+                "key": "7/8",
+                "hex": "#a6afb3"
+              },
+              {
+                "key": "7/10",
+                "hex": "#a6afb3"
+              },
+              {
+                "key": "7/12",
+                "hex": "#a6afb3"
+              },
+              {
+                "key": "8/4",
+                "hex": "#c1c9cd"
+              },
+              {
+                "key": "8/6",
+                "hex": "#c1c9cd"
+              },
+              {
+                "key": "8/12",
+                "hex": "#c1c9cd"
+              },
+              {
+                "key": "9/2",
+                "hex": "#dbe4e8"
+              },
+              {
+                "key": "9/12",
+                "hex": "#dbe4e8"
+              },
+              {
+                "key": "1/100",
+                "hex": "#8c9599"
+              },
+              {
+                "key": "2/100",
+                "hex": "#a6afb3"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#E5ECF3"
+              },
+              {
+                "key": "5/100",
+                "hex": "#E5ECF3"
+              },
+              {
+                "key": "6/100",
+                "hex": "#001927"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#d5dee2",
+              "hsv": [
+                197.85028433746369,
+                6.008163055274878,
+                88.68041053852775
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/121/3300200121/s_3300200121.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/121/3300200121/s_3300200121.jpg",
+            "colorsPure": [
+              "#8c9599",
+              "#a6afb3"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "3300200122": {
+      "highlights": {
+        "synckey": 1791887062,
+        "updated": [
+          {
+            "bookId": "3300200122",
+            "chapterIdx": 3,
+            "bookmarkId": "3300200122_4_13858-13878",
+            "range": "13858-13878",
+            "markText": "然而话如细涓渗入沙地倏然中止，再无下文。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 4,
+            "createTime": 1791887062
+          },
+          {
+            "bookId": "3300200122",
+            "chapterIdx": 3,
+            "bookmarkId": "3300200122_4_12683-12721",
+            "range": "12683-12721",
+            "markText": "我不时掠过一念：他会不会叫我烧仓房呢？就是说，他往我脑袋里输入烧仓房这一图像",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 4,
+            "createTime": 1791886962
+          },
+          {
+            "bookId": "3300200122",
+            "chapterIdx": 3,
+            "bookmarkId": "3300200122_4_9508-9632",
+            "range": "9508-9632",
+            "markText": "那就是说，你烧仓房属于符合道德规范的行为啰？”\n“准确说来不然，而是维护道德规范的行为。不过，道德规范最好还是忘掉，在这里它不是本质性的。我想说的是：世界上有许许多多那样的仓房。我有我的仓房，你有你的仓房",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 4,
+            "createTime": 1791885502
+          },
+          {
+            "bookId": "3300200122",
+            "chapterIdx": 3,
+            "bookmarkId": "3300200122_4_1278-1487",
+            "range": "1278-1487",
+            "markText": "她拿起一个想象中的橘子，慢慢剥皮，一瓣一瓣放入口中把渣吐出。吃罢一个，把渣归拢到一起用橘皮包好放入右边的盆。如此反复不止。用语言说来，自然算不了什么事。然而实际在眼前看十分二十分钟——我和她在酒吧高台前闲聊的时间里她一直边说边几乎下意识地如此“剥橘皮”——我渐渐觉得现实感从自己周围被吮吸掉了。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 4,
+            "createTime": 1791884410
+          },
+          {
+            "bookId": "3300200122",
+            "chapterIdx": 3,
+            "bookmarkId": "3300200122_4_1785-1898",
+            "range": "1785-1898",
+            "markText": "“哎哟，这还不简单，哪里谈得上才能！总之不是以为这里有橘子，而只要忘掉这里没橘子就行了嘛，非常简单。”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 4,
+            "createTime": 1791884396
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "正文",
+            "chapterUid": 4,
+            "chapterIdx": 3
+          }
+        ],
+        "book": {
+          "bookId": "3300200122",
+          "version": 1766605504,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_6oqhaccekqjwkzctq7rjwo/s_cpplatform_6oqhaccekqjwkzctq7rjwo1775128022.jpg",
+          "title": "烧仓房：李沧东电影《燃烧》原著（轻经典）",
+          "author": "[日]村上春树",
+          "coverBoxInfo": {
+            "blurhash": "K2ODnLxu*~m-adk;vTn~U[",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#151d23"
+              },
+              {
+                "key": "1/6",
+                "hex": "#151d23"
+              },
+              {
+                "key": "1/8",
+                "hex": "#151d23"
+              },
+              {
+                "key": "2/4",
+                "hex": "#2a3237"
+              },
+              {
+                "key": "2/6",
+                "hex": "#2a3237"
+              },
+              {
+                "key": "2/8",
+                "hex": "#2a3237"
+              },
+              {
+                "key": "3/4",
+                "hex": "#3f494f"
+              },
+              {
+                "key": "3/6",
+                "hex": "#3f494f"
+              },
+              {
+                "key": "3/8",
+                "hex": "#3f494f"
+              },
+              {
+                "key": "3/12",
+                "hex": "#3f494f"
+              },
+              {
+                "key": "4/6",
+                "hex": "#586267"
+              },
+              {
+                "key": "4/10",
+                "hex": "#586267"
+              },
+              {
+                "key": "4/4",
+                "hex": "#586267"
+              },
+              {
+                "key": "5/10",
+                "hex": "#717b80"
+              },
+              {
+                "key": "5/4",
+                "hex": "#717b80"
+              },
+              {
+                "key": "5/8",
+                "hex": "#717b80"
+              },
+              {
+                "key": "6/4",
+                "hex": "#8b959a"
+              },
+              {
+                "key": "6/6",
+                "hex": "#8b959a"
+              },
+              {
+                "key": "6/8",
+                "hex": "#8b959a"
+              },
+              {
+                "key": "6/12",
+                "hex": "#8b959a"
+              },
+              {
+                "key": "7/8",
+                "hex": "#a5afb3"
+              },
+              {
+                "key": "7/10",
+                "hex": "#a5afb3"
+              },
+              {
+                "key": "7/12",
+                "hex": "#a5afb3"
+              },
+              {
+                "key": "8/4",
+                "hex": "#c0c9ce"
+              },
+              {
+                "key": "8/6",
+                "hex": "#c0c9ce"
+              },
+              {
+                "key": "8/12",
+                "hex": "#c0c9ce"
+              },
+              {
+                "key": "9/2",
+                "hex": "#dbe5e9"
+              },
+              {
+                "key": "9/12",
+                "hex": "#dbe5e9"
+              },
+              {
+                "key": "1/100",
+                "hex": "#8b959a"
+              },
+              {
+                "key": "2/100",
+                "hex": "#a5afb3"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#E5ECF3"
+              },
+              {
+                "key": "5/100",
+                "hex": "#E5ECF3"
+              },
+              {
+                "key": "6/100",
+                "hex": "#001927"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#d4dee2",
+              "hsv": [
+                197.86733248396576,
+                5.99735987575886,
+                88.62466939620689
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/122/3300200122/s_3300200122.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/122/3300200122/s_3300200122.jpg",
+            "colorsPure": [
+              "#8b959a",
+              "#a5afb3"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
     "35523636": {
       "highlights": {
         "synckey": 1790237544,
