@@ -19,7 +19,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Fetch public showcase data
         env:
           WEREAD_API_KEY: ${{ secrets.WEREAD_API_KEY }}
@@ -35,12 +35,15 @@ jobs:
           }
 
           check_payload() {
-            jq -e '((.errcode // 0) == 0) and (has("upgrade_info") | not)' <<<"$1" >/dev/null
+            if ! jq -e '((.errcode // 0) == 0) and (has("upgrade_info") | not)' <<<"$1" >/dev/null; then
+              jq -c '{errcode,errmsg,upgrade_info}' <<<"$1" >&2
+              return 1
+            fi
           }
 
-          shelf="$(gateway '{"api_name":"/shelf/sync","skill_version":"1.0.4"}')"
-          monthly="$(gateway '{"api_name":"/readdata/detail","skill_version":"1.0.4","mode":"monthly","baseTime":0}')"
-          overall="$(gateway '{"api_name":"/readdata/detail","skill_version":"1.0.4","mode":"overall","baseTime":0}')"
+          shelf="$(gateway '{"api_name":"/shelf/sync","skill_version":"1.0.5"}')"
+          monthly="$(gateway '{"api_name":"/readdata/detail","skill_version":"1.0.5","mode":"monthly","baseTime":0}')"
+          overall="$(gateway '{"api_name":"/readdata/detail","skill_version":"1.0.5","mode":"overall","baseTime":0}')"
 
           for payload in "$shelf" "$monthly" "$overall"; do
             check_payload "$payload"
@@ -52,9 +55,9 @@ jobs:
           while [ "$notebook_page" -lt 100 ]; do
             if [ -n "$last_sort" ]; then
               notebook_request="$(jq -cn --argjson lastSort "$last_sort" \
-                '{api_name:"/user/notebooks",skill_version:"1.0.4",count:100,lastSort:$lastSort}')"
+                '{api_name:"/user/notebooks",skill_version:"1.0.5",count:100,lastSort:$lastSort}')"
             else
-              notebook_request='{"api_name":"/user/notebooks","skill_version":"1.0.4","count":100}'
+              notebook_request='{"api_name":"/user/notebooks","skill_version":"1.0.5","count":100}'
             fi
             notebook_result="$(gateway "$notebook_request")"
             check_payload "$notebook_result"
@@ -82,7 +85,7 @@ jobs:
           for ((year=registration_year; year<=current_year; year++)); do
             base_time="$(date -u -d "${year}-01-01 00:00:00" +%s)"
             annual_request="$(jq -cn --argjson baseTime "$base_time" \
-              '{api_name:"/readdata/detail",skill_version:"1.0.4",mode:"annually",baseTime:$baseTime}')"
+              '{api_name:"/readdata/detail",skill_version:"1.0.5",mode:"annually",baseTime:$baseTime}')"
             annual_result="$(gateway "$annual_request")"
             check_payload "$annual_result"
             annual_reports="$(jq -cn --argjson current "$annual_reports" --argjson report "$annual_result" \
@@ -127,7 +130,7 @@ jobs:
             [ -n "$book_id" ] || continue
 
             highlights_request="$(jq -cn --arg bookId "$book_id" \
-              '{api_name:"/book/bookmarklist",skill_version:"1.0.4",bookId:$bookId}')"
+              '{api_name:"/book/bookmarklist",skill_version:"1.0.5",bookId:$bookId}')"
             highlights="$(gateway "$highlights_request")"
             check_payload "$highlights"
 
@@ -136,7 +139,7 @@ jobs:
             thought_page=0
             while [ "$thought_page" -lt 20 ]; do
               thoughts_request="$(jq -cn --arg bookid "$book_id" --argjson synckey "$thought_synckey" \
-                '{api_name:"/review/list/mine",skill_version:"1.0.4",bookid:$bookid,synckey:$synckey,count:100}')"
+                '{api_name:"/review/list/mine",skill_version:"1.0.5",bookid:$bookid,synckey:$synckey,count:100}')"
               thoughts_page="$(gateway "$thoughts_request")"
               check_payload "$thoughts_page"
               thought_items="$(jq -cn --argjson current "$thought_items" --argjson page "$thoughts_page" \
