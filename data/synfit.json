@@ -1,10 +1,48 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-18T07:18:25.100Z",
+  "updatedAt": "2026-10-19T07:56:05.917Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-10-18",
+        "title": "高强度间歇训练",
+        "start": 1792325442293,
+        "durationMinutes": 161,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 1781,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "HighIntensityIntervalTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-10-17",
+        "title": "高强度间歇训练",
+        "start": 1792229022446,
+        "durationMinutes": 0,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 2676,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "HighIntensityIntervalTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-10-16",
         "title": "高强度间歇训练",
@@ -17116,7 +17154,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-16"
+      "to": "2026-10-18"
     }
   },
   "body": {
