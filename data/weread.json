@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-10-19T22:20:32Z",
+  "updatedAt": "2026-10-20T04:48:37Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -19,6 +19,18 @@
     "albums": [],
     "archive": [],
     "books": [
+      {
+        "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+        "readerLink": "https://weread.qq.com/web/reader/7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+        "title": "日常生活中的自我呈现",
+        "author": "[美] 欧文·戈夫曼",
+        "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
+        "updateTime": 1792450556,
+        "secret": 1,
+        "finishReading": 0,
+        "readUpdateTime": 1792451200
+      },
       {
         "bookId": "3300200141",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=e3c322f0813abb4aeg011f8e",
@@ -254,6 +266,18 @@
   },
   "history": {
     "books": [
+      {
+        "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+        "readerLink": "https://weread.qq.com/web/reader/7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+        "title": "日常生活中的自我呈现",
+        "author": "[美] 欧文·戈夫曼",
+        "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
+        "updateTime": 1792450556,
+        "secret": 1,
+        "finishReading": 0,
+        "readUpdateTime": 1792451200
+      },
       {
         "bookId": "3300200116",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=a28320b0813abb4abg01623d",
@@ -2191,15 +2215,16 @@
       "1791043200": 18,
       "1791475200": 368,
       "1791561600": 771,
-      "1791734400": 0,
       "1791820800": 2060,
       "1791907200": 571,
       "1791993600": 622,
       "1792080000": 296,
       "1792166400": 936,
-      "1792252800": 820
+      "1792252800": 820,
+      "1792339200": 0,
+      "1792425600": 132
     },
-    "readDays": 9,
+    "readDays": 10,
     "readLongest": [
       {
         "book": {
@@ -2486,7 +2511,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "9天"
+        "counts": "10天"
       },
       {
         "stat": "笔记",
@@ -2494,10 +2519,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.6445964148792871,
-    "dayAverageReadTime": 343,
+    "compare": -0.6377577453113666,
+    "dayAverageReadTime": 349,
     "baseTime": 1790784000,
-    "totalReadTime": 6860,
+    "totalReadTime": 6992,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2657,9 +2682,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 143113
+      "1767196800": 143245
     },
-    "readDays": 95,
+    "readDays": 96,
     "readLongest": [
       {
         "book": {
@@ -3472,7 +3497,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "95天"
+        "counts": "96天"
       },
       {
         "stat": "笔记",
@@ -3482,7 +3507,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 143126,
+    "totalReadTime": 143258,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3863,7 +3888,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7744人读过"
+        "reason": "仅有7749人读过"
       },
       {
         "type": 8,
@@ -4195,11 +4220,11 @@
         "1782835200": 12976,
         "1785513600": 40160,
         "1788192000": 28953,
-        "1790784000": 6860,
+        "1790784000": 6992,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 93,
+      "readDays": 94,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -4986,7 +5011,7 @@
         },
         {
           "stat": "阅读",
-          "counts": "93天"
+          "counts": "94天"
         },
         {
           "stat": "笔记",
@@ -4996,7 +5021,7 @@
       "registTime": 1645667800,
       "dayAverageReadTime": 488,
       "baseTime": 1767196800,
-      "totalReadTime": 143113,
+      "totalReadTime": 143245,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -5195,6 +5220,33 @@
     }
   ],
   "notesByBook": {
+    "CB_8WSAeaAbjA6w77875hFO56Xg": {
+      "highlights": {
+        "synckey": 0,
+        "updated": [],
+        "removed": [],
+        "chapters": [],
+        "book": {
+          "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+          "version": 1395936188,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
+          "title": "日常生活中的自我呈现",
+          "author": "[美] 欧文·戈夫曼",
+          "coverBoxInfo": {
+            "colorsPure": [
+              "#93B0DA",
+              "#98B8DD"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
     "3300200116": {
       "highlights": {
         "synckey": 0,
