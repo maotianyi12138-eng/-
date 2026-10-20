@@ -1,10 +1,43 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-19T07:56:05.917Z",
+  "updatedAt": "2026-10-20T07:45:40.715Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-10-18",
+        "title": "肩 腿前侧",
+        "start": 1792417110785,
+        "durationMinutes": 1,
+        "setCount": 10,
+        "volumeKg": 1622.4,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "绳索交叉后束飞鸟",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 122.4,
+            "maxWeightKg": 3.4
+          },
+          {
+            "name": "Y字绳索侧平举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 540,
+            "maxWeightKg": 15
+          },
+          {
+            "name": "史密斯机推举",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 960,
+            "maxWeightKg": 20
+          }
+        ]
+      },
       {
         "date": "2026-10-18",
         "title": "高强度间歇训练",
@@ -17194,13 +17227,19 @@
         "type": "weight",
         "value": 87,
         "unit": "kg"
+      },
+      {
+        "date": "2026-10-19",
+        "type": "weight",
+        "value": 60,
+        "unit": "kg"
       }
     ],
     "latest": {
       "weight": {
-        "date": "2026-08-14",
+        "date": "2026-10-19",
         "type": "weight",
-        "value": 87,
+        "value": 60,
         "unit": "kg"
       }
     }
