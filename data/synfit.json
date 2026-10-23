@@ -1,10 +1,102 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-22T07:45:46.329Z",
+  "updatedAt": "2026-10-23T07:43:24.226Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-10-22",
+        "title": "训练",
+        "start": 1792699661976,
+        "durationMinutes": 33,
+        "setCount": 22,
+        "volumeKg": 7672.2,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "杠铃卧推",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 3360,
+            "maxWeightKg": 70
+          },
+          {
+            "name": "把手式蝴蝶机飞鸟",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1398.9,
+            "maxWeightKg": 29.9
+          },
+          {
+            "name": "上斜史密斯机卧推",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1920,
+            "maxWeightKg": 40
+          },
+          {
+            "name": "双杠臂屈伸（辅助）",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          },
+          {
+            "name": "绳索臂屈伸（单）",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 258.5,
+            "maxWeightKg": 7.9
+          },
+          {
+            "name": "绳索臂屈伸",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 734.8,
+            "maxWeightKg": 20.4
+          }
+        ]
+      },
+      {
+        "date": "2026-10-22",
+        "title": "传统力量训练",
+        "start": 1792696979928,
+        "durationMinutes": 78,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 477,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "TraditionalStrengthTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-10-21",
+        "title": "高强度间歇训练",
+        "start": 1792608561017,
+        "durationMinutes": 89,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 1038,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "HighIntensityIntervalTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-10-20",
         "title": "肩腿后侧",
@@ -63,6 +155,25 @@
             "totalReps": 48,
             "volumeKg": 2580,
             "maxWeightKg": 59
+          }
+        ]
+      },
+      {
+        "date": "2026-10-19",
+        "title": "传统力量训练",
+        "start": 1792415839057,
+        "durationMinutes": 135,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 646,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "TraditionalStrengthTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
           }
         ]
       },
@@ -130,10 +241,10 @@
       {
         "date": "2026-10-18",
         "title": "肩 腿前侧",
-        "start": 1792417110785,
+        "start": 1792710879472,
         "durationMinutes": 1,
-        "setCount": 10,
-        "volumeKg": 1622.4,
+        "setCount": 26,
+        "volumeKg": 8558.4,
         "calories": 0,
         "distance": 0,
         "movements": [
@@ -157,6 +268,53 @@
             "totalReps": 48,
             "volumeKg": 960,
             "maxWeightKg": 20
+          },
+          {
+            "name": "坐姿腿屈伸",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1800,
+            "maxWeightKg": 37.5
+          },
+          {
+            "name": "坐姿髋外展",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2496,
+            "maxWeightKg": 52
+          },
+          {
+            "name": "坐姿髋内收",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2160,
+            "maxWeightKg": 45
+          },
+          {
+            "name": "史密斯机箭步蹲",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 480,
+            "maxWeightKg": 10
+          }
+        ]
+      },
+      {
+        "date": "2026-10-18",
+        "title": "传统力量训练",
+        "start": 1792335141057,
+        "durationMinutes": 83,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 485,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "TraditionalStrengthTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
           }
         ]
       },
@@ -663,6 +821,25 @@
         ]
       },
       {
+        "date": "2026-10-05",
+        "title": "传统力量训练",
+        "start": 1791195822564,
+        "durationMinutes": 83,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 616,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "TraditionalStrengthTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
         "date": "2026-10-04",
         "title": "训练",
         "start": 1791146729711,
@@ -764,6 +941,25 @@
         ]
       },
       {
+        "date": "2026-10-03",
+        "title": "传统力量训练",
+        "start": 1791020519894,
+        "durationMinutes": 125,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 762,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "TraditionalStrengthTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
         "date": "2026-10-02",
         "title": "训练",
         "start": 1791123287710,
@@ -800,6 +996,25 @@
             "totalReps": 36,
             "volumeKg": 540,
             "maxWeightKg": 15
+          }
+        ]
+      },
+      {
+        "date": "2026-10-01",
+        "title": "传统力量训练",
+        "start": 1790880011768,
+        "durationMinutes": 69,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 379,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "TraditionalStrengthTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
           }
         ]
       },
@@ -871,6 +1086,25 @@
       },
       {
         "date": "2026-09-29",
+        "title": "传统力量训练",
+        "start": 1790679517033,
+        "durationMinutes": 201,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 976,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "TraditionalStrengthTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-29",
         "title": "训练",
         "start": 0,
         "durationMinutes": 0,
@@ -904,6 +1138,25 @@
             "name": "双杠臂屈伸（辅助）",
             "setCount": 3,
             "totalReps": 36,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-09-28",
+        "title": "传统力量训练",
+        "start": 1790597544730,
+        "durationMinutes": 62,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 345,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "TraditionalStrengthTraining",
+            "setCount": 1,
+            "totalReps": 0,
             "volumeKg": 0,
             "maxWeightKg": 0
           }
@@ -17309,7 +17562,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-20"
+      "to": "2026-10-22"
     }
   },
   "body": {
@@ -17355,13 +17608,25 @@
         "type": "weight",
         "value": 60,
         "unit": "kg"
+      },
+      {
+        "date": "2026-10-22",
+        "type": "weight",
+        "value": 87,
+        "unit": "kg"
+      },
+      {
+        "date": "2026-10-23",
+        "type": "weight",
+        "value": 87,
+        "unit": "kg"
       }
     ],
     "latest": {
       "weight": {
-        "date": "2026-10-19",
+        "date": "2026-10-23",
         "type": "weight",
-        "value": 60,
+        "value": 87,
         "unit": "kg"
       }
     }
