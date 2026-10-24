@@ -1,17 +1,36 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-23T07:43:24.226Z",
+  "updatedAt": "2026-10-24T07:25:58.717Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
       {
+        "date": "2026-10-23",
+        "title": "跑步",
+        "start": 1792749208304,
+        "durationMinutes": 36,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 315,
+        "distance": 3.26,
+        "movements": [
+          {
+            "name": "Running",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
         "date": "2026-10-22",
         "title": "训练",
-        "start": 1792699661976,
-        "durationMinutes": 33,
+        "start": 1792792298683,
+        "durationMinutes": 34,
         "setCount": 22,
-        "volumeKg": 7672.2,
+        "volumeKg": 8868.9,
         "calories": 0,
         "distance": 0,
         "movements": [
@@ -47,15 +66,15 @@
             "name": "绳索臂屈伸（单）",
             "setCount": 3,
             "totalReps": 36,
-            "volumeKg": 258.5,
-            "maxWeightKg": 7.9
+            "volumeKg": 570,
+            "maxWeightKg": 17.5
           },
           {
             "name": "绳索臂屈伸",
             "setCount": 3,
             "totalReps": 36,
-            "volumeKg": 734.8,
-            "maxWeightKg": 20.4
+            "volumeKg": 1620,
+            "maxWeightKg": 45
           }
         ]
       },
@@ -100,10 +119,10 @@
       {
         "date": "2026-10-20",
         "title": "肩腿后侧",
-        "start": 1792523475252,
+        "start": 1792709771454,
         "durationMinutes": 20,
-        "setCount": 23,
-        "volumeKg": 8712.4,
+        "setCount": 25,
+        "volumeKg": 9192.4,
         "calories": 0,
         "distance": 0,
         "movements": [
@@ -123,9 +142,9 @@
           },
           {
             "name": "史密斯机推举",
-            "setCount": 2,
-            "totalReps": 24,
-            "volumeKg": 540,
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1020,
             "maxWeightKg": 25
           },
           {
@@ -17562,7 +17581,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-22"
+      "to": "2026-10-23"
     }
   },
   "body": {
