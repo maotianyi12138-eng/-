@@ -1,10 +1,104 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-24T07:25:58.717Z",
+  "updatedAt": "2026-10-25T07:40:55.854Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-10-24",
+        "title": "肩 腿前侧",
+        "start": 1792843459265,
+        "durationMinutes": 51,
+        "setCount": 30,
+        "volumeKg": 9650.4,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "绳索交叉后束飞鸟",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 122.4,
+            "maxWeightKg": 3.4
+          },
+          {
+            "name": "Y字绳索侧平举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 540,
+            "maxWeightKg": 15
+          },
+          {
+            "name": "史密斯机推举",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 960,
+            "maxWeightKg": 20
+          },
+          {
+            "name": "坐姿腿屈伸",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 1152,
+            "maxWeightKg": 32
+          },
+          {
+            "name": "坐姿髋外展",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2160,
+            "maxWeightKg": 45
+          },
+          {
+            "name": "坐姿髋内收",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2496,
+            "maxWeightKg": 52
+          },
+          {
+            "name": "史密斯机箭步蹲",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 540,
+            "maxWeightKg": 15
+          },
+          {
+            "name": "史密斯机深蹲",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 1320,
+            "maxWeightKg": 40
+          },
+          {
+            "name": "史密斯机保加利亚蹲",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 360,
+            "maxWeightKg": 10
+          }
+        ]
+      },
+      {
+        "date": "2026-10-24",
+        "title": "羽毛球",
+        "start": 1792835558432,
+        "durationMinutes": 128,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 1017,
+        "distance": 3.27,
+        "movements": [
+          {
+            "name": "AppleHealthWorkout",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-10-23",
         "title": "跑步",
@@ -17581,7 +17675,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-23"
+      "to": "2026-10-24"
     }
   },
   "body": {
