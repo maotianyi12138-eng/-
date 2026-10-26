@@ -49,7 +49,14 @@ jobs:
             check_payload "$payload"
           done
 
-          notebook_books='[]'
+          work_dir="$(mktemp -d)"
+          trap 'rm -rf "$work_dir"' EXIT
+          printf '%s\n' "$shelf" > "$work_dir/shelf.json"
+          printf '%s\n' "$monthly" > "$work_dir/monthly.json"
+          printf '%s\n' "$overall" > "$work_dir/overall.json"
+
+          notebook_entries="$work_dir/notebooks.ndjson"
+          : > "$notebook_entries"
           last_sort=''
           notebook_page=0
           while [ "$notebook_page" -lt 100 ]; do
@@ -61,8 +68,7 @@ jobs:
             fi
             notebook_result="$(gateway "$notebook_request")"
             check_payload "$notebook_result"
-            notebook_books="$(jq -cn --argjson current "$notebook_books" --argjson page "$notebook_result" \
-              '$current + ($page.books // [])')"
+            jq -c '.books[]?' <<<"$notebook_result" >> "$notebook_entries"
 
             if ! jq -e '(.hasMore == 1) or (.hasMore == true)' <<<"$notebook_result" >/dev/null; then
               break
@@ -72,11 +78,12 @@ jobs:
             last_sort="$next_sort"
             notebook_page=$((notebook_page + 1))
           done
-          notebooks="$(jq -cn --argjson books "$notebook_books" '{books:$books}')"
+          jq -s '{books:.}' "$notebook_entries" > "$work_dir/notebooks.json"
 
-          annual_reports='[]'
+          annual_entries="$work_dir/annual.ndjson"
+          : > "$annual_entries"
           current_year="$(date -u +%Y)"
-          registration_time="$(jq -r '.registTime // 0' <<<"$overall")"
+          registration_time="$(jq -r '.registTime // 0' "$work_dir/overall.json")"
           if [ "$registration_time" -gt 0 ]; then
             registration_year="$(date -u -d "@${registration_time}" +%Y)"
           else
@@ -88,15 +95,19 @@ jobs:
               '{api_name:"/readdata/detail",skill_version:"1.0.5",mode:"annually",baseTime:$baseTime}')"
             annual_result="$(gateway "$annual_request")"
             check_payload "$annual_result"
-            annual_reports="$(jq -cn --argjson current "$annual_reports" --argjson report "$annual_result" \
-              '$current + [$report]')"
+            printf '%s\n' "$annual_result" >> "$annual_entries"
           done
+          jq -s '.' "$annual_entries" > "$work_dir/annual-reports.json"
 
-          history_books="$(jq -cn \
-            --argjson shelf "$shelf" \
-            --argjson notebooks "$notebooks" \
-            --argjson overall "$overall" \
-            --argjson annual "$annual_reports" '
+          jq -n \
+            --slurpfile shelf "$work_dir/shelf.json" \
+            --slurpfile notebooks "$work_dir/notebooks.json" \
+            --slurpfile overall "$work_dir/overall.json" \
+            --slurpfile annual "$work_dir/annual-reports.json" '
+              ($shelf[0]) as $shelf |
+              ($notebooks[0]) as $notebooks |
+              ($overall[0]) as $overall |
+              ($annual[0]) as $annual |
               [
                 ($notebooks.books[]? |
                   ((.book // {}) + {
@@ -121,11 +132,13 @@ jobs:
                   finishReading:(.finishReading // (if .markedStatus == 1 then 1 else 0 end))
                 })
               | sort_by(-(.readUpdateTime // .lastNoteSort // .finishTime // .updateTime // 0), (.title // ""))
-            ')"
+            ' > "$work_dir/history-books.json"
 
-          total_read_count="$(jq -r '[.readStat[]? | select(.stat == "读过") | .counts | capture("(?<n>[0-9]+)").n][0] // "0"' <<<"$overall")"
+          total_read_count="$(jq -r '[.readStat[]? | select(.stat == "读过") | .counts | capture("(?<n>[0-9]+)").n][0] // "0"' "$work_dir/overall.json")"
 
-          notes='{}'
+          notes_entries="$work_dir/notes.ndjson"
+          : > "$notes_entries"
+          note_index=0
           while IFS= read -r book_id; do
             [ -n "$book_id" ] || continue
 
@@ -133,8 +146,11 @@ jobs:
               '{api_name:"/book/bookmarklist",skill_version:"1.0.5",bookId:$bookId}')"
             highlights="$(gateway "$highlights_request")"
             check_payload "$highlights"
+            highlights_file="$work_dir/highlights-${note_index}.json"
+            printf '%s\n' "$highlights" > "$highlights_file"
 
-            thought_items='[]'
+            thought_entries="$work_dir/thoughts-${note_index}.ndjson"
+            : > "$thought_entries"
             thought_synckey=0
             thought_page=0
             while [ "$thought_page" -lt 20 ]; do
@@ -142,8 +158,7 @@ jobs:
                 '{api_name:"/review/list/mine",skill_version:"1.0.5",bookid:$bookid,synckey:$synckey,count:100}')"
               thoughts_page="$(gateway "$thoughts_request")"
               check_payload "$thoughts_page"
-              thought_items="$(jq -cn --argjson current "$thought_items" --argjson page "$thoughts_page" \
-                '$current + ($page.reviews // [])')"
+              jq -c '.reviews[]?' <<<"$thoughts_page" >> "$thought_entries"
 
               if ! jq -e '(.hasMore == 1) or (.hasMore == true)' <<<"$thoughts_page" >/dev/null; then
                 break
@@ -154,36 +169,39 @@ jobs:
               thought_page=$((thought_page + 1))
             done
 
-            thoughts="$(jq -cn --argjson reviews "$thought_items" '{reviews:$reviews}')"
-            notes="$(jq -cn \
-              --argjson notes "$notes" \
+            thoughts_file="$work_dir/thoughts-${note_index}.json"
+            jq -s '{reviews:.}' "$thought_entries" > "$thoughts_file"
+            jq -cn \
               --arg bookId "$book_id" \
-              --argjson highlights "$highlights" \
-              --argjson thoughts "$thoughts" \
-              '$notes + {($bookId): {highlights:$highlights,thoughts:$thoughts}}')"
-          done < <(jq -r '.[]?.bookId // empty' <<<"$history_books")
+              --slurpfile highlights "$highlights_file" \
+              --slurpfile thoughts "$thoughts_file" \
+              '{key:$bookId,value:{highlights:$highlights[0],thoughts:$thoughts[0]}}' \
+              >> "$notes_entries"
+            note_index=$((note_index + 1))
+          done < <(jq -r '.[]?.bookId // empty' "$work_dir/history-books.json")
+          jq -s 'from_entries' "$notes_entries" > "$work_dir/notes.json"
 
           mkdir -p data
           jq -n \
             --arg updatedAt "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
-            --argjson shelf "$shelf" \
-            --argjson monthly "$monthly" \
-            --argjson overall "$overall" \
-            --argjson notebooks "$notebooks" \
-            --argjson annualReports "$annual_reports" \
-            --argjson historyBooks "$history_books" \
+            --slurpfile shelf "$work_dir/shelf.json" \
+            --slurpfile monthly "$work_dir/monthly.json" \
+            --slurpfile overall "$work_dir/overall.json" \
+            --slurpfile notebooks "$work_dir/notebooks.json" \
+            --slurpfile annualReports "$work_dir/annual-reports.json" \
+            --slurpfile historyBooks "$work_dir/history-books.json" \
             --argjson totalReadCount "$total_read_count" \
-            --argjson notesByBook "$notes" \
+            --slurpfile notesByBook "$work_dir/notes.json" \
             '{
               status:"ready",
               updatedAt:$updatedAt,
-              shelf:$shelf,
-              history:{books:$historyBooks,totalReadCount:$totalReadCount},
-              notebooks:$notebooks,
-              monthly:$monthly,
-              overall:$overall,
-              annualReports:$annualReports,
-              notesByBook:$notesByBook
+              shelf:$shelf[0],
+              history:{books:$historyBooks[0],totalReadCount:$totalReadCount},
+              notebooks:$notebooks[0],
+              monthly:$monthly[0],
+              overall:$overall[0],
+              annualReports:$annualReports[0],
+              notesByBook:$notesByBook[0]
             }' \
             > data/weread.json
 
