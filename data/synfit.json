@@ -1,10 +1,62 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-25T07:40:55.854Z",
+  "updatedAt": "2026-10-26T07:56:02.829Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-10-25",
+        "title": "背 二头",
+        "start": 1792963532691,
+        "durationMinutes": 15,
+        "setCount": 9,
+        "volumeKg": 3075,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "引体向上",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          },
+          {
+            "name": "杠铃划船",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 2400,
+            "maxWeightKg": 70
+          },
+          {
+            "name": "绳索直臂下压",
+            "setCount": 2,
+            "totalReps": 30,
+            "volumeKg": 675,
+            "maxWeightKg": 22.5
+          }
+        ]
+      },
+      {
+        "date": "2026-10-25",
+        "title": "羽毛球",
+        "start": 1792937869577,
+        "durationMinutes": 0,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 1892,
+        "distance": 6.14,
+        "movements": [
+          {
+            "name": "AppleHealthWorkout",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-10-24",
         "title": "肩 腿前侧",
@@ -77,6 +129,25 @@
             "totalReps": 36,
             "volumeKg": 360,
             "maxWeightKg": 10
+          }
+        ]
+      },
+      {
+        "date": "2026-10-24",
+        "title": "传统力量训练",
+        "start": 1792843250905,
+        "durationMinutes": 76,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 460,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "TraditionalStrengthTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
           }
         ]
       },
@@ -17675,7 +17746,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-24"
+      "to": "2026-10-25"
     }
   },
   "body": {
