@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-10-20T17:01:55Z",
+  "updatedAt": "2026-10-26T00:27:35Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -20,6 +20,31 @@
     "archive": [],
     "books": [
       {
+        "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+        "readerLink": "https://weread.qq.com/web/reader/ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+        "title": "The Let Them Theory",
+        "author": "Mel Robbins",
+        "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+        "updateTime": 1792538180,
+        "secret": 1,
+        "finishReading": 0,
+        "readUpdateTime": 1792538181
+      },
+      {
+        "bookId": "3300187091",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=e0a32050813abaf95g0113cc",
+        "readerLink": "https://weread.qq.com/web/reader/e0a32050813abaf95g0113cc",
+        "title": "贫穷的本质：我们为什么摆脱不了贫穷（全新增订版）",
+        "author": "[美]阿比吉特·班纳吉  [法]埃斯特·迪弗洛",
+        "updateTime": 1766033832,
+        "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/t6_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
+        "finishReading": 0,
+        "readUpdateTime": 1792530130,
+        "secret": 0,
+        "category": "经济理财-财经"
+      },
+      {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
         "readerLink": "https://weread.qq.com/web/reader/7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
@@ -29,7 +54,7 @@
         "updateTime": 1792450556,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1792515557
+        "readUpdateTime": 1792936530
       },
       {
         "bookId": "3300200141",
@@ -43,6 +68,19 @@
         "readUpdateTime": 1792257274,
         "secret": 0,
         "category": "文学-外国文学"
+      },
+      {
+        "bookId": "23437971",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=f9132af07165a293f91a6ec",
+        "readerLink": "https://weread.qq.com/web/reader/f9132af07165a293f91a6ec",
+        "title": "生育制度",
+        "author": "费孝通",
+        "cover": "https://cdn.weread.qq.com/weread/cover/0/yuewen_23437971/t6_yuewen_234379711750822804.jpg",
+        "category": "社会文化-社科",
+        "finishReading": 0,
+        "readUpdateTime": 1792530014,
+        "secret": 0,
+        "updateTime": 1789017454
       },
       {
         "bookId": "3300200121",
@@ -308,13 +346,51 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 9,
+        "readingProgress": 38,
         "markedStatus": 1,
-        "lastNoteSort": 1792515184,
+        "lastNoteSort": 1792936440,
         "updateTime": 1792450556,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1792515557
+        "readUpdateTime": 1792936530
+      },
+      {
+        "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+        "readerLink": "https://weread.qq.com/web/reader/ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+        "title": "The Let Them Theory",
+        "author": "Mel Robbins",
+        "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+        "updateTime": 1792538180,
+        "secret": 1,
+        "finishReading": 0,
+        "readUpdateTime": 1792538181
+      },
+      {
+        "bookId": "3300187091",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=e0a32050813abaf95g0113cc",
+        "readerLink": "https://weread.qq.com/web/reader/e0a32050813abaf95g0113cc",
+        "title": "贫穷的本质：我们为什么摆脱不了贫穷（全新增订版）",
+        "author": "[美]阿比吉特·班纳吉  [法]埃斯特·迪弗洛",
+        "updateTime": 1766033832,
+        "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/t6_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
+        "finishReading": 0,
+        "readUpdateTime": 1792530130,
+        "secret": 0,
+        "category": "经济理财-财经"
+      },
+      {
+        "bookId": "23437971",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=f9132af07165a293f91a6ec",
+        "readerLink": "https://weread.qq.com/web/reader/f9132af07165a293f91a6ec",
+        "title": "生育制度",
+        "author": "费孝通",
+        "cover": "https://cdn.weread.qq.com/weread/cover/0/yuewen_23437971/t6_yuewen_234379711750822804.jpg",
+        "category": "社会文化-社科",
+        "finishReading": 0,
+        "readUpdateTime": 1792530014,
+        "secret": 0,
+        "updateTime": 1789017454
       },
       {
         "bookId": "3300200116",
@@ -1388,10 +1464,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 1,
-        "readingProgress": 9,
-        "noteCount": 1,
+        "readingProgress": 38,
+        "noteCount": 26,
         "bookmarkCount": 0,
-        "sort": 1792515184
+        "sort": 1792936440
       },
       {
         "bookId": "3300200141",
@@ -2313,10 +2389,59 @@
       "1792252800": 820,
       "1792339200": 0,
       "1792425600": 132,
-      "1792512000": 710
+      "1792512000": 1898,
+      "1792598400": 2390,
+      "1792684800": 1024,
+      "1792771200": 0,
+      "1792857600": 3032
     },
-    "readDays": 11,
+    "readDays": 14,
     "readLongest": [
+      {
+        "book": {
+          "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+          "title": "日常生活中的自我呈现",
+          "author": "[美] 欧文·戈夫曼",
+          "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
+          "version": 1395936188,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 134217761,
+          "finished": 1,
+          "free": 1,
+          "mcardDiscount": 0,
+          "ispub": 0,
+          "cpid": 0,
+          "publishTime": "",
+          "lastChapterIdx": 37,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 0,
+          "copyrightChapterUids": [],
+          "hasKeyPoint": true,
+          "limitShareChat": 0,
+          "inStoreBookId": "3001479281",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 8317,
+        "tags": [
+          "笔记最多",
+          "单日阅读最久"
+        ]
+      },
       {
         "book": {
           "bookId": "3300200122",
@@ -2366,9 +2491,7 @@
           "isAutoDownload": 1
         },
         "readTime": 1946,
-        "tags": [
-          "单日阅读最久"
-        ]
+        "tags": []
       },
       {
         "book": {
@@ -2522,48 +2645,6 @@
         },
         "readTime": 1345,
         "tags": []
-      },
-      {
-        "book": {
-          "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
-          "title": "日常生活中的自我呈现",
-          "author": "[美] 欧文·戈夫曼",
-          "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
-          "version": 1395936188,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 134217761,
-          "finished": 1,
-          "free": 1,
-          "mcardDiscount": 0,
-          "ispub": 0,
-          "cpid": 0,
-          "publishTime": "",
-          "lastChapterIdx": 37,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 0,
-          "copyrightChapterUids": [],
-          "hasKeyPoint": true,
-          "limitShareChat": 0,
-          "inStoreBookId": "3001479281",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 842,
-        "tags": []
       }
     ],
     "preferCategory": [
@@ -2644,18 +2725,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "11天"
+        "counts": "14天"
       },
       {
         "stat": "笔记",
-        "counts": "7条"
+        "counts": "32条"
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.6199752307927627,
-    "dayAverageReadTime": 366,
+    "compare": -0.3888237966571818,
+    "dayAverageReadTime": 589,
     "baseTime": 1790784000,
-    "totalReadTime": 7702,
+    "totalReadTime": 15336,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2672,7 +2753,46 @@
       },
       {
         "type": 5,
-        "title": "思考最多"
+        "title": "思考最多",
+        "bookInfo": {
+          "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+          "title": "日常生活中的自我呈现",
+          "author": "[美] 欧文·戈夫曼",
+          "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
+          "version": 1395936188,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 134217761,
+          "finished": 1,
+          "free": 1,
+          "mcardDiscount": 0,
+          "ispub": 0,
+          "cpid": 0,
+          "publishTime": "",
+          "lastChapterIdx": 37,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 0,
+          "copyrightChapterUids": [],
+          "hasKeyPoint": true,
+          "limitShareChat": 0,
+          "inStoreBookId": "3001479281",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "笔记最多"
       },
       {
         "type": 3,
@@ -2815,9 +2935,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 143955
+      "1767196800": 151589
     },
-    "readDays": 97,
+    "readDays": 100,
     "readLongest": [
       {
         "book": {
@@ -3179,6 +3299,48 @@
       },
       {
         "book": {
+          "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+          "title": "日常生活中的自我呈现",
+          "author": "[美] 欧文·戈夫曼",
+          "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
+          "version": 1395936188,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 134217761,
+          "finished": 1,
+          "free": 1,
+          "mcardDiscount": 0,
+          "ispub": 0,
+          "cpid": 0,
+          "publishTime": "",
+          "lastChapterIdx": 37,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 0,
+          "copyrightChapterUids": [],
+          "hasKeyPoint": true,
+          "limitShareChat": 0,
+          "inStoreBookId": "3001479281",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 8317,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "3300140838",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
           "title": "创意行为：存在即答案",
@@ -3278,56 +3440,6 @@
         },
         "readTime": 7794,
         "tags": []
-      },
-      {
-        "book": {
-          "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=55a42743643425f337961426d49305557414a5036715737314e306e664537763c4",
-          "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
-          "author": "",
-          "cover": "https://res.weread.qq.com/wrepub/CB_B3A5my5lA5d66xg6xFFBX9Z7_parsecover",
-          "version": 414581707,
-          "format": "pdf",
-          "type": 11,
-          "soldout": 0,
-          "bookStatus": 2,
-          "payType": 134217761,
-          "finished": 1,
-          "free": 1,
-          "mcardDiscount": 0,
-          "ispub": 0,
-          "cpid": 0,
-          "publishTime": "",
-          "lastChapterIdx": 30,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 0,
-          "otherType": [
-            {
-              "type": "epub",
-              "showType": true,
-              "cht2sShowType": false,
-              "cht2sStatus": "traditional",
-              "translateDone": false
-            }
-          ],
-          "copyrightChapterUids": [],
-          "limitShareChat": 0,
-          "inStoreBookId": "3004118569",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 5038,
-        "tags": []
       }
     ],
     "preferCategory": [
@@ -3372,18 +3484,18 @@
         "readingTime": 18052
       },
       {
-        "categoryId": 1600000,
-        "categoryTitle": "生活百科",
-        "parentCategoryId": 1600000,
-        "parentCategoryTitle": "生活百科",
-        "readingCount": 1,
-        "readingTime": 10732
-      },
-      {
         "categoryId": 2100000,
         "categoryTitle": "医学健康",
         "parentCategoryId": 2100000,
         "parentCategoryTitle": "医学健康",
+        "readingCount": 1,
+        "readingTime": 10732
+      },
+      {
+        "categoryId": 1600000,
+        "categoryTitle": "生活百科",
+        "parentCategoryId": 1600000,
+        "parentCategoryTitle": "生活百科",
         "readingCount": 1,
         "readingTime": 10732
       },
@@ -3399,9 +3511,9 @@
     "preferCategoryWord": "偏好阅读文学",
     "preferTimeWord": "偏好夜间阅读",
     "preferTime": [
-      7329,
-      3565,
-      1645,
+      7665,
+      3680,
+      1654,
       317,
       7,
       0,
@@ -3414,15 +3526,15 @@
       4990,
       17667,
       7810,
-      9332,
+      11390,
       6925,
-      14216,
-      16601,
-      9370,
-      7234,
-      6949,
-      6049,
-      9129
+      14861,
+      18996,
+      11224,
+      7509,
+      7579,
+      6079,
+      9258
     ],
     "preferAuthor": [
       {
@@ -3551,20 +3663,20 @@
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "东西时代",
-          "userVid": 519906148,
+          "name": "磨铁数盟",
+          "userVid": 351681843,
           "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
+          "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
           "cpType": 0
         }
       },
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "磨铁数盟",
-          "userVid": 351681843,
+          "name": "东西时代",
+          "userVid": 519906148,
           "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
+          "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
           "cpType": 0
         }
       },
@@ -3630,17 +3742,72 @@
       },
       {
         "stat": "阅读",
-        "counts": "97天"
+        "counts": "100天"
       },
       {
         "stat": "笔记",
-        "counts": "177条"
+        "counts": "202条"
+      }
+    ],
+    "medals": [
+      {
+        "id": "M7-0-10",
+        "type": 7,
+        "subtype": 0,
+        "level": 10,
+        "ctime": 1787635084,
+        "atime": 1788465199,
+        "rank": 4990168,
+        "users": 5054568,
+        "hint": "想法发布 10 条",
+        "renderItem": "09 / 04",
+        "name": "想法发布",
+        "index": 0,
+        "availableCond": "累积达到10条",
+        "tip": "再发表 0 条想法可得",
+        "title": "想法发布",
+        "rankText": "第4990168位获得此勋章的书友",
+        "displayText": "想法发布 10 条"
+      },
+      {
+        "id": "M5-0-10",
+        "type": 5,
+        "subtype": 0,
+        "level": 10,
+        "ctime": 1792238788,
+        "users": 6225455,
+        "new": 1,
+        "hint": "读完 10 本书籍",
+        "renderItem": "No. 0000",
+        "name": "读完书籍",
+        "index": 1,
+        "availableCond": "累积达到10本",
+        "tip": "再读完 0 本书可得",
+        "title": "读完书籍",
+        "displayText": "读完 10 本书籍"
+      },
+      {
+        "id": "M3-0-100",
+        "type": 3,
+        "subtype": 0,
+        "level": 100,
+        "ctime": 1792869297,
+        "users": 11993648,
+        "new": 1,
+        "hint": "阅读 100 天",
+        "renderItem": "No. 0000",
+        "name": "阅读天数",
+        "index": 2,
+        "availableCond": "累积达到100天",
+        "tip": "再阅读 0 天可得",
+        "title": "阅读天数",
+        "displayText": "阅读 100 天"
       }
     ],
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 143968,
+    "totalReadTime": 151602,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3697,7 +3864,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "最近阅读8小时"
+        "reason": "最近阅读7小时"
       },
       {
         "type": 0,
@@ -4021,7 +4188,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7763人读过"
+        "reason": "仅有7878人读过"
       },
       {
         "type": 8,
@@ -4353,11 +4520,11 @@
         "1782835200": 12976,
         "1785513600": 40160,
         "1788192000": 28953,
-        "1790784000": 7702,
+        "1790784000": 15336,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 95,
+      "readDays": 98,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -4720,6 +4887,48 @@
         },
         {
           "book": {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+            "title": "日常生活中的自我呈现",
+            "author": "[美] 欧文·戈夫曼",
+            "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
+            "version": 1395936188,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 134217761,
+            "finished": 1,
+            "free": 1,
+            "mcardDiscount": 0,
+            "ispub": 0,
+            "cpid": 0,
+            "publishTime": "",
+            "lastChapterIdx": 37,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 0,
+            "copyrightChapterUids": [],
+            "hasKeyPoint": true,
+            "limitShareChat": 0,
+            "inStoreBookId": "3001479281",
+            "blockSaveImg": 0,
+            "language": "zh-wr",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 8317,
+          "tags": []
+        },
+        {
+          "book": {
             "bookId": "3300140838",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
             "title": "创意行为：存在即答案",
@@ -4818,56 +5027,6 @@
             "isAutoDownload": 1
           },
           "readTime": 7794,
-          "tags": []
-        },
-        {
-          "book": {
-            "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
-            "deepLink": "https://weread.qq.com/book-detail?type=1&v=55a42743643425f337961426d49305557414a5036715737314e306e664537763c4",
-            "title": "苔藓森林 (罗宾·沃尔·基默尔) (Z-Library)(1)",
-            "author": "",
-            "cover": "https://res.weread.qq.com/wrepub/CB_B3A5my5lA5d66xg6xFFBX9Z7_parsecover",
-            "version": 414581707,
-            "format": "pdf",
-            "type": 11,
-            "soldout": 0,
-            "bookStatus": 2,
-            "payType": 134217761,
-            "finished": 1,
-            "free": 1,
-            "mcardDiscount": 0,
-            "ispub": 0,
-            "cpid": 0,
-            "publishTime": "",
-            "lastChapterIdx": 30,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 0,
-            "otherType": [
-              {
-                "type": "epub",
-                "showType": true,
-                "cht2sShowType": false,
-                "cht2sStatus": "traditional",
-                "translateDone": false
-              }
-            ],
-            "copyrightChapterUids": [],
-            "limitShareChat": 0,
-            "inStoreBookId": "3004118569",
-            "blockSaveImg": 0,
-            "language": "zh-wr",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 5038,
           "tags": []
         }
       ],
@@ -5144,17 +5303,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "95天"
+          "counts": "98天"
         },
         {
           "stat": "笔记",
-          "counts": "177条"
+          "counts": "202条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 489,
+      "dayAverageReadTime": 506,
       "baseTime": 1767196800,
-      "totalReadTime": 143955,
+      "totalReadTime": 151589,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -5355,8 +5514,283 @@
   "notesByBook": {
     "CB_8WSAeaAbjA6w77875hFO56Xg": {
       "highlights": {
-        "synckey": 1792515190,
+        "synckey": 1792936440,
         "updated": [
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 13,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_13_12958-13641",
+            "range": "12958-13641",
+            "markText": "朗兹•卡夫卡在《审判》中提供了一个很精彩的文学例子，说明一个人被剥夺了对其舞台设置的控制的后果，其中叙述了名叫K 的人在自己的公寓里和当局检察官会见时的情况：\n他穿戴完毕后就走，威廉紧随其后，穿过隔壁那间空房，再推开旁边房间的双重门走了进去。这是一间K 很熟悉的房间，刚租给那个叫费劳兰•伯斯纳打字员小姐不久，她早出晚归，平时碰到时也几乎不打招呼。现在，她的那只床头柜已被搬到屋子中央来当办公桌用了，那个检察官就坐在床头柜后面，跷起二郎腿，一只手搭在椅背上。\n......“你叫约瑟夫•K 吗？”检察官问道，这声发问也许不过是要使K 把分散的注意力集中到他这边来。K 点一点头。“你对今天早晨这件事大概很吃惊吧？”检察官问，双手又在摆弄床头柜上的几样东西：一支蜡烛、一盒火柴、一本书和一个针插，仿佛这些是他在审问时的必需品。“那还用说”，K 说，他一团高兴，心想终于碰到一个通情达理的人，可以跟他谈谈这件事了，“那还用说，我是有点惊奇，不过，我也并不很吃惊。”“并不很吃惊？”检察官反问一句，把蜡烛放到柜子中央，又把其他几件东西放在蜡烛周围。“也许你误解了我的意思”，K 赶紧补充道，“我的意思是”——说到这里，K 停住了，四下看一下，想找把椅子。“我想我可以坐下来吧？”他问。“这不大合适吧”，督察员答道。®",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 13,
+            "createTime": 1792936440
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 13,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_13_12389-12527",
+            "range": "12389-12527",
+            "markText": "在替这对男女整理好房间之后，侍者关上身后的房门，随手推进了球形把手中的按钮。这样就转动了锁里面的小制拴，并使锁外面的圆心出现了一块黑斑纹。它极难被客人察觉，但是女仆、巡查人员、服务员和侍者却都经过这种训练，能够有时提防他们……并把随后发生的大声谈话或不寻常的事件报告给管理员。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 13,
+            "createTime": 1792936298
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 13,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_13_11521-11706",
+            "range": "11521-11706",
+            "markText": "人们经常感到，在互动期间，控制舞台设置是一个有利条件。从狭义上看，这种控制允许剧班运用策略的手段来决定观众所能获得的信息。因而，如果医生不想让病人知道他们所患疾病的性质，那么他就会将癌症患者分散安置在医院各处，使他们无法从所住病房的性质上得知他们所患的疾病(顺便提一句，由于这种舞台策略，医院职员也许被迫在走廊上来回奔走，并在设备移动方面花费比其他必要工作更多的时间）。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 13,
+            "createTime": 1792936216
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 13,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_13_3328-3488",
+            "range": "3328-3488",
+            "markText": "的个人活动时，他也许把这些标准与某种参照群体联系起来，从而为他的活动制造了一种不在场的观众。这种可能性使我们进一步想到另一种可能性。个体也许私下维护着他自己并不相信的行为准则，他维持这些准则只是出于一种真实的信念:有看不见的观众在场，他们会对背离这些准则的行为作出惩罚。换言之，个体也许是他自己的观众，或者想象有观众在场",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 13,
+            "createTime": 1792934582
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 13,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_13_2983-3278",
+            "range": "2983-3278",
+            "markText": "表演者也会被他自己的行为所欺骗，他在表演时会相信，他所造成的现实印象就是唯一的现实。在这样的情况下，表演者成为他自己的观众;在同一表演中，他既是演员又是观众。也许，他体现着他试图在他人面前维持的标准，所以他的良知要求他以一种正确的社会方式行动。处于表演地位的个体，必须对处于观众地位的他自己隐瞒他所知道的会使表演有失去信誉的事；用日常用语来说，总会有一些他明知或已知却又不能向自己吐露的事情。这种复杂的自我欺骗的运用是经常发生的；心理分析学家向我们提供了极好的实证材料，即所谓压抑和分裂。®在这里，我们也许知道了那种曾被称为“自我疏离”的来源，即一个人何以感觉到他在与自己逐渐疏远的过程。®",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 13,
+            "createTime": 1792934457
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 9,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_9_6273-6355",
+            "range": "6273-6355",
+            "markText": "英国文职人员的规章制度®和美国棒球裁判的纪律章程®，不仅规定了他们不能做任何不恰当的“交易”，而且也规定他们不能做任何有可能被（错误地）认为他们在做交易的无知行动。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 9,
+            "createTime": 1792869737
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 9,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_9_1816-1885",
+            "range": "1816-1885",
+            "markText": "当发现一个与我们交往了一段时间的人，他的真实身份比他让我们相信的要高得多时，按基督教先例，我们的反应只会是惊讶和懊悔，而不会产生任何敌意。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 9,
+            "createTime": 1792869736
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 10,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_10_1414-1427",
+            "range": "1414-1427",
+            "markText": "，因为过分亲昵会被人轻视。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 10,
+            "createTime": 1792869516
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 10,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_10_988-1145",
+            "range": "988-1145",
+            "markText": "陆军和海军的纪律都明确意识到那些把上级与下级隔离开来的形式的必要性，从而为上级确立了不能被细察的支配地位。同样，正如罗斯(Ross )教授在他论述社会控制的著作中所说的那样，举止仪表被世人广泛地用作一种自我隐蔽的手段，而这种自我隐蔽，除了其他作用外，还可以起到一种对头脑简单者维持支配地位的作用。®",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 10,
+            "createTime": 1792869487
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 9,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_9_1437-1644",
+            "range": "1437-1644",
+            "markText": "我们总是宁愿去揭穿骗子的伪饰，而不愿去注意发现虚假表演与假冒合法表演之间的其他差异。其实这正是一个悖论，骗子的表演越接近于真实，我们可能受到的威胁就越大，这是因为骗子的高超演技会削弱我们意识中的道德判断力，使我们对扮演某一角色的合法资格与扮演这一角色的能力之间的关联变得模糊不清（演技高超的模仿者从一开始就会声明他们并没有什么意图，只不过是开个玩笑，但这似乎就是他们使用的一种能使我们“逐渐消除”某些担忧的方法）。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 9,
+            "createTime": 1792869297
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 9,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_9_2447-2618",
+            "range": "2447-2618",
+            "markText": "对自称是法学院的毕业生的人，我们是能够辨别其真伪的，但是，如果有人对自称是某人朋友，或自称是虔诚的信徒，或自称是音乐爱好者，那么我们对此也就只能大概地得到确证或否认。在那些没有客观标准来衡量能力的地方，或者真正的专业从业者还没有为保障他们的权利而组织成社团的地方，个体便可以自命为专家，没有什么更强大的力量可以惩罚他，最多也是受到旁人的窃笑。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 9,
+            "createTime": 1792866402
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 8,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_8_4928-5332",
+            "range": "4928-5332",
+            "markText": "于是，通过社会训导，一种态度面具便会从我们内部确定下来。但是，正如西蒙•德•波伏娃（SimonedeBeauvoir )所言，我们之所以会有这种姿态，是因为有一些或明或暗的夹子直接夹住了我们的身体：\n即使每个女人都穿戴得合乎自己的身份，但她们还是在玩花招：虚饰技巧如同艺术，无疑属于想象力的王国。不仅仅只是借助束腹裤、胸罩、染发剂、化妆品等来伪装身段和面孔，而且，即使最不谙于此道的女人，一旦把自己“打扮”起来，在人们看来也就不再是她自己了，而是像图片、雕像或舞台上的演员那样，成了一种代理，她不是因扮演某种角色而存在，而是根本不存在了。她要与小说中那些不真实的、毫无变化的、完美无缺的英雄相认同，把自己当作画像或雕像，以此来满足自己。她竭力使自己等同于这种形象，这样她才觉得自己比较踏实，才觉得她如此绚丽多彩的形象合情合理。®",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 8,
+            "createTime": 1792691976
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 8,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_8_1022-1112",
+            "range": "1022-1112",
+            "markText": "因而，我们也许不应该按机械标准来分析表演，若按此标准，大赢就能抵消小失，大量也能补偿小量。也许艺术的比喻能为我们提供更为精准的说明：只要有一个音走调，整个音乐表演的效果就会被破坏。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 8,
+            "createTime": 1792690501
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 7,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_7_11824-12088",
+            "range": "11824-12088",
+            "markText": "如果你向某个人表示敬意，或对他表现出特别的礼貌，那么你就不应该当着他的面对其他人表现出同样的举动。例如，某位绅士来到你家，你热情而郑重地告诉他“见到你我很高兴”，他会因受到厚待而感到满意，并很可能感激你；但是，如果他听到你向其他20个人说同样的话，他不仅会感到你的殷勤分文不值，而且会因为受到欺骗而感到有点怨恨。®\n\n",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7,
+            "createTime": 1792690046
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 7,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_7_10656-10758",
+            "range": "10656-10758",
+            "markText": "如果两个个体之间的每一次交往都需要交流个人的经历、烦恼和秘密，那么都市生活对我们来说就会变成难以忍受的折磨。因而，如果一个男人想要安静地吃顿饭，他就有可能会到餐馆让女招待服侍他，而不是在家里让妻子服侍他。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7,
+            "createTime": 1792682569
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 7,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_7_10183-10372",
+            "range": "10183-10372",
+            "markText": "人有多少个社会自我，这取决于他关心多少个不同群体的看法。通常，面对每个不同的群体，他都会表现出自我中某个特殊的方面。许多青年人在父母和老师面前显得谦恭拘谨，而在他们“粗鲁”的年轻朋友中，却会像海盗一样咒骂和吹牛。我们在子女面前的形象当然不同于在俱乐部伙伴面前的形象，我们在顾客面前的形象不同于在我们雇工面前的形象，我们在亲朋好友面前的形象也不同于在我们的上司和老板面前的形象。®",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7,
+            "createTime": 1792682438
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 7,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_7_6826-6971",
+            "range": "6826-6971",
+            "markText": "第三，在个体向他人呈现某种活动成果的互动中，他往往只向他人展示最终的结果，把观众对他的评价引导到某个功德圆满、无可挑剔并精心包装过的基础上。在某些情况下，如果完成某项工作实际上并不需要投入多少精力，那么这个情况就会被隐瞒起来。在另一些情况下，被隐瞒的则是个体长时期经受孤寂、疲惫劳作的情况。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7,
+            "createTime": 1792601673
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 7,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_7_5489-5848",
+            "range": "5489-5848",
+            "markText": "例如，在美国社会中，我们发现，八岁的孩子虽表面上都说他们并不喜欢那些适合给五六岁儿童看的电视节目，但有时却会去偷着看一眼。 @ 同样，我们也发现，中产阶级家庭的主妇们有时也偷偷摸摸地使用一些廉价的替代品来代替咖啡、冰淇淋或奶油，这样他们既能省钱省时，又能不费气力继续维持她们只用高质量食物的印象。 @ 这些主妇们有时还可能会在客厅的茶几上放上一份《周日晚报》，而把《真实的罗曼史》藏在私下的卧室里。®(当然，她们可能会说：“这是打扫房间的女佣放在这儿的”）已有材料表明，同样的行为——我们可以称之为“秘密消费”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7,
+            "createTime": 1792601474
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 7,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_7_4639-4723",
+            "range": "4639-4723",
+            "markText": "废品收购商极其不愿意让一般公众知道有关“废品”的真正价值。他希望那些认为废品毫无价值、从事废品收购这一行的人都非常“穷困潦倒”，应该得到大家怜悯的神话永远都会存在下去。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7,
+            "createTime": 1792601101
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterUid": 7,
+            "chapterIdx": 7,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_7_1982-2206",
+            "range": "1982-2206",
+            "markText": "姓通过素食、戒酒以及在庆典活动和祭神仪式中使用梵语，就有可能在一两代人的时间内上升到更高一科学方法的等级。简单地说，低种姓似乎经常尽可能地采纳婆罗门的风俗、礼仪和信仰，并接受婆罗门的生活方式，虽然这在理论上是被禁止的……低种姓效仿高种姓的倾向，在传播梵语典礼、习俗和达到某种程度的文化同一性方面，都有着非常重要的作用，它不仅遍及整个种姓等级范围，而且渗透了印度的整个社会生活领域。®",
+            "createTime": 1792600787
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterUid": 7,
+            "chapterIdx": 7,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_7_1930-1982",
+            "range": "1930-1982",
+            "markText": "种姓制度远非是一种其各个组成部分永远固定不变的僵硬系统。流动总是可能发生的，尤其是等级体系的中间层。低种",
+            "createTime": 1792600779
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterUid": 7,
+            "chapterIdx": 7,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_7_1401-1507",
+            "range": "1401-1507",
+            "markText": "同样，在大多数等级社会中，都存在着对高阶层的理想化，以及那些低阶层人向高阶层流动的某种抱负（我们必须清楚地意识到，这不仅仅只是渴望得到一个有声望的地位，而且还包括渴望得到一个接近社会普遍价值之神圣中心的地位）​。",
+            "createTime": 1792600705
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterUid": 6,
+            "chapterIdx": 6,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_6_2803-3287",
+            "range": "2803-3287",
+            "markText": "年轻的贵族，需要通过何种重要技艺的训练，来维持他那阶层的高贵尊严，用以证明自己高于其他市民的优越性（他祖先的德行教化而成的那种优越性）呢？是靠勤奋、坚軔、自我克制，还是靠其他的品德？由于他的一切言谈举止都令人关注，所以他学会了习惯性地顾及日常行为中的每一个细节，并学会了以最适当得体的方式来体现他对这些细节的责任。因为他充分意识到自己有多么受人关注，民众对他的倾向和爱好是如此偏爱，所以哪怕是在最微不足道的场合他也会想到自己的责任，他的举止中自然地体现出悠悠闲适和高尚庄重的神色。他的神态、他的举止、他的风度，一切优美、文雅的标志无不体现出他对自己优越地位的明确意识，这些都是那些出身低微的人几乎不可能具备的。这是一种他用以使人们更易于服从他的权势，并根据他自己的意愿控制大众的倾向的艺术：在这方面他很少感到失望。这种凭借地位和卓越支撑起来的艺术，在一般的场合下是足以统治整个世界的。®如果这样的艺术玩家确实存在的话，他们就能为我们提供一种合适的群体，我们就能从中探究到如何把行动转化为表演的各种技术。",
+            "createTime": 1792600456
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 5,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_5_3569-3889",
+            "range": "3569-3889",
+            "markText": "这对观察者来说，确实是一种十分精妙的便利，尽管有时候也可能是灾难性的。因为观察者不再需要对每一个表演者和每一种稍有差异的表演采取一一对应的期待和反应。相反，他可以把这一情境置于一个广阔的范畴中，对此，他很容易信赖他以往的经验，并运用固定的思维。于是，观察者只需要很少的一点易于掌握的前台词汇，就可以知道应该如何做出反应，以使自己驾轻就熟地应对各种各样的具体情境。因此在伦敦，清扫烟囱的工人 0 和售卖香料的店员都穿实验室的白大褂，因为这样就更容易让顾客认为，这些人所干的是精细活儿，它是以一种标准化了的、冷静的、应该被信任的方式进行的。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 5,
+            "createTime": 1792517574
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterUid": 5,
+            "chapterIdx": 5,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_5_1584-1688",
+            "range": "1584-1688",
+            "markText": "医学行业的最新进展为我们提供了另一个例证。我们发现，对一个医生来说，是否具备由大医院提供的精良科学舞台，这一点变得越来越重要了，因此现在，觉得自己还能在一个到了晚上就锁上大门的小地方施展身手的医生是越来越少了",
+            "createTime": 1792517158
+          },
           {
             "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
             "chapterUid": 4,
@@ -5371,6 +5805,41 @@
         ],
         "removed": [],
         "chapters": [
+          {
+            "title": "第二章剧班",
+            "chapterUid": 13,
+            "chapterIdx": 13
+          },
+          {
+            "title": "理想化",
+            "chapterUid": 7,
+            "chapterIdx": 7
+          },
+          {
+            "title": "神秘化",
+            "chapterUid": 10,
+            "chapterIdx": 10
+          },
+          {
+            "title": "戏剧实现",
+            "chapterUid": 6,
+            "chapterIdx": 6
+          },
+          {
+            "title": "前台",
+            "chapterUid": 5,
+            "chapterIdx": 5
+          },
+          {
+            "title": "误传",
+            "chapterUid": 9,
+            "chapterIdx": 9
+          },
+          {
+            "title": "表达控制的维持",
+            "chapterUid": 8,
+            "chapterIdx": 8
+          },
           {
             "title": "相信自己所扮演的角色",
             "chapterUid": 4,
@@ -5390,6 +5859,385 @@
             "colorsPure": [
               "#93B0DA",
               "#98B8DD"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "CB_0dOEYMEWMA2p77975h0Wk3Ku": {
+      "highlights": {
+        "synckey": 0,
+        "updated": [],
+        "removed": [],
+        "chapters": [],
+        "book": {
+          "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+          "version": 1502239066,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+          "title": "The Let Them Theory",
+          "author": "Mel Robbins",
+          "coverBoxInfo": {
+            "colorsPure": [
+              "#93B0DA",
+              "#98B8DD"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "3300187091": {
+      "highlights": {
+        "synckey": 0,
+        "updated": [],
+        "removed": [],
+        "chapters": [],
+        "book": {
+          "bookId": "3300187091",
+          "version": 1359265645,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/s_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
+          "title": "贫穷的本质：我们为什么摆脱不了贫穷（全新增订版）",
+          "author": "[美]阿比吉特·班纳吉  [法]埃斯特·迪弗洛",
+          "coverBoxInfo": {
+            "blurhash": "KOQl::o}-;t8.SMd8wIURj",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#380e0e"
+              },
+              {
+                "key": "1/6",
+                "hex": "#40030a"
+              },
+              {
+                "key": "1/8",
+                "hex": "#480006"
+              },
+              {
+                "key": "2/4",
+                "hex": "#4d261f"
+              },
+              {
+                "key": "2/6",
+                "hex": "#561f16"
+              },
+              {
+                "key": "2/8",
+                "hex": "#60140a"
+              },
+              {
+                "key": "3/4",
+                "hex": "#673c30"
+              },
+              {
+                "key": "3/6",
+                "hex": "#723624"
+              },
+              {
+                "key": "3/8",
+                "hex": "#7c2f16"
+              },
+              {
+                "key": "3/12",
+                "hex": "#8d1a00"
+              },
+              {
+                "key": "4/6",
+                "hex": "#8d503a"
+              },
+              {
+                "key": "4/10",
+                "hex": "#a1431b"
+              },
+              {
+                "key": "4/4",
+                "hex": "#825547"
+              },
+              {
+                "key": "5/10",
+                "hex": "#c05d31"
+              },
+              {
+                "key": "5/4",
+                "hex": "#9b6f60"
+              },
+              {
+                "key": "5/8",
+                "hex": "#b56442"
+              },
+              {
+                "key": "6/4",
+                "hex": "#b68979"
+              },
+              {
+                "key": "6/6",
+                "hex": "#c4846b"
+              },
+              {
+                "key": "6/8",
+                "hex": "#d07e5c"
+              },
+              {
+                "key": "6/12",
+                "hex": "#e77239"
+              },
+              {
+                "key": "7/8",
+                "hex": "#ed9874"
+              },
+              {
+                "key": "7/10",
+                "hex": "#f99365"
+              },
+              {
+                "key": "7/12",
+                "hex": "#ff8c51"
+              },
+              {
+                "key": "8/4",
+                "hex": "#ecbeab"
+              },
+              {
+                "key": "8/6",
+                "hex": "#fcb89b"
+              },
+              {
+                "key": "8/12",
+                "hex": "#ffa667"
+              },
+              {
+                "key": "9/2",
+                "hex": "#f3dfd7"
+              },
+              {
+                "key": "9/12",
+                "hex": "#ffc082"
+              },
+              {
+                "key": "1/100",
+                "hex": "#d07e5c"
+              },
+              {
+                "key": "2/100",
+                "hex": "#ed9874"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#F3E8E5"
+              },
+              {
+                "key": "5/100",
+                "hex": "#F3E8E5"
+              },
+              {
+                "key": "6/100",
+                "hex": "#270500"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#f2cbbb",
+              "hsv": [
+                17.49865686382006,
+                22.72121875570151,
+                94.71732652192422
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/91/3300187091/s_3300187091.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/91/3300187091/s_3300187091.jpg",
+            "colorsPure": [
+              "#e77239",
+              "#ff8c51"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "23437971": {
+      "highlights": {
+        "synckey": 0,
+        "updated": [],
+        "removed": [],
+        "chapters": [],
+        "book": {
+          "bookId": "23437971",
+          "version": 986747274,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/0/yuewen_23437971/s_yuewen_234379711750822804.jpg",
+          "title": "生育制度",
+          "author": "费孝通",
+          "coverBoxInfo": {
+            "blurhash": "KBSF*5ozS~Mxs:bH_Nn*xH",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#340e21"
+              },
+              {
+                "key": "1/6",
+                "hex": "#3c0424"
+              },
+              {
+                "key": "1/8",
+                "hex": "#440027"
+              },
+              {
+                "key": "2/4",
+                "hex": "#4b2531"
+              },
+              {
+                "key": "2/6",
+                "hex": "#551d32"
+              },
+              {
+                "key": "2/8",
+                "hex": "#5f1034"
+              },
+              {
+                "key": "3/4",
+                "hex": "#673a43"
+              },
+              {
+                "key": "3/6",
+                "hex": "#733241"
+              },
+              {
+                "key": "3/8",
+                "hex": "#7f2740"
+              },
+              {
+                "key": "3/12",
+                "hex": "#94003f"
+              },
+              {
+                "key": "4/6",
+                "hex": "#8d4d58"
+              },
+              {
+                "key": "4/10",
+                "hex": "#a43b55"
+              },
+              {
+                "key": "4/4",
+                "hex": "#80545b"
+              },
+              {
+                "key": "5/10",
+                "hex": "#c1576b"
+              },
+              {
+                "key": "5/4",
+                "hex": "#996e73"
+              },
+              {
+                "key": "5/8",
+                "hex": "#b5606d"
+              },
+              {
+                "key": "6/4",
+                "hex": "#b2898d"
+              },
+              {
+                "key": "6/6",
+                "hex": "#c28289"
+              },
+              {
+                "key": "6/8",
+                "hex": "#ce7c86"
+              },
+              {
+                "key": "6/12",
+                "hex": "#e96a81"
+              },
+              {
+                "key": "7/8",
+                "hex": "#eb959f"
+              },
+              {
+                "key": "7/10",
+                "hex": "#f98e9c"
+              },
+              {
+                "key": "7/12",
+                "hex": "#ff8498"
+              },
+              {
+                "key": "8/4",
+                "hex": "#e7bec0"
+              },
+              {
+                "key": "8/6",
+                "hex": "#f8b7bc"
+              },
+              {
+                "key": "8/12",
+                "hex": "#ff9bb0"
+              },
+              {
+                "key": "9/2",
+                "hex": "#efdfe0"
+              },
+              {
+                "key": "9/12",
+                "hex": "#ffb5c9"
+              },
+              {
+                "key": "1/100",
+                "hex": "#ce7c86"
+              },
+              {
+                "key": "2/100",
+                "hex": "#eb959f"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#F3E5E8"
+              },
+              {
+                "key": "5/100",
+                "hex": "#F3E5E8"
+              },
+              {
+                "key": "6/100",
+                "hex": "#270007"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#f7acb3",
+              "hsv": [
+                354.4433000394408,
+                30.41734088457389,
+                96.89792340884574
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/971/23437971/s_23437971.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/971/23437971/s_23437971.jpg",
+            "colorsPure": [
+              "#e96a81",
+              "#ff8498"
             ]
           }
         }
