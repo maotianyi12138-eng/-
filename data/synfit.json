@@ -1,17 +1,55 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-26T07:56:02.829Z",
+  "updatedAt": "2026-10-27T08:02:59.164Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
       {
+        "date": "2026-10-26",
+        "title": "羽毛球",
+        "start": 1793026975170,
+        "durationMinutes": 127,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 1587,
+        "distance": 4.8,
+        "movements": [
+          {
+            "name": "AppleHealthWorkout",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-10-26",
+        "title": "跑步",
+        "start": 1793010818506,
+        "durationMinutes": 35,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 271,
+        "distance": 3.17,
+        "movements": [
+          {
+            "name": "Running",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
         "date": "2026-10-25",
         "title": "背 二头",
-        "start": 1792963532691,
-        "durationMinutes": 15,
-        "setCount": 9,
-        "volumeKg": 3075,
+        "start": 1792965241959,
+        "durationMinutes": 16,
+        "setCount": 19,
+        "volumeKg": 8370,
         "calories": 0,
         "distance": 0,
         "movements": [
@@ -24,17 +62,50 @@
           },
           {
             "name": "杠铃划船",
-            "setCount": 3,
-            "totalReps": 36,
-            "volumeKg": 2400,
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 3240,
             "maxWeightKg": 70
           },
           {
+            "name": "宽距高位下拉",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2160,
+            "maxWeightKg": 45
+          },
+          {
+            "name": "器械划船2",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 1620,
+            "maxWeightKg": 45
+          },
+          {
             "name": "绳索直臂下压",
-            "setCount": 2,
-            "totalReps": 30,
-            "volumeKg": 675,
+            "setCount": 4,
+            "totalReps": 60,
+            "volumeKg": 1350,
             "maxWeightKg": 22.5
+          }
+        ]
+      },
+      {
+        "date": "2026-10-25",
+        "title": "传统力量训练",
+        "start": 1792962924224,
+        "durationMinutes": 61,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 322,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "TraditionalStrengthTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
           }
         ]
       },
@@ -17746,7 +17817,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-25"
+      "to": "2026-10-26"
     }
   },
   "body": {
