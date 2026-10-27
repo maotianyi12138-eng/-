@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-10-27T18:00:13Z",
+  "updatedAt": "2026-10-27T22:12:45Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -54,7 +54,7 @@
         "updateTime": 1792450556,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1792936530
+        "readUpdateTime": 1793130011
       },
       {
         "bookId": "3300200141",
@@ -346,13 +346,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 38,
+        "readingProgress": 43,
         "markedStatus": 1,
-        "lastNoteSort": 1792936440,
+        "lastNoteSort": 1793129916,
         "updateTime": 1792450556,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1792936530
+        "readUpdateTime": 1793130011
       },
       {
         "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
@@ -1464,10 +1464,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 1,
-        "readingProgress": 38,
-        "noteCount": 26,
+        "readingProgress": 43,
+        "noteCount": 27,
         "bookmarkCount": 0,
-        "sort": 1792936440
+        "sort": 1793129916
       },
       {
         "bookId": "3300200141",
@@ -2387,15 +2387,16 @@
       "1792080000": 296,
       "1792166400": 936,
       "1792252800": 820,
-      "1792339200": 0,
       "1792425600": 132,
       "1792512000": 1898,
       "1792598400": 2390,
       "1792684800": 1024,
-      "1792771200": 0,
-      "1792857600": 3032
+      "1792857600": 3032,
+      "1792944000": 339,
+      "1793030400": 0,
+      "1793116800": 263
     },
-    "readDays": 14,
+    "readDays": 16,
     "readLongest": [
       {
         "book": {
@@ -2436,7 +2437,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 8317,
+        "readTime": 8919,
         "tags": [
           "笔记最多",
           "单日阅读最久"
@@ -2725,18 +2726,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "14天"
+        "counts": "16天"
       },
       {
         "stat": "笔记",
-        "counts": "32条"
+        "counts": "33条"
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.43247923975309746,
-    "dayAverageReadTime": 547,
+    "compare": -0.4102017555545689,
+    "dayAverageReadTime": 569,
     "baseTime": 1790784000,
-    "totalReadTime": 15336,
+    "totalReadTime": 15938,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2935,9 +2936,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 151589
+      "1767196800": 152191
     },
-    "readDays": 100,
+    "readDays": 102,
     "readLongest": [
       {
         "book": {
@@ -3336,7 +3337,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 8317,
+        "readTime": 8919,
         "tags": []
       },
       {
@@ -3742,11 +3743,11 @@
       },
       {
         "stat": "阅读",
-        "counts": "100天"
+        "counts": "102天"
       },
       {
         "stat": "笔记",
-        "counts": "202条"
+        "counts": "203条"
       }
     ],
     "medals": [
@@ -3758,7 +3759,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5057190,
+        "users": 5057239,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3775,7 +3776,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6228356,
+        "users": 6228398,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3792,7 +3793,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 11997239,
+        "users": 11997302,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3807,7 +3808,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 151602,
+    "totalReadTime": 152204,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -4520,11 +4521,11 @@
         "1782835200": 12976,
         "1785513600": 40160,
         "1788192000": 28953,
-        "1790784000": 15336,
+        "1790784000": 15938,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 98,
+      "readDays": 100,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -4924,7 +4925,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 8317,
+          "readTime": 8919,
           "tags": []
         },
         {
@@ -5303,17 +5304,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "98天"
+          "counts": "100天"
         },
         {
           "stat": "笔记",
-          "counts": "202条"
+          "counts": "203条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 503,
+      "dayAverageReadTime": 505,
       "baseTime": 1767196800,
-      "totalReadTime": 151589,
+      "totalReadTime": 152191,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -5514,8 +5515,19 @@
   "notesByBook": {
     "CB_8WSAeaAbjA6w77875hFO56Xg": {
       "highlights": {
-        "synckey": 1792936440,
+        "synckey": 1793129916,
         "updated": [
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 13,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_13_17876-17977",
+            "range": "17876-17977",
+            "markText": "因此，不论何时，只要是把正式权力赋予了那些缺乏经验的人，或者作为权宜之计，让他们去支配那些有经验的下属，那么我们就会发现，这种握有正式权力的人只不过是个戏剧优势的摆设，真正在指导演出的则恰恰是他的下属®",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 13,
+            "createTime": 1793129916
+          },
           {
             "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
             "chapterIdx": 13,
