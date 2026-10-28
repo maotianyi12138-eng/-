@@ -1,10 +1,29 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-27T08:02:59.164Z",
+  "updatedAt": "2026-10-28T08:44:49.785Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-10-27",
+        "title": "肩腿后侧",
+        "start": 1793120943790,
+        "durationMinutes": 5,
+        "setCount": 4,
+        "volumeKg": 2496,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "坐姿髋内收",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2496,
+            "maxWeightKg": 52
+          }
+        ]
+      },
       {
         "date": "2026-10-26",
         "title": "羽毛球",
@@ -17817,7 +17836,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-26"
+      "to": "2026-10-27"
     }
   },
   "body": {
