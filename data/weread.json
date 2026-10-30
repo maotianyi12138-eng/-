@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-10-30T12:52:45Z",
+  "updatedAt": "2026-10-30T22:17:30Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -54,7 +54,7 @@
         "updateTime": 1792450556,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793130011
+        "readUpdateTime": 1793382993
       },
       {
         "bookId": "3300200141",
@@ -346,13 +346,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 43,
+        "readingProgress": 53,
         "markedStatus": 1,
-        "lastNoteSort": 1793129916,
+        "lastNoteSort": 1793382887,
         "updateTime": 1792450556,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793130011
+        "readUpdateTime": 1793382993
       },
       {
         "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
@@ -1464,10 +1464,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 1,
-        "readingProgress": 43,
-        "noteCount": 27,
+        "readingProgress": 53,
+        "noteCount": 30,
         "bookmarkCount": 0,
-        "sort": 1793129916
+        "sort": 1793382887
       },
       {
         "bookId": "3300200141",
@@ -2394,9 +2394,12 @@
       "1792857600": 3032,
       "1792944000": 339,
       "1793030400": 0,
-      "1793116800": 263
+      "1793116800": 263,
+      "1793203200": 0,
+      "1793289600": 0,
+      "1793376000": 2162
     },
-    "readDays": 16,
+    "readDays": 17,
     "readLongest": [
       {
         "book": {
@@ -2437,7 +2440,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 8919,
+        "readTime": 11081,
         "tags": [
           "笔记最多",
           "单日阅读最久"
@@ -2726,18 +2729,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "16天"
+        "counts": "17天"
       },
       {
         "stat": "笔记",
-        "counts": "33条"
+        "counts": "36条"
       }
     ],
     "registTime": 1645667800,
-    "compare": -0.4495216385175975,
-    "dayAverageReadTime": 531,
+    "compare": -0.3950150577743908,
+    "dayAverageReadTime": 583,
     "baseTime": 1790784000,
-    "totalReadTime": 15938,
+    "totalReadTime": 18100,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2936,9 +2939,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 152191
+      "1767196800": 154353
     },
-    "readDays": 102,
+    "readDays": 103,
     "readLongest": [
       {
         "book": {
@@ -3200,6 +3203,48 @@
       },
       {
         "book": {
+          "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+          "title": "日常生活中的自我呈现",
+          "author": "[美] 欧文·戈夫曼",
+          "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
+          "version": 1395936188,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 134217761,
+          "finished": 1,
+          "free": 1,
+          "mcardDiscount": 0,
+          "ispub": 0,
+          "cpid": 0,
+          "publishTime": "",
+          "lastChapterIdx": 37,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 0,
+          "copyrightChapterUids": [],
+          "hasKeyPoint": true,
+          "limitShareChat": 0,
+          "inStoreBookId": "3001479281",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 11081,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "30181899",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=7a332d8071cc8a0b7a31e96",
           "title": "高级运动营养学",
@@ -3296,48 +3341,6 @@
           "isAutoDownload": 1
         },
         "readTime": 9387,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
-          "title": "日常生活中的自我呈现",
-          "author": "[美] 欧文·戈夫曼",
-          "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
-          "version": 1395936188,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 134217761,
-          "finished": 1,
-          "free": 1,
-          "mcardDiscount": 0,
-          "ispub": 0,
-          "cpid": 0,
-          "publishTime": "",
-          "lastChapterIdx": 37,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 0,
-          "copyrightChapterUids": [],
-          "hasKeyPoint": true,
-          "limitShareChat": 0,
-          "inStoreBookId": "3001479281",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 8919,
         "tags": []
       },
       {
@@ -3674,10 +3677,10 @@
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "上海译文出版社",
-          "userVid": 331381138,
+          "name": "东西时代",
+          "userVid": 519906148,
           "role": 2,
-          "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
+          "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
           "cpType": 0
         }
       },
@@ -3694,10 +3697,10 @@
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "东西时代",
-          "userVid": 519906148,
+          "name": "上海译文出版社",
+          "userVid": 331381138,
           "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
+          "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
           "cpType": 0
         }
       }
@@ -3708,15 +3711,15 @@
         "count": 2
       },
       {
+        "name": "上海译文出版社",
+        "count": 1
+      },
+      {
         "name": "中信出版集团",
         "count": 1
       },
       {
         "name": "北京科学技术出版社有限公司",
-        "count": 1
-      },
-      {
-        "name": "上海译文出版社",
         "count": 1
       },
       {
@@ -3743,11 +3746,11 @@
       },
       {
         "stat": "阅读",
-        "counts": "102天"
+        "counts": "103天"
       },
       {
         "stat": "笔记",
-        "counts": "203条"
+        "counts": "206条"
       }
     ],
     "medals": [
@@ -3759,7 +3762,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5060315,
+        "users": 5060681,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3776,7 +3779,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6231782,
+        "users": 6232139,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3793,7 +3796,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12001511,
+        "users": 12001955,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3808,7 +3811,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 152204,
+    "totalReadTime": 154366,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -4189,7 +4192,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7976人读过"
+        "reason": "仅有7983人读过"
       },
       {
         "type": 8,
@@ -4521,11 +4524,11 @@
         "1782835200": 12976,
         "1785513600": 40160,
         "1788192000": 28953,
-        "1790784000": 15938,
+        "1790784000": 18100,
         "1793462400": 0,
         "1796054400": 0
       },
-      "readDays": 100,
+      "readDays": 101,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -4788,6 +4791,48 @@
         },
         {
           "book": {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+            "title": "日常生活中的自我呈现",
+            "author": "[美] 欧文·戈夫曼",
+            "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
+            "version": 1395936188,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 134217761,
+            "finished": 1,
+            "free": 1,
+            "mcardDiscount": 0,
+            "ispub": 0,
+            "cpid": 0,
+            "publishTime": "",
+            "lastChapterIdx": 37,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 0,
+            "copyrightChapterUids": [],
+            "hasKeyPoint": true,
+            "limitShareChat": 0,
+            "inStoreBookId": "3001479281",
+            "blockSaveImg": 0,
+            "language": "zh-wr",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 11081,
+          "tags": []
+        },
+        {
+          "book": {
             "bookId": "30181899",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=7a332d8071cc8a0b7a31e96",
             "title": "高级运动营养学",
@@ -4884,48 +4929,6 @@
             "isAutoDownload": 1
           },
           "readTime": 9387,
-          "tags": []
-        },
-        {
-          "book": {
-            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
-            "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
-            "title": "日常生活中的自我呈现",
-            "author": "[美] 欧文·戈夫曼",
-            "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
-            "version": 1395936188,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 134217761,
-            "finished": 1,
-            "free": 1,
-            "mcardDiscount": 0,
-            "ispub": 0,
-            "cpid": 0,
-            "publishTime": "",
-            "lastChapterIdx": 37,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 0,
-            "copyrightChapterUids": [],
-            "hasKeyPoint": true,
-            "limitShareChat": 0,
-            "inStoreBookId": "3001479281",
-            "blockSaveImg": 0,
-            "language": "zh-wr",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 8919,
           "tags": []
         },
         {
@@ -5304,17 +5307,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "100天"
+          "counts": "101天"
         },
         {
           "stat": "笔记",
-          "counts": "203条"
+          "counts": "206条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 502,
+      "dayAverageReadTime": 507,
       "baseTime": 1767196800,
-      "totalReadTime": 152191,
+      "totalReadTime": 154353,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -5515,8 +5518,41 @@
   "notesByBook": {
     "CB_8WSAeaAbjA6w77875hFO56Xg": {
       "highlights": {
-        "synckey": 1793129916,
+        "synckey": 1793382887,
         "updated": [
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 15,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_15_20602-20768",
+            "range": "20602-20768",
+            "markText": "在我们各自独立的反应中，我们所有人都像那种在办公室里是暴君但在家里却是懦夫的人；或者像一个在艺术领域才华横溢而在人际关系中畏首畏尾的音乐家。这种分裂使我们很难把这些不同的方面统一起来（例如，如果那位办公室里飞扬跋扈在家里软弱无能的人突然对他的妻子或孩子发号施令，他会发现他的这种分裂使他无能为力，他因此会感到束手无策和痛苦不堪）。®",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 15,
+            "createTime": 1793382887
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 15,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_15_19135-19290",
+            "range": "19135-19290",
+            "markText": "某一项表演中的合作者，在没有观众在场时彼此间可能表现得相当亲密。但也应当注意到，一个人可能完全适应了他的前台区域活动（或前台区域角色）以至于会把后台放松也当成表演。一个人在退到后台时，他或许感到不得不以一种随意的方式竭力摆脱他在前台的角色，这种后台行为与其说是为表演提供放松机会，还不如说是一种更为做作的表演。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 15,
+            "createTime": 1793382610
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterIdx": 15,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_15_17902-18137",
+            "range": "17902-18137",
+            "markText": "在这些有关自己的真实认识和有关他人的错觉的背后，隐藏着一种重要的驱动力及其对社会流动的失望，无论是向上流动、向下流动还是横向流动。人们常常试图逃离这个只有前台区域行为和后台区域行为的两面世界，他们也许认为，如果他们能够获得那个梦寐以求的新位置，他们就会具有那个位置中的个体所表现的气质，而不会同时又成为表演者。当然，一旦他们实现了这一愿望，他们就会发现，新处境与老处境有始料未及的相似之处：两者都涉及向观众展示前台，两者都会使表演者陷于肮脏可鄙、琐碎无聊的舞台表演之中。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 15,
+            "createTime": 1793382333
+          },
           {
             "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
             "chapterIdx": 13,
@@ -5817,6 +5853,11 @@
         ],
         "removed": [],
         "chapters": [
+          {
+            "title": "第三章区域与区域行为",
+            "chapterUid": 15,
+            "chapterIdx": 15
+          },
           {
             "title": "第二章剧班",
             "chapterUid": 13,
