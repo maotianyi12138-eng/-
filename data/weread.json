@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-10-31T05:38:29Z",
+  "updatedAt": "2026-10-31T12:25:24Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -3762,7 +3762,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5060975,
+        "users": 5061323,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3779,7 +3779,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6232471,
+        "users": 6232846,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3796,7 +3796,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12002406,
+        "users": 12002869,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -4192,7 +4192,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7991人读过"
+        "reason": "仅有7998人读过"
       },
       {
         "type": 8,
@@ -5076,18 +5076,18 @@
           "readingTime": 18052
         },
         {
-          "categoryId": 1600000,
-          "categoryTitle": "生活百科",
-          "parentCategoryId": 1600000,
-          "parentCategoryTitle": "生活百科",
-          "readingCount": 1,
-          "readingTime": 10732
-        },
-        {
           "categoryId": 2100000,
           "categoryTitle": "医学健康",
           "parentCategoryId": 2100000,
           "parentCategoryTitle": "医学健康",
+          "readingCount": 1,
+          "readingTime": 10732
+        },
+        {
+          "categoryId": 1600000,
+          "categoryTitle": "生活百科",
+          "parentCategoryId": 1600000,
+          "parentCategoryTitle": "生活百科",
           "readingCount": 1,
           "readingTime": 10732
         },
@@ -5208,46 +5208,6 @@
         {
           "count": 1,
           "copyrightInfo": {
-            "name": "湛庐CHEERS",
-            "userVid": 341281594,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0011-ZlyTRc7hpfLYxdG7URz2m10/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
-            "name": "中信出版集团",
-            "userVid": 168010251,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
-            "name": "磨铁数盟",
-            "userVid": 351681843,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
-            "name": "东西时代",
-            "userVid": 519906148,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
             "name": "上海译文出版社",
             "userVid": 331381138,
             "role": 2,
@@ -5264,6 +5224,46 @@
             "avatar": "https://res.weread.qq.com/wravatar/WV0009-LEe1nFnveyDEZ3gb_nErxd2/0",
             "cpType": 0
           }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "东西时代",
+            "userVid": 519906148,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "磨铁数盟",
+            "userVid": 351681843,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "湛庐CHEERS",
+            "userVid": 341281594,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0011-ZlyTRc7hpfLYxdG7URz2m10/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "中信出版集团",
+            "userVid": 168010251,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
+            "cpType": 0
+          }
         }
       ],
       "preferPublisher": [
@@ -5272,11 +5272,11 @@
           "count": 2
         },
         {
-          "name": "北京科学技术出版社有限公司",
+          "name": "中信出版集团",
           "count": 1
         },
         {
-          "name": "中信出版集团",
+          "name": "浙江科学技术出版社",
           "count": 1
         },
         {
@@ -5284,7 +5284,7 @@
           "count": 1
         },
         {
-          "name": "浙江科学技术出版社",
+          "name": "北京科学技术出版社有限公司",
           "count": 1
         },
         {
