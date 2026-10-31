@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-10-31T12:25:24Z",
+  "updatedAt": "2026-10-31T21:31:34Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -54,7 +54,7 @@
         "updateTime": 1792450556,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793382993
+        "readUpdateTime": 1793459026
       },
       {
         "bookId": "3300200141",
@@ -352,7 +352,7 @@
         "updateTime": 1792450556,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793382993
+        "readUpdateTime": 1793459026
       },
       {
         "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
@@ -2376,371 +2376,13 @@
     ]
   },
   "monthly": {
-    "readTimes": {
-      "1790784000": 398,
-      "1791043200": 18,
-      "1791475200": 368,
-      "1791561600": 771,
-      "1791820800": 2060,
-      "1791907200": 571,
-      "1791993600": 622,
-      "1792080000": 296,
-      "1792166400": 936,
-      "1792252800": 820,
-      "1792425600": 132,
-      "1792512000": 1898,
-      "1792598400": 2390,
-      "1792684800": 1024,
-      "1792857600": 3032,
-      "1792944000": 339,
-      "1793030400": 0,
-      "1793116800": 263,
-      "1793203200": 0,
-      "1793289600": 0,
-      "1793376000": 2162
-    },
-    "readDays": 17,
-    "readLongest": [
-      {
-        "book": {
-          "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
-          "title": "日常生活中的自我呈现",
-          "author": "[美] 欧文·戈夫曼",
-          "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
-          "version": 1395936188,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 134217761,
-          "finished": 1,
-          "free": 1,
-          "mcardDiscount": 0,
-          "ispub": 0,
-          "cpid": 0,
-          "publishTime": "",
-          "lastChapterIdx": 37,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 0,
-          "copyrightChapterUids": [],
-          "hasKeyPoint": true,
-          "limitShareChat": 0,
-          "inStoreBookId": "3001479281",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 11081,
-        "tags": [
-          "笔记最多",
-          "单日阅读最久"
-        ]
-      },
-      {
-        "book": {
-          "bookId": "3300200122",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=faf32a10813abb4acg012daa",
-          "title": "烧仓房：李沧东电影《燃烧》原著（轻经典）",
-          "author": "[日]村上春树",
-          "translator": "林少华",
-          "intro": "本文选自《萤》。一个写小说的\"我\"，一个神秘的有钱男人，和一个爱跳哑剧的女孩——三人之间弥漫着说不清的暧昧与不安。男人在酒醉后轻描淡写地说：\"我的爱好是烧仓房。\"\r\n从那以后，\"我\"开始四处寻找被烧毁的仓房，却一无所获。与此同时，女孩毫无征兆地人间蒸发了。烧掉的到底是什么？消失的人去了哪里？真相始终藏在日常的微笑之下。\r\n这是村上最具悬疑气质的短篇之一，故事不给答案，却让不安像野火一样蔓延至读完后的每一个深夜。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_6oqhaccekqjwkzctq7rjwo/s_cpplatform_6oqhaccekqjwkzctq7rjwo1775128022.jpg",
-          "version": 1766605504,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 3,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 3,
-            "maxfreeChapterUid": 4,
-            "maxfreeChapterRatio": 6
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1000000121,
-          "publishTime": "2026-04-27 00:00:00",
-          "lastChapterIdx": 3,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 990,
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 1946,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "3300200121",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=d0232380813abb4acg011ea6",
-          "title": "萤：《挪威的森林》原型短篇（轻经典）",
-          "author": "[日]村上春树",
-          "translator": "林少华",
-          "intro": "本文选自《萤》。一座右翼经营的学生寄宿院，一段无法说出口的三角往事。十八岁的\"我\"住进东京的宿舍，与口吃的室友相安无事，却被一个女孩牵引进无法挣脱的漩涡——她是已故挚友的恋人。\r\n两个被同一场死亡灼伤的人，在沉默中相互靠近，却始终无法真正抵达彼此。夜晚的宿舍、雨中的电车、黑暗里飞舞的萤火虫，都成了青春创痛的隐喻。\r\n村上以极度克制的笔调写出了丧失与眷恋的暗涌。那只萤火虫最终消融于黑暗，一如年少时我们以为永远握得住的光。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/71/cpplatform_hdvwxbx7srs53wdhgbljrb/s_cpplatform_hdvwxbx7srs53wdhgbljrb1775127798.jpg",
-          "version": 688142997,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 3,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 3,
-            "maxfreeChapterUid": 3,
-            "maxfreeChapterRatio": 6
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1000000121,
-          "publishTime": "2026-04-03 00:00:00",
-          "lastChapterIdx": 3,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 990,
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 1891,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "35523636",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
-          "title": "丰饶之海（第二卷）：奔马",
-          "author": "三岛由纪夫",
-          "translator": "陈德文",
-          "intro": "《丰饶之海》四部曲的第二部。在清显去世的十八年后，昭和七年本多繁邦满年满三十八岁，已经当上大阪控诉院法官。他在三轮山的三光瀑布遇到了由清显转生的饭沼勋，这时的阿勋深受《神风连史话》的影响，义无反顾地效忠已趋衰落的皇室，准备谋刺杀当时财经界的领袖，本多曾写了一封长信给勋，告诉他“《神风连史话》是一个已经结束的悲剧。”",
-          "cover": "https://cdn.weread.qq.com/weread/cover/9/YueWen_35523636/s_YueWen_35523636.jpg",
-          "version": 1839042795,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 1048577,
-          "finished": 1,
-          "maxFreeChapter": 8,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 8,
-            "maxfreeChapterUid": 50,
-            "maxfreeChapterRatio": 20
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": -2571052,
-          "publishTime": "2018-09-18 00:00:00",
-          "lastChapterIdx": 43,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 3000,
-          "copyrightChapterUids": [
-            44
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 1537,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "3300200141",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=e3c322f0813abb4aeg011f8e",
-          "title": "托尼瀑谷：电影《东尼涉谷》原著（轻经典）",
-          "author": "[日]村上春树",
-          "translator": "林少华",
-          "intro": "本文选自《列克星敦的幽灵》。托尼瀑谷生来就是一个人。父亲是吹长号的爵士乐手，母亲在他出世三天后死了。一个美国少校给他取了名，这个不像日本人的名字让他从小被孤立，却也让他习惯了独处。\r\n三十五岁时他疯狂爱上一个女孩——准确说来，是被她穿衣服时那种如小鸟裹着风的姿态击中了。婚后他终于不再孤独，却发现妻子对衣服有近乎病态的执念。满满一房间的衣服，是她无法填满的内心空洞。\r\n妻子意外身亡后，留下数百件7号衣服。他雇了一个同尺码的女孩来穿，又很快意识到一切都已结束了。孤独如墨汁般再次将他淹没。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/77/cpplatform_3g9lw7p58a7tm8szmx7qr7/s_cpplatform_3g9lw7p58a7tm8szmx7qr71775183407.jpg",
-          "version": 357273830,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 3,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 3,
-            "maxfreeChapterUid": 4,
-            "maxfreeChapterRatio": 6
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1000000121,
-          "publishTime": "2026-05-11 00:00:00",
-          "lastChapterIdx": 3,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 990,
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 1345,
-        "tags": []
-      }
-    ],
-    "preferCategory": [
-      {
-        "categoryId": 300000,
-        "categoryTitle": "文学",
-        "parentCategoryId": 300000,
-        "parentCategoryTitle": "文学",
-        "readingCount": 4,
-        "readingTime": 6737
-      },
-      {
-        "categoryId": 1000000,
-        "categoryTitle": "个人成长",
-        "parentCategoryId": 1000000,
-        "parentCategoryTitle": "个人成长",
-        "readingCount": 0,
-        "readingTime": 0
-      },
-      {
-        "categoryId": 200000,
-        "categoryTitle": "历史",
-        "parentCategoryId": 200000,
-        "parentCategoryTitle": "历史",
-        "readingCount": 0,
-        "readingTime": 0
-      },
-      {
-        "categoryId": 1100000,
-        "categoryTitle": "经济理财",
-        "parentCategoryId": 1100000,
-        "parentCategoryTitle": "经济理财",
-        "readingCount": 0,
-        "readingTime": 0
-      },
-      {
-        "categoryId": 900000,
-        "categoryTitle": "社会文化",
-        "parentCategoryId": 900000,
-        "parentCategoryTitle": "社会文化",
-        "readingCount": 0,
-        "readingTime": 0
-      },
-      {
-        "categoryId": 600000,
-        "categoryTitle": "哲学宗教",
-        "parentCategoryId": 600000,
-        "parentCategoryTitle": "哲学宗教",
-        "readingCount": 0,
-        "readingTime": 0
-      },
-      {
-        "categoryId": 800000,
-        "categoryTitle": "心理",
-        "parentCategoryId": 800000,
-        "parentCategoryTitle": "心理",
-        "readingCount": 0,
-        "readingTime": 0
-      },
-      {
-        "categoryId": 1200000,
-        "categoryTitle": "政治军事",
-        "parentCategoryId": 1200000,
-        "parentCategoryTitle": "政治军事",
-        "readingCount": 0,
-        "readingTime": 0
-      }
-    ],
-    "preferCategoryWord": "偏好阅读文学",
-    "readStat": [
-      {
-        "stat": "读过",
-        "counts": "5本"
-      },
-      {
-        "stat": "读完",
-        "counts": "3本"
-      },
-      {
-        "stat": "阅读",
-        "counts": "17天"
-      },
-      {
-        "stat": "笔记",
-        "counts": "36条"
-      }
-    ],
+    "readTimes": {},
+    "readDays": 0,
     "registTime": 1645667800,
-    "compare": -0.3950150577743908,
-    "dayAverageReadTime": 583,
-    "baseTime": 1790784000,
-    "totalReadTime": 18100,
+    "compare": -1.0,
+    "dayAverageReadTime": 0,
+    "baseTime": 1793462400,
+    "totalReadTime": 0,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2757,46 +2399,7 @@
       },
       {
         "type": 5,
-        "title": "思考最多",
-        "bookInfo": {
-          "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
-          "title": "日常生活中的自我呈现",
-          "author": "[美] 欧文·戈夫曼",
-          "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
-          "version": 1395936188,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 134217761,
-          "finished": 1,
-          "free": 1,
-          "mcardDiscount": 0,
-          "ispub": 0,
-          "cpid": 0,
-          "publishTime": "",
-          "lastChapterIdx": 37,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 0,
-          "copyrightChapterUids": [],
-          "hasKeyPoint": true,
-          "limitShareChat": 0,
-          "inStoreBookId": "3001479281",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "reason": "笔记最多"
+        "title": "思考最多"
       },
       {
         "type": 3,
@@ -2808,107 +2411,11 @@
       },
       {
         "type": 7,
-        "title": "第一本阅读",
-        "bookInfo": {
-          "bookId": "3300200122",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=faf32a10813abb4acg012daa",
-          "title": "烧仓房：李沧东电影《燃烧》原著（轻经典）",
-          "author": "[日]村上春树",
-          "translator": "林少华",
-          "intro": "本文选自《萤》。一个写小说的\"我\"，一个神秘的有钱男人，和一个爱跳哑剧的女孩——三人之间弥漫着说不清的暧昧与不安。男人在酒醉后轻描淡写地说：\"我的爱好是烧仓房。\"\r\n从那以后，\"我\"开始四处寻找被烧毁的仓房，却一无所获。与此同时，女孩毫无征兆地人间蒸发了。烧掉的到底是什么？消失的人去了哪里？真相始终藏在日常的微笑之下。\r\n这是村上最具悬疑气质的短篇之一，故事不给答案，却让不安像野火一样蔓延至读完后的每一个深夜。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_6oqhaccekqjwkzctq7rjwo/s_cpplatform_6oqhaccekqjwkzctq7rjwo1775128022.jpg",
-          "version": 1766605504,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 3,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 3,
-            "maxfreeChapterUid": 4,
-            "maxfreeChapterRatio": 6
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1000000121,
-          "publishTime": "2026-04-27 00:00:00",
-          "lastChapterIdx": 3,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 990,
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "reason": "2026/10/13/阅读"
+        "title": "第一本阅读"
       },
       {
         "type": 6,
-        "title": "最爱文学",
-        "bookInfo": {
-          "bookId": "3300200122",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=faf32a10813abb4acg012daa",
-          "title": "烧仓房：李沧东电影《燃烧》原著（轻经典）",
-          "author": "[日]村上春树",
-          "translator": "林少华",
-          "intro": "本文选自《萤》。一个写小说的\"我\"，一个神秘的有钱男人，和一个爱跳哑剧的女孩——三人之间弥漫着说不清的暧昧与不安。男人在酒醉后轻描淡写地说：\"我的爱好是烧仓房。\"\r\n从那以后，\"我\"开始四处寻找被烧毁的仓房，却一无所获。与此同时，女孩毫无征兆地人间蒸发了。烧掉的到底是什么？消失的人去了哪里？真相始终藏在日常的微笑之下。\r\n这是村上最具悬疑气质的短篇之一，故事不给答案，却让不安像野火一样蔓延至读完后的每一个深夜。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/24/cpplatform_6oqhaccekqjwkzctq7rjwo/s_cpplatform_6oqhaccekqjwkzctq7rjwo1775128022.jpg",
-          "version": 1766605504,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 3,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 3,
-            "maxfreeChapterUid": 4,
-            "maxfreeChapterRatio": 6
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1000000121,
-          "publishTime": "2026-04-27 00:00:00",
-          "lastChapterIdx": 3,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 990,
-          "copyrightChapterUids": [
-            2
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "reason": "最爱分类"
+        "title": "最爱品类"
       },
       {
         "type": 2,
@@ -2939,7 +2446,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 154353
+      "1767196800": 154530
     },
     "readDays": 103,
     "readLongest": [
@@ -3150,6 +2657,48 @@
       },
       {
         "book": {
+          "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+          "title": "日常生活中的自我呈现",
+          "author": "[美] 欧文·戈夫曼",
+          "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
+          "version": 1395936188,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 134217761,
+          "finished": 1,
+          "free": 1,
+          "mcardDiscount": 0,
+          "ispub": 0,
+          "cpid": 0,
+          "publishTime": "",
+          "lastChapterIdx": 37,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 0,
+          "copyrightChapterUids": [],
+          "hasKeyPoint": true,
+          "limitShareChat": 0,
+          "inStoreBookId": "3001479281",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 11258,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "3300106416",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
           "title": "箭术与禅心：一位西方哲学家的禅悟实录",
@@ -3200,48 +2749,6 @@
         "tags": [
           "单日阅读最久"
         ]
-      },
-      {
-        "book": {
-          "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
-          "title": "日常生活中的自我呈现",
-          "author": "[美] 欧文·戈夫曼",
-          "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
-          "version": 1395936188,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 134217761,
-          "finished": 1,
-          "free": 1,
-          "mcardDiscount": 0,
-          "ispub": 0,
-          "cpid": 0,
-          "publishTime": "",
-          "lastChapterIdx": 37,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 0,
-          "copyrightChapterUids": [],
-          "hasKeyPoint": true,
-          "limitShareChat": 0,
-          "inStoreBookId": "3001479281",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 11081,
-        "tags": []
       },
       {
         "book": {
@@ -3532,9 +3039,9 @@
       7810,
       11390,
       6925,
-      14861,
+      15038,
       18996,
-      11224,
+      13386,
       7509,
       8181,
       6079,
@@ -3762,7 +3269,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5061323,
+        "users": 5061736,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3779,7 +3286,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6232846,
+        "users": 6233318,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3796,7 +3303,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12002869,
+        "users": 12003444,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3811,7 +3318,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 154366,
+    "totalReadTime": 154543,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -4192,7 +3699,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7998人读过"
+        "reason": "仅有7997人读过"
       },
       {
         "type": 8,
@@ -4524,7 +4031,7 @@
         "1782835200": 12976,
         "1785513600": 40160,
         "1788192000": 28953,
-        "1790784000": 18100,
+        "1790784000": 18277,
         "1793462400": 0,
         "1796054400": 0
       },
@@ -4738,6 +4245,48 @@
         },
         {
           "book": {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+            "title": "日常生活中的自我呈现",
+            "author": "[美] 欧文·戈夫曼",
+            "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
+            "version": 1395936188,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 134217761,
+            "finished": 1,
+            "free": 1,
+            "mcardDiscount": 0,
+            "ispub": 0,
+            "cpid": 0,
+            "publishTime": "",
+            "lastChapterIdx": 37,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 0,
+            "copyrightChapterUids": [],
+            "hasKeyPoint": true,
+            "limitShareChat": 0,
+            "inStoreBookId": "3001479281",
+            "blockSaveImg": 0,
+            "language": "zh-wr",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 11258,
+          "tags": []
+        },
+        {
+          "book": {
             "bookId": "3300106416",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
             "title": "箭术与禅心：一位西方哲学家的禅悟实录",
@@ -4788,48 +4337,6 @@
           "tags": [
             "单日阅读最久"
           ]
-        },
-        {
-          "book": {
-            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
-            "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
-            "title": "日常生活中的自我呈现",
-            "author": "[美] 欧文·戈夫曼",
-            "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
-            "version": 1395936188,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 134217761,
-            "finished": 1,
-            "free": 1,
-            "mcardDiscount": 0,
-            "ispub": 0,
-            "cpid": 0,
-            "publishTime": "",
-            "lastChapterIdx": 37,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 0,
-            "copyrightChapterUids": [],
-            "hasKeyPoint": true,
-            "limitShareChat": 0,
-            "inStoreBookId": "3001479281",
-            "blockSaveImg": 0,
-            "language": "zh-wr",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 11081,
-          "tags": []
         },
         {
           "book": {
@@ -5315,9 +4822,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 507,
+      "dayAverageReadTime": 506,
       "baseTime": 1767196800,
-      "totalReadTime": 154353,
+      "totalReadTime": 154530,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
