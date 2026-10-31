@@ -1,10 +1,36 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-30T08:46:52.728Z",
+  "updatedAt": "2026-10-31T08:34:10.039Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-10-30",
+        "title": "每天 肩背胸",
+        "start": 1793363907928,
+        "durationMinutes": 10,
+        "setCount": 6,
+        "volumeKg": 0,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "深度俯卧撑",
+            "setCount": 3,
+            "totalReps": 60,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          },
+          {
+            "name": "引体向上",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-10-29",
         "title": "肩 腿前侧",
@@ -56,6 +82,25 @@
             "totalReps": 36,
             "volumeKg": 450,
             "maxWeightKg": 12.5
+          }
+        ]
+      },
+      {
+        "date": "2026-10-29",
+        "title": "传统力量训练",
+        "start": 1793306472613,
+        "durationMinutes": 103,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 562,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "TraditionalStrengthTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
           }
         ]
       },
@@ -18015,7 +18060,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-29"
+      "to": "2026-10-30"
     }
   },
   "body": {
