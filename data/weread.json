@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-01T13:20:30Z",
+  "updatedAt": "2026-11-01T22:00:18Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -54,7 +54,7 @@
         "updateTime": 1792450556,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793534081
+        "readUpdateTime": 1793549439
       },
       {
         "bookId": "3300200141",
@@ -346,13 +346,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 57,
+        "readingProgress": 66,
         "markedStatus": 1,
-        "lastNoteSort": 1793532439,
+        "lastNoteSort": 1793547320,
         "updateTime": 1792450556,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793534081
+        "readUpdateTime": 1793549439
       },
       {
         "bookId": "3300155373",
@@ -1464,10 +1464,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 1,
-        "readingProgress": 57,
-        "noteCount": 30,
+        "readingProgress": 66,
+        "noteCount": 35,
         "bookmarkCount": 0,
-        "sort": 1793532439
+        "sort": 1793547320
       },
       {
         "bookId": "3300200141",
@@ -2377,9 +2377,10 @@
   },
   "monthly": {
     "readTimes": {
-      "1793462400": 696
+      "1793462400": 3407,
+      "1793548800": 288
     },
-    "readDays": 1,
+    "readDays": 2,
     "readLongest": [
       {
         "book": {
@@ -2420,7 +2421,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 693,
+        "readTime": 3692,
         "tags": [
           "单日阅读最久"
         ]
@@ -2429,7 +2430,7 @@
     "readStat": [
       {
         "stat": "读过",
-        "counts": "0本"
+        "counts": "1本"
       },
       {
         "stat": "读完",
@@ -2437,18 +2438,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "1天"
+        "counts": "2天"
       },
       {
         "stat": "笔记",
-        "counts": "0条"
+        "counts": "5条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 0.1805000820703616,
-    "dayAverageReadTime": 696,
+    "compare": 2.133583191989933,
+    "dayAverageReadTime": 1847,
     "baseTime": 1793462400,
-    "totalReadTime": 696,
+    "totalReadTime": 3695,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2512,9 +2513,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 155226
+      "1767196800": 158225
     },
-    "readDays": 104,
+    "readDays": 105,
     "readLongest": [
       {
         "book": {
@@ -2622,6 +2623,48 @@
       },
       {
         "book": {
+          "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+          "title": "日常生活中的自我呈现",
+          "author": "[美] 欧文·戈夫曼",
+          "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
+          "version": 1395936188,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 134217761,
+          "finished": 1,
+          "free": 1,
+          "mcardDiscount": 0,
+          "ispub": 0,
+          "cpid": 0,
+          "publishTime": "",
+          "lastChapterIdx": 37,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 0,
+          "copyrightChapterUids": [],
+          "hasKeyPoint": true,
+          "limitShareChat": 0,
+          "inStoreBookId": "3001479281",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 14950,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "25424211",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
           "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
@@ -2669,48 +2712,6 @@
           "isAutoDownload": 1
         },
         "readTime": 12495,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
-          "title": "日常生活中的自我呈现",
-          "author": "[美] 欧文·戈夫曼",
-          "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
-          "version": 1395936188,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 134217761,
-          "finished": 1,
-          "free": 1,
-          "mcardDiscount": 0,
-          "ispub": 0,
-          "cpid": 0,
-          "publishTime": "",
-          "lastChapterIdx": 37,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 0,
-          "copyrightChapterUids": [],
-          "hasKeyPoint": true,
-          "limitShareChat": 0,
-          "inStoreBookId": "3001479281",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 11951,
         "tags": []
       },
       {
@@ -3090,7 +3091,7 @@
     "preferTime": [
       7665,
       3680,
-      1654,
+      1904,
       317,
       7,
       0,
@@ -3101,11 +3102,11 @@
       5713,
       4834,
       4990,
-      17667,
+      18113,
       7810,
       11390,
-      6925,
-      15038,
+      7225,
+      17437,
       18996,
       13386,
       7509,
@@ -3319,11 +3320,11 @@
       },
       {
         "stat": "阅读",
-        "counts": "104天"
+        "counts": "105天"
       },
       {
         "stat": "笔记",
-        "counts": "206条"
+        "counts": "211条"
       }
     ],
     "medals": [
@@ -3335,7 +3336,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5063037,
+        "users": 5063503,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3352,7 +3353,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6234818,
+        "users": 6235284,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3369,7 +3370,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12005276,
+        "users": 12005846,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3384,7 +3385,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 155239,
+    "totalReadTime": 158238,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3765,7 +3766,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8012人读过"
+        "reason": "仅有8020人读过"
       },
       {
         "type": 8,
@@ -4098,10 +4099,10 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 696,
+        "1793462400": 3695,
         "1796054400": 0
       },
-      "readDays": 102,
+      "readDays": 103,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -4210,6 +4211,48 @@
         },
         {
           "book": {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+            "title": "日常生活中的自我呈现",
+            "author": "[美] 欧文·戈夫曼",
+            "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
+            "version": 1395936188,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 134217761,
+            "finished": 1,
+            "free": 1,
+            "mcardDiscount": 0,
+            "ispub": 0,
+            "cpid": 0,
+            "publishTime": "",
+            "lastChapterIdx": 37,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 0,
+            "copyrightChapterUids": [],
+            "hasKeyPoint": true,
+            "limitShareChat": 0,
+            "inStoreBookId": "3001479281",
+            "blockSaveImg": 0,
+            "language": "zh-wr",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 14950,
+          "tags": []
+        },
+        {
+          "book": {
             "bookId": "25424211",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
             "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
@@ -4257,48 +4300,6 @@
             "isAutoDownload": 1
           },
           "readTime": 12495,
-          "tags": []
-        },
-        {
-          "book": {
-            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
-            "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
-            "title": "日常生活中的自我呈现",
-            "author": "[美] 欧文·戈夫曼",
-            "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
-            "version": 1395936188,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 134217761,
-            "finished": 1,
-            "free": 1,
-            "mcardDiscount": 0,
-            "ispub": 0,
-            "cpid": 0,
-            "publishTime": "",
-            "lastChapterIdx": 37,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 0,
-            "copyrightChapterUids": [],
-            "hasKeyPoint": true,
-            "limitShareChat": 0,
-            "inStoreBookId": "3001479281",
-            "blockSaveImg": 0,
-            "language": "zh-wr",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 11951,
           "tags": []
         },
         {
@@ -4614,7 +4615,7 @@
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
           "readingCount": 11,
-          "readingTime": 74097
+          "readingTime": 74100
         },
         {
           "categoryId": 100001,
@@ -4622,7 +4623,7 @@
           "parentCategoryId": 100000,
           "parentCategoryTitle": "精品小说",
           "readingCount": 4,
-          "readingTime": 46695
+          "readingTime": 46698
         },
         {
           "categoryId": 600000,
@@ -4880,17 +4881,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "102天"
+          "counts": "103天"
         },
         {
           "stat": "笔记",
-          "counts": "206条"
+          "counts": "211条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 508,
+      "dayAverageReadTime": 517,
       "baseTime": 1767196800,
-      "totalReadTime": 155226,
+      "totalReadTime": 158225,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -5091,8 +5092,63 @@
   "notesByBook": {
     "CB_8WSAeaAbjA6w77875hFO56Xg": {
       "highlights": {
-        "synckey": 1793533503,
+        "synckey": 1793547320,
         "updated": [
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterUid": 17,
+            "chapterIdx": 17,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_17_17460-17581",
+            "range": "17460-17581",
+            "markText": "让一个病人接受了一系列虚伪的穿刺抽液、检查、诊断等，他可能会感到满足，毕竟作为一个病人，他参与了这种戏剧性的活动，尽管医生并没有为他做什么实质性的治疗；反之，如果他接受了实际的治疗而没有接受上述一系列虚饰的东西，他反而可能会认为自己被欺骗了。",
+            "createTime": 1793547320
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterUid": 17,
+            "chapterIdx": 17,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_17_15223-15505",
+            "range": "15223-15505",
+            "markText": "当剧班成员与一位陌生人接触，而后者正好是他们的同行时，新来者会暂时被赋予一种仪式性的、含有敬意的剧班成员的资格，说明这一点饶有趣味。这里有一种“消防员来访”的复杂情节。剧班成员对待他们的宾客，就像他与他们有着长期交往关系一样，立刻就变得很亲密。不管剧班成员之间享有什么样的交往特权，来宾往往会被赋予俱乐部成员的权益。如果来宾和主人恰巧曾在同一家机构接受训练，或者接受同一培训者的训练，或者两者兼而有之的时候，来宾尤其会受到这种礼遇。出于同一家族、同一职业学校、同一监狱、同一公立学校或同一小镇的人都是很明显的例子。当“老相识”重逢时，也许很难维持后台的那种胡闹，放",
+            "createTime": 1793547037
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterUid": 17,
+            "chapterIdx": 17,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_17_12852-13078",
+            "range": "12852-13078",
+            "markText": "表演者在训练者面前常会感到很不自在，因为在很久以前他们曾经跟训练者学过、并且已对学到的内容习以为常了。然而，训练者却往往会使表演者回想起他本已经忘记了的某种生动的自我形象，即他正处在笨拙摸索和生成过程中的那个自我形象。表演者可以使自己忘掉他曾是多么愚蠢，但是他不能使训练者也忘掉这件事。正如里茨勒（Riezler )就羞耻事实所提出的一样，​“如果有其他人知道，这事实就被证实了，他的自我形象也就不再是他自己的记忆和忘却所能支配的了”​。",
+            "createTime": 1793546491
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterUid": 17,
+            "chapterIdx": 17,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_17_11646-11726",
+            "range": "11646-11726",
+            "markText": "当然，专家也可以是匿名的，如同那些灭鼠专家，他们的广告上说，他们保证乘坐无标志的伪装货车去顾主家服务。当然，匿名专家的任何保证都公然声称是顾主需要并乐意利用的。",
+            "createTime": 1793546251
+          },
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterUid": 17,
+            "chapterIdx": 17,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_17_10354-10569",
+            "range": "10354-10569",
+            "markText": "我们有时会发现，顾主的一般社会地位会高于那些被雇来照料顾主前台的专家。在这种情况下，出现了一种有趣的两难困境：一方虽拥有较高的地位，但信息控制程度却较低；而另一方拥有的地位较低，但信息控制程度却较高。在这种情况，专家可能会对地位高于他的顾主在表演中表现出的笨拙留下深刻印象，从而忘记了自己的地位劣势。结果，这些专家有时就会产生一种特有的矛盾情绪，一方面是乐于接近地位高于自己的人；另一方面则是因为这种接近而想对“居上位者”冷嘲热讽",
+            "createTime": 1793546164
+          },
           {
             "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
             "chapterIdx": 15,
@@ -5426,6 +5482,11 @@
         ],
         "removed": [],
         "chapters": [
+          {
+            "title": "第四章不协调角色",
+            "chapterUid": 17,
+            "chapterIdx": 17
+          },
           {
             "title": "第三章区域与区域行为",
             "chapterUid": 15,
