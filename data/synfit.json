@@ -1,10 +1,90 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-10-31T08:34:10.039Z",
+  "updatedAt": "2026-11-01T09:25:13.857Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-10-31",
+        "title": "背 二头",
+        "start": 1793480430158,
+        "durationMinutes": 11,
+        "setCount": 26,
+        "volumeKg": 8502,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "引体向上",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          },
+          {
+            "name": "哑铃划船",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1272,
+            "maxWeightKg": 28
+          },
+          {
+            "name": "宽距高位下拉",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2496,
+            "maxWeightKg": 52
+          },
+          {
+            "name": "器械划船2",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2160,
+            "maxWeightKg": 45
+          },
+          {
+            "name": "绳索直臂下压",
+            "setCount": 4,
+            "totalReps": 60,
+            "volumeKg": 1350,
+            "maxWeightKg": 22.5
+          },
+          {
+            "name": "坐姿绳索铁杆弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 720,
+            "maxWeightKg": 20
+          },
+          {
+            "name": "哑铃弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 504,
+            "maxWeightKg": 14
+          }
+        ]
+      },
+      {
+        "date": "2026-10-30",
+        "title": "羽毛球",
+        "start": 1793384304978,
+        "durationMinutes": 151,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 1038,
+        "distance": 4.28,
+        "movements": [
+          {
+            "name": "AppleHealthWorkout",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
       {
         "date": "2026-10-30",
         "title": "每天 肩背胸",
@@ -34,13 +114,27 @@
       {
         "date": "2026-10-29",
         "title": "肩 腿前侧",
-        "start": 1793309351954,
+        "start": 1793477077286,
         "durationMinutes": 31,
-        "setCount": 24,
-        "volumeKg": 12594,
+        "setCount": 30,
+        "volumeKg": 13256.4,
         "calories": 0,
         "distance": 0,
         "movements": [
+          {
+            "name": "绳索交叉后束飞鸟",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 122.4,
+            "maxWeightKg": 3.4
+          },
+          {
+            "name": "Y字绳索侧平举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 540,
+            "maxWeightKg": 15
+          },
           {
             "name": "史密斯机推举",
             "setCount": 4,
@@ -18060,7 +18154,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-30"
+      "to": "2026-10-31"
     }
   },
   "body": {
