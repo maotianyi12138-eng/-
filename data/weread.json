@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-10-31T21:31:34Z",
+  "updatedAt": "2026-11-01T06:00:14Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -54,7 +54,7 @@
         "updateTime": 1792450556,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793459026
+        "readUpdateTime": 1793493719
       },
       {
         "bookId": "3300200141",
@@ -346,13 +346,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 53,
+        "readingProgress": 54,
         "markedStatus": 1,
-        "lastNoteSort": 1793382887,
+        "lastNoteSort": 1793493694,
         "updateTime": 1792450556,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793459026
+        "readUpdateTime": 1793493719
       },
       {
         "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
@@ -1464,10 +1464,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 1,
-        "readingProgress": 53,
-        "noteCount": 30,
+        "readingProgress": 54,
+        "noteCount": 31,
         "bookmarkCount": 0,
-        "sort": 1793382887
+        "sort": 1793493694
       },
       {
         "bookId": "3300200141",
@@ -2376,13 +2376,34 @@
     ]
   },
   "monthly": {
-    "readTimes": {},
-    "readDays": 0,
+    "readTimes": {
+      "1793462400": 250
+    },
+    "readDays": 1,
+    "readLongest": [],
+    "readStat": [
+      {
+        "stat": "读过",
+        "counts": "0本"
+      },
+      {
+        "stat": "读完",
+        "counts": "0本"
+      },
+      {
+        "stat": "阅读",
+        "counts": "1天"
+      },
+      {
+        "stat": "笔记",
+        "counts": "1条"
+      }
+    ],
     "registTime": 1645667800,
-    "compare": -1.0,
-    "dayAverageReadTime": 0,
+    "compare": -0.5759697981069104,
+    "dayAverageReadTime": 250,
     "baseTime": 1793462400,
-    "totalReadTime": 0,
+    "totalReadTime": 250,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2446,9 +2467,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 154530
+      "1767196800": 154780
     },
-    "readDays": 103,
+    "readDays": 104,
     "readLongest": [
       {
         "book": {
@@ -2694,7 +2715,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 11258,
+        "readTime": 11508,
         "tags": []
       },
       {
@@ -3253,11 +3274,11 @@
       },
       {
         "stat": "阅读",
-        "counts": "103天"
+        "counts": "104天"
       },
       {
         "stat": "笔记",
-        "counts": "206条"
+        "counts": "207条"
       }
     ],
     "medals": [
@@ -3269,7 +3290,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5061736,
+        "users": 5062544,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3286,7 +3307,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6233318,
+        "users": 6234253,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3303,7 +3324,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12003444,
+        "users": 12004629,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3318,7 +3339,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 154543,
+    "totalReadTime": 154793,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3375,7 +3396,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "最近阅读7小时"
+        "reason": "最近阅读6小时"
       },
       {
         "type": 0,
@@ -3699,7 +3720,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有7997人读过"
+        "reason": "仅有8003人读过"
       },
       {
         "type": 8,
@@ -4032,10 +4053,10 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 0,
+        "1793462400": 250,
         "1796054400": 0
       },
-      "readDays": 101,
+      "readDays": 102,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -4282,7 +4303,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 11258,
+          "readTime": 11508,
           "tags": []
         },
         {
@@ -4583,18 +4604,18 @@
           "readingTime": 18052
         },
         {
-          "categoryId": 2100000,
-          "categoryTitle": "医学健康",
-          "parentCategoryId": 2100000,
-          "parentCategoryTitle": "医学健康",
-          "readingCount": 1,
-          "readingTime": 10732
-        },
-        {
           "categoryId": 1600000,
           "categoryTitle": "生活百科",
           "parentCategoryId": 1600000,
           "parentCategoryTitle": "生活百科",
+          "readingCount": 1,
+          "readingTime": 10732
+        },
+        {
+          "categoryId": 2100000,
+          "categoryTitle": "医学健康",
+          "parentCategoryId": 2100000,
+          "parentCategoryTitle": "医学健康",
           "readingCount": 1,
           "readingTime": 10732
         },
@@ -4715,46 +4736,6 @@
         {
           "count": 1,
           "copyrightInfo": {
-            "name": "上海译文出版社",
-            "userVid": 331381138,
-            "role": 2,
-            "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
-            "name": "北京科技出版社",
-            "userVid": 526108011,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0009-LEe1nFnveyDEZ3gb_nErxd2/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
-            "name": "东西时代",
-            "userVid": 519906148,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
-            "name": "磨铁数盟",
-            "userVid": 351681843,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
             "name": "湛庐CHEERS",
             "userVid": 341281594,
             "role": 2,
@@ -4771,6 +4752,46 @@
             "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
             "cpType": 0
           }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "磨铁数盟",
+            "userVid": 351681843,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "东西时代",
+            "userVid": 519906148,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0023-6o4qlrX1GOUSUkwv_332fd2/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "上海译文出版社",
+            "userVid": 331381138,
+            "role": 2,
+            "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "北京科技出版社",
+            "userVid": 526108011,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0009-LEe1nFnveyDEZ3gb_nErxd2/0",
+            "cpType": 0
+          }
         }
       ],
       "preferPublisher": [
@@ -4779,11 +4800,11 @@
           "count": 2
         },
         {
-          "name": "中信出版集团",
+          "name": "北京科学技术出版社有限公司",
           "count": 1
         },
         {
-          "name": "浙江科学技术出版社",
+          "name": "中信出版集团",
           "count": 1
         },
         {
@@ -4791,7 +4812,7 @@
           "count": 1
         },
         {
-          "name": "北京科学技术出版社有限公司",
+          "name": "浙江科学技术出版社",
           "count": 1
         },
         {
@@ -4814,17 +4835,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "101天"
+          "counts": "102天"
         },
         {
           "stat": "笔记",
-          "counts": "206条"
+          "counts": "207条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 506,
+      "dayAverageReadTime": 507,
       "baseTime": 1767196800,
-      "totalReadTime": 154530,
+      "totalReadTime": 154780,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -5025,8 +5046,19 @@
   "notesByBook": {
     "CB_8WSAeaAbjA6w77875hFO56Xg": {
       "highlights": {
-        "synckey": 1793382887,
+        "synckey": 1793493694,
         "updated": [
+          {
+            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
+            "chapterUid": 15,
+            "chapterIdx": 15,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_8WSAeaAbjA6w77875hFO56Xg_15_22674-22687",
+            "range": "22674-22687",
+            "markText": "恩爱如初的一面，他们的亲密",
+            "createTime": 1793493694
+          },
           {
             "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
             "chapterIdx": 15,
