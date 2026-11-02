@@ -1,10 +1,29 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-11-01T09:25:13.857Z",
+  "updatedAt": "2026-11-02T09:41:11.534Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-11-01",
+        "title": "肩腿后侧",
+        "start": 1793561915939,
+        "durationMinutes": 1,
+        "setCount": 1,
+        "volumeKg": 600,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "硬拉",
+            "setCount": 1,
+            "totalReps": 5,
+            "volumeKg": 600,
+            "maxWeightKg": 120
+          }
+        ]
+      },
       {
         "date": "2026-10-31",
         "title": "背 二头",
@@ -18154,7 +18173,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-10-31"
+      "to": "2026-11-01"
     }
   },
   "body": {
