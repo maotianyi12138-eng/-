@@ -5,9 +5,7 @@ const myThoughts = [
         date: '2026.10.20', 
         tag: 'MOOD', 
         zh: `
-   
-   抖 khwhw 
-   b站 麦克毛66
+我想你
 `
     },
       { 
