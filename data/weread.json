@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-02T06:00:03Z",
+  "updatedAt": "2026-11-02T15:47:57Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -231,7 +231,7 @@
         "updateTime": 1744604811,
         "cover": "https://cdn.weread.qq.com/weread/cover/46/cpplatform_bpydeflrt9d2xtkdsjzqqj/t6_cpplatform_bpydeflrt9d2xtkdsjzqqj1744601841.jpg",
         "finishReading": 1,
-        "readUpdateTime": 1777735967,
+        "readUpdateTime": 1793622907,
         "secret": 0,
         "category": "个人成长-人生哲学"
       },
@@ -304,6 +304,74 @@
   },
   "history": {
     "books": [
+      {
+        "bookId": "3300140838",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
+        "readerLink": "https://weread.qq.com/web/reader/5a332100813ab9d83g018139",
+        "title": "创意行为：存在即答案",
+        "author": "[美]里克·鲁宾",
+        "translator": "重轻",
+        "cover": "https://cdn.weread.qq.com/weread/cover/46/cpplatform_bpydeflrt9d2xtkdsjzqqj/t6_cpplatform_bpydeflrt9d2xtkdsjzqqj1744601841.jpg",
+        "version": 1935243306,
+        "format": "epub",
+        "type": 0,
+        "price": 61.6,
+        "originalPrice": 0,
+        "soldout": 0,
+        "bookStatus": 1,
+        "payingStatus": 2,
+        "payType": 1048577,
+        "centPrice": 6160,
+        "categories": [
+          {
+            "categoryId": 1000000,
+            "subCategoryId": 1000004,
+            "categoryType": 0,
+            "title": "个人成长-人生哲学"
+          }
+        ],
+        "hasLecture": 0,
+        "finished": 1,
+        "maxFreeChapter": 14,
+        "maxFreeInfo": {
+          "maxfreeChapterIdx": 14,
+          "maxfreeChapterUid": 14,
+          "maxfreeChapterRatio": 36
+        },
+        "free": 0,
+        "mcardDiscount": 0,
+        "ispub": 1,
+        "extra_type": 5,
+        "cpid": 4525313,
+        "publishTime": "2025-03-01 00:00:00",
+        "lastChapterIdx": 82,
+        "paperBook": {
+          "skuId": ""
+        },
+        "copyrightChapterUids": [
+          2
+        ],
+        "inStoreBookId": "",
+        "blockSaveImg": 0,
+        "language": "zh-wr",
+        "isTraditionalChinese": false,
+        "hideUpdateTime": false,
+        "isEPUBComics": 0,
+        "isVerticalLayout": 0,
+        "isShowTTS": 1,
+        "webBookControl": 0,
+        "selfProduceIncentive": false,
+        "isAutoDownload": 1,
+        "readingProgress": 100,
+        "markedStatus": 4,
+        "lastNoteSort": 1777678873,
+        "intro": "※ 荣登《纽约时报》2023年畅销书榜 首！亚马逊2023年创意类销量第 一图书，全网期待中文版！ ※ 一手打造阿黛尔、侃爷、Jay-Z、Lana Del Rey等畅销专辑的美国传奇音乐教父里克·鲁宾 「九座格莱美奖杯得主，首度公开创意底层逻辑！」一本关于“创意来源”的答案之书，却不止于此。 ※ 人气音乐漫谈播客「不在场」主理人 重轻 倾情翻译，知名播客品牌「日谈公园」真诚推荐，创意领域博主“自来水”式力荐！ ※ 给所有深夜改稿/写歌/设计/策划的人——当灵感罢工时怎么办？里克·鲁宾用40年的创意经验，治好你的创作内耗。 78篇哲学思考分享艺术家的创意智慧，为突破创造力瓶颈提供有用的思考框架。",
+        "updateTime": 1744604811,
+        "finishReading": 1,
+        "readUpdateTime": 1793622907,
+        "secret": 0,
+        "category": "个人成长-人生哲学"
+      },
       {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
@@ -1236,74 +1304,6 @@
         "readUpdateTime": 1779827104,
         "secret": 1,
         "category": "文学-外国文学"
-      },
-      {
-        "bookId": "3300140838",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
-        "readerLink": "https://weread.qq.com/web/reader/5a332100813ab9d83g018139",
-        "title": "创意行为：存在即答案",
-        "author": "[美]里克·鲁宾",
-        "translator": "重轻",
-        "cover": "https://cdn.weread.qq.com/weread/cover/46/cpplatform_bpydeflrt9d2xtkdsjzqqj/t6_cpplatform_bpydeflrt9d2xtkdsjzqqj1744601841.jpg",
-        "version": 1935243306,
-        "format": "epub",
-        "type": 0,
-        "price": 61.6,
-        "originalPrice": 0,
-        "soldout": 0,
-        "bookStatus": 1,
-        "payingStatus": 2,
-        "payType": 1048577,
-        "centPrice": 6160,
-        "categories": [
-          {
-            "categoryId": 1000000,
-            "subCategoryId": 1000004,
-            "categoryType": 0,
-            "title": "个人成长-人生哲学"
-          }
-        ],
-        "hasLecture": 0,
-        "finished": 1,
-        "maxFreeChapter": 14,
-        "maxFreeInfo": {
-          "maxfreeChapterIdx": 14,
-          "maxfreeChapterUid": 14,
-          "maxfreeChapterRatio": 36
-        },
-        "free": 0,
-        "mcardDiscount": 0,
-        "ispub": 1,
-        "extra_type": 5,
-        "cpid": 4525313,
-        "publishTime": "2025-03-01 00:00:00",
-        "lastChapterIdx": 82,
-        "paperBook": {
-          "skuId": ""
-        },
-        "copyrightChapterUids": [
-          2
-        ],
-        "inStoreBookId": "",
-        "blockSaveImg": 0,
-        "language": "zh-wr",
-        "isTraditionalChinese": false,
-        "hideUpdateTime": false,
-        "isEPUBComics": 0,
-        "isVerticalLayout": 0,
-        "isShowTTS": 1,
-        "webBookControl": 0,
-        "selfProduceIncentive": false,
-        "isAutoDownload": 1,
-        "readingProgress": 100,
-        "markedStatus": 4,
-        "lastNoteSort": 1777678873,
-        "intro": "※ 荣登《纽约时报》2023年畅销书榜 首！亚马逊2023年创意类销量第 一图书，全网期待中文版！ ※ 一手打造阿黛尔、侃爷、Jay-Z、Lana Del Rey等畅销专辑的美国传奇音乐教父里克·鲁宾 「九座格莱美奖杯得主，首度公开创意底层逻辑！」一本关于“创意来源”的答案之书，却不止于此。 ※ 人气音乐漫谈播客「不在场」主理人 重轻 倾情翻译，知名播客品牌「日谈公园」真诚推荐，创意领域博主“自来水”式力荐！ ※ 给所有深夜改稿/写歌/设计/策划的人——当灵感罢工时怎么办？里克·鲁宾用40年的创意经验，治好你的创作内耗。 78篇哲学思考分享艺术家的创意智慧，为突破创造力瓶颈提供有用的思考框架。",
-        "updateTime": 1744604811,
-        "finishReading": 1,
-        "readUpdateTime": 1777735967,
-        "secret": 0,
-        "category": "个人成长-人生哲学"
       },
       {
         "bookId": "CB_3yaBmI0UWAJP6qW71N0nfE7v",
@@ -2378,7 +2378,7 @@
   "monthly": {
     "readTimes": {
       "1793462400": 3407,
-      "1793548800": 288
+      "1793548800": 588
     },
     "readDays": 2,
     "readLongest": [
@@ -2425,6 +2425,57 @@
         "tags": [
           "单日阅读最久"
         ]
+      },
+      {
+        "book": {
+          "bookId": "3300140838",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
+          "title": "创意行为：存在即答案",
+          "author": "[美]里克·鲁宾",
+          "translator": "重轻",
+          "intro": "※ 荣登《纽约时报》2023年畅销书榜 首！亚马逊2023年创意类销量第 一图书，全网期待中文版！ ※ 一手打造阿黛尔、侃爷、Jay-Z、Lana Del Rey等畅销专辑的美国传奇音乐教父里克·鲁宾 「九座格莱美奖杯得主，首度公开创意底层逻辑！」一本关于“创意来源”的答案之书，却不止于此。 ※ 人气音乐漫谈播客「不在场」主理人 重轻 倾情翻译，知名播客品牌「日谈公园」真诚推荐，创意领域博主“自来水”式力荐！ ※ 给所有深夜改稿/写歌/设计/策划的人——当灵感罢工时怎么办？里克·鲁宾用40年的创意经验，治好你的创作内耗。 78篇哲学思考分享艺术家的创意智慧，为突破创造力瓶颈提供有用的思考框架。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/46/cpplatform_bpydeflrt9d2xtkdsjzqqj/s_cpplatform_bpydeflrt9d2xtkdsjzqqj1744601841.jpg",
+          "version": 1935243306,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 14,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 14,
+            "maxfreeChapterUid": 14,
+            "maxfreeChapterRatio": 36
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 4525313,
+          "publishTime": "2025-03-01 00:00:00",
+          "lastChapterIdx": 82,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 6160,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 300,
+        "tags": []
       }
     ],
     "readStat": [
@@ -2446,10 +2497,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.133583191989933,
-    "dayAverageReadTime": 1847,
+    "compare": 2.3880013131257868,
+    "dayAverageReadTime": 1997,
     "baseTime": 1793462400,
-    "totalReadTime": 3695,
+    "totalReadTime": 3995,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2513,7 +2564,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 158225
+      "1767196800": 158525
     },
     "readDays": 105,
     "readLongest": [
@@ -2965,7 +3016,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 8170,
+        "readTime": 8470,
         "tags": []
       },
       {
@@ -3051,7 +3102,7 @@
         "parentCategoryId": 1000000,
         "parentCategoryTitle": "个人成长",
         "readingCount": 2,
-        "readingTime": 19300
+        "readingTime": 19600
       },
       {
         "categoryId": 1100000,
@@ -3167,7 +3218,7 @@
         "authorId": 2426523,
         "name": "里克·鲁宾",
         "count": 1,
-        "readTime": "2小时16分钟"
+        "readTime": "2小时21分钟"
       },
       {
         "authorId": 315670,
@@ -3336,7 +3387,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5064182,
+        "users": 5064880,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3353,7 +3404,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6236097,
+        "users": 6236879,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3370,7 +3421,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12006816,
+        "users": 12007681,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3385,7 +3436,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 158238,
+    "totalReadTime": 158538,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3766,7 +3817,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8030人读过"
+        "reason": "仅有8039人读过"
       },
       {
         "type": 8,
@@ -4099,7 +4150,7 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 3695,
+        "1793462400": 3995,
         "1796054400": 0
       },
       "readDays": 103,
@@ -4553,7 +4604,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 8170,
+          "readTime": 8470,
           "tags": []
         },
         {
@@ -4862,11 +4913,11 @@
           "count": 1
         },
         {
-          "name": "上海译文出版社",
+          "name": "山东文艺出版社",
           "count": 1
         },
         {
-          "name": "山东文艺出版社",
+          "name": "上海译文出版社",
           "count": 1
         }
       ],
@@ -4889,9 +4940,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 517,
+      "dayAverageReadTime": 518,
       "baseTime": 1767196800,
-      "totalReadTime": 158225,
+      "totalReadTime": 158525,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -5090,6 +5141,517 @@
     }
   ],
   "notesByBook": {
+    "3300140838": {
+      "highlights": {
+        "synckey": 1777678873,
+        "updated": [
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 73,
+            "bookmarkId": "3300140838_73_1789-1907",
+            "range": "1789-1907",
+            "markText": "回想一下，当你还是新手的时候，你的技艺还比较稚嫩，什么技巧都是新颖的，什么花样都是新鲜的。记住你学到新东西的兴奋，记住你迈出第一步的喜悦。\n这也许就是保持工作的动力，并一次又一次爱",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 73,
+            "createTime": 1777678873
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 54,
+            "bookmarkId": "3300140838_54_1203-1280",
+            "range": "1203-1280",
+            "markText": "除了冥想，我们还可以带着问题出门散步、游泳或开车。我们不再紧紧抓着问题，只是让它在意识后面保留着。这样做，是在把问题轻轻地提给宇宙，然后打开自己，接收答案",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 54,
+            "createTime": 1776955490
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 47,
+            "bookmarkId": "3300140838_47_1255-1301",
+            "range": "1255-1301",
+            "markText": "要格外注意强烈的反应。如果你一上来就觉得反感，那反而值得研究一下原因。强烈的反应往往有深意。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 47,
+            "createTime": 1776939710
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 43,
+            "bookmarkId": "3300140838_43_1280-1379",
+            "range": "1280-1379",
+            "markText": "只以出色的作品为目标，会产生涟漪效应。为你所做的每一件事设定一个标准，这可能不仅会把你的作品提升到新的高度，而且会增加你整个生命的活力。它甚至会激励其他人把工作做到最好。伟大孕育伟大。它具有感染力。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 43,
+            "createTime": 1776939224
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 43,
+            "bookmarkId": "3300140838_43_787-846",
+            "range": "787-846",
+            "markText": "如果你认为“我不喜欢，但别人会喜欢”，那你就不是在为自己创作艺术。那样你就是在做商业了，这也没什么；只不过这不是艺术。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 43,
+            "createTime": 1776939195
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 43,
+            "bookmarkId": "3300140838_43_387-690",
+            "range": "387-690",
+            "markText": "象自己一个人永远住在山顶。你建造了一个永远不会有人拜访的家。尽管如此，你还是要投入时间和精力来打造这个空间，毕竟你要在里面生活。\n木材、盘子、枕头，无一不精美绝伦，为你量身定制。\n这就是伟大艺术的精髓。我们创作的目的无非是创造属于我们的美丽，将我们的全部投入每一个项目，无论这个项目受到何种局限。将其视为一种奉献，一种虔诚。我们按照我们认为的最好，去做到最好——用我们自己的，和别人完全不同的品味。\n我们创作艺术，是为了让自己能够栖居于此",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 43,
+            "createTime": 1776939162
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 39,
+            "bookmarkId": "3300140838_39_3010-3227",
+            "range": "3010-3227",
+            "markText": "我们要记住，没有一件作品能完全完整地反映我们自己，它只能反映当下的我们。记住这一点，向世界发布作品就容易得多。如果我们等待，它就不能反映今天的我们了。一年后，我们可能会受到另一种能量的引导，创作出与它完全不同的作品。作品是有时效性的。时光流转，作品中蕴含的我们，也会逐渐消散。\n抓着自己的作品不放，就像日复一日地写同一篇日记。宝贵的时刻和机会就这样流失，还会阻碍下一个作品的诞生",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 39,
+            "createTime": 1775575200
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 31,
+            "bookmarkId": "3300140838_31_2466-2681",
+            "range": "2466-2681",
+            "markText": "随意尝试吧。目标是建立一个自身有生命力的稳定结构，或者每天起床时决定自己今天什么时候创作、怎么创作，而不是只有在兴致来临时才创作。\n把决策力用在工作，而不是什么时候工作上。你越减少日常生活琐事对自己的占据，你可以用于创作的带宽就越大。阿尔伯特·爱因斯坦每天都穿同样的衣服：一套灰色西装。埃里克·萨蒂有7套相同的衣服，一周每天一套。少做生活琐事的选择，多释放你的创造力和想象力",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 31,
+            "createTime": 1775567886
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 31,
+            "bookmarkId": "3300140838_31_1671-1862",
+            "range": "1671-1862",
+            "markText": "纪律和自由看似对立。实际上，它们是互补的。纪律不是缺乏自由，而是与时间形成和谐的关系。管理好自己的日程安排，形成良好的每日习惯，等于把自由集中在了创作实践上，这是创作出伟大艺术的必要组成部分。\n甚至可以说，效率在生活中比在创作中更为重要。对待日常生活，拿出军队执行命令一般的严谨精确，在艺术方面，才能更好地进入孩童般的自由状态",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 31,
+            "createTime": 1775567402
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 31,
+            "bookmarkId": "3300140838_31_1327-1418",
+            "range": "1327-1418",
+            "markText": "竞技体育的至高目标是完美无瑕的表现。伍登经常说，你唯一的对手就是你自己，其余都不是你能控制的。\n这种思维方式同样适用于创作。对",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 31,
+            "createTime": 1775567206
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 30,
+            "bookmarkId": "3300140838_30_2315-2667",
+            "range": "2315-2667",
+            "markText": "这样的时刻独一无二，值得我们虔诚对待。片刻的启示之光到来时，什么日程安排都应该放下。此时就全心全意地奉献自己，即使它出现得好像不合时宜。这正是严肃艺术家的义务。\n约翰·列侬提过这样的建议：如果你开始写一首歌，那就一口气把它写完。最初的灵感蕴含一种生命力，可以牵引着你完成整个作品。有些细节没达到最好的水平不要紧。完成草稿即可。通常而言，一个完整而不完美的版本，比看似完美的小片段更为有益。\n当一个想法逐渐清晰，或者我们已经动笔写下一个引子时，我们可能会觉得自己已经抓到了诀窍，剩余部分会水到渠成。但如果这时候就停下，任凭最初的火花逐渐消退，要重新点燃可能就难了。灵感也免不了受到熵定律的约束。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 30,
+            "createTime": 1775491223
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 30,
+            "bookmarkId": "3300140838_30_1952-2286",
+            "range": "1952-2286",
+            "markText": "尽你所能，驾驭这股浪潮。如果你幸运地体会到灵感来临，那就紧紧抓住这个机会。尽量长时间地保持在这罕见的能量中。只要它还在流动，你就顺流前行。\n如果你是作家，在临睡前突然有源源不断的创意来袭，你大可以通宵写作到天亮。如果你是音乐家，哪怕你已经完成了目标，比如创作1首或10首歌，可音乐仍在继续涌现，那就尽可能多地吸收、捕捉。\n也许这些成果当前用不上，但可能在其他时候有用。用不上也没关系。艺术家的任务只是识别这种传输，心怀感激地与之相伴，直到它完整地实现。\n在优先级方面，灵感当先。你其次。观众排在最后。",
+            "colorStyle": 3,
+            "type": 1,
+            "chapterUid": 30,
+            "createTime": 1775491197
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 30,
+            "bookmarkId": "3300140838_30_1225-1579",
+            "range": "1225-1579",
+            "markText": "灵感到来，总带着充沛的能量。但它不是让我们依赖的拐棍。艺术生活不能完全建立在等待灵感之上。灵感是稀有的，来去不在我们掌控之中。我们要做的就是努力创作，同时保持对灵感的邀请和欢迎。没有灵感的时候，我们依然可以做艺术的其他部分，跟这种宇宙传输无关的部分。\n顿悟隐藏在平凡里：影子投射的形状，火柴划燃的气味，无意间听到或者听错了的奇怪言语。这些主要要求我们养成定期留意的习惯。\n要获得丰富多变的灵感，请考虑改变你的输入。比如看电影时关掉声音，反复听同一首歌，读短篇小说时只看每句话的第一个单词，按大小或颜色排列石头，学习做清醒梦，等等。\n打破习惯",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 30,
+            "createTime": 1775491116
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 30,
+            "bookmarkId": "3300140838_30_632-970",
+            "range": "632-970",
+            "markText": "inspiration（灵感）这个词源于拉丁语——inspirare，意思是吸入或吹进。\n肺要吸入空气，就必须先排空。头脑要得到灵感，就需要腾出空间，虚位以待。宇宙总在寻求平衡。你创造空白，就是在邀请能量进入。\n同样的道理适用于生活的方方面面。如果人身处一段亲密关系之中，却还在寻找另一段关系，那就没有空间让新人进入，因为我们的感情空间已经是满的了，无法迎接我们想要的新关系。\n为了留出空间迎接灵感，我们可以考虑尝试一些让头脑安静的做法——冥想、觉察、静默、沉思、祈祷，任何有助于减少分心和杂念的仪式都可以。",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 30,
+            "createTime": 1775491059
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 29,
+            "bookmarkId": "3300140838_29_4083-4133",
+            "range": "4083-4133",
+            "markText": "让想法经由你外化出来的能力，\n就是才华。",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 29,
+            "createTime": 1775490408
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 21,
+            "bookmarkId": "3300140838_21_1541-1790",
+            "range": "1541-1790",
+            "markText": "有一次我与另一位艺术家开会，她刚发布了一张非常成功的专辑，但她害怕继续做音乐，列出了各种不想再做音乐的原因。要是想找不做事的理由，总是有很多。\n我说：“没关系，你永远也不用再创作音乐。这没什么不好。如果做音乐不让你感到快乐，那就不做。这是你的选择。”\n我一说完这话，她的表情就变了，因为她意识到，创作还是更让她快乐。\n另一个有帮助",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 21,
+            "createTime": 1775489468
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 20,
+            "bookmarkId": "3300140838_20_1165-1319",
+            "range": "1165-1319",
+            "markText": "我们并不是因为具备才华或技能，而有响应这个召唤的义务。请记住，能创作是一种福气，是一种特权。我们自愿选择创作。我们并没有被命令去从事创作。如果我们真的不想做，那就别做。\n有些成功的艺术家极度缺乏安全感，他们自我破坏，深陷成瘾问题，或者面临着其他制约创作",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 20,
+            "createTime": 1775489252
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 19,
+            "bookmarkId": "3300140838_19_1029-1318",
+            "range": "1029-1318",
+            "markText": "追随宇宙所示的微妙的能量信息没那么容易，尤其当你的朋友、家人、同事或跟你的创作有商业利益关系的人提供的貌似理性的建议往往是在反对你的直觉时。我在能力所及的范围内，一直按照自己的直觉做出职业决定，虽然别人每次都建议我不要这样做。意识到这一点会对你有帮助：比起跟随身边的人，不如跟随宇宙的指引。\n干扰的声音也可能来自内心。那些在你脑海中低语的声音，说你不够有才华，你的想法不够好，你的时间要是花在艺术上就白费了，你的作品不会有人喜欢，如果这次创作不成功你就完了。调低这些声音，让自己能够听到那宇宙的钟声吧。提醒自己现在是时候了",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 19,
+            "createTime": 1775489126
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 18,
+            "bookmarkId": "3300140838_18_452-511",
+            "range": "452-511",
+            "markText": "阴天时，将意识调谐到这个事实很有帮助：太阳还在那里。它只是被厚厚的云层遮住了。无论天空是明是暗，太阳在中午都如明镜高悬",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 18,
+            "createTime": 1775488695
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 15,
+            "bookmarkId": "3300140838_15_1014-1107",
+            "range": "1014-1107",
+            "markText": "今天创造事物的那个人，\n与明天回来继续创造的那个人，\n不是同一个。",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 15,
+            "createTime": 1775488531
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 14,
+            "bookmarkId": "3300140838_14_1143-1314",
+            "range": "1143-1314",
+            "markText": "我们都迷恋大海，喜欢注视海面，\n这是有原因的。\n有人说，大海提供了\n比任何镜子都更准确的\n我们的投影。",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 14,
+            "createTime": 1775488395
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 11,
+            "bookmarkId": "3300140838_11_642-739",
+            "range": "642-739",
+            "markText": "我们只要保持开放状态，就能不断收到这种消息。一本书读着读着，会出来一句引人注目的引语；一部电影看着看着，会浮现一句让我们停下来反思甚至倒回去反复播放的台词。有时候，这就是我们一直在寻找的那个答案",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 11,
+            "createTime": 1775160595
+          },
+          {
+            "bookId": "3300140838",
+            "chapterIdx": 7,
+            "bookmarkId": "3300140838_7_1209-1262",
+            "range": "1209-1262",
+            "markText": "艺术就是带着能量的思想在循环流通。之所以看似新颖，是因为它每次回归都以不同的方式重组。没有两朵云是一样的。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 7,
+            "createTime": 1775156758
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "玩耍",
+            "chapterUid": 73,
+            "chapterIdx": 73
+          },
+          {
+            "title": "灵感",
+            "chapterUid": 30,
+            "chapterIdx": 30
+          },
+          {
+            "title": "初学者心态",
+            "chapterUid": 29,
+            "chapterIdx": 29
+          },
+          {
+            "title": "伟大",
+            "chapterUid": 43,
+            "chapterIdx": 43
+          },
+          {
+            "title": "完成",
+            "chapterUid": 39,
+            "chapterIdx": 39
+          },
+          {
+            "title": "环境",
+            "chapterUid": 19,
+            "chapterIdx": 19
+          },
+          {
+            "title": "没有什么是静止的",
+            "chapterUid": 15,
+            "chapterIdx": 15
+          },
+          {
+            "title": "虚构",
+            "chapterUid": 21,
+            "chapterIdx": 21
+          },
+          {
+            "title": "常在",
+            "chapterUid": 18,
+            "chapterIdx": 18
+          },
+          {
+            "title": "寻找线索",
+            "chapterUid": 11,
+            "chapterIdx": 11
+          },
+          {
+            "title": "创造力的源泉",
+            "chapterUid": 7,
+            "chapterIdx": 7
+          },
+          {
+            "title": "自然作为老师",
+            "chapterUid": 14,
+            "chapterIdx": 14
+          },
+          {
+            "title": "习惯",
+            "chapterUid": 31,
+            "chapterIdx": 31
+          },
+          {
+            "title": "参考点",
+            "chapterUid": 47,
+            "chapterIdx": 47
+          },
+          {
+            "title": "自我怀疑",
+            "chapterUid": 20,
+            "chapterIdx": 20
+          },
+          {
+            "title": "时间的耳语",
+            "chapterUid": 54,
+            "chapterIdx": 54
+          }
+        ],
+        "book": {
+          "bookId": "3300140838",
+          "version": 1935243306,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/46/cpplatform_bpydeflrt9d2xtkdsjzqqj/s_cpplatform_bpydeflrt9d2xtkdsjzqqj1744601841.jpg",
+          "title": "创意行为：存在即答案",
+          "author": "[美]里克·鲁宾",
+          "coverBoxInfo": {
+            "blurhash": "K1N,}HM{.8M{_3%M~qIU00",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#1c1c1c"
+              },
+              {
+                "key": "1/6",
+                "hex": "#1c1c1c"
+              },
+              {
+                "key": "1/8",
+                "hex": "#1c1c1c"
+              },
+              {
+                "key": "2/4",
+                "hex": "#313130"
+              },
+              {
+                "key": "2/6",
+                "hex": "#313130"
+              },
+              {
+                "key": "2/8",
+                "hex": "#313130"
+              },
+              {
+                "key": "3/4",
+                "hex": "#484846"
+              },
+              {
+                "key": "3/6",
+                "hex": "#484846"
+              },
+              {
+                "key": "3/8",
+                "hex": "#484846"
+              },
+              {
+                "key": "3/12",
+                "hex": "#484846"
+              },
+              {
+                "key": "4/6",
+                "hex": "#60605f"
+              },
+              {
+                "key": "4/10",
+                "hex": "#60605f"
+              },
+              {
+                "key": "4/4",
+                "hex": "#60605f"
+              },
+              {
+                "key": "5/10",
+                "hex": "#7a7a78"
+              },
+              {
+                "key": "5/4",
+                "hex": "#7a7a78"
+              },
+              {
+                "key": "5/8",
+                "hex": "#7a7a78"
+              },
+              {
+                "key": "6/4",
+                "hex": "#939392"
+              },
+              {
+                "key": "6/6",
+                "hex": "#939392"
+              },
+              {
+                "key": "6/8",
+                "hex": "#939392"
+              },
+              {
+                "key": "6/12",
+                "hex": "#939392"
+              },
+              {
+                "key": "7/8",
+                "hex": "#adaeac"
+              },
+              {
+                "key": "7/10",
+                "hex": "#adaeac"
+              },
+              {
+                "key": "7/12",
+                "hex": "#adaeac"
+              },
+              {
+                "key": "8/4",
+                "hex": "#c8c8c6"
+              },
+              {
+                "key": "8/6",
+                "hex": "#c8c8c6"
+              },
+              {
+                "key": "8/12",
+                "hex": "#c8c8c6"
+              },
+              {
+                "key": "9/2",
+                "hex": "#e3e3e1"
+              },
+              {
+                "key": "9/12",
+                "hex": "#e3e3e1"
+              },
+              {
+                "key": "1/100",
+                "hex": "#939392"
+              },
+              {
+                "key": "2/100",
+                "hex": "#adaeac"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#EEEEEE"
+              },
+              {
+                "key": "5/100",
+                "hex": "#EEEEEE"
+              },
+              {
+                "key": "6/100",
+                "hex": "#000000"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#d2d2d0",
+              "hsv": [
+                74.47783750833665,
+                1.048606544319774,
+                82.4896190308917
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/838/3300140838/s_3300140838.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/838/3300140838/s_3300140838.jpg",
+            "colorsPure": [
+              "#939392",
+              "#adaeac"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
     "CB_8WSAeaAbjA6w77875hFO56Xg": {
       "highlights": {
         "synckey": 1793547320,
@@ -10651,517 +11213,6 @@
             "colorsPure": [
               "#95938d",
               "#afada6"
-            ]
-          }
-        }
-      },
-      "thoughts": {
-        "reviews": []
-      }
-    },
-    "3300140838": {
-      "highlights": {
-        "synckey": 1777678873,
-        "updated": [
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 73,
-            "bookmarkId": "3300140838_73_1789-1907",
-            "range": "1789-1907",
-            "markText": "回想一下，当你还是新手的时候，你的技艺还比较稚嫩，什么技巧都是新颖的，什么花样都是新鲜的。记住你学到新东西的兴奋，记住你迈出第一步的喜悦。\n这也许就是保持工作的动力，并一次又一次爱",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 73,
-            "createTime": 1777678873
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 54,
-            "bookmarkId": "3300140838_54_1203-1280",
-            "range": "1203-1280",
-            "markText": "除了冥想，我们还可以带着问题出门散步、游泳或开车。我们不再紧紧抓着问题，只是让它在意识后面保留着。这样做，是在把问题轻轻地提给宇宙，然后打开自己，接收答案",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 54,
-            "createTime": 1776955490
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 47,
-            "bookmarkId": "3300140838_47_1255-1301",
-            "range": "1255-1301",
-            "markText": "要格外注意强烈的反应。如果你一上来就觉得反感，那反而值得研究一下原因。强烈的反应往往有深意。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 47,
-            "createTime": 1776939710
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 43,
-            "bookmarkId": "3300140838_43_1280-1379",
-            "range": "1280-1379",
-            "markText": "只以出色的作品为目标，会产生涟漪效应。为你所做的每一件事设定一个标准，这可能不仅会把你的作品提升到新的高度，而且会增加你整个生命的活力。它甚至会激励其他人把工作做到最好。伟大孕育伟大。它具有感染力。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 43,
-            "createTime": 1776939224
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 43,
-            "bookmarkId": "3300140838_43_787-846",
-            "range": "787-846",
-            "markText": "如果你认为“我不喜欢，但别人会喜欢”，那你就不是在为自己创作艺术。那样你就是在做商业了，这也没什么；只不过这不是艺术。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 43,
-            "createTime": 1776939195
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 43,
-            "bookmarkId": "3300140838_43_387-690",
-            "range": "387-690",
-            "markText": "象自己一个人永远住在山顶。你建造了一个永远不会有人拜访的家。尽管如此，你还是要投入时间和精力来打造这个空间，毕竟你要在里面生活。\n木材、盘子、枕头，无一不精美绝伦，为你量身定制。\n这就是伟大艺术的精髓。我们创作的目的无非是创造属于我们的美丽，将我们的全部投入每一个项目，无论这个项目受到何种局限。将其视为一种奉献，一种虔诚。我们按照我们认为的最好，去做到最好——用我们自己的，和别人完全不同的品味。\n我们创作艺术，是为了让自己能够栖居于此",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 43,
-            "createTime": 1776939162
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 39,
-            "bookmarkId": "3300140838_39_3010-3227",
-            "range": "3010-3227",
-            "markText": "我们要记住，没有一件作品能完全完整地反映我们自己，它只能反映当下的我们。记住这一点，向世界发布作品就容易得多。如果我们等待，它就不能反映今天的我们了。一年后，我们可能会受到另一种能量的引导，创作出与它完全不同的作品。作品是有时效性的。时光流转，作品中蕴含的我们，也会逐渐消散。\n抓着自己的作品不放，就像日复一日地写同一篇日记。宝贵的时刻和机会就这样流失，还会阻碍下一个作品的诞生",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 39,
-            "createTime": 1775575200
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 31,
-            "bookmarkId": "3300140838_31_2466-2681",
-            "range": "2466-2681",
-            "markText": "随意尝试吧。目标是建立一个自身有生命力的稳定结构，或者每天起床时决定自己今天什么时候创作、怎么创作，而不是只有在兴致来临时才创作。\n把决策力用在工作，而不是什么时候工作上。你越减少日常生活琐事对自己的占据，你可以用于创作的带宽就越大。阿尔伯特·爱因斯坦每天都穿同样的衣服：一套灰色西装。埃里克·萨蒂有7套相同的衣服，一周每天一套。少做生活琐事的选择，多释放你的创造力和想象力",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 31,
-            "createTime": 1775567886
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 31,
-            "bookmarkId": "3300140838_31_1671-1862",
-            "range": "1671-1862",
-            "markText": "纪律和自由看似对立。实际上，它们是互补的。纪律不是缺乏自由，而是与时间形成和谐的关系。管理好自己的日程安排，形成良好的每日习惯，等于把自由集中在了创作实践上，这是创作出伟大艺术的必要组成部分。\n甚至可以说，效率在生活中比在创作中更为重要。对待日常生活，拿出军队执行命令一般的严谨精确，在艺术方面，才能更好地进入孩童般的自由状态",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 31,
-            "createTime": 1775567402
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 31,
-            "bookmarkId": "3300140838_31_1327-1418",
-            "range": "1327-1418",
-            "markText": "竞技体育的至高目标是完美无瑕的表现。伍登经常说，你唯一的对手就是你自己，其余都不是你能控制的。\n这种思维方式同样适用于创作。对",
-            "colorStyle": 1,
-            "type": 1,
-            "chapterUid": 31,
-            "createTime": 1775567206
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 30,
-            "bookmarkId": "3300140838_30_2315-2667",
-            "range": "2315-2667",
-            "markText": "这样的时刻独一无二，值得我们虔诚对待。片刻的启示之光到来时，什么日程安排都应该放下。此时就全心全意地奉献自己，即使它出现得好像不合时宜。这正是严肃艺术家的义务。\n约翰·列侬提过这样的建议：如果你开始写一首歌，那就一口气把它写完。最初的灵感蕴含一种生命力，可以牵引着你完成整个作品。有些细节没达到最好的水平不要紧。完成草稿即可。通常而言，一个完整而不完美的版本，比看似完美的小片段更为有益。\n当一个想法逐渐清晰，或者我们已经动笔写下一个引子时，我们可能会觉得自己已经抓到了诀窍，剩余部分会水到渠成。但如果这时候就停下，任凭最初的火花逐渐消退，要重新点燃可能就难了。灵感也免不了受到熵定律的约束。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 30,
-            "createTime": 1775491223
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 30,
-            "bookmarkId": "3300140838_30_1952-2286",
-            "range": "1952-2286",
-            "markText": "尽你所能，驾驭这股浪潮。如果你幸运地体会到灵感来临，那就紧紧抓住这个机会。尽量长时间地保持在这罕见的能量中。只要它还在流动，你就顺流前行。\n如果你是作家，在临睡前突然有源源不断的创意来袭，你大可以通宵写作到天亮。如果你是音乐家，哪怕你已经完成了目标，比如创作1首或10首歌，可音乐仍在继续涌现，那就尽可能多地吸收、捕捉。\n也许这些成果当前用不上，但可能在其他时候有用。用不上也没关系。艺术家的任务只是识别这种传输，心怀感激地与之相伴，直到它完整地实现。\n在优先级方面，灵感当先。你其次。观众排在最后。",
-            "colorStyle": 3,
-            "type": 1,
-            "chapterUid": 30,
-            "createTime": 1775491197
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 30,
-            "bookmarkId": "3300140838_30_1225-1579",
-            "range": "1225-1579",
-            "markText": "灵感到来，总带着充沛的能量。但它不是让我们依赖的拐棍。艺术生活不能完全建立在等待灵感之上。灵感是稀有的，来去不在我们掌控之中。我们要做的就是努力创作，同时保持对灵感的邀请和欢迎。没有灵感的时候，我们依然可以做艺术的其他部分，跟这种宇宙传输无关的部分。\n顿悟隐藏在平凡里：影子投射的形状，火柴划燃的气味，无意间听到或者听错了的奇怪言语。这些主要要求我们养成定期留意的习惯。\n要获得丰富多变的灵感，请考虑改变你的输入。比如看电影时关掉声音，反复听同一首歌，读短篇小说时只看每句话的第一个单词，按大小或颜色排列石头，学习做清醒梦，等等。\n打破习惯",
-            "colorStyle": 0,
-            "type": 1,
-            "chapterUid": 30,
-            "createTime": 1775491116
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 30,
-            "bookmarkId": "3300140838_30_632-970",
-            "range": "632-970",
-            "markText": "inspiration（灵感）这个词源于拉丁语——inspirare，意思是吸入或吹进。\n肺要吸入空气，就必须先排空。头脑要得到灵感，就需要腾出空间，虚位以待。宇宙总在寻求平衡。你创造空白，就是在邀请能量进入。\n同样的道理适用于生活的方方面面。如果人身处一段亲密关系之中，却还在寻找另一段关系，那就没有空间让新人进入，因为我们的感情空间已经是满的了，无法迎接我们想要的新关系。\n为了留出空间迎接灵感，我们可以考虑尝试一些让头脑安静的做法——冥想、觉察、静默、沉思、祈祷，任何有助于减少分心和杂念的仪式都可以。",
-            "colorStyle": 0,
-            "type": 1,
-            "chapterUid": 30,
-            "createTime": 1775491059
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 29,
-            "bookmarkId": "3300140838_29_4083-4133",
-            "range": "4083-4133",
-            "markText": "让想法经由你外化出来的能力，\n就是才华。",
-            "colorStyle": 0,
-            "type": 1,
-            "chapterUid": 29,
-            "createTime": 1775490408
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 21,
-            "bookmarkId": "3300140838_21_1541-1790",
-            "range": "1541-1790",
-            "markText": "有一次我与另一位艺术家开会，她刚发布了一张非常成功的专辑，但她害怕继续做音乐，列出了各种不想再做音乐的原因。要是想找不做事的理由，总是有很多。\n我说：“没关系，你永远也不用再创作音乐。这没什么不好。如果做音乐不让你感到快乐，那就不做。这是你的选择。”\n我一说完这话，她的表情就变了，因为她意识到，创作还是更让她快乐。\n另一个有帮助",
-            "colorStyle": 0,
-            "type": 1,
-            "chapterUid": 21,
-            "createTime": 1775489468
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 20,
-            "bookmarkId": "3300140838_20_1165-1319",
-            "range": "1165-1319",
-            "markText": "我们并不是因为具备才华或技能，而有响应这个召唤的义务。请记住，能创作是一种福气，是一种特权。我们自愿选择创作。我们并没有被命令去从事创作。如果我们真的不想做，那就别做。\n有些成功的艺术家极度缺乏安全感，他们自我破坏，深陷成瘾问题，或者面临着其他制约创作",
-            "colorStyle": 0,
-            "type": 1,
-            "chapterUid": 20,
-            "createTime": 1775489252
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 19,
-            "bookmarkId": "3300140838_19_1029-1318",
-            "range": "1029-1318",
-            "markText": "追随宇宙所示的微妙的能量信息没那么容易，尤其当你的朋友、家人、同事或跟你的创作有商业利益关系的人提供的貌似理性的建议往往是在反对你的直觉时。我在能力所及的范围内，一直按照自己的直觉做出职业决定，虽然别人每次都建议我不要这样做。意识到这一点会对你有帮助：比起跟随身边的人，不如跟随宇宙的指引。\n干扰的声音也可能来自内心。那些在你脑海中低语的声音，说你不够有才华，你的想法不够好，你的时间要是花在艺术上就白费了，你的作品不会有人喜欢，如果这次创作不成功你就完了。调低这些声音，让自己能够听到那宇宙的钟声吧。提醒自己现在是时候了",
-            "colorStyle": 0,
-            "type": 1,
-            "chapterUid": 19,
-            "createTime": 1775489126
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 18,
-            "bookmarkId": "3300140838_18_452-511",
-            "range": "452-511",
-            "markText": "阴天时，将意识调谐到这个事实很有帮助：太阳还在那里。它只是被厚厚的云层遮住了。无论天空是明是暗，太阳在中午都如明镜高悬",
-            "colorStyle": 0,
-            "type": 1,
-            "chapterUid": 18,
-            "createTime": 1775488695
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 15,
-            "bookmarkId": "3300140838_15_1014-1107",
-            "range": "1014-1107",
-            "markText": "今天创造事物的那个人，\n与明天回来继续创造的那个人，\n不是同一个。",
-            "colorStyle": 0,
-            "type": 1,
-            "chapterUid": 15,
-            "createTime": 1775488531
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 14,
-            "bookmarkId": "3300140838_14_1143-1314",
-            "range": "1143-1314",
-            "markText": "我们都迷恋大海，喜欢注视海面，\n这是有原因的。\n有人说，大海提供了\n比任何镜子都更准确的\n我们的投影。",
-            "colorStyle": 0,
-            "type": 1,
-            "chapterUid": 14,
-            "createTime": 1775488395
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 11,
-            "bookmarkId": "3300140838_11_642-739",
-            "range": "642-739",
-            "markText": "我们只要保持开放状态，就能不断收到这种消息。一本书读着读着，会出来一句引人注目的引语；一部电影看着看着，会浮现一句让我们停下来反思甚至倒回去反复播放的台词。有时候，这就是我们一直在寻找的那个答案",
-            "colorStyle": 1,
-            "type": 1,
-            "chapterUid": 11,
-            "createTime": 1775160595
-          },
-          {
-            "bookId": "3300140838",
-            "chapterIdx": 7,
-            "bookmarkId": "3300140838_7_1209-1262",
-            "range": "1209-1262",
-            "markText": "艺术就是带着能量的思想在循环流通。之所以看似新颖，是因为它每次回归都以不同的方式重组。没有两朵云是一样的。",
-            "colorStyle": 1,
-            "type": 1,
-            "chapterUid": 7,
-            "createTime": 1775156758
-          }
-        ],
-        "removed": [],
-        "chapters": [
-          {
-            "title": "玩耍",
-            "chapterUid": 73,
-            "chapterIdx": 73
-          },
-          {
-            "title": "灵感",
-            "chapterUid": 30,
-            "chapterIdx": 30
-          },
-          {
-            "title": "初学者心态",
-            "chapterUid": 29,
-            "chapterIdx": 29
-          },
-          {
-            "title": "伟大",
-            "chapterUid": 43,
-            "chapterIdx": 43
-          },
-          {
-            "title": "完成",
-            "chapterUid": 39,
-            "chapterIdx": 39
-          },
-          {
-            "title": "环境",
-            "chapterUid": 19,
-            "chapterIdx": 19
-          },
-          {
-            "title": "没有什么是静止的",
-            "chapterUid": 15,
-            "chapterIdx": 15
-          },
-          {
-            "title": "虚构",
-            "chapterUid": 21,
-            "chapterIdx": 21
-          },
-          {
-            "title": "常在",
-            "chapterUid": 18,
-            "chapterIdx": 18
-          },
-          {
-            "title": "寻找线索",
-            "chapterUid": 11,
-            "chapterIdx": 11
-          },
-          {
-            "title": "创造力的源泉",
-            "chapterUid": 7,
-            "chapterIdx": 7
-          },
-          {
-            "title": "自然作为老师",
-            "chapterUid": 14,
-            "chapterIdx": 14
-          },
-          {
-            "title": "习惯",
-            "chapterUid": 31,
-            "chapterIdx": 31
-          },
-          {
-            "title": "参考点",
-            "chapterUid": 47,
-            "chapterIdx": 47
-          },
-          {
-            "title": "自我怀疑",
-            "chapterUid": 20,
-            "chapterIdx": 20
-          },
-          {
-            "title": "时间的耳语",
-            "chapterUid": 54,
-            "chapterIdx": 54
-          }
-        ],
-        "book": {
-          "bookId": "3300140838",
-          "version": 1935243306,
-          "format": "epub",
-          "soldout": 0,
-          "bookStatus": 1,
-          "cover": "https://cdn.weread.qq.com/weread/cover/46/cpplatform_bpydeflrt9d2xtkdsjzqqj/s_cpplatform_bpydeflrt9d2xtkdsjzqqj1744601841.jpg",
-          "title": "创意行为：存在即答案",
-          "author": "[美]里克·鲁宾",
-          "coverBoxInfo": {
-            "blurhash": "K1N,}HM{.8M{_3%M~qIU00",
-            "colors": [
-              {
-                "key": "1/4",
-                "hex": "#1c1c1c"
-              },
-              {
-                "key": "1/6",
-                "hex": "#1c1c1c"
-              },
-              {
-                "key": "1/8",
-                "hex": "#1c1c1c"
-              },
-              {
-                "key": "2/4",
-                "hex": "#313130"
-              },
-              {
-                "key": "2/6",
-                "hex": "#313130"
-              },
-              {
-                "key": "2/8",
-                "hex": "#313130"
-              },
-              {
-                "key": "3/4",
-                "hex": "#484846"
-              },
-              {
-                "key": "3/6",
-                "hex": "#484846"
-              },
-              {
-                "key": "3/8",
-                "hex": "#484846"
-              },
-              {
-                "key": "3/12",
-                "hex": "#484846"
-              },
-              {
-                "key": "4/6",
-                "hex": "#60605f"
-              },
-              {
-                "key": "4/10",
-                "hex": "#60605f"
-              },
-              {
-                "key": "4/4",
-                "hex": "#60605f"
-              },
-              {
-                "key": "5/10",
-                "hex": "#7a7a78"
-              },
-              {
-                "key": "5/4",
-                "hex": "#7a7a78"
-              },
-              {
-                "key": "5/8",
-                "hex": "#7a7a78"
-              },
-              {
-                "key": "6/4",
-                "hex": "#939392"
-              },
-              {
-                "key": "6/6",
-                "hex": "#939392"
-              },
-              {
-                "key": "6/8",
-                "hex": "#939392"
-              },
-              {
-                "key": "6/12",
-                "hex": "#939392"
-              },
-              {
-                "key": "7/8",
-                "hex": "#adaeac"
-              },
-              {
-                "key": "7/10",
-                "hex": "#adaeac"
-              },
-              {
-                "key": "7/12",
-                "hex": "#adaeac"
-              },
-              {
-                "key": "8/4",
-                "hex": "#c8c8c6"
-              },
-              {
-                "key": "8/6",
-                "hex": "#c8c8c6"
-              },
-              {
-                "key": "8/12",
-                "hex": "#c8c8c6"
-              },
-              {
-                "key": "9/2",
-                "hex": "#e3e3e1"
-              },
-              {
-                "key": "9/12",
-                "hex": "#e3e3e1"
-              },
-              {
-                "key": "1/100",
-                "hex": "#939392"
-              },
-              {
-                "key": "2/100",
-                "hex": "#adaeac"
-              },
-              {
-                "key": "3/100",
-                "hex": "#ffffff"
-              },
-              {
-                "key": "4/100",
-                "hex": "#EEEEEE"
-              },
-              {
-                "key": "5/100",
-                "hex": "#EEEEEE"
-              },
-              {
-                "key": "6/100",
-                "hex": "#000000"
-              }
-            ],
-            "dominate_color": {
-              "hex": "#d2d2d0",
-              "hsv": [
-                74.47783750833665,
-                1.048606544319774,
-                82.4896190308917
-              ]
-            },
-            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/838/3300140838/s_3300140838.jpg",
-            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/838/3300140838/s_3300140838.jpg",
-            "colorsPure": [
-              "#939392",
-              "#adaeac"
             ]
           }
         }
