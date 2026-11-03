@@ -1,7 +1,7 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-11-02T09:41:11.534Z",
+  "updatedAt": "2026-11-03T09:43:59.925Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
@@ -21,6 +21,25 @@
             "totalReps": 5,
             "volumeKg": 600,
             "maxWeightKg": 120
+          }
+        ]
+      },
+      {
+        "date": "2026-11-01",
+        "title": "传统力量训练",
+        "start": 1793561308033,
+        "durationMinutes": 99,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 619,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "TraditionalStrengthTraining",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
           }
         ]
       },
