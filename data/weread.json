@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-03T00:57:06Z",
+  "updatedAt": "2026-11-03T14:10:51Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -26,10 +26,10 @@
         "title": "The Let Them Theory",
         "author": "Mel Robbins",
         "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-        "updateTime": 1792538180,
+        "updateTime": 1793702478,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1792538181
+        "readUpdateTime": 1793705672
       },
       {
         "bookId": "3300187091",
@@ -160,18 +160,6 @@
         "category": "个人成长-人生哲学"
       },
       {
-        "bookId": "CB_Djp4Tt4V55Oi73w75h4jb9UW",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=92e42153643425f446a70345474345635354f69373377373568346a623955576f8",
-        "readerLink": "https://weread.qq.com/web/reader/92e42153643425f446a70345474345635354f69373377373568346a623955576f8",
-        "title": "伦敦国家美术馆（伟大的博物馆）",
-        "author": "达尼埃拉·塔拉布拉",
-        "cover": "https://res.weread.qq.com/wrepub/CB_2njAvTAwD2jO73m74sF4K934_parsecover",
-        "updateTime": 1779450701,
-        "secret": 1,
-        "finishReading": 0,
-        "readUpdateTime": 1781687045
-      },
-      {
         "bookId": "CB_EsG6110ty9NN85W75S6DG7Cz",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=a84420a3643425f457347363131307479394e4e38355737355336444737437a57a",
         "readerLink": "https://weread.qq.com/web/reader/a84420a3643425f457347363131307479394e4e38355737355336444737437a57a",
@@ -195,19 +183,6 @@
         "readUpdateTime": 1793532397,
         "secret": 0,
         "updateTime": 1753950608
-      },
-      {
-        "bookId": "30181899",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=7a332d8071cc8a0b7a31e96",
-        "readerLink": "https://weread.qq.com/web/reader/7a332d8071cc8a0b7a31e96",
-        "title": "高级运动营养学",
-        "author": "丹·贝纳多特",
-        "updateTime": 1722588817,
-        "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/t6_YueWen_30181899.jpg",
-        "finishReading": 0,
-        "readUpdateTime": 1786277636,
-        "secret": 0,
-        "category": "生活百科-体育"
       },
       {
         "bookId": "3300043405",
@@ -234,19 +209,6 @@
         "readUpdateTime": 1793622907,
         "secret": 0,
         "category": "个人成长-人生哲学"
-      },
-      {
-        "bookId": "24981213",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=36d32af0717d2edd36d228e",
-        "readerLink": "https://weread.qq.com/web/reader/36d32af0717d2edd36d228e",
-        "title": "速度训练：理论要点、动作练习与运动专项训练计划",
-        "author": "美国国家体能协会 伊恩·杰弗里斯",
-        "cover": "https://cdn.weread.qq.com/weread/cover/0/YueWen_24981213/t6_YueWen_24981213.jpg",
-        "category": "生活百科-体育",
-        "finishReading": 0,
-        "readUpdateTime": 1785701655,
-        "secret": 0,
-        "updateTime": 1760169385
       },
       {
         "bookId": "35523642",
@@ -286,24 +248,69 @@
         "readUpdateTime": 1787138393,
         "secret": 0,
         "category": "哲学宗教-西方哲学"
-      },
-      {
-        "bookId": "3300199881",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=870320d0813abb494g0113ca",
-        "readerLink": "https://weread.qq.com/web/reader/870320d0813abb494g0113ca",
-        "title": "Claude Code橙皮书：从入门到精通（微信读书特别版）",
-        "author": "花叔",
-        "cover": "https://cdn.weread.qq.com/weread/cover/19/cpplatform_uxgat2cacw5ne8darcgwa2/t6_cpplatform_uxgat2cacw5ne8darcgwa21775208984.jpg",
-        "category": "计算机-人工智能",
-        "finishReading": 0,
-        "readUpdateTime": 1784392199,
-        "secret": 0,
-        "updateTime": 1780977452
       }
     ]
   },
   "history": {
     "books": [
+      {
+        "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+        "readerLink": "https://weread.qq.com/web/reader/ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+        "title": "The Let Them Theory",
+        "author": "Mel Robbins",
+        "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+        "version": 681517098,
+        "format": "epub",
+        "type": 0,
+        "price": 0,
+        "originalPrice": 0,
+        "soldout": 0,
+        "bookStatus": 1,
+        "payingStatus": 0,
+        "payType": 134217761,
+        "centPrice": 0,
+        "hasLecture": 0,
+        "finished": 1,
+        "free": 1,
+        "mcardDiscount": 0,
+        "ispub": 0,
+        "cpid": 0,
+        "publishTime": "",
+        "lastChapterIdx": 44,
+        "paperBook": {
+          "skuId": ""
+        },
+        "otherType": [
+          {
+            "type": "epub",
+            "showType": true,
+            "cht2sShowType": false,
+            "translateStatus": "open",
+            "translateDone": false
+          }
+        ],
+        "copyrightChapterUids": [],
+        "limitShareChat": 0,
+        "inStoreBookId": "3004680562",
+        "blockSaveImg": 0,
+        "language": "en-wr",
+        "isTraditionalChinese": false,
+        "hideUpdateTime": false,
+        "isEPUBComics": 0,
+        "isVerticalLayout": 0,
+        "isShowTTS": 1,
+        "webBookControl": 0,
+        "selfProduceIncentive": false,
+        "isAutoDownload": 1,
+        "readingProgress": 21,
+        "markedStatus": 1,
+        "lastNoteSort": 1793705155,
+        "updateTime": 1793702478,
+        "secret": 1,
+        "finishReading": 0,
+        "readUpdateTime": 1793705672
+      },
       {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
@@ -494,18 +501,6 @@
         "readUpdateTime": 1793532397,
         "secret": 0,
         "updateTime": 1753950608
-      },
-      {
-        "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
-        "readerLink": "https://weread.qq.com/web/reader/ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
-        "title": "The Let Them Theory",
-        "author": "Mel Robbins",
-        "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-        "updateTime": 1792538180,
-        "secret": 1,
-        "finishReading": 0,
-        "readUpdateTime": 1792538181
       },
       {
         "bookId": "3300187091",
@@ -978,7 +973,7 @@
         "title": "高级运动营养学",
         "author": "丹·贝纳多特",
         "translator": "安江红,刘勇,周帆扬,赵之光",
-        "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/t6_YueWen_30181899.jpg",
+        "cover": "https://cdn.weread.qq.com/weread/cover/79/YueWen_30181899/s_YueWen_30181899.jpg",
         "version": 315626625,
         "format": "epub",
         "type": 0,
@@ -1037,11 +1032,7 @@
         "markedStatus": 2,
         "lastNoteSort": 1786197859,
         "intro": "世界各地的精英运动员都知道丹·贝纳多特（Dan Benardot）博士，并渴望得到他的指导，因为他们知道，他的真知灼见可能是运动员能否获得金牌的决定性因素。来自各个大洲的很多高等院校都邀请丹前去讲学，他们希望学生们能师从最好的专家。在佐治亚州立大学（Georgia State University），我们只知道他是丹——一位了不起的朋友，一位出色的同事，一位忠实的丈夫，以及世界上最棒的孩子的父亲。《高级运动营养学》的第1 版非常成功。它被广泛应用于各种教学场合，以及拥有不同身材、体型和技能的运动员。精英运动员和普通运动员都在使用这本书。它已经成为运动营养师和运动科学专业的学生学习人类运动表现相关营养知识的必读书。对那些需要指导运动员如何在比赛中取得优势的教练员而言，它同样是首选读物。但就像每一本成功的图书一样，它需要进行一些修订和更新。这正是《高级运动营养学（第2 版）》如此重要的原因。",
-        "updateTime": 1722588817,
-        "finishReading": 0,
-        "readUpdateTime": 1786277636,
-        "secret": 0,
-        "category": "生活百科-体育"
+        "finishReading": 0
       },
       {
         "bookId": "CB_EsG6110ty9NN85W75S6DG7Cz",
@@ -1124,19 +1115,6 @@
         "category": "经济理财-管理"
       },
       {
-        "bookId": "24981213",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=36d32af0717d2edd36d228e",
-        "readerLink": "https://weread.qq.com/web/reader/36d32af0717d2edd36d228e",
-        "title": "速度训练：理论要点、动作练习与运动专项训练计划",
-        "author": "美国国家体能协会 伊恩·杰弗里斯",
-        "cover": "https://cdn.weread.qq.com/weread/cover/0/YueWen_24981213/t6_YueWen_24981213.jpg",
-        "category": "生活百科-体育",
-        "finishReading": 0,
-        "readUpdateTime": 1785701655,
-        "secret": 0,
-        "updateTime": 1760169385
-      },
-      {
         "bookId": "3300190668",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=18b32200813abb0fag01892b",
         "readerLink": "https://weread.qq.com/web/reader/18b32200813abb0fag01892b",
@@ -1205,31 +1183,6 @@
         "lastNoteSort": 1784917932,
         "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
         "finishReading": 0
-      },
-      {
-        "bookId": "3300199881",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=870320d0813abb494g0113ca",
-        "readerLink": "https://weread.qq.com/web/reader/870320d0813abb494g0113ca",
-        "title": "Claude Code橙皮书：从入门到精通（微信读书特别版）",
-        "author": "花叔",
-        "cover": "https://cdn.weread.qq.com/weread/cover/19/cpplatform_uxgat2cacw5ne8darcgwa2/t6_cpplatform_uxgat2cacw5ne8darcgwa21775208984.jpg",
-        "category": "计算机-人工智能",
-        "finishReading": 0,
-        "readUpdateTime": 1784392199,
-        "secret": 0,
-        "updateTime": 1780977452
-      },
-      {
-        "bookId": "CB_Djp4Tt4V55Oi73w75h4jb9UW",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=92e42153643425f446a70345474345635354f69373377373568346a623955576f8",
-        "readerLink": "https://weread.qq.com/web/reader/92e42153643425f446a70345474345635354f69373377373568346a623955576f8",
-        "title": "伦敦国家美术馆（伟大的博物馆）",
-        "author": "达尼埃拉·塔拉布拉",
-        "cover": "https://res.weread.qq.com/wrepub/CB_2njAvTAwD2jO73m74sF4K934_parsecover",
-        "updateTime": 1779450701,
-        "secret": 1,
-        "finishReading": 0,
-        "readUpdateTime": 1781687045
       },
       {
         "bookId": "3300043405",
@@ -1413,10 +1366,70 @@
         "finishReading": 0
       }
     ],
-    "totalReadCount": 19
+    "totalReadCount": 20
   },
   "notebooks": {
     "books": [
+      {
+        "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+        "book": {
+          "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+          "readerLink": "https://weread.qq.com/web/reader/ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+          "title": "The Let Them Theory",
+          "author": "Mel Robbins",
+          "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+          "version": 681517098,
+          "format": "epub",
+          "type": 0,
+          "price": 0,
+          "originalPrice": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payingStatus": 0,
+          "payType": 134217761,
+          "centPrice": 0,
+          "hasLecture": 0,
+          "finished": 1,
+          "free": 1,
+          "mcardDiscount": 0,
+          "ispub": 0,
+          "cpid": 0,
+          "publishTime": "",
+          "lastChapterIdx": 44,
+          "paperBook": {
+            "skuId": ""
+          },
+          "otherType": [
+            {
+              "type": "epub",
+              "showType": true,
+              "cht2sShowType": false,
+              "translateStatus": "open",
+              "translateDone": false
+            }
+          ],
+          "copyrightChapterUids": [],
+          "limitShareChat": 0,
+          "inStoreBookId": "3004680562",
+          "blockSaveImg": 0,
+          "language": "en-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "webBookControl": 0,
+          "selfProduceIncentive": false,
+          "isAutoDownload": 1
+        },
+        "reviewCount": 0,
+        "markedStatus": 1,
+        "readingProgress": 21,
+        "noteCount": 10,
+        "bookmarkCount": 0,
+        "sort": 1793705155
+      },
       {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
         "book": {
@@ -2379,7 +2392,7 @@
     "readTimes": {
       "1793462400": 3407,
       "1793548800": 845,
-      "1793635200": 3294
+      "1793635200": 6157
     },
     "readDays": 3,
     "readLongest": [
@@ -2427,6 +2440,56 @@
           "笔记最多",
           "单日阅读最久"
         ]
+      },
+      {
+        "book": {
+          "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+          "title": "The Let Them Theory",
+          "author": "Mel Robbins",
+          "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+          "version": 681517098,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 134217761,
+          "finished": 1,
+          "free": 1,
+          "mcardDiscount": 0,
+          "ispub": 0,
+          "cpid": 0,
+          "publishTime": "",
+          "lastChapterIdx": 44,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 0,
+          "otherType": [
+            {
+              "type": "epub",
+              "showType": true,
+              "cht2sShowType": false,
+              "translateStatus": "open",
+              "translateDone": false
+            }
+          ],
+          "copyrightChapterUids": [],
+          "limitShareChat": 0,
+          "inStoreBookId": "3004680562",
+          "blockSaveImg": 0,
+          "language": "en-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 2852,
+        "tags": []
       },
       {
         "book": {
@@ -2562,14 +2625,14 @@
       },
       {
         "stat": "笔记",
-        "counts": "12条"
+        "counts": "22条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 3.266309204647007,
-    "dayAverageReadTime": 2515,
+    "compare": 4.8849738286735608,
+    "dayAverageReadTime": 3469,
     "baseTime": 1793462400,
-    "totalReadTime": 7546,
+    "totalReadTime": 10409,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2720,7 +2783,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 162076
+      "1767196800": 164939
     },
     "readDays": 106,
     "readLongest": [
@@ -3519,7 +3582,7 @@
     "readStat": [
       {
         "stat": "读过",
-        "counts": "19本"
+        "counts": "20本"
       },
       {
         "stat": "读完",
@@ -3531,7 +3594,7 @@
       },
       {
         "stat": "笔记",
-        "counts": "218条"
+        "counts": "228条"
       }
     ],
     "medals": [
@@ -3543,7 +3606,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5065120,
+        "users": 5065987,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3560,7 +3623,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6237151,
+        "users": 6238122,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3577,7 +3640,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12008028,
+        "users": 12009139,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3592,7 +3655,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 162089,
+    "totalReadTime": 164952,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3964,7 +4027,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8045人读过"
+        "reason": "仅有8059人读过"
       },
       {
         "type": 8,
@@ -4297,7 +4360,7 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 7546,
+        "1793462400": 10409,
         "1796054400": 0
       },
       "readDays": 104,
@@ -5071,7 +5134,7 @@
       "readStat": [
         {
           "stat": "读过",
-          "counts": "19本"
+          "counts": "20本"
         },
         {
           "stat": "读完",
@@ -5083,13 +5146,13 @@
         },
         {
           "stat": "笔记",
-          "counts": "218条"
+          "counts": "228条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 527,
+      "dayAverageReadTime": 537,
       "baseTime": 1767196800,
-      "totalReadTime": 162076,
+      "totalReadTime": 164939,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -5279,6 +5342,165 @@
     }
   ],
   "notesByBook": {
+    "CB_0dOEYMEWMA2p77975h0Wk3Ku": {
+      "highlights": {
+        "synckey": 1793705155,
+        "updated": [
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterUid": 12,
+            "chapterIdx": 12,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_12_91058-92732",
+            "range": "91058-92732",
+            "markText": "‘让他们理论’就像是给你紧张大脑的一声长叹。它帮助你重新掌控焦虑的思绪，    让你的大脑和身体终于能摆脱生存模式，回归蓬勃发展状态。​”Let Me explain why this matters. If you allowyourself to get completely stressed out, you aregiving all your power to other people.让我来解释为什么这很重要。如果你允许自己完全被压力压垮，你就是把所有的力量都交给了别人。",
+            "createTime": 1793705155
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterUid": 12,
+            "chapterIdx": 12,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_12_85451-86413",
+            "range": "85451-86413",
+            "markText": "我的观点是，试图控制别人，或者控制超出你掌控      范围的情况，只会给你带来更多压力。我可以生气。我可以不断回头看。我可以对空乘人员大喊大叫。我可以感到沮丧，对那个人大喊，但那有什么意义呢？难道我面前没有一个更明显、更有力的解决办法吗？",
+            "createTime": 1793705118
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterUid": 12,
+            "chapterIdx": 12,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_12_36306-38625",
+            "range": "36306-38625",
+            "markText": "    几个月前，我坐飞机时，正后排的一个人咳嗽得像是生命的最后一天。你知道那种深沉的胸腔咳嗽，肯定会让周围所有人都生病的那种咳嗽吗？I didn’t think anything of it for the first few minutes, butwhen it continued on and on, and then he startedclearing his throat, and then he kept coughing, I startedto get annoyed.起初几分钟我没怎么在意，但当他一直这样持续下去，然后开始清嗓子，接着不停地咳嗽时，我开始感到恼火。",
+            "createTime": 1793704741
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterUid": 8,
+            "chapterIdx": 8,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_8_139393-139546",
+            "range": "139393-139546",
+            "markText": "让我停止总是期待别人把我包括在内。让我对自己想要的生活负责。让我去找出我需要关注的更深层次的问题。让我更主动地去联系别人。让我邀请别人这个周末一起做点什么。让我偶尔举办一次派对。让我在工作上设定更好的界限，这样我才有时间交朋友。让我把社交生活放在优先位置，因为显然这对我很重要，创造一个社交生活是我的责任。",
+            "createTime": 1793704561
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterUid": 8,
+            "chapterIdx": 8,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_8_137602-137670",
+            "range": "137602-137670",
+            "markText": "当你成为成年人后，你的社交生活就是你的责任。如果你想要更多的乐趣，你应该从沙发上起来，去创造一个精彩的社交生活（我自己也在对自己说）​。",
+            "createTime": 1793704543
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 7,
+            "createTime": 1793702349,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_7_137779-137889",
+            "range": "137779-137889",
+            "markText": "我们都有一种天生的渴望，想要掌控生活中的一切：我们的时间、思想、行动、环境、计划、未来、决定以及周围的一切。感觉掌控一切会让你感到舒适和安全，所以你自然会试图控制周围的每个人和每件事——很多时候，甚至都没有意识到这一点。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 7,
+            "createTime": 1793701416,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_7_50443-50472",
+            "range": "50443-50472",
+            "markText": "事实是，除非你赋予他们权力，否则别人对你没有真正的控制力。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 7,
+            "createTime": 1793701337,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_7_41512-41617",
+            "range": "41512-41617",
+            "markText": "但结果却是怎样的呢？你工作更努力，妥协更多，把自己缩得更小，但仍然有人失望。仍然有人批评。你依然会觉得无论多努力，都永远不够。\n",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 7,
+            "createTime": 1793701311,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_7_38117-38172",
+            "range": "38117-38172",
+            "markText": "如果你正在努力改变生活，实现目标，或感到更快乐，我希望你听清楚：问题不在于你。问题在于你无意中赋予了别人权力。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 6,
+            "createTime": 1793700814,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_6_29379-29516",
+            "range": "29379-29516",
+            "markText": "这听起来很荒谬，但我当时很绝望，于是试了一下。我倒数：5-4-3-2-1——然后我就起床了。就是这么简单。我没有去想自己有多累，也没有去想自己多么不想面对问题。我只是行动了，没给大脑说服自己放弃的机会。这就像发射火箭一样：一旦开始倒计时，5-4-3-2-1，就没有回头路了。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "3 震惊：生活充满压力 - 3 Shocker: Life Is Stressful",
+            "chapterUid": 12,
+            "chapterIdx": 12
+          },
+          {
+            "title": "1 不要再为你无法控制的事情浪费生命 - 1 Stop Wasting Your Life on Things You Can’t Control",
+            "chapterUid": 8,
+            "chapterIdx": 8
+          },
+          {
+            "title": "放任理论 - The Let Them Theory",
+            "chapterUid": 7,
+            "chapterIdx": 7
+          },
+          {
+            "title": "引言：我的故事 - Introduction: My Story",
+            "chapterUid": 6,
+            "chapterIdx": 6
+          }
+        ],
+        "book": {
+          "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+          "version": 681517098,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+          "title": "The Let Them Theory",
+          "author": "Mel Robbins",
+          "coverBoxInfo": {
+            "colorsPure": [
+              "#93B0DA",
+              "#98B8DD"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
     "CB_8WSAeaAbjA6w77875hFO56Xg": {
       "highlights": {
         "synckey": 1793657157,
@@ -6754,33 +6976,6 @@
             "colorsPure": [
               "#969392",
               "#b0adad"
-            ]
-          }
-        }
-      },
-      "thoughts": {
-        "reviews": []
-      }
-    },
-    "CB_0dOEYMEWMA2p77975h0Wk3Ku": {
-      "highlights": {
-        "synckey": 0,
-        "updated": [],
-        "removed": [],
-        "chapters": [],
-        "book": {
-          "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
-          "version": 1502239066,
-          "format": "epub",
-          "soldout": 0,
-          "bookStatus": 1,
-          "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "title": "The Let Them Theory",
-          "author": "Mel Robbins",
-          "coverBoxInfo": {
-            "colorsPure": [
-              "#93B0DA",
-              "#98B8DD"
             ]
           }
         }
@@ -10476,182 +10671,6 @@
         "reviews": []
       }
     },
-    "24981213": {
-      "highlights": {
-        "synckey": 0,
-        "updated": [],
-        "removed": [],
-        "chapters": [],
-        "book": {
-          "bookId": "24981213",
-          "version": 467847590,
-          "format": "epub",
-          "soldout": 0,
-          "bookStatus": 1,
-          "cover": "https://cdn.weread.qq.com/weread/cover/0/YueWen_24981213/s_YueWen_24981213.jpg",
-          "title": "速度训练：理论要点、动作练习与运动专项训练计划",
-          "author": "美国国家体能协会 伊恩·杰弗里斯",
-          "coverBoxInfo": {
-            "blurhash": "KAEooJRQOpCloexu0LtRwN",
-            "colors": [
-              {
-                "key": "1/4",
-                "hex": "#002311"
-              },
-              {
-                "key": "1/6",
-                "hex": "#002609"
-              },
-              {
-                "key": "1/8",
-                "hex": "#002804"
-              },
-              {
-                "key": "2/4",
-                "hex": "#163725"
-              },
-              {
-                "key": "2/6",
-                "hex": "#003a1e"
-              },
-              {
-                "key": "2/8",
-                "hex": "#003c18"
-              },
-              {
-                "key": "3/4",
-                "hex": "#2a4f38"
-              },
-              {
-                "key": "3/6",
-                "hex": "#0d5331"
-              },
-              {
-                "key": "3/8",
-                "hex": "#00552a"
-              },
-              {
-                "key": "3/12",
-                "hex": "#005a1c"
-              },
-              {
-                "key": "4/6",
-                "hex": "#286d45"
-              },
-              {
-                "key": "4/10",
-                "hex": "#007333"
-              },
-              {
-                "key": "4/4",
-                "hex": "#41694e"
-              },
-              {
-                "key": "5/10",
-                "hex": "#008e49"
-              },
-              {
-                "key": "5/4",
-                "hex": "#5a8366"
-              },
-              {
-                "key": "5/8",
-                "hex": "#288a53"
-              },
-              {
-                "key": "6/4",
-                "hex": "#729e7d"
-              },
-              {
-                "key": "6/6",
-                "hex": "#60a273"
-              },
-              {
-                "key": "6/8",
-                "hex": "#48a569"
-              },
-              {
-                "key": "6/12",
-                "hex": "#00ac55"
-              },
-              {
-                "key": "7/8",
-                "hex": "#66c080"
-              },
-              {
-                "key": "7/10",
-                "hex": "#49c476"
-              },
-              {
-                "key": "7/12",
-                "hex": "#0fc86b"
-              },
-              {
-                "key": "8/4",
-                "hex": "#a5d3ae"
-              },
-              {
-                "key": "8/6",
-                "hex": "#92d8a2"
-              },
-              {
-                "key": "8/12",
-                "hex": "#42e480"
-              },
-              {
-                "key": "9/2",
-                "hex": "#cfead3"
-              },
-              {
-                "key": "9/12",
-                "hex": "#5dff95"
-              },
-              {
-                "key": "1/100",
-                "hex": "#48a569"
-              },
-              {
-                "key": "2/100",
-                "hex": "#66c080"
-              },
-              {
-                "key": "3/100",
-                "hex": "#ffffff"
-              },
-              {
-                "key": "4/100",
-                "hex": "#E5F3EF"
-              },
-              {
-                "key": "5/100",
-                "hex": "#E5F3EF"
-              },
-              {
-                "key": "6/100",
-                "hex": "#002714"
-              }
-            ],
-            "dominate_color": {
-              "hex": "#023820",
-              "hsv": [
-                152.9694789591974,
-                95.53887132251856,
-                21.94056456786729
-              ]
-            },
-            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/213/24981213/s_24981213.jpg",
-            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/213/24981213/s_24981213.jpg",
-            "colorsPure": [
-              "#00ac55",
-              "#0fc86b"
-            ]
-          }
-        }
-      },
-      "thoughts": {
-        "reviews": []
-      }
-    },
     "3300190668": {
       "highlights": {
         "synckey": 1784917932,
@@ -11046,209 +11065,6 @@
             "colorsPure": [
               "#949489",
               "#aeaea3"
-            ]
-          }
-        }
-      },
-      "thoughts": {
-        "reviews": []
-      }
-    },
-    "3300199881": {
-      "highlights": {
-        "synckey": 0,
-        "updated": [],
-        "removed": [],
-        "chapters": [],
-        "book": {
-          "bookId": "3300199881",
-          "version": 847933132,
-          "format": "epub",
-          "soldout": 0,
-          "bookStatus": 1,
-          "cover": "https://cdn.weread.qq.com/weread/cover/19/cpplatform_uxgat2cacw5ne8darcgwa2/s_cpplatform_uxgat2cacw5ne8darcgwa21775208984.jpg",
-          "title": "Claude Code橙皮书：从入门到精通（微信读书特别版）",
-          "author": "花叔",
-          "coverBoxInfo": {
-            "blurhash": "K]OobVfPoee.j[aeD4ayRj",
-            "colors": [
-              {
-                "key": "1/4",
-                "hex": "#1e1c19"
-              },
-              {
-                "key": "1/6",
-                "hex": "#1e1c19"
-              },
-              {
-                "key": "1/8",
-                "hex": "#1e1c19"
-              },
-              {
-                "key": "2/4",
-                "hex": "#32312d"
-              },
-              {
-                "key": "2/6",
-                "hex": "#32312d"
-              },
-              {
-                "key": "2/8",
-                "hex": "#32312d"
-              },
-              {
-                "key": "3/4",
-                "hex": "#494743"
-              },
-              {
-                "key": "3/6",
-                "hex": "#494743"
-              },
-              {
-                "key": "3/8",
-                "hex": "#494743"
-              },
-              {
-                "key": "3/12",
-                "hex": "#494743"
-              },
-              {
-                "key": "4/6",
-                "hex": "#62605b"
-              },
-              {
-                "key": "4/10",
-                "hex": "#62605b"
-              },
-              {
-                "key": "4/4",
-                "hex": "#62605b"
-              },
-              {
-                "key": "5/10",
-                "hex": "#7b7974"
-              },
-              {
-                "key": "5/4",
-                "hex": "#7b7974"
-              },
-              {
-                "key": "5/8",
-                "hex": "#7b7974"
-              },
-              {
-                "key": "6/4",
-                "hex": "#95938e"
-              },
-              {
-                "key": "6/6",
-                "hex": "#95938e"
-              },
-              {
-                "key": "6/8",
-                "hex": "#95938e"
-              },
-              {
-                "key": "6/12",
-                "hex": "#95938e"
-              },
-              {
-                "key": "7/8",
-                "hex": "#afada8"
-              },
-              {
-                "key": "7/10",
-                "hex": "#afada8"
-              },
-              {
-                "key": "7/12",
-                "hex": "#afada8"
-              },
-              {
-                "key": "8/4",
-                "hex": "#cac8c2"
-              },
-              {
-                "key": "8/6",
-                "hex": "#cac8c2"
-              },
-              {
-                "key": "8/12",
-                "hex": "#cac8c2"
-              },
-              {
-                "key": "9/2",
-                "hex": "#e5e3dc"
-              },
-              {
-                "key": "9/12",
-                "hex": "#e5e3dc"
-              },
-              {
-                "key": "1/100",
-                "hex": "#95938e"
-              },
-              {
-                "key": "2/100",
-                "hex": "#afada8"
-              },
-              {
-                "key": "3/100",
-                "hex": "#ffffff"
-              },
-              {
-                "key": "4/100",
-                "hex": "#F3F1E5"
-              },
-              {
-                "key": "5/100",
-                "hex": "#F3F1E5"
-              },
-              {
-                "key": "6/100",
-                "hex": "#271E00"
-              }
-            ],
-            "dominate_color": {
-              "hex": "#f7f5ee",
-              "hsv": [
-                48.63511471909134,
-                3.651539892246837,
-                96.73262545733972
-              ]
-            },
-            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/881/3300199881/s_3300199881.jpg",
-            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/881/3300199881/s_3300199881.jpg",
-            "colorsPure": [
-              "#95938e",
-              "#afada8"
-            ]
-          }
-        }
-      },
-      "thoughts": {
-        "reviews": []
-      }
-    },
-    "CB_Djp4Tt4V55Oi73w75h4jb9UW": {
-      "highlights": {
-        "synckey": 0,
-        "updated": [],
-        "removed": [],
-        "chapters": [],
-        "book": {
-          "bookId": "CB_Djp4Tt4V55Oi73w75h4jb9UW",
-          "version": 2042793201,
-          "format": "epub",
-          "soldout": 0,
-          "bookStatus": 1,
-          "cover": "https://res.weread.qq.com/wrepub/CB_2njAvTAwD2jO73m74sF4K934_parsecover",
-          "title": "伦敦国家美术馆（伟大的博物馆）",
-          "author": "达尼埃拉·塔拉布拉",
-          "coverBoxInfo": {
-            "colorsPure": [
-              "#93B0DA",
-              "#98B8DD"
             ]
           }
         }
