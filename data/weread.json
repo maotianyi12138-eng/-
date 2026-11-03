@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-03T14:10:51Z",
+  "updatedAt": "2026-11-03T23:21:19Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -29,7 +29,7 @@
         "updateTime": 1793702478,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793705672
+        "readUpdateTime": 1793735135
       },
       {
         "bookId": "3300187091",
@@ -303,13 +303,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 21,
+        "readingProgress": 22,
         "markedStatus": 1,
         "lastNoteSort": 1793705155,
         "updateTime": 1793702478,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793705672
+        "readUpdateTime": 1793735135
       },
       {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
@@ -1425,7 +1425,7 @@
         },
         "reviewCount": 0,
         "markedStatus": 1,
-        "readingProgress": 21,
+        "readingProgress": 22,
         "noteCount": 10,
         "bookmarkCount": 0,
         "sort": 1793705155
@@ -2392,9 +2392,10 @@
     "readTimes": {
       "1793462400": 3407,
       "1793548800": 845,
-      "1793635200": 6157
+      "1793635200": 6157,
+      "1793721600": 240
     },
-    "readDays": 3,
+    "readDays": 4,
     "readLongest": [
       {
         "book": {
@@ -2488,7 +2489,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 2852,
+        "readTime": 3092,
         "tags": []
       },
       {
@@ -2613,7 +2614,7 @@
     "readStat": [
       {
         "stat": "读过",
-        "counts": "1本"
+        "counts": "2本"
       },
       {
         "stat": "读完",
@@ -2621,7 +2622,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "3天"
+        "counts": "4天"
       },
       {
         "stat": "笔记",
@@ -2629,10 +2630,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 4.8849738286735608,
-    "dayAverageReadTime": 3469,
+    "compare": 3.515497619959512,
+    "dayAverageReadTime": 2662,
     "baseTime": 1793462400,
-    "totalReadTime": 10409,
+    "totalReadTime": 10649,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2783,9 +2784,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 164939
+      "1767196800": 165179
     },
-    "readDays": 106,
+    "readDays": 107,
     "readLongest": [
       {
         "book": {
@@ -3359,7 +3360,7 @@
     "preferCategoryWord": "偏好阅读文学",
     "preferTimeWord": "偏好夜间阅读",
     "preferTime": [
-      7665,
+      8222,
       3680,
       1904,
       317,
@@ -3371,18 +3372,18 @@
       705,
       5713,
       4834,
-      4990,
-      18113,
+      6497,
+      19469,
       8110,
       11390,
       7225,
       17437,
-      19296,
+      19994,
       13386,
       7509,
       8181,
       6079,
-      9258
+      11554
     ],
     "preferAuthor": [
       {
@@ -3590,7 +3591,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "106天"
+        "counts": "107天"
       },
       {
         "stat": "笔记",
@@ -3606,7 +3607,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5065987,
+        "users": 5066271,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3623,7 +3624,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6238122,
+        "users": 6238477,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3640,7 +3641,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12009139,
+        "users": 12009575,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3655,7 +3656,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 164952,
+    "totalReadTime": 165192,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -4027,7 +4028,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8059人读过"
+        "reason": "仅有8076人读过"
       },
       {
         "type": 8,
@@ -4360,10 +4361,10 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 10409,
+        "1793462400": 10649,
         "1796054400": 0
       },
-      "readDays": 104,
+      "readDays": 105,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -5142,7 +5143,7 @@
         },
         {
           "stat": "阅读",
-          "counts": "104天"
+          "counts": "105天"
         },
         {
           "stat": "笔记",
@@ -5150,9 +5151,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 537,
+      "dayAverageReadTime": 536,
       "baseTime": 1767196800,
-      "totalReadTime": 164939,
+      "totalReadTime": 165179,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
