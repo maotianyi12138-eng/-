@@ -1,26 +1,160 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-11-03T09:43:59.925Z",
+  "updatedAt": "2026-11-04T09:31:11.242Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
       {
-        "date": "2026-11-01",
-        "title": "肩腿后侧",
-        "start": 1793561915939,
-        "durationMinutes": 1,
-        "setCount": 1,
-        "volumeKg": 600,
+        "date": "2026-11-03",
+        "title": "胸（重量）二头",
+        "start": 1793738938194,
+        "durationMinutes": 55,
+        "setCount": 23,
+        "volumeKg": 7908,
         "calories": 0,
         "distance": 0,
         "movements": [
           {
-            "name": "硬拉",
+            "name": "杠铃卧推",
+            "setCount": 8,
+            "totalReps": 38,
+            "volumeKg": 2895,
+            "maxWeightKg": 90
+          },
+          {
+            "name": "把手式蝴蝶机飞鸟",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1437,
+            "maxWeightKg": 29.9
+          },
+          {
+            "name": "上斜史密斯机卧推",
+            "setCount": 5,
+            "totalReps": 60,
+            "volumeKg": 2100,
+            "maxWeightKg": 35
+          },
+          {
+            "name": "双杠臂屈伸（辅助）",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          },
+          {
+            "name": "坐姿绳索铁杆弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 1476,
+            "maxWeightKg": 41
+          }
+        ]
+      },
+      {
+        "date": "2026-11-03",
+        "title": "羽毛球",
+        "start": 1793711588238,
+        "durationMinutes": 179,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 1669,
+        "distance": 5.06,
+        "movements": [
+          {
+            "name": "AppleHealthWorkout",
             "setCount": 1,
-            "totalReps": 5,
-            "volumeKg": 600,
-            "maxWeightKg": 120
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-11-02",
+        "title": "羽毛球",
+        "start": 1793642218748,
+        "durationMinutes": 92,
+        "setCount": 1,
+        "volumeKg": 0,
+        "calories": 636,
+        "distance": 2.06,
+        "movements": [
+          {
+            "name": "AppleHealthWorkout",
+            "setCount": 1,
+            "totalReps": 0,
+            "volumeKg": 0,
+            "maxWeightKg": 0
+          }
+        ]
+      },
+      {
+        "date": "2026-11-01",
+        "title": "肩腿后侧",
+        "start": 1793699427944,
+        "durationMinutes": 3,
+        "setCount": 28,
+        "volumeKg": 9584.4,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "绳索交叉后束飞鸟",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 122.4,
+            "maxWeightKg": 3.4
+          },
+          {
+            "name": "Y字绳索侧平举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 540,
+            "maxWeightKg": 15
+          },
+          {
+            "name": "史密斯机推举",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 1020,
+            "maxWeightKg": 25
+          },
+          {
+            "name": "硬拉",
+            "setCount": 4,
+            "totalReps": 20,
+            "volumeKg": 1950,
+            "maxWeightKg": 110
+          },
+          {
+            "name": "腿弯举",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 936,
+            "maxWeightKg": 26
+          },
+          {
+            "name": "坐姿髋外展",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2160,
+            "maxWeightKg": 45
+          },
+          {
+            "name": "坐姿髋内收",
+            "setCount": 4,
+            "totalReps": 48,
+            "volumeKg": 2496,
+            "maxWeightKg": 52
+          },
+          {
+            "name": "哑铃直腿硬拉",
+            "setCount": 3,
+            "totalReps": 36,
+            "volumeKg": 360,
+            "maxWeightKg": 10
           }
         ]
       },
@@ -18192,7 +18326,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-11-01"
+      "to": "2026-11-03"
     }
   },
   "body": {
