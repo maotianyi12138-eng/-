@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-04T14:40:22Z",
+  "updatedAt": "2026-11-04T23:39:44Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -2631,8 +2631,8 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 4.357621600919188,
-    "dayAverageReadTime": 3158,
+    "compare": 3.2860972807353505,
+    "dayAverageReadTime": 2527,
     "baseTime": 1793462400,
     "totalReadTime": 12635,
     "readDistributionWord": "点评分布",
@@ -3370,7 +3370,7 @@
     "preferTimeWord": "偏好夜间阅读",
     "preferTime": [
       8222,
-      3680,
+      3770,
       1904,
       317,
       7,
@@ -3381,16 +3381,16 @@
       705,
       5713,
       4834,
-      6497,
-      19469,
-      8110,
+      6647,
+      20615,
+      8710,
       11390,
       7225,
       17437,
       19994,
       13386,
-      7509,
-      8181,
+      7510,
+      8420,
       6079,
       11554
     ],
@@ -3616,7 +3616,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5067166,
+        "users": 5067417,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3633,7 +3633,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6239451,
+        "users": 6239771,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3650,7 +3650,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12010772,
+        "users": 12011135,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -4037,7 +4037,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8095人读过"
+        "reason": "仅有8099人读过"
       },
       {
         "type": 8,
@@ -5160,7 +5160,7 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 542,
+      "dayAverageReadTime": 540,
       "baseTime": 1767196800,
       "totalReadTime": 167165,
       "readDistributionWord": "点评分布",
