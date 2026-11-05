@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-05T06:43:14Z",
+  "updatedAt": "2026-11-05T19:56:17Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -26,10 +26,10 @@
         "title": "The Let Them Theory",
         "author": "Mel Robbins",
         "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-        "updateTime": 1793791710,
+        "updateTime": 1793887458,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793795612
+        "readUpdateTime": 1793892886
       },
       {
         "bookId": "3300187091",
@@ -260,7 +260,7 @@
         "title": "The Let Them Theory",
         "author": "Mel Robbins",
         "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-        "version": 1910001877,
+        "version": 539500858,
         "format": "epub",
         "type": 0,
         "price": 0,
@@ -303,13 +303,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 32,
+        "readingProgress": 45,
         "markedStatus": 1,
-        "lastNoteSort": 1793795513,
-        "updateTime": 1793791710,
+        "lastNoteSort": 1793887788,
+        "updateTime": 1793887458,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793795612
+        "readUpdateTime": 1793892886
       },
       {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
@@ -1121,7 +1121,7 @@
         "title": "论人生短暂",
         "author": "[古罗马]塞涅卡",
         "translator": "刘漪",
-        "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
+        "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/t6_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
         "version": 73733271,
         "format": "epub",
         "type": 0,
@@ -1150,9 +1150,9 @@
         "finished": 1,
         "maxFreeChapter": 3,
         "maxFreeInfo": {
-          "maxfreeChapterIdx": 3,
-          "maxfreeChapterUid": 6,
-          "maxfreeChapterRatio": 100
+          "maxFreeChapterIdx": 3,
+          "maxFreeChapterUid": 6,
+          "maxFreeChapterRatio": 100
         },
         "free": 0,
         "mcardDiscount": 0,
@@ -1181,7 +1181,6 @@
         "readingProgress": 99,
         "markedStatus": 4,
         "lastNoteSort": 1784917932,
-        "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
         "finishReading": 0
       },
       {
@@ -1379,7 +1378,7 @@
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 1910001877,
+          "version": 539500858,
           "format": "epub",
           "type": 0,
           "price": 0,
@@ -1425,10 +1424,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 1,
-        "readingProgress": 32,
-        "noteCount": 14,
+        "readingProgress": 45,
+        "noteCount": 23,
         "bookmarkCount": 0,
-        "sort": 1793795513
+        "sort": 1793887788
       },
       {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
@@ -2393,10 +2392,64 @@
       "1793462400": 3407,
       "1793548800": 845,
       "1793635200": 6168,
-      "1793721600": 2215
+      "1793721600": 2215,
+      "1793808000": 4141
     },
-    "readDays": 4,
+    "readDays": 5,
     "readLongest": [
+      {
+        "book": {
+          "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+          "title": "The Let Them Theory",
+          "author": "Mel Robbins",
+          "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+          "version": 539500858,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 134217761,
+          "finished": 1,
+          "free": 1,
+          "mcardDiscount": 0,
+          "ispub": 0,
+          "cpid": 0,
+          "publishTime": "",
+          "lastChapterIdx": 44,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 0,
+          "otherType": [
+            {
+              "type": "epub",
+              "showType": true,
+              "cht2sShowType": false,
+              "translateStatus": "open",
+              "translateDone": false
+            }
+          ],
+          "copyrightChapterUids": [],
+          "limitShareChat": 0,
+          "inStoreBookId": "3004680562",
+          "blockSaveImg": 0,
+          "language": "en-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 9219,
+        "tags": [
+          "笔记最多",
+          "单日阅读最久"
+        ]
+      },
       {
         "book": {
           "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
@@ -2437,61 +2490,7 @@
           "isAutoDownload": 1
         },
         "readTime": 7243,
-        "tags": [
-          "单日阅读最久"
-        ]
-      },
-      {
-        "book": {
-          "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
-          "title": "The Let Them Theory",
-          "author": "Mel Robbins",
-          "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 1910001877,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 134217761,
-          "finished": 1,
-          "free": 1,
-          "mcardDiscount": 0,
-          "ispub": 0,
-          "cpid": 0,
-          "publishTime": "",
-          "lastChapterIdx": 44,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 0,
-          "otherType": [
-            {
-              "type": "epub",
-              "showType": true,
-              "cht2sShowType": false,
-              "translateStatus": "open",
-              "translateDone": false
-            }
-          ],
-          "copyrightChapterUids": [],
-          "limitShareChat": 0,
-          "inStoreBookId": "3004680562",
-          "blockSaveImg": 0,
-          "language": "en-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 5078,
-        "tags": [
-          "笔记最多"
-        ]
+        "tags": []
       },
       {
         "book": {
@@ -2623,18 +2622,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "4天"
+        "counts": "5天"
       },
       {
         "stat": "笔记",
-        "counts": "26条"
+        "counts": "35条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 3.2860972807353505,
-    "dayAverageReadTime": 2527,
+    "compare": 3.742353777972315,
+    "dayAverageReadTime": 2796,
     "baseTime": 1793462400,
-    "totalReadTime": 12635,
+    "totalReadTime": 16776,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2658,7 +2657,7 @@
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 1910001877,
+          "version": 539500858,
           "format": "epub",
           "type": 0,
           "soldout": 0,
@@ -2793,9 +2792,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 167165
+      "1767196800": 171306
     },
-    "readDays": 107,
+    "readDays": 108,
     "readLongest": [
       {
         "book": {
@@ -3199,6 +3198,56 @@
       },
       {
         "book": {
+          "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+          "title": "The Let Them Theory",
+          "author": "Mel Robbins",
+          "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+          "version": 539500858,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 134217761,
+          "finished": 1,
+          "free": 1,
+          "mcardDiscount": 0,
+          "ispub": 0,
+          "cpid": 0,
+          "publishTime": "",
+          "lastChapterIdx": 44,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 0,
+          "otherType": [
+            {
+              "type": "epub",
+              "showType": true,
+              "cht2sShowType": false,
+              "translateStatus": "open",
+              "translateDone": false
+            }
+          ],
+          "copyrightChapterUids": [],
+          "limitShareChat": 0,
+          "inStoreBookId": "3004680562",
+          "blockSaveImg": 0,
+          "language": "en-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 9228,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "3300140838",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
           "title": "创意行为：存在即答案",
@@ -3246,57 +3295,6 @@
           "isAutoDownload": 1
         },
         "readTime": 8470,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "3300190668",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=18b32200813abb0fag01892b",
-          "title": "论人生短暂",
-          "author": "[古罗马]塞涅卡",
-          "translator": "刘漪",
-          "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
-          "version": 73733271,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 4097,
-          "finished": 1,
-          "maxFreeChapter": 3,
-          "maxFreeInfo": {
-            "maxfreeChapterIdx": 3,
-            "maxfreeChapterUid": 6,
-            "maxfreeChapterRatio": 100
-          },
-          "free": 0,
-          "mcardDiscount": 0,
-          "ispub": 1,
-          "extra_type": 5,
-          "cpid": 1000000190,
-          "publishTime": "2026-01-27 00:00:00",
-          "lastChapterIdx": 5,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 2100,
-          "copyrightChapterUids": [
-            5
-          ],
-          "inStoreBookId": "",
-          "blockSaveImg": 0,
-          "language": "zh-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 7794,
         "tags": []
       }
     ],
@@ -3380,13 +3378,13 @@
       203,
       705,
       5713,
-      4834,
-      6647,
+      4985,
+      7407,
       20615,
       8710,
-      11390,
-      7225,
-      17437,
+      12903,
+      7586,
+      18793,
       19994,
       13386,
       7510,
@@ -3600,11 +3598,11 @@
       },
       {
         "stat": "阅读",
-        "counts": "107天"
+        "counts": "108天"
       },
       {
         "stat": "笔记",
-        "counts": "232条"
+        "counts": "241条"
       }
     ],
     "medals": [
@@ -3616,7 +3614,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5067819,
+        "users": 5068505,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3633,7 +3631,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6240209,
+        "users": 6240964,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3650,7 +3648,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12011686,
+        "users": 12012588,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3665,7 +3663,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 167178,
+    "totalReadTime": 171319,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -4037,7 +4035,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8112人读过"
+        "reason": "仅有8132人读过"
       },
       {
         "type": 8,
@@ -4370,10 +4368,10 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 12635,
+        "1793462400": 16776,
         "1796054400": 0
       },
-      "readDays": 105,
+      "readDays": 106,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -4778,6 +4776,56 @@
         },
         {
           "book": {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+            "title": "The Let Them Theory",
+            "author": "Mel Robbins",
+            "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+            "version": 539500858,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 134217761,
+            "finished": 1,
+            "free": 1,
+            "mcardDiscount": 0,
+            "ispub": 0,
+            "cpid": 0,
+            "publishTime": "",
+            "lastChapterIdx": 44,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 0,
+            "otherType": [
+              {
+                "type": "epub",
+                "showType": true,
+                "cht2sShowType": false,
+                "translateStatus": "open",
+                "translateDone": false
+              }
+            ],
+            "copyrightChapterUids": [],
+            "limitShareChat": 0,
+            "inStoreBookId": "3004680562",
+            "blockSaveImg": 0,
+            "language": "en-wr",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 9228,
+          "tags": []
+        },
+        {
+          "book": {
             "bookId": "3300140838",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
             "title": "创意行为：存在即答案",
@@ -4825,57 +4873,6 @@
             "isAutoDownload": 1
           },
           "readTime": 8470,
-          "tags": []
-        },
-        {
-          "book": {
-            "bookId": "3300190668",
-            "deepLink": "https://weread.qq.com/book-detail?type=1&v=18b32200813abb0fag01892b",
-            "title": "论人生短暂",
-            "author": "[古罗马]塞涅卡",
-            "translator": "刘漪",
-            "intro": "生命并不短暂，短暂的是我们真正活着的时光。\n在这部作品集中，古罗马哲学家塞涅卡以三篇随笔探讨时间、苦难与心灵的安宁。《论人生短暂》指出，生命的长度取决于我们如何使用时间；《慰藉赫尔维娅》写于流放之中，是写给母亲的安慰与自省；《论心灵之安宁》则追问人在纷扰与焦虑中如何保持内在的平静。\n三篇随笔层层递进，从时间管理到苦难应对，最终指向心灵平衡。塞涅卡以隽永而深刻的文字，铺就了一条抵御浮躁与虚无的思想道路。",
-            "cover": "https://cdn.weread.qq.com/weread/cover/60/cpplatform_4cqry2qunvqox3qaj7wmbj/s_cpplatform_4cqry2qunvqox3qaj7wmbj1767689216.jpg",
-            "version": 73733271,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 4097,
-            "finished": 1,
-            "maxFreeChapter": 3,
-            "maxFreeInfo": {
-              "maxfreeChapterIdx": 3,
-              "maxfreeChapterUid": 6,
-              "maxfreeChapterRatio": 100
-            },
-            "free": 0,
-            "mcardDiscount": 0,
-            "ispub": 1,
-            "extra_type": 5,
-            "cpid": 1000000190,
-            "publishTime": "2026-01-27 00:00:00",
-            "lastChapterIdx": 5,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 2100,
-            "copyrightChapterUids": [
-              5
-            ],
-            "inStoreBookId": "",
-            "blockSaveImg": 0,
-            "language": "zh-wr",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 7794,
           "tags": []
         }
       ],
@@ -5152,17 +5149,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "105天"
+          "counts": "106天"
         },
         {
           "stat": "笔记",
-          "counts": "232条"
+          "counts": "241条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 540,
+      "dayAverageReadTime": 552,
       "baseTime": 1767196800,
-      "totalReadTime": 167165,
+      "totalReadTime": 171306,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -5354,8 +5351,107 @@
   "notesByBook": {
     "CB_0dOEYMEWMA2p77975h0Wk3Ku": {
       "highlights": {
-        "synckey": 1793795513,
+        "synckey": 1793887788,
         "updated": [
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 22,
+            "createTime": 1793887788,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_22_50665-50751",
+            "range": "50665-50751",
+            "markText": "如果你此刻因别人的成功而心生嫉妒，那再好不过了。我真为你高兴。嫉妒其实是你未来自我的召唤，它引导你更仔细地审视他人——并非为了让你自我贬低，而是为了展现那些能够实现的目标。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 22
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 22,
+            "createTime": 1793887574,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_22_29341-29415",
+            "range": "29341-29415",
+            "markText": "没有人会从你这里夺走任何东西。幸福、成功和金钱正等着你认真去创造它们。我再说一遍：别人的成功不是你的失败。这就是为什么你必须改变看待别人成功的方式。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 22
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 21,
+            "createTime": 1793887451,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_21_75459-76232",
+            "range": "75459-76232",
+            "markText": "你足够聪明，绝不会浪费生命去折磨自己。守住你的力量，因为你需要它来激发自己独特人生的潜能。我发觉，想要更快乐，就必须允许自己获得快乐。\nIt is impossible to enjoy your life or love yourself and beat yourself up at the same time.\n你不可能一边享受生活或爱自己，一边又一边责备自己。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 21
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 21,
+            "createTime": 1793886866,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_21_65641-65744",
+            "range": "65641-65744",
+            "markText": "你很少进行向下比较，也就是环顾四周，看到自己比世界上大多数人处境要好得多。根据联合国的数据，四分之一的人无法获得干净的饮用水。事实是，如果你有自来水、电力，并且有时间阅读这本书，你的生活已经比大多数人要好。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 21
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 21,
+            "createTime": 1793886807,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_21_58246-58331",
+            "range": "58246-58331",
+            "markText": "因此，任何你花时间去执着于别人生活中固定不变的方面而不是你自己的，都是一种自我折磨。它对你的成长毫无益处，对你的幸福有害。如果你无法改变它，你必须学会接受它。让他们去吧。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 21
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 21,
+            "createTime": 1793886620,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_21_45621-45645",
+            "range": "45621-45645",
+            "markText": "但拿自己和别人生活中的运气比较，是浪费你的时间。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 21
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 21,
+            "createTime": 1793886597,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_21_42291-42382",
+            "range": "42291-42382",
+            "markText": "很容易看到别人就心生不满，只因他们拥有好身材、银行存款、美好的感情、完美的健康状态、汽车、信托基金、安全感、自律能力以及优质的人脉圈……就觉得这很不公平。你知道吗？生活从来都不会公平",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 21
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 18,
+            "createTime": 1793873482,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_18_77486-77542",
+            "range": "77486-77542",
+            "markText": "我现在知道，对她来说，选择冷落我、避免进行诚实的对话，比直接来找我分享她的感受要容易得多。她甚至不知道该怎么做。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 18
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 18,
+            "createTime": 1793873406,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_18_68287-68341",
+            "range": "68287-68341",
+            "markText": "我再说一遍：帮助孩子创造空间去处理他们自己的各种情绪是你的责任。但管理另一个成年人的情绪反应则不是你的责任。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 18
+          },
           {
             "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
             "chapterUid": 16,
@@ -5511,24 +5607,19 @@
         "removed": [],
         "chapters": [
           {
-            "title": "6 如何爱那些难相处的人 - 6 How to Love Difficult People",
-            "chapterUid": 16,
-            "chapterIdx": 16
+            "title": "10 如何让比较成为你的老师 - 10 How to Make Comparison Your Teacher",
+            "chapterUid": 22,
+            "chapterIdx": 22
           },
           {
-            "title": "害怕别人的看法 - Fearing Other People’s Opinions",
-            "chapterUid": 14,
-            "chapterIdx": 14
+            "title": "3 震惊：生活充满压力 - 3 Shocker: Life Is Stressful",
+            "chapterUid": 12,
+            "chapterIdx": 12
           },
           {
-            "title": "4 让他们来折磨你 - 4 Let Them Stress You Out",
-            "chapterUid": 13,
-            "chapterIdx": 13
-          },
-          {
-            "title": "引言：我的故事 - Introduction: My Story",
-            "chapterUid": 6,
-            "chapterIdx": 6
+            "title": "9 是的，生活不公平 - 9 Yes, Life Isn’t Fair",
+            "chapterUid": 21,
+            "chapterIdx": 21
           },
           {
             "title": "放任理论 - The Let Them Theory",
@@ -5541,14 +5632,34 @@
             "chapterIdx": 8
           },
           {
-            "title": "3 震惊：生活充满压力 - 3 Shocker: Life Is Stressful",
-            "chapterUid": 12,
-            "chapterIdx": 12
+            "title": "4 让他们来折磨你 - 4 Let Them Stress You Out",
+            "chapterUid": 13,
+            "chapterIdx": 13
+          },
+          {
+            "title": "7 成年人大发脾气时 - 7 When Grown-Ups Throw Tantrums",
+            "chapterUid": 18,
+            "chapterIdx": 18
+          },
+          {
+            "title": "害怕别人的看法 - Fearing Other People’s Opinions",
+            "chapterUid": 14,
+            "chapterIdx": 14
+          },
+          {
+            "title": "6 如何爱那些难相处的人 - 6 How to Love Difficult People",
+            "chapterUid": 16,
+            "chapterIdx": 16
+          },
+          {
+            "title": "引言：我的故事 - Introduction: My Story",
+            "chapterUid": 6,
+            "chapterIdx": 6
           }
         ],
         "book": {
           "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
-          "version": 1910001877,
+          "version": 539500858,
           "format": "epub",
           "soldout": 0,
           "bookStatus": 1,
