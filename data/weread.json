@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-06T06:40:48Z",
+  "updatedAt": "2026-11-06T19:23:24Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -26,10 +26,10 @@
         "title": "The Let Them Theory",
         "author": "Mel Robbins",
         "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-        "updateTime": 1793887458,
+        "updateTime": 1793967939,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793892886
+        "readUpdateTime": 1793968381
       },
       {
         "bookId": "3300187091",
@@ -54,7 +54,7 @@
         "updateTime": 1792450556,
         "secret": 1,
         "finishReading": 1,
-        "readUpdateTime": 1793657233
+        "readUpdateTime": 1793968069
       },
       {
         "bookId": "3300200141",
@@ -260,7 +260,7 @@
         "title": "The Let Them Theory",
         "author": "Mel Robbins",
         "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-        "version": 539500858,
+        "version": 1658227963,
         "format": "epub",
         "type": 0,
         "price": 0,
@@ -305,11 +305,11 @@
         "isAutoDownload": 1,
         "readingProgress": 45,
         "markedStatus": 1,
-        "lastNoteSort": 1793887788,
-        "updateTime": 1793887458,
+        "lastNoteSort": 1793968016,
+        "updateTime": 1793967939,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793892886
+        "readUpdateTime": 1793968381
       },
       {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
@@ -359,7 +359,7 @@
         "updateTime": 1792450556,
         "secret": 1,
         "finishReading": 1,
-        "readUpdateTime": 1793657233
+        "readUpdateTime": 1793968069
       },
       {
         "bookId": "3300140838",
@@ -1378,7 +1378,7 @@
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 539500858,
+          "version": 1658227963,
           "format": "epub",
           "type": 0,
           "price": 0,
@@ -1426,8 +1426,8 @@
         "markedStatus": 1,
         "readingProgress": 45,
         "noteCount": 23,
-        "bookmarkCount": 0,
-        "sort": 1793887788
+        "bookmarkCount": 2,
+        "sort": 1793968016
       },
       {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
@@ -2393,9 +2393,10 @@
       "1793548800": 845,
       "1793635200": 6168,
       "1793721600": 2215,
-      "1793808000": 4141
+      "1793808000": 4141,
+      "1793894400": 243
     },
-    "readDays": 5,
+    "readDays": 6,
     "readLongest": [
       {
         "book": {
@@ -2404,7 +2405,7 @@
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 539500858,
+          "version": 1658227963,
           "format": "epub",
           "type": 0,
           "soldout": 0,
@@ -2444,7 +2445,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 9219,
+        "readTime": 9458,
         "tags": [
           "笔记最多",
           "单日阅读最久"
@@ -2622,18 +2623,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "5天"
+        "counts": "6天"
       },
       {
         "stat": "笔记",
-        "counts": "35条"
+        "counts": "37条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 3.742353777972315,
-    "dayAverageReadTime": 2796,
+    "compare": 3.1237542891534249,
+    "dayAverageReadTime": 2431,
     "baseTime": 1793462400,
-    "totalReadTime": 16776,
+    "totalReadTime": 17019,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2657,7 +2658,7 @@
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 539500858,
+          "version": 1658227963,
           "format": "epub",
           "type": 0,
           "soldout": 0,
@@ -2792,9 +2793,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 171306
+      "1767196800": 171549
     },
-    "readDays": 108,
+    "readDays": 109,
     "readLongest": [
       {
         "book": {
@@ -2886,7 +2887,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 18501,
+        "readTime": 18505,
         "tags": [
           "笔记最多"
         ]
@@ -3147,6 +3148,56 @@
       },
       {
         "book": {
+          "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+          "title": "The Let Them Theory",
+          "author": "Mel Robbins",
+          "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+          "version": 1658227963,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 134217761,
+          "finished": 1,
+          "free": 1,
+          "mcardDiscount": 0,
+          "ispub": 0,
+          "cpid": 0,
+          "publishTime": "",
+          "lastChapterIdx": 44,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 0,
+          "otherType": [
+            {
+              "type": "epub",
+              "showType": true,
+              "cht2sShowType": false,
+              "translateStatus": "open",
+              "translateDone": false
+            }
+          ],
+          "copyrightChapterUids": [],
+          "limitShareChat": 0,
+          "inStoreBookId": "3004680562",
+          "blockSaveImg": 0,
+          "language": "en-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 9467,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "35523636",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
           "title": "丰饶之海（第二卷）：奔马",
@@ -3194,56 +3245,6 @@
           "isAutoDownload": 1
         },
         "readTime": 9387,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
-          "title": "The Let Them Theory",
-          "author": "Mel Robbins",
-          "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 539500858,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 134217761,
-          "finished": 1,
-          "free": 1,
-          "mcardDiscount": 0,
-          "ispub": 0,
-          "cpid": 0,
-          "publishTime": "",
-          "lastChapterIdx": 44,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 0,
-          "otherType": [
-            {
-              "type": "epub",
-              "showType": true,
-              "cht2sShowType": false,
-              "translateStatus": "open",
-              "translateDone": false
-            }
-          ],
-          "copyrightChapterUids": [],
-          "limitShareChat": 0,
-          "inStoreBookId": "3004680562",
-          "blockSaveImg": 0,
-          "language": "en-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 9228,
         "tags": []
       },
       {
@@ -3381,7 +3382,7 @@
       4985,
       7407,
       20615,
-      8710,
+      8953,
       12903,
       7586,
       18793,
@@ -3598,11 +3599,11 @@
       },
       {
         "stat": "阅读",
-        "counts": "108天"
+        "counts": "109天"
       },
       {
         "stat": "笔记",
-        "counts": "241条"
+        "counts": "243条"
       }
     ],
     "medals": [
@@ -3614,7 +3615,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5068911,
+        "users": 5069556,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3631,7 +3632,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6241416,
+        "users": 6242172,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3648,7 +3649,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12013185,
+        "users": 12014054,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3663,7 +3664,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 171319,
+    "totalReadTime": 171562,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -4035,7 +4036,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8144人读过"
+        "reason": "仅有8163人读过"
       },
       {
         "type": 8,
@@ -4368,10 +4369,10 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 16776,
+        "1793462400": 17019,
         "1796054400": 0
       },
-      "readDays": 106,
+      "readDays": 107,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -4464,7 +4465,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 18501,
+          "readTime": 18505,
           "tags": [
             "笔记最多"
           ]
@@ -4725,6 +4726,56 @@
         },
         {
           "book": {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+            "title": "The Let Them Theory",
+            "author": "Mel Robbins",
+            "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+            "version": 1658227963,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 134217761,
+            "finished": 1,
+            "free": 1,
+            "mcardDiscount": 0,
+            "ispub": 0,
+            "cpid": 0,
+            "publishTime": "",
+            "lastChapterIdx": 44,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 0,
+            "otherType": [
+              {
+                "type": "epub",
+                "showType": true,
+                "cht2sShowType": false,
+                "translateStatus": "open",
+                "translateDone": false
+              }
+            ],
+            "copyrightChapterUids": [],
+            "limitShareChat": 0,
+            "inStoreBookId": "3004680562",
+            "blockSaveImg": 0,
+            "language": "en-wr",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 9467,
+          "tags": []
+        },
+        {
+          "book": {
             "bookId": "35523636",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
             "title": "丰饶之海（第二卷）：奔马",
@@ -4772,56 +4823,6 @@
             "isAutoDownload": 1
           },
           "readTime": 9387,
-          "tags": []
-        },
-        {
-          "book": {
-            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
-            "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
-            "title": "The Let Them Theory",
-            "author": "Mel Robbins",
-            "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-            "version": 539500858,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 134217761,
-            "finished": 1,
-            "free": 1,
-            "mcardDiscount": 0,
-            "ispub": 0,
-            "cpid": 0,
-            "publishTime": "",
-            "lastChapterIdx": 44,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 0,
-            "otherType": [
-              {
-                "type": "epub",
-                "showType": true,
-                "cht2sShowType": false,
-                "translateStatus": "open",
-                "translateDone": false
-              }
-            ],
-            "copyrightChapterUids": [],
-            "limitShareChat": 0,
-            "inStoreBookId": "3004680562",
-            "blockSaveImg": 0,
-            "language": "en-wr",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 9228,
           "tags": []
         },
         {
@@ -5149,17 +5150,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "106天"
+          "counts": "107天"
         },
         {
           "stat": "笔记",
-          "counts": "241条"
+          "counts": "243条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 552,
+      "dayAverageReadTime": 551,
       "baseTime": 1767196800,
-      "totalReadTime": 171306,
+      "totalReadTime": 171549,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -5351,7 +5352,7 @@
   "notesByBook": {
     "CB_0dOEYMEWMA2p77975h0Wk3Ku": {
       "highlights": {
-        "synckey": 1793887788,
+        "synckey": 1793968183,
         "updated": [
           {
             "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
@@ -5468,7 +5469,7 @@
             "chapterIdx": 16,
             "type": 1,
             "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_16_89771-90999",
-            "range": "89771-90999",
+            "range": "89917-90999",
             "markText": "但事实是，大多数人从未努力去了解自己，治愈过去，或管理自己的情绪。如果他们自己都没有做到，他们就无法为你做到，也无法以你应得的方式出现。Let Them. When you recognize that, you have a choice in your life. Let your family be who they are. Your dad is not changing. Your mom is not changing. Your siblings aren’t changing. Your in-laws aren’t changing. The only person you can change is you.让他们去吧。当你意识到这一点时，你的人生就有了选择。让你的家人做他们自己。你的爸爸不会改变。你的妈妈不会改变。你的兄弟姐妹不会改变。你的姻亲也不会改变。唯一能改变的人只有你自己。",
             "createTime": 1793795302
           },
@@ -5489,7 +5490,7 @@
             "chapterIdx": 13,
             "type": 1,
             "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_13_75284-75983",
-            "range": "75284-75983",
+            "range": "82099-82798",
             "markText": "time and energy and what isn’t. This doesn’t mean avoiding difficult conversations or staying silent.你越是挖掘那种力量，就越能看到自己在如何破坏自己的幸福，如何把所有的力量都交出去。而且，就像我一样，",
             "createTime": 1793789917
           },
@@ -5500,7 +5501,7 @@
             "colorStyle": 3,
             "type": 1,
             "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_12_91058-92732",
-            "range": "91058-92732",
+            "range": "100615-101524",
             "markText": "‘让他们理论’就像是给你紧张大脑的一声长叹。它帮助你重新掌控焦虑的思绪，    让你的大脑和身体终于能摆脱生存模式，回归蓬勃发展状态。​”Let Me explain why this matters. If you allowyourself to get completely stressed out, you aregiving all your power to other people.让我来解释为什么这很重要。如果你允许自己完全被压力压垮，你就是把所有的力量都交给了别人。",
             "createTime": 1793705155
           },
@@ -5511,7 +5512,7 @@
             "colorStyle": 3,
             "type": 1,
             "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_12_85451-86413",
-            "range": "85451-86413",
+            "range": "94305-94419",
             "markText": "我的观点是，试图控制别人，或者控制超出你掌控      范围的情况，只会给你带来更多压力。我可以生气。我可以不断回头看。我可以对空乘人员大喊大叫。我可以感到沮丧，对那个人大喊，但那有什么意义呢？难道我面前没有一个更明显、更有力的解决办法吗？",
             "createTime": 1793705118
           },
@@ -5522,7 +5523,7 @@
             "colorStyle": 3,
             "type": 1,
             "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_12_36306-38625",
-            "range": "36306-38625",
+            "range": "40355-41249",
             "markText": "    几个月前，我坐飞机时，正后排的一个人咳嗽得像是生命的最后一天。你知道那种深沉的胸腔咳嗽，肯定会让周围所有人都生病的那种咳嗽吗？I didn’t think anything of it for the first few minutes, butwhen it continued on and on, and then he startedclearing his throat, and then he kept coughing, I startedto get annoyed.起初几分钟我没怎么在意，但当他一直这样持续下去，然后开始清嗓子，接着不停地咳嗽时，我开始感到恼火。",
             "createTime": 1793704741
           },
@@ -5607,14 +5608,14 @@
         "removed": [],
         "chapters": [
           {
-            "title": "10 如何让比较成为你的老师 - 10 How to Make Comparison Your Teacher",
-            "chapterUid": 22,
-            "chapterIdx": 22
+            "title": "7 成年人大发脾气时 - 7 When Grown-Ups Throw Tantrums",
+            "chapterUid": 18,
+            "chapterIdx": 18
           },
           {
-            "title": "3 震惊：生活充满压力 - 3 Shocker: Life Is Stressful",
-            "chapterUid": 12,
-            "chapterIdx": 12
+            "title": "1 不要再为你无法控制的事情浪费生命 - 1 Stop Wasting Your Life on Things You Can’t Control",
+            "chapterUid": 8,
+            "chapterIdx": 8
           },
           {
             "title": "9 是的，生活不公平 - 9 Yes, Life Isn’t Fair",
@@ -5627,19 +5628,9 @@
             "chapterIdx": 7
           },
           {
-            "title": "1 不要再为你无法控制的事情浪费生命 - 1 Stop Wasting Your Life on Things You Can’t Control",
-            "chapterUid": 8,
-            "chapterIdx": 8
-          },
-          {
-            "title": "4 让他们来折磨你 - 4 Let Them Stress You Out",
-            "chapterUid": 13,
-            "chapterIdx": 13
-          },
-          {
-            "title": "7 成年人大发脾气时 - 7 When Grown-Ups Throw Tantrums",
-            "chapterUid": 18,
-            "chapterIdx": 18
+            "title": "10 如何让比较成为你的老师 - 10 How to Make Comparison Your Teacher",
+            "chapterUid": 22,
+            "chapterIdx": 22
           },
           {
             "title": "害怕别人的看法 - Fearing Other People’s Opinions",
@@ -5652,14 +5643,24 @@
             "chapterIdx": 16
           },
           {
+            "title": "4 让他们来折磨你 - 4 Let Them Stress You Out",
+            "chapterUid": 13,
+            "chapterIdx": 13
+          },
+          {
             "title": "引言：我的故事 - Introduction: My Story",
             "chapterUid": 6,
             "chapterIdx": 6
+          },
+          {
+            "title": "3 震惊：生活充满压力 - 3 Shocker: Life Is Stressful",
+            "chapterUid": 12,
+            "chapterIdx": 12
           }
         ],
         "book": {
           "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
-          "version": 539500858,
+          "version": 1658227963,
           "format": "epub",
           "soldout": 0,
           "bookStatus": 1,
