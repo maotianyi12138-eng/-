@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-08T05:58:36Z",
+  "updatedAt": "2026-11-08T13:22:19Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -26,10 +26,10 @@
         "title": "The Let Them Theory",
         "author": "Mel Robbins",
         "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-        "updateTime": 1794094103,
+        "updateTime": 1794134336,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1794094208
+        "readUpdateTime": 1794136619
       },
       {
         "bookId": "3300187091",
@@ -260,7 +260,7 @@
         "title": "The Let Them Theory",
         "author": "Mel Robbins",
         "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-        "version": 1972007905,
+        "version": 1668015522,
         "format": "epub",
         "type": 0,
         "price": 0,
@@ -303,13 +303,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 45,
+        "readingProgress": 64,
         "markedStatus": 1,
-        "lastNoteSort": 1794093909,
-        "updateTime": 1794094103,
+        "lastNoteSort": 1794136596,
+        "updateTime": 1794134336,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1794094208
+        "readUpdateTime": 1794136619
       },
       {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
@@ -1378,7 +1378,7 @@
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 1972007905,
+          "version": 1668015522,
           "format": "epub",
           "type": 0,
           "price": 0,
@@ -1424,10 +1424,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 1,
-        "readingProgress": 45,
-        "noteCount": 25,
+        "readingProgress": 64,
+        "noteCount": 39,
         "bookmarkCount": 2,
-        "sort": 1794093909
+        "sort": 1794136596
       },
       {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
@@ -2396,7 +2396,7 @@
       "1793808000": 4141,
       "1793894400": 243,
       "1793980800": 0,
-      "1794067200": 1086
+      "1794067200": 2568
     },
     "readDays": 7,
     "readLongest": [
@@ -2407,7 +2407,7 @@
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 1972007905,
+          "version": 1668015522,
           "format": "epub",
           "type": 0,
           "soldout": 0,
@@ -2447,7 +2447,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 10544,
+        "readTime": 12026,
         "tags": [
           "笔记最多",
           "单日阅读最久"
@@ -2629,14 +2629,14 @@
       },
       {
         "stat": "笔记",
-        "counts": "39条"
+        "counts": "53条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.8385334026371944,
-    "dayAverageReadTime": 2263,
+    "compare": 3.152739782239974,
+    "dayAverageReadTime": 2448,
     "baseTime": 1793462400,
-    "totalReadTime": 18105,
+    "totalReadTime": 19587,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2660,7 +2660,7 @@
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 1972007905,
+          "version": 1668015522,
           "format": "epub",
           "type": 0,
           "soldout": 0,
@@ -2795,7 +2795,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 172635
+      "1767196800": 174117
     },
     "readDays": 110,
     "readLongest": [
@@ -2998,6 +2998,56 @@
       },
       {
         "book": {
+          "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+          "title": "The Let Them Theory",
+          "author": "Mel Robbins",
+          "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+          "version": 1668015522,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 134217761,
+          "finished": 1,
+          "free": 1,
+          "mcardDiscount": 0,
+          "ispub": 0,
+          "cpid": 0,
+          "publishTime": "",
+          "lastChapterIdx": 44,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 0,
+          "otherType": [
+            {
+              "type": "epub",
+              "showType": true,
+              "cht2sShowType": false,
+              "translateStatus": "open",
+              "translateDone": false
+            }
+          ],
+          "copyrightChapterUids": [],
+          "limitShareChat": 0,
+          "inStoreBookId": "3004680562",
+          "blockSaveImg": 0,
+          "language": "en-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 12035,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "3300155373",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=80332260813aba331g013372",
           "title": "在我身上有一个不可战胜的夏天",
@@ -3146,56 +3196,6 @@
           "isAutoDownload": 1
         },
         "readTime": 10732,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
-          "title": "The Let Them Theory",
-          "author": "Mel Robbins",
-          "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 1972007905,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 134217761,
-          "finished": 1,
-          "free": 1,
-          "mcardDiscount": 0,
-          "ispub": 0,
-          "cpid": 0,
-          "publishTime": "",
-          "lastChapterIdx": 44,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 0,
-          "otherType": [
-            {
-              "type": "epub",
-              "showType": true,
-              "cht2sShowType": false,
-              "translateStatus": "open",
-              "translateDone": false
-            }
-          ],
-          "copyrightChapterUids": [],
-          "limitShareChat": 0,
-          "inStoreBookId": "3004680562",
-          "blockSaveImg": 0,
-          "language": "en-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 10553,
         "tags": []
       },
       {
@@ -3605,7 +3605,7 @@
       },
       {
         "stat": "笔记",
-        "counts": "245条"
+        "counts": "259条"
       }
     ],
     "medals": [
@@ -3617,7 +3617,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5070977,
+        "users": 5071439,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3634,7 +3634,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6243790,
+        "users": 6244280,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3651,7 +3651,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12016017,
+        "users": 12016671,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3666,7 +3666,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 172648,
+    "totalReadTime": 174130,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -4038,7 +4038,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8187人读过"
+        "reason": "仅有8195人读过"
       },
       {
         "type": 8,
@@ -4371,7 +4371,7 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 18105,
+        "1793462400": 19587,
         "1796054400": 0
       },
       "readDays": 108,
@@ -4576,6 +4576,56 @@
         },
         {
           "book": {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+            "title": "The Let Them Theory",
+            "author": "Mel Robbins",
+            "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+            "version": 1668015522,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 134217761,
+            "finished": 1,
+            "free": 1,
+            "mcardDiscount": 0,
+            "ispub": 0,
+            "cpid": 0,
+            "publishTime": "",
+            "lastChapterIdx": 44,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 0,
+            "otherType": [
+              {
+                "type": "epub",
+                "showType": true,
+                "cht2sShowType": false,
+                "translateStatus": "open",
+                "translateDone": false
+              }
+            ],
+            "copyrightChapterUids": [],
+            "limitShareChat": 0,
+            "inStoreBookId": "3004680562",
+            "blockSaveImg": 0,
+            "language": "en-wr",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 12035,
+          "tags": []
+        },
+        {
+          "book": {
             "bookId": "3300155373",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=80332260813aba331g013372",
             "title": "在我身上有一个不可战胜的夏天",
@@ -4724,56 +4774,6 @@
             "isAutoDownload": 1
           },
           "readTime": 10732,
-          "tags": []
-        },
-        {
-          "book": {
-            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
-            "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
-            "title": "The Let Them Theory",
-            "author": "Mel Robbins",
-            "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-            "version": 1972007905,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 134217761,
-            "finished": 1,
-            "free": 1,
-            "mcardDiscount": 0,
-            "ispub": 0,
-            "cpid": 0,
-            "publishTime": "",
-            "lastChapterIdx": 44,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 0,
-            "otherType": [
-              {
-                "type": "epub",
-                "showType": true,
-                "cht2sShowType": false,
-                "translateStatus": "open",
-                "translateDone": false
-              }
-            ],
-            "copyrightChapterUids": [],
-            "limitShareChat": 0,
-            "inStoreBookId": "3004680562",
-            "blockSaveImg": 0,
-            "language": "en-wr",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 10553,
           "tags": []
         },
         {
@@ -5156,13 +5156,13 @@
         },
         {
           "stat": "笔记",
-          "counts": "245条"
+          "counts": "259条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 553,
+      "dayAverageReadTime": 558,
       "baseTime": 1767196800,
-      "totalReadTime": 172635,
+      "totalReadTime": 174117,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -5354,8 +5354,162 @@
   "notesByBook": {
     "CB_0dOEYMEWMA2p77975h0Wk3Ku": {
       "highlights": {
-        "synckey": 1794093982,
+        "synckey": 1794136596,
         "updated": [
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 29,
+            "createTime": 1794136596,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_29_137383-137450",
+            "range": "137383-137450",
+            "markText": "我需要再次提醒你：你只是提出问题。你的观点无关紧要，也不适用于这次对话。一旦你表达了观点，就会给对方施加压力，从而破坏这项技巧的效果。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 29
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 29,
+            "createTime": 1794136540,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_29_120833-120872",
+            "range": "120833-120872",
+            "markText": "以道歉作为开场，能为富有同情心与支持性的对话奠定基调。认真倾听，积极关注对方，",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 29
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 29,
+            "createTime": 1794136526,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_29_114396-114460",
+            "range": "114396-114460",
+            "markText": "开始这段对话的最佳方式是先道歉。你可以这样说：“我想为对我的评判和施加的压力道歉，我意识到我从未问过你对于自己的……有何感受。”",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 29
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 29,
+            "createTime": 1794136475,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_29_82911-83023",
+            "range": "82911-83023",
+            "markText": "这场对话必须面对面进行，不能有酒精参与，也不能有时间压力要求快速结束。不要在随意的地方进行对话，更不能只通过 20 分钟的电话来完成。这样的方式行不通。关键在于在你关心的人身上，针对令你困扰的问题，建立起更深层次的沟通联系。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 29
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 29,
+            "createTime": 1794136474,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_29_74043-76883",
+            "range": "74043-76883",
+            "markText": "In the ABC Loop, you have three steps:\n在 ABC 循环中，你有三个步骤：\nA: APOLOGIZE, then ASK open-ended questions.\nA：道歉，然后提出开放式问题。\nA：道歉，然后提出开放式问题。\nB: BACK OFF, and observe their BEHAVIOR.\nB：退后，观察他们的行为。\nC: CELEBRATE progress while you continue to model the CHANGE.\nC：庆祝进步，同时继续示范改变。\nC：庆祝进步，同时继续树立改变的榜样。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 29
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 29,
+            "createTime": 1794136381,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_29_101991-102065",
+            "range": "101991-102065",
+            "markText": "经过五个“为什么”之后，很明显这个问题可能远比她生他的气要深得多。这正是为什么这件事让她如此紧张的原因。还有你需要知道的是：你的答案将会非常个人化。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 29
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 29,
+            "createTime": 1794136246,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_29_66638-66687",
+            "range": "66638-66687",
+            "markText": "记住，力量就在于你的影响力。这意味着要专注于你能控制的：你的行为。示范改变，让它看起来有趣且简单。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 29
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 29,
+            "createTime": 1794136066,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_29_55549-55583",
+            "range": "55549-55583",
+            "markText": "但如果你自己总是吃健康的饭菜，并且大力称赞它的美味，你就能影响他们。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 29
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 29,
+            "createTime": 1794136059,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_29_55474-55517",
+            "range": "55474-55517",
+            "markText": "如果你想影响他们朝着你希望他们做出的行为或改变方向前进，你需要向他们展示这有多么简单。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 29
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 29,
+            "createTime": 1794136004,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_29_51783-51906",
+            "range": "51783-51906",
+            "markText": "如果你看到某件事对别人起了积极作用，通常也会激起你对它的兴趣。无论你是否意识到，当别人玩得很开心，或者获得了你想要的结果，或者让某件事看起来轻松愉快时，你的大脑都会自然而然地被吸引过去。这也是为什么当你听到朋友极力推荐一本书时，你自然会想去读它。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 29
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 28,
+            "createTime": 1794132312,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_28_127682-127772",
+            "range": "127682-127772",
+            "markText": "当你暗示某人“今天天气不错，适合去外面跑步”，而那个人并不想跑步时，你实际上是在威胁他们。无论你的建议多么善意，它都会让他们感觉你试图剥夺他们作为独立个体、按自己的意愿行事的权利。",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 28
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 28,
+            "createTime": 1794132174,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_28_99827-99865",
+            "range": "99827-99865",
+            "markText": "她的一个发现具有突破性意义：人们相信警告标签、威胁和已知风险并不适用于自己。",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 28
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 28,
+            "createTime": 1794131786,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_28_65263-65315",
+            "range": "69039-69091",
+            "markText": "事实是，改变对每个人来说都很难，包括你自己。没人想感受到来自你的压力，因为他们已经在承受来自自己的压力。",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 28
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 28,
+            "createTime": 1794131786,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_28_38595-38754",
+            "range": "39170-39329",
+            "markText": "现实是，人们只有在自己想改变的时候才会改变。无论你多么希望某人改变，都无济于事。无论你的理由多么合理，也无论你认为他们应该改变的观点多么正确，或者如果他们不改变会有多严重的后果，都没有用。如果某人不想改变，他们就不会改变。更糟的是，当你逼迫某人改变时，只会在你们的关系中制造更多的紧张、怨恨和距离。我会向你证明这一点。",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 28
+          },
           {
             "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
             "chapterIdx": 26,
@@ -5632,6 +5786,16 @@
         "removed": [],
         "chapters": [
           {
+            "title": "14 只有当人们愿意时才会改变 - 14 People Only Change When They Feel Like It",
+            "chapterUid": 29,
+            "chapterIdx": 29
+          },
+          {
+            "title": "激励他人改变 - Motivating Other People to Change",
+            "chapterUid": 28,
+            "chapterIdx": 28
+          },
+          {
             "title": "12 为什么有些友谊会自然淡去 - 12 Why Some Friendships Naturally Fade",
             "chapterUid": 26,
             "chapterIdx": 26
@@ -5689,7 +5853,7 @@
         ],
         "book": {
           "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
-          "version": 1972007905,
+          "version": 1668015522,
           "format": "epub",
           "soldout": 0,
           "bookStatus": 1,
