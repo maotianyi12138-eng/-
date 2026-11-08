@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-08T13:22:19Z",
+  "updatedAt": "2026-11-08T22:02:01Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -26,10 +26,10 @@
         "title": "The Let Them Theory",
         "author": "Mel Robbins",
         "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-        "updateTime": 1794134336,
+        "updateTime": 1794147460,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1794136619
+        "readUpdateTime": 1794164347
       },
       {
         "bookId": "3300187091",
@@ -260,7 +260,7 @@
         "title": "The Let Them Theory",
         "author": "Mel Robbins",
         "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-        "version": 1668015522,
+        "version": 882153918,
         "format": "epub",
         "type": 0,
         "price": 0,
@@ -303,13 +303,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 64,
+        "readingProgress": 68,
         "markedStatus": 1,
-        "lastNoteSort": 1794136596,
-        "updateTime": 1794134336,
+        "lastNoteSort": 1794148696,
+        "updateTime": 1794147460,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1794136619
+        "readUpdateTime": 1794164347
       },
       {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
@@ -1378,7 +1378,7 @@
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 1668015522,
+          "version": 882153918,
           "format": "epub",
           "type": 0,
           "price": 0,
@@ -1424,10 +1424,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 1,
-        "readingProgress": 64,
-        "noteCount": 39,
+        "readingProgress": 68,
+        "noteCount": 43,
         "bookmarkCount": 2,
-        "sort": 1794136596
+        "sort": 1794148696
       },
       {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
@@ -2395,10 +2395,10 @@
       "1793721600": 2215,
       "1793808000": 4141,
       "1793894400": 243,
-      "1793980800": 0,
-      "1794067200": 2568
+      "1794067200": 3182,
+      "1794153600": 239
     },
-    "readDays": 7,
+    "readDays": 8,
     "readLongest": [
       {
         "book": {
@@ -2407,7 +2407,7 @@
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 1668015522,
+          "version": 882153918,
           "format": "epub",
           "type": 0,
           "soldout": 0,
@@ -2447,7 +2447,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 12026,
+        "readTime": 12879,
         "tags": [
           "笔记最多",
           "单日阅读最久"
@@ -2625,18 +2625,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "7天"
+        "counts": "8天"
       },
       {
         "stat": "笔记",
-        "counts": "53条"
+        "counts": "57条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 3.152739782239974,
-    "dayAverageReadTime": 2448,
+    "compare": 2.852078811864335,
+    "dayAverageReadTime": 2271,
     "baseTime": 1793462400,
-    "totalReadTime": 19587,
+    "totalReadTime": 20440,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2660,7 +2660,7 @@
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 1668015522,
+          "version": 882153918,
           "format": "epub",
           "type": 0,
           "soldout": 0,
@@ -2795,9 +2795,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 174117
+      "1767196800": 174970
     },
-    "readDays": 110,
+    "readDays": 111,
     "readLongest": [
       {
         "book": {
@@ -2890,9 +2890,7 @@
           "isAutoDownload": 1
         },
         "readTime": 18505,
-        "tags": [
-          "笔记最多"
-        ]
+        "tags": []
       },
       {
         "book": {
@@ -2947,6 +2945,58 @@
       },
       {
         "book": {
+          "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+          "title": "The Let Them Theory",
+          "author": "Mel Robbins",
+          "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+          "version": 882153918,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 134217761,
+          "finished": 1,
+          "free": 1,
+          "mcardDiscount": 0,
+          "ispub": 0,
+          "cpid": 0,
+          "publishTime": "",
+          "lastChapterIdx": 44,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 0,
+          "otherType": [
+            {
+              "type": "epub",
+              "showType": true,
+              "cht2sShowType": false,
+              "translateStatus": "open",
+              "translateDone": false
+            }
+          ],
+          "copyrightChapterUids": [],
+          "limitShareChat": 0,
+          "inStoreBookId": "3004680562",
+          "blockSaveImg": 0,
+          "language": "en-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 12888,
+        "tags": [
+          "笔记最多"
+        ]
+      },
+      {
+        "book": {
           "bookId": "25424211",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
           "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
@@ -2994,56 +3044,6 @@
           "isAutoDownload": 1
         },
         "readTime": 12495,
-        "tags": []
-      },
-      {
-        "book": {
-          "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
-          "title": "The Let Them Theory",
-          "author": "Mel Robbins",
-          "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 1668015522,
-          "format": "epub",
-          "type": 0,
-          "soldout": 0,
-          "bookStatus": 1,
-          "payType": 134217761,
-          "finished": 1,
-          "free": 1,
-          "mcardDiscount": 0,
-          "ispub": 0,
-          "cpid": 0,
-          "publishTime": "",
-          "lastChapterIdx": 44,
-          "paperBook": {
-            "skuId": ""
-          },
-          "centPrice": 0,
-          "otherType": [
-            {
-              "type": "epub",
-              "showType": true,
-              "cht2sShowType": false,
-              "translateStatus": "open",
-              "translateDone": false
-            }
-          ],
-          "copyrightChapterUids": [],
-          "limitShareChat": 0,
-          "inStoreBookId": "3004680562",
-          "blockSaveImg": 0,
-          "language": "en-wr",
-          "isTraditionalChinese": false,
-          "hideUpdateTime": false,
-          "isEPUBComics": 0,
-          "isVerticalLayout": 0,
-          "isShowTTS": 1,
-          "selfProduceIncentive": false,
-          "webBookControl": 0,
-          "isAutoDownload": 1
-        },
-        "readTime": 12035,
         "tags": []
       },
       {
@@ -3370,8 +3370,8 @@
     "preferCategoryWord": "偏好阅读文学",
     "preferTimeWord": "偏好夜间阅读",
     "preferTime": [
-      8222,
-      3770,
+      8232,
+      4846,
       1904,
       317,
       7,
@@ -3381,12 +3381,12 @@
       203,
       705,
       5713,
-      4985,
-      7407,
-      20615,
+      5519,
+      7763,
+      21207,
       8953,
-      12903,
-      7586,
+      13162,
+      7941,
       18793,
       19994,
       13386,
@@ -3601,11 +3601,11 @@
       },
       {
         "stat": "阅读",
-        "counts": "110天"
+        "counts": "111天"
       },
       {
         "stat": "笔记",
-        "counts": "259条"
+        "counts": "263条"
       }
     ],
     "medals": [
@@ -3617,7 +3617,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5071439,
+        "users": 5071828,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3634,7 +3634,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6244280,
+        "users": 6244747,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3651,7 +3651,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12016671,
+        "users": 12017208,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3666,7 +3666,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 174130,
+    "totalReadTime": 174983,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3733,12 +3733,12 @@
         "type": 5,
         "title": "思考最多",
         "bookInfo": {
-          "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
-          "title": "日常生活中的自我呈现",
-          "author": "[美] 欧文·戈夫曼",
-          "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
-          "version": 1395936188,
+          "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+          "title": "The Let Them Theory",
+          "author": "Mel Robbins",
+          "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+          "version": 882153918,
           "format": "epub",
           "type": 0,
           "soldout": 0,
@@ -3750,17 +3750,25 @@
           "ispub": 0,
           "cpid": 0,
           "publishTime": "",
-          "lastChapterIdx": 37,
+          "lastChapterIdx": 44,
           "paperBook": {
             "skuId": ""
           },
           "centPrice": 0,
+          "otherType": [
+            {
+              "type": "epub",
+              "showType": true,
+              "cht2sShowType": false,
+              "translateStatus": "open",
+              "translateDone": false
+            }
+          ],
           "copyrightChapterUids": [],
-          "hasKeyPoint": true,
           "limitShareChat": 0,
-          "inStoreBookId": "3001479281",
+          "inStoreBookId": "3004680562",
           "blockSaveImg": 0,
-          "language": "zh-wr",
+          "language": "en-wr",
           "isTraditionalChinese": false,
           "hideUpdateTime": false,
           "isEPUBComics": 0,
@@ -3770,7 +3778,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "共记录42条笔记"
+        "reason": "共记录45条笔记"
       },
       {
         "type": 3,
@@ -4038,7 +4046,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8195人读过"
+        "reason": "仅有8203人读过"
       },
       {
         "type": 8,
@@ -4371,10 +4379,10 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 19587,
+        "1793462400": 20440,
         "1796054400": 0
       },
-      "readDays": 108,
+      "readDays": 109,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -4468,9 +4476,7 @@
             "isAutoDownload": 1
           },
           "readTime": 18505,
-          "tags": [
-            "笔记最多"
-          ]
+          "tags": []
         },
         {
           "book": {
@@ -4525,6 +4531,58 @@
         },
         {
           "book": {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+            "title": "The Let Them Theory",
+            "author": "Mel Robbins",
+            "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+            "version": 882153918,
+            "format": "epub",
+            "type": 0,
+            "soldout": 0,
+            "bookStatus": 1,
+            "payType": 134217761,
+            "finished": 1,
+            "free": 1,
+            "mcardDiscount": 0,
+            "ispub": 0,
+            "cpid": 0,
+            "publishTime": "",
+            "lastChapterIdx": 44,
+            "paperBook": {
+              "skuId": ""
+            },
+            "centPrice": 0,
+            "otherType": [
+              {
+                "type": "epub",
+                "showType": true,
+                "cht2sShowType": false,
+                "translateStatus": "open",
+                "translateDone": false
+              }
+            ],
+            "copyrightChapterUids": [],
+            "limitShareChat": 0,
+            "inStoreBookId": "3004680562",
+            "blockSaveImg": 0,
+            "language": "en-wr",
+            "isTraditionalChinese": false,
+            "hideUpdateTime": false,
+            "isEPUBComics": 0,
+            "isVerticalLayout": 0,
+            "isShowTTS": 1,
+            "selfProduceIncentive": false,
+            "webBookControl": 0,
+            "isAutoDownload": 1
+          },
+          "readTime": 12888,
+          "tags": [
+            "笔记最多"
+          ]
+        },
+        {
+          "book": {
             "bookId": "25424211",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
             "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
@@ -4572,56 +4630,6 @@
             "isAutoDownload": 1
           },
           "readTime": 12495,
-          "tags": []
-        },
-        {
-          "book": {
-            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
-            "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
-            "title": "The Let Them Theory",
-            "author": "Mel Robbins",
-            "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-            "version": 1668015522,
-            "format": "epub",
-            "type": 0,
-            "soldout": 0,
-            "bookStatus": 1,
-            "payType": 134217761,
-            "finished": 1,
-            "free": 1,
-            "mcardDiscount": 0,
-            "ispub": 0,
-            "cpid": 0,
-            "publishTime": "",
-            "lastChapterIdx": 44,
-            "paperBook": {
-              "skuId": ""
-            },
-            "centPrice": 0,
-            "otherType": [
-              {
-                "type": "epub",
-                "showType": true,
-                "cht2sShowType": false,
-                "translateStatus": "open",
-                "translateDone": false
-              }
-            ],
-            "copyrightChapterUids": [],
-            "limitShareChat": 0,
-            "inStoreBookId": "3004680562",
-            "blockSaveImg": 0,
-            "language": "en-wr",
-            "isTraditionalChinese": false,
-            "hideUpdateTime": false,
-            "isEPUBComics": 0,
-            "isVerticalLayout": 0,
-            "isShowTTS": 1,
-            "selfProduceIncentive": false,
-            "webBookControl": 0,
-            "isAutoDownload": 1
-          },
-          "readTime": 12035,
           "tags": []
         },
         {
@@ -5152,17 +5160,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "108天"
+          "counts": "109天"
         },
         {
           "stat": "笔记",
-          "counts": "259条"
+          "counts": "263条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 558,
+      "dayAverageReadTime": 559,
       "baseTime": 1767196800,
-      "totalReadTime": 174117,
+      "totalReadTime": 174970,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -5181,12 +5189,12 @@
           "type": 5,
           "title": "思考最多",
           "bookInfo": {
-            "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
-            "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
-            "title": "日常生活中的自我呈现",
-            "author": "[美] 欧文·戈夫曼",
-            "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
-            "version": 1395936188,
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+            "title": "The Let Them Theory",
+            "author": "Mel Robbins",
+            "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
+            "version": 882153918,
             "format": "epub",
             "type": 0,
             "soldout": 0,
@@ -5198,17 +5206,25 @@
             "ispub": 0,
             "cpid": 0,
             "publishTime": "",
-            "lastChapterIdx": 37,
+            "lastChapterIdx": 44,
             "paperBook": {
               "skuId": ""
             },
             "centPrice": 0,
+            "otherType": [
+              {
+                "type": "epub",
+                "showType": true,
+                "cht2sShowType": false,
+                "translateStatus": "open",
+                "translateDone": false
+              }
+            ],
             "copyrightChapterUids": [],
-            "hasKeyPoint": true,
             "limitShareChat": 0,
-            "inStoreBookId": "3001479281",
+            "inStoreBookId": "3004680562",
             "blockSaveImg": 0,
-            "language": "zh-wr",
+            "language": "en-wr",
             "isTraditionalChinese": false,
             "hideUpdateTime": false,
             "isEPUBComics": 0,
@@ -5354,8 +5370,52 @@
   "notesByBook": {
     "CB_0dOEYMEWMA2p77975h0Wk3Ku": {
       "highlights": {
-        "synckey": 1794136596,
+        "synckey": 1794148696,
         "updated": [
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 32,
+            "createTime": 1794148696,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_32_39541-39618",
+            "range": "39541-39618",
+            "markText": "但这里有个难点：他们不需要被“拯救”。我再说一遍：你越是试图从他们的问题中拯救某人，他们越有可能继续沉溺其中。你越是评判某人的行为，他们就越擅长对你撒谎。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 32
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 32,
+            "createTime": 1794148674,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_32_38330-38432",
+            "range": "38330-38432",
+            "markText": "人们只有在准备好为自己疗愈时才会真正康复。这些是非常个人化、艰难的战斗……只有当那个人准备好战斗时，他们才能去战斗。你无法强迫他们战斗。你无法强迫他们戒酒。你无法强迫某人负起经济责任。你无法强迫他们痊愈。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 32
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 32,
+            "createTime": 1794147433,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_32_22893-22923",
+            "range": "23550-23580",
+            "markText": "我向你保证，你生活中至少有一个人在极度挣扎，而你却毫不知情。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 32
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 29,
+            "createTime": 1794145387,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_29_154082-154697",
+            "range": "154082-154697",
+            "markText": ".\n沙罗特博士说，你能做的最有效的事情之一就是在他们锻炼完或完成你希望他们做的事情后，立刻告诉他们看起来多么有魅力，或者亲吻他们的脸颊。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 29
+          },
           {
             "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
             "chapterIdx": 29,
@@ -5786,6 +5846,11 @@
         "removed": [],
         "chapters": [
           {
+            "title": "16 你救得越多，他们陷得越深 - 16 The More You Rescue, The More They Sink",
+            "chapterUid": 32,
+            "chapterIdx": 32
+          },
+          {
             "title": "14 只有当人们愿意时才会改变 - 14 People Only Change When They Feel Like It",
             "chapterUid": 29,
             "chapterIdx": 29
@@ -5853,7 +5918,7 @@
         ],
         "book": {
           "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
-          "version": 1668015522,
+          "version": 882153918,
           "format": "epub",
           "soldout": 0,
           "bookStatus": 1,
