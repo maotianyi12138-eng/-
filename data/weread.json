@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-07T21:48:29Z",
+  "updatedAt": "2026-11-08T05:58:36Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -26,10 +26,10 @@
         "title": "The Let Them Theory",
         "author": "Mel Robbins",
         "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-        "updateTime": 1793967939,
+        "updateTime": 1794094103,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793968381
+        "readUpdateTime": 1794094208
       },
       {
         "bookId": "3300187091",
@@ -260,7 +260,7 @@
         "title": "The Let Them Theory",
         "author": "Mel Robbins",
         "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-        "version": 1658227963,
+        "version": 1972007905,
         "format": "epub",
         "type": 0,
         "price": 0,
@@ -305,11 +305,11 @@
         "isAutoDownload": 1,
         "readingProgress": 45,
         "markedStatus": 1,
-        "lastNoteSort": 1793968016,
-        "updateTime": 1793967939,
+        "lastNoteSort": 1794093909,
+        "updateTime": 1794094103,
         "secret": 1,
         "finishReading": 0,
-        "readUpdateTime": 1793968381
+        "readUpdateTime": 1794094208
       },
       {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
@@ -1378,7 +1378,7 @@
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 1658227963,
+          "version": 1972007905,
           "format": "epub",
           "type": 0,
           "price": 0,
@@ -1425,9 +1425,9 @@
         "reviewCount": 0,
         "markedStatus": 1,
         "readingProgress": 45,
-        "noteCount": 23,
+        "noteCount": 25,
         "bookmarkCount": 2,
-        "sort": 1793968016
+        "sort": 1794093909
       },
       {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
@@ -2394,9 +2394,11 @@
       "1793635200": 6168,
       "1793721600": 2215,
       "1793808000": 4141,
-      "1793894400": 243
+      "1793894400": 243,
+      "1793980800": 0,
+      "1794067200": 1086
     },
-    "readDays": 6,
+    "readDays": 7,
     "readLongest": [
       {
         "book": {
@@ -2405,7 +2407,7 @@
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 1658227963,
+          "version": 1972007905,
           "format": "epub",
           "type": 0,
           "soldout": 0,
@@ -2445,7 +2447,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 9458,
+        "readTime": 10544,
         "tags": [
           "笔记最多",
           "单日阅读最久"
@@ -2623,18 +2625,18 @@
       },
       {
         "stat": "阅读",
-        "counts": "6天"
+        "counts": "7天"
       },
       {
         "stat": "笔记",
-        "counts": "37条"
+        "counts": "39条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.6082850030092468,
-    "dayAverageReadTime": 2127,
+    "compare": 2.8385334026371944,
+    "dayAverageReadTime": 2263,
     "baseTime": 1793462400,
-    "totalReadTime": 17019,
+    "totalReadTime": 18105,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2658,7 +2660,7 @@
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 1658227963,
+          "version": 1972007905,
           "format": "epub",
           "type": 0,
           "soldout": 0,
@@ -2793,9 +2795,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 171549
+      "1767196800": 172635
     },
-    "readDays": 109,
+    "readDays": 110,
     "readLongest": [
       {
         "book": {
@@ -3153,7 +3155,7 @@
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-          "version": 1658227963,
+          "version": 1972007905,
           "format": "epub",
           "type": 0,
           "soldout": 0,
@@ -3193,7 +3195,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 9467,
+        "readTime": 10553,
         "tags": []
       },
       {
@@ -3540,20 +3542,20 @@
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "北京科技出版社",
-          "userVid": 526108011,
+          "name": "上海译文出版社",
+          "userVid": 331381138,
           "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0009-LEe1nFnveyDEZ3gb_nErxd2/0",
+          "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
           "cpType": 0
         }
       },
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "上海译文出版社",
-          "userVid": 331381138,
+          "name": "北京科技出版社",
+          "userVid": 526108011,
           "role": 2,
-          "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
+          "avatar": "https://res.weread.qq.com/wravatar/WV0009-LEe1nFnveyDEZ3gb_nErxd2/0",
           "cpType": 0
         }
       }
@@ -3564,15 +3566,15 @@
         "count": 2
       },
       {
+        "name": "北京科学技术出版社有限公司",
+        "count": 1
+      },
+      {
         "name": "上海译文出版社",
         "count": 1
       },
       {
         "name": "中信出版集团",
-        "count": 1
-      },
-      {
-        "name": "北京科学技术出版社有限公司",
         "count": 1
       },
       {
@@ -3599,11 +3601,11 @@
       },
       {
         "stat": "阅读",
-        "counts": "109天"
+        "counts": "110天"
       },
       {
         "stat": "笔记",
-        "counts": "243条"
+        "counts": "245条"
       }
     ],
     "medals": [
@@ -3615,7 +3617,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5070633,
+        "users": 5070977,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3632,7 +3634,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6243378,
+        "users": 6243790,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3649,7 +3651,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12015504,
+        "users": 12016017,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3664,7 +3666,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 171562,
+    "totalReadTime": 172648,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -4036,7 +4038,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8185人读过"
+        "reason": "仅有8187人读过"
       },
       {
         "type": 8,
@@ -4369,10 +4371,10 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 17019,
+        "1793462400": 18105,
         "1796054400": 0
       },
-      "readDays": 107,
+      "readDays": 108,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
@@ -4731,7 +4733,7 @@
             "title": "The Let Them Theory",
             "author": "Mel Robbins",
             "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
-            "version": 1658227963,
+            "version": 1972007905,
             "format": "epub",
             "type": 0,
             "soldout": 0,
@@ -4771,7 +4773,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 9467,
+          "readTime": 10553,
           "tags": []
         },
         {
@@ -5150,17 +5152,17 @@
         },
         {
           "stat": "阅读",
-          "counts": "107天"
+          "counts": "108天"
         },
         {
           "stat": "笔记",
-          "counts": "243条"
+          "counts": "245条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 549,
+      "dayAverageReadTime": 553,
       "baseTime": 1767196800,
-      "totalReadTime": 171549,
+      "totalReadTime": 172635,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -5352,8 +5354,30 @@
   "notesByBook": {
     "CB_0dOEYMEWMA2p77975h0Wk3Ku": {
       "highlights": {
-        "synckey": 1793968183,
+        "synckey": 1794093982,
         "updated": [
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 26,
+            "createTime": 1794093909,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_26_54411-54569",
+            "range": "59075-59233",
+            "markText": "友谊不是你来我往的交易。不要计较得失。主动联系别人是因为你想这样做，但不要期待一定会得到回应。别人回复的速度或频率并不代表他们有多在乎你。更可能的是，这反映了他们可能有多忙碌。每个人都有很多事情要处理，而 99%的时候你根本不知道别人正在经历什么，所以尤其是对朋友，不要因为没收到回复就评判，应该假设他们的意图是好的",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 26
+          },
+          {
+            "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+            "chapterIdx": 26,
+            "createTime": 1794093745,
+            "bookmarkId": "CB_0dOEYMEWMA2p77975h0Wk3Ku_26_41203-41268",
+            "range": "44236-44301",
+            "markText": "责怪别人、沉浸在愤怒中，比起为自己负责要容易得多。我犯了成人友谊中最大的错误：我期待永远是朋友，期待被包括在内，期待一切都很简单。",
+            "colorStyle": 0,
+            "type": 1,
+            "chapterUid": 26
+          },
           {
             "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
             "chapterIdx": 22,
@@ -5608,6 +5632,11 @@
         "removed": [],
         "chapters": [
           {
+            "title": "12 为什么有些友谊会自然淡去 - 12 Why Some Friendships Naturally Fade",
+            "chapterUid": 26,
+            "chapterIdx": 26
+          },
+          {
             "title": "7 成年人大发脾气时 - 7 When Grown-Ups Throw Tantrums",
             "chapterUid": 18,
             "chapterIdx": 18
@@ -5660,7 +5689,7 @@
         ],
         "book": {
           "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
-          "version": 1658227963,
+          "version": 1972007905,
           "format": "epub",
           "soldout": 0,
           "bookStatus": 1,
