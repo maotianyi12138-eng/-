@@ -1,10 +1,36 @@
 {
   "status": "ready",
   "normalizationVersion": 3,
-  "updatedAt": "2026-11-08T09:13:28.421Z",
+  "updatedAt": "2026-11-09T09:57:28.806Z",
   "privacy": "Public summary only. API keys, notes, heart-rate data and source identifiers are excluded.",
   "training": {
     "sessions": [
+      {
+        "date": "2026-11-08",
+        "title": "Hyrox专项",
+        "start": 1794175143512,
+        "durationMinutes": 14,
+        "setCount": 8,
+        "volumeKg": 3660,
+        "calories": 0,
+        "distance": 0,
+        "movements": [
+          {
+            "name": "深蹲",
+            "setCount": 5,
+            "totalReps": 42,
+            "volumeKg": 2460,
+            "maxWeightKg": 70
+          },
+          {
+            "name": "杠铃罗马尼亚硬拉",
+            "setCount": 3,
+            "totalReps": 24,
+            "volumeKg": 1200,
+            "maxWeightKg": 50
+          }
+        ]
+      },
       {
         "date": "2026-11-06",
         "title": "背 三头",
@@ -18427,7 +18453,7 @@
     ],
     "range": {
       "from": "2025-08-07",
-      "to": "2026-11-06"
+      "to": "2026-11-08"
     }
   },
   "body": {
