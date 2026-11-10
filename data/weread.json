@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-09T22:19:45Z",
+  "updatedAt": "2026-11-10T07:15:28Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -28,8 +28,8 @@
         "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
         "updateTime": 1794220577,
         "secret": 1,
-        "finishReading": 0,
-        "readUpdateTime": 1794227045
+        "finishReading": 1,
+        "readUpdateTime": 1794266912
       },
       {
         "bookId": "3300187091",
@@ -303,13 +303,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 83,
-        "markedStatus": 1,
+        "readingProgress": 99,
+        "markedStatus": 4,
         "lastNoteSort": 1794221219,
         "updateTime": 1794220577,
         "secret": 1,
-        "finishReading": 0,
-        "readUpdateTime": 1794227045
+        "finishReading": 1,
+        "readUpdateTime": 1794266912
       },
       {
         "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
@@ -1319,6 +1319,7 @@
       {
         "bookId": "3300194532",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=723328f0813abb27dg012b88",
+        "readerLink": "https://weread.qq.com/web/reader/723328f0813abb27dg012b88",
         "title": "罐头厂街",
         "author": "[美]约翰·斯坦贝克",
         "translator": "周坤",
@@ -1423,8 +1424,8 @@
           "isAutoDownload": 1
         },
         "reviewCount": 0,
-        "markedStatus": 1,
-        "readingProgress": 83,
+        "markedStatus": 4,
+        "readingProgress": 99,
         "noteCount": 56,
         "bookmarkCount": 2,
         "sort": 1794221219
@@ -2396,14 +2397,16 @@
       "1793808000": 4141,
       "1793894400": 243,
       "1794067200": 3182,
-      "1794153600": 2547
+      "1794153600": 2547,
+      "1794240000": 781
     },
-    "readDays": 8,
+    "readDays": 9,
     "readLongest": [
       {
         "book": {
           "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+          "readerLink": "https://weread.qq.com/web/reader/ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
@@ -2447,7 +2450,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 15187,
+        "readTime": 15968,
         "tags": [
           "笔记最多",
           "单日阅读最久"
@@ -2457,6 +2460,7 @@
         "book": {
           "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+          "readerLink": "https://weread.qq.com/web/reader/7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
           "title": "日常生活中的自我呈现",
           "author": "[美] 欧文·戈夫曼",
           "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
@@ -2499,6 +2503,7 @@
         "book": {
           "bookId": "3300140838",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
+          "readerLink": "https://weread.qq.com/web/reader/5a332100813ab9d83g018139",
           "title": "创意行为：存在即答案",
           "author": "[美]里克·鲁宾",
           "translator": "重轻",
@@ -2621,11 +2626,11 @@
       },
       {
         "stat": "读完",
-        "counts": "1本"
+        "counts": "2本"
       },
       {
         "stat": "阅读",
-        "counts": "8天"
+        "counts": "9天"
       },
       {
         "stat": "笔记",
@@ -2633,10 +2638,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.858335613065602,
-    "dayAverageReadTime": 2274,
+    "compare": 2.990802648137003,
+    "dayAverageReadTime": 2352,
     "baseTime": 1793462400,
-    "totalReadTime": 22748,
+    "totalReadTime": 23529,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2657,6 +2662,7 @@
         "bookInfo": {
           "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+          "readerLink": "https://weread.qq.com/web/reader/ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
@@ -2720,6 +2726,7 @@
         "bookInfo": {
           "bookId": "3300140838",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
+          "readerLink": "https://weread.qq.com/web/reader/5a332100813ab9d83g018139",
           "title": "创意行为：存在即答案",
           "author": "[美]里克·鲁宾",
           "translator": "重轻",
@@ -2795,14 +2802,15 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 177278
+      "1767196800": 178059
     },
-    "readDays": 111,
+    "readDays": 112,
     "readLongest": [
       {
         "book": {
           "bookId": "35523642",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=c3b32bb0721e0c3ac3bc5f6",
+          "readerLink": "https://weread.qq.com/web/reader/c3b32bb0721e0c3ac3bc5f6",
           "title": "丰饶之海（第一卷）：春雪",
           "author": "三岛由纪夫",
           "translator": "陈德文",
@@ -2854,6 +2862,7 @@
         "book": {
           "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+          "readerLink": "https://weread.qq.com/web/reader/7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
           "title": "日常生活中的自我呈现",
           "author": "[美] 欧文·戈夫曼",
           "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
@@ -2896,6 +2905,7 @@
         "book": {
           "bookId": "3300197381",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=32732670813abb39ag011d6c",
+          "readerLink": "https://weread.qq.com/web/reader/32732670813abb39ag011d6c",
           "title": "为什么10倍增长比2倍更容易",
           "author": "[美]丹·沙利文  [美]本杰明·哈迪",
           "translator": "白瑞霞",
@@ -2947,6 +2957,7 @@
         "book": {
           "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+          "readerLink": "https://weread.qq.com/web/reader/ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
@@ -2990,7 +3001,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 15196,
+        "readTime": 15977,
         "tags": [
           "笔记最多"
         ]
@@ -2999,6 +3010,7 @@
         "book": {
           "bookId": "25424211",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
+          "readerLink": "https://weread.qq.com/web/reader/875329907183f1538754eac",
           "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
           "author": "赫伯特·马尔库塞",
           "translator": "刘继",
@@ -3050,6 +3062,7 @@
         "book": {
           "bookId": "3300155373",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=80332260813aba331g013372",
+          "readerLink": "https://weread.qq.com/web/reader/80332260813aba331g013372",
           "title": "在我身上有一个不可战胜的夏天",
           "author": "[法]阿尔贝·加缪",
           "intro": "在我身上有一个不可战胜的夏天",
@@ -3100,6 +3113,7 @@
         "book": {
           "bookId": "3300106416",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
+          "readerLink": "https://weread.qq.com/web/reader/aa232350813ab9011g016d99",
           "title": "箭术与禅心：一位西方哲学家的禅悟实录",
           "author": "[德]奥根·赫立格尔",
           "translator": "靳婷婷",
@@ -3153,6 +3167,7 @@
         "book": {
           "bookId": "30181899",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=7a332d8071cc8a0b7a31e96",
+          "readerLink": "https://weread.qq.com/web/reader/7a332d8071cc8a0b7a31e96",
           "title": "高级运动营养学",
           "author": "丹·贝纳多特",
           "translator": "安江红,刘勇,周帆扬,赵之光",
@@ -3202,6 +3217,7 @@
         "book": {
           "bookId": "35523636",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
+          "readerLink": "https://weread.qq.com/web/reader/ffa32310721e0c34ffaa68b",
           "title": "丰饶之海（第二卷）：奔马",
           "author": "三岛由纪夫",
           "translator": "陈德文",
@@ -3253,6 +3269,7 @@
         "book": {
           "bookId": "3300140838",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
+          "readerLink": "https://weread.qq.com/web/reader/5a332100813ab9d83g018139",
           "title": "创意行为：存在即答案",
           "author": "[美]里克·鲁宾",
           "translator": "重轻",
@@ -3597,11 +3614,11 @@
       },
       {
         "stat": "读完",
-        "counts": "12本"
+        "counts": "13本"
       },
       {
         "stat": "阅读",
-        "counts": "111天"
+        "counts": "112天"
       },
       {
         "stat": "笔记",
@@ -3617,7 +3634,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5073324,
+        "users": 5073749,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3634,7 +3651,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6246336,
+        "users": 6246855,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3651,7 +3668,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12019262,
+        "users": 12019868,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3666,7 +3683,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 177291,
+    "totalReadTime": 178072,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3679,6 +3696,7 @@
         "bookInfo": {
           "bookId": "35523642",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=c3b32bb0721e0c3ac3bc5f6",
+          "readerLink": "https://weread.qq.com/web/reader/c3b32bb0721e0c3ac3bc5f6",
           "title": "丰饶之海（第一卷）：春雪",
           "author": "三岛由纪夫",
           "translator": "陈德文",
@@ -3735,6 +3753,7 @@
         "bookInfo": {
           "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+          "readerLink": "https://weread.qq.com/web/reader/ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
           "title": "The Let Them Theory",
           "author": "Mel Robbins",
           "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
@@ -3790,6 +3809,7 @@
         "bookInfo": {
           "bookId": "3300197381",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=32732670813abb39ag011d6c",
+          "readerLink": "https://weread.qq.com/web/reader/32732670813abb39ag011d6c",
           "title": "为什么10倍增长比2倍更容易",
           "author": "[美]丹·沙利文  [美]本杰明·哈迪",
           "translator": "白瑞霞",
@@ -3842,6 +3862,7 @@
         "bookInfo": {
           "bookId": "3300043405",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=3c632e90813ab7774g015d62",
+          "readerLink": "https://weread.qq.com/web/reader/3c632e90813ab7774g015d62",
           "title": "罐头厂街",
           "author": "约翰·斯坦贝克",
           "translator": "李家珅 钱凯娜 魏艳艳",
@@ -3894,6 +3915,7 @@
         "bookInfo": {
           "bookId": "35523642",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=c3b32bb0721e0c3ac3bc5f6",
+          "readerLink": "https://weread.qq.com/web/reader/c3b32bb0721e0c3ac3bc5f6",
           "title": "丰饶之海（第一卷）：春雪",
           "author": "三岛由纪夫",
           "translator": "陈德文",
@@ -3946,6 +3968,7 @@
         "bookInfo": {
           "bookId": "3300140838",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
+          "readerLink": "https://weread.qq.com/web/reader/5a332100813ab9d83g018139",
           "title": "创意行为：存在即答案",
           "author": "[美]里克·鲁宾",
           "translator": "重轻",
@@ -4002,6 +4025,7 @@
         "bookInfo": {
           "bookId": "3300194532",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=723328f0813abb27dg012b88",
+          "readerLink": "https://weread.qq.com/web/reader/723328f0813abb27dg012b88",
           "title": "罐头厂街",
           "author": "[美]约翰·斯坦贝克",
           "translator": "周坤",
@@ -4046,7 +4070,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8221人读过"
+        "reason": "仅有8232人读过"
       },
       {
         "type": 8,
@@ -4379,16 +4403,17 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 22748,
+        "1793462400": 23529,
         "1796054400": 0
       },
-      "readDays": 109,
+      "readDays": 110,
       "readRecordsWord": "书籍分布",
       "readLongest": [
         {
           "book": {
             "bookId": "35523642",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=c3b32bb0721e0c3ac3bc5f6",
+            "readerLink": "https://weread.qq.com/web/reader/c3b32bb0721e0c3ac3bc5f6",
             "title": "丰饶之海（第一卷）：春雪",
             "author": "三岛由纪夫",
             "translator": "陈德文",
@@ -4440,6 +4465,7 @@
           "book": {
             "bookId": "CB_8WSAeaAbjA6w77875hFO56Xg",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
+            "readerLink": "https://weread.qq.com/web/reader/7fc42de3643425f38575341656141626a413677373738373568464f35365867e50",
             "title": "日常生活中的自我呈现",
             "author": "[美] 欧文·戈夫曼",
             "cover": "https://res.weread.qq.com/wrepub/CB_6gS75E74k1O077675W41k84v_parsecover",
@@ -4482,6 +4508,7 @@
           "book": {
             "bookId": "3300197381",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=32732670813abb39ag011d6c",
+            "readerLink": "https://weread.qq.com/web/reader/32732670813abb39ag011d6c",
             "title": "为什么10倍增长比2倍更容易",
             "author": "[美]丹·沙利文  [美]本杰明·哈迪",
             "translator": "白瑞霞",
@@ -4533,6 +4560,7 @@
           "book": {
             "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+            "readerLink": "https://weread.qq.com/web/reader/ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
             "title": "The Let Them Theory",
             "author": "Mel Robbins",
             "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
@@ -4576,7 +4604,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 15196,
+          "readTime": 15977,
           "tags": [
             "笔记最多"
           ]
@@ -4585,6 +4613,7 @@
           "book": {
             "bookId": "25424211",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
+            "readerLink": "https://weread.qq.com/web/reader/875329907183f1538754eac",
             "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
             "author": "赫伯特·马尔库塞",
             "translator": "刘继",
@@ -4636,6 +4665,7 @@
           "book": {
             "bookId": "3300155373",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=80332260813aba331g013372",
+            "readerLink": "https://weread.qq.com/web/reader/80332260813aba331g013372",
             "title": "在我身上有一个不可战胜的夏天",
             "author": "[法]阿尔贝·加缪",
             "intro": "在我身上有一个不可战胜的夏天",
@@ -4686,6 +4716,7 @@
           "book": {
             "bookId": "3300106416",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
+            "readerLink": "https://weread.qq.com/web/reader/aa232350813ab9011g016d99",
             "title": "箭术与禅心：一位西方哲学家的禅悟实录",
             "author": "[德]奥根·赫立格尔",
             "translator": "靳婷婷",
@@ -4739,6 +4770,7 @@
           "book": {
             "bookId": "30181899",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=7a332d8071cc8a0b7a31e96",
+            "readerLink": "https://weread.qq.com/web/reader/7a332d8071cc8a0b7a31e96",
             "title": "高级运动营养学",
             "author": "丹·贝纳多特",
             "translator": "安江红,刘勇,周帆扬,赵之光",
@@ -4788,6 +4820,7 @@
           "book": {
             "bookId": "35523636",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=ffa32310721e0c34ffaa68b",
+            "readerLink": "https://weread.qq.com/web/reader/ffa32310721e0c34ffaa68b",
             "title": "丰饶之海（第二卷）：奔马",
             "author": "三岛由纪夫",
             "translator": "陈德文",
@@ -4839,6 +4872,7 @@
           "book": {
             "bookId": "3300140838",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
+            "readerLink": "https://weread.qq.com/web/reader/5a332100813ab9d83g018139",
             "title": "创意行为：存在即答案",
             "author": "[美]里克·鲁宾",
             "translator": "重轻",
@@ -5156,11 +5190,11 @@
         },
         {
           "stat": "读完",
-          "counts": "12本"
+          "counts": "13本"
         },
         {
           "stat": "阅读",
-          "counts": "109天"
+          "counts": "110天"
         },
         {
           "stat": "笔记",
@@ -5168,9 +5202,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 564,
+      "dayAverageReadTime": 567,
       "baseTime": 1767196800,
-      "totalReadTime": 177278,
+      "totalReadTime": 178059,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -5191,6 +5225,7 @@
           "bookInfo": {
             "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
+            "readerLink": "https://weread.qq.com/web/reader/ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
             "title": "The Let Them Theory",
             "author": "Mel Robbins",
             "cover": "https://res.weread.qq.com/wrepub/CB_7XfGfLGfbBi177775O0FD51r_parsecover",
@@ -5250,6 +5285,7 @@
           "bookInfo": {
             "bookId": "3300043405",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=3c632e90813ab7774g015d62",
+            "readerLink": "https://weread.qq.com/web/reader/3c632e90813ab7774g015d62",
             "title": "罐头厂街",
             "author": "约翰·斯坦贝克",
             "translator": "李家珅 钱凯娜 魏艳艳",
@@ -5302,6 +5338,7 @@
           "bookInfo": {
             "bookId": "35523642",
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=c3b32bb0721e0c3ac3bc5f6",
+            "readerLink": "https://weread.qq.com/web/reader/c3b32bb0721e0c3ac3bc5f6",
             "title": "丰饶之海（第一卷）：春雪",
             "author": "三岛由纪夫",
             "translator": "陈德文",
