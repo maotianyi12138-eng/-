@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-10T07:15:28Z",
+  "updatedAt": "2026-11-10T19:42:51Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -198,6 +198,19 @@
         "category": "文学-外国文学"
       },
       {
+        "bookId": "3300167144",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=fbc32750813aba7cag014134",
+        "readerLink": "https://weread.qq.com/web/reader/fbc32750813aba7cag014134",
+        "title": "菜单上的春天（轻经典）",
+        "author": "[美]欧·亨利",
+        "updateTime": 1783594456,
+        "cover": "https://cdn.weread.qq.com/weread/cover/62/cpplatform_t6we3krt7z4tumsmqjzzfq/t6_cpplatform_t6we3krt7z4tumsmqjzzfq1759043823.jpg",
+        "finishReading": 1,
+        "readUpdateTime": 1794303698,
+        "secret": 0,
+        "category": "精品小说-情感小说"
+      },
+      {
         "bookId": "3300140838",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
         "readerLink": "https://weread.qq.com/web/reader/5a332100813ab9d83g018139",
@@ -253,6 +266,79 @@
   },
   "history": {
     "books": [
+      {
+        "bookId": "3300167144",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=fbc32750813aba7cag014134",
+        "readerLink": "https://weread.qq.com/web/reader/fbc32750813aba7cag014134",
+        "title": "菜单上的春天（轻经典）",
+        "author": "[美]欧·亨利",
+        "translator": "王楫 康明强",
+        "cover": "https://cdn.weread.qq.com/weread/cover/62/cpplatform_t6we3krt7z4tumsmqjzzfq/t6_cpplatform_t6we3krt7z4tumsmqjzzfq1759043823.jpg",
+        "version": 1393313739,
+        "format": "epub",
+        "type": 0,
+        "price": 9.9,
+        "originalPrice": 0,
+        "soldout": 0,
+        "bookStatus": 1,
+        "payingStatus": 1,
+        "payType": 4097,
+        "centPrice": 990,
+        "categories": [
+          {
+            "categoryId": 100000,
+            "subCategoryId": 100002,
+            "categoryType": 0,
+            "title": "精品小说-情感小说"
+          },
+          {
+            "categoryId": 300000,
+            "subCategoryId": 300004,
+            "categoryType": 0,
+            "title": "文学-经典作品"
+          }
+        ],
+        "hasLecture": 0,
+        "finished": 1,
+        "maxFreeChapter": 3,
+        "maxFreeInfo": {
+          "maxFreeChapterIdx": 3,
+          "maxFreeChapterUid": 5,
+          "maxFreeChapterRatio": 1
+        },
+        "free": 0,
+        "mcardDiscount": 0,
+        "ispub": 1,
+        "extra_type": 5,
+        "cpid": 1000000121,
+        "publishTime": "2025-10-06 00:00:00",
+        "lastChapterIdx": 3,
+        "paperBook": {
+          "skuId": ""
+        },
+        "copyrightChapterUids": [
+          4
+        ],
+        "inStoreBookId": "",
+        "blockSaveImg": 0,
+        "language": "zh-wr",
+        "isTraditionalChinese": false,
+        "hideUpdateTime": false,
+        "isEPUBComics": 0,
+        "isVerticalLayout": 0,
+        "isShowTTS": 1,
+        "webBookControl": 0,
+        "selfProduceIncentive": false,
+        "isAutoDownload": 1,
+        "readingProgress": 75,
+        "markedStatus": 4,
+        "lastNoteSort": 1794302977,
+        "updateTime": 1783594456,
+        "finishReading": 1,
+        "readUpdateTime": 1794303698,
+        "secret": 0,
+        "category": "精品小说-情感小说"
+      },
       {
         "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=ac442b73643425f30644f45594d45574d41327037373937356830576b334b75da5",
@@ -1366,10 +1452,84 @@
         "finishReading": 0
       }
     ],
-    "totalReadCount": 20
+    "totalReadCount": 21
   },
   "notebooks": {
     "books": [
+      {
+        "bookId": "3300167144",
+        "book": {
+          "bookId": "3300167144",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=fbc32750813aba7cag014134",
+          "readerLink": "https://weread.qq.com/web/reader/fbc32750813aba7cag014134",
+          "title": "菜单上的春天（轻经典）",
+          "author": "[美]欧·亨利",
+          "translator": "王楫 康明强",
+          "cover": "https://cdn.weread.qq.com/weread/cover/62/cpplatform_t6we3krt7z4tumsmqjzzfq/t6_cpplatform_t6we3krt7z4tumsmqjzzfq1759043823.jpg",
+          "version": 1393313739,
+          "format": "epub",
+          "type": 0,
+          "price": 9.9,
+          "originalPrice": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payingStatus": 1,
+          "payType": 4097,
+          "centPrice": 990,
+          "categories": [
+            {
+              "categoryId": 100000,
+              "subCategoryId": 100002,
+              "categoryType": 0,
+              "title": "精品小说-情感小说"
+            },
+            {
+              "categoryId": 300000,
+              "subCategoryId": 300004,
+              "categoryType": 0,
+              "title": "文学-经典作品"
+            }
+          ],
+          "hasLecture": 0,
+          "finished": 1,
+          "maxFreeChapter": 3,
+          "maxFreeInfo": {
+            "maxFreeChapterIdx": 3,
+            "maxFreeChapterUid": 5,
+            "maxFreeChapterRatio": 1
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000121,
+          "publishTime": "2025-10-06 00:00:00",
+          "lastChapterIdx": 3,
+          "paperBook": {
+            "skuId": ""
+          },
+          "copyrightChapterUids": [
+            4
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "webBookControl": 0,
+          "selfProduceIncentive": false,
+          "isAutoDownload": 1
+        },
+        "reviewCount": 0,
+        "markedStatus": 4,
+        "readingProgress": 75,
+        "noteCount": 1,
+        "bookmarkCount": 0,
+        "sort": 1794302977
+      },
       {
         "bookId": "CB_0dOEYMEWMA2p77975h0Wk3Ku",
         "book": {
@@ -2398,7 +2558,7 @@
       "1793894400": 243,
       "1794067200": 3182,
       "1794153600": 2547,
-      "1794240000": 781
+      "1794240000": 2014
     },
     "readDays": 9,
     "readLongest": [
@@ -2501,6 +2661,58 @@
       },
       {
         "book": {
+          "bookId": "3300167144",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=fbc32750813aba7cag014134",
+          "readerLink": "https://weread.qq.com/web/reader/fbc32750813aba7cag014134",
+          "title": "菜单上的春天（轻经典）",
+          "author": "[美]欧·亨利",
+          "translator": "王楫 康明强",
+          "intro": "本文选自欧·亨利短篇小说集。在纽约的失业打字员萨拉，靠为餐馆打印菜单维生。当她在食材清单上看到“蒲公英”这个词时，瞬间泪流满面——因为这曾是她乡下恋人为她编订婚花环的野花。\r\n欧·亨利以他标志性的温情与巧思，编织了一个都市求生中的浪漫奇迹。当一份普通的菜单，因一个思念造成的打字“错误”，竟成了连接两个世界的密信。原来春天从未遗忘这座城市，它借最卑微的蒲公英，悄悄捎来了爱的消息。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/62/cpplatform_t6we3krt7z4tumsmqjzzfq/s_cpplatform_t6we3krt7z4tumsmqjzzfq1759043823.jpg",
+          "version": 1393313739,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 3,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 3,
+            "maxfreeChapterUid": 5,
+            "maxfreeChapterRatio": 1
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000121,
+          "publishTime": "2025-10-06 00:00:00",
+          "lastChapterIdx": 3,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 990,
+          "copyrightChapterUids": [
+            4
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 1199,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "3300140838",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
           "readerLink": "https://weread.qq.com/web/reader/5a332100813ab9d83g018139",
@@ -2554,6 +2766,22 @@
     ],
     "preferCategory": [
       {
+        "categoryId": 300000,
+        "categoryTitle": "文学",
+        "parentCategoryId": 300000,
+        "parentCategoryTitle": "文学",
+        "readingCount": 1,
+        "readingTime": 1199
+      },
+      {
+        "categoryId": 100002,
+        "categoryTitle": "情感小说",
+        "parentCategoryId": 100000,
+        "parentCategoryTitle": "精品小说",
+        "readingCount": 1,
+        "readingTime": 1199
+      },
+      {
         "categoryId": 1000000,
         "categoryTitle": "个人成长",
         "parentCategoryId": 1000000,
@@ -2566,14 +2794,6 @@
         "categoryTitle": "历史",
         "parentCategoryId": 200000,
         "parentCategoryTitle": "历史",
-        "readingCount": 0,
-        "readingTime": 0
-      },
-      {
-        "categoryId": 300000,
-        "categoryTitle": "文学",
-        "parentCategoryId": 300000,
-        "parentCategoryTitle": "文学",
         "readingCount": 0,
         "readingTime": 0
       },
@@ -2608,25 +2828,17 @@
         "parentCategoryTitle": "心理",
         "readingCount": 0,
         "readingTime": 0
-      },
-      {
-        "categoryId": 1200000,
-        "categoryTitle": "政治军事",
-        "parentCategoryId": 1200000,
-        "parentCategoryTitle": "政治军事",
-        "readingCount": 0,
-        "readingTime": 0
       }
     ],
-    "preferCategoryWord": "偏好阅读个人成长",
+    "preferCategoryWord": "偏好阅读文学",
     "readStat": [
       {
         "stat": "读过",
-        "counts": "2本"
+        "counts": "3本"
       },
       {
         "stat": "读完",
-        "counts": "2本"
+        "counts": "3本"
       },
       {
         "stat": "阅读",
@@ -2634,14 +2846,14 @@
       },
       {
         "stat": "笔记",
-        "counts": "70条"
+        "counts": "71条"
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.990802648137003,
-    "dayAverageReadTime": 2352,
+    "compare": 2.818122130646068,
+    "dayAverageReadTime": 2251,
     "baseTime": 1793462400,
-    "totalReadTime": 23529,
+    "totalReadTime": 24762,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -2718,46 +2930,42 @@
       },
       {
         "type": 7,
-        "title": "第一本阅读"
-      },
-      {
-        "type": 6,
-        "title": "最爱个人成长",
+        "title": "第一本阅读",
         "bookInfo": {
-          "bookId": "3300140838",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
-          "readerLink": "https://weread.qq.com/web/reader/5a332100813ab9d83g018139",
-          "title": "创意行为：存在即答案",
-          "author": "[美]里克·鲁宾",
-          "translator": "重轻",
-          "intro": "※ 荣登《纽约时报》2023年畅销书榜 首！亚马逊2023年创意类销量第 一图书，全网期待中文版！ ※ 一手打造阿黛尔、侃爷、Jay-Z、Lana Del Rey等畅销专辑的美国传奇音乐教父里克·鲁宾 「九座格莱美奖杯得主，首度公开创意底层逻辑！」一本关于“创意来源”的答案之书，却不止于此。 ※ 人气音乐漫谈播客「不在场」主理人 重轻 倾情翻译，知名播客品牌「日谈公园」真诚推荐，创意领域博主“自来水”式力荐！ ※ 给所有深夜改稿/写歌/设计/策划的人——当灵感罢工时怎么办？里克·鲁宾用40年的创意经验，治好你的创作内耗。 78篇哲学思考分享艺术家的创意智慧，为突破创造力瓶颈提供有用的思考框架。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/46/cpplatform_bpydeflrt9d2xtkdsjzqqj/s_cpplatform_bpydeflrt9d2xtkdsjzqqj1744601841.jpg",
-          "version": 1935243306,
+          "bookId": "3300167144",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=fbc32750813aba7cag014134",
+          "readerLink": "https://weread.qq.com/web/reader/fbc32750813aba7cag014134",
+          "title": "菜单上的春天（轻经典）",
+          "author": "[美]欧·亨利",
+          "translator": "王楫 康明强",
+          "intro": "本文选自欧·亨利短篇小说集。在纽约的失业打字员萨拉，靠为餐馆打印菜单维生。当她在食材清单上看到“蒲公英”这个词时，瞬间泪流满面——因为这曾是她乡下恋人为她编订婚花环的野花。\r\n欧·亨利以他标志性的温情与巧思，编织了一个都市求生中的浪漫奇迹。当一份普通的菜单，因一个思念造成的打字“错误”，竟成了连接两个世界的密信。原来春天从未遗忘这座城市，它借最卑微的蒲公英，悄悄捎来了爱的消息。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/62/cpplatform_t6we3krt7z4tumsmqjzzfq/s_cpplatform_t6we3krt7z4tumsmqjzzfq1759043823.jpg",
+          "version": 1393313739,
           "format": "epub",
           "type": 0,
           "soldout": 0,
           "bookStatus": 1,
-          "payType": 1048577,
+          "payType": 4097,
           "finished": 1,
-          "maxFreeChapter": 14,
+          "maxFreeChapter": 3,
           "maxFreeInfo": {
-            "maxfreeChapterIdx": 14,
-            "maxfreeChapterUid": 14,
-            "maxfreeChapterRatio": 36
+            "maxfreeChapterIdx": 3,
+            "maxfreeChapterUid": 5,
+            "maxfreeChapterRatio": 1
           },
           "free": 0,
           "mcardDiscount": 0,
           "ispub": 1,
           "extra_type": 5,
-          "cpid": 4525313,
-          "publishTime": "2025-03-01 00:00:00",
-          "lastChapterIdx": 82,
+          "cpid": 1000000121,
+          "publishTime": "2025-10-06 00:00:00",
+          "lastChapterIdx": 3,
           "paperBook": {
             "skuId": ""
           },
-          "centPrice": 6160,
+          "centPrice": 990,
           "copyrightChapterUids": [
-            2
+            4
           ],
           "inStoreBookId": "",
           "blockSaveImg": 0,
@@ -2771,7 +2979,60 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "阅读了2小时"
+        "reason": "2026/11/10/阅读"
+      },
+      {
+        "type": 6,
+        "title": "最爱情感小说",
+        "bookInfo": {
+          "bookId": "3300167144",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=fbc32750813aba7cag014134",
+          "readerLink": "https://weread.qq.com/web/reader/fbc32750813aba7cag014134",
+          "title": "菜单上的春天（轻经典）",
+          "author": "[美]欧·亨利",
+          "translator": "王楫 康明强",
+          "intro": "本文选自欧·亨利短篇小说集。在纽约的失业打字员萨拉，靠为餐馆打印菜单维生。当她在食材清单上看到“蒲公英”这个词时，瞬间泪流满面——因为这曾是她乡下恋人为她编订婚花环的野花。\r\n欧·亨利以他标志性的温情与巧思，编织了一个都市求生中的浪漫奇迹。当一份普通的菜单，因一个思念造成的打字“错误”，竟成了连接两个世界的密信。原来春天从未遗忘这座城市，它借最卑微的蒲公英，悄悄捎来了爱的消息。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/62/cpplatform_t6we3krt7z4tumsmqjzzfq/s_cpplatform_t6we3krt7z4tumsmqjzzfq1759043823.jpg",
+          "version": 1393313739,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 3,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 3,
+            "maxfreeChapterUid": 5,
+            "maxfreeChapterRatio": 1
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 1000000121,
+          "publishTime": "2025-10-06 00:00:00",
+          "lastChapterIdx": 3,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 990,
+          "copyrightChapterUids": [
+            4
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "reason": "最爱分类"
       },
       {
         "type": 2,
@@ -2802,7 +3063,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 178059
+      "1767196800": 179292
     },
     "readDays": 112,
     "readLongest": [
@@ -3324,8 +3585,8 @@
         "categoryTitle": "文学",
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
-        "readingCount": 11,
-        "readingTime": 74100
+        "readingCount": 12,
+        "readingTime": 75299
       },
       {
         "categoryId": 100001,
@@ -3376,19 +3637,19 @@
         "readingTime": 10732
       },
       {
-        "categoryId": 200000,
-        "categoryTitle": "历史",
-        "parentCategoryId": 200000,
-        "parentCategoryTitle": "历史",
-        "readingCount": 0,
-        "readingTime": 0
+        "categoryId": 100002,
+        "categoryTitle": "情感小说",
+        "parentCategoryId": 100000,
+        "parentCategoryTitle": "精品小说",
+        "readingCount": 1,
+        "readingTime": 1199
       }
     ],
     "preferCategoryWord": "偏好阅读文学",
     "preferTimeWord": "偏好夜间阅读",
     "preferTime": [
       8232,
-      4846,
+      5627,
       1904,
       317,
       7,
@@ -3398,7 +3659,7 @@
       203,
       705,
       5713,
-      6727,
+      7960,
       8685,
       21207,
       9131,
@@ -3474,8 +3735,18 @@
         "readTime": "2小时9分钟"
       }
     ],
-    "authorCount": 11,
+    "authorCount": 12,
     "preferCp": [
+      {
+        "count": 4,
+        "copyrightInfo": {
+          "name": "轻故事",
+          "userVid": 916162764,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0018-Ya1JHZWCjRaiDjhfPh67cf2/0",
+          "cpType": 0
+        }
+      },
       {
         "count": 3,
         "copyrightInfo": {
@@ -3484,16 +3755,6 @@
           "role": 2,
           "avatar": "https://res.weread.qq.com/wravatar/WV0021-Lwot73JgkLO_EghtiM3Cyd9/0",
           "cpType": 1
-        }
-      },
-      {
-        "count": 3,
-        "copyrightInfo": {
-          "name": "轻故事",
-          "userVid": 916162764,
-          "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0018-Ya1JHZWCjRaiDjhfPh67cf2/0",
-          "cpType": 0
         }
       },
       {
@@ -3539,16 +3800,6 @@
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "磨铁数盟",
-          "userVid": 351681843,
-          "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
-          "cpType": 0
-        }
-      },
-      {
-        "count": 1,
-        "copyrightInfo": {
           "name": "东西时代",
           "userVid": 519906148,
           "role": 2,
@@ -3559,10 +3810,10 @@
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "上海译文出版社",
-          "userVid": 331381138,
+          "name": "磨铁数盟",
+          "userVid": 351681843,
           "role": 2,
-          "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
+          "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
           "cpType": 0
         }
       },
@@ -3575,6 +3826,16 @@
           "avatar": "https://res.weread.qq.com/wravatar/WV0009-LEe1nFnveyDEZ3gb_nErxd2/0",
           "cpType": 0
         }
+      },
+      {
+        "count": 1,
+        "copyrightInfo": {
+          "name": "上海译文出版社",
+          "userVid": 331381138,
+          "role": 2,
+          "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
+          "cpType": 0
+        }
       }
     ],
     "preferPublisher": [
@@ -3583,15 +3844,15 @@
         "count": 2
       },
       {
-        "name": "北京科学技术出版社有限公司",
-        "count": 1
-      },
-      {
         "name": "上海译文出版社",
         "count": 1
       },
       {
         "name": "中信出版集团",
+        "count": 1
+      },
+      {
+        "name": "北京科学技术出版社有限公司",
         "count": 1
       },
       {
@@ -3610,11 +3871,11 @@
     "readStat": [
       {
         "stat": "读过",
-        "counts": "20本"
+        "counts": "21本"
       },
       {
         "stat": "读完",
-        "counts": "13本"
+        "counts": "14本"
       },
       {
         "stat": "阅读",
@@ -3622,7 +3883,7 @@
       },
       {
         "stat": "笔记",
-        "counts": "276条"
+        "counts": "277条"
       }
     ],
     "medals": [
@@ -3634,7 +3895,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5073749,
+        "users": 5074437,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3651,7 +3912,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6246855,
+        "users": 6247548,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3668,7 +3929,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12019868,
+        "users": 12020746,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3683,7 +3944,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 178072,
+    "totalReadTime": 179305,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -4070,7 +4331,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8232人读过"
+        "reason": "仅有8243人读过"
       },
       {
         "type": 8,
@@ -4403,7 +4664,7 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 23529,
+        "1793462400": 24762,
         "1796054400": 0
       },
       "readDays": 110,
@@ -4927,8 +5188,8 @@
           "categoryTitle": "文学",
           "parentCategoryId": 300000,
           "parentCategoryTitle": "文学",
-          "readingCount": 11,
-          "readingTime": 74100
+          "readingCount": 12,
+          "readingTime": 75299
         },
         {
           "categoryId": 100001,
@@ -4939,20 +5200,20 @@
           "readingTime": 46698
         },
         {
-          "categoryId": 600000,
-          "categoryTitle": "哲学宗教",
-          "parentCategoryId": 600000,
-          "parentCategoryTitle": "哲学宗教",
-          "readingCount": 2,
-          "readingTime": 20289
-        },
-        {
           "categoryId": 1000000,
           "categoryTitle": "个人成长",
           "parentCategoryId": 1000000,
           "parentCategoryTitle": "个人成长",
           "readingCount": 2,
           "readingTime": 19600
+        },
+        {
+          "categoryId": 600000,
+          "categoryTitle": "哲学宗教",
+          "parentCategoryId": 600000,
+          "parentCategoryTitle": "哲学宗教",
+          "readingCount": 2,
+          "readingTime": 20289
         },
         {
           "categoryId": 1100000,
@@ -4979,12 +5240,12 @@
           "readingTime": 10732
         },
         {
-          "categoryId": 200000,
-          "categoryTitle": "历史",
-          "parentCategoryId": 200000,
-          "parentCategoryTitle": "历史",
-          "readingCount": 0,
-          "readingTime": 0
+          "categoryId": 100002,
+          "categoryTitle": "情感小说",
+          "parentCategoryId": 100000,
+          "parentCategoryTitle": "精品小说",
+          "readingCount": 1,
+          "readingTime": 1199
         }
       ],
       "preferCategoryWord": "偏好阅读文学",
@@ -5050,8 +5311,18 @@
           "readTime": "2小时9分钟"
         }
       ],
-      "authorCount": 11,
+      "authorCount": 12,
       "preferCp": [
+        {
+          "count": 4,
+          "copyrightInfo": {
+            "name": "轻故事",
+            "userVid": 916162764,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0018-Ya1JHZWCjRaiDjhfPh67cf2/0",
+            "cpType": 0
+          }
+        },
         {
           "count": 3,
           "copyrightInfo": {
@@ -5060,16 +5331,6 @@
             "role": 2,
             "avatar": "https://res.weread.qq.com/wravatar/WV0021-Lwot73JgkLO_EghtiM3Cyd9/0",
             "cpType": 1
-          }
-        },
-        {
-          "count": 3,
-          "copyrightInfo": {
-            "name": "轻故事",
-            "userVid": 916162764,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0018-Ya1JHZWCjRaiDjhfPh67cf2/0",
-            "cpType": 0
           }
         },
         {
@@ -5125,16 +5386,6 @@
         {
           "count": 1,
           "copyrightInfo": {
-            "name": "磨铁数盟",
-            "userVid": 351681843,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
             "name": "湛庐CHEERS",
             "userVid": 341281594,
             "role": 2,
@@ -5151,6 +5402,16 @@
             "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
             "cpType": 0
           }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "磨铁数盟",
+            "userVid": 351681843,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0017-cUI0kK2KX6ntOCxNQl7Jnb9/0",
+            "cpType": 0
+          }
         }
       ],
       "preferPublisher": [
@@ -5163,11 +5424,11 @@
           "count": 1
         },
         {
-          "name": "浙江科学技术出版社",
+          "name": "浙江人民出版社有限公司",
           "count": 1
         },
         {
-          "name": "浙江人民出版社有限公司",
+          "name": "浙江科学技术出版社",
           "count": 1
         },
         {
@@ -5186,11 +5447,11 @@
       "readStat": [
         {
           "stat": "读过",
-          "counts": "20本"
+          "counts": "21本"
         },
         {
           "stat": "读完",
-          "counts": "13本"
+          "counts": "14本"
         },
         {
           "stat": "阅读",
@@ -5198,13 +5459,13 @@
         },
         {
           "stat": "笔记",
-          "counts": "276条"
+          "counts": "277条"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 567,
+      "dayAverageReadTime": 569,
       "baseTime": 1767196800,
-      "totalReadTime": 178059,
+      "totalReadTime": 179292,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -5405,6 +5666,200 @@
     }
   ],
   "notesByBook": {
+    "3300167144": {
+      "highlights": {
+        "synckey": 1794302977,
+        "updated": [
+          {
+            "bookId": "3300167144",
+            "chapterIdx": 3,
+            "bookmarkId": "3300167144_5_1674-1760",
+            "range": "1674-1760",
+            "markText": "月历牌撒谎，说是春天已经来到。春天可不是说到就到的。贯穿全市的街道上，一月份的积雪仍冻得像石头那么硬，手摇风琴还在演奏《在那古老的美妙的夏日》，还是那种十二月份的轻快情调。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 5,
+            "createTime": 1794302977
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "正文",
+            "chapterUid": 5,
+            "chapterIdx": 3
+          }
+        ],
+        "book": {
+          "bookId": "3300167144",
+          "version": 1393313739,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/62/cpplatform_t6we3krt7z4tumsmqjzzfq/s_cpplatform_t6we3krt7z4tumsmqjzzfq1759043823.jpg",
+          "title": "菜单上的春天（轻经典）",
+          "author": "[美]欧·亨利",
+          "coverBoxInfo": {
+            "blurhash": "K87BKP%LRjx5a#a}bhogt7",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#171a35"
+              },
+              {
+                "key": "1/6",
+                "hex": "#141840"
+              },
+              {
+                "key": "1/8",
+                "hex": "#12144b"
+              },
+              {
+                "key": "2/4",
+                "hex": "#2a2f4b"
+              },
+              {
+                "key": "2/6",
+                "hex": "#262d57"
+              },
+              {
+                "key": "2/8",
+                "hex": "#222c63"
+              },
+              {
+                "key": "3/4",
+                "hex": "#404665"
+              },
+              {
+                "key": "3/6",
+                "hex": "#3b4572"
+              },
+              {
+                "key": "3/8",
+                "hex": "#37437e"
+              },
+              {
+                "key": "3/12",
+                "hex": "#2c3f96"
+              },
+              {
+                "key": "4/6",
+                "hex": "#545e88"
+              },
+              {
+                "key": "4/10",
+                "hex": "#495ba3"
+              },
+              {
+                "key": "4/4",
+                "hex": "#595f7b"
+              },
+              {
+                "key": "5/10",
+                "hex": "#6276bc"
+              },
+              {
+                "key": "5/4",
+                "hex": "#727894"
+              },
+              {
+                "key": "5/8",
+                "hex": "#6877af"
+              },
+              {
+                "key": "6/4",
+                "hex": "#8c92ad"
+              },
+              {
+                "key": "6/6",
+                "hex": "#8792bc"
+              },
+              {
+                "key": "6/8",
+                "hex": "#8191c9"
+              },
+              {
+                "key": "6/12",
+                "hex": "#738fe7"
+              },
+              {
+                "key": "7/8",
+                "hex": "#9aabe6"
+              },
+              {
+                "key": "7/10",
+                "hex": "#93aaf6"
+              },
+              {
+                "key": "7/12",
+                "hex": "#8aa9ff"
+              },
+              {
+                "key": "8/4",
+                "hex": "#bfc7e2"
+              },
+              {
+                "key": "8/6",
+                "hex": "#b8c7f3"
+              },
+              {
+                "key": "8/12",
+                "hex": "#a3c4ff"
+              },
+              {
+                "key": "9/2",
+                "hex": "#e0e3ed"
+              },
+              {
+                "key": "9/12",
+                "hex": "#bedeff"
+              },
+              {
+                "key": "1/100",
+                "hex": "#8191c9"
+              },
+              {
+                "key": "2/100",
+                "hex": "#9aabe6"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#E5E5F3"
+              },
+              {
+                "key": "5/100",
+                "hex": "#E5E5F3"
+              },
+              {
+                "key": "6/100",
+                "hex": "#000427"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#222645",
+              "hsv": [
+                233.34030778429776,
+                50.57518432434929,
+                26.87863068942694
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/144/3300167144/s_3300167144.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/144/3300167144/s_3300167144.jpg",
+            "colorsPure": [
+              "#738fe7",
+              "#8aa9ff"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
     "CB_0dOEYMEWMA2p77975h0Wk3Ku": {
       "highlights": {
         "synckey": 1794221219,
