@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-13T06:42:48Z",
+  "updatedAt": "2026-11-13T19:40:14Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -189,8 +189,8 @@
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=3c632e90813ab7774g015d62",
         "readerLink": "https://weread.qq.com/web/reader/3c632e90813ab7774g015d62",
         "title": "罐头厂街",
-        "author": "约翰·斯坦贝克",
-        "updateTime": 1779182927,
+        "author": "[美]约翰·斯坦贝克",
+        "updateTime": 1794560477,
         "cover": "https://cdn.weread.qq.com/weread/cover/89/cpPlatform_k1Eud7zDEcjzyUHn7KPLzy/t6_cpPlatform_k1Eud7zDEcjzyUHn7KPLzy.jpg",
         "finishReading": 1,
         "readUpdateTime": 1779827104,
@@ -232,7 +232,7 @@
         "updateTime": 1689693337,
         "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/t6_35523642.jpg",
         "finishReading": 1,
-        "readUpdateTime": 1789635072,
+        "readUpdateTime": 1794589797,
         "secret": 0,
         "category": "精品小说-社会小说"
       },
@@ -266,6 +266,80 @@
   },
   "history": {
     "books": [
+      {
+        "bookId": "35523642",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=c3b32bb0721e0c3ac3bc5f6",
+        "readerLink": "https://weread.qq.com/web/reader/c3b32bb0721e0c3ac3bc5f6",
+        "title": "丰饶之海（第一卷）：春雪",
+        "author": "三岛由纪夫",
+        "translator": "陈德文",
+        "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/t6_35523642.jpg",
+        "version": 1873098669,
+        "format": "epub",
+        "type": 0,
+        "price": 30.0,
+        "originalPrice": 0,
+        "soldout": 0,
+        "bookStatus": 1,
+        "payingStatus": 1,
+        "payType": 4097,
+        "centPrice": 3000,
+        "categories": [
+          {
+            "categoryId": 100000,
+            "subCategoryId": 100001,
+            "categoryType": 0,
+            "title": "精品小说-社会小说"
+          },
+          {
+            "categoryId": 300000,
+            "subCategoryId": 300004,
+            "categoryType": 0,
+            "title": "文学-经典作品"
+          }
+        ],
+        "hasLecture": 0,
+        "finished": 1,
+        "maxFreeChapter": 7,
+        "maxFreeInfo": {
+          "maxfreeChapterIdx": 7,
+          "maxfreeChapterUid": 64,
+          "maxfreeChapterRatio": 32
+        },
+        "free": 0,
+        "mcardDiscount": 0,
+        "ispub": 1,
+        "extra_type": 1,
+        "cpid": -2571052,
+        "publishTime": "2018-10-15 00:00:00",
+        "lastChapterIdx": 58,
+        "paperBook": {
+          "skuId": ""
+        },
+        "copyrightChapterUids": [
+          59
+        ],
+        "inStoreBookId": "",
+        "blockSaveImg": 0,
+        "language": "zh",
+        "isTraditionalChinese": false,
+        "hideUpdateTime": false,
+        "isEPUBComics": 0,
+        "isVerticalLayout": 0,
+        "isShowTTS": 1,
+        "webBookControl": 0,
+        "selfProduceIncentive": false,
+        "isAutoDownload": 1,
+        "readingProgress": 100,
+        "markedStatus": 4,
+        "lastNoteSort": 1789546925,
+        "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
+        "updateTime": 1689693337,
+        "finishReading": 1,
+        "readUpdateTime": 1794589797,
+        "secret": 0,
+        "category": "精品小说-社会小说"
+      },
       {
         "bookId": "3300167144",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=fbc32750813aba7cag014134",
@@ -843,80 +917,6 @@
         "category": "文学-经典作品"
       },
       {
-        "bookId": "35523642",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=c3b32bb0721e0c3ac3bc5f6",
-        "readerLink": "https://weread.qq.com/web/reader/c3b32bb0721e0c3ac3bc5f6",
-        "title": "丰饶之海（第一卷）：春雪",
-        "author": "三岛由纪夫",
-        "translator": "陈德文",
-        "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/t6_35523642.jpg",
-        "version": 1873098669,
-        "format": "epub",
-        "type": 0,
-        "price": 30.0,
-        "originalPrice": 0,
-        "soldout": 0,
-        "bookStatus": 1,
-        "payingStatus": 1,
-        "payType": 4097,
-        "centPrice": 3000,
-        "categories": [
-          {
-            "categoryId": 100000,
-            "subCategoryId": 100001,
-            "categoryType": 0,
-            "title": "精品小说-社会小说"
-          },
-          {
-            "categoryId": 300000,
-            "subCategoryId": 300004,
-            "categoryType": 0,
-            "title": "文学-经典作品"
-          }
-        ],
-        "hasLecture": 0,
-        "finished": 1,
-        "maxFreeChapter": 7,
-        "maxFreeInfo": {
-          "maxfreeChapterIdx": 7,
-          "maxfreeChapterUid": 64,
-          "maxfreeChapterRatio": 32
-        },
-        "free": 0,
-        "mcardDiscount": 0,
-        "ispub": 1,
-        "extra_type": 1,
-        "cpid": -2571052,
-        "publishTime": "2018-10-15 00:00:00",
-        "lastChapterIdx": 58,
-        "paperBook": {
-          "skuId": ""
-        },
-        "copyrightChapterUids": [
-          59
-        ],
-        "inStoreBookId": "",
-        "blockSaveImg": 0,
-        "language": "zh",
-        "isTraditionalChinese": false,
-        "hideUpdateTime": false,
-        "isEPUBComics": 0,
-        "isVerticalLayout": 0,
-        "isShowTTS": 1,
-        "webBookControl": 0,
-        "selfProduceIncentive": false,
-        "isAutoDownload": 1,
-        "readingProgress": 100,
-        "markedStatus": 4,
-        "lastNoteSort": 1789546925,
-        "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
-        "updateTime": 1689693337,
-        "finishReading": 1,
-        "readUpdateTime": 1789635072,
-        "secret": 0,
-        "category": "精品小说-社会小说"
-      },
-      {
         "bookId": "3300106416",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=aa232350813ab9011g016d99",
         "readerLink": "https://weread.qq.com/web/reader/aa232350813ab9011g016d99",
@@ -1274,10 +1274,10 @@
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=3c632e90813ab7774g015d62",
         "readerLink": "https://weread.qq.com/web/reader/3c632e90813ab7774g015d62",
         "title": "罐头厂街",
-        "author": "约翰·斯坦贝克",
+        "author": "[美]约翰·斯坦贝克",
         "translator": "李家珅 钱凯娜 魏艳艳",
         "cover": "https://cdn.weread.qq.com/weread/cover/89/cpPlatform_k1Eud7zDEcjzyUHn7KPLzy/t6_cpPlatform_k1Eud7zDEcjzyUHn7KPLzy.jpg",
-        "version": 1086045397,
+        "version": 931734252,
         "format": "epub",
         "type": 0,
         "price": 8.99,
@@ -1337,7 +1337,7 @@
         "markedStatus": 4,
         "lastNoteSort": 1774091380,
         "intro": "《罐头厂街》（Cannery Row）首次出版于1945年。本书描写了大萧条时期美国加利福尼亚州蒙特雷市一条被称为“罐头厂街”的海边街道上的故事。这里因当时建有多家沙丁鱼罐头加工厂而得名。书中所写的实际地点是蒙特雷市的海景大道，这里后来被重新命名为“罐头厂街”以纪念此书。约翰·斯坦贝克在本书中的创作取材于他对加州蒙特雷真实居民的记忆，他将一众小人物们在这个残酷世界中生活的故事编织在一起，创造了这部含着幽默与辛酸的作品。",
-        "updateTime": 1779182927,
+        "updateTime": 1794560477,
         "finishReading": 1,
         "readUpdateTime": 1779827104,
         "secret": 1,
@@ -2479,10 +2479,10 @@
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=3c632e90813ab7774g015d62",
           "readerLink": "https://weread.qq.com/web/reader/3c632e90813ab7774g015d62",
           "title": "罐头厂街",
-          "author": "约翰·斯坦贝克",
+          "author": "[美]约翰·斯坦贝克",
           "translator": "李家珅 钱凯娜 魏艳艳",
           "cover": "https://cdn.weread.qq.com/weread/cover/89/cpPlatform_k1Eud7zDEcjzyUHn7KPLzy/t6_cpPlatform_k1Eud7zDEcjzyUHn7KPLzy.jpg",
-          "version": 1086045397,
+          "version": 931734252,
           "format": "epub",
           "type": 0,
           "price": 8.99,
@@ -2558,9 +2558,13 @@
       "1793894400": 243,
       "1794067200": 3182,
       "1794153600": 2547,
-      "1794240000": 2014
+      "1794240000": 2014,
+      "1794326400": 0,
+      "1794412800": 0,
+      "1794499200": 0,
+      "1794585600": 413
     },
-    "readDays": 9,
+    "readDays": 10,
     "readLongest": [
       {
         "book": {
@@ -2713,6 +2717,58 @@
       },
       {
         "book": {
+          "bookId": "35523642",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=c3b32bb0721e0c3ac3bc5f6",
+          "readerLink": "https://weread.qq.com/web/reader/c3b32bb0721e0c3ac3bc5f6",
+          "title": "丰饶之海（第一卷）：春雪",
+          "author": "三岛由纪夫",
+          "translator": "陈德文",
+          "intro": "《丰饶之海》系列第一部。侯爵家庭出身的清显没有勇气接受伯爵女儿聪子的求婚，在聪子被皇上敕许给洞院宫三王子治典提亲后，他们通过老仆蓼科保持联系。聪子有了孕，其父怕事情败露，让女儿去奈良月修寺躲风。聪子却在月修寺削发为尼。清显在友人帮助下，去月修寺会见聪子，遭聪子拒绝，回到东京次日，心力交瘁，离开了人世。川端康成称赞它是“现代的《源氏物语》”。",
+          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
+          "version": 1873098669,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 4097,
+          "finished": 1,
+          "maxFreeChapter": 7,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 7,
+            "maxfreeChapterUid": 64,
+            "maxfreeChapterRatio": 32
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 1,
+          "cpid": -2571052,
+          "publishTime": "2018-10-15 00:00:00",
+          "lastChapterIdx": 58,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 3000,
+          "copyrightChapterUids": [
+            59
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 413,
+        "tags": []
+      },
+      {
+        "book": {
           "bookId": "3300140838",
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=5a332100813ab9d83g018139",
           "readerLink": "https://weread.qq.com/web/reader/5a332100813ab9d83g018139",
@@ -2860,7 +2916,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "9天",
+        "counts": "10天",
         "scheme": "weread://dataCenter?showSummary=1"
       },
       {
@@ -2870,10 +2926,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 2.230718725931288,
-    "dayAverageReadTime": 1904,
+    "compare": 2.0499886664738669,
+    "dayAverageReadTime": 1798,
     "baseTime": 1793462400,
-    "totalReadTime": 24762,
+    "totalReadTime": 25175,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3083,9 +3139,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 179292
+      "1767196800": 179705
     },
-    "readDays": 112,
+    "readDays": 113,
     "readLongest": [
       {
         "book": {
@@ -3136,7 +3192,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 29326,
+        "readTime": 29739,
         "tags": []
       },
       {
@@ -3606,7 +3662,7 @@
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
         "val": 100,
-        "readingTime": 75299,
+        "readingTime": 75712,
         "readingCount": 12,
         "categoryType": 0
       },
@@ -3616,7 +3672,7 @@
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
         "val": 62,
-        "readingTime": 46698,
+        "readingTime": 47111,
         "readingCount": 4,
         "categoryType": 0
       },
@@ -3635,7 +3691,7 @@
         "categoryTitle": "个人成长",
         "parentCategoryId": 1000000,
         "parentCategoryTitle": "个人成长",
-        "val": 26,
+        "val": 25,
         "readingTime": 19600,
         "readingCount": 2,
         "categoryType": 0
@@ -3720,7 +3776,7 @@
         "authorId": 394948,
         "name": "三岛由纪夫",
         "count": 2,
-        "readTime": "10小时45分钟"
+        "readTime": "10小时52分钟"
       },
       {
         "authorId": 222757,
@@ -3917,7 +3973,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "112天",
+        "counts": "113天",
         "scheme": "weread://dataCenter?showSummary=1"
       },
       {
@@ -3935,7 +3991,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5077194,
+        "users": 5077902,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -3952,7 +4008,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6250498,
+        "users": 6251227,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -3969,7 +4025,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12024407,
+        "users": 12025269,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -3984,7 +4040,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 179305,
+    "totalReadTime": 179718,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -4165,11 +4221,11 @@
           "deepLink": "https://weread.qq.com/book-detail?type=1&v=3c632e90813ab7774g015d62",
           "readerLink": "https://weread.qq.com/web/reader/3c632e90813ab7774g015d62",
           "title": "罐头厂街",
-          "author": "约翰·斯坦贝克",
+          "author": "[美]约翰·斯坦贝克",
           "translator": "李家珅 钱凯娜 魏艳艳",
           "intro": "《罐头厂街》（Cannery Row）首次出版于1945年。本书描写了大萧条时期美国加利福尼亚州蒙特雷市一条被称为“罐头厂街”的海边街道上的故事。这里因当时建有多家沙丁鱼罐头加工厂而得名。书中所写的实际地点是蒙特雷市的海景大道，这里后来被重新命名为“罐头厂街”以纪念此书。约翰·斯坦贝克在本书中的创作取材于他对加州蒙特雷真实居民的记忆，他将一众小人物们在这个残酷世界中生活的故事编织在一起，创造了这部含着幽默与辛酸的作品。",
           "cover": "https://cdn.weread.qq.com/weread/cover/89/cpPlatform_k1Eud7zDEcjzyUHn7KPLzy/s_cpPlatform_k1Eud7zDEcjzyUHn7KPLzy.jpg",
-          "version": 1086045397,
+          "version": 931734252,
           "format": "epub",
           "type": 0,
           "soldout": 0,
@@ -4371,7 +4427,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8293人读过"
+        "reason": "仅有8311人读过"
       },
       {
         "type": 8,
@@ -6177,10 +6233,10 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 24762,
+        "1793462400": 25175,
         "1796054400": 0
       },
-      "readDays": 110,
+      "readDays": 111,
       "dailyReadTimes": {
         "1767196800": 0,
         "1767283200": 0,
@@ -6499,7 +6555,7 @@
         "1794326400": 0,
         "1794412800": 0,
         "1794499200": 0,
-        "1794585600": 0,
+        "1794585600": 413,
         "1794672000": 0,
         "1794758400": 0,
         "1794844800": 0,
@@ -6598,7 +6654,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 29326,
+          "readTime": 29739,
           "tags": []
         },
         {
@@ -7352,7 +7408,7 @@
         },
         {
           "stat": "阅读",
-          "counts": "110天",
+          "counts": "111天",
           "scheme": "weread://dataCenter?showSummary=1"
         },
         {
@@ -7364,7 +7420,7 @@
       "registTime": 1645667800,
       "dayAverageReadTime": 565,
       "baseTime": 1767196800,
-      "totalReadTime": 179292,
+      "totalReadTime": 179705,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -7447,11 +7503,11 @@
             "deepLink": "https://weread.qq.com/book-detail?type=1&v=3c632e90813ab7774g015d62",
             "readerLink": "https://weread.qq.com/web/reader/3c632e90813ab7774g015d62",
             "title": "罐头厂街",
-            "author": "约翰·斯坦贝克",
+            "author": "[美]约翰·斯坦贝克",
             "translator": "李家珅 钱凯娜 魏艳艳",
             "intro": "《罐头厂街》（Cannery Row）首次出版于1945年。本书描写了大萧条时期美国加利福尼亚州蒙特雷市一条被称为“罐头厂街”的海边街道上的故事。这里因当时建有多家沙丁鱼罐头加工厂而得名。书中所写的实际地点是蒙特雷市的海景大道，这里后来被重新命名为“罐头厂街”以纪念此书。约翰·斯坦贝克在本书中的创作取材于他对加州蒙特雷真实居民的记忆，他将一众小人物们在这个残酷世界中生活的故事编织在一起，创造了这部含着幽默与辛酸的作品。",
             "cover": "https://cdn.weread.qq.com/weread/cover/89/cpPlatform_k1Eud7zDEcjzyUHn7KPLzy/s_cpPlatform_k1Eud7zDEcjzyUHn7KPLzy.jpg",
-            "version": 1086045397,
+            "version": 931734252,
             "format": "epub",
             "type": 0,
             "soldout": 0,
@@ -7566,6 +7622,543 @@
     }
   ],
   "notesByBook": {
+    "35523642": {
+      "highlights": {
+        "synckey": 1789546925,
+        "updated": [
+          {
+            "bookId": "35523642",
+            "chapterIdx": 51,
+            "bookmarkId": "35523642_108_1695-1732",
+            "range": "1695-1732",
+            "markText": "世上有这样一种人，他们精心培育鲜花的目的，就是为了盛开之后将花瓣撕得粉碎。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 108,
+            "createTime": 1789546925
+          },
+          {
+            "bookId": "35523642",
+            "chapterIdx": 50,
+            "bookmarkId": "35523642_107_3424-3489",
+            "range": "3424-3489",
+            "markText": "附近的靶场上传来箭镞离弦的响声，令人记起冬天里风的尖叫，与此相比，报告中靶的是迟滞的鼓音。清显感到，自己的心失掉了锐利箭矢的白羽。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 107,
+            "createTime": 1789546691
+          },
+          {
+            "bookId": "35523642",
+            "chapterUid": 103,
+            "chapterIdx": 46,
+            "colorStyle": 0,
+            "type": 1,
+            "bookmarkId": "35523642_103_1275-1289",
+            "range": "1275-1289",
+            "markText": "焰燃烧得很旺，几乎舔着天棚，",
+            "createTime": 1789511926
+          },
+          {
+            "bookId": "35523642",
+            "chapterUid": 102,
+            "chapterIdx": 45,
+            "colorStyle": 0,
+            "type": 1,
+            "bookmarkId": "35523642_102_3162-3203",
+            "range": "3162-3203",
+            "markText": "树木之间还有一些红叶，承受着空中反射下来的阳光，宛若朵朵朝霞拖曳于伸展的枝条之间。",
+            "createTime": 1789511857
+          },
+          {
+            "bookId": "35523642",
+            "chapterUid": 97,
+            "chapterIdx": 40,
+            "colorStyle": 0,
+            "type": 1,
+            "bookmarkId": "35523642_97_4273-4335",
+            "range": "4273-4335",
+            "markText": "本多想：​“我们交谈的话语，犹如深夜工地上胡乱堆积的石头，一旦觉察头顶上是广大无边的沉默的星空，这些石头也只好闷声不响了。​”",
+            "createTime": 1789423079
+          },
+          {
+            "bookId": "35523642",
+            "chapterIdx": 40,
+            "bookmarkId": "35523642_97_2569-2599",
+            "range": "2569-2599",
+            "markText": "滚烫的紫色豆馅，如春泥一般从涂漆的碗盖下溢出来，慢慢地干了。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 97,
+            "createTime": 1789402660
+          },
+          {
+            "bookId": "35523642",
+            "chapterUid": 95,
+            "chapterIdx": 38,
+            "colorStyle": 0,
+            "type": 1,
+            "bookmarkId": "35523642_95_1523-1572",
+            "range": "1523-1572",
+            "markText": "我们这样一起走着，也不见您有什么幸福之感，而我现在每一刹那都在品尝幸福……您是否已经感到厌倦？​”",
+            "createTime": 1789249582
+          },
+          {
+            "bookId": "35523642",
+            "chapterUid": 95,
+            "chapterIdx": 38,
+            "colorStyle": 0,
+            "type": 1,
+            "bookmarkId": "35523642_95_647-705",
+            "range": "647-705",
+            "markText": "每天每天，我都在想，明天或许该结束了，再也无法回到过去了。但奇怪的是，尽管干下了无法挽回的事情，却依然睡得很香。​”",
+            "createTime": 1789249421
+          },
+          {
+            "bookId": "35523642",
+            "chapterUid": 93,
+            "chapterIdx": 36,
+            "colorStyle": 0,
+            "type": 1,
+            "bookmarkId": "35523642_93_8266-8324",
+            "range": "8266-8324",
+            "markText": "也许是耳朵的缘故吧，背后传来簌簌的微音，那是聪子正在从鞋里向地上抖落沙子，听起来仿佛是这个世界上最清越的沙钟的声响。",
+            "createTime": 1789248548
+          },
+          {
+            "bookId": "35523642",
+            "chapterUid": 93,
+            "chapterIdx": 36,
+            "colorStyle": 0,
+            "type": 1,
+            "bookmarkId": "35523642_93_6226-6256",
+            "range": "6226-6256",
+            "markText": "“我们要是被公开承认的一对儿，那就根本不会这般胆大妄为。​”",
+            "createTime": 1789248155
+          },
+          {
+            "bookId": "35523642",
+            "chapterUid": 93,
+            "chapterIdx": 36,
+            "colorStyle": 0,
+            "type": 1,
+            "bookmarkId": "35523642_93_5014-5089",
+            "range": "5014-5089",
+            "markText": "她焦急不安，如何才能打破禁忌、一股脑儿全都说给本多，让他知道得一清二楚呢？这可是一件难上加难的事啊，就像把死、宝石的光辉以及晚霞的美丽传达给别人一样。",
+            "createTime": 1789248008
+          },
+          {
+            "bookId": "35523642",
+            "chapterUid": 90,
+            "chapterIdx": 33,
+            "colorStyle": 3,
+            "type": 1,
+            "bookmarkId": "35523642_90_3640-3745",
+            "range": "3640-3745",
+            "markText": "清显和本多不太礼貌地交换了一下眼色。这样的信仰已经远离他们的生活，任凭如何寻觅都无法找回。尽管他们对王子们殊胜的礼拜毫无嘲讽之意，但还是觉得，这两位以往看作一般同学的王子，蓦然飞向了观念和信仰相暌离的别一世界。",
+            "createTime": 1789242424
+          },
+          {
+            "bookId": "35523642",
+            "chapterIdx": 31,
+            "bookmarkId": "35523642_88_5799-5837",
+            "range": "5799-5837",
+            "markText": "如今，人们凝神屏气，看着一个为情所苦的女子，犹如注视着一只厨师加工过的活虾。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 88,
+            "createTime": 1789216028
+          },
+          {
+            "bookId": "35523642",
+            "chapterIdx": 27,
+            "bookmarkId": "35523642_84_563-619",
+            "range": "563-619",
+            "markText": "“现在，我正爱着聪子。”\n为了验证这种感情的正确与真实，只要坚持“绝对不可能”就足够了。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 84,
+            "createTime": 1789078237
+          },
+          {
+            "bookId": "35523642",
+            "chapterUid": 83,
+            "chapterIdx": 26,
+            "colorStyle": 0,
+            "type": 1,
+            "bookmarkId": "35523642_83_4421-4504",
+            "range": "4421-4504",
+            "markText": "即使可爱的人儿就在眼前，也不一定恋着她的实体，而且，她的美丽的倩影又是实体不可或缺的形式，这样一来，一旦隔断时间和空间，就会产生双重的迷惘，同时也会加倍地接近实体……",
+            "createTime": 1789077081
+          },
+          {
+            "bookId": "35523642",
+            "chapterUid": 81,
+            "chapterIdx": 24,
+            "colorStyle": 0,
+            "type": 1,
+            "bookmarkId": "35523642_81_1791-1877",
+            "range": "1791-1877",
+            "markText": "母亲忽然注视着聪子的面颊，正要用手帕擦拭的时候，聪子立即缩了缩身子，沾在脸上的灰尘骤然消逝了。母亲这才发觉，那是玻璃窗上的一块污垢，搪住了日光，将影子映射到聪子的脸庞上了。",
+            "createTime": 1788454499
+          },
+          {
+            "bookId": "35523642",
+            "chapterUid": 80,
+            "chapterIdx": 23,
+            "colorStyle": 0,
+            "type": 1,
+            "bookmarkId": "35523642_80_2861-2960",
+            "range": "2861-2960",
+            "markText": "侯爵夫妇心灵的衣裳，尽管使人眼花缭乱，只限于南国风格的鲜艳的单色；而清显的心灵，犹如往昔女官们的丽衣，大红里透着赭黄，竹青里融进了紫红，各种颜色恍惚不定，光是猜度和揣摩儿子的心思，就弄得侯爵疲惫不堪",
+            "createTime": 1788454190
+          },
+          {
+            "bookId": "35523642",
+            "chapterUid": 78,
+            "chapterIdx": 21,
+            "colorStyle": 0,
+            "type": 1,
+            "bookmarkId": "35523642_78_1717-1787",
+            "range": "1717-1787",
+            "markText": "清显搂着聪子那只臂膀感受到了她的腰际一带的温热，仿佛置身于花瓣腐烂的温室内，心想，要是能将鼻子伸进花丛狂嗅一番，哪怕窒息而死，那也是幸运的。",
+            "createTime": 1788453535
+          },
+          {
+            "bookId": "35523642",
+            "chapterUid": 78,
+            "chapterIdx": 21,
+            "colorStyle": 0,
+            "type": 1,
+            "bookmarkId": "35523642_78_1047-1075",
+            "range": "1047-1075",
+            "markText": "布幕再次像是包孕着风，其实是聪子的身子滑着布幕走向这里。",
+            "createTime": 1788453389
+          },
+          {
+            "bookId": "35523642",
+            "chapterIdx": 16,
+            "bookmarkId": "35523642_73_876-912",
+            "range": "876-912",
+            "markText": "那钥匙宛若被揪掉翅膀的一只蜻蜓，黑黝黝地停息在他的素朴而厚实的掌心里……",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 73,
+            "createTime": 1788241723
+          },
+          {
+            "bookId": "35523642",
+            "chapterIdx": 14,
+            "bookmarkId": "35523642_71_3172-3224",
+            "range": "3172-3224",
+            "markText": "清显感到自己两颊灼热，他像孩子似的伸手摸摸聪子的面颊，发现和自己一样灼热，他满足了。只在那个地方有夏天。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 71,
+            "createTime": 1788187043
+          },
+          {
+            "bookId": "35523642",
+            "chapterIdx": 12,
+            "bookmarkId": "35523642_69_4407-4493",
+            "range": "4407-4493",
+            "markText": "饭沼事后时时在思忖，瞬间的踌躇，有时可以完全改变一个人的后半生。这一瞬间，大体好比一张白纸锐利的折痕，踌躇将人永远包裹起来，原来纸的正面变成了反面，再也不能回到正面上去了。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 69,
+            "createTime": 1787635361
+          },
+          {
+            "bookId": "35523642",
+            "chapterIdx": 10,
+            "bookmarkId": "35523642_67_1625-1671",
+            "range": "1625-1671",
+            "markText": "王子的眼眸这一两天已经浸染了青黛色的乡愁，这给性格开朗而略显浮躁的库利沙达王子别添一种风情。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 67,
+            "createTime": 1787503077
+          },
+          {
+            "bookId": "35523642",
+            "chapterIdx": 7,
+            "bookmarkId": "35523642_64_1659-1743",
+            "range": "1659-1743",
+            "markText": "十五岁的他，却及早地害怕丧失。一旦得到又害怕丧失，这种心情成为这位少年性格的特征。既然获得月亮，今后如果住在没有月亮的世界，那是多么令人恐怖的事情。尽管他憎恨那月亮……",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 64,
+            "createTime": 1785607340
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "四十八",
+            "chapterUid": 107,
+            "chapterIdx": 50
+          },
+          {
+            "title": "二十四",
+            "chapterUid": 83,
+            "chapterIdx": 26
+          },
+          {
+            "title": "二十一",
+            "chapterUid": 80,
+            "chapterIdx": 23
+          },
+          {
+            "title": "二十二",
+            "chapterUid": 81,
+            "chapterIdx": 24
+          },
+          {
+            "title": "三十六",
+            "chapterUid": 95,
+            "chapterIdx": 38
+          },
+          {
+            "title": "十九",
+            "chapterUid": 78,
+            "chapterIdx": 21
+          },
+          {
+            "title": "四十九",
+            "chapterUid": 108,
+            "chapterIdx": 51
+          },
+          {
+            "title": "十四",
+            "chapterUid": 73,
+            "chapterIdx": 16
+          },
+          {
+            "title": "三十八",
+            "chapterUid": 97,
+            "chapterIdx": 40
+          },
+          {
+            "title": "四十三",
+            "chapterUid": 102,
+            "chapterIdx": 45
+          },
+          {
+            "title": "十",
+            "chapterUid": 69,
+            "chapterIdx": 12
+          },
+          {
+            "title": "八",
+            "chapterUid": 67,
+            "chapterIdx": 10
+          },
+          {
+            "title": "二十五",
+            "chapterUid": 84,
+            "chapterIdx": 27
+          },
+          {
+            "title": "五",
+            "chapterUid": 64,
+            "chapterIdx": 7
+          },
+          {
+            "title": "十二",
+            "chapterUid": 71,
+            "chapterIdx": 14
+          },
+          {
+            "title": "三十一",
+            "chapterUid": 90,
+            "chapterIdx": 33
+          },
+          {
+            "title": "三十四",
+            "chapterUid": 93,
+            "chapterIdx": 36
+          },
+          {
+            "title": "二十九",
+            "chapterUid": 88,
+            "chapterIdx": 31
+          },
+          {
+            "title": "四十四",
+            "chapterUid": 103,
+            "chapterIdx": 46
+          }
+        ],
+        "book": {
+          "bookId": "35523642",
+          "version": 1873098669,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
+          "title": "丰饶之海（第一卷）：春雪",
+          "author": "三岛由纪夫",
+          "coverBoxInfo": {
+            "blurhash": "KLQmCqxu~q%M%Mt7tRjZIU",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#241a17"
+              },
+              {
+                "key": "1/6",
+                "hex": "#241a17"
+              },
+              {
+                "key": "1/8",
+                "hex": "#241a17"
+              },
+              {
+                "key": "2/4",
+                "hex": "#382f2b"
+              },
+              {
+                "key": "2/6",
+                "hex": "#382f2b"
+              },
+              {
+                "key": "2/8",
+                "hex": "#382f2b"
+              },
+              {
+                "key": "3/4",
+                "hex": "#504641"
+              },
+              {
+                "key": "3/6",
+                "hex": "#504641"
+              },
+              {
+                "key": "3/8",
+                "hex": "#504641"
+              },
+              {
+                "key": "3/12",
+                "hex": "#504641"
+              },
+              {
+                "key": "4/6",
+                "hex": "#695e58"
+              },
+              {
+                "key": "4/10",
+                "hex": "#695e58"
+              },
+              {
+                "key": "4/4",
+                "hex": "#695e58"
+              },
+              {
+                "key": "5/10",
+                "hex": "#827872"
+              },
+              {
+                "key": "5/4",
+                "hex": "#827872"
+              },
+              {
+                "key": "5/8",
+                "hex": "#827872"
+              },
+              {
+                "key": "6/4",
+                "hex": "#9c918b"
+              },
+              {
+                "key": "6/6",
+                "hex": "#9c918b"
+              },
+              {
+                "key": "6/8",
+                "hex": "#9c918b"
+              },
+              {
+                "key": "6/12",
+                "hex": "#9c918b"
+              },
+              {
+                "key": "7/8",
+                "hex": "#b6aca5"
+              },
+              {
+                "key": "7/10",
+                "hex": "#b6aca5"
+              },
+              {
+                "key": "7/12",
+                "hex": "#b6aca5"
+              },
+              {
+                "key": "8/4",
+                "hex": "#d0c6c0"
+              },
+              {
+                "key": "8/6",
+                "hex": "#d0c6c0"
+              },
+              {
+                "key": "8/12",
+                "hex": "#d0c6c0"
+              },
+              {
+                "key": "9/2",
+                "hex": "#ebe1da"
+              },
+              {
+                "key": "9/12",
+                "hex": "#ebe1da"
+              },
+              {
+                "key": "1/100",
+                "hex": "#9c918b"
+              },
+              {
+                "key": "2/100",
+                "hex": "#b6aca5"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#F3E8E5"
+              },
+              {
+                "key": "5/100",
+                "hex": "#F3E8E5"
+              },
+              {
+                "key": "6/100",
+                "hex": "#270500"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#221815",
+              "hsv": [
+                11.98399342050412,
+                36.67262442914435,
+                13.139138094906924
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/642/35523642/s_35523642.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/642/35523642/s_35523642.jpg",
+            "colorsPure": [
+              "#9c918b",
+              "#b6aca5"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
     "3300167144": {
       "highlights": {
         "synckey": 1794302977,
@@ -11370,543 +11963,6 @@
         "reviews": []
       }
     },
-    "35523642": {
-      "highlights": {
-        "synckey": 1789546925,
-        "updated": [
-          {
-            "bookId": "35523642",
-            "chapterIdx": 51,
-            "bookmarkId": "35523642_108_1695-1732",
-            "range": "1695-1732",
-            "markText": "世上有这样一种人，他们精心培育鲜花的目的，就是为了盛开之后将花瓣撕得粉碎。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 108,
-            "createTime": 1789546925
-          },
-          {
-            "bookId": "35523642",
-            "chapterIdx": 50,
-            "bookmarkId": "35523642_107_3424-3489",
-            "range": "3424-3489",
-            "markText": "附近的靶场上传来箭镞离弦的响声，令人记起冬天里风的尖叫，与此相比，报告中靶的是迟滞的鼓音。清显感到，自己的心失掉了锐利箭矢的白羽。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 107,
-            "createTime": 1789546691
-          },
-          {
-            "bookId": "35523642",
-            "chapterUid": 103,
-            "chapterIdx": 46,
-            "colorStyle": 0,
-            "type": 1,
-            "bookmarkId": "35523642_103_1275-1289",
-            "range": "1275-1289",
-            "markText": "焰燃烧得很旺，几乎舔着天棚，",
-            "createTime": 1789511926
-          },
-          {
-            "bookId": "35523642",
-            "chapterUid": 102,
-            "chapterIdx": 45,
-            "colorStyle": 0,
-            "type": 1,
-            "bookmarkId": "35523642_102_3162-3203",
-            "range": "3162-3203",
-            "markText": "树木之间还有一些红叶，承受着空中反射下来的阳光，宛若朵朵朝霞拖曳于伸展的枝条之间。",
-            "createTime": 1789511857
-          },
-          {
-            "bookId": "35523642",
-            "chapterUid": 97,
-            "chapterIdx": 40,
-            "colorStyle": 0,
-            "type": 1,
-            "bookmarkId": "35523642_97_4273-4335",
-            "range": "4273-4335",
-            "markText": "本多想：​“我们交谈的话语，犹如深夜工地上胡乱堆积的石头，一旦觉察头顶上是广大无边的沉默的星空，这些石头也只好闷声不响了。​”",
-            "createTime": 1789423079
-          },
-          {
-            "bookId": "35523642",
-            "chapterIdx": 40,
-            "bookmarkId": "35523642_97_2569-2599",
-            "range": "2569-2599",
-            "markText": "滚烫的紫色豆馅，如春泥一般从涂漆的碗盖下溢出来，慢慢地干了。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 97,
-            "createTime": 1789402660
-          },
-          {
-            "bookId": "35523642",
-            "chapterUid": 95,
-            "chapterIdx": 38,
-            "colorStyle": 0,
-            "type": 1,
-            "bookmarkId": "35523642_95_1523-1572",
-            "range": "1523-1572",
-            "markText": "我们这样一起走着，也不见您有什么幸福之感，而我现在每一刹那都在品尝幸福……您是否已经感到厌倦？​”",
-            "createTime": 1789249582
-          },
-          {
-            "bookId": "35523642",
-            "chapterUid": 95,
-            "chapterIdx": 38,
-            "colorStyle": 0,
-            "type": 1,
-            "bookmarkId": "35523642_95_647-705",
-            "range": "647-705",
-            "markText": "每天每天，我都在想，明天或许该结束了，再也无法回到过去了。但奇怪的是，尽管干下了无法挽回的事情，却依然睡得很香。​”",
-            "createTime": 1789249421
-          },
-          {
-            "bookId": "35523642",
-            "chapterUid": 93,
-            "chapterIdx": 36,
-            "colorStyle": 0,
-            "type": 1,
-            "bookmarkId": "35523642_93_8266-8324",
-            "range": "8266-8324",
-            "markText": "也许是耳朵的缘故吧，背后传来簌簌的微音，那是聪子正在从鞋里向地上抖落沙子，听起来仿佛是这个世界上最清越的沙钟的声响。",
-            "createTime": 1789248548
-          },
-          {
-            "bookId": "35523642",
-            "chapterUid": 93,
-            "chapterIdx": 36,
-            "colorStyle": 0,
-            "type": 1,
-            "bookmarkId": "35523642_93_6226-6256",
-            "range": "6226-6256",
-            "markText": "“我们要是被公开承认的一对儿，那就根本不会这般胆大妄为。​”",
-            "createTime": 1789248155
-          },
-          {
-            "bookId": "35523642",
-            "chapterUid": 93,
-            "chapterIdx": 36,
-            "colorStyle": 0,
-            "type": 1,
-            "bookmarkId": "35523642_93_5014-5089",
-            "range": "5014-5089",
-            "markText": "她焦急不安，如何才能打破禁忌、一股脑儿全都说给本多，让他知道得一清二楚呢？这可是一件难上加难的事啊，就像把死、宝石的光辉以及晚霞的美丽传达给别人一样。",
-            "createTime": 1789248008
-          },
-          {
-            "bookId": "35523642",
-            "chapterUid": 90,
-            "chapterIdx": 33,
-            "colorStyle": 3,
-            "type": 1,
-            "bookmarkId": "35523642_90_3640-3745",
-            "range": "3640-3745",
-            "markText": "清显和本多不太礼貌地交换了一下眼色。这样的信仰已经远离他们的生活，任凭如何寻觅都无法找回。尽管他们对王子们殊胜的礼拜毫无嘲讽之意，但还是觉得，这两位以往看作一般同学的王子，蓦然飞向了观念和信仰相暌离的别一世界。",
-            "createTime": 1789242424
-          },
-          {
-            "bookId": "35523642",
-            "chapterIdx": 31,
-            "bookmarkId": "35523642_88_5799-5837",
-            "range": "5799-5837",
-            "markText": "如今，人们凝神屏气，看着一个为情所苦的女子，犹如注视着一只厨师加工过的活虾。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 88,
-            "createTime": 1789216028
-          },
-          {
-            "bookId": "35523642",
-            "chapterIdx": 27,
-            "bookmarkId": "35523642_84_563-619",
-            "range": "563-619",
-            "markText": "“现在，我正爱着聪子。”\n为了验证这种感情的正确与真实，只要坚持“绝对不可能”就足够了。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 84,
-            "createTime": 1789078237
-          },
-          {
-            "bookId": "35523642",
-            "chapterUid": 83,
-            "chapterIdx": 26,
-            "colorStyle": 0,
-            "type": 1,
-            "bookmarkId": "35523642_83_4421-4504",
-            "range": "4421-4504",
-            "markText": "即使可爱的人儿就在眼前，也不一定恋着她的实体，而且，她的美丽的倩影又是实体不可或缺的形式，这样一来，一旦隔断时间和空间，就会产生双重的迷惘，同时也会加倍地接近实体……",
-            "createTime": 1789077081
-          },
-          {
-            "bookId": "35523642",
-            "chapterUid": 81,
-            "chapterIdx": 24,
-            "colorStyle": 0,
-            "type": 1,
-            "bookmarkId": "35523642_81_1791-1877",
-            "range": "1791-1877",
-            "markText": "母亲忽然注视着聪子的面颊，正要用手帕擦拭的时候，聪子立即缩了缩身子，沾在脸上的灰尘骤然消逝了。母亲这才发觉，那是玻璃窗上的一块污垢，搪住了日光，将影子映射到聪子的脸庞上了。",
-            "createTime": 1788454499
-          },
-          {
-            "bookId": "35523642",
-            "chapterUid": 80,
-            "chapterIdx": 23,
-            "colorStyle": 0,
-            "type": 1,
-            "bookmarkId": "35523642_80_2861-2960",
-            "range": "2861-2960",
-            "markText": "侯爵夫妇心灵的衣裳，尽管使人眼花缭乱，只限于南国风格的鲜艳的单色；而清显的心灵，犹如往昔女官们的丽衣，大红里透着赭黄，竹青里融进了紫红，各种颜色恍惚不定，光是猜度和揣摩儿子的心思，就弄得侯爵疲惫不堪",
-            "createTime": 1788454190
-          },
-          {
-            "bookId": "35523642",
-            "chapterUid": 78,
-            "chapterIdx": 21,
-            "colorStyle": 0,
-            "type": 1,
-            "bookmarkId": "35523642_78_1717-1787",
-            "range": "1717-1787",
-            "markText": "清显搂着聪子那只臂膀感受到了她的腰际一带的温热，仿佛置身于花瓣腐烂的温室内，心想，要是能将鼻子伸进花丛狂嗅一番，哪怕窒息而死，那也是幸运的。",
-            "createTime": 1788453535
-          },
-          {
-            "bookId": "35523642",
-            "chapterUid": 78,
-            "chapterIdx": 21,
-            "colorStyle": 0,
-            "type": 1,
-            "bookmarkId": "35523642_78_1047-1075",
-            "range": "1047-1075",
-            "markText": "布幕再次像是包孕着风，其实是聪子的身子滑着布幕走向这里。",
-            "createTime": 1788453389
-          },
-          {
-            "bookId": "35523642",
-            "chapterIdx": 16,
-            "bookmarkId": "35523642_73_876-912",
-            "range": "876-912",
-            "markText": "那钥匙宛若被揪掉翅膀的一只蜻蜓，黑黝黝地停息在他的素朴而厚实的掌心里……",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 73,
-            "createTime": 1788241723
-          },
-          {
-            "bookId": "35523642",
-            "chapterIdx": 14,
-            "bookmarkId": "35523642_71_3172-3224",
-            "range": "3172-3224",
-            "markText": "清显感到自己两颊灼热，他像孩子似的伸手摸摸聪子的面颊，发现和自己一样灼热，他满足了。只在那个地方有夏天。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 71,
-            "createTime": 1788187043
-          },
-          {
-            "bookId": "35523642",
-            "chapterIdx": 12,
-            "bookmarkId": "35523642_69_4407-4493",
-            "range": "4407-4493",
-            "markText": "饭沼事后时时在思忖，瞬间的踌躇，有时可以完全改变一个人的后半生。这一瞬间，大体好比一张白纸锐利的折痕，踌躇将人永远包裹起来，原来纸的正面变成了反面，再也不能回到正面上去了。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 69,
-            "createTime": 1787635361
-          },
-          {
-            "bookId": "35523642",
-            "chapterIdx": 10,
-            "bookmarkId": "35523642_67_1625-1671",
-            "range": "1625-1671",
-            "markText": "王子的眼眸这一两天已经浸染了青黛色的乡愁，这给性格开朗而略显浮躁的库利沙达王子别添一种风情。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 67,
-            "createTime": 1787503077
-          },
-          {
-            "bookId": "35523642",
-            "chapterIdx": 7,
-            "bookmarkId": "35523642_64_1659-1743",
-            "range": "1659-1743",
-            "markText": "十五岁的他，却及早地害怕丧失。一旦得到又害怕丧失，这种心情成为这位少年性格的特征。既然获得月亮，今后如果住在没有月亮的世界，那是多么令人恐怖的事情。尽管他憎恨那月亮……",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 64,
-            "createTime": 1785607340
-          }
-        ],
-        "removed": [],
-        "chapters": [
-          {
-            "title": "四十八",
-            "chapterUid": 107,
-            "chapterIdx": 50
-          },
-          {
-            "title": "二十四",
-            "chapterUid": 83,
-            "chapterIdx": 26
-          },
-          {
-            "title": "二十一",
-            "chapterUid": 80,
-            "chapterIdx": 23
-          },
-          {
-            "title": "二十二",
-            "chapterUid": 81,
-            "chapterIdx": 24
-          },
-          {
-            "title": "三十六",
-            "chapterUid": 95,
-            "chapterIdx": 38
-          },
-          {
-            "title": "十九",
-            "chapterUid": 78,
-            "chapterIdx": 21
-          },
-          {
-            "title": "四十九",
-            "chapterUid": 108,
-            "chapterIdx": 51
-          },
-          {
-            "title": "十四",
-            "chapterUid": 73,
-            "chapterIdx": 16
-          },
-          {
-            "title": "三十八",
-            "chapterUid": 97,
-            "chapterIdx": 40
-          },
-          {
-            "title": "四十三",
-            "chapterUid": 102,
-            "chapterIdx": 45
-          },
-          {
-            "title": "十",
-            "chapterUid": 69,
-            "chapterIdx": 12
-          },
-          {
-            "title": "八",
-            "chapterUid": 67,
-            "chapterIdx": 10
-          },
-          {
-            "title": "二十五",
-            "chapterUid": 84,
-            "chapterIdx": 27
-          },
-          {
-            "title": "五",
-            "chapterUid": 64,
-            "chapterIdx": 7
-          },
-          {
-            "title": "十二",
-            "chapterUid": 71,
-            "chapterIdx": 14
-          },
-          {
-            "title": "三十一",
-            "chapterUid": 90,
-            "chapterIdx": 33
-          },
-          {
-            "title": "三十四",
-            "chapterUid": 93,
-            "chapterIdx": 36
-          },
-          {
-            "title": "二十九",
-            "chapterUid": 88,
-            "chapterIdx": 31
-          },
-          {
-            "title": "四十四",
-            "chapterUid": 103,
-            "chapterIdx": 46
-          }
-        ],
-        "book": {
-          "bookId": "35523642",
-          "version": 1873098669,
-          "format": "epub",
-          "soldout": 0,
-          "bookStatus": 1,
-          "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/642/35523642/s_35523642.jpg",
-          "title": "丰饶之海（第一卷）：春雪",
-          "author": "三岛由纪夫",
-          "coverBoxInfo": {
-            "blurhash": "KLQmCqxu~q%M%Mt7tRjZIU",
-            "colors": [
-              {
-                "key": "1/4",
-                "hex": "#241a17"
-              },
-              {
-                "key": "1/6",
-                "hex": "#241a17"
-              },
-              {
-                "key": "1/8",
-                "hex": "#241a17"
-              },
-              {
-                "key": "2/4",
-                "hex": "#382f2b"
-              },
-              {
-                "key": "2/6",
-                "hex": "#382f2b"
-              },
-              {
-                "key": "2/8",
-                "hex": "#382f2b"
-              },
-              {
-                "key": "3/4",
-                "hex": "#504641"
-              },
-              {
-                "key": "3/6",
-                "hex": "#504641"
-              },
-              {
-                "key": "3/8",
-                "hex": "#504641"
-              },
-              {
-                "key": "3/12",
-                "hex": "#504641"
-              },
-              {
-                "key": "4/6",
-                "hex": "#695e58"
-              },
-              {
-                "key": "4/10",
-                "hex": "#695e58"
-              },
-              {
-                "key": "4/4",
-                "hex": "#695e58"
-              },
-              {
-                "key": "5/10",
-                "hex": "#827872"
-              },
-              {
-                "key": "5/4",
-                "hex": "#827872"
-              },
-              {
-                "key": "5/8",
-                "hex": "#827872"
-              },
-              {
-                "key": "6/4",
-                "hex": "#9c918b"
-              },
-              {
-                "key": "6/6",
-                "hex": "#9c918b"
-              },
-              {
-                "key": "6/8",
-                "hex": "#9c918b"
-              },
-              {
-                "key": "6/12",
-                "hex": "#9c918b"
-              },
-              {
-                "key": "7/8",
-                "hex": "#b6aca5"
-              },
-              {
-                "key": "7/10",
-                "hex": "#b6aca5"
-              },
-              {
-                "key": "7/12",
-                "hex": "#b6aca5"
-              },
-              {
-                "key": "8/4",
-                "hex": "#d0c6c0"
-              },
-              {
-                "key": "8/6",
-                "hex": "#d0c6c0"
-              },
-              {
-                "key": "8/12",
-                "hex": "#d0c6c0"
-              },
-              {
-                "key": "9/2",
-                "hex": "#ebe1da"
-              },
-              {
-                "key": "9/12",
-                "hex": "#ebe1da"
-              },
-              {
-                "key": "1/100",
-                "hex": "#9c918b"
-              },
-              {
-                "key": "2/100",
-                "hex": "#b6aca5"
-              },
-              {
-                "key": "3/100",
-                "hex": "#ffffff"
-              },
-              {
-                "key": "4/100",
-                "hex": "#F3E8E5"
-              },
-              {
-                "key": "5/100",
-                "hex": "#F3E8E5"
-              },
-              {
-                "key": "6/100",
-                "hex": "#270500"
-              }
-            ],
-            "dominate_color": {
-              "hex": "#221815",
-              "hsv": [
-                11.98399342050412,
-                36.67262442914435,
-                13.139138094906924
-              ]
-            },
-            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/642/35523642/s_35523642.jpg",
-            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/642/35523642/s_35523642.jpg",
-            "colorsPure": [
-              "#9c918b",
-              "#b6aca5"
-            ]
-          }
-        }
-      },
-      "thoughts": {
-        "reviews": []
-      }
-    },
     "3300106416": {
       "highlights": {
         "synckey": 1787352927,
@@ -14085,13 +14141,13 @@
         ],
         "book": {
           "bookId": "3300043405",
-          "version": 1086045397,
+          "version": 931734252,
           "format": "epub",
           "soldout": 0,
           "bookStatus": 1,
           "cover": "https://cdn.weread.qq.com/weread/cover/89/cpPlatform_k1Eud7zDEcjzyUHn7KPLzy/s_cpPlatform_k1Eud7zDEcjzyUHn7KPLzy.jpg",
           "title": "罐头厂街",
-          "author": "约翰·斯坦贝克",
+          "author": "[美]约翰·斯坦贝克",
           "coverBoxInfo": {
             "blurhash": "KPM%=ls._NITt7xu_NofIU",
             "colors": [
