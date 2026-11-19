@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-19T07:22:19Z",
+  "updatedAt": "2026-11-19T20:34:13Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -40,7 +40,7 @@
         "updateTime": 1766033832,
         "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/t6_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1795040642,
+        "readUpdateTime": 1795106722,
         "secret": 0,
         "category": "经济理财-财经"
       },
@@ -275,7 +275,7 @@
         "updateTime": 1766033832,
         "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/t6_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1795040642,
+        "readUpdateTime": 1795106722,
         "secret": 0,
         "category": "经济理财-财经"
       },
@@ -2564,9 +2564,10 @@
       "1794758400": 0,
       "1794844800": 597,
       "1794931200": 533,
-      "1795017600": 682
+      "1795017600": 682,
+      "1795104000": 339
     },
-    "readDays": 13,
+    "readDays": 14,
     "readLongest": [
       {
         "book": {
@@ -2714,7 +2715,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 1778,
+        "readTime": 2117,
         "tags": []
       },
       {
@@ -2876,11 +2877,21 @@
     ],
     "preferCategory": [
       {
+        "categoryId": 1100000,
+        "categoryTitle": "经济理财",
+        "parentCategoryId": 1100000,
+        "parentCategoryTitle": "经济理财",
+        "val": 100,
+        "readingTime": 1813,
+        "readingCount": 1,
+        "categoryType": 0
+      },
+      {
         "categoryId": 300000,
         "categoryTitle": "文学",
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
-        "val": 100,
+        "val": 88,
         "readingTime": 1612,
         "readingCount": 2,
         "categoryType": 0
@@ -2890,18 +2901,8 @@
         "categoryTitle": "情感小说",
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
-        "val": 74,
+        "val": 66,
         "readingTime": 1199,
-        "readingCount": 1,
-        "categoryType": 0
-      },
-      {
-        "categoryId": 1100000,
-        "categoryTitle": "经济理财",
-        "parentCategoryId": 1100000,
-        "parentCategoryTitle": "经济理财",
-        "val": 67,
-        "readingTime": 1096,
         "readingCount": 1,
         "categoryType": 0
       },
@@ -2910,7 +2911,7 @@
         "categoryTitle": "社会小说",
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
-        "val": 25,
+        "val": 22,
         "readingTime": 413,
         "readingCount": 1,
         "categoryType": 0
@@ -2920,7 +2921,7 @@
         "categoryTitle": "个人成长",
         "parentCategoryId": 1000000,
         "parentCategoryTitle": "个人成长",
-        "val": 18,
+        "val": 16,
         "readingTime": 300,
         "readingCount": 1,
         "categoryType": 0
@@ -2956,7 +2957,7 @@
         "categoryType": 0
       }
     ],
-    "preferCategoryWord": "偏好阅读文学",
+    "preferCategoryWord": "偏好阅读经济理财",
     "readStat": [
       {
         "stat": "读过",
@@ -2970,7 +2971,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "13天",
+        "counts": "14天",
         "scheme": "weread://dataCenter?showSummary=1"
       },
       {
@@ -2980,11 +2981,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 1.4094735114308177,
-    "dayAverageReadTime": 1420,
+    "compare": 1.3177490835476285,
+    "dayAverageReadTime": 1366,
     "baseTime": 1793462400,
-    "totalReadTime": 26991,
-    "readDistributionWord": "点评分布",
+    "totalReadTime": 27330,
     "preferBooks": [
       {
         "type": 13,
@@ -3113,42 +3113,42 @@
       },
       {
         "type": 6,
-        "title": "最爱情感小说",
+        "title": "最爱经济理财",
         "bookInfo": {
-          "bookId": "3300167144",
-          "deepLink": "https://weread.qq.com/book-detail?type=1&v=fbc32750813aba7cag014134",
-          "readerLink": "https://weread.qq.com/web/reader/fbc32750813aba7cag014134",
-          "title": "菜单上的春天（轻经典）",
-          "author": "[美]欧·亨利",
-          "translator": "王楫 康明强",
-          "intro": "本文选自欧·亨利短篇小说集。在纽约的失业打字员萨拉，靠为餐馆打印菜单维生。当她在食材清单上看到“蒲公英”这个词时，瞬间泪流满面——因为这曾是她乡下恋人为她编订婚花环的野花。\r\n欧·亨利以他标志性的温情与巧思，编织了一个都市求生中的浪漫奇迹。当一份普通的菜单，因一个思念造成的打字“错误”，竟成了连接两个世界的密信。原来春天从未遗忘这座城市，它借最卑微的蒲公英，悄悄捎来了爱的消息。",
-          "cover": "https://cdn.weread.qq.com/weread/cover/62/cpplatform_t6we3krt7z4tumsmqjzzfq/s_cpplatform_t6we3krt7z4tumsmqjzzfq1759043823.jpg",
-          "version": 1393313739,
+          "bookId": "3300187091",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=e0a32050813abaf95g0113cc",
+          "readerLink": "https://weread.qq.com/web/reader/e0a32050813abaf95g0113cc",
+          "title": "贫穷的本质：我们为什么摆脱不了贫穷（全新增订版）",
+          "author": "[美]阿比吉特·班纳吉  [法]埃斯特·迪弗洛",
+          "translator": "景芳",
+          "intro": "他们曾被说成是白人的负担，是弱国劣政的牺牲者。 他们是最底层的10亿人，每天挣扎在贫困线之下。 数万亿美元的援助未能救他们于水火，他们，依然深陷贫穷的陷阱，前路不明…… 他们为什么会贫穷？ 为什么他们吃不饱饭还要买电视？为什么他们的孩子即使上了学也不爱学习？为什么他们放着 免费的健康服务不去享受，却要自己花钱买药？为什么他们能创业却难以守业？为什么大多数人认为 小额信贷、穷人银行没什么效用？15年来，为了弄清为什么会贫穷，贫穷又会导致哪些特定问题，从而不断让穷人陷入无法逃离“贫穷陷阱”的怪圈，两位作者深入五大洲多个国家的穷人世界，调查贫困人群最集中的18个国家和地区，从穷人的日常生活、教育、健康、创业、援助等多个方面，探寻贫穷真正的根源。 同时，本书也对关于贫穷的一些流行观点进行了反思，比如援助越多穷人的依赖性越强、外部援助不起作用等等。他们指出，多年来的扶贫政策大都以失败告终，原因就在于人们对于贫穷的理解不够深刻，好钢没有用在刀刃上。他们通过大量的实例，提出了一些实用性较强的建议，寻找那些经得起检验的扶贫方案，为政策制定者、慈善家、政治家及所有希望天下脱贫的人提供了重要指导。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/s_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
+          "version": 1359265645,
           "format": "epub",
           "type": 0,
           "soldout": 0,
           "bookStatus": 1,
-          "payType": 4097,
+          "payType": 1048577,
           "finished": 1,
-          "maxFreeChapter": 3,
+          "maxFreeChapter": 5,
           "maxFreeInfo": {
-            "maxfreeChapterIdx": 3,
+            "maxfreeChapterIdx": 5,
             "maxfreeChapterUid": 5,
-            "maxfreeChapterRatio": 1
+            "maxfreeChapterRatio": 57
           },
           "free": 0,
           "mcardDiscount": 0,
           "ispub": 1,
           "extra_type": 5,
-          "cpid": 1000000121,
-          "publishTime": "2025-10-06 00:00:00",
-          "lastChapterIdx": 3,
+          "cpid": 4525313,
+          "publishTime": "2025-11-01 00:00:00",
+          "lastChapterIdx": 21,
           "paperBook": {
             "skuId": ""
           },
-          "centPrice": 990,
+          "centPrice": 4830,
           "copyrightChapterUids": [
-            4
+            2
           ],
           "inStoreBookId": "",
           "blockSaveImg": 0,
@@ -3181,7 +3181,33 @@
         "title": "总有一天读完"
       }
     ],
-    "readRecordsWord": "书籍分布"
+    "shareInfo": {
+      "title": "",
+      "subTitle": "",
+      "totalReadingDay": 14,
+      "hadReadingCount": 5,
+      "finishReadingCount": 3,
+      "hadReadingBookIds": [
+        "3300167144",
+        "3300187091",
+        "35523642",
+        "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+        "CB_8WSAeaAbjA6w77875hFO56Xg"
+      ],
+      "hadReadingAlbumIds": [],
+      "finishReadingBookIds": [
+        "3300167144",
+        "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+        "CB_8WSAeaAbjA6w77875hFO56Xg"
+      ],
+      "finishReadingAlbumIds": [],
+      "finishReadingWordCount": 4500,
+      "readingWordCount": 4500,
+      "notesCount": 71,
+      "readOverView": []
+    },
+    "readRecordsWord": "书籍分布",
+    "readDistributionWord": "点评分布"
   },
   "overall": {
     "readTimes": {
@@ -3193,9 +3219,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 181521
+      "1767196800": 181860
     },
-    "readDays": 116,
+    "readDays": 117,
     "readLongest": [
       {
         "book": {
@@ -3731,6 +3757,16 @@
         "categoryType": 0
       },
       {
+        "categoryId": 1100000,
+        "categoryTitle": "经济理财",
+        "parentCategoryId": 1100000,
+        "parentCategoryTitle": "经济理财",
+        "val": 26,
+        "readingTime": 19955,
+        "readingCount": 2,
+        "categoryType": 0
+      },
+      {
         "categoryId": 600000,
         "categoryTitle": "哲学宗教",
         "parentCategoryId": 600000,
@@ -3747,16 +3783,6 @@
         "parentCategoryTitle": "个人成长",
         "val": 25,
         "readingTime": 19600,
-        "readingCount": 2,
-        "categoryType": 0
-      },
-      {
-        "categoryId": 1100000,
-        "categoryTitle": "经济理财",
-        "parentCategoryId": 1100000,
-        "parentCategoryTitle": "经济理财",
-        "val": 25,
-        "readingTime": 19238,
         "readingCount": 2,
         "categoryType": 0
       },
@@ -3794,7 +3820,7 @@
     "preferCategoryWord": "偏好阅读文学",
     "preferTimeWord": "偏好夜间阅读",
     "preferTime": [
-      8232,
+      8453,
       5627,
       1904,
       317,
@@ -3814,9 +3840,9 @@
       18799,
       20287,
       13947,
-      7819,
+      8004,
       8778,
-      6079,
+      6390,
       11554
     ],
     "preferAuthor": [
@@ -4027,7 +4053,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "116天",
+        "counts": "117天",
         "scheme": "weread://dataCenter?showSummary=1"
       },
       {
@@ -4045,7 +4071,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5084685,
+        "users": 5085385,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -4062,7 +4088,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6259035,
+        "users": 6259842,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -4079,7 +4105,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12034550,
+        "users": 12035472,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -4092,10 +4118,9 @@
       }
     ],
     "registTime": 1645667800,
-    "readRecordsWord": "书籍分布",
-    "baseTime": 0,
-    "totalReadTime": 181534,
     "readDistributionWord": "点评分布",
+    "baseTime": 0,
+    "totalReadTime": 181873,
     "preferBooks": [
       {
         "type": 13,
@@ -4481,13 +4506,73 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8424人读过"
+        "reason": "仅有8435人读过"
       },
       {
         "type": 8,
         "title": "总有一天读完"
       }
-    ]
+    ],
+    "shareInfo": {
+      "title": "偏爱文学\n类书籍",
+      "subTitle": "",
+      "totalReadingDay": 117,
+      "hadReadingCount": 22,
+      "finishReadingCount": 14,
+      "hadReadingBookIds": [
+        "25424211",
+        "30181899",
+        "3300043405",
+        "3300106416",
+        "3300140838",
+        "3300155373",
+        "3300167144",
+        "3300171413",
+        "3300175674",
+        "3300187091",
+        "3300190668",
+        "3300194532",
+        "3300197381",
+        "3300200121",
+        "3300200122",
+        "3300200141",
+        "35523636",
+        "35523642",
+        "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+        "CB_3yaBmI0UWAJP6qW71N0nfE7v",
+        "CB_8WSAeaAbjA6w77875hFO56Xg",
+        "CB_Djp4Tt4V55Oi73w75h4jb9UW"
+      ],
+      "hadReadingAlbumIds": [],
+      "finishReadingBookIds": [
+        "3300043405",
+        "3300106416",
+        "3300140838",
+        "3300155373",
+        "3300167144",
+        "3300190668",
+        "3300194532",
+        "3300197381",
+        "3300200121",
+        "3300200122",
+        "3300200141",
+        "35523642",
+        "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+        "CB_8WSAeaAbjA6w77875hFO56Xg"
+      ],
+      "finishReadingAlbumIds": [],
+      "finishReadingWordCount": 855847,
+      "readingWordCount": 1159022,
+      "notesCount": 277,
+      "readOverView": [
+        {
+          "title": "读过神作",
+          "subTitle": "4本",
+          "desc": "神作收藏家"
+        }
+      ]
+    },
+    "readRecordsWord": "书籍分布"
   },
   "annualReports": [
     {
@@ -4896,11 +4981,10 @@
         }
       ],
       "registTime": 1645667800,
-      "readRecordsWord": "书籍分布",
+      "readDistributionWord": "点评分布",
       "dayAverageReadTime": 0,
       "baseTime": 1640966400,
       "totalReadTime": 13,
-      "readDistributionWord": "点评分布",
       "preferBooks": [
         {
           "type": 13,
@@ -4950,7 +5034,23 @@
           "type": 8,
           "title": "总有一天读完"
         }
-      ]
+      ],
+      "shareInfo": {
+        "title": "",
+        "subTitle": "",
+        "totalReadingDay": 2,
+        "hadReadingCount": 0,
+        "finishReadingCount": 0,
+        "hadReadingBookIds": [],
+        "hadReadingAlbumIds": [],
+        "finishReadingBookIds": [],
+        "finishReadingAlbumIds": [],
+        "finishReadingWordCount": 0,
+        "readingWordCount": 0,
+        "notesCount": 0,
+        "readOverView": []
+      },
+      "readRecordsWord": "书籍分布"
     },
     {
       "readTimes": {
@@ -5339,8 +5439,22 @@
       "dayAverageReadTime": 0,
       "baseTime": 1672502400,
       "totalReadTime": 0,
-      "preferTimeWord": "偏好阅读时间",
       "preferCategoryWord": "偏好阅读",
+      "shareInfo": {
+        "title": "",
+        "subTitle": "",
+        "totalReadingDay": 0,
+        "hadReadingCount": 0,
+        "finishReadingCount": 0,
+        "hadReadingBookIds": [],
+        "hadReadingAlbumIds": [],
+        "finishReadingBookIds": [],
+        "finishReadingAlbumIds": [],
+        "finishReadingWordCount": 0,
+        "readingWordCount": 0,
+        "notesCount": 0,
+        "readOverView": []
+      },
       "readRecordsWord": "书籍分布",
       "readDistributionWord": "点评分布",
       "preferBooks": [
@@ -5392,7 +5506,8 @@
           "type": 8,
           "title": "总有一天读完"
         }
-      ]
+      ],
+      "preferTimeWord": "偏好阅读时间"
     },
     {
       "readTimes": {
@@ -5782,7 +5897,6 @@
       "dayAverageReadTime": 0,
       "baseTime": 1704038400,
       "totalReadTime": 0,
-      "readDistributionWord": "点评分布",
       "preferBooks": [
         {
           "type": 13,
@@ -5833,7 +5947,23 @@
           "title": "总有一天读完"
         }
       ],
-      "readRecordsWord": "书籍分布"
+      "shareInfo": {
+        "title": "",
+        "subTitle": "",
+        "totalReadingDay": 0,
+        "hadReadingCount": 0,
+        "finishReadingCount": 0,
+        "hadReadingBookIds": [],
+        "hadReadingAlbumIds": [],
+        "finishReadingBookIds": [],
+        "finishReadingAlbumIds": [],
+        "finishReadingWordCount": 0,
+        "readingWordCount": 0,
+        "notesCount": 0,
+        "readOverView": []
+      },
+      "readRecordsWord": "书籍分布",
+      "readDistributionWord": "点评分布"
     },
     {
       "readTimes": {
@@ -6219,11 +6349,10 @@
         "1767110400": 0
       },
       "registTime": 1645667800,
-      "readRecordsWord": "书籍分布",
+      "readDistributionWord": "点评分布",
       "dayAverageReadTime": 0,
       "baseTime": 1735660800,
       "totalReadTime": 0,
-      "readDistributionWord": "点评分布",
       "preferBooks": [
         {
           "type": 13,
@@ -6273,7 +6402,23 @@
           "type": 8,
           "title": "总有一天读完"
         }
-      ]
+      ],
+      "shareInfo": {
+        "title": "",
+        "subTitle": "",
+        "totalReadingDay": 0,
+        "hadReadingCount": 0,
+        "finishReadingCount": 0,
+        "hadReadingBookIds": [],
+        "hadReadingAlbumIds": [],
+        "finishReadingBookIds": [],
+        "finishReadingAlbumIds": [],
+        "finishReadingWordCount": 0,
+        "readingWordCount": 0,
+        "notesCount": 0,
+        "readOverView": []
+      },
+      "readRecordsWord": "书籍分布"
     },
     {
       "readTimes": {
@@ -6287,10 +6432,10 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 26991,
+        "1793462400": 27330,
         "1796054400": 0
       },
-      "readDays": 114,
+      "readDays": 115,
       "dailyReadTimes": {
         "1767196800": 0,
         "1767283200": 0,
@@ -6615,7 +6760,7 @@
         "1794844800": 597,
         "1794931200": 533,
         "1795017600": 682,
-        "1795104000": 0,
+        "1795104000": 339,
         "1795190400": 0,
         "1795276800": 0,
         "1795363200": 0,
@@ -7193,6 +7338,16 @@
           "categoryType": 0
         },
         {
+          "categoryId": 1100000,
+          "categoryTitle": "经济理财",
+          "parentCategoryId": 1100000,
+          "parentCategoryTitle": "经济理财",
+          "val": 26,
+          "readingTime": 19955,
+          "readingCount": 2,
+          "categoryType": 0
+        },
+        {
           "categoryId": 600000,
           "categoryTitle": "哲学宗教",
           "parentCategoryId": 600000,
@@ -7209,16 +7364,6 @@
           "parentCategoryTitle": "个人成长",
           "val": 25,
           "readingTime": 19600,
-          "readingCount": 2,
-          "categoryType": 0
-        },
-        {
-          "categoryId": 1100000,
-          "categoryTitle": "经济理财",
-          "parentCategoryId": 1100000,
-          "parentCategoryTitle": "经济理财",
-          "val": 25,
-          "readingTime": 19238,
           "readingCount": 2,
           "categoryType": 0
         },
@@ -7462,7 +7607,7 @@
         },
         {
           "stat": "阅读",
-          "counts": "114天",
+          "counts": "115天",
           "scheme": "weread://dataCenter?showSummary=1"
         },
         {
@@ -7474,8 +7619,7 @@
       "registTime": 1645667800,
       "dayAverageReadTime": 561,
       "baseTime": 1767196800,
-      "totalReadTime": 181521,
-      "readDistributionWord": "点评分布",
+      "totalReadTime": 181860,
       "preferBooks": [
         {
           "type": 13,
@@ -7672,7 +7816,67 @@
           "title": "总有一天读完"
         }
       ],
-      "readRecordsWord": "书籍分布"
+      "shareInfo": {
+        "title": "超过半数月份\n都有读书",
+        "subTitle": "",
+        "totalReadingDay": 115,
+        "hadReadingCount": 22,
+        "finishReadingCount": 14,
+        "hadReadingBookIds": [
+          "25424211",
+          "30181899",
+          "3300043405",
+          "3300106416",
+          "3300140838",
+          "3300155373",
+          "3300167144",
+          "3300171413",
+          "3300175674",
+          "3300187091",
+          "3300190668",
+          "3300194532",
+          "3300197381",
+          "3300200121",
+          "3300200122",
+          "3300200141",
+          "35523636",
+          "35523642",
+          "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+          "CB_3yaBmI0UWAJP6qW71N0nfE7v",
+          "CB_8WSAeaAbjA6w77875hFO56Xg",
+          "CB_Djp4Tt4V55Oi73w75h4jb9UW"
+        ],
+        "hadReadingAlbumIds": [],
+        "finishReadingBookIds": [
+          "3300043405",
+          "3300106416",
+          "3300140838",
+          "3300155373",
+          "3300167144",
+          "3300190668",
+          "3300194532",
+          "3300197381",
+          "3300200121",
+          "3300200122",
+          "3300200141",
+          "35523642",
+          "CB_0dOEYMEWMA2p77975h0Wk3Ku",
+          "CB_8WSAeaAbjA6w77875hFO56Xg"
+        ],
+        "finishReadingAlbumIds": [],
+        "finishReadingWordCount": 855847,
+        "readingWordCount": 1159022,
+        "notesCount": 277,
+        "readOverView": [
+          {
+            "title": "读过神作",
+            "subTitle": "4本",
+            "desc": "神作收藏家"
+          }
+        ]
+      },
+      "readRecordsWord": "书籍分布",
+      "readDistributionWord": "点评分布"
     }
   ],
   "notesByBook": {
