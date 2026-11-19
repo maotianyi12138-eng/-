@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-17T07:53:16Z",
+  "updatedAt": "2026-11-19T00:15:46Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -40,7 +40,7 @@
         "updateTime": 1766033832,
         "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/t6_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1792530130,
+        "readUpdateTime": 1795040642,
         "secret": 0,
         "category": "经济理财-财经"
       },
@@ -130,7 +130,7 @@
         "updateTime": 1772710347,
         "cover": "https://cdn.weread.qq.com/weread/cover/49/cpplatform_8pe4n9gxbb22ofnsynyphg/t6_cpplatform_8pe4n9gxbb22ofnsynyphg1772705172.jpg",
         "finishReading": 1,
-        "readUpdateTime": 1785977934,
+        "readUpdateTime": 1794921963,
         "secret": 0,
         "category": "经济理财-管理"
       },
@@ -245,7 +245,7 @@
         "updateTime": 1775529535,
         "cover": "https://cdn.weread.qq.com/weread/cover/44/cpplatform_pej5m8wv1dt9ewnemfjmnh/t6_cpplatform_pej5m8wv1dt9ewnemfjmnh1775127717.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1792320402,
+        "readUpdateTime": 1794921963,
         "secret": 0,
         "category": "文学-外国文学"
       },
@@ -258,7 +258,7 @@
         "updateTime": 1703130813,
         "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1787138393,
+        "readUpdateTime": 1794921963,
         "secret": 0,
         "category": "哲学宗教-西方哲学"
       }
@@ -266,6 +266,168 @@
   },
   "history": {
     "books": [
+      {
+        "bookId": "3300187091",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=e0a32050813abaf95g0113cc",
+        "readerLink": "https://weread.qq.com/web/reader/e0a32050813abaf95g0113cc",
+        "title": "贫穷的本质：我们为什么摆脱不了贫穷（全新增订版）",
+        "author": "[美]阿比吉特·班纳吉  [法]埃斯特·迪弗洛",
+        "updateTime": 1766033832,
+        "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/t6_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
+        "finishReading": 0,
+        "readUpdateTime": 1795040642,
+        "secret": 0,
+        "category": "经济理财-财经"
+      },
+      {
+        "bookId": "3300200116",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=a28320b0813abb4abg01623d",
+        "readerLink": "https://weread.qq.com/web/reader/a28320b0813abb4abg01623d",
+        "title": "UFO飞落钏路：大地震之后被颠覆的日常生活（轻经典）",
+        "author": "[日]村上春树",
+        "updateTime": 1775529535,
+        "cover": "https://cdn.weread.qq.com/weread/cover/44/cpplatform_pej5m8wv1dt9ewnemfjmnh/t6_cpplatform_pej5m8wv1dt9ewnemfjmnh1775127717.jpg",
+        "finishReading": 0,
+        "readUpdateTime": 1794921963,
+        "secret": 0,
+        "category": "文学-外国文学"
+      },
+      {
+        "bookId": "3300197381",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=32732670813abb39ag011d6c",
+        "readerLink": "https://weread.qq.com/web/reader/32732670813abb39ag011d6c",
+        "title": "为什么10倍增长比2倍更容易",
+        "author": "[美]丹·沙利文  [美]本杰明·哈迪",
+        "translator": "白瑞霞",
+        "cover": "https://cdn.weread.qq.com/weread/cover/49/cpplatform_8pe4n9gxbb22ofnsynyphg/t6_cpplatform_8pe4n9gxbb22ofnsynyphg1772705172.jpg",
+        "version": 996621170,
+        "format": "epub",
+        "type": 0,
+        "price": 74.18,
+        "originalPrice": 0,
+        "soldout": 0,
+        "bookStatus": 1,
+        "payingStatus": 2,
+        "payType": 1048577,
+        "centPrice": 7418,
+        "categories": [
+          {
+            "categoryId": 1100000,
+            "subCategoryId": 1100002,
+            "categoryType": 0,
+            "title": "经济理财-管理"
+          }
+        ],
+        "hasLecture": 1,
+        "finished": 1,
+        "maxFreeChapter": 14,
+        "maxFreeInfo": {
+          "maxfreeChapterIdx": 14,
+          "maxfreeChapterUid": 14,
+          "maxfreeChapterRatio": 68
+        },
+        "free": 0,
+        "mcardDiscount": 0,
+        "ispub": 1,
+        "extra_type": 5,
+        "cpid": 17831528,
+        "publishTime": "2025-10-23 00:00:00",
+        "lastChapterIdx": 57,
+        "paperBook": {
+          "skuId": ""
+        },
+        "copyrightChapterUids": [
+          2
+        ],
+        "inStoreBookId": "",
+        "blockSaveImg": 0,
+        "language": "zh-wr",
+        "isTraditionalChinese": false,
+        "hideUpdateTime": false,
+        "isEPUBComics": 0,
+        "isVerticalLayout": 0,
+        "isShowTTS": 1,
+        "webBookControl": 0,
+        "selfProduceIncentive": false,
+        "isAutoDownload": 1,
+        "readingProgress": 86,
+        "markedStatus": 4,
+        "lastNoteSort": 1778362529,
+        "intro": "为什么10倍增长比2倍更容易？因为真正的高增长并非源于盲目努力，而是敢于放弃“看起来很多”的不错机会，转而深耕“看起来很少”但极具潜力的高质量机会。这本书告诉我们：10倍增长的关键，是用洞察代替惯性，在投入时间不变的情况下，让产出不断增加。做得更少，但做得更好——这也是复利人生的核心机制之一。\n本书颠覆传统增长逻辑，提出反直觉的“10倍增长法则”：当你设定10倍目标时，可选路径急剧减少，反而迫使你聚焦那20%高价值事项，主动过滤80%低效行为。作者丹·沙利文通过2.5万名顶尖企业家的实践,系统阐述三大核心方法:\n培养“增益思维”：关注已经取得的进步，在正确的方向上规划10倍增长。\n采用“时间膨胀术”：用\"自由日-专注日-缓冲日\"系统重构时间,创造指数级成果。\n打造“人脉杠杆”：用\"谁来做\"而非\"如何做\"思维,将80%事务交给团队。\n10倍增长不是做得更多，而是拆掉天花板——当你敢于用10倍视野重新定义目标，那些看似遥不可及的突破，其实比2倍优化容易得多。",
+        "updateTime": 1772710347,
+        "finishReading": 1,
+        "readUpdateTime": 1794921963,
+        "secret": 0,
+        "category": "经济理财-管理"
+      },
+      {
+        "bookId": "25424211",
+        "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
+        "readerLink": "https://weread.qq.com/web/reader/875329907183f1538754eac",
+        "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
+        "author": "赫伯特·马尔库塞",
+        "translator": "刘继",
+        "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
+        "version": 44968238,
+        "format": "epub",
+        "type": 0,
+        "price": 54.99,
+        "originalPrice": 0,
+        "soldout": 0,
+        "bookStatus": 1,
+        "payingStatus": 2,
+        "payType": 1048577,
+        "centPrice": 5499,
+        "categories": [
+          {
+            "categoryId": 600000,
+            "subCategoryId": 600007,
+            "categoryType": 0,
+            "title": "哲学宗教-西方哲学"
+          }
+        ],
+        "hasLecture": 1,
+        "finished": 1,
+        "maxFreeChapter": 6,
+        "maxFreeInfo": {
+          "maxfreeChapterIdx": 6,
+          "maxfreeChapterUid": 6,
+          "maxfreeChapterRatio": 89
+        },
+        "free": 0,
+        "mcardDiscount": 0,
+        "ispub": 1,
+        "extra_type": 5,
+        "cpid": 9030183,
+        "publishTime": "2014-03-01 00:00:00",
+        "lastChapterIdx": 18,
+        "paperBook": {
+          "skuId": ""
+        },
+        "copyrightChapterUids": [
+          2
+        ],
+        "inStoreBookId": "",
+        "blockSaveImg": 0,
+        "language": "zh",
+        "isTraditionalChinese": false,
+        "hideUpdateTime": false,
+        "isEPUBComics": 0,
+        "isVerticalLayout": 0,
+        "isShowTTS": 1,
+        "webBookControl": 0,
+        "selfProduceIncentive": false,
+        "isAutoDownload": 1,
+        "readingProgress": 49,
+        "markedStatus": 2,
+        "lastNoteSort": 1786891807,
+        "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
+        "updateTime": 1703130813,
+        "finishReading": 0,
+        "readUpdateTime": 1794921963,
+        "secret": 0,
+        "category": "哲学宗教-西方哲学"
+      },
       {
         "bookId": "35523642",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=c3b32bb0721e0c3ac3bc5f6",
@@ -663,19 +825,6 @@
         "updateTime": 1753950608
       },
       {
-        "bookId": "3300187091",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=e0a32050813abaf95g0113cc",
-        "readerLink": "https://weread.qq.com/web/reader/e0a32050813abaf95g0113cc",
-        "title": "贫穷的本质：我们为什么摆脱不了贫穷（全新增订版）",
-        "author": "[美]阿比吉特·班纳吉  [法]埃斯特·迪弗洛",
-        "updateTime": 1766033832,
-        "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/t6_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
-        "finishReading": 0,
-        "readUpdateTime": 1792530130,
-        "secret": 0,
-        "category": "经济理财-财经"
-      },
-      {
         "bookId": "23437971",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=f9132af07165a293f91a6ec",
         "readerLink": "https://weread.qq.com/web/reader/f9132af07165a293f91a6ec",
@@ -687,19 +836,6 @@
         "readUpdateTime": 1792530014,
         "secret": 0,
         "updateTime": 1789017454
-      },
-      {
-        "bookId": "3300200116",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=a28320b0813abb4abg01623d",
-        "readerLink": "https://weread.qq.com/web/reader/a28320b0813abb4abg01623d",
-        "title": "UFO飞落钏路：大地震之后被颠覆的日常生活（轻经典）",
-        "author": "[日]村上春树",
-        "updateTime": 1775529535,
-        "cover": "https://cdn.weread.qq.com/weread/cover/44/cpplatform_pej5m8wv1dt9ewnemfjmnh/t6_cpplatform_pej5m8wv1dt9ewnemfjmnh1775127717.jpg",
-        "finishReading": 0,
-        "readUpdateTime": 1792320402,
-        "secret": 0,
-        "category": "文学-外国文学"
       },
       {
         "bookId": "3300200141",
@@ -985,74 +1121,6 @@
         "category": "个人成长-人生哲学"
       },
       {
-        "bookId": "25424211",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=875329907183f1538754eac",
-        "readerLink": "https://weread.qq.com/web/reader/875329907183f1538754eac",
-        "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
-        "author": "赫伯特·马尔库塞",
-        "translator": "刘继",
-        "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/t6_YueWen_25424211.jpg",
-        "version": 44968238,
-        "format": "epub",
-        "type": 0,
-        "price": 54.99,
-        "originalPrice": 0,
-        "soldout": 0,
-        "bookStatus": 1,
-        "payingStatus": 2,
-        "payType": 1048577,
-        "centPrice": 5499,
-        "categories": [
-          {
-            "categoryId": 600000,
-            "subCategoryId": 600007,
-            "categoryType": 0,
-            "title": "哲学宗教-西方哲学"
-          }
-        ],
-        "hasLecture": 1,
-        "finished": 1,
-        "maxFreeChapter": 6,
-        "maxFreeInfo": {
-          "maxfreeChapterIdx": 6,
-          "maxfreeChapterUid": 6,
-          "maxfreeChapterRatio": 89
-        },
-        "free": 0,
-        "mcardDiscount": 0,
-        "ispub": 1,
-        "extra_type": 5,
-        "cpid": 9030183,
-        "publishTime": "2014-03-01 00:00:00",
-        "lastChapterIdx": 18,
-        "paperBook": {
-          "skuId": ""
-        },
-        "copyrightChapterUids": [
-          2
-        ],
-        "inStoreBookId": "",
-        "blockSaveImg": 0,
-        "language": "zh",
-        "isTraditionalChinese": false,
-        "hideUpdateTime": false,
-        "isEPUBComics": 0,
-        "isVerticalLayout": 0,
-        "isShowTTS": 1,
-        "webBookControl": 0,
-        "selfProduceIncentive": false,
-        "isAutoDownload": 1,
-        "readingProgress": 49,
-        "markedStatus": 2,
-        "lastNoteSort": 1786891807,
-        "intro": "赫伯特·尔库塞（Herbert Marcuse，1898-1979）是法兰克福学派左翼主要代表人物，本书是其最负盛名的著作，旨在揭示当代发达工业社会型的极权主义特征。此书在英国和美国出版后，先后在德国和法国出德文版和法文版，其后又译成多种文字在许多国家出版，被称为西方60年代末大学造反运动的教科书。全书除导言外包括“单向度社会”、“单向度的思想”和“进行替代性选择的机会”三部分。作者通过对政治、生活、思想、文化、语言等领域的分析、批判，指出发达工业社会是如何成功地压制了人们内心中的否定性、批判性、超越性的向度，使这个社会成为单向度的社会，而生活于其中的人成了单向度的人，这种人丧失了自由和创造力，不再想像或追求与现实生活不同的另一种生活。本书对现代资本主义社会作了较为深刻的揭露和探索，但暴露出其社会批判理论的乌托邦性质。本书对研究兰克福学派和马尔库塞理论的发展，有重要的理论价值。",
-        "updateTime": 1703130813,
-        "finishReading": 0,
-        "readUpdateTime": 1787138393,
-        "secret": 0,
-        "category": "哲学宗教-西方哲学"
-      },
-      {
         "bookId": "30181899",
         "deepLink": "https://weread.qq.com/book-detail?type=1&v=7a332d8071cc8a0b7a31e96",
         "readerLink": "https://weread.qq.com/web/reader/7a332d8071cc8a0b7a31e96",
@@ -1131,74 +1199,6 @@
         "secret": 1,
         "finishReading": 0,
         "readUpdateTime": 1786121585
-      },
-      {
-        "bookId": "3300197381",
-        "deepLink": "https://weread.qq.com/book-detail?type=1&v=32732670813abb39ag011d6c",
-        "readerLink": "https://weread.qq.com/web/reader/32732670813abb39ag011d6c",
-        "title": "为什么10倍增长比2倍更容易",
-        "author": "[美]丹·沙利文  [美]本杰明·哈迪",
-        "translator": "白瑞霞",
-        "cover": "https://cdn.weread.qq.com/weread/cover/49/cpplatform_8pe4n9gxbb22ofnsynyphg/t6_cpplatform_8pe4n9gxbb22ofnsynyphg1772705172.jpg",
-        "version": 996621170,
-        "format": "epub",
-        "type": 0,
-        "price": 74.18,
-        "originalPrice": 0,
-        "soldout": 0,
-        "bookStatus": 1,
-        "payingStatus": 2,
-        "payType": 1048577,
-        "centPrice": 7418,
-        "categories": [
-          {
-            "categoryId": 1100000,
-            "subCategoryId": 1100002,
-            "categoryType": 0,
-            "title": "经济理财-管理"
-          }
-        ],
-        "hasLecture": 1,
-        "finished": 1,
-        "maxFreeChapter": 14,
-        "maxFreeInfo": {
-          "maxfreeChapterIdx": 14,
-          "maxfreeChapterUid": 14,
-          "maxfreeChapterRatio": 68
-        },
-        "free": 0,
-        "mcardDiscount": 0,
-        "ispub": 1,
-        "extra_type": 5,
-        "cpid": 17831528,
-        "publishTime": "2025-10-23 00:00:00",
-        "lastChapterIdx": 57,
-        "paperBook": {
-          "skuId": ""
-        },
-        "copyrightChapterUids": [
-          2
-        ],
-        "inStoreBookId": "",
-        "blockSaveImg": 0,
-        "language": "zh-wr",
-        "isTraditionalChinese": false,
-        "hideUpdateTime": false,
-        "isEPUBComics": 0,
-        "isVerticalLayout": 0,
-        "isShowTTS": 1,
-        "webBookControl": 0,
-        "selfProduceIncentive": false,
-        "isAutoDownload": 1,
-        "readingProgress": 86,
-        "markedStatus": 4,
-        "lastNoteSort": 1778362529,
-        "intro": "为什么10倍增长比2倍更容易？因为真正的高增长并非源于盲目努力，而是敢于放弃“看起来很多”的不错机会，转而深耕“看起来很少”但极具潜力的高质量机会。这本书告诉我们：10倍增长的关键，是用洞察代替惯性，在投入时间不变的情况下，让产出不断增加。做得更少，但做得更好——这也是复利人生的核心机制之一。\n本书颠覆传统增长逻辑，提出反直觉的“10倍增长法则”：当你设定10倍目标时，可选路径急剧减少，反而迫使你聚焦那20%高价值事项，主动过滤80%低效行为。作者丹·沙利文通过2.5万名顶尖企业家的实践,系统阐述三大核心方法:\n培养“增益思维”：关注已经取得的进步，在正确的方向上规划10倍增长。\n采用“时间膨胀术”：用\"自由日-专注日-缓冲日\"系统重构时间,创造指数级成果。\n打造“人脉杠杆”：用\"谁来做\"而非\"如何做\"思维,将80%事务交给团队。\n10倍增长不是做得更多，而是拆掉天花板——当你敢于用10倍视野重新定义目标，那些看似遥不可及的突破，其实比2倍优化容易得多。",
-        "updateTime": 1772710347,
-        "finishReading": 1,
-        "readUpdateTime": 1785977934,
-        "secret": 0,
-        "category": "经济理财-管理"
       },
       {
         "bookId": "3300190668",
@@ -1452,7 +1452,7 @@
         "finishReading": 0
       }
     ],
-    "totalReadCount": 21
+    "totalReadCount": 22
   },
   "notebooks": {
     "books": [
@@ -2559,12 +2559,14 @@
       "1794067200": 3182,
       "1794153600": 2547,
       "1794240000": 2014,
-      "1794326400": 0,
-      "1794412800": 0,
-      "1794499200": 0,
-      "1794585600": 413
+      "1794499200": 4,
+      "1794585600": 413,
+      "1794758400": 0,
+      "1794844800": 597,
+      "1794931200": 533,
+      "1795017600": 682
     },
-    "readDays": 10,
+    "readDays": 13,
     "readLongest": [
       {
         "book": {
@@ -2661,6 +2663,58 @@
           "isAutoDownload": 1
         },
         "readTime": 7243,
+        "tags": []
+      },
+      {
+        "book": {
+          "bookId": "3300187091",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=e0a32050813abaf95g0113cc",
+          "readerLink": "https://weread.qq.com/web/reader/e0a32050813abaf95g0113cc",
+          "title": "贫穷的本质：我们为什么摆脱不了贫穷（全新增订版）",
+          "author": "[美]阿比吉特·班纳吉  [法]埃斯特·迪弗洛",
+          "translator": "景芳",
+          "intro": "他们曾被说成是白人的负担，是弱国劣政的牺牲者。 他们是最底层的10亿人，每天挣扎在贫困线之下。 数万亿美元的援助未能救他们于水火，他们，依然深陷贫穷的陷阱，前路不明…… 他们为什么会贫穷？ 为什么他们吃不饱饭还要买电视？为什么他们的孩子即使上了学也不爱学习？为什么他们放着 免费的健康服务不去享受，却要自己花钱买药？为什么他们能创业却难以守业？为什么大多数人认为 小额信贷、穷人银行没什么效用？15年来，为了弄清为什么会贫穷，贫穷又会导致哪些特定问题，从而不断让穷人陷入无法逃离“贫穷陷阱”的怪圈，两位作者深入五大洲多个国家的穷人世界，调查贫困人群最集中的18个国家和地区，从穷人的日常生活、教育、健康、创业、援助等多个方面，探寻贫穷真正的根源。 同时，本书也对关于贫穷的一些流行观点进行了反思，比如援助越多穷人的依赖性越强、外部援助不起作用等等。他们指出，多年来的扶贫政策大都以失败告终，原因就在于人们对于贫穷的理解不够深刻，好钢没有用在刀刃上。他们通过大量的实例，提出了一些实用性较强的建议，寻找那些经得起检验的扶贫方案，为政策制定者、慈善家、政治家及所有希望天下脱贫的人提供了重要指导。",
+          "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/s_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
+          "version": 1359265645,
+          "format": "epub",
+          "type": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payType": 1048577,
+          "finished": 1,
+          "maxFreeChapter": 5,
+          "maxFreeInfo": {
+            "maxfreeChapterIdx": 5,
+            "maxfreeChapterUid": 5,
+            "maxfreeChapterRatio": 57
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 4525313,
+          "publishTime": "2025-11-01 00:00:00",
+          "lastChapterIdx": 21,
+          "paperBook": {
+            "skuId": ""
+          },
+          "centPrice": 4830,
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "selfProduceIncentive": false,
+          "webBookControl": 0,
+          "isAutoDownload": 1
+        },
+        "readTime": 1778,
         "tags": []
       },
       {
@@ -2842,6 +2896,16 @@
         "categoryType": 0
       },
       {
+        "categoryId": 1100000,
+        "categoryTitle": "经济理财",
+        "parentCategoryId": 1100000,
+        "parentCategoryTitle": "经济理财",
+        "val": 67,
+        "readingTime": 1096,
+        "readingCount": 1,
+        "categoryType": 0
+      },
+      {
         "categoryId": 100001,
         "categoryTitle": "社会小说",
         "parentCategoryId": 100000,
@@ -2872,16 +2936,6 @@
         "categoryType": 0
       },
       {
-        "categoryId": 1100000,
-        "categoryTitle": "经济理财",
-        "parentCategoryId": 1100000,
-        "parentCategoryTitle": "经济理财",
-        "val": 0,
-        "readingTime": 0,
-        "readingCount": 0,
-        "categoryType": 0
-      },
-      {
         "categoryId": 900000,
         "categoryTitle": "社会文化",
         "parentCategoryId": 900000,
@@ -2906,7 +2960,7 @@
     "readStat": [
       {
         "stat": "读过",
-        "counts": "4本",
+        "counts": "5本",
         "scheme": "weread://rctView?bundleName=readingRecord&moduleName=RNReadingRecordPage&underneathNavigationBar=1&hideNavigationBar=1&listType=1&style=0&initTabIndex=0"
       },
       {
@@ -2916,7 +2970,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "10天",
+        "counts": "13天",
         "scheme": "weread://dataCenter?showSummary=1"
       },
       {
@@ -2926,10 +2980,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 1.511755372390243,
-    "dayAverageReadTime": 1480,
+    "compare": 1.4094735114308177,
+    "dayAverageReadTime": 1420,
     "baseTime": 1793462400,
-    "totalReadTime": 25175,
+    "totalReadTime": 26991,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -3139,9 +3193,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 179705
+      "1767196800": 181521
     },
-    "readDays": 113,
+    "readDays": 116,
     "readLongest": [
       {
         "book": {
@@ -3392,7 +3446,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 12495,
+        "readTime": 12497,
         "tags": []
       },
       {
@@ -3682,7 +3736,7 @@
         "parentCategoryId": 600000,
         "parentCategoryTitle": "哲学宗教",
         "val": 26,
-        "readingTime": 20289,
+        "readingTime": 20291,
         "readingCount": 2,
         "categoryType": 0
       },
@@ -3701,9 +3755,9 @@
         "categoryTitle": "经济理财",
         "parentCategoryId": 1100000,
         "parentCategoryTitle": "经济理财",
-        "val": 23,
-        "readingTime": 18052,
-        "readingCount": 1,
+        "val": 25,
+        "readingTime": 19238,
+        "readingCount": 2,
         "categoryType": 0
       },
       {
@@ -3755,13 +3809,13 @@
       8685,
       21207,
       9131,
-      13162,
+      13386,
       7941,
-      18793,
+      18799,
       20287,
-      13506,
-      7749,
-      8420,
+      13947,
+      7819,
+      8778,
       6079,
       11554
     ],
@@ -3827,7 +3881,7 @@
         "readTime": "2小时9分钟"
       }
     ],
-    "authorCount": 12,
+    "authorCount": 13,
     "preferCp": [
       {
         "count": 4,
@@ -3847,6 +3901,16 @@
           "role": 2,
           "avatar": "https://res.weread.qq.com/wravatar/WV0021-Lwot73JgkLO_EghtiM3Cyd9/0",
           "cpType": 1
+        }
+      },
+      {
+        "count": 2,
+        "copyrightInfo": {
+          "name": "中信出版集团",
+          "userVid": 168010251,
+          "role": 2,
+          "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
+          "cpType": 0
         }
       },
       {
@@ -3882,16 +3946,6 @@
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "中信出版集团",
-          "userVid": 168010251,
-          "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
-          "cpType": 0
-        }
-      },
-      {
-        "count": 1,
-        "copyrightInfo": {
           "name": "东西时代",
           "userVid": 519906148,
           "role": 2,
@@ -3902,20 +3956,20 @@
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "北京科技出版社",
-          "userVid": 526108011,
+          "name": "上海译文出版社",
+          "userVid": 331381138,
           "role": 2,
-          "avatar": "https://res.weread.qq.com/wravatar/WV0009-LEe1nFnveyDEZ3gb_nErxd2/0",
+          "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
           "cpType": 0
         }
       },
       {
         "count": 1,
         "copyrightInfo": {
-          "name": "上海译文出版社",
-          "userVid": 331381138,
+          "name": "北京科技出版社",
+          "userVid": 526108011,
           "role": 2,
-          "avatar": "https://wx.qlogo.cn/mmhead/AbruuZ3ILCltXXeXfuNnO0WxpcibFJCvM6T7tgzbZXQszHnahNxBtYQ/0",
+          "avatar": "https://res.weread.qq.com/wravatar/WV0009-LEe1nFnveyDEZ3gb_nErxd2/0",
           "cpType": 0
         }
       },
@@ -3937,11 +3991,7 @@
       },
       {
         "name": "中信出版集团",
-        "count": 1
-      },
-      {
-        "name": "上海译文出版社",
-        "count": 1
+        "count": 2
       },
       {
         "name": "北京科学技术出版社有限公司",
@@ -3956,6 +4006,10 @@
         "count": 1
       },
       {
+        "name": "上海译文出版社",
+        "count": 1
+      },
+      {
         "name": "山东文艺出版社",
         "count": 1
       }
@@ -3963,7 +4017,7 @@
     "readStat": [
       {
         "stat": "读过",
-        "counts": "21本",
+        "counts": "22本",
         "scheme": "weread://rctView?bundleName=readingRecord&moduleName=RNReadingRecordPage&underneathNavigationBar=1&hideNavigationBar=1&listType=1&style=0&initTabIndex=0"
       },
       {
@@ -3973,7 +4027,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "113天",
+        "counts": "116天",
         "scheme": "weread://dataCenter?showSummary=1"
       },
       {
@@ -3991,7 +4045,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5082314,
+        "users": 5084269,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -4008,7 +4062,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6256352,
+        "users": 6258590,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -4025,7 +4079,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12031322,
+        "users": 12033979,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -4040,7 +4094,7 @@
     "registTime": 1645667800,
     "readRecordsWord": "书籍分布",
     "baseTime": 0,
-    "totalReadTime": 179718,
+    "totalReadTime": 181534,
     "readDistributionWord": "点评分布",
     "preferBooks": [
       {
@@ -4427,7 +4481,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8387人读过"
+        "reason": "仅有8414人读过"
       },
       {
         "type": 8,
@@ -6233,10 +6287,10 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 25175,
+        "1793462400": 26991,
         "1796054400": 0
       },
-      "readDays": 111,
+      "readDays": 114,
       "dailyReadTimes": {
         "1767196800": 0,
         "1767283200": 0,
@@ -6554,13 +6608,13 @@
         "1794240000": 2014,
         "1794326400": 0,
         "1794412800": 0,
-        "1794499200": 0,
+        "1794499200": 4,
         "1794585600": 413,
         "1794672000": 0,
         "1794758400": 0,
-        "1794844800": 0,
-        "1794931200": 0,
-        "1795017600": 0,
+        "1794844800": 597,
+        "1794931200": 533,
+        "1795017600": 682,
         "1795104000": 0,
         "1795190400": 0,
         "1795276800": 0,
@@ -6854,7 +6908,7 @@
             "webBookControl": 0,
             "isAutoDownload": 1
           },
-          "readTime": 12495,
+          "readTime": 12497,
           "tags": []
         },
         {
@@ -7144,7 +7198,7 @@
           "parentCategoryId": 600000,
           "parentCategoryTitle": "哲学宗教",
           "val": 26,
-          "readingTime": 20289,
+          "readingTime": 20291,
           "readingCount": 2,
           "categoryType": 0
         },
@@ -7163,9 +7217,9 @@
           "categoryTitle": "经济理财",
           "parentCategoryId": 1100000,
           "parentCategoryTitle": "经济理财",
-          "val": 23,
-          "readingTime": 18052,
-          "readingCount": 1,
+          "val": 25,
+          "readingTime": 19238,
+          "readingCount": 2,
           "categoryType": 0
         },
         {
@@ -7262,7 +7316,7 @@
           "readTime": "2小时9分钟"
         }
       ],
-      "authorCount": 12,
+      "authorCount": 13,
       "preferCp": [
         {
           "count": 4,
@@ -7287,6 +7341,16 @@
         {
           "count": 2,
           "copyrightInfo": {
+            "name": "中信出版集团",
+            "userVid": 168010251,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 2,
+          "copyrightInfo": {
             "name": "人民文学出版社有限公司",
             "userVid": 136179393,
             "role": 2,
@@ -7301,6 +7365,16 @@
             "userVid": 290625916,
             "role": 2,
             "avatar": "https://res.weread.qq.com/wravatar/WV0002-ewckDJVkN2UQIDFW8MxCdf1/0",
+            "cpType": 0
+          }
+        },
+        {
+          "count": 1,
+          "copyrightInfo": {
+            "name": "湛庐CHEERS",
+            "userVid": 341281594,
+            "role": 2,
+            "avatar": "https://res.weread.qq.com/wravatar/WV0011-ZlyTRc7hpfLYxdG7URz2m10/0",
             "cpType": 0
           }
         },
@@ -7337,26 +7411,6 @@
         {
           "count": 1,
           "copyrightInfo": {
-            "name": "湛庐CHEERS",
-            "userVid": 341281594,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0011-ZlyTRc7hpfLYxdG7URz2m10/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
-            "name": "中信出版集团",
-            "userVid": 168010251,
-            "role": 2,
-            "avatar": "https://res.weread.qq.com/wravatar/WV0024-U1iMC6kMGhnrmZPNpypE~a6/0",
-            "cpType": 0
-          }
-        },
-        {
-          "count": 1,
-          "copyrightInfo": {
             "name": "磨铁数盟",
             "userVid": 351681843,
             "role": 2,
@@ -7367,11 +7421,15 @@
       ],
       "preferPublisher": [
         {
+          "name": "中信出版集团",
+          "count": 2
+        },
+        {
           "name": "人民文学出版社",
           "count": 2
         },
         {
-          "name": "中信出版集团",
+          "name": "浙江科学技术出版社",
           "count": 1
         },
         {
@@ -7379,26 +7437,22 @@
           "count": 1
         },
         {
-          "name": "浙江科学技术出版社",
-          "count": 1
-        },
-        {
           "name": "北京科学技术出版社有限公司",
           "count": 1
         },
         {
-          "name": "山东文艺出版社",
+          "name": "上海译文出版社",
           "count": 1
         },
         {
-          "name": "上海译文出版社",
+          "name": "山东文艺出版社",
           "count": 1
         }
       ],
       "readStat": [
         {
           "stat": "读过",
-          "counts": "21本",
+          "counts": "22本",
           "scheme": "weread://rctView?bundleName=readingRecord&moduleName=RNReadingRecordPage&underneathNavigationBar=1&hideNavigationBar=1&listType=1&style=0&initTabIndex=0"
         },
         {
@@ -7408,7 +7462,7 @@
         },
         {
           "stat": "阅读",
-          "counts": "111天",
+          "counts": "114天",
           "scheme": "weread://dataCenter?showSummary=1"
         },
         {
@@ -7418,9 +7472,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 559,
+      "dayAverageReadTime": 561,
       "baseTime": 1767196800,
-      "totalReadTime": 179705,
+      "totalReadTime": 181521,
       "readDistributionWord": "点评分布",
       "preferBooks": [
         {
@@ -7622,6 +7676,1384 @@
     }
   ],
   "notesByBook": {
+    "3300187091": {
+      "highlights": {
+        "synckey": 0,
+        "updated": [],
+        "removed": [],
+        "chapters": [],
+        "book": {
+          "bookId": "3300187091",
+          "version": 1359265645,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/s_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
+          "title": "贫穷的本质：我们为什么摆脱不了贫穷（全新增订版）",
+          "author": "[美]阿比吉特·班纳吉  [法]埃斯特·迪弗洛",
+          "coverBoxInfo": {
+            "blurhash": "KOQl::o}-;t8.SMd8wIURj",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#380e0e"
+              },
+              {
+                "key": "1/6",
+                "hex": "#40030a"
+              },
+              {
+                "key": "1/8",
+                "hex": "#480006"
+              },
+              {
+                "key": "2/4",
+                "hex": "#4d261f"
+              },
+              {
+                "key": "2/6",
+                "hex": "#561f16"
+              },
+              {
+                "key": "2/8",
+                "hex": "#60140a"
+              },
+              {
+                "key": "3/4",
+                "hex": "#673c30"
+              },
+              {
+                "key": "3/6",
+                "hex": "#723624"
+              },
+              {
+                "key": "3/8",
+                "hex": "#7c2f16"
+              },
+              {
+                "key": "3/12",
+                "hex": "#8d1a00"
+              },
+              {
+                "key": "4/6",
+                "hex": "#8d503a"
+              },
+              {
+                "key": "4/10",
+                "hex": "#a1431b"
+              },
+              {
+                "key": "4/4",
+                "hex": "#825547"
+              },
+              {
+                "key": "5/10",
+                "hex": "#c05d31"
+              },
+              {
+                "key": "5/4",
+                "hex": "#9b6f60"
+              },
+              {
+                "key": "5/8",
+                "hex": "#b56442"
+              },
+              {
+                "key": "6/4",
+                "hex": "#b68979"
+              },
+              {
+                "key": "6/6",
+                "hex": "#c4846b"
+              },
+              {
+                "key": "6/8",
+                "hex": "#d07e5c"
+              },
+              {
+                "key": "6/12",
+                "hex": "#e77239"
+              },
+              {
+                "key": "7/8",
+                "hex": "#ed9874"
+              },
+              {
+                "key": "7/10",
+                "hex": "#f99365"
+              },
+              {
+                "key": "7/12",
+                "hex": "#ff8c51"
+              },
+              {
+                "key": "8/4",
+                "hex": "#ecbeab"
+              },
+              {
+                "key": "8/6",
+                "hex": "#fcb89b"
+              },
+              {
+                "key": "8/12",
+                "hex": "#ffa667"
+              },
+              {
+                "key": "9/2",
+                "hex": "#f3dfd7"
+              },
+              {
+                "key": "9/12",
+                "hex": "#ffc082"
+              },
+              {
+                "key": "1/100",
+                "hex": "#d07e5c"
+              },
+              {
+                "key": "2/100",
+                "hex": "#ed9874"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#F3E8E5"
+              },
+              {
+                "key": "5/100",
+                "hex": "#F3E8E5"
+              },
+              {
+                "key": "6/100",
+                "hex": "#270500"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#f2cbbb",
+              "hsv": [
+                17.49865686382006,
+                22.72121875570151,
+                94.71732652192422
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/91/3300187091/s_3300187091.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/91/3300187091/s_3300187091.jpg",
+            "colorsPure": [
+              "#e77239",
+              "#ff8c51"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "3300200116": {
+      "highlights": {
+        "synckey": 0,
+        "updated": [],
+        "removed": [],
+        "chapters": [],
+        "book": {
+          "bookId": "3300200116",
+          "version": 1003491567,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/44/cpplatform_pej5m8wv1dt9ewnemfjmnh/s_cpplatform_pej5m8wv1dt9ewnemfjmnh1775127717.jpg",
+          "title": "UFO飞落钏路：大地震之后被颠覆的日常生活（轻经典）",
+          "author": "[日]村上春树",
+          "coverBoxInfo": {
+            "blurhash": "K2R.iU?H*L9ua}%10PRjDh",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#371004"
+              },
+              {
+                "key": "1/6",
+                "hex": "#3e0700"
+              },
+              {
+                "key": "1/8",
+                "hex": "#450000"
+              },
+              {
+                "key": "2/4",
+                "hex": "#4b2719"
+              },
+              {
+                "key": "2/6",
+                "hex": "#542209"
+              },
+              {
+                "key": "2/8",
+                "hex": "#5c1b00"
+              },
+              {
+                "key": "3/4",
+                "hex": "#643e2c"
+              },
+              {
+                "key": "3/6",
+                "hex": "#6e391b"
+              },
+              {
+                "key": "3/8",
+                "hex": "#763504"
+              },
+              {
+                "key": "3/12",
+                "hex": "#822b00"
+              },
+              {
+                "key": "4/6",
+                "hex": "#8a5232"
+              },
+              {
+                "key": "4/10",
+                "hex": "#9a4a01"
+              },
+              {
+                "key": "4/4",
+                "hex": "#805741"
+              },
+              {
+                "key": "5/10",
+                "hex": "#b96320"
+              },
+              {
+                "key": "5/4",
+                "hex": "#99715a"
+              },
+              {
+                "key": "5/8",
+                "hex": "#b06736"
+              },
+              {
+                "key": "6/4",
+                "hex": "#b48b73"
+              },
+              {
+                "key": "6/6",
+                "hex": "#c18661"
+              },
+              {
+                "key": "6/8",
+                "hex": "#cc814f"
+              },
+              {
+                "key": "6/12",
+                "hex": "#de7921"
+              },
+              {
+                "key": "7/8",
+                "hex": "#e89c68"
+              },
+              {
+                "key": "7/10",
+                "hex": "#f39755"
+              },
+              {
+                "key": "7/12",
+                "hex": "#fd933c"
+              },
+              {
+                "key": "8/4",
+                "hex": "#eabfa4"
+              },
+              {
+                "key": "8/6",
+                "hex": "#f9bb92"
+              },
+              {
+                "key": "8/12",
+                "hex": "#ffad53"
+              },
+              {
+                "key": "9/2",
+                "hex": "#f4dfd2"
+              },
+              {
+                "key": "9/12",
+                "hex": "#ffc86e"
+              },
+              {
+                "key": "1/100",
+                "hex": "#cc814f"
+              },
+              {
+                "key": "2/100",
+                "hex": "#e89c68"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#F3E8E5"
+              },
+              {
+                "key": "5/100",
+                "hex": "#F3E8E5"
+              },
+              {
+                "key": "6/100",
+                "hex": "#270500"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#fee8da",
+              "hsv": [
+                23.24686466405133,
+                14.141162082936577,
+                99.5118887581919
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/116/3300200116/s_3300200116.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/116/3300200116/s_3300200116.jpg",
+            "colorsPure": [
+              "#de7921",
+              "#fd933c"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "3300197381": {
+      "highlights": {
+        "synckey": 1789116567,
+        "updated": [
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 53,
+            "bookmarkId": "3300197381_53_8382-8404",
+            "range": "8382-8404",
+            "markText": "你要意识到一路走来真正的瓶颈从来都是你自己。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 53,
+            "createTime": 1778362529
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 53,
+            "bookmarkId": "3300197381_53_4717-4784",
+            "range": "4717-4777",
+            "markText": "“知道在哪里画叉，就是你的核心竞争力。”你的核心竞争力是你发挥独特才能的能量集合。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 53,
+            "createTime": 1778360886
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 24,
+            "bookmarkId": "3300197381_24_3288-3374",
+            "range": "3288-3351",
+            "markText": "4C公式”：承诺（Commitment）、勇气（courage）、能力（capability）、信心（confidence）。\n",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 24,
+            "createTime": 1778241921
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 46,
+            "bookmarkId": "3300197381_46_5302-5374",
+            "range": "5302-5374",
+            "markText": "请确保你每天的3项活动都超出自己当前的技能或知识水平，让你更加投入并富有勇气。这也是你自我成长和转变的方式。你将会发展出新的技能，培养出新的自信",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 46,
+            "createTime": 1778241833
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 46,
+            "bookmarkId": "3300197381_46_3896-4015",
+            "range": "3896-4015",
+            "markText": "当你需要解决重大挑战或完成创造性任务时，你至少要预留4小时的完整时间块。34如果你追求的是10倍增长，那么你要尽可能地避免时间碎片化。你需要更多自由开放的工作日和更多更大的时间块",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 46,
+            "createTime": 1778241245
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 44,
+            "bookmarkId": "3300197381_44_1428-1523",
+            "range": "1428-1523",
+            "markText": "产生创意和创新的关键在于，建立事物之间独特且超乎寻常的联系。这不仅需要输入新颖有趣的信息，还需要一个间接思考和酝酿的过程，而这个过程只有在你拥有充足的空间和时间时才有可能发生。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 44,
+            "createTime": 1778240451
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 43,
+            "bookmarkId": "3300197381_43_3103-3191",
+            "range": "3103-3191",
+            "markText": "这些标准包括你摄入的营养和食物质量、你的睡眠环境及质量、你的恢复质量以及你的生活体验质量，包括纯粹为了乐趣和建立联系而获得的新颖体验。真正的治愈和疗愈在于建立健康亲密的人际关系",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 43,
+            "createTime": 1778240163
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 43,
+            "bookmarkId": "3300197381_43_2249-2336",
+            "range": "2249-2336",
+            "markText": "如果你从未完全放松，就不会真正进入状态。你能够百分百启动并进入心流状态工作的能力，与你完全彻底放松和释放压力的能力是成正比的。专注是一种收缩，恢复则是一种扩张。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 43,
+            "createTime": 1778240021
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 42,
+            "bookmarkId": "3300197381_42_3145-3227",
+            "range": "3145-3227",
+            "markText": "．自由日（恢复日）。\n2．专注日（表演日）。\n3．缓冲日（练习日或排练日）。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 42,
+            "createTime": 1778239860
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 42,
+            "bookmarkId": "3300197381_42_2104-2153",
+            "range": "2104-2146",
+            "markText": "当你进展困难时，时间对你来说会加速流逝；但当你取得巨大进展时，你的时间会膨胀并放慢。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 42,
+            "createTime": 1778239630
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 41,
+            "bookmarkId": "3300197381_41_2561-2667",
+            "range": "2561-2667",
+            "markText": "只有当你完全沉浸于某一刻，你才能真切地体验和感受。你能处于关键时刻的频率越高，你能维持心流的时间也就越长。你会拥有更多巅峰体验，感受敬畏、自我扩展和生命的意义。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 41,
+            "createTime": 1778239454
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 41,
+            "bookmarkId": "3300197381_41_1094-1237",
+            "range": "1094-1237",
+            "markText": "时间的扩张与收缩取决于物体在特定方向上穿越空间的速度和距离。物体移动得越快，相对于其他物体，它的时间流逝得就越慢，这就是时间膨胀（time dilation）。它是描述物体加速通过空间时，时间“放慢”的术语。在相同时间内，你体验得越多，你的旅行距离就越远，你的时间膨胀或拉伸得也就越长。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 41,
+            "createTime": 1778239300
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 41,
+            "bookmarkId": "3300197381_41_1421-1446",
+            "range": "1421-1446",
+            "markText": "“你走得越快，时间流逝得就越慢，生命体验就越长。”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 41,
+            "createTime": 1778239280
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 39,
+            "bookmarkId": "3300197381_39_4154-4276",
+            "range": "4154-4276",
+            "markText": "·　我需要提供哪些具体价值，才能使那些愿意支付我“梦想支票”的人认为这笔交易极具价值且完全合理？\n·　我的独特才能需要达到哪些标准，才能让那些愿意支付我“梦想支票”的人毫不犹豫地视其为一笔值得的投资？",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 39,
+            "createTime": 1778239058
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 39,
+            "bookmarkId": "3300197381_39_2588-2719",
+            "range": "2588-2719",
+            "markText": "你的独特才能发展得越好，就越能获得别人的高度认可和价值评估。你对独特才能投入得越多，你将实现的10倍转变也就越多。你的独特才能让你一次又一次将自己转化为最独特、最有价值和最真实的自我。独特才能是你创造独一无二的财富和价值的方式，别人更愿意为此支付更多资金和资源。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 39,
+            "createTime": 1778238934
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 39,
+            "bookmarkId": "3300197381_39_645-684",
+            "range": "645-684",
+            "markText": "首先，你需要在一个能够衡量你表现的场景中，否则你就无法通过增加工作量来增加收益",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 39,
+            "createTime": 1778238519
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 37,
+            "bookmarkId": "3300197381_37_747-770",
+            "range": "747-770",
+            "markText": "“没有所谓通往幸福的道路，幸福本身就是道路。”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 37,
+            "createTime": 1778237845
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 35,
+            "bookmarkId": "3300197381_35_1571-1705",
+            "range": "1571-1705",
+            "markText": "人的常规思维模式。例如，每到饭点，我的孩子们就会来到餐桌旁，他们有时会因为餐桌上的食物不符合自己的期望而失望叹息。他们不会感激妈妈不辞辛劳地为他们做饭，也不会感激自己有一个温馨和睦的家庭，更不会感谢自己有一顿丰盛的晚餐，只会用脑海中任意设定的某个理想标准来贬低整体体验",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 35,
+            "createTime": 1778092387
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 35,
+            "bookmarkId": "3300197381_35_1458-1492",
+            "range": "1458-1492",
+            "markText": "差距思维是一种将实际情况与所谓原本有可能的理想情况相比较的评估方式。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 35,
+            "createTime": 1778092356
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 32,
+            "bookmarkId": "3300197381_32_613-806",
+            "range": "613-806",
+            "markText": "我认识的唯一明智的人就是我的裁缝，他每次见到我都会重新量我的尺寸。其他人呢？只会沿用往日的旧尺，而且还期望我去适应他们。\n——萧伯纳",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 32,
+            "createTime": 1778091688
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 31,
+            "bookmarkId": "3300197381_31_9761-9837",
+            "range": "9761-9837",
+            "markText": "指数级拓展自己的视野，为自己有可能成为的人、能做的事、能拥有的选择，设立更远大的目标。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 31,
+            "createTime": 1778091500
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 31,
+            "bookmarkId": "3300197381_31_9164-9201",
+            "range": "9164-9201",
+            "markText": "精通并非什么天才之举，而是一个人将时间和精力专注投入在某个特定领域的结果。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 31,
+            "createTime": 1778091466
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 29,
+            "bookmarkId": "3300197381_29_4091-4173",
+            "range": "4091-4173",
+            "markText": "10倍增长是一个提升自我价值的定性游戏。你通过创造真正想要创造的财富，譬如技能、知识、产品等，并分享给越来越重视和欣赏你的价值的特定人群，从而实现价值的10倍增长。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 29,
+            "createTime": 1777911402
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 29,
+            "bookmarkId": "3300197381_29_3590-3640",
+            "range": "3590-3640",
+            "markText": "你可以将自己的价值提升10倍，从而变得富有，而无须直接拥有10倍的金钱。事实上，金钱会追随财富而来。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 29,
+            "createTime": 1777907961
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 29,
+            "bookmarkId": "3300197381_29_2709-2792",
+            "range": "2709-2792",
+            "markText": "金钱本身是不值得追求的。如果你只是追求金钱，那么你在获取财富时将会遇到困难。财富指的是有价值的资产、技能和创造力。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 29,
+            "createTime": 1777907840
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 29,
+            "bookmarkId": "3300197381_29_1767-1991",
+            "range": "1767-1991",
+            "markText": "．想要与丰盛和创造有关。创造力不是一种稀缺资源，也无须从他人那里获得。相反，创造力实际上是在创造以往没有的新资源和新机会。\n2．想要无须理由。当你想要某种东西时，你无须向他人解释和证明你为什么想要。这可能会让那些总要自我证明的“需求者”感到困惑。他们可能会试图用稀缺思维框架来影响你，让你产生愧疚感并迫使你去做他们认为你应该做的事情。然而，为了实现10倍增长并过上真正适合自己的生活，你不必受这些人影响。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 29,
+            "createTime": 1777907685
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 29,
+            "bookmarkId": "3300197381_29_931-1593",
+            "range": "931-1593",
+            "markText": "身处一个需要的世界，你总是被迫说明和证明自己为什么需要，因为这是一个基于匮乏的世界。如果你需要某种稀缺资源，那么你必须解释为什么是你应该拥有它，而非其他人。于是，一个“需求者”终其一生都在花费大量时间和精力去思考和解释。但是，如果你能跨越这道边界，踏进“想要”的世界，你便再也无须证明任何东西。这是身为企业家必须明确的立场：不再屈从于既往需要自我证明的状态。你需要具备足够的勇气来迈出这一步，进入一个想要的世界，一个追求的世界，而不是基于需要的世界。当有人问“你为什么需要那个？”（他们常把想要说成需要），你可能会忍不住地回到之前的状态，试图自我证明和辩解。这时，请不要屈从于这种欲望，告诉自己：“首先，我不是需要它，我是想要它；其次，我想要它的理由很简单，就是我想要。”对大多数人来说，这一点并不容易理解，因为在需要的世界里，你的任何需要都要有一个合理的解释。如果你从匮乏角度来理解这个世界，那么你的获取就意味着你在争夺他人的稀缺资源。然而，在一个想要的世界里，你不会有匮乏感，因为这是一个创新的世界，你是在创造而非夺取。追求者创造的是之前并不存在的东西，你是在创造无须从他人那里获得的全新的东西。1",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 29,
+            "createTime": 1777907498
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 28,
+            "bookmarkId": "3300197381_28_3587-3673",
+            "range": "3587-3673",
+            "markText": "今天是我的一个里程碑，我完成了一个项目。在过去的25年里，除了12天（总计9 131天），我每天都会写下自己想要追求的东西。25年过去了，我可以说自己成了一个强大的追求者。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 28,
+            "createTime": 1777907275
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 28,
+            "bookmarkId": "3300197381_28_3402-3443",
+            "range": "3402-3443",
+            "markText": "他想让自己过上一种基于想要而非需要、基于自由而非安全、基于丰富而非匮乏的全新生活。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 28,
+            "createTime": 1777907247
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 27,
+            "bookmarkId": "3300197381_27_3753-3845",
+            "range": "3753-3845",
+            "markText": "每实现一次10倍增长，你所做事情的质量和规模都会向上提升。你烹饪的不再是快餐，而是精致料理，这就需要你具备更高的专业性和专注度。你不可能再同时做很多事情，因为你需要更多的时间来理解和整",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 27,
+            "createTime": 1777898839
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 26,
+            "bookmarkId": "3300197381_26_1946-2659",
+            "range": "1946-2659",
+            "markText": "尽管听起来有些奇怪，但打造一个获得500万次观看量的爆款，远比让50个视频各获得10万次观看量容易得多。你一年只需上传一个精彩的视频，它的观看量肯定比一年上传100个平庸的视频更多，并且是指数级的区别。想要在YouTube上受欢迎，就要让人们点击并完整观看你的视频。如果你的视频点击率比别人高10%，观看时长也多10%，那么你得到的观看量不止多10%，而是多4倍。你需要具备指数级的思维模式，点击率高出10%的视频会获得4倍的观看量。一旦理解了这一点，你就会更好地集中精力投入视频制作中。如果视频的制作时间增加了3倍，那么你收获的观看量不只是3倍，而是10倍。因此，我建议他们把视频做到足够好，同时还会帮助他们组建团队，譬如增加剪辑人员。如果一个人做5件事，那么每一件事只能投入20%的时间和精力。但是，如果你聘请一位剪辑师，那么他可以将100%的时间和精力投入剪辑工作中。你可能无法做到一天剪辑10小时，但是他可以。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 26,
+            "createTime": 1777896905
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 24,
+            "bookmarkId": "3300197381_24_3049-3153",
+            "range": "3049-3153",
+            "markText": "你可能对线上游戏毫无兴趣，但是我想强调的是我们每个人都有自己的标准。我们选择自己在意的标准，并努力达到这些标准所设定的水准。譬如，两个热衷于打网球的人分别是职业选手和业余选手，那么职业选手的打球标准显然会更高",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 24,
+            "createTime": 1777841296
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 24,
+            "bookmarkId": "3300197381_24_2737-3026",
+            "range": "2737-3026",
+            "markText": "一个人的身份是由其全力追求的东西决定的。这是一个你想全心投入抒写的个人故事，也是你最坚守的个人标准。这些标准是你为自己设定的行为规范，代表你对自己的承诺。一旦某项准则被视为标准，它便成为你坚守的信念。因此，你的行为和决策很少低于这些标准，否则它们就不能被称为真正的标准。\n我们都在坚守自己设定的标准，即便自己没有意识到。比如，我的一个朋友是《魔兽世界》的狂热玩家，每天花16小时玩游戏，是所在服务器上的顶尖玩家之一。可是，最近他告诉我他退出了所在的游戏社区，原因是他觉得其他玩家达不到他的标准，他想和更高级别的玩家组队。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 24,
+            "createTime": 1777841286
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 21,
+            "bookmarkId": "3300197381_21_975-1137",
+            "range": "975-1137",
+            "markText": "500美元客户：鉴于我即将对你进行这笔投资，我认为我们应该了解清楚我们的生活将会发生什么样的改变。我需要看到你能为我们带来什么样的成果，毕竟我把身家都托付给你了。\n50 000美元客户：钱已转，谢谢。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 21,
+            "createTime": 1777827605
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 19,
+            "bookmarkId": "3300197381_19_4335-4425",
+            "range": "4335-4425",
+            "markText": "假如你想要一座非常精美的房子，那么可供选择的家具并不多。你对细节的要求越苛刻，符合要求的设计师越少。相反，假如你对房子的要求标准低或者没有什么具体要求，那么可选择的家具就数不胜数。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 19,
+            "createTime": 1777821430
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 19,
+            "bookmarkId": "3300197381_19_3553-3604",
+            "range": "3553-3604",
+            "markText": "“如果你瞄准的是月亮，即使迷失，也是在星辰之间。”",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 19,
+            "createTime": 1777821285
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 19,
+            "bookmarkId": "3300197381_19_3040-3134",
+            "range": "3040-3134",
+            "markText": "目标决定了过程。丹·沙利文说：“唯有拓展未来，方能过好现在。”将目标提升10倍，它会迫使你寻找不同的实现路径，向不同的人提出不同的问题。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 19,
+            "createTime": 1777821036
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 14,
+            "bookmarkId": "3300197381_14_5766-6016",
+            "range": "5766-6016",
+            "markText": "自由一点儿也不廉价，它要求你极度真诚地面对自己和他人。这一点既令人害怕又让人感到解脱。在追求10倍增长的过程中，你不能有一丝犹豫或半途而废。为了实现目标自由，你必须舍弃生活中所有不符合10倍增长的部分。然而，要做到这一点并不容易，因为你的大部分时间很可能被那些只能带来2倍增长的工作所占据。\n迈向10倍增长，就是要去掉一切不符合你心目中“隶属于大卫”的东西。追求10倍增长，意味着你选择参与一个可以拓展自由的无限游戏。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 14,
+            "createTime": 1777819743
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 14,
+            "bookmarkId": "3300197381_14_615-1035",
+            "range": "615-1035",
+            "markText": "但是，作品的质量又该如何呢？\n对最高品质的追求早已融入他的骨髓，\n他始终致力于创作远超自己能力范围的作品，\n因为除了新颖、独特、颠覆性，以及作为整体艺术的显著延伸，\n任何东西都不会让他感到满足。\n他从未在质量上做出妥协，",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 14,
+            "createTime": 1777763088
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 12,
+            "bookmarkId": "3300197381_12_5570-5631",
+            "range": "5570-5631",
+            "markText": "当你将自己视为广阔的背景而非具体的内容时，你会更具有灵活性和适应性。你可以像更换房间里的家具或重新装修一样，实现自我转变。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 12,
+            "createTime": 1777736090
+          },
+          {
+            "bookId": "3300197381",
+            "chapterIdx": 12,
+            "bookmarkId": "3300197381_12_5389-5454",
+            "range": "5389-5431",
+            "markText": "心理灵活性的一个核心特质是将自己视为一个更广阔的背景而存在，而不是情感和经历的集合。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 12,
+            "createTime": 1777736030
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "结语 成为破局者：未来属于拆天花板的人",
+            "chapterUid": 53,
+            "chapterIdx": 53
+          },
+          {
+            "title": "3大时间类型：自由日、专注日与缓冲日",
+            "chapterUid": 42,
+            "chapterIdx": 42
+          },
+          {
+            "title": "颠覆认知：更大的目标反而更容易实现",
+            "chapterUid": 12,
+            "chapterIdx": 12
+          },
+          {
+            "title": "“每日3个重点”原则",
+            "chapterUid": 46,
+            "chapterIdx": 46
+          },
+          {
+            "title": "自由日：恢复与创新",
+            "chapterUid": 43,
+            "chapterIdx": 43
+          },
+          {
+            "title": "时间膨胀原理：质量优于数量",
+            "chapterUid": 41,
+            "chapterIdx": 41
+          },
+          {
+            "title": "梦想支票：设定突破性目标",
+            "chapterUid": 39,
+            "chapterIdx": 39
+          },
+          {
+            "title": "规划10倍未来的两大工具",
+            "chapterUid": 37,
+            "chapterIdx": 37
+          },
+          {
+            "title": "收获思维：看见已经取得的进步",
+            "chapterUid": 35,
+            "chapterIdx": 35
+          },
+          {
+            "title": "聚焦带来最大回报的领域",
+            "chapterUid": 26,
+            "chapterIdx": 26
+          },
+          {
+            "title": "自由的本质：10倍增长带来的4大自由",
+            "chapterUid": 14,
+            "chapterIdx": 14
+          },
+          {
+            "title": "2倍增长的陷阱：越努力越受限",
+            "chapterUid": 19,
+            "chapterIdx": 19
+          },
+          {
+            "title": "第3章 动机升级：从“需要”到“想要”",
+            "chapterUid": 28,
+            "chapterIdx": 28
+          },
+          {
+            "title": "专注日：心流与突破",
+            "chapterUid": 44,
+            "chapterIdx": 44
+          },
+          {
+            "title": "成为能实现10倍目标的自己",
+            "chapterUid": 24,
+            "chapterIdx": 24
+          },
+          {
+            "title": "案例：0团队扩张带来4倍盈利",
+            "chapterUid": 21,
+            "chapterIdx": 21
+          },
+          {
+            "title": "打造不可替代的竞争优势",
+            "chapterUid": 27,
+            "chapterIdx": 27
+          },
+          {
+            "title": "丰盈心态vs.匮乏心态",
+            "chapterUid": 29,
+            "chapterIdx": 29
+          },
+          {
+            "title": "精进之路：持续强化独特才能",
+            "chapterUid": 31,
+            "chapterIdx": 31
+          },
+          {
+            "title": "建立“买家思维”：掌握选择主动权",
+            "chapterUid": 32,
+            "chapterIdx": 32
+          }
+        ],
+        "book": {
+          "bookId": "3300197381",
+          "version": 996621170,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/49/cpplatform_8pe4n9gxbb22ofnsynyphg/s_cpplatform_8pe4n9gxbb22ofnsynyphg1772705172.jpg",
+          "title": "为什么10倍增长比2倍更容易",
+          "author": "[美]丹·沙利文  [美]本杰明·哈迪",
+          "coverBoxInfo": {
+            "blurhash": "KNI#fM~S%f%KNOIwD,9dIv",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#131b35"
+              },
+              {
+                "key": "1/6",
+                "hex": "#0b1941"
+              },
+              {
+                "key": "1/8",
+                "hex": "#03174c"
+              },
+              {
+                "key": "2/4",
+                "hex": "#27304b"
+              },
+              {
+                "key": "2/6",
+                "hex": "#202f58"
+              },
+              {
+                "key": "2/8",
+                "hex": "#162d64"
+              },
+              {
+                "key": "3/4",
+                "hex": "#3d4765"
+              },
+              {
+                "key": "3/6",
+                "hex": "#364672"
+              },
+              {
+                "key": "3/8",
+                "hex": "#2d457e"
+              },
+              {
+                "key": "3/12",
+                "hex": "#0f4297"
+              },
+              {
+                "key": "4/6",
+                "hex": "#505f89"
+              },
+              {
+                "key": "4/10",
+                "hex": "#3d5ea3"
+              },
+              {
+                "key": "4/4",
+                "hex": "#565f7c"
+              },
+              {
+                "key": "5/10",
+                "hex": "#5878bd"
+              },
+              {
+                "key": "5/4",
+                "hex": "#707994"
+              },
+              {
+                "key": "5/8",
+                "hex": "#6178b0"
+              },
+              {
+                "key": "6/4",
+                "hex": "#8993ad"
+              },
+              {
+                "key": "6/6",
+                "hex": "#8293bc"
+              },
+              {
+                "key": "6/8",
+                "hex": "#7b92ca"
+              },
+              {
+                "key": "6/12",
+                "hex": "#6692e8"
+              },
+              {
+                "key": "7/8",
+                "hex": "#93ade6"
+              },
+              {
+                "key": "7/10",
+                "hex": "#89adf7"
+              },
+              {
+                "key": "7/12",
+                "hex": "#7cacff"
+              },
+              {
+                "key": "8/4",
+                "hex": "#bcc8e2"
+              },
+              {
+                "key": "8/6",
+                "hex": "#b4c8f4"
+              },
+              {
+                "key": "8/12",
+                "hex": "#95c7ff"
+              },
+              {
+                "key": "9/2",
+                "hex": "#dee3ed"
+              },
+              {
+                "key": "9/12",
+                "hex": "#aee1ff"
+              },
+              {
+                "key": "1/100",
+                "hex": "#7b92ca"
+              },
+              {
+                "key": "2/100",
+                "hex": "#93ade6"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#E5ECF3"
+              },
+              {
+                "key": "5/100",
+                "hex": "#E5ECF3"
+              },
+              {
+                "key": "6/100",
+                "hex": "#001927"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#8890a6",
+              "hsv": [
+                224.14319156503434,
+                18.03294491115327,
+                64.97232782315823
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/381/3300197381/s_3300197381.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/381/3300197381/s_3300197381.jpg",
+            "colorsPure": [
+              "#6692e8",
+              "#7cacff"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
+    "25424211": {
+      "highlights": {
+        "synckey": 1786891807,
+        "updated": [
+          {
+            "bookId": "25424211",
+            "chapterIdx": 8,
+            "bookmarkId": "25424211_8_1598-2085",
+            "range": "1598-2085",
+            "markText": "正像人们知道或觉察到广告和政治演讲未必是真的或正确的，但还是要去听、去读甚至让自己受其指导一样，人们接受传统价值观念并使之成为自己的精神武器。如果大众传播媒介能把艺术、政治、宗教、哲学同商业和谐地乃至天衣无缝地融合在一起的话，它们就将使这些文化领域具备一个共同特征——商品形式。发自心灵的音乐也是推销术的音乐。起作用的是交换价值，而不是真实的价值。现状的合理性就是以此为中心的，一切异己的合理性也都服从于此。\n当竞选领袖和政治家在电视、电台和舞台上说出自由、完善这些伟大的字眼时，这些字眼就变成了毫无意义的声音，它们只有在宣传、商业、训练和消遣的语境中才能获得意义。理想与现实同化到这种程度，说明理想已被超越。它被从心灵、精神或内心世界的高尚领域里拽了出来，并被转换为操作性术语和问题。这里也有大众文化的进步因素存在。这一倒错表明了如下事实：发达工业社会面临各种理想物质化的可能。该社会的各种能力正在逐渐缩小对人的条件加以描绘、理想化和说明的高尚领域。高层文化变成物质文化的组成部分。在此过程中，它丧失了更大部分真理。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 8,
+            "createTime": 1786891807
+          },
+          {
+            "bookId": "25424211",
+            "chapterIdx": 7,
+            "bookmarkId": "25424211_7_28648-28669",
+            "range": "28648-28669",
+            "markText": "无知和无意识状态正是民族主义不断扶持的东西",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7,
+            "createTime": 1786891806
+          },
+          {
+            "bookId": "25424211",
+            "chapterIdx": 7,
+            "bookmarkId": "25424211_7_19027-19049",
+            "range": "19027-19049",
+            "markText": "谁教育了教育者？何以证明教育者拥有“美德”？",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 7,
+            "createTime": 1786818236
+          },
+          {
+            "bookId": "25424211",
+            "chapterIdx": 6,
+            "bookmarkId": "25424211_6_6708-7057",
+            "range": "6708-7057",
+            "markText": "但“潜化”一词或许不再说明个人是以什么方式自动重复社会所施加的外部控制并使之永恒化的。潜化使人联想到自我把“外部的”移置为“内部的”那一整套相对自动的过程。因此，潜化意味着存在一种区别于甚至敌对于外部要求的内心向度，即能把公众舆论和行为撇在一边的个人意识和无意识。￼“内心自由”的观念在这里有它的现实性，它指的是人们可以借以变成和保存“他自己”的私人空间。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1786513656
+          },
+          {
+            "bookId": "25424211",
+            "chapterIdx": 6,
+            "bookmarkId": "25424211_6_6040-6313",
+            "range": "6040-6313",
+            "markText": "我们又一次面对发达工业文明的一个最令人烦恼的方面，即它的不合理中的合理性。它的生产率和效能，它增长和扩大舒适生活品、把浪费变为需要、把破坏变为建设的能力，这一文明使客观世界转变为人的精神和肉体的程度，都使得异化概念本身就成了问题。人们似乎活在他们的商品之中；他们的灵魂困在他们的小轿车、高清晰度的传真装置、错层式家庭住宅以及厨房设备之中。把个人束缚于社会的机制已经改变，而社会控制就是在它所产生的新的需要中得以稳定的。\n\n",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1786513427
+          },
+          {
+            "bookId": "25424211",
+            "chapterIdx": 6,
+            "bookmarkId": "25424211_6_1396-1447",
+            "range": "1396-1447",
+            "markText": "假如个人作为一个自由的经济主体不再被迫在市场上出售他自身，那么，这种自由的消失将是文明的最大成就之一。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1786279335
+          },
+          {
+            "bookId": "25424211",
+            "chapterIdx": 6,
+            "bookmarkId": "25424211_6_1144-1262",
+            "range": "1144-1262",
+            "markText": "在这方面，由某种极权主义制度还是由某种非极权主义制度来满足需要，似乎是无关紧要的。在生活水准不断提高的条件下，对制度本身采取不顺从态度，看来对社会是毫无助益的；当它给社会带来明显的经济和政治的不利并威胁到整个社会的顺利运转时，就更是如此",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1786278648
+          },
+          {
+            "bookId": "25424211",
+            "chapterIdx": 6,
+            "bookmarkId": "25424211_6_967-1144",
+            "range": "967-1144",
+            "markText": "当一个社会按照它自己的组织方式，似乎越来越能满足个人的需要时，独立思考、意志自由和政治反对权的基本的批判功能就遭到了剥夺。这样的一个社会可以正当地要求人们接受它的原则和制度，并把政治上的反对降低为在维持现状的范围内商讨和促进替代性政策的选择。",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 6,
+            "createTime": 1786278526
+          },
+          {
+            "bookId": "25424211",
+            "chapterIdx": 4,
+            "bookmarkId": "25424211_4_1865-1911",
+            "range": "1865-1911",
+            "markText": "这些资源怎样才能被用来最理想地发展和满足个人的需要和才能，并把辛劳和痛苦降低到最小的限度呢？",
+            "colorStyle": 5,
+            "type": 1,
+            "chapterUid": 4,
+            "createTime": 1786045529
+          }
+        ],
+        "removed": [],
+        "chapters": [
+          {
+            "title": "第三章 不幸意识的征服：压抑性的俗化趋势",
+            "chapterUid": 8,
+            "chapterIdx": 8
+          },
+          {
+            "title": "第二章 政治领域的封闭",
+            "chapterUid": 7,
+            "chapterIdx": 7
+          },
+          {
+            "title": "第一章控制的新形式",
+            "chapterUid": 6,
+            "chapterIdx": 6
+          },
+          {
+            "title": "导言 批判的停顿：没有反对派的社会",
+            "chapterUid": 4,
+            "chapterIdx": 4
+          }
+        ],
+        "book": {
+          "bookId": "25424211",
+          "version": 44968238,
+          "format": "epub",
+          "soldout": 0,
+          "bookStatus": 1,
+          "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/s_YueWen_25424211.jpg",
+          "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
+          "author": "赫伯特·马尔库塞",
+          "coverBoxInfo": {
+            "blurhash": "K}L{h7j@j@16azfQa}aza}",
+            "colors": [
+              {
+                "key": "1/4",
+                "hex": "#311500"
+              },
+              {
+                "key": "1/6",
+                "hex": "#391100"
+              },
+              {
+                "key": "1/8",
+                "hex": "#400a00"
+              },
+              {
+                "key": "2/4",
+                "hex": "#442c0d"
+              },
+              {
+                "key": "2/6",
+                "hex": "#4a2900"
+              },
+              {
+                "key": "2/8",
+                "hex": "#4f2700"
+              },
+              {
+                "key": "3/4",
+                "hex": "#5d4322"
+              },
+              {
+                "key": "3/6",
+                "hex": "#634009"
+              },
+              {
+                "key": "3/8",
+                "hex": "#683f00"
+              },
+              {
+                "key": "3/12",
+                "hex": "#713a00"
+              },
+              {
+                "key": "4/6",
+                "hex": "#7f5921"
+              },
+              {
+                "key": "4/10",
+                "hex": "#885500"
+              },
+              {
+                "key": "4/4",
+                "hex": "#785b36"
+              },
+              {
+                "key": "5/10",
+                "hex": "#a66e00"
+              },
+              {
+                "key": "5/4",
+                "hex": "#92744f"
+              },
+              {
+                "key": "5/8",
+                "hex": "#a2701c"
+              },
+              {
+                "key": "6/4",
+                "hex": "#ac8f67"
+              },
+              {
+                "key": "6/6",
+                "hex": "#b68c50"
+              },
+              {
+                "key": "6/8",
+                "hex": "#be8a37"
+              },
+              {
+                "key": "6/12",
+                "hex": "#c88600"
+              },
+              {
+                "key": "7/8",
+                "hex": "#d9a450"
+              },
+              {
+                "key": "7/10",
+                "hex": "#e0a234"
+              },
+              {
+                "key": "7/12",
+                "hex": "#e6a000"
+              },
+              {
+                "key": "8/4",
+                "hex": "#e2c498"
+              },
+              {
+                "key": "8/6",
+                "hex": "#ecc181"
+              },
+              {
+                "key": "8/12",
+                "hex": "#ffbb2b"
+              },
+              {
+                "key": "9/2",
+                "hex": "#f2e1c8"
+              },
+              {
+                "key": "9/12",
+                "hex": "#ffd647"
+              },
+              {
+                "key": "1/100",
+                "hex": "#be8a37"
+              },
+              {
+                "key": "2/100",
+                "hex": "#d9a450"
+              },
+              {
+                "key": "3/100",
+                "hex": "#ffffff"
+              },
+              {
+                "key": "4/100",
+                "hex": "#F3EDE5"
+              },
+              {
+                "key": "5/100",
+                "hex": "#F3EDE5"
+              },
+              {
+                "key": "6/100",
+                "hex": "#271300"
+              }
+            ],
+            "dominate_color": {
+              "hex": "#efa801",
+              "hsv": [
+                42.27196608230341,
+                99.75861620993749,
+                93.61099053936329
+              ]
+            },
+            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/211/25424211/s_25424211.jpg",
+            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/211/25424211/s_25424211.jpg",
+            "colorsPure": [
+              "#c88600",
+              "#e6a000"
+            ]
+          }
+        }
+      },
+      "thoughts": {
+        "reviews": []
+      }
+    },
     "35523642": {
       "highlights": {
         "synckey": 1789546925,
@@ -10563,182 +11995,6 @@
         "reviews": []
       }
     },
-    "3300187091": {
-      "highlights": {
-        "synckey": 0,
-        "updated": [],
-        "removed": [],
-        "chapters": [],
-        "book": {
-          "bookId": "3300187091",
-          "version": 1359265645,
-          "format": "epub",
-          "soldout": 0,
-          "bookStatus": 1,
-          "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/s_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
-          "title": "贫穷的本质：我们为什么摆脱不了贫穷（全新增订版）",
-          "author": "[美]阿比吉特·班纳吉  [法]埃斯特·迪弗洛",
-          "coverBoxInfo": {
-            "blurhash": "KOQl::o}-;t8.SMd8wIURj",
-            "colors": [
-              {
-                "key": "1/4",
-                "hex": "#380e0e"
-              },
-              {
-                "key": "1/6",
-                "hex": "#40030a"
-              },
-              {
-                "key": "1/8",
-                "hex": "#480006"
-              },
-              {
-                "key": "2/4",
-                "hex": "#4d261f"
-              },
-              {
-                "key": "2/6",
-                "hex": "#561f16"
-              },
-              {
-                "key": "2/8",
-                "hex": "#60140a"
-              },
-              {
-                "key": "3/4",
-                "hex": "#673c30"
-              },
-              {
-                "key": "3/6",
-                "hex": "#723624"
-              },
-              {
-                "key": "3/8",
-                "hex": "#7c2f16"
-              },
-              {
-                "key": "3/12",
-                "hex": "#8d1a00"
-              },
-              {
-                "key": "4/6",
-                "hex": "#8d503a"
-              },
-              {
-                "key": "4/10",
-                "hex": "#a1431b"
-              },
-              {
-                "key": "4/4",
-                "hex": "#825547"
-              },
-              {
-                "key": "5/10",
-                "hex": "#c05d31"
-              },
-              {
-                "key": "5/4",
-                "hex": "#9b6f60"
-              },
-              {
-                "key": "5/8",
-                "hex": "#b56442"
-              },
-              {
-                "key": "6/4",
-                "hex": "#b68979"
-              },
-              {
-                "key": "6/6",
-                "hex": "#c4846b"
-              },
-              {
-                "key": "6/8",
-                "hex": "#d07e5c"
-              },
-              {
-                "key": "6/12",
-                "hex": "#e77239"
-              },
-              {
-                "key": "7/8",
-                "hex": "#ed9874"
-              },
-              {
-                "key": "7/10",
-                "hex": "#f99365"
-              },
-              {
-                "key": "7/12",
-                "hex": "#ff8c51"
-              },
-              {
-                "key": "8/4",
-                "hex": "#ecbeab"
-              },
-              {
-                "key": "8/6",
-                "hex": "#fcb89b"
-              },
-              {
-                "key": "8/12",
-                "hex": "#ffa667"
-              },
-              {
-                "key": "9/2",
-                "hex": "#f3dfd7"
-              },
-              {
-                "key": "9/12",
-                "hex": "#ffc082"
-              },
-              {
-                "key": "1/100",
-                "hex": "#d07e5c"
-              },
-              {
-                "key": "2/100",
-                "hex": "#ed9874"
-              },
-              {
-                "key": "3/100",
-                "hex": "#ffffff"
-              },
-              {
-                "key": "4/100",
-                "hex": "#F3E8E5"
-              },
-              {
-                "key": "5/100",
-                "hex": "#F3E8E5"
-              },
-              {
-                "key": "6/100",
-                "hex": "#270500"
-              }
-            ],
-            "dominate_color": {
-              "hex": "#f2cbbb",
-              "hsv": [
-                17.49865686382006,
-                22.72121875570151,
-                94.71732652192422
-              ]
-            },
-            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/91/3300187091/s_3300187091.jpg",
-            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/91/3300187091/s_3300187091.jpg",
-            "colorsPure": [
-              "#e77239",
-              "#ff8c51"
-            ]
-          }
-        }
-      },
-      "thoughts": {
-        "reviews": []
-      }
-    },
     "23437971": {
       "highlights": {
         "synckey": 0,
@@ -10907,182 +12163,6 @@
             "colorsPure": [
               "#e96a81",
               "#ff8498"
-            ]
-          }
-        }
-      },
-      "thoughts": {
-        "reviews": []
-      }
-    },
-    "3300200116": {
-      "highlights": {
-        "synckey": 0,
-        "updated": [],
-        "removed": [],
-        "chapters": [],
-        "book": {
-          "bookId": "3300200116",
-          "version": 1003491567,
-          "format": "epub",
-          "soldout": 0,
-          "bookStatus": 1,
-          "cover": "https://cdn.weread.qq.com/weread/cover/44/cpplatform_pej5m8wv1dt9ewnemfjmnh/s_cpplatform_pej5m8wv1dt9ewnemfjmnh1775127717.jpg",
-          "title": "UFO飞落钏路：大地震之后被颠覆的日常生活（轻经典）",
-          "author": "[日]村上春树",
-          "coverBoxInfo": {
-            "blurhash": "K2R.iU?H*L9ua}%10PRjDh",
-            "colors": [
-              {
-                "key": "1/4",
-                "hex": "#371004"
-              },
-              {
-                "key": "1/6",
-                "hex": "#3e0700"
-              },
-              {
-                "key": "1/8",
-                "hex": "#450000"
-              },
-              {
-                "key": "2/4",
-                "hex": "#4b2719"
-              },
-              {
-                "key": "2/6",
-                "hex": "#542209"
-              },
-              {
-                "key": "2/8",
-                "hex": "#5c1b00"
-              },
-              {
-                "key": "3/4",
-                "hex": "#643e2c"
-              },
-              {
-                "key": "3/6",
-                "hex": "#6e391b"
-              },
-              {
-                "key": "3/8",
-                "hex": "#763504"
-              },
-              {
-                "key": "3/12",
-                "hex": "#822b00"
-              },
-              {
-                "key": "4/6",
-                "hex": "#8a5232"
-              },
-              {
-                "key": "4/10",
-                "hex": "#9a4a01"
-              },
-              {
-                "key": "4/4",
-                "hex": "#805741"
-              },
-              {
-                "key": "5/10",
-                "hex": "#b96320"
-              },
-              {
-                "key": "5/4",
-                "hex": "#99715a"
-              },
-              {
-                "key": "5/8",
-                "hex": "#b06736"
-              },
-              {
-                "key": "6/4",
-                "hex": "#b48b73"
-              },
-              {
-                "key": "6/6",
-                "hex": "#c18661"
-              },
-              {
-                "key": "6/8",
-                "hex": "#cc814f"
-              },
-              {
-                "key": "6/12",
-                "hex": "#de7921"
-              },
-              {
-                "key": "7/8",
-                "hex": "#e89c68"
-              },
-              {
-                "key": "7/10",
-                "hex": "#f39755"
-              },
-              {
-                "key": "7/12",
-                "hex": "#fd933c"
-              },
-              {
-                "key": "8/4",
-                "hex": "#eabfa4"
-              },
-              {
-                "key": "8/6",
-                "hex": "#f9bb92"
-              },
-              {
-                "key": "8/12",
-                "hex": "#ffad53"
-              },
-              {
-                "key": "9/2",
-                "hex": "#f4dfd2"
-              },
-              {
-                "key": "9/12",
-                "hex": "#ffc86e"
-              },
-              {
-                "key": "1/100",
-                "hex": "#cc814f"
-              },
-              {
-                "key": "2/100",
-                "hex": "#e89c68"
-              },
-              {
-                "key": "3/100",
-                "hex": "#ffffff"
-              },
-              {
-                "key": "4/100",
-                "hex": "#F3E8E5"
-              },
-              {
-                "key": "5/100",
-                "hex": "#F3E8E5"
-              },
-              {
-                "key": "6/100",
-                "hex": "#270500"
-              }
-            ],
-            "dominate_color": {
-              "hex": "#fee8da",
-              "hsv": [
-                23.24686466405133,
-                14.141162082936577,
-                99.5118887581919
-              ]
-            },
-            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/116/3300200116/s_3300200116.jpg",
-            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/116/3300200116/s_3300200116.jpg",
-            "colorsPure": [
-              "#de7921",
-              "#fd933c"
             ]
           }
         }
@@ -12439,303 +13519,6 @@
         "reviews": []
       }
     },
-    "25424211": {
-      "highlights": {
-        "synckey": 1786891807,
-        "updated": [
-          {
-            "bookId": "25424211",
-            "chapterIdx": 8,
-            "bookmarkId": "25424211_8_1598-2085",
-            "range": "1598-2085",
-            "markText": "正像人们知道或觉察到广告和政治演讲未必是真的或正确的，但还是要去听、去读甚至让自己受其指导一样，人们接受传统价值观念并使之成为自己的精神武器。如果大众传播媒介能把艺术、政治、宗教、哲学同商业和谐地乃至天衣无缝地融合在一起的话，它们就将使这些文化领域具备一个共同特征——商品形式。发自心灵的音乐也是推销术的音乐。起作用的是交换价值，而不是真实的价值。现状的合理性就是以此为中心的，一切异己的合理性也都服从于此。\n当竞选领袖和政治家在电视、电台和舞台上说出自由、完善这些伟大的字眼时，这些字眼就变成了毫无意义的声音，它们只有在宣传、商业、训练和消遣的语境中才能获得意义。理想与现实同化到这种程度，说明理想已被超越。它被从心灵、精神或内心世界的高尚领域里拽了出来，并被转换为操作性术语和问题。这里也有大众文化的进步因素存在。这一倒错表明了如下事实：发达工业社会面临各种理想物质化的可能。该社会的各种能力正在逐渐缩小对人的条件加以描绘、理想化和说明的高尚领域。高层文化变成物质文化的组成部分。在此过程中，它丧失了更大部分真理。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 8,
-            "createTime": 1786891807
-          },
-          {
-            "bookId": "25424211",
-            "chapterIdx": 7,
-            "bookmarkId": "25424211_7_28648-28669",
-            "range": "28648-28669",
-            "markText": "无知和无意识状态正是民族主义不断扶持的东西",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 7,
-            "createTime": 1786891806
-          },
-          {
-            "bookId": "25424211",
-            "chapterIdx": 7,
-            "bookmarkId": "25424211_7_19027-19049",
-            "range": "19027-19049",
-            "markText": "谁教育了教育者？何以证明教育者拥有“美德”？",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 7,
-            "createTime": 1786818236
-          },
-          {
-            "bookId": "25424211",
-            "chapterIdx": 6,
-            "bookmarkId": "25424211_6_6708-7057",
-            "range": "6708-7057",
-            "markText": "但“潜化”一词或许不再说明个人是以什么方式自动重复社会所施加的外部控制并使之永恒化的。潜化使人联想到自我把“外部的”移置为“内部的”那一整套相对自动的过程。因此，潜化意味着存在一种区别于甚至敌对于外部要求的内心向度，即能把公众舆论和行为撇在一边的个人意识和无意识。￼“内心自由”的观念在这里有它的现实性，它指的是人们可以借以变成和保存“他自己”的私人空间。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 6,
-            "createTime": 1786513656
-          },
-          {
-            "bookId": "25424211",
-            "chapterIdx": 6,
-            "bookmarkId": "25424211_6_6040-6313",
-            "range": "6040-6313",
-            "markText": "我们又一次面对发达工业文明的一个最令人烦恼的方面，即它的不合理中的合理性。它的生产率和效能，它增长和扩大舒适生活品、把浪费变为需要、把破坏变为建设的能力，这一文明使客观世界转变为人的精神和肉体的程度，都使得异化概念本身就成了问题。人们似乎活在他们的商品之中；他们的灵魂困在他们的小轿车、高清晰度的传真装置、错层式家庭住宅以及厨房设备之中。把个人束缚于社会的机制已经改变，而社会控制就是在它所产生的新的需要中得以稳定的。\n\n",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 6,
-            "createTime": 1786513427
-          },
-          {
-            "bookId": "25424211",
-            "chapterIdx": 6,
-            "bookmarkId": "25424211_6_1396-1447",
-            "range": "1396-1447",
-            "markText": "假如个人作为一个自由的经济主体不再被迫在市场上出售他自身，那么，这种自由的消失将是文明的最大成就之一。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 6,
-            "createTime": 1786279335
-          },
-          {
-            "bookId": "25424211",
-            "chapterIdx": 6,
-            "bookmarkId": "25424211_6_1144-1262",
-            "range": "1144-1262",
-            "markText": "在这方面，由某种极权主义制度还是由某种非极权主义制度来满足需要，似乎是无关紧要的。在生活水准不断提高的条件下，对制度本身采取不顺从态度，看来对社会是毫无助益的；当它给社会带来明显的经济和政治的不利并威胁到整个社会的顺利运转时，就更是如此",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 6,
-            "createTime": 1786278648
-          },
-          {
-            "bookId": "25424211",
-            "chapterIdx": 6,
-            "bookmarkId": "25424211_6_967-1144",
-            "range": "967-1144",
-            "markText": "当一个社会按照它自己的组织方式，似乎越来越能满足个人的需要时，独立思考、意志自由和政治反对权的基本的批判功能就遭到了剥夺。这样的一个社会可以正当地要求人们接受它的原则和制度，并把政治上的反对降低为在维持现状的范围内商讨和促进替代性政策的选择。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 6,
-            "createTime": 1786278526
-          },
-          {
-            "bookId": "25424211",
-            "chapterIdx": 4,
-            "bookmarkId": "25424211_4_1865-1911",
-            "range": "1865-1911",
-            "markText": "这些资源怎样才能被用来最理想地发展和满足个人的需要和才能，并把辛劳和痛苦降低到最小的限度呢？",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 4,
-            "createTime": 1786045529
-          }
-        ],
-        "removed": [],
-        "chapters": [
-          {
-            "title": "第三章 不幸意识的征服：压抑性的俗化趋势",
-            "chapterUid": 8,
-            "chapterIdx": 8
-          },
-          {
-            "title": "第二章 政治领域的封闭",
-            "chapterUid": 7,
-            "chapterIdx": 7
-          },
-          {
-            "title": "第一章控制的新形式",
-            "chapterUid": 6,
-            "chapterIdx": 6
-          },
-          {
-            "title": "导言 批判的停顿：没有反对派的社会",
-            "chapterUid": 4,
-            "chapterIdx": 4
-          }
-        ],
-        "book": {
-          "bookId": "25424211",
-          "version": 44968238,
-          "format": "epub",
-          "soldout": 0,
-          "bookStatus": 1,
-          "cover": "https://cdn.weread.qq.com/weread/cover/47/YueWen_25424211/s_YueWen_25424211.jpg",
-          "title": "单向度的人：发达工业社会意识形态研究（睿文馆）",
-          "author": "赫伯特·马尔库塞",
-          "coverBoxInfo": {
-            "blurhash": "K}L{h7j@j@16azfQa}aza}",
-            "colors": [
-              {
-                "key": "1/4",
-                "hex": "#311500"
-              },
-              {
-                "key": "1/6",
-                "hex": "#391100"
-              },
-              {
-                "key": "1/8",
-                "hex": "#400a00"
-              },
-              {
-                "key": "2/4",
-                "hex": "#442c0d"
-              },
-              {
-                "key": "2/6",
-                "hex": "#4a2900"
-              },
-              {
-                "key": "2/8",
-                "hex": "#4f2700"
-              },
-              {
-                "key": "3/4",
-                "hex": "#5d4322"
-              },
-              {
-                "key": "3/6",
-                "hex": "#634009"
-              },
-              {
-                "key": "3/8",
-                "hex": "#683f00"
-              },
-              {
-                "key": "3/12",
-                "hex": "#713a00"
-              },
-              {
-                "key": "4/6",
-                "hex": "#7f5921"
-              },
-              {
-                "key": "4/10",
-                "hex": "#885500"
-              },
-              {
-                "key": "4/4",
-                "hex": "#785b36"
-              },
-              {
-                "key": "5/10",
-                "hex": "#a66e00"
-              },
-              {
-                "key": "5/4",
-                "hex": "#92744f"
-              },
-              {
-                "key": "5/8",
-                "hex": "#a2701c"
-              },
-              {
-                "key": "6/4",
-                "hex": "#ac8f67"
-              },
-              {
-                "key": "6/6",
-                "hex": "#b68c50"
-              },
-              {
-                "key": "6/8",
-                "hex": "#be8a37"
-              },
-              {
-                "key": "6/12",
-                "hex": "#c88600"
-              },
-              {
-                "key": "7/8",
-                "hex": "#d9a450"
-              },
-              {
-                "key": "7/10",
-                "hex": "#e0a234"
-              },
-              {
-                "key": "7/12",
-                "hex": "#e6a000"
-              },
-              {
-                "key": "8/4",
-                "hex": "#e2c498"
-              },
-              {
-                "key": "8/6",
-                "hex": "#ecc181"
-              },
-              {
-                "key": "8/12",
-                "hex": "#ffbb2b"
-              },
-              {
-                "key": "9/2",
-                "hex": "#f2e1c8"
-              },
-              {
-                "key": "9/12",
-                "hex": "#ffd647"
-              },
-              {
-                "key": "1/100",
-                "hex": "#be8a37"
-              },
-              {
-                "key": "2/100",
-                "hex": "#d9a450"
-              },
-              {
-                "key": "3/100",
-                "hex": "#ffffff"
-              },
-              {
-                "key": "4/100",
-                "hex": "#F3EDE5"
-              },
-              {
-                "key": "5/100",
-                "hex": "#F3EDE5"
-              },
-              {
-                "key": "6/100",
-                "hex": "#271300"
-              }
-            ],
-            "dominate_color": {
-              "hex": "#efa801",
-              "hsv": [
-                42.27196608230341,
-                99.75861620993749,
-                93.61099053936329
-              ]
-            },
-            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/211/25424211/s_25424211.jpg",
-            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/211/25424211/s_25424211.jpg",
-            "colorsPure": [
-              "#c88600",
-              "#e6a000"
-            ]
-          }
-        }
-      },
-      "thoughts": {
-        "reviews": []
-      }
-    },
     "30181899": {
       "highlights": {
         "synckey": 1786197859,
@@ -12976,735 +13759,6 @@
             "colorsPure": [
               "#93B0DA",
               "#98B8DD"
-            ]
-          }
-        }
-      },
-      "thoughts": {
-        "reviews": []
-      }
-    },
-    "3300197381": {
-      "highlights": {
-        "synckey": 1789116567,
-        "updated": [
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 53,
-            "bookmarkId": "3300197381_53_8382-8404",
-            "range": "8382-8404",
-            "markText": "你要意识到一路走来真正的瓶颈从来都是你自己。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 53,
-            "createTime": 1778362529
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 53,
-            "bookmarkId": "3300197381_53_4717-4784",
-            "range": "4717-4777",
-            "markText": "“知道在哪里画叉，就是你的核心竞争力。”你的核心竞争力是你发挥独特才能的能量集合。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 53,
-            "createTime": 1778360886
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 24,
-            "bookmarkId": "3300197381_24_3288-3374",
-            "range": "3288-3351",
-            "markText": "4C公式”：承诺（Commitment）、勇气（courage）、能力（capability）、信心（confidence）。\n",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 24,
-            "createTime": 1778241921
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 46,
-            "bookmarkId": "3300197381_46_5302-5374",
-            "range": "5302-5374",
-            "markText": "请确保你每天的3项活动都超出自己当前的技能或知识水平，让你更加投入并富有勇气。这也是你自我成长和转变的方式。你将会发展出新的技能，培养出新的自信",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 46,
-            "createTime": 1778241833
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 46,
-            "bookmarkId": "3300197381_46_3896-4015",
-            "range": "3896-4015",
-            "markText": "当你需要解决重大挑战或完成创造性任务时，你至少要预留4小时的完整时间块。34如果你追求的是10倍增长，那么你要尽可能地避免时间碎片化。你需要更多自由开放的工作日和更多更大的时间块",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 46,
-            "createTime": 1778241245
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 44,
-            "bookmarkId": "3300197381_44_1428-1523",
-            "range": "1428-1523",
-            "markText": "产生创意和创新的关键在于，建立事物之间独特且超乎寻常的联系。这不仅需要输入新颖有趣的信息，还需要一个间接思考和酝酿的过程，而这个过程只有在你拥有充足的空间和时间时才有可能发生。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 44,
-            "createTime": 1778240451
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 43,
-            "bookmarkId": "3300197381_43_3103-3191",
-            "range": "3103-3191",
-            "markText": "这些标准包括你摄入的营养和食物质量、你的睡眠环境及质量、你的恢复质量以及你的生活体验质量，包括纯粹为了乐趣和建立联系而获得的新颖体验。真正的治愈和疗愈在于建立健康亲密的人际关系",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 43,
-            "createTime": 1778240163
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 43,
-            "bookmarkId": "3300197381_43_2249-2336",
-            "range": "2249-2336",
-            "markText": "如果你从未完全放松，就不会真正进入状态。你能够百分百启动并进入心流状态工作的能力，与你完全彻底放松和释放压力的能力是成正比的。专注是一种收缩，恢复则是一种扩张。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 43,
-            "createTime": 1778240021
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 42,
-            "bookmarkId": "3300197381_42_3145-3227",
-            "range": "3145-3227",
-            "markText": "．自由日（恢复日）。\n2．专注日（表演日）。\n3．缓冲日（练习日或排练日）。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 42,
-            "createTime": 1778239860
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 42,
-            "bookmarkId": "3300197381_42_2104-2153",
-            "range": "2104-2146",
-            "markText": "当你进展困难时，时间对你来说会加速流逝；但当你取得巨大进展时，你的时间会膨胀并放慢。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 42,
-            "createTime": 1778239630
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 41,
-            "bookmarkId": "3300197381_41_2561-2667",
-            "range": "2561-2667",
-            "markText": "只有当你完全沉浸于某一刻，你才能真切地体验和感受。你能处于关键时刻的频率越高，你能维持心流的时间也就越长。你会拥有更多巅峰体验，感受敬畏、自我扩展和生命的意义。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 41,
-            "createTime": 1778239454
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 41,
-            "bookmarkId": "3300197381_41_1094-1237",
-            "range": "1094-1237",
-            "markText": "时间的扩张与收缩取决于物体在特定方向上穿越空间的速度和距离。物体移动得越快，相对于其他物体，它的时间流逝得就越慢，这就是时间膨胀（time dilation）。它是描述物体加速通过空间时，时间“放慢”的术语。在相同时间内，你体验得越多，你的旅行距离就越远，你的时间膨胀或拉伸得也就越长。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 41,
-            "createTime": 1778239300
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 41,
-            "bookmarkId": "3300197381_41_1421-1446",
-            "range": "1421-1446",
-            "markText": "“你走得越快，时间流逝得就越慢，生命体验就越长。”",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 41,
-            "createTime": 1778239280
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 39,
-            "bookmarkId": "3300197381_39_4154-4276",
-            "range": "4154-4276",
-            "markText": "·　我需要提供哪些具体价值，才能使那些愿意支付我“梦想支票”的人认为这笔交易极具价值且完全合理？\n·　我的独特才能需要达到哪些标准，才能让那些愿意支付我“梦想支票”的人毫不犹豫地视其为一笔值得的投资？",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 39,
-            "createTime": 1778239058
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 39,
-            "bookmarkId": "3300197381_39_2588-2719",
-            "range": "2588-2719",
-            "markText": "你的独特才能发展得越好，就越能获得别人的高度认可和价值评估。你对独特才能投入得越多，你将实现的10倍转变也就越多。你的独特才能让你一次又一次将自己转化为最独特、最有价值和最真实的自我。独特才能是你创造独一无二的财富和价值的方式，别人更愿意为此支付更多资金和资源。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 39,
-            "createTime": 1778238934
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 39,
-            "bookmarkId": "3300197381_39_645-684",
-            "range": "645-684",
-            "markText": "首先，你需要在一个能够衡量你表现的场景中，否则你就无法通过增加工作量来增加收益",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 39,
-            "createTime": 1778238519
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 37,
-            "bookmarkId": "3300197381_37_747-770",
-            "range": "747-770",
-            "markText": "“没有所谓通往幸福的道路，幸福本身就是道路。”",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 37,
-            "createTime": 1778237845
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 35,
-            "bookmarkId": "3300197381_35_1571-1705",
-            "range": "1571-1705",
-            "markText": "人的常规思维模式。例如，每到饭点，我的孩子们就会来到餐桌旁，他们有时会因为餐桌上的食物不符合自己的期望而失望叹息。他们不会感激妈妈不辞辛劳地为他们做饭，也不会感激自己有一个温馨和睦的家庭，更不会感谢自己有一顿丰盛的晚餐，只会用脑海中任意设定的某个理想标准来贬低整体体验",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 35,
-            "createTime": 1778092387
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 35,
-            "bookmarkId": "3300197381_35_1458-1492",
-            "range": "1458-1492",
-            "markText": "差距思维是一种将实际情况与所谓原本有可能的理想情况相比较的评估方式。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 35,
-            "createTime": 1778092356
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 32,
-            "bookmarkId": "3300197381_32_613-806",
-            "range": "613-806",
-            "markText": "我认识的唯一明智的人就是我的裁缝，他每次见到我都会重新量我的尺寸。其他人呢？只会沿用往日的旧尺，而且还期望我去适应他们。\n——萧伯纳",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 32,
-            "createTime": 1778091688
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 31,
-            "bookmarkId": "3300197381_31_9761-9837",
-            "range": "9761-9837",
-            "markText": "指数级拓展自己的视野，为自己有可能成为的人、能做的事、能拥有的选择，设立更远大的目标。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 31,
-            "createTime": 1778091500
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 31,
-            "bookmarkId": "3300197381_31_9164-9201",
-            "range": "9164-9201",
-            "markText": "精通并非什么天才之举，而是一个人将时间和精力专注投入在某个特定领域的结果。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 31,
-            "createTime": 1778091466
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 29,
-            "bookmarkId": "3300197381_29_4091-4173",
-            "range": "4091-4173",
-            "markText": "10倍增长是一个提升自我价值的定性游戏。你通过创造真正想要创造的财富，譬如技能、知识、产品等，并分享给越来越重视和欣赏你的价值的特定人群，从而实现价值的10倍增长。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 29,
-            "createTime": 1777911402
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 29,
-            "bookmarkId": "3300197381_29_3590-3640",
-            "range": "3590-3640",
-            "markText": "你可以将自己的价值提升10倍，从而变得富有，而无须直接拥有10倍的金钱。事实上，金钱会追随财富而来。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 29,
-            "createTime": 1777907961
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 29,
-            "bookmarkId": "3300197381_29_2709-2792",
-            "range": "2709-2792",
-            "markText": "金钱本身是不值得追求的。如果你只是追求金钱，那么你在获取财富时将会遇到困难。财富指的是有价值的资产、技能和创造力。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 29,
-            "createTime": 1777907840
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 29,
-            "bookmarkId": "3300197381_29_1767-1991",
-            "range": "1767-1991",
-            "markText": "．想要与丰盛和创造有关。创造力不是一种稀缺资源，也无须从他人那里获得。相反，创造力实际上是在创造以往没有的新资源和新机会。\n2．想要无须理由。当你想要某种东西时，你无须向他人解释和证明你为什么想要。这可能会让那些总要自我证明的“需求者”感到困惑。他们可能会试图用稀缺思维框架来影响你，让你产生愧疚感并迫使你去做他们认为你应该做的事情。然而，为了实现10倍增长并过上真正适合自己的生活，你不必受这些人影响。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 29,
-            "createTime": 1777907685
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 29,
-            "bookmarkId": "3300197381_29_931-1593",
-            "range": "931-1593",
-            "markText": "身处一个需要的世界，你总是被迫说明和证明自己为什么需要，因为这是一个基于匮乏的世界。如果你需要某种稀缺资源，那么你必须解释为什么是你应该拥有它，而非其他人。于是，一个“需求者”终其一生都在花费大量时间和精力去思考和解释。但是，如果你能跨越这道边界，踏进“想要”的世界，你便再也无须证明任何东西。这是身为企业家必须明确的立场：不再屈从于既往需要自我证明的状态。你需要具备足够的勇气来迈出这一步，进入一个想要的世界，一个追求的世界，而不是基于需要的世界。当有人问“你为什么需要那个？”（他们常把想要说成需要），你可能会忍不住地回到之前的状态，试图自我证明和辩解。这时，请不要屈从于这种欲望，告诉自己：“首先，我不是需要它，我是想要它；其次，我想要它的理由很简单，就是我想要。”对大多数人来说，这一点并不容易理解，因为在需要的世界里，你的任何需要都要有一个合理的解释。如果你从匮乏角度来理解这个世界，那么你的获取就意味着你在争夺他人的稀缺资源。然而，在一个想要的世界里，你不会有匮乏感，因为这是一个创新的世界，你是在创造而非夺取。追求者创造的是之前并不存在的东西，你是在创造无须从他人那里获得的全新的东西。1",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 29,
-            "createTime": 1777907498
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 28,
-            "bookmarkId": "3300197381_28_3587-3673",
-            "range": "3587-3673",
-            "markText": "今天是我的一个里程碑，我完成了一个项目。在过去的25年里，除了12天（总计9 131天），我每天都会写下自己想要追求的东西。25年过去了，我可以说自己成了一个强大的追求者。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 28,
-            "createTime": 1777907275
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 28,
-            "bookmarkId": "3300197381_28_3402-3443",
-            "range": "3402-3443",
-            "markText": "他想让自己过上一种基于想要而非需要、基于自由而非安全、基于丰富而非匮乏的全新生活。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 28,
-            "createTime": 1777907247
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 27,
-            "bookmarkId": "3300197381_27_3753-3845",
-            "range": "3753-3845",
-            "markText": "每实现一次10倍增长，你所做事情的质量和规模都会向上提升。你烹饪的不再是快餐，而是精致料理，这就需要你具备更高的专业性和专注度。你不可能再同时做很多事情，因为你需要更多的时间来理解和整",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 27,
-            "createTime": 1777898839
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 26,
-            "bookmarkId": "3300197381_26_1946-2659",
-            "range": "1946-2659",
-            "markText": "尽管听起来有些奇怪，但打造一个获得500万次观看量的爆款，远比让50个视频各获得10万次观看量容易得多。你一年只需上传一个精彩的视频，它的观看量肯定比一年上传100个平庸的视频更多，并且是指数级的区别。想要在YouTube上受欢迎，就要让人们点击并完整观看你的视频。如果你的视频点击率比别人高10%，观看时长也多10%，那么你得到的观看量不止多10%，而是多4倍。你需要具备指数级的思维模式，点击率高出10%的视频会获得4倍的观看量。一旦理解了这一点，你就会更好地集中精力投入视频制作中。如果视频的制作时间增加了3倍，那么你收获的观看量不只是3倍，而是10倍。因此，我建议他们把视频做到足够好，同时还会帮助他们组建团队，譬如增加剪辑人员。如果一个人做5件事，那么每一件事只能投入20%的时间和精力。但是，如果你聘请一位剪辑师，那么他可以将100%的时间和精力投入剪辑工作中。你可能无法做到一天剪辑10小时，但是他可以。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 26,
-            "createTime": 1777896905
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 24,
-            "bookmarkId": "3300197381_24_3049-3153",
-            "range": "3049-3153",
-            "markText": "你可能对线上游戏毫无兴趣，但是我想强调的是我们每个人都有自己的标准。我们选择自己在意的标准，并努力达到这些标准所设定的水准。譬如，两个热衷于打网球的人分别是职业选手和业余选手，那么职业选手的打球标准显然会更高",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 24,
-            "createTime": 1777841296
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 24,
-            "bookmarkId": "3300197381_24_2737-3026",
-            "range": "2737-3026",
-            "markText": "一个人的身份是由其全力追求的东西决定的。这是一个你想全心投入抒写的个人故事，也是你最坚守的个人标准。这些标准是你为自己设定的行为规范，代表你对自己的承诺。一旦某项准则被视为标准，它便成为你坚守的信念。因此，你的行为和决策很少低于这些标准，否则它们就不能被称为真正的标准。\n我们都在坚守自己设定的标准，即便自己没有意识到。比如，我的一个朋友是《魔兽世界》的狂热玩家，每天花16小时玩游戏，是所在服务器上的顶尖玩家之一。可是，最近他告诉我他退出了所在的游戏社区，原因是他觉得其他玩家达不到他的标准，他想和更高级别的玩家组队。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 24,
-            "createTime": 1777841286
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 21,
-            "bookmarkId": "3300197381_21_975-1137",
-            "range": "975-1137",
-            "markText": "500美元客户：鉴于我即将对你进行这笔投资，我认为我们应该了解清楚我们的生活将会发生什么样的改变。我需要看到你能为我们带来什么样的成果，毕竟我把身家都托付给你了。\n50 000美元客户：钱已转，谢谢。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 21,
-            "createTime": 1777827605
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 19,
-            "bookmarkId": "3300197381_19_4335-4425",
-            "range": "4335-4425",
-            "markText": "假如你想要一座非常精美的房子，那么可供选择的家具并不多。你对细节的要求越苛刻，符合要求的设计师越少。相反，假如你对房子的要求标准低或者没有什么具体要求，那么可选择的家具就数不胜数。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 19,
-            "createTime": 1777821430
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 19,
-            "bookmarkId": "3300197381_19_3553-3604",
-            "range": "3553-3604",
-            "markText": "“如果你瞄准的是月亮，即使迷失，也是在星辰之间。”",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 19,
-            "createTime": 1777821285
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 19,
-            "bookmarkId": "3300197381_19_3040-3134",
-            "range": "3040-3134",
-            "markText": "目标决定了过程。丹·沙利文说：“唯有拓展未来，方能过好现在。”将目标提升10倍，它会迫使你寻找不同的实现路径，向不同的人提出不同的问题。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 19,
-            "createTime": 1777821036
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 14,
-            "bookmarkId": "3300197381_14_5766-6016",
-            "range": "5766-6016",
-            "markText": "自由一点儿也不廉价，它要求你极度真诚地面对自己和他人。这一点既令人害怕又让人感到解脱。在追求10倍增长的过程中，你不能有一丝犹豫或半途而废。为了实现目标自由，你必须舍弃生活中所有不符合10倍增长的部分。然而，要做到这一点并不容易，因为你的大部分时间很可能被那些只能带来2倍增长的工作所占据。\n迈向10倍增长，就是要去掉一切不符合你心目中“隶属于大卫”的东西。追求10倍增长，意味着你选择参与一个可以拓展自由的无限游戏。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 14,
-            "createTime": 1777819743
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 14,
-            "bookmarkId": "3300197381_14_615-1035",
-            "range": "615-1035",
-            "markText": "但是，作品的质量又该如何呢？\n对最高品质的追求早已融入他的骨髓，\n他始终致力于创作远超自己能力范围的作品，\n因为除了新颖、独特、颠覆性，以及作为整体艺术的显著延伸，\n任何东西都不会让他感到满足。\n他从未在质量上做出妥协，",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 14,
-            "createTime": 1777763088
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 12,
-            "bookmarkId": "3300197381_12_5570-5631",
-            "range": "5570-5631",
-            "markText": "当你将自己视为广阔的背景而非具体的内容时，你会更具有灵活性和适应性。你可以像更换房间里的家具或重新装修一样，实现自我转变。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 12,
-            "createTime": 1777736090
-          },
-          {
-            "bookId": "3300197381",
-            "chapterIdx": 12,
-            "bookmarkId": "3300197381_12_5389-5454",
-            "range": "5389-5431",
-            "markText": "心理灵活性的一个核心特质是将自己视为一个更广阔的背景而存在，而不是情感和经历的集合。",
-            "colorStyle": 5,
-            "type": 1,
-            "chapterUid": 12,
-            "createTime": 1777736030
-          }
-        ],
-        "removed": [],
-        "chapters": [
-          {
-            "title": "结语 成为破局者：未来属于拆天花板的人",
-            "chapterUid": 53,
-            "chapterIdx": 53
-          },
-          {
-            "title": "3大时间类型：自由日、专注日与缓冲日",
-            "chapterUid": 42,
-            "chapterIdx": 42
-          },
-          {
-            "title": "颠覆认知：更大的目标反而更容易实现",
-            "chapterUid": 12,
-            "chapterIdx": 12
-          },
-          {
-            "title": "“每日3个重点”原则",
-            "chapterUid": 46,
-            "chapterIdx": 46
-          },
-          {
-            "title": "自由日：恢复与创新",
-            "chapterUid": 43,
-            "chapterIdx": 43
-          },
-          {
-            "title": "时间膨胀原理：质量优于数量",
-            "chapterUid": 41,
-            "chapterIdx": 41
-          },
-          {
-            "title": "梦想支票：设定突破性目标",
-            "chapterUid": 39,
-            "chapterIdx": 39
-          },
-          {
-            "title": "规划10倍未来的两大工具",
-            "chapterUid": 37,
-            "chapterIdx": 37
-          },
-          {
-            "title": "收获思维：看见已经取得的进步",
-            "chapterUid": 35,
-            "chapterIdx": 35
-          },
-          {
-            "title": "聚焦带来最大回报的领域",
-            "chapterUid": 26,
-            "chapterIdx": 26
-          },
-          {
-            "title": "自由的本质：10倍增长带来的4大自由",
-            "chapterUid": 14,
-            "chapterIdx": 14
-          },
-          {
-            "title": "2倍增长的陷阱：越努力越受限",
-            "chapterUid": 19,
-            "chapterIdx": 19
-          },
-          {
-            "title": "第3章 动机升级：从“需要”到“想要”",
-            "chapterUid": 28,
-            "chapterIdx": 28
-          },
-          {
-            "title": "专注日：心流与突破",
-            "chapterUid": 44,
-            "chapterIdx": 44
-          },
-          {
-            "title": "成为能实现10倍目标的自己",
-            "chapterUid": 24,
-            "chapterIdx": 24
-          },
-          {
-            "title": "案例：0团队扩张带来4倍盈利",
-            "chapterUid": 21,
-            "chapterIdx": 21
-          },
-          {
-            "title": "打造不可替代的竞争优势",
-            "chapterUid": 27,
-            "chapterIdx": 27
-          },
-          {
-            "title": "丰盈心态vs.匮乏心态",
-            "chapterUid": 29,
-            "chapterIdx": 29
-          },
-          {
-            "title": "精进之路：持续强化独特才能",
-            "chapterUid": 31,
-            "chapterIdx": 31
-          },
-          {
-            "title": "建立“买家思维”：掌握选择主动权",
-            "chapterUid": 32,
-            "chapterIdx": 32
-          }
-        ],
-        "book": {
-          "bookId": "3300197381",
-          "version": 996621170,
-          "format": "epub",
-          "soldout": 0,
-          "bookStatus": 1,
-          "cover": "https://cdn.weread.qq.com/weread/cover/49/cpplatform_8pe4n9gxbb22ofnsynyphg/s_cpplatform_8pe4n9gxbb22ofnsynyphg1772705172.jpg",
-          "title": "为什么10倍增长比2倍更容易",
-          "author": "[美]丹·沙利文  [美]本杰明·哈迪",
-          "coverBoxInfo": {
-            "blurhash": "KNI#fM~S%f%KNOIwD,9dIv",
-            "colors": [
-              {
-                "key": "1/4",
-                "hex": "#131b35"
-              },
-              {
-                "key": "1/6",
-                "hex": "#0b1941"
-              },
-              {
-                "key": "1/8",
-                "hex": "#03174c"
-              },
-              {
-                "key": "2/4",
-                "hex": "#27304b"
-              },
-              {
-                "key": "2/6",
-                "hex": "#202f58"
-              },
-              {
-                "key": "2/8",
-                "hex": "#162d64"
-              },
-              {
-                "key": "3/4",
-                "hex": "#3d4765"
-              },
-              {
-                "key": "3/6",
-                "hex": "#364672"
-              },
-              {
-                "key": "3/8",
-                "hex": "#2d457e"
-              },
-              {
-                "key": "3/12",
-                "hex": "#0f4297"
-              },
-              {
-                "key": "4/6",
-                "hex": "#505f89"
-              },
-              {
-                "key": "4/10",
-                "hex": "#3d5ea3"
-              },
-              {
-                "key": "4/4",
-                "hex": "#565f7c"
-              },
-              {
-                "key": "5/10",
-                "hex": "#5878bd"
-              },
-              {
-                "key": "5/4",
-                "hex": "#707994"
-              },
-              {
-                "key": "5/8",
-                "hex": "#6178b0"
-              },
-              {
-                "key": "6/4",
-                "hex": "#8993ad"
-              },
-              {
-                "key": "6/6",
-                "hex": "#8293bc"
-              },
-              {
-                "key": "6/8",
-                "hex": "#7b92ca"
-              },
-              {
-                "key": "6/12",
-                "hex": "#6692e8"
-              },
-              {
-                "key": "7/8",
-                "hex": "#93ade6"
-              },
-              {
-                "key": "7/10",
-                "hex": "#89adf7"
-              },
-              {
-                "key": "7/12",
-                "hex": "#7cacff"
-              },
-              {
-                "key": "8/4",
-                "hex": "#bcc8e2"
-              },
-              {
-                "key": "8/6",
-                "hex": "#b4c8f4"
-              },
-              {
-                "key": "8/12",
-                "hex": "#95c7ff"
-              },
-              {
-                "key": "9/2",
-                "hex": "#dee3ed"
-              },
-              {
-                "key": "9/12",
-                "hex": "#aee1ff"
-              },
-              {
-                "key": "1/100",
-                "hex": "#7b92ca"
-              },
-              {
-                "key": "2/100",
-                "hex": "#93ade6"
-              },
-              {
-                "key": "3/100",
-                "hex": "#ffffff"
-              },
-              {
-                "key": "4/100",
-                "hex": "#E5ECF3"
-              },
-              {
-                "key": "5/100",
-                "hex": "#E5ECF3"
-              },
-              {
-                "key": "6/100",
-                "hex": "#001927"
-              }
-            ],
-            "dominate_color": {
-              "hex": "#8890a6",
-              "hsv": [
-                224.14319156503434,
-                18.03294491115327,
-                64.97232782315823
-              ]
-            },
-            "custom_cover": "https://weread-1258476243.file.myqcloud.com/bookalphacover/381/3300197381/s_3300197381.jpg",
-            "custom_rec_cover": "https://weread-1258476243.file.myqcloud.com/bookreccover/381/3300197381/s_3300197381.jpg",
-            "colorsPure": [
-              "#6692e8",
-              "#7cacff"
             ]
           }
         }
