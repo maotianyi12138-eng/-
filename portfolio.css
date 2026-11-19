@@ -23,6 +23,8 @@ body.portfolio-page #music-toggle { z-index:650; top:18px; right:calc(clamp(16px
 .folio-more-panel a { display:flex; flex-direction:column; gap:7px; border-radius:6px; }
 .folio-more-panel a:hover { background:#ffffff0a; }
 .folio-more-panel small { color:#aaa99f; font-size:12px; }
+.folio-more-panel .folio-anatomy-link { grid-column:1/-1; min-height:68px; flex-direction:row; align-items:center; justify-content:space-between; border:1px solid #ffffff14; background:linear-gradient(110deg,#242722,#181a18); }
+.folio-more-panel .folio-anatomy-link small { margin-left:auto; }
 .folio-more-split { display:grid; grid-template-columns:1fr 1fr; padding:0; }
 .folio-more-split a { padding:20px 10px; }
 .folio-shell { width:100%; max-width:1760px; margin:0 auto; padding:0 clamp(20px,3.6vw,64px); }
