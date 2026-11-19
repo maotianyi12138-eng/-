@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-19T00:15:46Z",
+  "updatedAt": "2026-11-19T07:22:19Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -4045,7 +4045,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5084269,
+        "users": 5084685,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -4062,7 +4062,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6258590,
+        "users": 6259035,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -4079,7 +4079,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12033979,
+        "users": 12034550,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -4481,7 +4481,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8414人读过"
+        "reason": "仅有8424人读过"
       },
       {
         "type": 8,
