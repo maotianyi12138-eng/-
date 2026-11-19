@@ -1,134 +1,133 @@
-/* Original bilingual study notes. Muscle roles describe one joint action or one
-   exercise, never a measured activation percentage. Null targets are deliberately
-   not clickable: some related structures are outside the twelve visible plates. */
+/* Names in the secondary display slot are common English names. A relation describes
+   one joint action, not a permanent pairing, and a highlight is not an EMG reading. */
 (() => {
   'use strict';
   const rel = (label, explanation, target = null) => ({label, explanation, target});
   const phase = (kind, en, zh, text) => ({kind, en, zh, text});
   const muscles = {
     pectoralis: {
-      en:'Pectoralis major', zh:'胸大肌', group:'Chest', view:'front',
-      fn:'向前抱住一个大球时，两侧上臂在肩关节处向胸前靠拢。这个动作叫水平内收；胸大肌也能使上臂内旋。',
-      clue:'Pectoral 是「胸部的」，major 是「较大的」。健身房里说的 pecs，就是它。',
-      synergy:rel('Anterior deltoid · 三角肌前束','卧推时，前束与胸大肌一起把上臂带向胸前；手肘伸直是另一组肌肉的工作。','deltoid'),
-      antagonist:rel('Posterior deltoid · 三角肌后束','只看肩水平运动：后束让上臂向后打开，与胸大肌水平内收的方向相反。','deltoid')
+      en:'Pectoralis major', zh:'Pecs', group:'Chest', view:'front',
+      fn:'Wrap your arms around a wide tree. Your upper arms sweep across the front of your chest: horizontal adduction at the shoulder. The pecs can also turn the upper arms inward.',
+      clue:'Pectoral means “of the chest”; major means “larger.” Pecs is simply the gym-floor shorthand.',
+      synergy:rel('Anterior deltoid','During a bench press, the front deltoid helps the pecs carry the upper arm across the chest. Straightening the elbow is a separate job.','deltoid'),
+      antagonist:rel('Posterior deltoid','With the arm at shoulder height, the rear deltoid can take it backward, opening the arc that the pecs close.','deltoid')
     },
     deltoid: {
-      en:'Deltoid', zh:'三角肌', group:'Shoulder', view:'front',
-      fn:'这块肩帽有三个部分：前束把上臂带向前，中束把它向侧面抬起，后束把它带向后。',
-      clue:'Delta 是希腊字母 Δ。看到肩外侧的三角形，就能想起 deltoid。',
-      synergy:rel('Supraspinatus · 冈上肌','侧抬手臂时，冈上肌与三角肌中束一起产生肩外展；它不是肘部的动作。'),
-      antagonist:rel('Latissimus dorsi · 背阔肌','就肩外展而言，背阔肌让抬开的上臂回到体侧，即肩内收。','latissimus')
+      en:'Deltoid', zh:'Delts', group:'Shoulder', view:'front',
+      fn:'The shoulder cap has three parts. Its front fibres lift the upper arm forward, its middle fibres lift it out to the side, and its rear fibres draw it back.',
+      clue:'Think of the Greek letter delta, a triangle. The deltoid narrows from a broad shoulder cap to a point on the upper arm.',
+      synergy:rel('Supraspinatus','Both muscles help lift the upper arm out to the side. Supraspinatus sits above the spine of the shoulder blade.'),
+      antagonist:rel('Latissimus dorsi','For this sideways lift, the lats can reverse the movement, bringing the upper arm back to the ribs.','latissimus')
     },
     biceps: {
-      en:'Biceps brachii', zh:'肱二头肌', group:'Arm', view:'front',
-      fn:'掌心向上端起一只碗，包含两个动作：肘关节屈曲，以及前臂旋后。肱二头肌两者都参与。',
-      clue:'Bi- 是「二」，brachii 指上臂。两个「头」是两处起点，不是两块肌肉。',
-      synergy:rel('Brachialis · 肱肌','弯曲手肘时，位于肱二头肌深面的肱肌也拉动前臂；它不负责翻转掌心。'),
-      antagonist:rel('Triceps brachii · 肱三头肌','肱二头肌屈肘，肱三头肌伸肘。两者作用方向相反，也可一起用力来稳定肘部。','triceps')
+      en:'Biceps brachii', zh:'Biceps', group:'Arm', view:'front',
+      fn:'Turn your palm up, then bend your elbow to lift a bowl. The biceps helps with both actions: rotating the forearm palm-up and bending the elbow.',
+      clue:'Bi- means two; brachii means “of the arm.” The two heads are two starting points for one muscle.',
+      synergy:rel('Brachialis','This muscle lies beneath the biceps. It helps bend the elbow without turning the palm up.'),
+      antagonist:rel('Triceps brachii','Biceps bends the elbow and triceps straightens it. Both can also contract together to hold the joint steady.','triceps')
     },
     triceps: {
-      en:'Triceps brachii', zh:'肱三头肌', group:'Arm', view:'back',
-      fn:'把弯曲的手肘推直时，上臂后侧的三头共同伸肘。其中长头还跨过肩关节，能参与肩伸展。',
-      clue:'Tri- 是「三」。把 triceps 和 biceps 放在一起记：一个在上臂后侧伸肘，一个在前侧屈肘。',
-      synergy:rel('Anconeus · 肘肌','伸直手肘时，肘后方的肘肌协助肱三头肌完成伸肘。'),
-      antagonist:rel('Biceps brachii · 肱二头肌','只看肘关节，肱二头肌把前臂拉近上臂，方向与伸肘相反。','biceps')
+      en:'Triceps brachii', zh:'Triceps', group:'Arm', view:'back',
+      fn:'Push a heavy door open. As the elbow straightens, all three heads at the back of your upper arm contribute. The long head also crosses the shoulder and can draw the arm backward.',
+      clue:'Tri- means three. Pair it with bi-: triceps at the back to straighten the elbow, biceps at the front to bend it.',
+      synergy:rel('Anconeus','This small muscle behind the elbow assists the triceps when the forearm straightens.'),
+      antagonist:rel('Biceps brachii','At the elbow, the biceps draws the forearm toward the upper arm, the opposite direction to extension.','biceps')
     },
     trapezius: {
-      en:'Trapezius', zh:'斜方肌', group:'Upper back', view:'back',
-      fn:'耸肩、把肩胛骨向脊柱靠拢和举手过头，并非同一种耸动。上、中、下部纤维牵引方向不同；上部和下部还共同参与肩胛上回旋。',
-      clue:'Trapezius 常简称 traps。别只记耸肩：把手举过头时，肩胛骨也要随之转动。',
-      synergy:rel('Serratus anterior · 前锯肌','举手过头时，前锯肌配合斜方肌上、下部，使肩胛骨上回旋，让关节盂朝向上方。'),
-      antagonist:rel('Rhomboids · 菱形肌','若只看肩胛旋转，菱形肌的下回旋与上回旋相反；若看后缩，它却与斜方肌中部合作。')
+      en:'Trapezius', zh:'Traps', group:'Upper back', view:'back',
+      fn:'Shrugging, drawing the shoulder blades together and reaching overhead use different parts of this broad muscle. Its upper and lower fibres work together to turn the shoulder blade upward.',
+      clue:'A shrug is only one clue to the traps. Watch a shoulder blade turn as the arm rises overhead: that is the same muscle playing a different part.',
+      synergy:rel('Serratus anterior','During an overhead reach, serratus anterior works with the upper and lower traps to turn the shoulder socket upward.'),
+      antagonist:rel('Rhomboids','The rhomboids rotate the shoulder blade downward, opposing upward rotation. Yet they work alongside the middle traps when the blades draw together.')
     },
     latissimus: {
-      en:'Latissimus dorsi', zh:'背阔肌', group:'Back', view:'back',
-      fn:'从高处把上臂拉向身体两侧时，背阔肌参与肩内收。它也能使上臂向后伸展和向内旋转，但不直接弯曲手肘。',
-      clue:'Latissimus 是「最宽的」，dorsi 是「背部的」。英语口语 lats，指的就是这对背部大肌肉。',
-      synergy:rel('Posterior deltoid · 三角肌后束','划船时，后束可协助背阔肌让上臂向后。肱二头肌则在肘关节完成另一部分动作。','deltoid'),
-      antagonist:rel('Middle deltoid · 三角肌中束','在肩内收／外展这个方向，三角肌中束抬开上臂，与背阔肌的内收相反。','deltoid')
+      en:'Latissimus dorsi', zh:'Lats', group:'Back', view:'back',
+      fn:'Reach up, then draw your upper arm down toward your ribs. The lats help bring the arm in, sweep it backward and turn it inward. They do not cross the elbow.',
+      clue:'Latissimus means “widest”; dorsi means “of the back.” The familiar nickname is lats.',
+      synergy:rel('Posterior deltoid','In a row, the rear deltoid helps the lats draw the upper arm backward. The biceps handles part of the pull at the elbow.','deltoid'),
+      antagonist:rel('Middle deltoid','At the shoulder, the middle deltoid takes the arm out to the side, opposing the inward pull of the lats.','deltoid')
     },
     rectus: {
-      en:'Rectus abdominis', zh:'腹直肌', group:'Trunk', view:'front',
-      fn:'卷起上半身时，它使胸廓和骨盆前侧靠近，形成躯干屈曲。保持身体不向后仰时，它也能在几乎不改变长度的情况下出力。',
-      clue:'Rectus 是「直的」，abdominis 是「腹部的」。腹前壁的纤维沿身体长轴排列。',
-      synergy:rel('External oblique · 腹外斜肌','左右腹外斜肌同时收缩时，能与腹直肌一起使躯干向前屈。','obliques'),
-      antagonist:rel('Erector spinae · 竖脊肌群','比较屈伸方向：竖脊肌群双侧共同收缩可伸展脊柱，与躯干屈曲相反。')
+      en:'Rectus abdominis', zh:'Six-pack muscle', group:'Trunk', view:'front',
+      fn:'As you curl your trunk, this pair of long muscles draws the front of the rib cage and pelvis closer. It can also work without visible motion, resisting a backward arch.',
+      clue:'Rectus means “straight.” Follow the vertical run of the fibres rather than the horizontal grooves of a six-pack.',
+      synergy:rel('External obliques','When both sides contract together, the external obliques help rectus abdominis curl the trunk forward.','obliques'),
+      antagonist:rel('Erector spinae','On either side of the spine, these muscles can pull the trunk into extension, opposing the forward curl.')
     },
     obliques: {
-      en:'External oblique', zh:'腹外斜肌', group:'Trunk', view:'front',
-      fn:'骨盆固定，向左转胸口时，右侧腹外斜肌可以参与发力。左右两侧同时工作时，则可帮助屈曲躯干和压缩腹部。',
-      clue:'External 是「外层」，oblique 是「斜」。它的纤维像双手从身体两侧斜插进前裤袋。',
-      synergy:rel('Internal oblique · 腹内斜肌','同一次左转，右侧腹外斜肌与左侧腹内斜肌合作。注意它们位于身体的两侧。'),
-      antagonist:rel('Opposite external oblique · 对侧腹外斜肌','比较转体方向：左侧腹外斜肌偏向使躯干右转，与上述左转相反。')
+      en:'External oblique', zh:'Outer obliques', group:'Trunk', view:'front',
+      fn:'Keep the pelvis still and turn your chest to the left. The right external oblique helps make that turn. Both sides together can bend the trunk forward and compress the abdomen.',
+      clue:'External means outer; oblique means slanting. Most fibres slope down and inward like your fingers sliding into front trouser pockets.',
+      synergy:rel('Internal oblique','To turn left, the right external oblique teams up with the left internal oblique. The pair works across the body.'),
+      antagonist:rel('Opposite external oblique','With the pelvis fixed, the left external oblique turns the chest to the right, opposing the left turn described above.')
     },
     gluteus: {
-      en:'Gluteus maximus', zh:'臀大肌', group:'Hip', view:'back',
-      fn:'从坐位站起来时，臀大肌把屈曲的髋伸直；它也能使大腿在髋关节向外旋转。',
-      clue:'Gluteal 指臀部，maximus 是「最大的」。英语训练口令 squeeze your glutes 说的是臀肌群。',
-      synergy:rel('Hamstrings · 腘绳肌','从髋铰链姿势起身，跨髋的腘绳肌与臀大肌共同伸髋。','hamstrings'),
-      antagonist:rel('Iliopsoas · 髂腰肌','大腿向躯干抬起是屈髋，髂腰肌的这一作用与臀大肌的伸髋相反。')
+      en:'Gluteus maximus', zh:'Glute max', group:'Hip', view:'back',
+      fn:'As you rise from a chair, this muscle opens the angle between trunk and thigh. This is hip extension. It can also rotate the thigh outward at the hip.',
+      clue:'Maximus means “largest.” Glute max names one muscle; glutes usually refers to a family of muscles.',
+      synergy:rel('Hamstrings','When you stand out of a hip hinge, the hamstrings that cross the hip help glute max extend it.','hamstrings'),
+      antagonist:rel('Iliopsoas','Lifting a thigh toward the trunk bends the hip. Iliopsoas produces that motion, opposing hip extension.')
     },
     quadriceps: {
-      en:'Quadriceps femoris', zh:'股四头肌', group:'Thigh', view:'front',
-      fn:'坐着把小腿向前踢直，膝关节伸展。大腿前侧四个组成部分都能伸膝，只有股直肌还跨过髋关节。',
-      clue:'Quadri- 是「四」，femoris 指大腿。常听到的 quads 就是这组伸膝肌。',
-      synergy:rel('Gluteus maximus · 臀大肌','在深蹲起身这个整体任务中，两组肌肉分工：股四头肌伸膝，臀大肌伸髋。臀大肌不直接伸膝。','gluteus'),
-      antagonist:rel('Hamstrings · 腘绳肌','只比较膝关节，腘绳肌使膝盖弯曲，与股四头肌的伸膝作用相反。','hamstrings')
+      en:'Quadriceps femoris', zh:'Quads', group:'Thigh', view:'front',
+      fn:'Sit down and straighten one knee. All four parts of the quadriceps can produce that movement. Only one, rectus femoris, also crosses the hip.',
+      clue:'Quadri- means four; femoris means “of the thigh.” Quads is the everyday name for this group on the front of the thigh.',
+      synergy:rel('Gluteus maximus','Watch a squat from the side: the quads open the knee while glute max opens the hip. They share the task, not the same joint action.','gluteus'),
+      antagonist:rel('Hamstrings','At the knee, the hamstrings bend the lower leg back, opposite to the extension produced by the quads.','hamstrings')
     },
     hamstrings: {
-      en:'Hamstrings', zh:'腘绳肌群', group:'Thigh', view:'back',
-      fn:'它们位于大腿后侧，可弯曲膝盖。半腱肌、半膜肌、股二头肌长头还跨过髋部，能够伸髋；股二头肌短头不跨髋。',
-      clue:'Hamstrings 是一组肌肉的合称，不是单独一根肌腱。记位置：大腿后侧、膝盖上方。',
-      synergy:rel('Gluteus maximus · 臀大肌','罗马尼亚硬拉站起时，跨髋的腘绳肌和臀大肌一同产生伸髋力矩。','gluteus'),
-      antagonist:rel('Quadriceps femoris · 股四头肌','就膝关节而言，腘绳肌弯曲膝盖，股四头肌把膝盖伸直。','quadriceps')
+      en:'Hamstrings', zh:'Back of thigh', group:'Thigh', view:'back',
+      fn:'These muscles bend the knee. Semitendinosus, semimembranosus and the long head of biceps femoris also extend the hip. The short head of biceps femoris crosses the knee only.',
+      clue:'Hamstrings is a group name, not a single tendon. For a landmark, start at the back of the thigh, just above the knee.',
+      synergy:rel('Gluteus maximus','During the rise in a Romanian deadlift, the hamstrings that cross the hip join glute max to bring the body upright.','gluteus'),
+      antagonist:rel('Quadriceps femoris','At the knee, the quads straighten the leg while the hamstrings bend it.','quadriceps')
     },
     gastrocnemius: {
-      en:'Gastrocnemius', zh:'腓肠肌', group:'Calf', view:'back',
-      fn:'站着踮脚，脚跟离地，踝关节做跖屈。腓肠肌经跟腱牵拉跟骨，两头还跨过膝关节，能协助屈膝。',
-      clue:'训练中常说的 calf 是小腿肚区域；gastrocnemius 特指表面轮廓明显的这块肌肉。',
-      synergy:rel('Soleus · 比目鱼肌','踮脚时，深层的比目鱼肌与腓肠肌都参与跖屈。与腓肠肌不同，比目鱼肌不跨膝。'),
-      antagonist:rel('Tibialis anterior · 胫骨前肌','脚跟留在地面、抬起前脚掌是背屈，与踮脚时的踝跖屈相反。')
+      en:'Gastrocnemius', zh:'Surface calf muscle', group:'Calf', view:'back',
+      fn:'Rise onto your toes. Gastrocnemius pulls through the Achilles tendon to lift the heel, an action called plantar flexion. Its two heads also cross the knee and can help bend it.',
+      clue:'Calf names the whole area; gastrocnemius names the muscle making the two visible bulges high on the back of the lower leg.',
+      synergy:rel('Soleus','Soleus sits beneath gastrocnemius and also helps lift the heel. Unlike gastrocnemius, it does not cross the knee.'),
+      antagonist:rel('Tibialis anterior','Keeping the heel down and lifting the forefoot is dorsiflexion: the opposite ankle action to rising onto the toes.')
     }
   };
   const exercises = {
     bench: {
-      en:'Bench press', zh:'杠铃卧推', view:'front', focus:'pectoralis', primary:['pectoralis'], secondary:['triceps','deltoid'], stabilizer:['trapezius'],
-      phases:[phase('concentric','Press','推起','上臂向胸前合拢，同时手肘伸直。前者主要由胸大肌完成，后者由肱三头肌完成。'),phase('eccentric','Lower','下放','手肘逐渐弯曲、上臂打开，胸大肌和伸肘肌群带着张力延长，使杠铃受控地靠近胸部。')],
-      note:'关注上臂和前臂如何分工：胸大肌不跨肘；斜方肌中部等帮助维持肩胛位置。'
+      en:'Barbell bench press', zh:'Bench press', view:'front', focus:'pectoralis', primary:['pectoralis'], secondary:['triceps','deltoid'], stabilizer:['trapezius'],
+      phases:[phase('concentric','Press','From chest to arms extended','The upper arms sweep together as the elbows straighten. The pecs help drive the shoulder motion; the triceps extend the elbows.'),phase('eccentric','Lower','Return toward the chest','The elbows bend and the upper arms open. The pecs and triceps lengthen under tension to control the bar on its return.')],
+      note:'Follow the upper arm and forearm separately. The pecs do not cross the elbow; the middle traps help hold the shoulder blades against the bench.'
     },
     pullup: {
-      en:'Pull-up', zh:'正握引体向上', view:'back', focus:'latissimus', primary:['latissimus'], secondary:['biceps'], stabilizer:['rectus','obliques'],
-      phases:[phase('concentric','Pull','拉起','双手固定在杠上，肘逐渐弯曲，上臂向躯干靠近。这里是躯干靠近固定的手，而不是把杠拉下来。'),phase('eccentric','Lower','下降','肩与肘沿原路径打开；背阔肌和屈肘肌群仍在出力，控制身体下降。')],
-      note:'肱二头肌参与屈肘，但不是唯一的屈肘肌；腹壁稳定躯干、减少摆动。'
+      en:'Overhand pull-up', zh:'Pull-up', view:'back', focus:'latissimus', primary:['latissimus'], secondary:['biceps'], stabilizer:['rectus','obliques'],
+      phases:[phase('concentric','Pull','Raise the torso','The hands stay on the bar while the elbows bend and the upper arms approach the ribs. Here the body moves toward the hands.'),phase('eccentric','Lower','Return to the hang','As the elbows straighten and the arms return overhead, the lats and elbow flexors resist gravity to control the descent.')],
+      note:'The biceps is one of several elbow flexors in a pull-up. The abdominal wall helps steady the trunk and limit swinging.'
     },
     squat: {
-      en:'Back squat', zh:'杠铃背蹲', view:'front', focus:'quadriceps', primary:['quadriceps','gluteus'], secondary:[], stabilizer:['obliques','rectus'],
-      phases:[phase('eccentric','Descend','下蹲','髋与膝一起弯曲，杠铃随身体下降。伸膝肌群在延长中控制下蹲，不等于停止发力。'),phase('concentric','Stand','起身','膝和髋逐渐伸直。股四头肌负责伸膝，臀大肌参与伸髋，腹壁帮助维持躯干姿态。')],
-      note:'另有内收大肌等参与伸髋。图上只标出本图谱收录的代表肌群，不是完整参与名单。'
+      en:'Barbell back squat', zh:'Back squat', view:'front', focus:'quadriceps', primary:['quadriceps','gluteus'], secondary:[], stabilizer:['obliques','rectus'],
+      phases:[phase('eccentric','Descend','Fold at hips and knees','The bar travels down with the torso as the hips and knees bend. The knee extensors stay active while they lengthen under load.'),phase('concentric','Stand','Open the hips and knees','The quads straighten the knees while glute max helps extend the hips. The abdominal wall helps maintain the shape of the trunk.')],
+      note:'The adductor magnus also helps extend the hip. The coloured regions are a selection of contributors, not a complete list.'
     },
     rdl: {
-      en:'Romanian deadlift', zh:'罗马尼亚硬拉', view:'back', focus:'hamstrings', primary:['hamstrings','gluteus'], secondary:[], stabilizer:['latissimus','obliques'],
-      phases:[phase('eccentric','Hinge','髋部折叠','从站立开始，髋向后移、膝保持微屈，杠铃贴近腿下降；跨髋的腘绳肌在张力下延长。'),phase('concentric','Extend','伸髋站起','腘绳肌与臀大肌产生伸髋力矩，骨盆和躯干回到站立位置；不是靠弯肘抬杠。')],
-      note:'主要观察髋角变化。背阔肌帮助杠靠近身体，竖脊肌和腹壁共同稳定躯干。'
+      en:'Romanian deadlift', zh:'RDL', view:'back', focus:'hamstrings', primary:['hamstrings','gluteus'], secondary:[], stabilizer:['latissimus','obliques'],
+      phases:[phase('eccentric','Hinge','Send the hips back','The knees stay slightly bent as the hips move backward and the bar travels down close to the legs. The hamstrings crossing the hip lengthen under tension.'),phase('concentric','Extend','Bring the hips forward','The hamstrings and glute max extend the hips to bring the torso upright. The arms carry the bar rather than curling it upward.')],
+      note:'Watch the hip angle change. The lats help keep the bar close; the spinal extensors and abdominal wall help hold the trunk steady.'
     },
     ohp: {
-      en:'Overhead press', zh:'站姿杠铃推举', view:'front', focus:'deltoid', primary:['deltoid','triceps'], secondary:['trapezius'], stabilizer:['rectus','gluteus'],
-      phases:[phase('concentric','Press','推过头顶','杠从肩前上行。上臂抬起、手肘伸直，肩胛骨随之上回旋，让手能到达头顶。'),phase('eccentric','Return','降回肩前','手肘逐渐弯曲，上臂回落。三角肌和肱三头肌控制回程，而不是突然卸力。')],
-      note:'区分三个部位：三角肌抬上臂，肱三头肌伸肘，斜方肌配合前锯肌转动肩胛骨。'
+      en:'Standing overhead press', zh:'Overhead press', view:'front', focus:'deltoid', primary:['deltoid','triceps'], secondary:['trapezius'], stabilizer:['rectus','gluteus'],
+      phases:[phase('concentric','Press','From shoulders to overhead','The upper arms lift, the elbows extend and the shoulder blades turn upward as the bar travels overhead.'),phase('eccentric','Return','Lower to the shoulders','The elbows bend as the upper arms lower. The deltoids and triceps stay under tension to control the return.')],
+      note:'Three actions, three jobs: deltoids lift the upper arms, triceps extend the elbows, and the traps work with serratus anterior to rotate the shoulder blades.'
     },
     row: {
-      en:'Bent-over row', zh:'杠铃俯身划船', view:'back', focus:'latissimus', primary:['latissimus','trapezius'], secondary:['biceps','deltoid'], stabilizer:['hamstrings','gluteus'],
-      phases:[phase('concentric','Row','向躯干拉起','在俯身位置，手肘向后移动并弯曲，肩胛骨向脊柱靠拢。背阔肌作用于肩，斜方肌中部参与肩胛后缩。'),phase('eccentric','Reach','受控放回','手肘逐渐伸直，肩胛骨受控地向外移动；髋角和躯干角度相对保持。')],
-      note:'图中三角肌表示参与肩伸的后束。躯干由竖脊肌、腹壁等稳定，臀肌和腘绳肌协助保持髋部位置。'
+      en:'Bent-over barbell row', zh:'Bent-over row', view:'back', focus:'latissimus', primary:['latissimus','trapezius'], secondary:['biceps','deltoid'], stabilizer:['hamstrings','gluteus'],
+      phases:[phase('concentric','Row','Draw the elbows back','With the torso angled forward, the elbows bend and travel behind the body. The lats move the upper arms while the middle traps draw the shoulder blades together.'),phase('eccentric','Reach','Release the arms forward','The elbows straighten and the shoulder blades can glide apart. The hips and torso keep about the same angle throughout.')],
+      note:'The rear fibres are the part of the deltoid that helps draw the upper arm back. Glutes and hamstrings help hold the hip hinge while the trunk muscles hold the spine.'
     }
   };
   const sources = [
-    {name:'OpenStax · 腹壁与胸廓',url:'https://openstax.org/books/anatomy-and-physiology-2e/pages/11-4-axial-muscles-of-the-abdominal-wall-and-thorax'},
-    {name:'OpenStax · 肩带与上肢',url:'https://openstax.org/books/anatomy-and-physiology-2e/pages/11-5-muscles-of-the-pectoral-girdle-and-upper-limbs'},
-    {name:'OpenStax · 骨盆带与下肢',url:'https://openstax.org/books/anatomy-and-physiology-2e/pages/11-6-appendicular-muscles-of-the-pelvic-girdle-and-lower-limbs'},
-    {name:'ACE · 动作资料库',url:'https://www.acefitness.org/resources/everyone/exercise-library/'},
-    {name:'CSCCa · 髋铰链与罗马尼亚硬拉',url:'https://www.cscca.org/content.aspx?club_id=408309&module_id=732309&page_id=22'}
+    {name:'OpenStax · Abdominal wall and thorax',url:'https://openstax.org/books/anatomy-and-physiology-2e/pages/11-4-axial-muscles-of-the-abdominal-wall-and-thorax'},
+    {name:'OpenStax · Shoulder girdle and upper limbs',url:'https://openstax.org/books/anatomy-and-physiology-2e/pages/11-5-muscles-of-the-pectoral-girdle-and-upper-limbs'},
+    {name:'OpenStax · Pelvic girdle and lower limbs',url:'https://openstax.org/books/anatomy-and-physiology-2e/pages/11-6-appendicular-muscles-of-the-pelvic-girdle-and-lower-limbs'},
+    {name:'ACE · Exercise library',url:'https://www.acefitness.org/resources/everyone/exercise-library/'},
+    {name:'CSCCa · The barbell Romanian deadlift',url:'https://www.cscca.org/content.aspx?club_id=408309&module_id=732309&page_id=22'}
   ];
   window.AnatomyLessons = {muscles, exercises, sources};
 })();

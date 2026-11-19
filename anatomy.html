@@ -1,31 +1,31 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Strength Atlas · 运动解剖学 · Tianyi Mao</title>
-  <meta name="description" content="一套可以翻看、点读、逐帧观察的双语运动解剖图谱。">
-  <link rel="stylesheet" href="assets/anatomy/study.css">
-  <script defer src="assets/anatomy/lessons.js"></script>
-  <script defer src="assets/anatomy/atlas.js"></script>
-  <script defer src="assets/anatomy/motion.js"></script>
-  <script defer src="assets/anatomy/study.js"></script>
+  <title>Strength Atlas — Movement Studies by Tianyi Mao</title>
+  <meta name="description" content="An illustrated field guide to the muscles behind six strength exercises. Explore the plates, listen to the names and study a lift frame by frame.">
+  <link rel="stylesheet" href="assets/anatomy/study.css?v=editorial">
+  <script defer src="assets/anatomy/lessons.js?v=editorial"></script>
+  <script defer src="assets/anatomy/atlas.js?v=editorial"></script>
+  <script defer src="assets/anatomy/motion.js?v=editorial"></script>
+  <script defer src="assets/anatomy/study.js?v=editorial"></script>
 </head>
 <body>
-  <header class="mast"><div class="mast-inner"><a href="index.html" class="return">‹ &nbsp; More of Me</a><span class="imprint"><svg aria-hidden="true" viewBox="0 0 28 28"><circle cx="14" cy="14" r="12"/><path d="M5 20 20 5M9 23 23 9M4 15 15 4M15 24 24 15"/></svg> TIAN YI MAO <i>/</i> FIELDNOTES</span><a class="sourcejump" href="#colophon">资料来源</a></div></header>
+  <header class="mast"><div class="mast-inner"><a href="index.html" class="return">‹ More of Me</a><span class="imprint"><svg aria-hidden="true" viewBox="0 0 28 28"><circle cx="14" cy="14" r="12"/><path d="M5 20 20 5M9 23 23 9M4 15 15 4M15 24 24 15"/></svg>TIANYI MAO <i>/</i> FIELDNOTES</span><a class="sourcejump" href="#colophon">Colophon</a></div></header>
   <main>
-    <header class="chapter"><div><div class="overline"><b></b> MOVEMENT STUDIES</div><h1>Strength <em>Atlas.</em></h1></div><div class="chapter-caption"><strong>运动解剖学</strong><p>在人体上认肌肉，在动作里记住它。</p></div></header>
-    <nav class="chapters" aria-label="学习模式"><a id="atlas-link" href="#atlas" aria-current="page"><span>01</span> 肌肉图谱 <i>Atlas</i></a><a id="motion-link" href="#motion"><span>02</span> 动作研究 <i>Motion</i></a></nav>
-    <noscript>请开启 JavaScript，以使用肌肉点读和动作播放。</noscript>
-    <section id="atlas-panel" class="workbench" aria-label="肌肉图谱">
-      <div class="directory"><div class="section-cap">MUSCLE INDEX <span>肌肉索引</span></div><label class="mobile-select">选择肌肉 <select id="muscle-select"></select></label><div id="directory-list"></div></div>
-      <figure class="plate"><header class="plate-head"><span class="plate-kicker">ANATOMICAL PLATE</span><div class="segment" aria-label="图谱视角"><button data-view="front" aria-pressed="true">正面</button><button data-view="back" aria-pressed="false">背面</button></div></header><div class="plate-window"><div id="plate-host"></div></div><figcaption><div class="plate-caption"><b id="plate-zh">胸大肌</b><span id="plate-en" lang="en">Pectoralis major</span></div><button id="zoom" type="button" aria-pressed="false" title="放大当前部位">局部放大</button></figcaption></figure>
-      <article class="notes" aria-label="肌肉学习卡"><div class="section-cap">FIELD NOTE <span id="note-region"></span></div><h2 id="name" lang="en"></h2><div class="zh-title"><strong id="cn"></strong><button type="button" id="say" hidden aria-label="听肌肉名称的英文发音">听发音</button></div><p id="fn"></p><dl class="study-rel"><div><dt>一起工作 <i>SYNERGIST</i></dt><dd id="synergy"></dd></div><div><dt>相反动作 <i>ANTAGONIST</i></dt><dd id="antagonist"></dd></div></dl><div class="mnemonic"><span>记忆线索</span><p id="clue"></p></div><div class="see-moves" id="see-moves"></div></article>
+    <header class="chapter"><div><div class="overline"><b></b> A FIELD GUIDE TO HUMAN MOVEMENT</div><h1>Strength <em>Atlas</em></h1></div><div class="chapter-caption"><span class="issue-line">THE MOVEMENT ISSUE</span><p>Twelve muscles, six lifts.<br> Learn the names by tracing what moves.</p></div></header>
+    <nav class="chapters" aria-label="Chapters"><a id="atlas-link" href="#atlas" aria-current="page"><span>01</span> Muscle atlas</a><a id="motion-link" href="#motion"><span>02</span> Movement studies</a></nav>
+    <noscript>Please enable JavaScript to select a muscle or play a movement study.</noscript>
+    <section id="atlas-panel" class="workbench" aria-label="Muscle atlas">
+      <aside class="directory"><div class="section-cap">Contents <span>12 muscles</span></div><label class="mobile-select">Select a muscle <select id="muscle-select"></select></label><div id="directory-list"></div></aside>
+      <figure class="plate"><header class="plate-head"><span class="plate-kicker">The human figure</span><div class="segment" aria-label="Plate view"><button data-view="front" aria-pressed="true">Front</button><button data-view="back" aria-pressed="false">Back</button></div></header><div class="plate-window"><div id="plate-host"></div></div><figcaption><div class="plate-caption"><b id="plate-zh">Pecs</b> <span id="plate-en">Pectoralis major</span></div><button id="zoom" type="button" aria-pressed="false" title="Enlarge the selected region">Enlarge</button></figcaption></figure>
+      <article class="notes" aria-label="Muscle profile"><div class="section-cap">Field note <span id="note-region"></span></div><h2 id="name"></h2><div class="zh-title"><strong id="cn"></strong><button type="button" id="say" hidden aria-label="Hear the English pronunciation">Listen</button></div><p id="fn"></p><dl class="study-rel"><div><dt>Working together <i>Synergist</i></dt><dd id="synergy"></dd></div><div><dt>Working in opposition <i>Antagonist</i></dt><dd id="antagonist"></dd></div></dl><div class="mnemonic"><span>A way to remember</span><p id="clue"></p></div><div class="see-moves" id="see-moves"></div></article>
     </section>
-    <section id="motion-panel" hidden aria-label="动作研究">
-      <div class="reels" aria-label="选择动作" id="ex-list"></div>
-      <div class="motion-spread"><figure class="film"><div class="film-head"><span class="plate-kicker">MOVEMENT STUDY</span><span id="film-index"></span></div><div id="motion-host" aria-label="动作姿势循环演示"></div><figcaption class="transport"><button id="play" type="button">播放</button><label for="timeline" class="sr">拖动查看动作进度</label><input id="timeline" type="range" min="0" max="1000" value="0" step="1"><span id="phase"></span></figcaption></figure><article class="motion-notes"><div class="section-cap">KINETICS <span>动作笔记</span></div><h2 id="move-en" lang="en"></h2><strong id="move-zh"></strong><p id="move-note"></p><div id="phase-notes"></div></article></div>
-      <div class="roles"><div class="role-intro"><div class="section-cap">MUSCLE ROLES</div><h3>是谁在发力？</h3><p>对照正背面，点击肌肉看详解。颜色区分作用，不表示用力百分比。</p></div><div class="mini-plates"><figure><div id="mini-front"></div><figcaption>正面</figcaption></figure><figure><div id="mini-back"></div><figcaption>背面</figcaption></figure></div><div id="roles-list"></div></div>
+    <section id="motion-panel" hidden aria-label="Movement studies">
+      <div class="reels" aria-label="Choose a movement" id="ex-list"></div>
+      <div class="motion-spread"><figure class="film"><div class="film-head"><span class="plate-kicker">Motion sequence</span><span id="film-index"></span></div><div id="motion-host" aria-label="Animated exercise demonstration"></div><figcaption class="transport"><button id="play" type="button">Play</button><label for="timeline" class="sr">Scrub through the movement</label><input id="timeline" type="range" min="0" max="1000" value="0" step="1"><span id="phase"></span></figcaption></figure><article class="motion-notes"><div class="section-cap">Technique <span>Movement analysis</span></div><h2 id="move-en"></h2><strong id="move-zh"></strong><p id="move-note"></p><div id="phase-notes"></div></article></div>
+      <div class="roles"><div class="role-intro"><div class="section-cap">Muscle roles</div><h3>Who does the work?</h3><p>Select a muscle to find it in the atlas. Colour identifies a role, not a percentage of effort.</p></div><div class="mini-plates"><figure><div id="mini-front"></div><figcaption>Anterior</figcaption></figure><figure><div id="mini-back"></div><figcaption>Posterior</figcaption></figure></div><div id="roles-list"></div></div>
     </section>
-    <footer id="colophon"><details id="sources-disclosure"><summary>图谱、动作与资料来源 <span>Credits &amp; reading</span></summary><div class="credits"><div id="art-credits"></div><div><h3>延伸阅读</h3><ul id="references"></ul></div></div></details><div class="endline"><span>TIANYI MAO · MOVEMENT STUDIES</span><span>教学示意，不代表个体动作评估。</span></div></footer>
+    <footer id="colophon"><details id="sources-disclosure"><summary>Colophon <span>Credits &amp; further reading</span></summary><div class="credits"><div id="art-credits"></div><div><h3>Further reading</h3><ul id="references"></ul></div></div></details><div class="endline"><span>TIANYI MAO · MOVEMENT STUDIES</span><span>Educational illustrations, not individual assessments.</span></div></footer>
   </main>
 </body></html>

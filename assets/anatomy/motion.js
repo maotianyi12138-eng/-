@@ -3,12 +3,12 @@
   'use strict';
   const mediaBase = new URL('motions/', document.currentScript.src);
   const labels = {
-    bench: ['仰卧杠铃卧推', '推起 · 向心', '下放 · 离心'],
-    pullup: ['正握引体向上', '上拉 · 向心', '下降 · 离心'],
-    squat: ['杠铃背蹲', '下蹲 · 离心', '起身 · 向心'],
-    rdl: ['罗马尼亚硬拉', '髋向后 · 离心', '伸髋 · 向心'],
-    ohp: ['站姿杠铃推举', '推起 · 向心', '下放 · 离心'],
-    row: ['俯身杠铃划船', '上拉 · 向心', '下放 · 离心']
+    bench: ['Barbell bench press', 'Press up (concentric)', 'Lower the bar (eccentric)'],
+    pullup: ['Overhand pull-up', 'Pull up (concentric)', 'Lower your body (eccentric)'],
+    squat: ['Barbell back squat', 'Squat down (eccentric)', 'Stand up (concentric)'],
+    rdl: ['Romanian deadlift', 'Hinge at the hips (eccentric)', 'Extend the hips (concentric)'],
+    ohp: ['Standing barbell overhead press', 'Press overhead (concentric)', 'Lower the bar (eccentric)'],
+    row: ['Bent-over barbell row', 'Pull the bar toward the torso (concentric)', 'Lower the bar (eccentric)']
   };
   const clamp = n => Math.max(0, Math.min(1, n));
   function mount(host, {onFrame = () => {}} = {}) {
@@ -50,10 +50,10 @@
       if(!Object.hasOwn(labels,key)||disposed)return;
       if(key===id)return;
       stop();id=key;pos=0;sprite=null;const version=++ticket;
-      canvas.style.opacity='0';img.alt=labels[key][0]+'，红色标记主要发力区域。';img.src=new URL(key+'-start.webp',mediaBase).href;
+      canvas.style.opacity='0';img.alt=labels[key][0]+': the main working muscles are highlighted in red.';img.src=new URL(key+'-start.webp',mediaBase).href;
       const next=new Image();
       next.onload=()=>{if(version!==ticket||disposed)return;sprite=next;wrap.removeAttribute('data-error');paint();schedule();};
-      next.onerror=()=>{if(version!==ticket||disposed)return;run=false;wrap.dataset.error='animation-unavailable';img.alt=labels[key][0]+'的起始姿势（动画资源未载入）';paint();};
+      next.onerror=()=>{if(version!==ticket||disposed)return;run=false;wrap.dataset.error='animation-unavailable';img.alt=labels[key][0]+': starting position. The animation could not load.';paint();};
       next.src=new URL(key+'.webp',mediaBase).href;paint();
     }
     const api={

@@ -25,7 +25,7 @@
     document.querySelectorAll('[data-view]').forEach(b=>press(b,b.dataset.view===view));
     if(displayed===id) return;
     displayed=id;
-    $('note-region').textContent=m.group.toUpperCase();
+    $('note-region').textContent=String(muscleIds.indexOf(id)+1).padStart(2,'0')+' / '+m.group;
     $('name').textContent=$('plate-en').textContent=m.en;
     $('cn').textContent=$('plate-zh').textContent=m.zh;
     $('fn').textContent=m.fn; $('clue').textContent=m.clue;
@@ -33,7 +33,7 @@
     const related=exerciseIds.filter(key=>exercises[key].primary.includes(id)||exercises[key].secondary.includes(id)||exercises[key].stabilizer.includes(id));
     const direct=related.find(key=>exercises[key].primary.includes(id))||related[0];
     const choices=direct?[direct,...related.filter(key=>key!==direct)]:[];
-    $('see-moves').replaceChildren(...(choices.length?[make('span','在动作中看'),...choices.map((key,i)=>{
+    $('see-moves').replaceChildren(...(choices.length?[make('span','See it in motion'),...choices.map((key,i)=>{
       const button=btn(exercises[key].zh,()=>go('motion',key));if(i===0){const pic=make('img');pic.src='assets/anatomy/motions/'+key+'-start.webp';pic.alt='';button.prepend(pic);button.className='move-preview'}return button;
     })]:[]));
     document.querySelectorAll('[data-muscle-index]').forEach(b=>press(b,b.dataset.muscleIndex===id));
@@ -52,9 +52,9 @@
   }
   function initAtlas() {
     for (const [i,id] of muscleIds.entries()) {
-      const m=muscles[id], b=btn(m.zh,()=>pin(id,true)); b.prepend(make('span',String(i+1).padStart(2,'0'))); b.dataset.muscleIndex=id;
+      const m=muscles[id], b=btn(m.en,()=>pin(id,true)); b.prepend(make('span',String(i+1).padStart(2,'0'))); b.dataset.muscleIndex=id;
       $('directory-list').append(b);
-      const option=make('option',m.zh+' · '+m.en); option.value=id; $('muscle-select').append(option);
+      const option=make('option',m.en); option.value=id; $('muscle-select').append(option);
     }
     $('muscle-select').onchange=e=>pin(e.target.value,true);
     plate=window.MovementAtlas.mount($('plate-host'),{
@@ -63,13 +63,13 @@
     });
     $('plate-host').addEventListener('pointerleave',()=>paint(pinned));
     document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>chooseView(b.dataset.view));
-    $('zoom').onclick=()=>{zoomed=!zoomed;press($('zoom'),zoomed);$('zoom').textContent=zoomed?'还原全身':'局部放大';document.querySelector('.plate').classList.toggle('is-zoomed',zoomed)};
+    $('zoom').onclick=()=>{zoomed=!zoomed;press($('zoom'),zoomed);$('zoom').textContent=zoomed?'Full figure':'Enlarge';document.querySelector('.plate').classList.toggle('is-zoomed',zoomed)};
     if('speechSynthesis' in window && 'SpeechSynthesisUtterance' in window){
       $('say').hidden=false; $('say').onclick=()=>{const u=new SpeechSynthesisUtterance(muscles[displayed].en);u.lang='en-US';u.rate=.83;window.speechSynthesis.cancel();window.speechSynthesis.speak(u)};
     }
     pin(pinned,true);
   }
-  function syncPlay() { const running=!!demo?.playing, button=$('play'), label=running?'暂停':'播放'; if(button.textContent!==label||!button.hasAttribute('aria-label')){button.textContent=label;button.setAttribute('aria-label',label+'动作')} }
+  function syncPlay() { const running=!!demo?.playing, button=$('play'), label=running?'Pause':'Play'; if(button.textContent!==label||!button.hasAttribute('aria-label')){button.textContent=label;button.setAttribute('aria-label',label+' movement')} }
   function onFrame(progress) {
     const i=progress<.5?0:1;
     $('timeline').value=Math.round(progress*1000);
@@ -83,10 +83,10 @@
   }
   function buildMotion(id) {
     exercise=id; const ex=exercises[id]; framePhase=-1;
-    $('move-en').textContent=ex.en; $('move-zh').textContent=ex.zh; $('move-note').textContent=ex.note;
+    $('move-en').textContent=ex.en; $('move-zh').textContent=({bench:'Horizontal push',pullup:'Vertical pull',squat:'Squat pattern',rdl:'Hip hinge',ohp:'Vertical push',row:'Horizontal pull'})[id]; $('move-note').textContent=ex.note;
     $('film-index').textContent='STUDY '+String(exerciseIds.indexOf(id)+1).padStart(2,'0')+' / 06';
-    $('phase-notes').replaceChildren(...ex.phases.map(p=>{const div=make('div',undefined,'phase-row'),label=make('b',p.zh);label.prepend(make('i',p.en));div.append(label,make('p',p.text));return div}));
-    $('roles-list').replaceChildren(...[['primary','主动力肌'],['secondary','协同发力'],['stabilizer','稳定肌群']].filter(([role])=>ex[role].length).map(([role,label])=>{
+    $('phase-notes').replaceChildren(...ex.phases.map(p=>{const div=make('div',undefined,'phase-row'),label=make('b',p.zh);label.prepend(make('i',p.kind+' phase'));div.append(label,make('p',p.text));return div}));
+    $('roles-list').replaceChildren(...[['primary','Prime movers'],['secondary','Synergists'],['stabilizer','Stabilisers']].filter(([role])=>ex[role].length).map(([role,label])=>{
       const entry=make('div'), list=make('div',undefined,'role-chips');entry.dataset.role=role;entry.append(make('b',label,'role-label'),list);
       ex[role].forEach(key=>list.append(btn(muscles[key].zh,()=>go('atlas',key))));return entry;
     }));
@@ -119,10 +119,11 @@
   $('timeline').oninput=e=>{manualPause=true;demo.pause();demo.seek(Number(e.target.value)/1000);syncPlay()};
   document.addEventListener('visibilitychange',()=>{if(!demo||mode!=='motion')return;if(document.hidden)demo.pause();else if(!manualPause&&!matchMedia('(prefers-reduced-motion: reduce)').matches)demo.play();syncPlay()});
   for(const s of sources){const li=make('li');li.append(link(s.name,s.url));$('references').append(li)}
-  const credits=$('art-credits');credits.append(make('h3','制作与署名'));
+  const credits=$('art-credits');credits.append(make('h3','Making the plates'));
   const credit=(...items)=>{const p=make('p');p.append(...items);credits.append(p)};
-  credit('人体图版：',link('Z-Anatomy / BodyParts3D','https://github.com/Z-Anatomy/Models-of-human-anatomy'), '，从 ',link('free-muscles','https://github.com/tiralonghipol/free-muscles'),' 的模型重新渲染并制作可选区域。',link('CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/'),' · ',link('完整署名与修改记录','https://github.com/maotianyi12138-eng/-/blob/main/assets/anatomy/plates/CREDITS.md'));
-  credit('动作用人体：',link('exercise-animations 的 MakeHuman 网格','https://github.com/blwsk/exercise-animations/blob/be16cb22c4ceb4ad134894250062fd0782410233/THIRD_PARTY_ASSETS.md'),'（CC0）。此处演示为教学动画，不是肌电测量。',link('动作素材记录','https://github.com/maotianyi12138-eng/-/blob/main/assets/anatomy/motions/README.md'));
-  credit('编排参考 ',link('Science of Strength Training','https://penguinrandomhousehighereducation.com/2021/09/27/qa-with-science-of-strength-training-author-austin-current/'),'：在一次动作里理解结构与功能，未使用书中插画。');
+  credit('The anatomical plates were rendered from ',link('Z-Anatomy / BodyParts3D','https://github.com/Z-Anatomy/Models-of-human-anatomy'),' geometry distributed by ',link('free-muscles','https://github.com/tiralonghipol/free-muscles'),'. Plates and region contours: ',link('CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/'),'. ',link('Full credits and modifications','https://github.com/maotianyi12138-eng/-/blob/main/assets/anatomy/plates/CREDITS.md'),'.');
+  credit('Movement sequences use a ',link('CC0 MakeHuman figure','https://github.com/blwsk/exercise-animations/blob/be16cb22c4ceb4ad134894250062fd0782410233/THIRD_PARTY_ASSETS.md'),'. Shading is illustrative; it does not represent electrical muscle activity. ',link('Animation production notes','https://github.com/maotianyi12138-eng/-/blob/main/assets/anatomy/motions/README.md'),'.');
+  credit('Reading inspiration: ',link('Science of Strength Training','https://penguinrandomhousehighereducation.com/2021/09/27/qa-with-science-of-strength-training-author-austin-current/'),'. No illustrations from the book are reproduced here.');
+  credit('Typeset in ',link('Source Serif 4','https://github.com/adobe-fonts/source-serif'),'. Layout reference: ',link('Editorial Design System','https://github.com/bergside/awesome-design-skills/tree/main/skills/editorial'),'.');
   initAtlas();window.addEventListener('hashchange',applyRoute);applyRoute();
 })();

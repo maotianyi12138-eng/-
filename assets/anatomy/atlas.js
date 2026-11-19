@@ -9,12 +9,12 @@
     return node;
   };
   const names = {
-    pectoralis: 'Pectoralis major · 胸大肌', deltoid: 'Deltoid · 三角肌',
-    biceps: 'Biceps brachii · 肱二头肌', rectus: 'Rectus abdominis · 腹直肌',
-    obliques: 'External oblique · 腹外斜肌', quadriceps: 'Quadriceps femoris · 股四头肌',
-    trapezius: 'Trapezius · 斜方肌', latissimus: 'Latissimus dorsi · 背阔肌',
-    triceps: 'Triceps brachii · 肱三头肌', gluteus: 'Gluteus maximus · 臀大肌',
-    hamstrings: 'Hamstrings · 腘绳肌群', gastrocnemius: 'Gastrocnemius · 腓肠肌'
+    pectoralis: 'Pectoralis major', deltoid: 'Deltoid',
+    biceps: 'Biceps brachii', rectus: 'Rectus abdominis',
+    obliques: 'External oblique', quadriceps: 'Quadriceps femoris',
+    trapezius: 'Trapezius', latissimus: 'Latissimus dorsi',
+    triceps: 'Triceps brachii', gluteus: 'Gluteus maximus',
+    hamstrings: 'Hamstrings', gastrocnemius: 'Gastrocnemius'
   };
   let geometry;
   function getGeometry() {
@@ -37,7 +37,7 @@
     function render() {
       const v = state.view === 'back' ? 'back' : 'front', plate = data?.[v];
       if (imageView !== v) {
-        svg.setAttribute('aria-label', v === 'back' ? '人体后面观，选择肌肉' : '人体前面观，选择肌肉');
+        svg.setAttribute('aria-label', v === 'back' ? 'Posterior view. Select a muscle.' : 'Anterior view. Select a muscle.');
         img.setAttribute('href', new URL(v + '.webp', base).href); imageView = v;
       }
       if (plate && drawnView !== v) {
@@ -73,7 +73,7 @@
     render();
     const ready = getGeometry().then(plates => {data=plates;render();return true;}).catch(() => {
       const notice = document.createElement('small');
-      notice.textContent = '点读轮廓暂不可用，请从肌肉索引选择。';notice.style.cssText='position:absolute;bottom:0;inset-inline:0;text-align:center;color:#672c20;background:#fff9ed';
+      notice.textContent = 'The interactive outlines could not load. Choose a muscle from the index instead.';notice.style.cssText='position:absolute;bottom:0;inset-inline:0;text-align:center;color:#672c20;background:#fff9ed';
       container.append(notice);return false;
     });
     return {ready, update(next){ state = {...state, ...next}; render(); }};
