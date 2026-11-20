@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-20T07:12:43Z",
+  "updatedAt": "2026-11-20T20:14:14Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -40,7 +40,7 @@
         "updateTime": 1766033832,
         "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/t6_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1795106722,
+        "readUpdateTime": 1795179330,
         "secret": 0,
         "category": "经济理财-财经"
       },
@@ -272,10 +272,64 @@
         "readerLink": "https://weread.qq.com/web/reader/e0a32050813abaf95g0113cc",
         "title": "贫穷的本质：我们为什么摆脱不了贫穷（全新增订版）",
         "author": "[美]阿比吉特·班纳吉  [法]埃斯特·迪弗洛",
-        "updateTime": 1766033832,
+        "translator": "景芳",
         "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/t6_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
+        "version": 1359265645,
+        "format": "epub",
+        "type": 0,
+        "price": 48.3,
+        "originalPrice": 0,
+        "soldout": 0,
+        "bookStatus": 1,
+        "payingStatus": 2,
+        "payType": 1048577,
+        "centPrice": 4830,
+        "categories": [
+          {
+            "categoryId": 1100000,
+            "subCategoryId": 1100001,
+            "categoryType": 0,
+            "title": "经济理财-财经"
+          }
+        ],
+        "hasLecture": 0,
+        "finished": 1,
+        "maxFreeChapter": 5,
+        "maxFreeInfo": {
+          "maxFreeChapterIdx": 5,
+          "maxFreeChapterUid": 5,
+          "maxFreeChapterRatio": 57
+        },
+        "free": 0,
+        "mcardDiscount": 0,
+        "ispub": 1,
+        "extra_type": 5,
+        "cpid": 4525313,
+        "publishTime": "2025-11-01 00:00:00",
+        "lastChapterIdx": 21,
+        "paperBook": {
+          "skuId": ""
+        },
+        "copyrightChapterUids": [
+          2
+        ],
+        "inStoreBookId": "",
+        "blockSaveImg": 0,
+        "language": "zh-wr",
+        "isTraditionalChinese": false,
+        "hideUpdateTime": false,
+        "isEPUBComics": 0,
+        "isVerticalLayout": 0,
+        "isShowTTS": 1,
+        "webBookControl": 0,
+        "selfProduceIncentive": false,
+        "isAutoDownload": 1,
+        "readingProgress": 22,
+        "markedStatus": 2,
+        "lastNoteSort": 1795179234,
+        "updateTime": 1766033832,
         "finishReading": 0,
-        "readUpdateTime": 1795106722,
+        "readUpdateTime": 1795179330,
         "secret": 0,
         "category": "经济理财-财经"
       },
@@ -1457,6 +1511,74 @@
   "notebooks": {
     "books": [
       {
+        "bookId": "3300187091",
+        "book": {
+          "bookId": "3300187091",
+          "deepLink": "https://weread.qq.com/book-detail?type=1&v=e0a32050813abaf95g0113cc",
+          "readerLink": "https://weread.qq.com/web/reader/e0a32050813abaf95g0113cc",
+          "title": "贫穷的本质：我们为什么摆脱不了贫穷（全新增订版）",
+          "author": "[美]阿比吉特·班纳吉  [法]埃斯特·迪弗洛",
+          "translator": "景芳",
+          "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/t6_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
+          "version": 1359265645,
+          "format": "epub",
+          "type": 0,
+          "price": 48.3,
+          "originalPrice": 0,
+          "soldout": 0,
+          "bookStatus": 1,
+          "payingStatus": 2,
+          "payType": 1048577,
+          "centPrice": 4830,
+          "categories": [
+            {
+              "categoryId": 1100000,
+              "subCategoryId": 1100001,
+              "categoryType": 0,
+              "title": "经济理财-财经"
+            }
+          ],
+          "hasLecture": 0,
+          "finished": 1,
+          "maxFreeChapter": 5,
+          "maxFreeInfo": {
+            "maxFreeChapterIdx": 5,
+            "maxFreeChapterUid": 5,
+            "maxFreeChapterRatio": 57
+          },
+          "free": 0,
+          "mcardDiscount": 0,
+          "ispub": 1,
+          "extra_type": 5,
+          "cpid": 4525313,
+          "publishTime": "2025-11-01 00:00:00",
+          "lastChapterIdx": 21,
+          "paperBook": {
+            "skuId": ""
+          },
+          "copyrightChapterUids": [
+            2
+          ],
+          "inStoreBookId": "",
+          "blockSaveImg": 0,
+          "language": "zh-wr",
+          "isTraditionalChinese": false,
+          "hideUpdateTime": false,
+          "isEPUBComics": 0,
+          "isVerticalLayout": 0,
+          "isShowTTS": 1,
+          "webBookControl": 0,
+          "selfProduceIncentive": false,
+          "isAutoDownload": 1
+        },
+        "reviewCount": 0,
+        "markedStatus": 2,
+        "readingProgress": 22,
+        "noteCount": 1,
+        "bookmarkCount": 0,
+        "sort": 1795179234
+      },
+      {
         "bookId": "3300167144",
         "book": {
           "bookId": "3300167144",
@@ -2565,7 +2687,7 @@
       "1794844800": 597,
       "1794931200": 533,
       "1795017600": 682,
-      "1795104000": 339
+      "1795104000": 693
     },
     "readDays": 14,
     "readLongest": [
@@ -2715,7 +2837,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 2152,
+        "readTime": 2506,
         "tags": []
       },
       {
@@ -2882,7 +3004,7 @@
         "parentCategoryId": 1100000,
         "parentCategoryTitle": "经济理财",
         "val": 100,
-        "readingTime": 1813,
+        "readingTime": 2506,
         "readingCount": 1,
         "categoryType": 0
       },
@@ -2891,7 +3013,7 @@
         "categoryTitle": "文学",
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
-        "val": 88,
+        "val": 64,
         "readingTime": 1612,
         "readingCount": 2,
         "categoryType": 0
@@ -2901,7 +3023,7 @@
         "categoryTitle": "情感小说",
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
-        "val": 66,
+        "val": 47,
         "readingTime": 1199,
         "readingCount": 1,
         "categoryType": 0
@@ -2911,7 +3033,7 @@
         "categoryTitle": "社会小说",
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
-        "val": 22,
+        "val": 16,
         "readingTime": 413,
         "readingCount": 1,
         "categoryType": 0
@@ -2921,7 +3043,7 @@
         "categoryTitle": "个人成长",
         "parentCategoryId": 1000000,
         "parentCategoryTitle": "个人成长",
-        "val": 16,
+        "val": 11,
         "readingTime": 300,
         "readingCount": 1,
         "categoryType": 0
@@ -2976,15 +3098,15 @@
       },
       {
         "stat": "笔记",
-        "counts": "71条",
+        "counts": "72条",
         "scheme": "weread://note?rn=1"
       }
     ],
     "registTime": 1645667800,
-    "compare": 1.3177490835476285,
-    "dayAverageReadTime": 1366,
+    "compare": 1.2359718303253893,
+    "dayAverageReadTime": 1318,
     "baseTime": 1793462400,
-    "totalReadTime": 27330,
+    "totalReadTime": 27684,
     "preferBooks": [
       {
         "type": 13,
@@ -3203,7 +3325,7 @@
       "finishReadingAlbumIds": [],
       "finishReadingWordCount": 4500,
       "readingWordCount": 4500,
-      "notesCount": 71,
+      "notesCount": 72,
       "readOverView": []
     },
     "readRecordsWord": "书籍分布",
@@ -3219,7 +3341,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 181860
+      "1767196800": 182214
     },
     "readDays": 117,
     "readLongest": [
@@ -3761,8 +3883,8 @@
         "categoryTitle": "经济理财",
         "parentCategoryId": 1100000,
         "parentCategoryTitle": "经济理财",
-        "val": 26,
-        "readingTime": 19955,
+        "val": 27,
+        "readingTime": 20648,
         "readingCount": 2,
         "categoryType": 0
       },
@@ -3834,11 +3956,11 @@
       7960,
       8685,
       21207,
-      9131,
+      9485,
       13386,
       7941,
       18799,
-      20287,
+      20626,
       13947,
       8004,
       8778,
@@ -4058,7 +4180,7 @@
       },
       {
         "stat": "笔记",
-        "counts": "277条",
+        "counts": "278条",
         "scheme": "weread://note?rn=1"
       }
     ],
@@ -4071,7 +4193,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5085806,
+        "users": 5086439,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -4088,7 +4210,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6260361,
+        "users": 6261044,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -4105,7 +4227,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12036085,
+        "users": 12036931,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -4120,7 +4242,7 @@
     "registTime": 1645667800,
     "readDistributionWord": "点评分布",
     "baseTime": 0,
-    "totalReadTime": 181873,
+    "totalReadTime": 182227,
     "preferBooks": [
       {
         "type": 13,
@@ -4506,7 +4628,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8441人读过"
+        "reason": "仅有8454人读过"
       },
       {
         "type": 8,
@@ -4562,8 +4684,8 @@
       ],
       "finishReadingAlbumIds": [],
       "finishReadingWordCount": 855847,
-      "readingWordCount": 1159022,
-      "notesCount": 277,
+      "readingWordCount": 1162105,
+      "notesCount": 278,
       "readOverView": [
         {
           "title": "读过神作",
@@ -6432,7 +6554,7 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 27330,
+        "1793462400": 27684,
         "1796054400": 0
       },
       "readDays": 115,
@@ -6760,7 +6882,7 @@
         "1794844800": 597,
         "1794931200": 533,
         "1795017600": 682,
-        "1795104000": 339,
+        "1795104000": 693,
         "1795190400": 0,
         "1795276800": 0,
         "1795363200": 0,
@@ -7342,8 +7464,8 @@
           "categoryTitle": "经济理财",
           "parentCategoryId": 1100000,
           "parentCategoryTitle": "经济理财",
-          "val": 26,
-          "readingTime": 19955,
+          "val": 27,
+          "readingTime": 20648,
           "readingCount": 2,
           "categoryType": 0
         },
@@ -7612,14 +7734,14 @@
         },
         {
           "stat": "笔记",
-          "counts": "277条",
+          "counts": "278条",
           "scheme": "weread://note?rn=1"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 561,
+      "dayAverageReadTime": 560,
       "baseTime": 1767196800,
-      "totalReadTime": 181860,
+      "totalReadTime": 182214,
       "preferBooks": [
         {
           "type": 13,
@@ -7865,8 +7987,8 @@
         ],
         "finishReadingAlbumIds": [],
         "finishReadingWordCount": 855847,
-        "readingWordCount": 1159022,
-        "notesCount": 277,
+        "readingWordCount": 1162105,
+        "notesCount": 278,
         "readOverView": [
           {
             "title": "读过神作",
@@ -7882,10 +8004,28 @@
   "notesByBook": {
     "3300187091": {
       "highlights": {
-        "synckey": 0,
-        "updated": [],
+        "synckey": 1795179234,
+        "updated": [
+          {
+            "bookId": "3300187091",
+            "chapterIdx": 9,
+            "bookmarkId": "3300187091_9_4953-5010",
+            "range": "4953-5010",
+            "markText": "。当穷人可以多买一点儿食物时，他们并不注重用所有投入换取更多能量。相反，他们会选择买一些口味更好的、价钱更高的食品",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 9,
+            "createTime": 1795179234
+          }
+        ],
         "removed": [],
-        "chapters": [],
+        "chapters": [
+          {
+            "title": "第二章 饥饿人口已达到10亿？",
+            "chapterUid": 9,
+            "chapterIdx": 9
+          }
+        ],
         "book": {
           "bookId": "3300187091",
           "version": 1359265645,
