@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-21T07:04:03Z",
+  "updatedAt": "2026-11-21T19:13:53Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -40,7 +40,7 @@
         "updateTime": 1766033832,
         "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/t6_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1795225285,
+        "readUpdateTime": 1795269503,
         "secret": 0,
         "category": "经济理财-财经"
       },
@@ -324,12 +324,12 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 22,
+        "readingProgress": 25,
         "markedStatus": 2,
-        "lastNoteSort": 1795179234,
+        "lastNoteSort": 1795269481,
         "updateTime": 1766033832,
         "finishReading": 0,
-        "readUpdateTime": 1795225285,
+        "readUpdateTime": 1795269503,
         "secret": 0,
         "category": "经济理财-财经"
       },
@@ -1573,10 +1573,10 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 22,
-        "noteCount": 1,
+        "readingProgress": 25,
+        "noteCount": 3,
         "bookmarkCount": 0,
-        "sort": 1795179234
+        "sort": 1795269481
       },
       {
         "bookId": "3300167144",
@@ -2688,7 +2688,7 @@
       "1794931200": 533,
       "1795017600": 682,
       "1795104000": 693,
-      "1795190400": 272
+      "1795190400": 1838
     },
     "readDays": 15,
     "readLongest": [
@@ -2838,7 +2838,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 2778,
+        "readTime": 4344,
         "tags": []
       },
       {
@@ -3099,15 +3099,15 @@
       },
       {
         "stat": "笔记",
-        "counts": "72条",
+        "counts": "74条",
         "scheme": "weread://note?rn=1"
       }
     ],
     "registTime": 1645667800,
-    "compare": 1.2579406331663266,
-    "dayAverageReadTime": 1331,
+    "compare": 1.276039930961417,
+    "dayAverageReadTime": 1341,
     "baseTime": 1793462400,
-    "totalReadTime": 27956,
+    "totalReadTime": 29522,
     "preferBooks": [
       {
         "type": 13,
@@ -3285,7 +3285,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "最爱分类"
+        "reason": "阅读了1小时"
       },
       {
         "type": 2,
@@ -3326,7 +3326,7 @@
       "finishReadingAlbumIds": [],
       "finishReadingWordCount": 4500,
       "readingWordCount": 4500,
-      "notesCount": 72,
+      "notesCount": 74,
       "readOverView": []
     },
     "readRecordsWord": "书籍分布",
@@ -3342,7 +3342,7 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 182486
+      "1767196800": 184052
     },
     "readDays": 118,
     "readLongest": [
@@ -4181,7 +4181,7 @@
       },
       {
         "stat": "笔记",
-        "counts": "278条",
+        "counts": "280条",
         "scheme": "weread://note?rn=1"
       }
     ],
@@ -4194,7 +4194,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5086813,
+        "users": 5087434,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -4211,7 +4211,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6261509,
+        "users": 6262271,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -4228,7 +4228,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12037492,
+        "users": 12038380,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -4243,7 +4243,7 @@
     "registTime": 1645667800,
     "readDistributionWord": "点评分布",
     "baseTime": 0,
-    "totalReadTime": 182499,
+    "totalReadTime": 184065,
     "preferBooks": [
       {
         "type": 13,
@@ -4629,7 +4629,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8464人读过"
+        "reason": "仅有8475人读过"
       },
       {
         "type": 8,
@@ -4685,8 +4685,8 @@
       ],
       "finishReadingAlbumIds": [],
       "finishReadingWordCount": 855847,
-      "readingWordCount": 1162105,
-      "notesCount": 278,
+      "readingWordCount": 1171353,
+      "notesCount": 280,
       "readOverView": [
         {
           "title": "读过神作",
@@ -6555,7 +6555,7 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 27956,
+        "1793462400": 29522,
         "1796054400": 0
       },
       "readDays": 116,
@@ -6884,7 +6884,7 @@
         "1794931200": 533,
         "1795017600": 682,
         "1795104000": 693,
-        "1795190400": 272,
+        "1795190400": 1838,
         "1795276800": 0,
         "1795363200": 0,
         "1795449600": 0,
@@ -7735,14 +7735,14 @@
         },
         {
           "stat": "笔记",
-          "counts": "278条",
+          "counts": "280条",
           "scheme": "weread://note?rn=1"
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 561,
+      "dayAverageReadTime": 564,
       "baseTime": 1767196800,
-      "totalReadTime": 182486,
+      "totalReadTime": 184052,
       "preferBooks": [
         {
           "type": 13,
@@ -7988,8 +7988,8 @@
         ],
         "finishReadingAlbumIds": [],
         "finishReadingWordCount": 855847,
-        "readingWordCount": 1162105,
-        "notesCount": 278,
+        "readingWordCount": 1171353,
+        "notesCount": 280,
         "readOverView": [
           {
             "title": "读过神作",
@@ -8005,8 +8005,30 @@
   "notesByBook": {
     "3300187091": {
       "highlights": {
-        "synckey": 1795179234,
+        "synckey": 1795269481,
         "updated": [
+          {
+            "bookId": "3300187091",
+            "chapterIdx": 9,
+            "bookmarkId": "3300187091_9_20559-20742",
+            "range": "20559-20742",
+            "markText": "我们眼中的穷人世界，常常是一片失去机遇的土地。我们会好奇，为什么他们不把买那些东西的钱攒下来，将钱投入真正能使他们过得更好的地方？然而，穷人会更加怀疑那些所谓的机遇，怀疑其生活产生任何根本改变的可能性。他们的行为常常反映出这样一种想法，即任何意义重大、值得做出牺牲的改变都要花很长时间。这也可以解释，为什么他们只关注当下，尽可能把日子过得愉快，在需要的时候庆祝一番。",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 9,
+            "createTime": 1795269481
+          },
+          {
+            "bookId": "3300187091",
+            "chapterIdx": 9,
+            "bookmarkId": "3300187091_9_20086-20207",
+            "range": "20086-20207",
+            "markText": "他们不会迁怒于自己的命运，而是通过降低标准来增强自己的忍耐力。然而，他们却不一定排斥奢侈品而专注必需品；更多的时候，情况恰恰相反——如果你仔细想一想，这是更自然的方式——因此，在前所未有的长达10年的大萧条期间，所有廉价奢侈品的消费都有所提高",
+            "colorStyle": 1,
+            "type": 1,
+            "chapterUid": 9,
+            "createTime": 1795269344
+          },
           {
             "bookId": "3300187091",
             "chapterIdx": 9,
