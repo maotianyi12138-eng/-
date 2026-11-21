@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-20T20:14:14Z",
+  "updatedAt": "2026-11-21T07:04:03Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -40,7 +40,7 @@
         "updateTime": 1766033832,
         "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/t6_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1795179330,
+        "readUpdateTime": 1795225285,
         "secret": 0,
         "category": "经济理财-财经"
       },
@@ -329,7 +329,7 @@
         "lastNoteSort": 1795179234,
         "updateTime": 1766033832,
         "finishReading": 0,
-        "readUpdateTime": 1795179330,
+        "readUpdateTime": 1795225285,
         "secret": 0,
         "category": "经济理财-财经"
       },
@@ -2687,9 +2687,10 @@
       "1794844800": 597,
       "1794931200": 533,
       "1795017600": 682,
-      "1795104000": 693
+      "1795104000": 693,
+      "1795190400": 272
     },
-    "readDays": 14,
+    "readDays": 15,
     "readLongest": [
       {
         "book": {
@@ -2837,7 +2838,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 2506,
+        "readTime": 2778,
         "tags": []
       },
       {
@@ -3093,7 +3094,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "14天",
+        "counts": "15天",
         "scheme": "weread://dataCenter?showSummary=1"
       },
       {
@@ -3103,10 +3104,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 1.2359718303253893,
-    "dayAverageReadTime": 1318,
+    "compare": 1.2579406331663266,
+    "dayAverageReadTime": 1331,
     "baseTime": 1793462400,
-    "totalReadTime": 27684,
+    "totalReadTime": 27956,
     "preferBooks": [
       {
         "type": 13,
@@ -3306,7 +3307,7 @@
     "shareInfo": {
       "title": "",
       "subTitle": "",
-      "totalReadingDay": 14,
+      "totalReadingDay": 15,
       "hadReadingCount": 5,
       "finishReadingCount": 3,
       "hadReadingBookIds": [
@@ -3341,9 +3342,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 182214
+      "1767196800": 182486
     },
-    "readDays": 117,
+    "readDays": 118,
     "readLongest": [
       {
         "book": {
@@ -4175,7 +4176,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "117天",
+        "counts": "118天",
         "scheme": "weread://dataCenter?showSummary=1"
       },
       {
@@ -4193,7 +4194,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5086439,
+        "users": 5086813,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -4210,7 +4211,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6261044,
+        "users": 6261509,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -4227,7 +4228,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12036931,
+        "users": 12037492,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -4242,7 +4243,7 @@
     "registTime": 1645667800,
     "readDistributionWord": "点评分布",
     "baseTime": 0,
-    "totalReadTime": 182227,
+    "totalReadTime": 182499,
     "preferBooks": [
       {
         "type": 13,
@@ -4628,7 +4629,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8454人读过"
+        "reason": "仅有8464人读过"
       },
       {
         "type": 8,
@@ -4638,7 +4639,7 @@
     "shareInfo": {
       "title": "偏爱文学\n类书籍",
       "subTitle": "",
-      "totalReadingDay": 117,
+      "totalReadingDay": 118,
       "hadReadingCount": 22,
       "finishReadingCount": 14,
       "hadReadingBookIds": [
@@ -6554,10 +6555,10 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 27684,
+        "1793462400": 27956,
         "1796054400": 0
       },
-      "readDays": 115,
+      "readDays": 116,
       "dailyReadTimes": {
         "1767196800": 0,
         "1767283200": 0,
@@ -6883,7 +6884,7 @@
         "1794931200": 533,
         "1795017600": 682,
         "1795104000": 693,
-        "1795190400": 0,
+        "1795190400": 272,
         "1795276800": 0,
         "1795363200": 0,
         "1795449600": 0,
@@ -7729,7 +7730,7 @@
         },
         {
           "stat": "阅读",
-          "counts": "115天",
+          "counts": "116天",
           "scheme": "weread://dataCenter?showSummary=1"
         },
         {
@@ -7739,9 +7740,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 560,
+      "dayAverageReadTime": 561,
       "baseTime": 1767196800,
-      "totalReadTime": 182214,
+      "totalReadTime": 182486,
       "preferBooks": [
         {
           "type": 13,
@@ -7941,7 +7942,7 @@
       "shareInfo": {
         "title": "超过半数月份\n都有读书",
         "subTitle": "",
-        "totalReadingDay": 115,
+        "totalReadingDay": 116,
         "hadReadingCount": 22,
         "finishReadingCount": 14,
         "hadReadingBookIds": [
