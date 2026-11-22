@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-22T06:45:02Z",
+  "updatedAt": "2026-11-22T19:37:04Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -40,7 +40,7 @@
         "updateTime": 1766033832,
         "cover": "https://cdn.weread.qq.com/weread/cover/86/cpplatform_tpwc2cvkdspkkb5bjpe66r/t6_cpplatform_tpwc2cvkdspkkb5bjpe66r1766029213.jpg",
         "finishReading": 0,
-        "readUpdateTime": 1795269503,
+        "readUpdateTime": 1795375339,
         "secret": 0,
         "category": "经济理财-财经"
       },
@@ -324,13 +324,13 @@
         "webBookControl": 0,
         "selfProduceIncentive": false,
         "isAutoDownload": 1,
-        "readingProgress": 25,
+        "readingProgress": 27,
         "markedStatus": 2,
         "lastNoteSort": 1795269481,
         "intro": "他们曾被说成是白人的负担，是弱国劣政的牺牲者。 他们是最底层的10亿人，每天挣扎在贫困线之下。 数万亿美元的援助未能救他们于水火，他们，依然深陷贫穷的陷阱，前路不明…… 他们为什么会贫穷？ 为什么他们吃不饱饭还要买电视？为什么他们的孩子即使上了学也不爱学习？为什么他们放着 免费的健康服务不去享受，却要自己花钱买药？为什么他们能创业却难以守业？为什么大多数人认为 小额信贷、穷人银行没什么效用？15年来，为了弄清为什么会贫穷，贫穷又会导致哪些特定问题，从而不断让穷人陷入无法逃离“贫穷陷阱”的怪圈，两位作者深入五大洲多个国家的穷人世界，调查贫困人群最集中的18个国家和地区，从穷人的日常生活、教育、健康、创业、援助等多个方面，探寻贫穷真正的根源。 同时，本书也对关于贫穷的一些流行观点进行了反思，比如援助越多穷人的依赖性越强、外部援助不起作用等等。他们指出，多年来的扶贫政策大都以失败告终，原因就在于人们对于贫穷的理解不够深刻，好钢没有用在刀刃上。他们通过大量的实例，提出了一些实用性较强的建议，寻找那些经得起检验的扶贫方案，为政策制定者、慈善家、政治家及所有希望天下脱贫的人提供了重要指导。",
         "updateTime": 1766033832,
         "finishReading": 0,
-        "readUpdateTime": 1795269503,
+        "readUpdateTime": 1795375339,
         "secret": 0,
         "category": "经济理财-财经"
       },
@@ -1574,7 +1574,7 @@
         },
         "reviewCount": 0,
         "markedStatus": 2,
-        "readingProgress": 25,
+        "readingProgress": 27,
         "noteCount": 3,
         "bookmarkCount": 0,
         "sort": 1795269481
@@ -2684,14 +2684,15 @@
       "1794240000": 2014,
       "1794499200": 4,
       "1794585600": 413,
-      "1794758400": 0,
       "1794844800": 597,
       "1794931200": 533,
       "1795017600": 682,
       "1795104000": 693,
-      "1795190400": 1838
+      "1795190400": 1838,
+      "1795276800": 148,
+      "1795363200": 198
     },
-    "readDays": 15,
+    "readDays": 17,
     "readLongest": [
       {
         "book": {
@@ -2839,7 +2840,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "readTime": 4344,
+        "readTime": 4690,
         "tags": []
       },
       {
@@ -3006,7 +3007,7 @@
         "parentCategoryId": 1100000,
         "parentCategoryTitle": "经济理财",
         "val": 100,
-        "readingTime": 4344,
+        "readingTime": 4492,
         "readingCount": 1,
         "categoryType": 0
       },
@@ -3015,7 +3016,7 @@
         "categoryTitle": "文学",
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
-        "val": 37,
+        "val": 35,
         "readingTime": 1612,
         "readingCount": 2,
         "categoryType": 0
@@ -3025,7 +3026,7 @@
         "categoryTitle": "情感小说",
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
-        "val": 27,
+        "val": 26,
         "readingTime": 1199,
         "readingCount": 1,
         "categoryType": 0
@@ -3095,7 +3096,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "15天",
+        "counts": "17天",
         "scheme": "weread://dataCenter?showSummary=1"
       },
       {
@@ -3105,10 +3106,10 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 1.276039930961417,
-    "dayAverageReadTime": 1341,
+    "compare": 1.2025972295900529,
+    "dayAverageReadTime": 1298,
     "baseTime": 1793462400,
-    "totalReadTime": 29522,
+    "totalReadTime": 29868,
     "preferBooks": [
       {
         "type": 13,
@@ -3306,9 +3307,9 @@
       }
     ],
     "shareInfo": {
-      "title": "",
+      "title": "超过半数的日子\n都在读书",
       "subTitle": "",
-      "totalReadingDay": 15,
+      "totalReadingDay": 17,
       "hadReadingCount": 5,
       "finishReadingCount": 3,
       "hadReadingBookIds": [
@@ -3343,9 +3344,9 @@
       "1672502400": 0,
       "1704038400": 0,
       "1735660800": 0,
-      "1767196800": 184052
+      "1767196800": 184398
     },
-    "readDays": 118,
+    "readDays": 120,
     "readLongest": [
       {
         "book": {
@@ -3886,7 +3887,7 @@
         "parentCategoryId": 1100000,
         "parentCategoryTitle": "经济理财",
         "val": 29,
-        "readingTime": 22486,
+        "readingTime": 22634,
         "readingCount": 2,
         "categoryType": 0
       },
@@ -3959,8 +3960,8 @@
       8685,
       21244,
       9485,
-      14915,
-      7941,
+      14926,
+      8078,
       18799,
       20626,
       13947,
@@ -4177,7 +4178,7 @@
       },
       {
         "stat": "阅读",
-        "counts": "118天",
+        "counts": "120天",
         "scheme": "weread://dataCenter?showSummary=1"
       },
       {
@@ -4195,7 +4196,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5087837,
+        "users": 5088633,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -4212,7 +4213,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6262739,
+        "users": 6263641,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -4229,7 +4230,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12038952,
+        "users": 12040073,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -4244,7 +4245,7 @@
     "registTime": 1645667800,
     "readDistributionWord": "点评分布",
     "baseTime": 0,
-    "totalReadTime": 184065,
+    "totalReadTime": 184411,
     "preferBooks": [
       {
         "type": 13,
@@ -4630,7 +4631,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8479人读过"
+        "reason": "仅有8496人读过"
       },
       {
         "type": 8,
@@ -4640,7 +4641,7 @@
     "shareInfo": {
       "title": "偏爱文学\n类书籍",
       "subTitle": "",
-      "totalReadingDay": 118,
+      "totalReadingDay": 120,
       "hadReadingCount": 22,
       "finishReadingCount": 14,
       "hadReadingBookIds": [
@@ -4686,7 +4687,7 @@
       ],
       "finishReadingAlbumIds": [],
       "finishReadingWordCount": 855847,
-      "readingWordCount": 1171353,
+      "readingWordCount": 1177518,
       "notesCount": 280,
       "readOverView": [
         {
@@ -6556,10 +6557,10 @@
         "1785513600": 40160,
         "1788192000": 28953,
         "1790784000": 18277,
-        "1793462400": 29522,
+        "1793462400": 29868,
         "1796054400": 0
       },
-      "readDays": 116,
+      "readDays": 118,
       "dailyReadTimes": {
         "1767196800": 0,
         "1767283200": 0,
@@ -6886,8 +6887,8 @@
         "1795017600": 682,
         "1795104000": 693,
         "1795190400": 1838,
-        "1795276800": 0,
-        "1795363200": 0,
+        "1795276800": 148,
+        "1795363200": 198,
         "1795449600": 0,
         "1795536000": 0,
         "1795622400": 0,
@@ -7467,7 +7468,7 @@
           "parentCategoryId": 1100000,
           "parentCategoryTitle": "经济理财",
           "val": 29,
-          "readingTime": 22486,
+          "readingTime": 22634,
           "readingCount": 2,
           "categoryType": 0
         },
@@ -7731,7 +7732,7 @@
         },
         {
           "stat": "阅读",
-          "counts": "116天",
+          "counts": "118天",
           "scheme": "weread://dataCenter?showSummary=1"
         },
         {
@@ -7741,9 +7742,9 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 564,
+      "dayAverageReadTime": 563,
       "baseTime": 1767196800,
-      "totalReadTime": 184052,
+      "totalReadTime": 184398,
       "preferBooks": [
         {
           "type": 13,
@@ -7943,7 +7944,7 @@
       "shareInfo": {
         "title": "超过半数月份\n都有读书",
         "subTitle": "",
-        "totalReadingDay": 116,
+        "totalReadingDay": 118,
         "hadReadingCount": 22,
         "finishReadingCount": 14,
         "hadReadingBookIds": [
@@ -7989,7 +7990,7 @@
         ],
         "finishReadingAlbumIds": [],
         "finishReadingWordCount": 855847,
-        "readingWordCount": 1171353,
+        "readingWordCount": 1177518,
         "notesCount": 280,
         "readOverView": [
           {
