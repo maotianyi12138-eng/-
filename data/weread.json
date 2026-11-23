@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-23T07:34:34Z",
+  "updatedAt": "2026-11-23T23:52:04Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -3007,7 +3007,7 @@
         "parentCategoryId": 1100000,
         "parentCategoryTitle": "经济理财",
         "val": 100,
-        "readingTime": 4492,
+        "readingTime": 4690,
         "readingCount": 1,
         "categoryType": 0
       },
@@ -3016,7 +3016,7 @@
         "categoryTitle": "文学",
         "parentCategoryId": 300000,
         "parentCategoryTitle": "文学",
-        "val": 35,
+        "val": 34,
         "readingTime": 1612,
         "readingCount": 2,
         "categoryType": 0
@@ -3026,7 +3026,7 @@
         "categoryTitle": "情感小说",
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
-        "val": 26,
+        "val": 25,
         "readingTime": 1199,
         "readingCount": 1,
         "categoryType": 0
@@ -3036,7 +3036,7 @@
         "categoryTitle": "社会小说",
         "parentCategoryId": 100000,
         "parentCategoryTitle": "精品小说",
-        "val": 9,
+        "val": 8,
         "readingTime": 413,
         "readingCount": 1,
         "categoryType": 0
@@ -3106,8 +3106,8 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 1.2025972295900529,
-    "dayAverageReadTime": 1298,
+    "compare": 1.1108223450238005,
+    "dayAverageReadTime": 1244,
     "baseTime": 1793462400,
     "totalReadTime": 29868,
     "preferBooks": [
@@ -3886,8 +3886,8 @@
         "categoryTitle": "经济理财",
         "parentCategoryId": 1100000,
         "parentCategoryTitle": "经济理财",
-        "val": 29,
-        "readingTime": 22634,
+        "val": 30,
+        "readingTime": 22832,
         "readingCount": 2,
         "categoryType": 0
       },
@@ -3966,7 +3966,7 @@
       20626,
       13947,
       8004,
-      8778,
+      8976,
       6390,
       11737
     ],
@@ -4196,7 +4196,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5089469,
+        "users": 5090266,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -4213,7 +4213,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6264602,
+        "users": 6265476,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -4230,7 +4230,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12041221,
+        "users": 12042274,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -4631,7 +4631,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8502人读过"
+        "reason": "仅有8514人读过"
       },
       {
         "type": 8,
@@ -7467,8 +7467,8 @@
           "categoryTitle": "经济理财",
           "parentCategoryId": 1100000,
           "parentCategoryTitle": "经济理财",
-          "val": 29,
-          "readingTime": 22634,
+          "val": 30,
+          "readingTime": 22832,
           "readingCount": 2,
           "categoryType": 0
         },
@@ -7742,7 +7742,7 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 563,
+      "dayAverageReadTime": 562,
       "baseTime": 1767196800,
       "totalReadTime": 184398,
       "preferBooks": [
