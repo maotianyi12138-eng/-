@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "updatedAt": "2026-11-26T08:14:32Z",
+  "updatedAt": "2026-11-26T21:29:49Z",
   "shelf": {
     "mp": {
       "show": 1,
@@ -3108,8 +3108,8 @@
       }
     ],
     "registTime": 1645667800,
-    "compare": 0.949821339135778,
-    "dayAverageReadTime": 1149,
+    "compare": 0.877605733982601,
+    "dayAverageReadTime": 1107,
     "baseTime": 1793462400,
     "totalReadTime": 29889,
     "preferBooks": [
@@ -4198,7 +4198,7 @@
         "ctime": 1787635084,
         "atime": 1788465199,
         "rank": 4990168,
-        "users": 5093270,
+        "users": 5093907,
         "hint": "想法发布 10 条",
         "renderItem": "09 / 04",
         "name": "想法发布",
@@ -4215,7 +4215,7 @@
         "subtype": 0,
         "level": 10,
         "ctime": 1792238788,
-        "users": 6268776,
+        "users": 6269507,
         "new": 1,
         "hint": "读完 10 本书籍",
         "renderItem": "No. 0000",
@@ -4232,7 +4232,7 @@
         "subtype": 0,
         "level": 100,
         "ctime": 1792869297,
-        "users": 12046305,
+        "users": 12047179,
         "new": 1,
         "hint": "阅读 100 天",
         "renderItem": "No. 0000",
@@ -4633,7 +4633,7 @@
           "webBookControl": 0,
           "isAutoDownload": 1
         },
-        "reason": "仅有8564人读过"
+        "reason": "仅有8578人读过"
       },
       {
         "type": 8,
@@ -7744,7 +7744,7 @@
         }
       ],
       "registTime": 1645667800,
-      "dayAverageReadTime": 558,
+      "dayAverageReadTime": 557,
       "baseTime": 1767196800,
       "totalReadTime": 184419,
       "preferBooks": [
